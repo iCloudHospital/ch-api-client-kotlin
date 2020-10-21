@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.squareup.moshi.Json
  */
 
 data class ApproveConsultationCommand (
-    @Json(name = "confirmedDateStart")
+    @SerializedName("confirmedDateStart")
     val confirmedDateStart: java.time.OffsetDateTime? = null,
-    @Json(name = "confirmedDateEnd")
+    @SerializedName("confirmedDateEnd")
     val confirmedDateEnd: java.time.OffsetDateTime? = null,
-    @Json(name = "callerId")
+    @SerializedName("callerId")
     val callerId: java.util.UUID? = null
 )
 

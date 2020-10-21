@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.Platform
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -26,17 +26,17 @@ import com.squareup.moshi.Json
  */
 
 data class DeviceViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "token")
+    @SerializedName("token")
     val token: kotlin.String? = null,
-    @Json(name = "platform")
+    @SerializedName("platform")
     val platform: Platform? = null,
-    @Json(name = "appAlert")
+    @SerializedName("appAlert")
     val appAlert: kotlin.Boolean? = null,
-    @Json(name = "eventAlert")
+    @SerializedName("eventAlert")
     val eventAlert: kotlin.Boolean? = null,
-    @Json(name = "noticeAlert")
+    @SerializedName("noticeAlert")
     val noticeAlert: kotlin.Boolean? = null
 )
 

@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -25,17 +25,17 @@ import com.squareup.moshi.Json
  */
 
 data class MediaSearchViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: kotlin.String? = null,
-    @Json(name = "mediaType")
+    @SerializedName("mediaType")
     val mediaType: kotlin.Int? = null,
-    @Json(name = "url")
+    @SerializedName("url")
     val url: kotlin.String? = null,
-    @Json(name = "thumbnailUrl")
+    @SerializedName("thumbnailUrl")
     val thumbnailUrl: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null
 )
 

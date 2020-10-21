@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.squareup.moshi.Json
 enum class RefundPolicy(val value: kotlin.String){
 
 
-    @Json(name = "NonRefundable")
+    @SerializedName(value = "NonRefundable")
     nonRefundable("NonRefundable"),
 
 
-    @Json(name = "Refundable")
+    @SerializedName(value = "Refundable")
     refundable("Refundable"),
 
 
-    @Json(name = "PartialRefundable")
+    @SerializedName(value = "PartialRefundable")
     partialRefundable("PartialRefundable");
 
 

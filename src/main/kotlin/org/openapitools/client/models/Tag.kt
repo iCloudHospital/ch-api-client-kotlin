@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.ArticleTag
 import org.openapitools.client.models.YoutubeTag
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -25,13 +25,13 @@ import com.squareup.moshi.Json
  */
 
 data class Tag (
-    @Json(name = "tagId")
+    @SerializedName("tagId")
     val tagId: kotlin.String? = null,
-    @Json(name = "normalizedTagId")
+    @SerializedName("normalizedTagId")
     val normalizedTagId: kotlin.String? = null,
-    @Json(name = "articleTags")
+    @SerializedName("articleTags")
     val articleTags: kotlin.collections.List<ArticleTag>? = null,
-    @Json(name = "youtubeTags")
+    @SerializedName("youtubeTags")
     val youtubeTags: kotlin.collections.List<YoutubeTag>? = null
 )
 

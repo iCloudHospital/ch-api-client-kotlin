@@ -19,7 +19,7 @@ import org.openapitools.client.models.PaymentMethod
 import org.openapitools.client.models.PaymentStatus
 import org.openapitools.client.models.RefundStatus
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -46,45 +46,45 @@ import com.squareup.moshi.Json
  */
 
 data class Payment (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "paymentMethod")
+    @SerializedName("paymentMethod")
     val paymentMethod: PaymentMethod? = null,
-    @Json(name = "patientId")
+    @SerializedName("patientId")
     val patientId: java.util.UUID? = null,
-    @Json(name = "patient")
+    @SerializedName("patient")
     val patient: Patient? = null,
-    @Json(name = "customerId")
+    @SerializedName("customerId")
     val customerId: kotlin.String? = null,
-    @Json(name = "customer")
+    @SerializedName("customer")
     val customer: Customer? = null,
-    @Json(name = "chargeId")
+    @SerializedName("chargeId")
     val chargeId: kotlin.String? = null,
-    @Json(name = "refundId")
+    @SerializedName("refundId")
     val refundId: kotlin.String? = null,
-    @Json(name = "chargeStatus")
+    @SerializedName("chargeStatus")
     val chargeStatus: ChargeStatus? = null,
-    @Json(name = "refundStatus")
+    @SerializedName("refundStatus")
     val refundStatus: RefundStatus? = null,
-    @Json(name = "paymentStatus")
+    @SerializedName("paymentStatus")
     val paymentStatus: PaymentStatus? = null,
-    @Json(name = "isFullPayment")
+    @SerializedName("isFullPayment")
     val isFullPayment: kotlin.Boolean? = null,
-    @Json(name = "currency")
+    @SerializedName("currency")
     val currency: kotlin.String? = null,
-    @Json(name = "fee")
+    @SerializedName("fee")
     val fee: kotlin.Double? = null,
-    @Json(name = "applicationFee")
+    @SerializedName("applicationFee")
     val applicationFee: kotlin.Double? = null,
-    @Json(name = "cardBrand")
+    @SerializedName("cardBrand")
     val cardBrand: kotlin.String? = null,
-    @Json(name = "cardLast4Digits")
+    @SerializedName("cardLast4Digits")
     val cardLast4Digits: kotlin.String? = null,
-    @Json(name = "chargeStatusChangeLogs")
+    @SerializedName("chargeStatusChangeLogs")
     val chargeStatusChangeLogs: kotlin.collections.List<ChangeLog>? = null,
-    @Json(name = "refundStatusChangeLogs")
+    @SerializedName("refundStatusChangeLogs")
     val refundStatusChangeLogs: kotlin.collections.List<ChangeLog>? = null,
-    @Json(name = "paymentStatusChangeLogs")
+    @SerializedName("paymentStatusChangeLogs")
     val paymentStatusChangeLogs: kotlin.collections.List<ChangeLog>? = null
 )
 

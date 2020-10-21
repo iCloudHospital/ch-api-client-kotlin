@@ -16,7 +16,7 @@ import org.openapitools.client.models.Patient
 import org.openapitools.client.models.Payment
 import org.openapitools.client.models.VendorType
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -29,17 +29,17 @@ import com.squareup.moshi.Json
  */
 
 data class Customer (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: kotlin.String? = null,
-    @Json(name = "vendor")
+    @SerializedName("vendor")
     val vendor: VendorType? = null,
-    @Json(name = "patientId")
+    @SerializedName("patientId")
     val patientId: java.util.UUID? = null,
-    @Json(name = "patient")
+    @SerializedName("patient")
     val patient: Patient? = null,
-    @Json(name = "payments")
+    @SerializedName("payments")
     val payments: kotlin.collections.List<Payment>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

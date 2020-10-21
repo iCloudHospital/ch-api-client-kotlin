@@ -15,7 +15,7 @@ import org.openapitools.client.models.MediaViewModel
 import org.openapitools.client.models.QuestionStatus
 import org.openapitools.client.models.QuestionType
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -29,19 +29,19 @@ import com.squareup.moshi.Json
  */
 
 data class CreateQuestionCommand (
-    @Json(name = "title")
+    @SerializedName("title")
     val title: kotlin.String? = null,
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "questionType")
+    @SerializedName("questionType")
     val questionType: QuestionType? = null,
-    @Json(name = "questionStatus")
+    @SerializedName("questionStatus")
     val questionStatus: QuestionStatus? = null,
-    @Json(name = "dealPackageId")
+    @SerializedName("dealPackageId")
     val dealPackageId: java.util.UUID? = null,
-    @Json(name = "quantity")
+    @SerializedName("quantity")
     val quantity: kotlin.Int? = null,
-    @Json(name = "medias")
+    @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

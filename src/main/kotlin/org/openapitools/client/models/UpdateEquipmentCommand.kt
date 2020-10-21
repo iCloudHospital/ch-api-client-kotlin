@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MediaViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -26,15 +26,15 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateEquipmentCommand (
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "medias")
+    @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

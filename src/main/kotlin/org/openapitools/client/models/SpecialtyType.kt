@@ -15,7 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.Specialty
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -32,25 +32,25 @@ import com.squareup.moshi.Json
  */
 
 data class SpecialtyType (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "normalizedName")
+    @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "content")
+    @SerializedName("content")
     val content: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "specialtyTypeCategoryId")
+    @SerializedName("specialtyTypeCategoryId")
     val specialtyTypeCategoryId: java.util.UUID? = null,
-    @Json(name = "specialties")
+    @SerializedName("specialties")
     val specialties: kotlin.collections.List<Specialty>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

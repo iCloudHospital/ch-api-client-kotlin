@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.ServiceItemViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -27,19 +27,19 @@ import com.squareup.moshi.Json
  */
 
 data class ServiceCategoryViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "normalizedName")
+    @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null,
-    @Json(name = "serviceCount")
+    @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
-    @Json(name = "services")
+    @SerializedName("services")
     val services: kotlin.collections.List<ServiceItemViewModel>? = null
 )
 

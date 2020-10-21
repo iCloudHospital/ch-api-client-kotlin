@@ -17,7 +17,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -39,35 +39,35 @@ import com.squareup.moshi.Json
  */
 
 data class ArticleItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "title")
+    @SerializedName("title")
     val title: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "status")
+    @SerializedName("status")
     val status: ArticleStatus? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "userId")
+    @SerializedName("userId")
     val userId: java.util.UUID? = null,
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "hospitalSlug")
+    @SerializedName("hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
-    @Json(name = "articleTags")
+    @SerializedName("articleTags")
     val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
-    @Json(name = "medias")
+    @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

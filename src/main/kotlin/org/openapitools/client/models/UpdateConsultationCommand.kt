@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.Gender
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -35,35 +35,35 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateConsultationCommand (
-    @Json(name = "specialtyId")
+    @SerializedName("specialtyId")
     val specialtyId: java.util.UUID? = null,
-    @Json(name = "doctorId")
+    @SerializedName("doctorId")
     val doctorId: java.util.UUID? = null,
-    @Json(name = "language")
+    @SerializedName("language")
     val language: kotlin.String? = null,
-    @Json(name = "isAccountHolder")
+    @SerializedName("isAccountHolder")
     val isAccountHolder: kotlin.Boolean? = null,
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "dateOfBirth")
+    @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.OffsetDateTime? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "comment")
+    @SerializedName("comment")
     val comment: kotlin.String? = null,
-    @Json(name = "timeRange")
+    @SerializedName("timeRange")
     val timeRange: kotlin.String? = null,
-    @Json(name = "approximateDateStart")
+    @SerializedName("approximateDateStart")
     val approximateDateStart: java.time.OffsetDateTime? = null,
-    @Json(name = "approximateDateEnd")
+    @SerializedName("approximateDateEnd")
     val approximateDateEnd: java.time.OffsetDateTime? = null,
-    @Json(name = "timeZone")
+    @SerializedName("timeZone")
     val timeZone: kotlin.String? = null
 )
 

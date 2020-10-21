@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.squareup.moshi.Json
 enum class PaymentMethod(val value: kotlin.String){
 
 
-    @Json(name = "Stripe")
+    @SerializedName(value = "Stripe")
     stripe("Stripe"),
 
 
-    @Json(name = "Paypal")
+    @SerializedName(value = "Paypal")
     paypal("Paypal"),
 
 
-    @Json(name = "BankTransfer")
+    @SerializedName(value = "BankTransfer")
     bankTransfer("BankTransfer");
 
 

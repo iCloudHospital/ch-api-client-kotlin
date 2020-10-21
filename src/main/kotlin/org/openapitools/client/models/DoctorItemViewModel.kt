@@ -16,7 +16,7 @@ import org.openapitools.client.models.DoctorSpecialtyItemViewModel
 import org.openapitools.client.models.Gender
 import org.openapitools.client.models.HospitalAffiliationViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -48,55 +48,55 @@ import com.squareup.moshi.Json
  */
 
 data class DoctorItemViewModel (
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "consultationEnabled")
+    @SerializedName("consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
-    @Json(name = "consultationFee")
+    @SerializedName("consultationFee")
     val consultationFee: kotlin.Double? = null,
-    @Json(name = "overview")
+    @SerializedName("overview")
     val overview: kotlin.String? = null,
-    @Json(name = "doctorReviewsCount")
+    @SerializedName("doctorReviewsCount")
     val doctorReviewsCount: kotlin.Int? = null,
-    @Json(name = "doctorEducationsCount")
+    @SerializedName("doctorEducationsCount")
     val doctorEducationsCount: kotlin.Int? = null,
-    @Json(name = "doctorPortfoliosCount")
+    @SerializedName("doctorPortfoliosCount")
     val doctorPortfoliosCount: kotlin.Int? = null,
-    @Json(name = "doctorSpecialtiesCount")
+    @SerializedName("doctorSpecialtiesCount")
     val doctorSpecialtiesCount: kotlin.Int? = null,
-    @Json(name = "doctorSpecialties")
+    @SerializedName("doctorSpecialties")
     val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
-    @Json(name = "doctorCertificatesCount")
+    @SerializedName("doctorCertificatesCount")
     val doctorCertificatesCount: kotlin.Int? = null,
-    @Json(name = "doctorAffiliationsCount")
+    @SerializedName("doctorAffiliationsCount")
     val doctorAffiliationsCount: kotlin.Int? = null,
-    @Json(name = "doctorAffiliations")
+    @SerializedName("doctorAffiliations")
     val doctorAffiliations: kotlin.collections.List<HospitalAffiliationViewModel>? = null,
-    @Json(name = "articlesCount")
+    @SerializedName("articlesCount")
     val articlesCount: kotlin.Int? = null,
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "fullname")
+    @SerializedName("fullname")
     val fullname: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "dateOfBirth")
+    @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.OffsetDateTime? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

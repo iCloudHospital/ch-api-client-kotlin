@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.squareup.moshi.Json
  */
 
 data class CreateServiceCategoryCommand (
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "services")
+    @SerializedName("services")
     val services: kotlin.collections.List<java.util.UUID>? = null
 )
 
