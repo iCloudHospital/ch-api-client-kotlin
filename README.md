@@ -5,6 +5,14 @@
 * Kotlin 1.3.41
 * Gradle 4.9
 
+## Install openapi-generator
+npm install @openapitools/openapi-generator-cli@cli-5.0.0-beta2 -g
+
+Generate kotlin api client with serializationLibrary option
+```
+openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o . --additional-properties=serializationLibrary=gson --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime
+```
+
 ## Build
 
 First, create the gradle wrapper script:
