@@ -12,15 +12,14 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param hospitalSpecialtySequence 
  */
 
 data class UpdateHospitalSpecialtySequenceCommand (
-    @Json(name = "hospitalSpecialtySequence")
-    val hospitalSpecialtySequence: kotlin.collections.List<java.util.UUID>? = null
+    @SerializedName("hospitalSpecialtySequence")
+    val hospitalSpecialtySequence: kotlin.Array<java.util.UUID>? = null
 )
 

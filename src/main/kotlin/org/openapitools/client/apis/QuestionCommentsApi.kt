@@ -54,7 +54,7 @@ class QuestionCommentsApi(basePath: kotlin.String = defaultBasePath) : ApiClient
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1QuestionsQuestionIdQuestioncommentsGet(questionId: java.util.UUID, id: java.util.UUID?, userId: java.util.UUID?, questionId2: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : QuestionCommentsViewModel {
+    fun apiV1QuestionsQuestionIdQuestioncommentsGet(questionId: java.util.UUID, id: java.util.UUID?, userId: java.util.UUID?, questionId2: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : QuestionCommentsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

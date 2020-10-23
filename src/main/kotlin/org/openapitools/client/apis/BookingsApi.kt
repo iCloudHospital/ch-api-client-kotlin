@@ -389,7 +389,7 @@ class BookingsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1BookingsGet(searchString: kotlin.String?, isOpen: kotlin.Boolean?, isCompleted: kotlin.Boolean?, status: BookingStatus?, dealPackageId: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : BookingsViewModel {
+    fun apiV1BookingsGet(searchString: kotlin.String?, isOpen: kotlin.Boolean?, isCompleted: kotlin.Boolean?, status: BookingStatus?, dealPackageId: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : BookingsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param latitude 
@@ -27,21 +26,21 @@ import com.squareup.moshi.Json
  */
 
 data class Location (
-    @Json(name = "latitude")
+    @SerializedName("latitude")
     val latitude: kotlin.Double? = null,
-    @Json(name = "longitude")
+    @SerializedName("longitude")
     val longitude: kotlin.Double? = null,
-    @Json(name = "country")
+    @SerializedName("country")
     val country: kotlin.String? = null,
-    @Json(name = "state")
+    @SerializedName("state")
     val state: kotlin.String? = null,
-    @Json(name = "county")
+    @SerializedName("county")
     val county: kotlin.String? = null,
-    @Json(name = "city")
+    @SerializedName("city")
     val city: kotlin.String? = null,
-    @Json(name = "zipCode")
+    @SerializedName("zipCode")
     val zipCode: kotlin.String? = null,
-    @Json(name = "address")
+    @SerializedName("address")
     val address: kotlin.String? = null
 )
 

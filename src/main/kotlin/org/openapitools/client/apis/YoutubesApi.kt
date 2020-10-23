@@ -57,7 +57,7 @@ class YoutubesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1YoutubesGet(id: java.util.UUID?, title: kotlin.String?, normalizedTitle: kotlin.String?, description: kotlin.String?, marketingType: MarketingType?, tag: kotlin.String?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : YoutubesViewModel {
+    fun apiV1YoutubesGet(id: java.util.UUID?, title: kotlin.String?, normalizedTitle: kotlin.String?, description: kotlin.String?, marketingType: MarketingType?, tag: kotlin.String?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : YoutubesViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

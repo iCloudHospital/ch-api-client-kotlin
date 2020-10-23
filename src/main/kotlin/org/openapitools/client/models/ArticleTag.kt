@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.Article
 import org.openapitools.client.models.Tag
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param articleId 
@@ -26,15 +25,15 @@ import com.squareup.moshi.Json
  */
 
 data class ArticleTag (
-    @Json(name = "articleId")
+    @SerializedName("articleId")
     val articleId: java.util.UUID? = null,
-    @Json(name = "article")
+    @SerializedName("article")
     val article: Article? = null,
-    @Json(name = "tagId")
+    @SerializedName("tagId")
     val tagId: kotlin.String? = null,
-    @Json(name = "tag")
+    @SerializedName("tag")
     val tag: Tag? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null
 )
 

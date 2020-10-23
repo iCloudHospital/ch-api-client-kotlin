@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.EquipmentItemViewModel
 import org.openapitools.client.models.PagedListMetaData
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param items 
@@ -23,9 +22,9 @@ import com.squareup.moshi.Json
  */
 
 data class EquipmentsViewModel (
-    @Json(name = "items")
-    val items: kotlin.collections.List<EquipmentItemViewModel>? = null,
-    @Json(name = "metaData")
+    @SerializedName("items")
+    val items: kotlin.Array<EquipmentItemViewModel>? = null,
+    @SerializedName("metaData")
     val metaData: PagedListMetaData? = null
 )
 

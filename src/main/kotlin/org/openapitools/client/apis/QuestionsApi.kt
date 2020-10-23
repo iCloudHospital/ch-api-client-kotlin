@@ -227,7 +227,7 @@ class QuestionsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1HospitalsQuestionsGet(id: java.util.UUID?, title: kotlin.String?, hospitalId: java.util.UUID?, patientId: java.util.UUID?, questionType: QuestionType?, questionStatus: QuestionStatus?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : QuestionsViewModel {
+    fun apiV1HospitalsQuestionsGet(id: java.util.UUID?, title: kotlin.String?, hospitalId: java.util.UUID?, patientId: java.util.UUID?, questionType: QuestionType?, questionStatus: QuestionStatus?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : QuestionsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

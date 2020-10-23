@@ -12,15 +12,14 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param email 
  */
 
 data class ChangeEmailCommand (
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null
 )
 

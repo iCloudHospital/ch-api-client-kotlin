@@ -32,7 +32,7 @@ val hospitalId : kotlin.String = hospitalId_example // kotlin.String |
 val marketingType : MarketingType =  // MarketingType | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : DealSearchResultViewModel = apiInstance.apiV1SearchDealsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, page, limit, lastRetrieved, current)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
@@ -93,7 +93,7 @@ val hospitalId : kotlin.String = hospitalId_example // kotlin.String |
 val marketingType : MarketingType =  // MarketingType | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : DoctorSearchResultViewModel = apiInstance.apiV1SearchDoctorsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, page, limit, lastRetrieved, current)
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
@@ -154,7 +154,7 @@ val hospitalId : kotlin.String = hospitalId_example // kotlin.String |
 val marketingType : MarketingType =  // MarketingType | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : EquipmentSearchResultViewModel = apiInstance.apiV1SearchEquipmentsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, page, limit, lastRetrieved, current)
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
@@ -215,7 +215,7 @@ val hospitalId : kotlin.String = hospitalId_example // kotlin.String |
 val marketingType : MarketingType =  // MarketingType | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : AzureSearchViewModel = apiInstance.apiV1SearchGetcountGet(searchTerm, countOnly, countryId, hospitalId, marketingType, page, limit, lastRetrieved, current)
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
@@ -276,7 +276,7 @@ val hospitalId : kotlin.String = hospitalId_example // kotlin.String |
 val marketingType : MarketingType =  // MarketingType | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : HospitalSearchResultViewModel = apiInstance.apiV1SearchHospitalsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, page, limit, lastRetrieved, current)
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
@@ -337,7 +337,7 @@ val hospitalId : kotlin.String = hospitalId_example // kotlin.String |
 val marketingType : MarketingType =  // MarketingType | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : SpecialtySearchResultViewModel = apiInstance.apiV1SearchSpecialtiesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, page, limit, lastRetrieved, current)
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type

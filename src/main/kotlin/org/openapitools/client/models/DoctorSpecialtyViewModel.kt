@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param doctorId 
@@ -26,19 +25,19 @@ import com.squareup.moshi.Json
  */
 
 data class DoctorSpecialtyViewModel (
-    @Json(name = "doctorId")
+    @SerializedName("doctorId")
     val doctorId: java.util.UUID? = null,
-    @Json(name = "doctorName")
+    @SerializedName("doctorName")
     val doctorName: kotlin.String? = null,
-    @Json(name = "specialtyId")
+    @SerializedName("specialtyId")
     val specialtyId: java.util.UUID? = null,
-    @Json(name = "specialtyName")
+    @SerializedName("specialtyName")
     val specialtyName: kotlin.String? = null,
-    @Json(name = "specialtyTypeId")
+    @SerializedName("specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-    @Json(name = "specialtyTypeName")
+    @SerializedName("specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null
 )
 

@@ -15,8 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.DealPackageItemViewModel
 import org.openapitools.client.models.MarketingType
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -35,31 +34,31 @@ import com.squareup.moshi.Json
  */
 
 data class DealItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "normalizedName")
+    @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "hospitalSlug")
+    @SerializedName("hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "dealPackages")
-    val dealPackages: kotlin.collections.List<DealPackageItemViewModel>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("dealPackages")
+    val dealPackages: kotlin.Array<DealPackageItemViewModel>? = null,
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

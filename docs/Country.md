@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **normalizedName** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
-**hospitals** | [**kotlin.collections.List&lt;Hospital&gt;**](Hospital.md) |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
+**hospitals** | [**kotlin.Array&lt;Hospital&gt;**](Hospital.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **questionId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **question** | [**Question**](Question.md) |  |  [optional]
 **body** | **kotlin.String** |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

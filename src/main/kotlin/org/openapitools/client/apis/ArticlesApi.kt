@@ -64,7 +64,7 @@ class ArticlesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1HospitalsArticlesGet(id: java.util.UUID?, title: kotlin.String?, description: kotlin.String?, status: ArticleStatus?, marketingType: MarketingType?, userId: java.util.UUID?, userName: kotlin.String?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, countryId: java.util.UUID?, tag: kotlin.String?, exceptHospitalId: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : ArticlesViewModel {
+    fun apiV1HospitalsArticlesGet(id: java.util.UUID?, title: kotlin.String?, description: kotlin.String?, status: ArticleStatus?, marketingType: MarketingType?, userId: java.util.UUID?, userName: kotlin.String?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, countryId: java.util.UUID?, tag: kotlin.String?, exceptHospitalId: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : ArticlesViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

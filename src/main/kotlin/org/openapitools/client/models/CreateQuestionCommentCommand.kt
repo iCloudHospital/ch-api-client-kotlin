@@ -13,8 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.MediaViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param body 
@@ -22,9 +21,9 @@ import com.squareup.moshi.Json
  */
 
 data class CreateQuestionCommentCommand (
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null
+    @SerializedName("medias")
+    val medias: kotlin.Array<MediaViewModel>? = null
 )
 

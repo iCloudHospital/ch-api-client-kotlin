@@ -231,7 +231,7 @@ class HospitalReviewsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1HospitalsReviewsGet(patientId: java.util.UUID?, patientName: kotlin.String?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, body: kotlin.String?, recommended: kotlin.Boolean?, reviewCategory: ReviewCategory?, rate: kotlin.Int?, created: java.time.OffsetDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : HospitalReviewsViewModel {
+    fun apiV1HospitalsReviewsGet(patientId: java.util.UUID?, patientName: kotlin.String?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, body: kotlin.String?, recommended: kotlin.Boolean?, reviewCategory: ReviewCategory?, rate: kotlin.Int?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : HospitalReviewsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

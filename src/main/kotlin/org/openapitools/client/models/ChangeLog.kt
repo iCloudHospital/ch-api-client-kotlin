@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -23,13 +22,13 @@ import com.squareup.moshi.Json
  */
 
 data class ChangeLog (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "status")
+    @SerializedName("status")
     val status: kotlin.Int? = null,
-    @Json(name = "actorId")
+    @SerializedName("actorId")
     val actorId: java.util.UUID? = null,
-    @Json(name = "createdDate")
-    val createdDate: java.time.OffsetDateTime? = null
+    @SerializedName("createdDate")
+    val createdDate: java.time.LocalDateTime? = null
 )
 

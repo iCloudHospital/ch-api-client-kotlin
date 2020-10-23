@@ -62,7 +62,7 @@ class HospitalsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1HospitalsCurrentGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, countryId: java.util.UUID?, created: java.time.OffsetDateTime?, marketingType: MarketingType?, specialtyTypeId: java.util.UUID?, specialtyId: java.util.UUID?, serviceId: java.util.UUID?, exceptHospitalId: java.util.UUID?, showHidden: kotlin.Boolean?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : HospitalsViewModel {
+    fun apiV1HospitalsCurrentGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, countryId: java.util.UUID?, created: java.time.LocalDateTime?, marketingType: MarketingType?, specialtyTypeId: java.util.UUID?, specialtyId: java.util.UUID?, serviceId: java.util.UUID?, exceptHospitalId: java.util.UUID?, showHidden: kotlin.Boolean?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : HospitalsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -164,7 +164,7 @@ class HospitalsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1HospitalsGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, countryId: java.util.UUID?, created: java.time.OffsetDateTime?, marketingType: MarketingType?, specialtyTypeId: java.util.UUID?, specialtyId: java.util.UUID?, serviceId: java.util.UUID?, exceptHospitalId: java.util.UUID?, showHidden: kotlin.Boolean?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : HospitalsViewModel {
+    fun apiV1HospitalsGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, countryId: java.util.UUID?, created: java.time.LocalDateTime?, marketingType: MarketingType?, specialtyTypeId: java.util.UUID?, specialtyId: java.util.UUID?, serviceId: java.util.UUID?, exceptHospitalId: java.util.UUID?, showHidden: kotlin.Boolean?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : HospitalsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

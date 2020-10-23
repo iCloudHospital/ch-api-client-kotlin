@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param hospitals 
@@ -24,15 +23,15 @@ import com.squareup.moshi.Json
  */
 
 data class AzureSearchViewModel (
-    @Json(name = "hospitals")
+    @SerializedName("hospitals")
     val hospitals: kotlin.Int? = null,
-    @Json(name = "doctors")
+    @SerializedName("doctors")
     val doctors: kotlin.Int? = null,
-    @Json(name = "deals")
+    @SerializedName("deals")
     val deals: kotlin.Int? = null,
-    @Json(name = "specialties")
+    @SerializedName("specialties")
     val specialties: kotlin.Int? = null,
-    @Json(name = "equipments")
+    @SerializedName("equipments")
     val equipments: kotlin.Int? = null
 )
 

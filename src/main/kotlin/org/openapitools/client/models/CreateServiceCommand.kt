@@ -13,8 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.Procedure
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param name 
@@ -26,17 +25,17 @@ import com.squareup.moshi.Json
  */
 
 data class CreateServiceCommand (
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "minPrice")
+    @SerializedName("minPrice")
     val minPrice: kotlin.Double? = null,
-    @Json(name = "maxPrice")
+    @SerializedName("maxPrice")
     val maxPrice: kotlin.Double? = null,
-    @Json(name = "priceReuqest")
+    @SerializedName("priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
-    @Json(name = "procedure")
+    @SerializedName("procedure")
     val procedure: Procedure? = null
 )
 

@@ -16,8 +16,7 @@ import org.openapitools.client.models.DealPackage
 import org.openapitools.client.models.Hospital
 import org.openapitools.client.models.MarketingType
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -35,29 +34,29 @@ import com.squareup.moshi.Json
  */
 
 data class Deal (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "normalizedName")
+    @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospital")
+    @SerializedName("hospital")
     val hospital: Hospital? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "dealPackages")
-    val dealPackages: kotlin.collections.List<DealPackage>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("dealPackages")
+    val dealPackages: kotlin.Array<DealPackage>? = null,
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

@@ -16,8 +16,7 @@ import org.openapitools.client.models.QuestionStatus
 import org.openapitools.client.models.QuestionType
 import org.openapitools.client.models.RefundPolicy
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -39,37 +38,37 @@ import com.squareup.moshi.Json
  */
 
 data class QuestionItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "title")
+    @SerializedName("title")
     val title: kotlin.String? = null,
-    @Json(name = "userId")
+    @SerializedName("userId")
     val userId: java.util.UUID? = null,
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "fullName")
+    @SerializedName("fullName")
     val fullName: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "questionType")
+    @SerializedName("questionType")
     val questionType: QuestionType? = null,
-    @Json(name = "questionStatus")
+    @SerializedName("questionStatus")
     val questionStatus: QuestionStatus? = null,
-    @Json(name = "questionCommentsCount")
+    @SerializedName("questionCommentsCount")
     val questionCommentsCount: kotlin.Int? = null,
-    @Json(name = "dealId")
+    @SerializedName("dealId")
     val dealId: java.util.UUID? = null,
-    @Json(name = "dealName")
+    @SerializedName("dealName")
     val dealName: kotlin.String? = null,
-    @Json(name = "dealPackageId")
+    @SerializedName("dealPackageId")
     val dealPackageId: java.util.UUID? = null,
-    @Json(name = "refundPolicy")
+    @SerializedName("refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-    @Json(name = "quantity")
+    @SerializedName("quantity")
     val quantity: kotlin.Int? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

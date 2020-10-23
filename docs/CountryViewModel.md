@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **specialitiesCount** | **kotlin.Int** |  |  [optional]
 **packagesCount** | **kotlin.Int** |  |  [optional]
 **articlesCount** | **kotlin.Int** |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

@@ -183,7 +183,7 @@ class DealsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) 
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1DealsGet(id: java.util.UUID?, name: kotlin.String?, marketingType: MarketingType?, countryId: java.util.UUID?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, specialtyId: java.util.UUID?, specialtyTypeId: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : DealsViewModel {
+    fun apiV1DealsGet(id: java.util.UUID?, name: kotlin.String?, marketingType: MarketingType?, countryId: java.util.UUID?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, specialtyId: java.util.UUID?, specialtyTypeId: java.util.UUID?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : DealsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

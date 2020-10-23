@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **kotlin.String** |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

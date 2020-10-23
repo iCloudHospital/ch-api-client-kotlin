@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param articleId 
@@ -22,11 +21,11 @@ import com.squareup.moshi.Json
  */
 
 data class ArticleTagItemViewModel (
-    @Json(name = "articleId")
+    @SerializedName("articleId")
     val articleId: java.util.UUID? = null,
-    @Json(name = "tagId")
+    @SerializedName("tagId")
     val tagId: kotlin.String? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null
 )
 

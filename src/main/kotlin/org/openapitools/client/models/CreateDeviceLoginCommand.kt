@@ -13,8 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.LocationViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param version 
@@ -22,9 +21,9 @@ import com.squareup.moshi.Json
  */
 
 data class CreateDeviceLoginCommand (
-    @Json(name = "version")
+    @SerializedName("version")
     val version: kotlin.String? = null,
-    @Json(name = "location")
+    @SerializedName("location")
     val location: LocationViewModel? = null
 )
 

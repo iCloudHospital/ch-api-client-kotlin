@@ -13,8 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.ServiceItemViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param order 
@@ -28,21 +27,21 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateServiceCategoryCommand (
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null,
-    @Json(name = "selectedServices")
-    val selectedServices: kotlin.collections.List<java.util.UUID>? = null,
-    @Json(name = "id")
+    @SerializedName("selectedServices")
+    val selectedServices: kotlin.Array<java.util.UUID>? = null,
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "normalizedName")
+    @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "serviceCount")
+    @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
-    @Json(name = "services")
-    val services: kotlin.collections.List<ServiceItemViewModel>? = null
+    @SerializedName("services")
+    val services: kotlin.Array<ServiceItemViewModel>? = null
 )
 

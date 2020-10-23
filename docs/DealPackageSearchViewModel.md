@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **transfer** | **kotlin.String** |  |  [optional]
 **bonus** | **kotlin.String** |  |  [optional]
 **price** | **kotlin.Double** |  |  [optional]
-**services** | [**kotlin.collections.List&lt;ServiceSearchViewModel&gt;**](ServiceSearchViewModel.md) |  |  [optional]
+**services** | [**kotlin.Array&lt;ServiceSearchViewModel&gt;**](ServiceSearchViewModel.md) |  |  [optional]
 
 
 

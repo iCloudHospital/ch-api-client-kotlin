@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param hospitalId 
@@ -22,11 +21,11 @@ import com.squareup.moshi.Json
  */
 
 data class CreateDepartmentCommand (
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "additionalInfo")
+    @SerializedName("additionalInfo")
     val additionalInfo: kotlin.String? = null
 )
 

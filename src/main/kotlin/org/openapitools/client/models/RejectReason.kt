@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,28 +22,28 @@ import com.squareup.moshi.Json
 enum class RejectReason(val value: kotlin.String){
 
 
-    @Json(name = "AssessmentNotCompleted")
+    @SerializedName(value = "AssessmentNotCompleted")
     assessmentNotCompleted("AssessmentNotCompleted"),
 
 
-    @Json(name = "PaymentNotCompleted")
+    @SerializedName(value = "PaymentNotCompleted")
     paymentNotCompleted("PaymentNotCompleted"),
 
 
-    @Json(name = "ScheduleNotAvailable")
+    @SerializedName(value = "ScheduleNotAvailable")
     scheduleNotAvailable("ScheduleNotAvailable"),
 
 
-    @Json(name = "OtherReason")
+    @SerializedName(value = "OtherReason")
     otherReason("OtherReason");
 
 
 
-    /**
-    This override toString avoids using the enum var name and uses the actual api value instead.
-    In cases the var name and value are different, the client would send incorrect enums to the server.
-    **/
-    override fun toString(): String {
+	/**
+	This override toString avoids using the enum var name and uses the actual api value instead.
+	In cases the var name and value are different, the client would send incorrect enums to the server.
+	**/
+	override fun toString(): String {
         return value
     }
 

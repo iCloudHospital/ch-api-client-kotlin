@@ -19,8 +19,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.Media
 import org.openapitools.client.models.User
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -41,35 +40,35 @@ import com.squareup.moshi.Json
  */
 
 data class Article (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "title")
+    @SerializedName("title")
     val title: kotlin.String? = null,
-    @Json(name = "normalizedTitle")
+    @SerializedName("normalizedTitle")
     val normalizedTitle: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "status")
+    @SerializedName("status")
     val status: ArticleStatus? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "userId")
+    @SerializedName("userId")
     val userId: java.util.UUID? = null,
-    @Json(name = "user")
+    @SerializedName("user")
     val user: User? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospital")
+    @SerializedName("hospital")
     val hospital: Hospital? = null,
-    @Json(name = "articleTags")
-    val articleTags: kotlin.collections.List<ArticleTag>? = null,
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<Media>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("articleTags")
+    val articleTags: kotlin.Array<ArticleTag>? = null,
+    @SerializedName("medias")
+    val medias: kotlin.Array<Media>? = null,
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

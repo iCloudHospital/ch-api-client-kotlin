@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **status** | [**ArticleStatus**](ArticleStatus.md) |  |  [optional]
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **hospitalSlug** | **kotlin.String** |  |  [optional]
-**articleTags** | [**kotlin.collections.List&lt;ArticleTagItemViewModel&gt;**](ArticleTagItemViewModel.md) |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**articleTags** | [**kotlin.Array&lt;ArticleTagItemViewModel&gt;**](ArticleTagItemViewModel.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 
 
 

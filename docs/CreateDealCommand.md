@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 
 
 

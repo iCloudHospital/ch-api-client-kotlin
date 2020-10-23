@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **kotlin.String** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **specialtyTypeCount** | **kotlin.Int** |  |  [optional]
-**specialtyTypes** | [**kotlin.collections.List&lt;SpecialtyTypeItemViewModel&gt;**](SpecialtyTypeItemViewModel.md) |  |  [optional]
+**specialtyTypes** | [**kotlin.Array&lt;SpecialtyTypeItemViewModel&gt;**](SpecialtyTypeItemViewModel.md) |  |  [optional]
 
 
 

@@ -55,7 +55,7 @@ class SpecialtiesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(base
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SpecialtiesGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, specialtyTypeId: java.util.UUID?, created: java.time.OffsetDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : SpecialtiesViewModel {
+    fun apiV1SpecialtiesGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, specialtyTypeId: java.util.UUID?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : SpecialtiesViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

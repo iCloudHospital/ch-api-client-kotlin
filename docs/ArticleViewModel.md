@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional]
 **hospitalSlug** | **kotlin.String** |  |  [optional]
-**articleTags** | [**kotlin.collections.List&lt;ArticleTagItemViewModel&gt;**](ArticleTagItemViewModel.md) |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**articleTags** | [**kotlin.Array&lt;ArticleTagItemViewModel&gt;**](ArticleTagItemViewModel.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

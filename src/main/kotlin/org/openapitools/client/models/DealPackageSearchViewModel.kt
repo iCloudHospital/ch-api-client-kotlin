@@ -13,8 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.ServiceSearchViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -28,21 +27,21 @@ import com.squareup.moshi.Json
  */
 
 data class DealPackageSearchViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: kotlin.String? = null,
-    @Json(name = "refundPolicy")
+    @SerializedName("refundPolicy")
     val refundPolicy: kotlin.Int? = null,
-    @Json(name = "additionalServices")
+    @SerializedName("additionalServices")
     val additionalServices: kotlin.String? = null,
-    @Json(name = "accomodation")
+    @SerializedName("accomodation")
     val accomodation: kotlin.String? = null,
-    @Json(name = "transfer")
+    @SerializedName("transfer")
     val transfer: kotlin.String? = null,
-    @Json(name = "bonus")
+    @SerializedName("bonus")
     val bonus: kotlin.String? = null,
-    @Json(name = "price")
+    @SerializedName("price")
     val price: kotlin.Double? = null,
-    @Json(name = "services")
-    val services: kotlin.collections.List<ServiceSearchViewModel>? = null
+    @SerializedName("services")
+    val services: kotlin.Array<ServiceSearchViewModel>? = null
 )
 

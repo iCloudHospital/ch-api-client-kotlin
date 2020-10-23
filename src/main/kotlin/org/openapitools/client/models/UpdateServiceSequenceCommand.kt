@@ -12,15 +12,14 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param serviceSequence 
  */
 
 data class UpdateServiceSequenceCommand (
-    @Json(name = "serviceSequence")
-    val serviceSequence: kotlin.collections.List<java.util.UUID>? = null
+    @SerializedName("serviceSequence")
+    val serviceSequence: kotlin.Array<java.util.UUID>? = null
 )
 

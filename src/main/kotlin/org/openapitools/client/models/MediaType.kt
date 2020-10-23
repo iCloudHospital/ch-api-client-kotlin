@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,28 +22,28 @@ import com.squareup.moshi.Json
 enum class MediaType(val value: kotlin.String){
 
 
-    @Json(name = "Photo")
+    @SerializedName(value = "Photo")
     photo("Photo"),
 
 
-    @Json(name = "Video")
+    @SerializedName(value = "Video")
     video("Video"),
 
 
-    @Json(name = "Youtube")
+    @SerializedName(value = "Youtube")
     youtube("Youtube"),
 
 
-    @Json(name = "Document")
+    @SerializedName(value = "Document")
     document("Document");
 
 
 
-    /**
-    This override toString avoids using the enum var name and uses the actual api value instead.
-    In cases the var name and value are different, the client would send incorrect enums to the server.
-    **/
-    override fun toString(): String {
+	/**
+	This override toString avoids using the enum var name and uses the actual api value instead.
+	In cases the var name and value are different, the client would send incorrect enums to the server.
+	**/
+	override fun toString(): String {
         return value
     }
 

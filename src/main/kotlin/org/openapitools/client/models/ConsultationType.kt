@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,24 +22,24 @@ import com.squareup.moshi.Json
 enum class ConsultationType(val value: kotlin.String){
 
 
-    @Json(name = "Hospital")
+    @SerializedName(value = "Hospital")
     hospital("Hospital"),
 
 
-    @Json(name = "Doctor")
+    @SerializedName(value = "Doctor")
     doctor("Doctor"),
 
 
-    @Json(name = "Deal")
+    @SerializedName(value = "Deal")
     deal("Deal");
 
 
 
-    /**
-    This override toString avoids using the enum var name and uses the actual api value instead.
-    In cases the var name and value are different, the client would send incorrect enums to the server.
-    **/
-    override fun toString(): String {
+	/**
+	This override toString avoids using the enum var name and uses the actual api value instead.
+	In cases the var name and value are different, the client would send incorrect enums to the server.
+	**/
+	override fun toString(): String {
         return value
     }
 

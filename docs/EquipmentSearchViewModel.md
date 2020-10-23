@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **equipmentName** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
 **hospital** | [**HospitalSearchItemViewModel**](HospitalSearchItemViewModel.md) |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaSearchViewModel&gt;**](MediaSearchViewModel.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;MediaSearchViewModel&gt;**](MediaSearchViewModel.md) |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 
 

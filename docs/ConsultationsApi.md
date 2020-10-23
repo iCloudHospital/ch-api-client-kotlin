@@ -369,7 +369,7 @@ val isCompleted : kotlin.Boolean = true // kotlin.Boolean |
 val status : ConsultationStatus =  // ConsultationStatus | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : ConsultationsViewModel = apiInstance.apiV1ConsultationsGet(searchString, isOpen, isCompleted, status, page, limit, lastRetrieved, current)
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
  **status** | [**ConsultationStatus**](.md)|  | [optional] [enum: New, Rejected, Approved, Paid, Canceled, RefundRequested, Refunded]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type

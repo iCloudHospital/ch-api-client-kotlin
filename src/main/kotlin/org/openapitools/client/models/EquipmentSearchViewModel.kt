@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.HospitalSearchItemViewModel
 import org.openapitools.client.models.MediaSearchViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param equipmentId 
@@ -27,17 +26,17 @@ import com.squareup.moshi.Json
  */
 
 data class EquipmentSearchViewModel (
-    @Json(name = "equipmentId")
+    @SerializedName("equipmentId")
     val equipmentId: kotlin.String? = null,
-    @Json(name = "equipmentName")
+    @SerializedName("equipmentName")
     val equipmentName: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "hospital")
+    @SerializedName("hospital")
     val hospital: HospitalSearchItemViewModel? = null,
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaSearchViewModel>? = null,
-    @Json(name = "order")
+    @SerializedName("medias")
+    val medias: kotlin.Array<MediaSearchViewModel>? = null,
+    @SerializedName("order")
     val order: kotlin.Int? = null
 )
 

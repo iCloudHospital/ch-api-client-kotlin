@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.DealSearchViewModel
 import org.openapitools.client.models.SearchMetaData
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param items 
@@ -23,9 +22,9 @@ import com.squareup.moshi.Json
  */
 
 data class DealSearchResultViewModel (
-    @Json(name = "items")
-    val items: kotlin.collections.List<DealSearchViewModel>? = null,
-    @Json(name = "metaData")
+    @SerializedName("items")
+    val items: kotlin.Array<DealSearchViewModel>? = null,
+    @SerializedName("metaData")
     val metaData: SearchMetaData? = null
 )
 

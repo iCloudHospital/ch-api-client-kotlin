@@ -13,8 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.AuditableEntity
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param content 
@@ -27,19 +26,19 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateSpecialtyCommand (
-    @Json(name = "content")
+    @SerializedName("content")
     val content: kotlin.String? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "specialtyTypeId")
+    @SerializedName("specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-    @Json(name = "specialtyTypeName")
+    @SerializedName("specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

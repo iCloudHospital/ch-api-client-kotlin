@@ -21,8 +21,7 @@ import org.openapitools.client.models.QuestionComment
 import org.openapitools.client.models.UserLanguage
 import org.openapitools.client.models.UserLocation
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param accounts 
@@ -48,45 +47,45 @@ import com.squareup.moshi.Json
  */
 
 data class Manager (
-    @Json(name = "accounts")
-    val accounts: kotlin.collections.List<Account>? = null,
-    @Json(name = "affiliations")
-    val affiliations: kotlin.collections.List<ManagerAffiliation>? = null,
-    @Json(name = "id")
+    @SerializedName("accounts")
+    val accounts: kotlin.Array<Account>? = null,
+    @SerializedName("affiliations")
+    val affiliations: kotlin.Array<ManagerAffiliation>? = null,
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "normalizedName")
+    @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.OffsetDateTime? = null,
-    @Json(name = "timeZone")
+    @SerializedName("dateOfBirth")
+    val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
-    @Json(name = "devices")
-    val devices: kotlin.collections.List<Device>? = null,
-    @Json(name = "articles")
-    val articles: kotlin.collections.List<Article>? = null,
-    @Json(name = "questionComments")
-    val questionComments: kotlin.collections.List<QuestionComment>? = null,
-    @Json(name = "locations")
-    val locations: kotlin.collections.List<UserLocation>? = null,
-    @Json(name = "languages")
-    val languages: kotlin.collections.List<UserLanguage>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("devices")
+    val devices: kotlin.Array<Device>? = null,
+    @SerializedName("articles")
+    val articles: kotlin.Array<Article>? = null,
+    @SerializedName("questionComments")
+    val questionComments: kotlin.Array<QuestionComment>? = null,
+    @SerializedName("locations")
+    val locations: kotlin.Array<UserLocation>? = null,
+    @SerializedName("languages")
+    val languages: kotlin.Array<UserLanguage>? = null,
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

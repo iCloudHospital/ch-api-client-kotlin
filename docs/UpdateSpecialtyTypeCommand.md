@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **specialtyCount** | **kotlin.Int** |  |  [optional]
 **hospitalSpecialtyCount** | **kotlin.Int** |  |  [optional]
 **serviceCount** | **kotlin.Int** |  |  [optional]
-**created** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**created** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 
 
 

@@ -347,7 +347,7 @@ class ConsultationsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(ba
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1ConsultationsGet(searchString: kotlin.String?, isOpen: kotlin.Boolean?, isCompleted: kotlin.Boolean?, status: ConsultationStatus?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : ConsultationsViewModel {
+    fun apiV1ConsultationsGet(searchString: kotlin.String?, isOpen: kotlin.Boolean?, isCompleted: kotlin.Boolean?, status: ConsultationStatus?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : ConsultationsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

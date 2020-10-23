@@ -15,8 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.Device
 import org.openapitools.client.models.Location
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -28,17 +27,17 @@ import com.squareup.moshi.Json
  */
 
 data class DeviceLogin (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "deviceId")
+    @SerializedName("deviceId")
     val deviceId: java.util.UUID? = null,
-    @Json(name = "device")
+    @SerializedName("device")
     val device: Device? = null,
-    @Json(name = "version")
+    @SerializedName("version")
     val version: kotlin.String? = null,
-    @Json(name = "location")
+    @SerializedName("location")
     val location: Location? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

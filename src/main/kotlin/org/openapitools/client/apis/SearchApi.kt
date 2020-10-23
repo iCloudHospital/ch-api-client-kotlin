@@ -58,7 +58,7 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SearchDealsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : DealSearchResultViewModel {
+    fun apiV1SearchDealsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : DealSearchResultViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -136,7 +136,7 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SearchDoctorsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : DoctorSearchResultViewModel {
+    fun apiV1SearchDoctorsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : DoctorSearchResultViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -214,7 +214,7 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SearchEquipmentsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : EquipmentSearchResultViewModel {
+    fun apiV1SearchEquipmentsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : EquipmentSearchResultViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -292,7 +292,7 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SearchGetcountGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : AzureSearchViewModel {
+    fun apiV1SearchGetcountGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : AzureSearchViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -370,7 +370,7 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SearchHospitalsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : HospitalSearchResultViewModel {
+    fun apiV1SearchHospitalsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : HospitalSearchResultViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -448,7 +448,7 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SearchSpecialtiesGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : SpecialtySearchResultViewModel {
+    fun apiV1SearchSpecialtiesGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : SpecialtySearchResultViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

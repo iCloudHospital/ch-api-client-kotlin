@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.DealPackage
 import org.openapitools.client.models.Service
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param dealPackageId 
@@ -26,15 +25,15 @@ import com.squareup.moshi.Json
  */
 
 data class DealPackageService (
-    @Json(name = "dealPackageId")
+    @SerializedName("dealPackageId")
     val dealPackageId: java.util.UUID? = null,
-    @Json(name = "dealPackage")
+    @SerializedName("dealPackage")
     val dealPackage: DealPackage? = null,
-    @Json(name = "serviceId")
+    @SerializedName("serviceId")
     val serviceId: java.util.UUID? = null,
-    @Json(name = "service")
+    @SerializedName("service")
     val service: Service? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null
 )
 

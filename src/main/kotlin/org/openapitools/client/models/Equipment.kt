@@ -15,8 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.Hospital
 import org.openapitools.client.models.Media
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -30,21 +29,21 @@ import com.squareup.moshi.Json
  */
 
 data class Equipment (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "normalizedName")
+    @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospital")
+    @SerializedName("hospital")
     val hospital: Hospital? = null,
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<Media>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("medias")
+    val medias: kotlin.Array<Media>? = null,
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

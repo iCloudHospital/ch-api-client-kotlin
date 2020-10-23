@@ -56,7 +56,7 @@ class DepartmentApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1HospitalsDepartmentsGet(id: java.util.UUID?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, name: kotlin.String?, additionalInfo: kotlin.String?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : DepartmentsViewModel {
+    fun apiV1HospitalsDepartmentsGet(id: java.util.UUID?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, name: kotlin.String?, additionalInfo: kotlin.String?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : DepartmentsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

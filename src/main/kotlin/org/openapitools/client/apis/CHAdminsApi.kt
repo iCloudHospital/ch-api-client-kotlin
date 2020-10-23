@@ -181,7 +181,7 @@ class CHAdminsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1ChadminsGet(id: java.util.UUID?, fullname: kotlin.String?, email: kotlin.String?, gender: Gender?, dateOfBirth: java.time.OffsetDateTime?, created: java.time.OffsetDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : CHAdminsViewModel {
+    fun apiV1ChadminsGet(id: java.util.UUID?, fullname: kotlin.String?, email: kotlin.String?, gender: Gender?, dateOfBirth: java.time.LocalDateTime?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : CHAdminsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

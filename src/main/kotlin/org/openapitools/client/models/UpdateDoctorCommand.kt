@@ -20,8 +20,7 @@ import org.openapitools.client.models.Gender
 import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param startPracticeDate 
@@ -45,41 +44,41 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateDoctorCommand (
-    @Json(name = "startPracticeDate")
-    val startPracticeDate: java.time.OffsetDateTime? = null,
-    @Json(name = "overview")
+    @SerializedName("startPracticeDate")
+    val startPracticeDate: java.time.LocalDateTime? = null,
+    @SerializedName("overview")
     val overview: kotlin.String? = null,
-    @Json(name = "consultationEnabled")
+    @SerializedName("consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
-    @Json(name = "consultationFee")
+    @SerializedName("consultationFee")
     val consultationFee: kotlin.Double? = null,
-    @Json(name = "doctorEducations")
-    val doctorEducations: kotlin.collections.List<DoctorEducationItemViewModel>? = null,
-    @Json(name = "doctorPortfolios")
-    val doctorPortfolios: kotlin.collections.List<DoctorPortfolioItemViewModel>? = null,
-    @Json(name = "doctorSpecialties")
-    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
-    @Json(name = "doctorCertificates")
-    val doctorCertificates: kotlin.collections.List<DoctorCertificateItemViewModel>? = null,
-    @Json(name = "doctorAwards")
-    val doctorAwards: kotlin.collections.List<AwardViewModel>? = null,
-    @Json(name = "firstName")
+    @SerializedName("doctorEducations")
+    val doctorEducations: kotlin.Array<DoctorEducationItemViewModel>? = null,
+    @SerializedName("doctorPortfolios")
+    val doctorPortfolios: kotlin.Array<DoctorPortfolioItemViewModel>? = null,
+    @SerializedName("doctorSpecialties")
+    val doctorSpecialties: kotlin.Array<DoctorSpecialtyItemViewModel>? = null,
+    @SerializedName("doctorCertificates")
+    val doctorCertificates: kotlin.Array<DoctorCertificateItemViewModel>? = null,
+    @SerializedName("doctorAwards")
+    val doctorAwards: kotlin.Array<AwardViewModel>? = null,
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.OffsetDateTime? = null,
-    @Json(name = "languages")
-    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @Json(name = "locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null
+    @SerializedName("dateOfBirth")
+    val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("languages")
+    val languages: kotlin.Array<UserLanguageViewModel>? = null,
+    @SerializedName("locations")
+    val locations: kotlin.Array<UserLocationViewModel>? = null
 )
 

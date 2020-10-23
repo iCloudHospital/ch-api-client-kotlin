@@ -16,8 +16,7 @@ import org.openapitools.client.models.ArticleTagItemViewModel
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param title 
@@ -32,23 +31,23 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateArticleCommand (
-    @Json(name = "title")
+    @SerializedName("title")
     val title: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "status")
+    @SerializedName("status")
     val status: ArticleStatus? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "hospitalSlug")
+    @SerializedName("hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
-    @Json(name = "articleTags")
-    val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null
+    @SerializedName("articleTags")
+    val articleTags: kotlin.Array<ArticleTagItemViewModel>? = null,
+    @SerializedName("medias")
+    val medias: kotlin.Array<MediaViewModel>? = null
 )
 

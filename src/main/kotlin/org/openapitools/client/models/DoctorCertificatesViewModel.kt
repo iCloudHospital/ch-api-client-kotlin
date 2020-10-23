@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.DoctorCertificateItemViewModel
 import org.openapitools.client.models.PagedListMetaData
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param items 
@@ -23,9 +22,9 @@ import com.squareup.moshi.Json
  */
 
 data class DoctorCertificatesViewModel (
-    @Json(name = "items")
-    val items: kotlin.collections.List<DoctorCertificateItemViewModel>? = null,
-    @Json(name = "metaData")
+    @SerializedName("items")
+    val items: kotlin.Array<DoctorCertificateItemViewModel>? = null,
+    @SerializedName("metaData")
     val metaData: PagedListMetaData? = null
 )
 

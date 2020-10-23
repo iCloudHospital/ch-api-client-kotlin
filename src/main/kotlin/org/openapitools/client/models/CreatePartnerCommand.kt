@@ -16,8 +16,7 @@ import org.openapitools.client.models.MediaViewModel
 import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param userName 
@@ -35,29 +34,29 @@ import com.squareup.moshi.Json
  */
 
 data class CreatePartnerCommand (
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.OffsetDateTime? = null,
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @Json(name = "languages")
-    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @Json(name = "locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null
+    @SerializedName("dateOfBirth")
+    val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("medias")
+    val medias: kotlin.Array<MediaViewModel>? = null,
+    @SerializedName("languages")
+    val languages: kotlin.Array<UserLanguageViewModel>? = null,
+    @SerializedName("locations")
+    val locations: kotlin.Array<UserLocationViewModel>? = null
 )
 

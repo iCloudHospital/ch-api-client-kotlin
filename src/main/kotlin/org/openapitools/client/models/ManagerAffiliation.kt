@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.Hospital
 import org.openapitools.client.models.Manager
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param managerId 
@@ -25,13 +24,13 @@ import com.squareup.moshi.Json
  */
 
 data class ManagerAffiliation (
-    @Json(name = "managerId")
+    @SerializedName("managerId")
     val managerId: java.util.UUID? = null,
-    @Json(name = "manager")
+    @SerializedName("manager")
     val manager: Manager? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospital")
+    @SerializedName("hospital")
     val hospital: Hospital? = null
 )
 

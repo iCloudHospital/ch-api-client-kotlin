@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -23,13 +22,13 @@ import com.squareup.moshi.Json
  */
 
 data class Award (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "image")
+    @SerializedName("image")
     val image: kotlin.String? = null,
-    @Json(name = "date")
-    val date: java.time.OffsetDateTime? = null
+    @SerializedName("date")
+    val date: java.time.LocalDateTime? = null
 )
 

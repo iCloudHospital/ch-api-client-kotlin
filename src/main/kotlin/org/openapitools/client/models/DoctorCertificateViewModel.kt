@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -25,17 +24,17 @@ import com.squareup.moshi.Json
  */
 
 data class DoctorCertificateViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "doctorId")
+    @SerializedName("doctorId")
     val doctorId: java.util.UUID? = null,
-    @Json(name = "doctorName")
+    @SerializedName("doctorName")
     val doctorName: kotlin.String? = null,
-    @Json(name = "certificate")
+    @SerializedName("certificate")
     val certificate: kotlin.String? = null,
-    @Json(name = "activeFrom")
-    val activeFrom: java.time.OffsetDateTime? = null,
-    @Json(name = "activeTo")
-    val activeTo: java.time.OffsetDateTime? = null
+    @SerializedName("activeFrom")
+    val activeFrom: java.time.LocalDateTime? = null,
+    @SerializedName("activeTo")
+    val activeTo: java.time.LocalDateTime? = null
 )
 

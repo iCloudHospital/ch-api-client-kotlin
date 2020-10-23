@@ -12,8 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param appAlert 
@@ -22,11 +21,11 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateDeviceCommand (
-    @Json(name = "appAlert")
+    @SerializedName("appAlert")
     val appAlert: kotlin.Boolean? = null,
-    @Json(name = "eventAlert")
+    @SerializedName("eventAlert")
     val eventAlert: kotlin.Boolean? = null,
-    @Json(name = "noticeAlert")
+    @SerializedName("noticeAlert")
     val noticeAlert: kotlin.Boolean? = null
 )
 

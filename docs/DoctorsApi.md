@@ -179,16 +179,16 @@ val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val consultationEnabled : kotlin.Boolean = true // kotlin.Boolean | 
 val exceptDoctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val exceptDoctorIds : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val exceptDoctorIds : kotlin.Array<java.util.UUID> =  // kotlin.Array<java.util.UUID> | 
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
 val gender : Gender =  // Gender | 
-val dateOfBirth : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val created : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val dateOfBirth : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : DoctorsViewModel = apiInstance.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
@@ -213,16 +213,16 @@ Name | Type | Description  | Notes
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
  **consultationEnabled** | **kotlin.Boolean**|  | [optional]
  **exceptDoctorId** | [**java.util.UUID**](.md)|  | [optional]
- **exceptDoctorIds** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **exceptDoctorIds** | [**kotlin.Array&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
  **id** | [**java.util.UUID**](.md)|  | [optional]
  **fullname** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]
  **gender** | [**Gender**](.md)|  | [optional] [enum: NotSpecified, Male, Female, NonBinary, PreferNotToSay]
- **dateOfBirth** | **java.time.OffsetDateTime**|  | [optional]
- **created** | **java.time.OffsetDateTime**|  | [optional]
+ **dateOfBirth** | **java.time.LocalDateTime**|  | [optional]
+ **created** | **java.time.LocalDateTime**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type

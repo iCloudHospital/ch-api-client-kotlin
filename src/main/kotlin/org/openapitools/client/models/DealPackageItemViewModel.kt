@@ -15,8 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.DealPackageServiceItemViewModel
 import org.openapitools.client.models.RefundPolicy
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -36,33 +35,33 @@ import com.squareup.moshi.Json
  */
 
 data class DealPackageItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "dealId")
+    @SerializedName("dealId")
     val dealId: java.util.UUID? = null,
-    @Json(name = "dealName")
+    @SerializedName("dealName")
     val dealName: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "refundPolicy")
+    @SerializedName("refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-    @Json(name = "additionalServices")
+    @SerializedName("additionalServices")
     val additionalServices: kotlin.String? = null,
-    @Json(name = "accomodation")
+    @SerializedName("accomodation")
     val accomodation: kotlin.String? = null,
-    @Json(name = "transfer")
+    @SerializedName("transfer")
     val transfer: kotlin.String? = null,
-    @Json(name = "bonus")
+    @SerializedName("bonus")
     val bonus: kotlin.String? = null,
-    @Json(name = "price")
+    @SerializedName("price")
     val price: kotlin.Double? = null,
-    @Json(name = "serviceCount")
+    @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
-    @Json(name = "dealPackageServices")
-    val dealPackageServices: kotlin.collections.List<DealPackageServiceItemViewModel>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("dealPackageServices")
+    val dealPackageServices: kotlin.Array<DealPackageServiceItemViewModel>? = null,
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

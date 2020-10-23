@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.SearchMetaData
 import org.openapitools.client.models.SpecialtySearchViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param items 
@@ -23,9 +22,9 @@ import com.squareup.moshi.Json
  */
 
 data class SpecialtySearchResultViewModel (
-    @Json(name = "items")
-    val items: kotlin.collections.List<SpecialtySearchViewModel>? = null,
-    @Json(name = "metaData")
+    @SerializedName("items")
+    val items: kotlin.Array<SpecialtySearchViewModel>? = null,
+    @SerializedName("metaData")
     val metaData: SearchMetaData? = null
 )
 

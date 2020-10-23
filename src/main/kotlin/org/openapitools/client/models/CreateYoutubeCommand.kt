@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.YoutubeTagItemViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param title 
@@ -26,15 +25,15 @@ import com.squareup.moshi.Json
  */
 
 data class CreateYoutubeCommand (
-    @Json(name = "title")
+    @SerializedName("title")
     val title: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "url")
+    @SerializedName("url")
     val url: kotlin.String? = null,
-    @Json(name = "youtubeTags")
-    val youtubeTags: kotlin.collections.List<YoutubeTagItemViewModel>? = null,
-    @Json(name = "marketingType")
+    @SerializedName("youtubeTags")
+    val youtubeTags: kotlin.Array<YoutubeTagItemViewModel>? = null,
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null
 )
 

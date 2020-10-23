@@ -16,8 +16,7 @@ import org.openapitools.client.models.Gender
 import org.openapitools.client.models.RefundPolicy
 import org.openapitools.client.models.RejectReason
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -51,61 +50,61 @@ import com.squareup.moshi.Json
  */
 
 data class BookingItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "patientId")
+    @SerializedName("patientId")
     val patientId: java.util.UUID? = null,
-    @Json(name = "patientName")
+    @SerializedName("patientName")
     val patientName: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "dealId")
+    @SerializedName("dealId")
     val dealId: java.util.UUID? = null,
-    @Json(name = "dealName")
+    @SerializedName("dealName")
     val dealName: kotlin.String? = null,
-    @Json(name = "dealPackageId")
+    @SerializedName("dealPackageId")
     val dealPackageId: java.util.UUID? = null,
-    @Json(name = "refundPolicy")
+    @SerializedName("refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-    @Json(name = "quantity")
+    @SerializedName("quantity")
     val quantity: kotlin.Int? = null,
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.OffsetDateTime? = null,
-    @Json(name = "gender")
+    @SerializedName("dateOfBirth")
+    val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "comment")
+    @SerializedName("comment")
     val comment: kotlin.String? = null,
-    @Json(name = "approximateDateStart")
-    val approximateDateStart: java.time.OffsetDateTime? = null,
-    @Json(name = "approximateDateEnd")
-    val approximateDateEnd: java.time.OffsetDateTime? = null,
-    @Json(name = "confirmedDateStart")
-    val confirmedDateStart: java.time.OffsetDateTime? = null,
-    @Json(name = "confirmedDateEnd")
-    val confirmedDateEnd: java.time.OffsetDateTime? = null,
-    @Json(name = "fee")
+    @SerializedName("approximateDateStart")
+    val approximateDateStart: java.time.LocalDateTime? = null,
+    @SerializedName("approximateDateEnd")
+    val approximateDateEnd: java.time.LocalDateTime? = null,
+    @SerializedName("confirmedDateStart")
+    val confirmedDateStart: java.time.LocalDateTime? = null,
+    @SerializedName("confirmedDateEnd")
+    val confirmedDateEnd: java.time.LocalDateTime? = null,
+    @SerializedName("fee")
     val fee: kotlin.Double? = null,
-    @Json(name = "applicationFee")
+    @SerializedName("applicationFee")
     val applicationFee: kotlin.Double? = null,
-    @Json(name = "timeZone")
+    @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
-    @Json(name = "status")
+    @SerializedName("status")
     val status: BookingStatus? = null,
-    @Json(name = "rejectReason")
+    @SerializedName("rejectReason")
     val rejectReason: RejectReason? = null,
-    @Json(name = "rejectComment")
+    @SerializedName("rejectComment")
     val rejectComment: kotlin.String? = null,
-    @Json(name = "isOpen")
+    @SerializedName("isOpen")
     val isOpen: kotlin.Boolean? = null
 )
 

@@ -13,8 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.MarketingType
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param name 
@@ -24,13 +23,13 @@ import com.squareup.moshi.Json
  */
 
 data class CreateSpecialtyTypeCommand (
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "content")
+    @SerializedName("content")
     val content: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null
 )
 

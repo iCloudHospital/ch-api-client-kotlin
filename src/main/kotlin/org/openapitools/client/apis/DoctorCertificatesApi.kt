@@ -57,7 +57,7 @@ class DoctorCertificatesApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1DoctorsCertificatesGet(id: java.util.UUID?, doctorId: java.util.UUID?, doctorName: kotlin.String?, certificate: kotlin.String?, activeFrom: java.time.OffsetDateTime?, activeTo: java.time.OffsetDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : DoctorCertificatesViewModel {
+    fun apiV1DoctorsCertificatesGet(id: java.util.UUID?, doctorId: java.util.UUID?, doctorName: kotlin.String?, certificate: kotlin.String?, activeFrom: java.time.LocalDateTime?, activeTo: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : DoctorCertificatesViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

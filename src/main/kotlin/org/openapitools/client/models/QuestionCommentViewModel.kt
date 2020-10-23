@@ -14,8 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MediaViewModel
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param medias 
@@ -30,23 +29,23 @@ import com.squareup.moshi.Json
  */
 
 data class QuestionCommentViewModel (
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @Json(name = "id")
+    @SerializedName("medias")
+    val medias: kotlin.Array<MediaViewModel>? = null,
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "userId")
+    @SerializedName("userId")
     val userId: java.util.UUID? = null,
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "fullName")
+    @SerializedName("fullName")
     val fullName: kotlin.String? = null,
-    @Json(name = "questionId")
+    @SerializedName("questionId")
     val questionId: java.util.UUID? = null,
-    @Json(name = "questionTitle")
+    @SerializedName("questionTitle")
     val questionTitle: kotlin.String? = null,
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

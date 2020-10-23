@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,24 +22,24 @@ import com.squareup.moshi.Json
 enum class PaymentMethod(val value: kotlin.String){
 
 
-    @Json(name = "Stripe")
+    @SerializedName(value = "Stripe")
     stripe("Stripe"),
 
 
-    @Json(name = "Paypal")
+    @SerializedName(value = "Paypal")
     paypal("Paypal"),
 
 
-    @Json(name = "BankTransfer")
+    @SerializedName(value = "BankTransfer")
     bankTransfer("BankTransfer");
 
 
 
-    /**
-    This override toString avoids using the enum var name and uses the actual api value instead.
-    In cases the var name and value are different, the client would send incorrect enums to the server.
-    **/
-    override fun toString(): String {
+	/**
+	This override toString avoids using the enum var name and uses the actual api value instead.
+	In cases the var name and value are different, the client would send incorrect enums to the server.
+	**/
+	override fun toString(): String {
         return value
     }
 

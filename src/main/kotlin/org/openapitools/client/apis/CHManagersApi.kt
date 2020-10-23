@@ -182,7 +182,7 @@ class CHManagersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1ChmanagersGet(id: java.util.UUID?, fullname: kotlin.String?, email: kotlin.String?, gender: Gender?, dateOfBirth: java.time.OffsetDateTime?, created: java.time.OffsetDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.OffsetDateTime?, current: kotlin.Boolean?) : CHManagersViewModel {
+    fun apiV1ChmanagersGet(id: java.util.UUID?, fullname: kotlin.String?, email: kotlin.String?, gender: Gender?, dateOfBirth: java.time.LocalDateTime?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : CHManagersViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

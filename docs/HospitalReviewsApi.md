@@ -240,10 +240,10 @@ val body : kotlin.String = body_example // kotlin.String |
 val recommended : kotlin.Boolean = true // kotlin.Boolean | 
 val reviewCategory : ReviewCategory =  // ReviewCategory | 
 val rate : kotlin.Int = 56 // kotlin.Int | 
-val created : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
     val result : HospitalReviewsViewModel = apiInstance.apiV1HospitalsReviewsGet(patientId, patientName, hospitalId, hospitalName, body, recommended, reviewCategory, rate, created, page, limit, lastRetrieved, current)
@@ -269,10 +269,10 @@ Name | Type | Description  | Notes
  **recommended** | **kotlin.Boolean**|  | [optional]
  **reviewCategory** | [**ReviewCategory**](.md)|  | [optional] [enum: Services, Hospitality, Transfer, Etc]
  **rate** | **kotlin.Int**|  | [optional]
- **created** | **java.time.OffsetDateTime**|  | [optional]
+ **created** | **java.time.LocalDateTime**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type

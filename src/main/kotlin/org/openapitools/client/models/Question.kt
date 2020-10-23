@@ -20,8 +20,7 @@ import org.openapitools.client.models.QuestionComment
 import org.openapitools.client.models.QuestionStatus
 import org.openapitools.client.models.QuestionType
 
-import com.squareup.moshi.Json
-
+import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param id 
@@ -43,37 +42,37 @@ import com.squareup.moshi.Json
  */
 
 data class Question (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "title")
+    @SerializedName("title")
     val title: kotlin.String? = null,
-    @Json(name = "normalizedTitle")
+    @SerializedName("normalizedTitle")
     val normalizedTitle: kotlin.String? = null,
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "questionType")
+    @SerializedName("questionType")
     val questionType: QuestionType? = null,
-    @Json(name = "questionStatus")
+    @SerializedName("questionStatus")
     val questionStatus: QuestionStatus? = null,
-    @Json(name = "patientId")
+    @SerializedName("patientId")
     val patientId: java.util.UUID? = null,
-    @Json(name = "patient")
+    @SerializedName("patient")
     val patient: Patient? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospital")
+    @SerializedName("hospital")
     val hospital: Hospital? = null,
-    @Json(name = "dealPackageId")
+    @SerializedName("dealPackageId")
     val dealPackageId: java.util.UUID? = null,
-    @Json(name = "dealPackage")
+    @SerializedName("dealPackage")
     val dealPackage: DealPackage? = null,
-    @Json(name = "quantity")
+    @SerializedName("quantity")
     val quantity: kotlin.Int? = null,
-    @Json(name = "questionComments")
-    val questionComments: kotlin.collections.List<QuestionComment>? = null,
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<Media>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("questionComments")
+    val questionComments: kotlin.Array<QuestionComment>? = null,
+    @SerializedName("medias")
+    val medias: kotlin.Array<Media>? = null,
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

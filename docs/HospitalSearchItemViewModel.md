@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **city** | **kotlin.String** |  |  [optional]
 **zipCode** | **kotlin.String** |  |  [optional]
 **address** | **kotlin.String** |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaSearchViewModel&gt;**](MediaSearchViewModel.md) |  |  [optional]
+**medias** | [**kotlin.Array&lt;MediaSearchViewModel&gt;**](MediaSearchViewModel.md) |  |  [optional]
 **consultationEnabled** | **kotlin.Boolean** |  |  [optional]
 **consultationFee** | **kotlin.Double** |  |  [optional]
 **specialtiesSummerized** | **kotlin.String** |  |  [optional]

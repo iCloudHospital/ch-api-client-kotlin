@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **specialtyId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **specialty** | [**Specialty**](Specialty.md) |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
-**services** | [**kotlin.collections.List&lt;Service&gt;**](Service.md) |  |  [optional]
+**services** | [**kotlin.Array&lt;Service&gt;**](Service.md) |  |  [optional]
 
 
 

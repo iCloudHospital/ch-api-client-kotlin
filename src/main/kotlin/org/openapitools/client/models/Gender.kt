@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,32 +22,32 @@ import com.squareup.moshi.Json
 enum class Gender(val value: kotlin.String){
 
 
-    @Json(name = "NotSpecified")
+    @SerializedName(value = "NotSpecified")
     notSpecified("NotSpecified"),
 
 
-    @Json(name = "Male")
+    @SerializedName(value = "Male")
     male("Male"),
 
 
-    @Json(name = "Female")
+    @SerializedName(value = "Female")
     female("Female"),
 
 
-    @Json(name = "NonBinary")
+    @SerializedName(value = "NonBinary")
     nonBinary("NonBinary"),
 
 
-    @Json(name = "PreferNotToSay")
+    @SerializedName(value = "PreferNotToSay")
     preferNotToSay("PreferNotToSay");
 
 
 
-    /**
-    This override toString avoids using the enum var name and uses the actual api value instead.
-    In cases the var name and value are different, the client would send incorrect enums to the server.
-    **/
-    override fun toString(): String {
+	/**
+	This override toString avoids using the enum var name and uses the actual api value instead.
+	In cases the var name and value are different, the client would send incorrect enums to the server.
+	**/
+	override fun toString(): String {
         return value
     }
 

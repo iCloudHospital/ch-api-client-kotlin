@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
 **gender** | [**Gender**](Gender.md) |  |  [optional]
-**dateOfBirth** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**dateOfBirth** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 
