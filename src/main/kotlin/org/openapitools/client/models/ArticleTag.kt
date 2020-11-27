@@ -15,6 +15,7 @@ import org.openapitools.client.models.Article
 import org.openapitools.client.models.Tag
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param articleId 

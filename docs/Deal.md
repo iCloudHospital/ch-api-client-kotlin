@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
-**dealPackages** | [**kotlin.Array&lt;DealPackage&gt;**](DealPackage.md) |  |  [optional]
+**dealPackages** | [**kotlin.collections.List&lt;DealPackage&gt;**](DealPackage.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

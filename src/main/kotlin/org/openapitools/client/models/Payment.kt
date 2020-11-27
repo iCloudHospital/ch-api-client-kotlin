@@ -20,6 +20,7 @@ import org.openapitools.client.models.PaymentStatus
 import org.openapitools.client.models.RefundStatus
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -80,10 +81,10 @@ data class Payment (
     @SerializedName("cardLast4Digits")
     val cardLast4Digits: kotlin.String? = null,
     @SerializedName("chargeStatusChangeLogs")
-    val chargeStatusChangeLogs: kotlin.Array<ChangeLog>? = null,
+    val chargeStatusChangeLogs: kotlin.collections.List<ChangeLog>? = null,
     @SerializedName("refundStatusChangeLogs")
-    val refundStatusChangeLogs: kotlin.Array<ChangeLog>? = null,
+    val refundStatusChangeLogs: kotlin.collections.List<ChangeLog>? = null,
     @SerializedName("paymentStatusChangeLogs")
-    val paymentStatusChangeLogs: kotlin.Array<ChangeLog>? = null
+    val paymentStatusChangeLogs: kotlin.collections.List<ChangeLog>? = null
 )
 

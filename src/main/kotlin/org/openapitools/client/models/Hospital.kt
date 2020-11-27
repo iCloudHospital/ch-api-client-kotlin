@@ -32,6 +32,7 @@ import org.openapitools.client.models.Media
 import org.openapitools.client.models.Question
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -112,35 +113,35 @@ data class Hospital (
     @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
     @SerializedName("articles")
-    val articles: kotlin.Array<Article>? = null,
+    val articles: kotlin.collections.List<Article>? = null,
     @SerializedName("questions")
-    val questions: kotlin.Array<Question>? = null,
+    val questions: kotlin.collections.List<Question>? = null,
     @SerializedName("deals")
-    val deals: kotlin.Array<Deal>? = null,
+    val deals: kotlin.collections.List<Deal>? = null,
     @SerializedName("equipments")
-    val equipments: kotlin.Array<Equipment>? = null,
+    val equipments: kotlin.collections.List<Equipment>? = null,
     @SerializedName("reviews")
-    val reviews: kotlin.Array<HospitalReview>? = null,
+    val reviews: kotlin.collections.List<HospitalReview>? = null,
     @SerializedName("departments")
-    val departments: kotlin.Array<Department>? = null,
+    val departments: kotlin.collections.List<Department>? = null,
     @SerializedName("specialties")
-    val specialties: kotlin.Array<HospitalSpecialty>? = null,
+    val specialties: kotlin.collections.List<HospitalSpecialty>? = null,
     @SerializedName("accreditations")
-    val accreditations: kotlin.Array<HospitalAccreditation>? = null,
+    val accreditations: kotlin.collections.List<HospitalAccreditation>? = null,
     @SerializedName("doctorAffiliations")
-    val doctorAffiliations: kotlin.Array<DoctorAffiliation>? = null,
+    val doctorAffiliations: kotlin.collections.List<DoctorAffiliation>? = null,
     @SerializedName("managerAffiliations")
-    val managerAffiliations: kotlin.Array<ManagerAffiliation>? = null,
+    val managerAffiliations: kotlin.collections.List<ManagerAffiliation>? = null,
     @SerializedName("bookings")
-    val bookings: kotlin.Array<Booking>? = null,
+    val bookings: kotlin.collections.List<Booking>? = null,
     @SerializedName("consultations")
-    val consultations: kotlin.Array<Consultation>? = null,
+    val consultations: kotlin.collections.List<Consultation>? = null,
     @SerializedName("evaluations")
-    val evaluations: kotlin.Array<HospitalEvaluation>? = null,
+    val evaluations: kotlin.collections.List<HospitalEvaluation>? = null,
     @SerializedName("awards")
-    val awards: kotlin.Array<Award>? = null,
+    val awards: kotlin.collections.List<Award>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<Media>? = null,
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("location")
     val location: Location? = null,
     @SerializedName("auditableEntity")

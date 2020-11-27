@@ -15,6 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MediaViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -50,7 +51,7 @@ data class CountryViewModel (
     @SerializedName("articlesCount")
     val articlesCount: kotlin.Int? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null,
+    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

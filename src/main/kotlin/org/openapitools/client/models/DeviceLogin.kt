@@ -16,6 +16,7 @@ import org.openapitools.client.models.Device
 import org.openapitools.client.models.Location
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 

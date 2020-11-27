@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.HospitalSearchItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param hospitals 
@@ -32,7 +33,7 @@ import com.google.gson.annotations.SerializedName
 
 data class SpecialtySearchViewModel (
     @SerializedName("hospitals")
-    val hospitals: kotlin.Array<HospitalSearchItemViewModel>? = null,
+    val hospitals: kotlin.collections.List<HospitalSearchItemViewModel>? = null,
     @SerializedName("specialtyId")
     val specialtyId: kotlin.String? = null,
     @SerializedName("specialtyName")

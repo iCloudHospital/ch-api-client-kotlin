@@ -190,7 +190,7 @@ class DoctorsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1DoctorsGet(countryId: java.util.UUID?, hospitalId: java.util.UUID?, marketingType: MarketingType?, specialtyId: java.util.UUID?, specialtyTypeId: java.util.UUID?, consultationEnabled: kotlin.Boolean?, exceptDoctorId: java.util.UUID?, exceptDoctorIds: kotlin.Array<java.util.UUID>?, id: java.util.UUID?, fullname: kotlin.String?, email: kotlin.String?, gender: Gender?, dateOfBirth: java.time.LocalDateTime?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : DoctorsViewModel {
+    fun apiV1DoctorsGet(countryId: java.util.UUID?, hospitalId: java.util.UUID?, marketingType: MarketingType?, specialtyId: java.util.UUID?, specialtyTypeId: java.util.UUID?, consultationEnabled: kotlin.Boolean?, exceptDoctorId: java.util.UUID?, exceptDoctorIds: kotlin.collections.List<java.util.UUID>?, id: java.util.UUID?, fullname: kotlin.String?, email: kotlin.String?, gender: Gender?, dateOfBirth: java.time.LocalDateTime?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : DoctorsViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

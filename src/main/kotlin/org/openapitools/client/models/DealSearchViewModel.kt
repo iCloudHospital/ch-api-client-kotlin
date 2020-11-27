@@ -15,6 +15,7 @@ import org.openapitools.client.models.DealPackageSearchViewModel
 import org.openapitools.client.models.HospitalSearchItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -46,6 +47,6 @@ data class DealSearchViewModel (
     @SerializedName("hospital")
     val hospital: HospitalSearchItemViewModel? = null,
     @SerializedName("packages")
-    val packages: kotlin.Array<DealPackageSearchViewModel>? = null
+    val packages: kotlin.collections.List<DealPackageSearchViewModel>? = null
 )
 

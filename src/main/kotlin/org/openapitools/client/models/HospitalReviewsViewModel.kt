@@ -15,6 +15,7 @@ import org.openapitools.client.models.HospitalReviewItemViewModel
 import org.openapitools.client.models.PagedListMetaData
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param items 
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName
 
 data class HospitalReviewsViewModel (
     @SerializedName("items")
-    val items: kotlin.Array<HospitalReviewItemViewModel>? = null,
+    val items: kotlin.collections.List<HospitalReviewItemViewModel>? = null,
     @SerializedName("metaData")
     val metaData: PagedListMetaData? = null
 )

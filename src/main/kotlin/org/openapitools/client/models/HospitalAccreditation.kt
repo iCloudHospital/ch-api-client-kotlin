@@ -15,6 +15,7 @@ import org.openapitools.client.models.Accreditation
 import org.openapitools.client.models.Hospital
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param hospitalId 

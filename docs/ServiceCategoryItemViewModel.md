@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **description** | **kotlin.String** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **serviceCount** | **kotlin.Int** |  |  [optional]
-**services** | [**kotlin.Array&lt;ServiceItemViewModel&gt;**](ServiceItemViewModel.md) |  |  [optional]
+**services** | [**kotlin.collections.List&lt;ServiceItemViewModel&gt;**](ServiceItemViewModel.md) |  |  [optional]
 
 
 

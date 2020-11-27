@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **dealPackageId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **dealPackage** | [**DealPackage**](DealPackage.md) |  |  [optional]
 **quantity** | **kotlin.Int** |  |  [optional]
-**questionComments** | [**kotlin.Array&lt;QuestionComment&gt;**](QuestionComment.md) |  |  [optional]
-**medias** | [**kotlin.Array&lt;Media&gt;**](Media.md) |  |  [optional]
+**questionComments** | [**kotlin.collections.List&lt;QuestionComment&gt;**](QuestionComment.md) |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

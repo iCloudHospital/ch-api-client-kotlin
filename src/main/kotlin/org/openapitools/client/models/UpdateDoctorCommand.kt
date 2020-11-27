@@ -21,6 +21,7 @@ import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param startPracticeDate 
@@ -53,15 +54,15 @@ data class UpdateDoctorCommand (
     @SerializedName("consultationFee")
     val consultationFee: kotlin.Double? = null,
     @SerializedName("doctorEducations")
-    val doctorEducations: kotlin.Array<DoctorEducationItemViewModel>? = null,
+    val doctorEducations: kotlin.collections.List<DoctorEducationItemViewModel>? = null,
     @SerializedName("doctorPortfolios")
-    val doctorPortfolios: kotlin.Array<DoctorPortfolioItemViewModel>? = null,
+    val doctorPortfolios: kotlin.collections.List<DoctorPortfolioItemViewModel>? = null,
     @SerializedName("doctorSpecialties")
-    val doctorSpecialties: kotlin.Array<DoctorSpecialtyItemViewModel>? = null,
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
     @SerializedName("doctorCertificates")
-    val doctorCertificates: kotlin.Array<DoctorCertificateItemViewModel>? = null,
+    val doctorCertificates: kotlin.collections.List<DoctorCertificateItemViewModel>? = null,
     @SerializedName("doctorAwards")
-    val doctorAwards: kotlin.Array<AwardViewModel>? = null,
+    val doctorAwards: kotlin.collections.List<AwardViewModel>? = null,
     @SerializedName("firstName")
     val firstName: kotlin.String? = null,
     @SerializedName("lastName")
@@ -77,8 +78,8 @@ data class UpdateDoctorCommand (
     @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
     @SerializedName("languages")
-    val languages: kotlin.Array<UserLanguageViewModel>? = null,
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @SerializedName("locations")
-    val locations: kotlin.Array<UserLocationViewModel>? = null
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null
 )
 

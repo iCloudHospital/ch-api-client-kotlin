@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.ServiceItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -39,6 +40,6 @@ data class ServiceCategoryItemViewModel (
     @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
     @SerializedName("services")
-    val services: kotlin.Array<ServiceItemViewModel>? = null
+    val services: kotlin.collections.List<ServiceItemViewModel>? = null
 )
 

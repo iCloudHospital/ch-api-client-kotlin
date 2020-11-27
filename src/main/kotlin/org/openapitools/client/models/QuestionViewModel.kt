@@ -18,6 +18,7 @@ import org.openapitools.client.models.QuestionType
 import org.openapitools.client.models.RefundPolicy
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param body 
@@ -44,7 +45,7 @@ data class QuestionViewModel (
     @SerializedName("body")
     val body: kotlin.String? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null,
+    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("title")

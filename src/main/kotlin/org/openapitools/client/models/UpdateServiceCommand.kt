@@ -16,6 +16,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.Procedure
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param name 

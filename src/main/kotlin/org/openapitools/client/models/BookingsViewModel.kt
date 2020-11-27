@@ -15,6 +15,7 @@ import org.openapitools.client.models.BookingItemViewModel
 import org.openapitools.client.models.PagedListMetaData
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param items 
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName
 
 data class BookingsViewModel (
     @SerializedName("items")
-    val items: kotlin.Array<BookingItemViewModel>? = null,
+    val items: kotlin.collections.List<BookingItemViewModel>? = null,
     @SerializedName("metaData")
     val metaData: PagedListMetaData? = null
 )

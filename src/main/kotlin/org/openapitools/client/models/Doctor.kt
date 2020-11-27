@@ -28,6 +28,7 @@ import org.openapitools.client.models.UserLanguage
 import org.openapitools.client.models.UserLocation
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param slug 
@@ -55,6 +56,7 @@ import com.google.gson.annotations.SerializedName
  * @param gender 
  * @param dateOfBirth 
  * @param timeZone 
+ * @param communicationUserId 
  * @param devices 
  * @param articles 
  * @param questionComments 
@@ -75,21 +77,21 @@ data class Doctor (
     @SerializedName("consultationFee")
     val consultationFee: kotlin.Double? = null,
     @SerializedName("doctorReviews")
-    val doctorReviews: kotlin.Array<DoctorReview>? = null,
+    val doctorReviews: kotlin.collections.List<DoctorReview>? = null,
     @SerializedName("doctorEducations")
-    val doctorEducations: kotlin.Array<DoctorEducation>? = null,
+    val doctorEducations: kotlin.collections.List<DoctorEducation>? = null,
     @SerializedName("doctorPortfolios")
-    val doctorPortfolios: kotlin.Array<DoctorPortfolio>? = null,
+    val doctorPortfolios: kotlin.collections.List<DoctorPortfolio>? = null,
     @SerializedName("doctorSpecialties")
-    val doctorSpecialties: kotlin.Array<DoctorSpecialty>? = null,
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialty>? = null,
     @SerializedName("doctorCertificates")
-    val doctorCertificates: kotlin.Array<DoctorCertificate>? = null,
+    val doctorCertificates: kotlin.collections.List<DoctorCertificate>? = null,
     @SerializedName("doctorAffiliations")
-    val doctorAffiliations: kotlin.Array<DoctorAffiliation>? = null,
+    val doctorAffiliations: kotlin.collections.List<DoctorAffiliation>? = null,
     @SerializedName("awards")
-    val awards: kotlin.Array<Award>? = null,
+    val awards: kotlin.collections.List<Award>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<Media>? = null,
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -114,16 +116,18 @@ data class Doctor (
     val dateOfBirth: java.time.LocalDateTime? = null,
     @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
     @SerializedName("devices")
-    val devices: kotlin.Array<Device>? = null,
+    val devices: kotlin.collections.List<Device>? = null,
     @SerializedName("articles")
-    val articles: kotlin.Array<Article>? = null,
+    val articles: kotlin.collections.List<Article>? = null,
     @SerializedName("questionComments")
-    val questionComments: kotlin.Array<QuestionComment>? = null,
+    val questionComments: kotlin.collections.List<QuestionComment>? = null,
     @SerializedName("locations")
-    val locations: kotlin.Array<UserLocation>? = null,
+    val locations: kotlin.collections.List<UserLocation>? = null,
     @SerializedName("languages")
-    val languages: kotlin.Array<UserLanguage>? = null,
+    val languages: kotlin.collections.List<UserLanguage>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

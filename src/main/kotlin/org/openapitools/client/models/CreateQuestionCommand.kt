@@ -16,6 +16,7 @@ import org.openapitools.client.models.QuestionStatus
 import org.openapitools.client.models.QuestionType
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param title 
@@ -41,6 +42,6 @@ data class CreateQuestionCommand (
     @SerializedName("quantity")
     val quantity: kotlin.Int? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null
+    val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

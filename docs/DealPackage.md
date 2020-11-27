@@ -13,10 +13,10 @@ Name | Type | Description | Notes
 **transfer** | **kotlin.String** |  |  [optional]
 **bonus** | **kotlin.String** |  |  [optional]
 **price** | **kotlin.Double** |  |  [optional]
-**dealPackageServices** | [**kotlin.Array&lt;DealPackageService&gt;**](DealPackageService.md) |  |  [optional]
-**managers** | [**kotlin.Array&lt;Manager&gt;**](Manager.md) |  |  [optional]
-**questions** | [**kotlin.Array&lt;Question&gt;**](Question.md) |  |  [optional]
-**bookings** | [**kotlin.Array&lt;Booking&gt;**](Booking.md) |  |  [optional]
+**dealPackageServices** | [**kotlin.collections.List&lt;DealPackageService&gt;**](DealPackageService.md) |  |  [optional]
+**managers** | [**kotlin.collections.List&lt;Manager&gt;**](Manager.md) |  |  [optional]
+**questions** | [**kotlin.collections.List&lt;Question&gt;**](Question.md) |  |  [optional]
+**bookings** | [**kotlin.collections.List&lt;Booking&gt;**](Booking.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

@@ -15,6 +15,7 @@ import org.openapitools.client.models.Tag
 import org.openapitools.client.models.Youtube
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param youtubeId 

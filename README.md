@@ -2,16 +2,8 @@
 
 ## Requires
 
-* Kotlin 1.3.41
+* Kotlin 1.3.61
 * Gradle 4.9
-
-## Install openapi-generator
-npm install @openapitools/openapi-generator-cli@cli-5.0.0-beta2 -g
-
-Generate kotlin api client with serializationLibrary option
-```
-openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o . --additional-properties=serializationLibrary=gson --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime
-```
 
 ## Build
 
@@ -73,6 +65,9 @@ Class | Method | HTTP request | Description
 *CHManagersApi* | [**apiV1ChmanagersChManagerIdPut**](docs/CHManagersApi.md#apiv1chmanagerschmanageridput) | **PUT** /api/v1/chmanagers/{chManagerId} | Update cloud hospital manager.
 *CHManagersApi* | [**apiV1ChmanagersGet**](docs/CHManagersApi.md#apiv1chmanagersget) | **GET** /api/v1/chmanagers | Get cloud hospital managers.
 *CHManagersApi* | [**apiV1ChmanagersPost**](docs/CHManagersApi.md#apiv1chmanagerspost) | **POST** /api/v1/chmanagers | Create cloud hospital manager.
+*CommunicationsApi* | [**apiV1CommunicationsDelete**](docs/CommunicationsApi.md#apiv1communicationsdelete) | **DELETE** /api/v1/communications | 
+*CommunicationsApi* | [**apiV1CommunicationsGet**](docs/CommunicationsApi.md#apiv1communicationsget) | **GET** /api/v1/communications | 
+*CommunicationsApi* | [**apiV1CommunicationsPut**](docs/CommunicationsApi.md#apiv1communicationsput) | **PUT** /api/v1/communications | 
 *ConsultationsApi* | [**apiV1ConsultationsConsultationIdApprovePost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidapprovepost) | **POST** /api/v1/consultations/{consultationId}/approve | Approve consultation.
 *ConsultationsApi* | [**apiV1ConsultationsConsultationIdCancelPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidcancelpost) | **POST** /api/v1/consultations/{consultationId}/cancel | Cancel consultation.
 *ConsultationsApi* | [**apiV1ConsultationsConsultationIdDelete**](docs/ConsultationsApi.md#apiv1consultationsconsultationiddelete) | **DELETE** /api/v1/consultations/{consultationId} | Delete consultation.
@@ -180,10 +175,10 @@ Class | Method | HTTP request | Description
 *QuestionsApi* | [**apiV1HospitalsQuestionsGet**](docs/QuestionsApi.md#apiv1hospitalsquestionsget) | **GET** /api/v1/hospitals/questions | Get all questions.
 *SearchApi* | [**apiV1SearchDealsGet**](docs/SearchApi.md#apiv1searchdealsget) | **GET** /api/v1/search/deals | 
 *SearchApi* | [**apiV1SearchDoctorsGet**](docs/SearchApi.md#apiv1searchdoctorsget) | **GET** /api/v1/search/doctors | 
-*SearchApi* | [**apiV1SearchEquipmentsGet**](docs/SearchApi.md#apiv1searchequipmentsget) | **GET** /api/v1/search/equipments | 
 *SearchApi* | [**apiV1SearchGetcountGet**](docs/SearchApi.md#apiv1searchgetcountget) | **GET** /api/v1/search/getcount | 
 *SearchApi* | [**apiV1SearchHospitalsGet**](docs/SearchApi.md#apiv1searchhospitalsget) | **GET** /api/v1/search/hospitals | 
 *SearchApi* | [**apiV1SearchSpecialtiesGet**](docs/SearchApi.md#apiv1searchspecialtiesget) | **GET** /api/v1/search/specialties | 
+*SearchApi* | [**apiV1SearchSpecialtytypesGet**](docs/SearchApi.md#apiv1searchspecialtytypesget) | **GET** /api/v1/search/specialtytypes | 
 *ServiceCategoriesApi* | [**apiV1ServicecategoriesGet**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesget) | **GET** /api/v1/servicecategories | Get all ServiceCategories.
 *ServiceCategoriesApi* | [**apiV1ServicecategoriesPost**](docs/ServiceCategoriesApi.md#apiv1servicecategoriespost) | **POST** /api/v1/servicecategories | Create ServiceCategory.
 *ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdDelete**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryiddelete) | **DELETE** /api/v1/servicecategories/{serviceCategoryId} | Delete ServiceCategory.
@@ -253,6 +248,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.ChangeEmailCommand](docs/ChangeEmailCommand.md)
  - [org.openapitools.client.models.ChangeLog](docs/ChangeLog.md)
  - [org.openapitools.client.models.ChargeStatus](docs/ChargeStatus.md)
+ - [org.openapitools.client.models.CommunicationUserTokenModel](docs/CommunicationUserTokenModel.md)
  - [org.openapitools.client.models.ConfirmEmailCommand](docs/ConfirmEmailCommand.md)
  - [org.openapitools.client.models.Consultation](docs/Consultation.md)
  - [org.openapitools.client.models.ConsultationItemViewModel](docs/ConsultationItemViewModel.md)
@@ -338,8 +334,6 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.DoctorsViewModel](docs/DoctorsViewModel.md)
  - [org.openapitools.client.models.Equipment](docs/Equipment.md)
  - [org.openapitools.client.models.EquipmentItemViewModel](docs/EquipmentItemViewModel.md)
- - [org.openapitools.client.models.EquipmentSearchResultViewModel](docs/EquipmentSearchResultViewModel.md)
- - [org.openapitools.client.models.EquipmentSearchViewModel](docs/EquipmentSearchViewModel.md)
  - [org.openapitools.client.models.EquipmentViewModel](docs/EquipmentViewModel.md)
  - [org.openapitools.client.models.EquipmentsViewModel](docs/EquipmentsViewModel.md)
  - [org.openapitools.client.models.Gender](docs/Gender.md)
@@ -421,6 +415,8 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.SpecialtyTypeCategoryItemViewModel](docs/SpecialtyTypeCategoryItemViewModel.md)
  - [org.openapitools.client.models.SpecialtyTypeCategoryViewModel](docs/SpecialtyTypeCategoryViewModel.md)
  - [org.openapitools.client.models.SpecialtyTypeItemViewModel](docs/SpecialtyTypeItemViewModel.md)
+ - [org.openapitools.client.models.SpecialtyTypeSearchResultViewModel](docs/SpecialtyTypeSearchResultViewModel.md)
+ - [org.openapitools.client.models.SpecialtyTypeSearchViewModel](docs/SpecialtyTypeSearchViewModel.md)
  - [org.openapitools.client.models.SpecialtyTypeViewModel](docs/SpecialtyTypeViewModel.md)
  - [org.openapitools.client.models.SpecialtyTypesViewModel](docs/SpecialtyTypesViewModel.md)
  - [org.openapitools.client.models.SpecialtyViewModel](docs/SpecialtyViewModel.md)

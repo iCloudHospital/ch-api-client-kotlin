@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.HospitalAccreditation
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -36,6 +37,6 @@ data class Accreditation (
     @SerializedName("country")
     val country: kotlin.String? = null,
     @SerializedName("accreditations")
-    val accreditations: kotlin.Array<HospitalAccreditation>? = null
+    val accreditations: kotlin.collections.List<HospitalAccreditation>? = null
 )
 

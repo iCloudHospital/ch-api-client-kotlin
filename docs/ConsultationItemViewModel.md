@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **consultationType** | [**ConsultationType**](ConsultationType.md) |  |  [optional]
 **patientId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **patientName** | **kotlin.String** |  |  [optional]
+**communicationUserId** | **kotlin.String** |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional]
 **specialtyId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]

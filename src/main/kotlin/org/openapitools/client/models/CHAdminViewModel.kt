@@ -17,6 +17,7 @@ import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param userType 
@@ -33,6 +34,8 @@ import com.google.gson.annotations.SerializedName
  * @param photoThumbnail 
  * @param gender 
  * @param dateOfBirth 
+ * @param timeZone 
+ * @param communicationUserId 
  * @param auditableEntity 
  */
 
@@ -40,9 +43,9 @@ data class CHAdminViewModel (
     @SerializedName("userType")
     val userType: kotlin.String? = null,
     @SerializedName("languages")
-    val languages: kotlin.Array<UserLanguageViewModel>? = null,
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @SerializedName("locations")
-    val locations: kotlin.Array<UserLocationViewModel>? = null,
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -65,6 +68,10 @@ data class CHAdminViewModel (
     val gender: Gender? = null,
     @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("timeZone")
+    val timeZone: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

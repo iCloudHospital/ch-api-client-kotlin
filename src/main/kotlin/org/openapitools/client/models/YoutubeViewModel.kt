@@ -16,6 +16,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.YoutubeTagItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -40,7 +41,7 @@ data class YoutubeViewModel (
     @SerializedName("url")
     val url: kotlin.String? = null,
     @SerializedName("youtubeTags")
-    val youtubeTags: kotlin.Array<YoutubeTagItemViewModel>? = null,
+    val youtubeTags: kotlin.collections.List<YoutubeTagItemViewModel>? = null,
     @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
     @SerializedName("auditableEntity")

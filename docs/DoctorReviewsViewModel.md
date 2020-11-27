@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**kotlin.Array&lt;DoctorReviewItemViewModel&gt;**](DoctorReviewItemViewModel.md) |  |  [optional]
+**items** | [**kotlin.collections.List&lt;DoctorReviewItemViewModel&gt;**](DoctorReviewItemViewModel.md) |  |  [optional]
 **metaData** | [**PagedListMetaData**](PagedListMetaData.md) |  |  [optional]
 
 

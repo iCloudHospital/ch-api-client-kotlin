@@ -15,6 +15,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param name 
@@ -40,6 +41,6 @@ data class CreateDealCommand (
     @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null
+    val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

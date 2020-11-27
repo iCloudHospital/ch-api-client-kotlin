@@ -17,6 +17,7 @@ import org.openapitools.client.models.Gender
 import org.openapitools.client.models.HospitalAffiliationViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param slug 
@@ -43,6 +44,8 @@ import com.google.gson.annotations.SerializedName
  * @param photoThumbnail 
  * @param gender 
  * @param dateOfBirth 
+ * @param timeZone 
+ * @param communicationUserId 
  * @param auditableEntity 
  */
 
@@ -64,13 +67,13 @@ data class DoctorItemViewModel (
     @SerializedName("doctorSpecialtiesCount")
     val doctorSpecialtiesCount: kotlin.Int? = null,
     @SerializedName("doctorSpecialties")
-    val doctorSpecialties: kotlin.Array<DoctorSpecialtyItemViewModel>? = null,
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
     @SerializedName("doctorCertificatesCount")
     val doctorCertificatesCount: kotlin.Int? = null,
     @SerializedName("doctorAffiliationsCount")
     val doctorAffiliationsCount: kotlin.Int? = null,
     @SerializedName("doctorAffiliations")
-    val doctorAffiliations: kotlin.Array<HospitalAffiliationViewModel>? = null,
+    val doctorAffiliations: kotlin.collections.List<HospitalAffiliationViewModel>? = null,
     @SerializedName("articlesCount")
     val articlesCount: kotlin.Int? = null,
     @SerializedName("id")
@@ -95,6 +98,10 @@ data class DoctorItemViewModel (
     val gender: Gender? = null,
     @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("timeZone")
+    val timeZone: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

@@ -17,6 +17,7 @@ import org.openapitools.client.models.QuestionType
 import org.openapitools.client.models.RefundPolicy
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 

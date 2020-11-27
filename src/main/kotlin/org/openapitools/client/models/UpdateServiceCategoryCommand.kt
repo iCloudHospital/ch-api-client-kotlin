@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.ServiceItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param order 
@@ -30,7 +31,7 @@ data class UpdateServiceCategoryCommand (
     @SerializedName("order")
     val order: kotlin.Int? = null,
     @SerializedName("selectedServices")
-    val selectedServices: kotlin.Array<java.util.UUID>? = null,
+    val selectedServices: kotlin.collections.List<java.util.UUID>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("name")
@@ -42,6 +43,6 @@ data class UpdateServiceCategoryCommand (
     @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
     @SerializedName("services")
-    val services: kotlin.Array<ServiceItemViewModel>? = null
+    val services: kotlin.collections.List<ServiceItemViewModel>? = null
 )
 

@@ -263,6 +263,7 @@ class ServicesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     * @param description  (optional)
     * @param hospitalId  (optional)
     * @param hospitalName  (optional)
+    * @param hospitalSlug  (optional)
     * @param specialtyId  (optional)
     * @param specialtyTypeId  (optional)
     * @param specialtyTypeName  (optional)
@@ -280,7 +281,7 @@ class ServicesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1HospitalsServicesGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, specialtyId: java.util.UUID?, specialtyTypeId: java.util.UUID?, specialtyTypeName: kotlin.String?, marketingType: MarketingType?, procedure: Procedure?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : ServicesViewModel {
+    fun apiV1HospitalsServicesGet(id: java.util.UUID?, name: kotlin.String?, description: kotlin.String?, hospitalId: java.util.UUID?, hospitalName: kotlin.String?, hospitalSlug: kotlin.String?, specialtyId: java.util.UUID?, specialtyTypeId: java.util.UUID?, specialtyTypeName: kotlin.String?, marketingType: MarketingType?, procedure: Procedure?, created: java.time.LocalDateTime?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : ServicesViewModel {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -298,6 +299,9 @@ class ServicesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
                 }
                 if (hospitalName != null) {
                     put("HospitalName", listOf(hospitalName.toString()))
+                }
+                if (hospitalSlug != null) {
+                    put("HospitalSlug", listOf(hospitalSlug.toString()))
                 }
                 if (specialtyId != null) {
                     put("SpecialtyId", listOf(specialtyId.toString()))

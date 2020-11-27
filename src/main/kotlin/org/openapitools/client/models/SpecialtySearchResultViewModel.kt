@@ -15,6 +15,7 @@ import org.openapitools.client.models.SearchMetaData
 import org.openapitools.client.models.SpecialtySearchViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param items 
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName
 
 data class SpecialtySearchResultViewModel (
     @SerializedName("items")
-    val items: kotlin.Array<SpecialtySearchViewModel>? = null,
+    val items: kotlin.collections.List<SpecialtySearchViewModel>? = null,
     @SerializedName("metaData")
     val metaData: SearchMetaData? = null
 )

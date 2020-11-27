@@ -17,12 +17,14 @@ import org.openapitools.client.models.Gender
 import org.openapitools.client.models.RejectReason
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
  * @param consultationType 
  * @param patientId 
  * @param patientName 
+ * @param communicationUserId 
  * @param hospitalId 
  * @param hospitalName 
  * @param specialtyId 
@@ -65,6 +67,8 @@ data class ConsultationItemViewModel (
     val patientId: java.util.UUID? = null,
     @SerializedName("patientName")
     val patientName: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
     @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
     @SerializedName("hospitalName")

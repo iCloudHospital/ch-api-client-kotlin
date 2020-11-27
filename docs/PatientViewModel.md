@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **contactNumber** | **kotlin.String** |  |  [optional]
 **nationality** | **kotlin.String** |  |  [optional]
 **userType** | **kotlin.String** |  |  [optional]
-**languages** | [**kotlin.Array&lt;UserLanguageViewModel&gt;**](UserLanguageViewModel.md) |  |  [optional]
-**locations** | [**kotlin.Array&lt;UserLocationViewModel&gt;**](UserLocationViewModel.md) |  |  [optional]
+**languages** | [**kotlin.collections.List&lt;UserLanguageViewModel&gt;**](UserLanguageViewModel.md) |  |  [optional]
+**locations** | [**kotlin.collections.List&lt;UserLocationViewModel&gt;**](UserLocationViewModel.md) |  |  [optional]
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **userName** | **kotlin.String** |  |  [optional]
 **firstName** | **kotlin.String** |  |  [optional]
@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **photoThumbnail** | **kotlin.String** |  |  [optional]
 **gender** | [**Gender**](Gender.md) |  |  [optional]
 **dateOfBirth** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**timeZone** | **kotlin.String** |  |  [optional]
+**communicationUserId** | **kotlin.String** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

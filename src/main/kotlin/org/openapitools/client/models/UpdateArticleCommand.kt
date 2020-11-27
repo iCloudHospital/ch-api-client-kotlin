@@ -17,6 +17,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param title 
@@ -46,8 +47,8 @@ data class UpdateArticleCommand (
     @SerializedName("hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
     @SerializedName("articleTags")
-    val articleTags: kotlin.Array<ArticleTagItemViewModel>? = null,
+    val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null
+    val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param content 

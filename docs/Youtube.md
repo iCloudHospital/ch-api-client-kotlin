@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
 **url** | **kotlin.String** |  |  [optional]
-**youtubeTags** | [**kotlin.Array&lt;YoutubeTag&gt;**](YoutubeTag.md) |  |  [optional]
+**youtubeTags** | [**kotlin.collections.List&lt;YoutubeTag&gt;**](YoutubeTag.md) |  |  [optional]
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 

@@ -13,6 +13,7 @@ package org.openapitools.client.models
 
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param serviceSequence 
@@ -20,6 +21,6 @@ import com.google.gson.annotations.SerializedName
 
 data class UpdateServiceSequenceCommand (
     @SerializedName("serviceSequence")
-    val serviceSequence: kotlin.Array<java.util.UUID>? = null
+    val serviceSequence: kotlin.collections.List<java.util.UUID>? = null
 )
 

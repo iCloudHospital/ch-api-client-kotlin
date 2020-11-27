@@ -15,6 +15,7 @@ import org.openapitools.client.models.ConsultationType
 import org.openapitools.client.models.Gender
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param consultationType 

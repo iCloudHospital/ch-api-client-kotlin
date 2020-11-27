@@ -15,6 +15,7 @@ import org.openapitools.client.models.DealPackage
 import org.openapitools.client.models.Service
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param dealPackageId 

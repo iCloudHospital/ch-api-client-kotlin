@@ -20,6 +20,7 @@ import org.openapitools.client.models.Question
 import org.openapitools.client.models.RefundPolicy
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -58,13 +59,13 @@ data class DealPackage (
     @SerializedName("price")
     val price: kotlin.Double? = null,
     @SerializedName("dealPackageServices")
-    val dealPackageServices: kotlin.Array<DealPackageService>? = null,
+    val dealPackageServices: kotlin.collections.List<DealPackageService>? = null,
     @SerializedName("managers")
-    val managers: kotlin.Array<Manager>? = null,
+    val managers: kotlin.collections.List<Manager>? = null,
     @SerializedName("questions")
-    val questions: kotlin.Array<Question>? = null,
+    val questions: kotlin.collections.List<Question>? = null,
     @SerializedName("bookings")
-    val bookings: kotlin.Array<Booking>? = null,
+    val bookings: kotlin.collections.List<Booking>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

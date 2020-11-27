@@ -13,6 +13,7 @@ package org.openapitools.client.models
 
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param name 
@@ -26,6 +27,6 @@ data class CreateServiceCategoryCommand (
     @SerializedName("description")
     val description: kotlin.String? = null,
     @SerializedName("services")
-    val services: kotlin.Array<java.util.UUID>? = null
+    val services: kotlin.collections.List<java.util.UUID>? = null
 )
 

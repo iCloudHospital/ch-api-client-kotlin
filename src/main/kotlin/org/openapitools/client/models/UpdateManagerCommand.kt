@@ -16,6 +16,7 @@ import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param hospitalId 
@@ -48,8 +49,8 @@ data class UpdateManagerCommand (
     @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
     @SerializedName("languages")
-    val languages: kotlin.Array<UserLanguageViewModel>? = null,
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @SerializedName("locations")
-    val locations: kotlin.Array<UserLocationViewModel>? = null
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null
 )
 

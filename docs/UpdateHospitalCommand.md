@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**specialties** | [**kotlin.Array&lt;HospitalSpecialtyItemViewModel&gt;**](HospitalSpecialtyItemViewModel.md) |  |  [optional]
+**specialties** | [**kotlin.collections.List&lt;HospitalSpecialtyItemViewModel&gt;**](HospitalSpecialtyItemViewModel.md) |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
@@ -30,10 +30,10 @@ Name | Type | Description | Notes
 **doctorAffiliationsCount** | **kotlin.Int** |  |  [optional]
 **managerAffiliationsCount** | **kotlin.Int** |  |  [optional]
 **specialtiesSummerized** | **kotlin.String** |  |  [optional]
-**awards** | [**kotlin.Array&lt;AwardViewModel&gt;**](AwardViewModel.md) |  |  [optional]
-**medias** | [**kotlin.Array&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
-**accreditations** | [**kotlin.Array&lt;AccreditationViewModel&gt;**](AccreditationViewModel.md) |  |  [optional]
-**evaluations** | [**kotlin.Array&lt;HospitalEvaluationViewModel&gt;**](HospitalEvaluationViewModel.md) |  |  [optional]
+**awards** | [**kotlin.collections.List&lt;AwardViewModel&gt;**](AwardViewModel.md) |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**accreditations** | [**kotlin.collections.List&lt;AccreditationViewModel&gt;**](AccreditationViewModel.md) |  |  [optional]
+**evaluations** | [**kotlin.collections.List&lt;HospitalEvaluationViewModel&gt;**](HospitalEvaluationViewModel.md) |  |  [optional]
 **location** | [**LocationViewModel**](LocationViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 

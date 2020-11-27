@@ -15,6 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.VendorType
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 

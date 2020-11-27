@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
 **hospital** | [**HospitalSearchItemViewModel**](HospitalSearchItemViewModel.md) |  |  [optional]
-**packages** | [**kotlin.Array&lt;DealPackageSearchViewModel&gt;**](DealPackageSearchViewModel.md) |  |  [optional]
+**packages** | [**kotlin.collections.List&lt;DealPackageSearchViewModel&gt;**](DealPackageSearchViewModel.md) |  |  [optional]
 
 
 

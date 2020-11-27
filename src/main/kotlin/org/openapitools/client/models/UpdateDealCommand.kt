@@ -16,6 +16,7 @@ import org.openapitools.client.models.DealPackageItemViewModel
 import org.openapitools.client.models.MarketingType
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param photo 
@@ -57,7 +58,7 @@ data class UpdateDealCommand (
     @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
     @SerializedName("dealPackages")
-    val dealPackages: kotlin.Array<DealPackageItemViewModel>? = null,
+    val dealPackages: kotlin.collections.List<DealPackageItemViewModel>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

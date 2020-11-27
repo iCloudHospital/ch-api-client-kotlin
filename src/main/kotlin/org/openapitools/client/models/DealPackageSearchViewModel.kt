@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.ServiceSearchViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -42,6 +43,6 @@ data class DealPackageSearchViewModel (
     @SerializedName("price")
     val price: kotlin.Double? = null,
     @SerializedName("services")
-    val services: kotlin.Array<ServiceSearchViewModel>? = null
+    val services: kotlin.collections.List<ServiceSearchViewModel>? = null
 )
 

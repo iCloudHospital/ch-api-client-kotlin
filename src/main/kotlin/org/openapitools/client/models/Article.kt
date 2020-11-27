@@ -20,6 +20,7 @@ import org.openapitools.client.models.Media
 import org.openapitools.client.models.User
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -65,9 +66,9 @@ data class Article (
     @SerializedName("hospital")
     val hospital: Hospital? = null,
     @SerializedName("articleTags")
-    val articleTags: kotlin.Array<ArticleTag>? = null,
+    val articleTags: kotlin.collections.List<ArticleTag>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<Media>? = null,
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

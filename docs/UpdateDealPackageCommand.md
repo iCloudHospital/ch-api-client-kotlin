@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **bonus** | **kotlin.String** |  |  [optional]
 **price** | **kotlin.Double** |  |  [optional]
 **serviceCount** | **kotlin.Int** |  |  [optional]
-**dealPackageServices** | [**kotlin.Array&lt;DealPackageServiceItemViewModel&gt;**](DealPackageServiceItemViewModel.md) |  |  [optional]
+**dealPackageServices** | [**kotlin.collections.List&lt;DealPackageServiceItemViewModel&gt;**](DealPackageServiceItemViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

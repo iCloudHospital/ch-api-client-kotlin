@@ -21,9 +21,9 @@ Name | Type | Description | Notes
 **applicationFee** | **kotlin.Double** |  |  [optional]
 **cardBrand** | **kotlin.String** |  |  [optional]
 **cardLast4Digits** | **kotlin.String** |  |  [optional]
-**chargeStatusChangeLogs** | [**kotlin.Array&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
-**refundStatusChangeLogs** | [**kotlin.Array&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
-**paymentStatusChangeLogs** | [**kotlin.Array&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
+**chargeStatusChangeLogs** | [**kotlin.collections.List&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
+**refundStatusChangeLogs** | [**kotlin.collections.List&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
+**paymentStatusChangeLogs** | [**kotlin.collections.List&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
 
 
 

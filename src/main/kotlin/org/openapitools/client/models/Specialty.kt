@@ -17,6 +17,7 @@ import org.openapitools.client.models.HospitalSpecialty
 import org.openapitools.client.models.SpecialtyType
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -50,9 +51,9 @@ data class Specialty (
     @SerializedName("specialtyType")
     val specialtyType: SpecialtyType? = null,
     @SerializedName("hospitalSpecialties")
-    val hospitalSpecialties: kotlin.Array<HospitalSpecialty>? = null,
+    val hospitalSpecialties: kotlin.collections.List<HospitalSpecialty>? = null,
     @SerializedName("doctorSpecialties")
-    val doctorSpecialties: kotlin.Array<DoctorSpecialty>? = null,
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialty>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

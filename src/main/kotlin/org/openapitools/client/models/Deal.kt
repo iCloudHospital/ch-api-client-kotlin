@@ -17,6 +17,7 @@ import org.openapitools.client.models.Hospital
 import org.openapitools.client.models.MarketingType
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -55,7 +56,7 @@ data class Deal (
     @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
     @SerializedName("dealPackages")
-    val dealPackages: kotlin.Array<DealPackage>? = null,
+    val dealPackages: kotlin.collections.List<DealPackage>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

@@ -13,6 +13,7 @@ package org.openapitools.client.models
 
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param name 
@@ -26,6 +27,6 @@ data class CreateSpecialtyTypeCategoryCommand (
     @SerializedName("description")
     val description: kotlin.String? = null,
     @SerializedName("specialtyTypes")
-    val specialtyTypes: kotlin.Array<java.util.UUID>? = null
+    val specialtyTypes: kotlin.collections.List<java.util.UUID>? = null
 )
 

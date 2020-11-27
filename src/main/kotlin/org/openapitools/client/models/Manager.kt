@@ -22,6 +22,7 @@ import org.openapitools.client.models.UserLanguage
 import org.openapitools.client.models.UserLocation
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param accounts 
@@ -38,6 +39,7 @@ import com.google.gson.annotations.SerializedName
  * @param gender 
  * @param dateOfBirth 
  * @param timeZone 
+ * @param communicationUserId 
  * @param devices 
  * @param articles 
  * @param questionComments 
@@ -48,9 +50,9 @@ import com.google.gson.annotations.SerializedName
 
 data class Manager (
     @SerializedName("accounts")
-    val accounts: kotlin.Array<Account>? = null,
+    val accounts: kotlin.collections.List<Account>? = null,
     @SerializedName("affiliations")
-    val affiliations: kotlin.Array<ManagerAffiliation>? = null,
+    val affiliations: kotlin.collections.List<ManagerAffiliation>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -75,16 +77,18 @@ data class Manager (
     val dateOfBirth: java.time.LocalDateTime? = null,
     @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
     @SerializedName("devices")
-    val devices: kotlin.Array<Device>? = null,
+    val devices: kotlin.collections.List<Device>? = null,
     @SerializedName("articles")
-    val articles: kotlin.Array<Article>? = null,
+    val articles: kotlin.collections.List<Article>? = null,
     @SerializedName("questionComments")
-    val questionComments: kotlin.Array<QuestionComment>? = null,
+    val questionComments: kotlin.collections.List<QuestionComment>? = null,
     @SerializedName("locations")
-    val locations: kotlin.Array<UserLocation>? = null,
+    val locations: kotlin.collections.List<UserLocation>? = null,
     @SerializedName("languages")
-    val languages: kotlin.Array<UserLanguage>? = null,
+    val languages: kotlin.collections.List<UserLanguage>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

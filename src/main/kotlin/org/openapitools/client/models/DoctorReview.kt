@@ -16,6 +16,7 @@ import org.openapitools.client.models.Patient
 import org.openapitools.client.models.ReviewCategory
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param patientId 

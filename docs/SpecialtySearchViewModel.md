@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hospitals** | [**kotlin.Array&lt;HospitalSearchItemViewModel&gt;**](HospitalSearchItemViewModel.md) |  |  [optional]
+**hospitals** | [**kotlin.collections.List&lt;HospitalSearchItemViewModel&gt;**](HospitalSearchItemViewModel.md) |  |  [optional]
 **specialtyId** | **kotlin.String** |  |  [optional]
 **specialtyName** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]

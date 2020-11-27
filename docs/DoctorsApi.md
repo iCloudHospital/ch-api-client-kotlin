@@ -179,7 +179,7 @@ val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val consultationEnabled : kotlin.Boolean = true // kotlin.Boolean | 
 val exceptDoctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val exceptDoctorIds : kotlin.Array<java.util.UUID> =  // kotlin.Array<java.util.UUID> | 
+val exceptDoctorIds : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
  **consultationEnabled** | **kotlin.Boolean**|  | [optional]
  **exceptDoctorId** | [**java.util.UUID**](.md)|  | [optional]
- **exceptDoctorIds** | [**kotlin.Array&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **exceptDoctorIds** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
  **id** | [**java.util.UUID**](.md)|  | [optional]
  **fullname** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]

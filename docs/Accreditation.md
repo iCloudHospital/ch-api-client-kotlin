@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **normalizedName** | **kotlin.String** |  |  [optional]
 **logo** | **kotlin.String** |  |  [optional]
 **country** | **kotlin.String** |  |  [optional]
-**accreditations** | [**kotlin.Array&lt;HospitalAccreditation&gt;**](HospitalAccreditation.md) |  |  [optional]
+**accreditations** | [**kotlin.collections.List&lt;HospitalAccreditation&gt;**](HospitalAccreditation.md) |  |  [optional]
 
 
 

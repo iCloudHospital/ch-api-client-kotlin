@@ -17,6 +17,7 @@ import org.openapitools.client.models.Payment
 import org.openapitools.client.models.VendorType
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -37,7 +38,7 @@ data class Customer (
     @SerializedName("patient")
     val patient: Patient? = null,
     @SerializedName("payments")
-    val payments: kotlin.Array<Payment>? = null,
+    val payments: kotlin.collections.List<Payment>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

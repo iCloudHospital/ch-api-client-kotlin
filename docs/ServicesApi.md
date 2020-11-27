@@ -279,7 +279,7 @@ Configure oauth2:
 
 <a name="apiV1HospitalsServicesGet"></a>
 # **apiV1HospitalsServicesGet**
-> ServicesViewModel apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
+> ServicesViewModel apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
 
 Get all services.
 
@@ -297,6 +297,7 @@ val name : kotlin.String = name_example // kotlin.String |
 val description : kotlin.String = description_example // kotlin.String | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val hospitalSlug : kotlin.String = hospitalSlug_example // kotlin.String | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyTypeName : kotlin.String = specialtyTypeName_example // kotlin.String | 
@@ -308,7 +309,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 try {
-    val result : ServicesViewModel = apiInstance.apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
+    val result : ServicesViewModel = apiInstance.apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ServicesApi#apiV1HospitalsServicesGet")
@@ -328,6 +329,7 @@ Name | Type | Description  | Notes
  **description** | **kotlin.String**|  | [optional]
  **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
+ **hospitalSlug** | **kotlin.String**|  | [optional]
  **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
  **specialtyTypeName** | **kotlin.String**|  | [optional]

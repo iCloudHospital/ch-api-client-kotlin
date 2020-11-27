@@ -15,6 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.Gender
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -28,6 +29,8 @@ import com.google.gson.annotations.SerializedName
  * @param photoThumbnail 
  * @param gender 
  * @param dateOfBirth 
+ * @param timeZone 
+ * @param communicationUserId 
  * @param auditableEntity 
  */
 
@@ -54,6 +57,10 @@ data class PatientItemViewModel (
     val gender: Gender? = null,
     @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("timeZone")
+    val timeZone: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

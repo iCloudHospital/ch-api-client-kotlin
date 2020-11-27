@@ -17,6 +17,7 @@ import org.openapitools.client.models.Question
 import org.openapitools.client.models.User
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -43,7 +44,7 @@ data class QuestionComment (
     @SerializedName("body")
     val body: kotlin.String? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<Media>? = null,
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

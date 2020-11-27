@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **doctorEducationsCount** | **kotlin.Int** |  |  [optional]
 **doctorPortfoliosCount** | **kotlin.Int** |  |  [optional]
 **doctorSpecialtiesCount** | **kotlin.Int** |  |  [optional]
-**doctorSpecialties** | [**kotlin.Array&lt;DoctorSpecialtyItemViewModel&gt;**](DoctorSpecialtyItemViewModel.md) |  |  [optional]
+**doctorSpecialties** | [**kotlin.collections.List&lt;DoctorSpecialtyItemViewModel&gt;**](DoctorSpecialtyItemViewModel.md) |  |  [optional]
 **doctorCertificatesCount** | **kotlin.Int** |  |  [optional]
 **doctorAffiliationsCount** | **kotlin.Int** |  |  [optional]
-**doctorAffiliations** | [**kotlin.Array&lt;HospitalAffiliationViewModel&gt;**](HospitalAffiliationViewModel.md) |  |  [optional]
+**doctorAffiliations** | [**kotlin.collections.List&lt;HospitalAffiliationViewModel&gt;**](HospitalAffiliationViewModel.md) |  |  [optional]
 **articlesCount** | **kotlin.Int** |  |  [optional]
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **userName** | **kotlin.String** |  |  [optional]
@@ -28,6 +28,8 @@ Name | Type | Description | Notes
 **photoThumbnail** | **kotlin.String** |  |  [optional]
 **gender** | [**Gender**](Gender.md) |  |  [optional]
 **dateOfBirth** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**timeZone** | **kotlin.String** |  |  [optional]
+**communicationUserId** | **kotlin.String** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

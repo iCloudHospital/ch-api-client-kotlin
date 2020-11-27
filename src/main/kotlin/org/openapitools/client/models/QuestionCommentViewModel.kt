@@ -15,6 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MediaViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param medias 
@@ -30,7 +31,7 @@ import com.google.gson.annotations.SerializedName
 
 data class QuestionCommentViewModel (
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null,
+    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userId")

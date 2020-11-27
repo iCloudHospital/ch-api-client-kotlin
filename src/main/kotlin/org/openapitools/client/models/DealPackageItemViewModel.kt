@@ -16,6 +16,7 @@ import org.openapitools.client.models.DealPackageServiceItemViewModel
 import org.openapitools.client.models.RefundPolicy
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -60,7 +61,7 @@ data class DealPackageItemViewModel (
     @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
     @SerializedName("dealPackageServices")
-    val dealPackageServices: kotlin.Array<DealPackageServiceItemViewModel>? = null,
+    val dealPackageServices: kotlin.collections.List<DealPackageServiceItemViewModel>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

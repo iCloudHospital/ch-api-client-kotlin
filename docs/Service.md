@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **maxPrice** | **kotlin.Double** |  |  [optional]
 **priceReuqest** | **kotlin.Boolean** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
-**dealPackageServices** | [**kotlin.Array&lt;DealPackageService&gt;**](DealPackageService.md) |  |  [optional]
+**dealPackageServices** | [**kotlin.collections.List&lt;DealPackageService&gt;**](DealPackageService.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

@@ -26,6 +26,7 @@ import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param slug 
@@ -57,6 +58,8 @@ import com.google.gson.annotations.SerializedName
  * @param photoThumbnail 
  * @param gender 
  * @param dateOfBirth 
+ * @param timeZone 
+ * @param communicationUserId 
  * @param auditableEntity 
  */
 
@@ -74,29 +77,29 @@ data class DoctorViewModel (
     @SerializedName("consultationFee")
     val consultationFee: kotlin.Double? = null,
     @SerializedName("doctorReviews")
-    val doctorReviews: kotlin.Array<DoctorReviewItemViewModel>? = null,
+    val doctorReviews: kotlin.collections.List<DoctorReviewItemViewModel>? = null,
     @SerializedName("doctorEducations")
-    val doctorEducations: kotlin.Array<DoctorEducationItemViewModel>? = null,
+    val doctorEducations: kotlin.collections.List<DoctorEducationItemViewModel>? = null,
     @SerializedName("doctorPortfolios")
-    val doctorPortfolios: kotlin.Array<DoctorPortfolioItemViewModel>? = null,
+    val doctorPortfolios: kotlin.collections.List<DoctorPortfolioItemViewModel>? = null,
     @SerializedName("doctorSpecialties")
-    val doctorSpecialties: kotlin.Array<DoctorSpecialtyItemViewModel>? = null,
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
     @SerializedName("doctorCertificates")
-    val doctorCertificates: kotlin.Array<DoctorCertificateItemViewModel>? = null,
+    val doctorCertificates: kotlin.collections.List<DoctorCertificateItemViewModel>? = null,
     @SerializedName("doctorAffiliations")
-    val doctorAffiliations: kotlin.Array<HospitalAffiliationViewModel>? = null,
+    val doctorAffiliations: kotlin.collections.List<HospitalAffiliationViewModel>? = null,
     @SerializedName("articles")
-    val articles: kotlin.Array<Article>? = null,
+    val articles: kotlin.collections.List<Article>? = null,
     @SerializedName("awards")
-    val awards: kotlin.Array<AwardViewModel>? = null,
+    val awards: kotlin.collections.List<AwardViewModel>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null,
+    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("userType")
     val userType: kotlin.String? = null,
     @SerializedName("languages")
-    val languages: kotlin.Array<UserLanguageViewModel>? = null,
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @SerializedName("locations")
-    val locations: kotlin.Array<UserLocationViewModel>? = null,
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -119,6 +122,10 @@ data class DoctorViewModel (
     val gender: Gender? = null,
     @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("timeZone")
+    val timeZone: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

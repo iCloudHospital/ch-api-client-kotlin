@@ -17,6 +17,7 @@ import org.openapitools.client.models.Platform
 import org.openapitools.client.models.User
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -49,7 +50,7 @@ data class Device (
     @SerializedName("user")
     val user: User? = null,
     @SerializedName("deviceLogins")
-    val deviceLogins: kotlin.Array<DeviceLogin>? = null,
+    val deviceLogins: kotlin.collections.List<DeviceLogin>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

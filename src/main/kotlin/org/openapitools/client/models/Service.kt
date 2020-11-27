@@ -17,6 +17,7 @@ import org.openapitools.client.models.HospitalSpecialty
 import org.openapitools.client.models.Procedure
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -73,7 +74,7 @@ data class Service (
     @SerializedName("order")
     val order: kotlin.Int? = null,
     @SerializedName("dealPackageServices")
-    val dealPackageServices: kotlin.Array<DealPackageService>? = null,
+    val dealPackageServices: kotlin.collections.List<DealPackageService>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

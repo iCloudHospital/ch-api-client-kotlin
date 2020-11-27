@@ -17,6 +17,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param name 
@@ -68,9 +69,9 @@ data class CreateHospitalCommand (
     @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
     @SerializedName("awards")
-    val awards: kotlin.Array<AwardViewModel>? = null,
+    val awards: kotlin.collections.List<AwardViewModel>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null,
+    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("location")
     val location: LocationViewModel? = null
 )

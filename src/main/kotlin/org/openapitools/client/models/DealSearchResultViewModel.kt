@@ -15,6 +15,7 @@ import org.openapitools.client.models.DealSearchViewModel
 import org.openapitools.client.models.SearchMetaData
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param items 
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName
 
 data class DealSearchResultViewModel (
     @SerializedName("items")
-    val items: kotlin.Array<DealSearchViewModel>? = null,
+    val items: kotlin.collections.List<DealSearchViewModel>? = null,
     @SerializedName("metaData")
     val metaData: SearchMetaData? = null
 )

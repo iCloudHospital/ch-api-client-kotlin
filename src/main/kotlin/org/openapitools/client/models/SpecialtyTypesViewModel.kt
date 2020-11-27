@@ -15,6 +15,7 @@ import org.openapitools.client.models.PagedListMetaData
 import org.openapitools.client.models.SpecialtyTypeItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param items 
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName
 
 data class SpecialtyTypesViewModel (
     @SerializedName("items")
-    val items: kotlin.Array<SpecialtyTypeItemViewModel>? = null,
+    val items: kotlin.collections.List<SpecialtyTypeItemViewModel>? = null,
     @SerializedName("metaData")
     val metaData: PagedListMetaData? = null
 )

@@ -13,6 +13,7 @@ package org.openapitools.client.models
 
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param hospitalSpecialtySequence 
@@ -20,6 +21,6 @@ import com.google.gson.annotations.SerializedName
 
 data class UpdateHospitalSpecialtySequenceCommand (
     @SerializedName("hospitalSpecialtySequence")
-    val hospitalSpecialtySequence: kotlin.Array<java.util.UUID>? = null
+    val hospitalSpecialtySequence: kotlin.collections.List<java.util.UUID>? = null
 )
 

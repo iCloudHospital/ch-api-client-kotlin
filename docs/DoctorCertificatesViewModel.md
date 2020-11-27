@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**kotlin.Array&lt;DoctorCertificateItemViewModel&gt;**](DoctorCertificateItemViewModel.md) |  |  [optional]
+**items** | [**kotlin.collections.List&lt;DoctorCertificateItemViewModel&gt;**](DoctorCertificateItemViewModel.md) |  |  [optional]
 **metaData** | [**PagedListMetaData**](PagedListMetaData.md) |  |  [optional]
 
 

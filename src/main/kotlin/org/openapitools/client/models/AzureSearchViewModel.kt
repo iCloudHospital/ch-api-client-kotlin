@@ -13,13 +13,14 @@ package org.openapitools.client.models
 
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param hospitals 
  * @param doctors 
  * @param deals 
  * @param specialties 
- * @param equipments 
+ * @param specialtyTypes 
  */
 
 data class AzureSearchViewModel (
@@ -31,7 +32,7 @@ data class AzureSearchViewModel (
     val deals: kotlin.Int? = null,
     @SerializedName("specialties")
     val specialties: kotlin.Int? = null,
-    @SerializedName("equipments")
-    val equipments: kotlin.Int? = null
+    @SerializedName("specialtyTypes")
+    val specialtyTypes: kotlin.Int? = null
 )
 

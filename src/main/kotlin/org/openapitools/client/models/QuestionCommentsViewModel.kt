@@ -15,6 +15,7 @@ import org.openapitools.client.models.PagedListMetaData
 import org.openapitools.client.models.QuestionCommentItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param items 
@@ -23,7 +24,7 @@ import com.google.gson.annotations.SerializedName
 
 data class QuestionCommentsViewModel (
     @SerializedName("items")
-    val items: kotlin.Array<QuestionCommentItemViewModel>? = null,
+    val items: kotlin.collections.List<QuestionCommentItemViewModel>? = null,
     @SerializedName("metaData")
     val metaData: PagedListMetaData? = null
 )

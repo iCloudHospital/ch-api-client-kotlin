@@ -23,6 +23,7 @@ import org.openapitools.client.models.Payment
 import org.openapitools.client.models.RejectReason
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -116,9 +117,9 @@ data class Booking (
     @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
     @SerializedName("statusChangeLogs")
-    val statusChangeLogs: kotlin.Array<ChangeLog>? = null,
+    val statusChangeLogs: kotlin.collections.List<ChangeLog>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<Media>? = null,
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

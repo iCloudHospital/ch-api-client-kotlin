@@ -21,6 +21,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param specialties 
@@ -59,7 +60,7 @@ import com.google.gson.annotations.SerializedName
 
 data class UpdateHospitalCommand (
     @SerializedName("specialties")
-    val specialties: kotlin.Array<HospitalSpecialtyItemViewModel>? = null,
+    val specialties: kotlin.collections.List<HospitalSpecialtyItemViewModel>? = null,
     @SerializedName("name")
     val name: kotlin.String? = null,
     @SerializedName("slug")
@@ -111,13 +112,13 @@ data class UpdateHospitalCommand (
     @SerializedName("specialtiesSummerized")
     val specialtiesSummerized: kotlin.String? = null,
     @SerializedName("awards")
-    val awards: kotlin.Array<AwardViewModel>? = null,
+    val awards: kotlin.collections.List<AwardViewModel>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaViewModel>? = null,
+    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("accreditations")
-    val accreditations: kotlin.Array<AccreditationViewModel>? = null,
+    val accreditations: kotlin.collections.List<AccreditationViewModel>? = null,
     @SerializedName("evaluations")
-    val evaluations: kotlin.Array<HospitalEvaluationViewModel>? = null,
+    val evaluations: kotlin.collections.List<HospitalEvaluationViewModel>? = null,
     @SerializedName("location")
     val location: LocationViewModel? = null,
     @SerializedName("auditableEntity")

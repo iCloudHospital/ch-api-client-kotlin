@@ -15,6 +15,7 @@ import org.openapitools.client.models.RefundPolicy
 import org.openapitools.client.models.ServiceViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param dealId 
@@ -43,6 +44,6 @@ data class CreateDealPackageCommand (
     @SerializedName("price")
     val price: kotlin.Double? = null,
     @SerializedName("dealPackageServices")
-    val dealPackageServices: kotlin.Array<ServiceViewModel>? = null
+    val dealPackageServices: kotlin.collections.List<ServiceViewModel>? = null
 )
 

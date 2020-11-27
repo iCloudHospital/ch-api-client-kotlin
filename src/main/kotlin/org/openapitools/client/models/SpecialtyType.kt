@@ -16,6 +16,7 @@ import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.Specialty
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -48,7 +49,7 @@ data class SpecialtyType (
     @SerializedName("specialtyTypeCategoryId")
     val specialtyTypeCategoryId: java.util.UUID? = null,
     @SerializedName("specialties")
-    val specialties: kotlin.Array<Specialty>? = null,
+    val specialties: kotlin.collections.List<Specialty>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

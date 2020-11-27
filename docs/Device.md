@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **noticeAlert** | **kotlin.Boolean** |  |  [optional]
 **userId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **user** | [**User**](User.md) |  |  [optional]
-**deviceLogins** | [**kotlin.Array&lt;DeviceLogin&gt;**](DeviceLogin.md) |  |  [optional]
+**deviceLogins** | [**kotlin.collections.List&lt;DeviceLogin&gt;**](DeviceLogin.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

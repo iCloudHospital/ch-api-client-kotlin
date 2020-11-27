@@ -21,6 +21,7 @@ import org.openapitools.client.models.QuestionStatus
 import org.openapitools.client.models.QuestionType
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -69,9 +70,9 @@ data class Question (
     @SerializedName("quantity")
     val quantity: kotlin.Int? = null,
     @SerializedName("questionComments")
-    val questionComments: kotlin.Array<QuestionComment>? = null,
+    val questionComments: kotlin.collections.List<QuestionComment>? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<Media>? = null,
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.MediaSearchViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param id 
@@ -90,7 +91,7 @@ data class HospitalSearchItemViewModel (
     @SerializedName("address")
     val address: kotlin.String? = null,
     @SerializedName("medias")
-    val medias: kotlin.Array<MediaSearchViewModel>? = null,
+    val medias: kotlin.collections.List<MediaSearchViewModel>? = null,
     @SerializedName("consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
     @SerializedName("consultationFee")

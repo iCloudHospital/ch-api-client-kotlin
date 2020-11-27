@@ -14,10 +14,10 @@ package org.openapitools.client.apis
 import org.openapitools.client.models.AzureSearchViewModel
 import org.openapitools.client.models.DealSearchResultViewModel
 import org.openapitools.client.models.DoctorSearchResultViewModel
-import org.openapitools.client.models.EquipmentSearchResultViewModel
 import org.openapitools.client.models.HospitalSearchResultViewModel
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.SpecialtySearchResultViewModel
+import org.openapitools.client.models.SpecialtyTypeSearchResultViewModel
 
 import org.openapitools.client.infrastructure.ApiClient
 import org.openapitools.client.infrastructure.ClientException
@@ -182,84 +182,6 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as DoctorSearchResultViewModel
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-    * 
-    * 
-    * @param searchTerm  (optional)
-    * @param countOnly  (optional)
-    * @param countryId  (optional)
-    * @param hospitalId  (optional)
-    * @param marketingType  (optional)
-    * @param page  (optional)
-    * @param limit  (optional)
-    * @param lastRetrieved  (optional)
-    * @param current  (optional)
-    * @return EquipmentSearchResultViewModel
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apiV1SearchEquipmentsGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : EquipmentSearchResultViewModel {
-        val localVariableBody: kotlin.Any? = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
-            .apply {
-                if (searchTerm != null) {
-                    put("SearchTerm", listOf(searchTerm.toString()))
-                }
-                if (countOnly != null) {
-                    put("CountOnly", listOf(countOnly.toString()))
-                }
-                if (countryId != null) {
-                    put("CountryId", listOf(countryId.toString()))
-                }
-                if (hospitalId != null) {
-                    put("HospitalId", listOf(hospitalId.toString()))
-                }
-                if (marketingType != null) {
-                    put("MarketingType", listOf(marketingType.toString()))
-                }
-                if (page != null) {
-                    put("page", listOf(page.toString()))
-                }
-                if (limit != null) {
-                    put("limit", listOf(limit.toString()))
-                }
-                if (lastRetrieved != null) {
-                    put("lastRetrieved", listOf(parseDateToQueryString(lastRetrieved)))
-                }
-                if (current != null) {
-                    put("Current", listOf(current.toString()))
-                }
-            }
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        val localVariableConfig = RequestConfig(
-            RequestMethod.GET,
-            "/api/v1/search/equipments",
-            query = localVariableQuery,
-            headers = localVariableHeaders
-        )
-        val localVarResponse = request<EquipmentSearchResultViewModel>(
-            localVariableConfig,
-            localVariableBody
-        )
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EquipmentSearchResultViewModel
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -494,6 +416,84 @@ class SearchApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as SpecialtySearchResultViewModel
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * 
+    * 
+    * @param searchTerm  (optional)
+    * @param countOnly  (optional)
+    * @param countryId  (optional)
+    * @param hospitalId  (optional)
+    * @param marketingType  (optional)
+    * @param page  (optional)
+    * @param limit  (optional)
+    * @param lastRetrieved  (optional)
+    * @param current  (optional)
+    * @return SpecialtyTypeSearchResultViewModel
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun apiV1SearchSpecialtytypesGet(searchTerm: kotlin.String?, countOnly: kotlin.Boolean?, countryId: kotlin.String?, hospitalId: kotlin.String?, marketingType: MarketingType?, page: kotlin.Int?, limit: kotlin.Int?, lastRetrieved: java.time.LocalDateTime?, current: kotlin.Boolean?) : SpecialtyTypeSearchResultViewModel {
+        val localVariableBody: kotlin.Any? = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+            .apply {
+                if (searchTerm != null) {
+                    put("SearchTerm", listOf(searchTerm.toString()))
+                }
+                if (countOnly != null) {
+                    put("CountOnly", listOf(countOnly.toString()))
+                }
+                if (countryId != null) {
+                    put("CountryId", listOf(countryId.toString()))
+                }
+                if (hospitalId != null) {
+                    put("HospitalId", listOf(hospitalId.toString()))
+                }
+                if (marketingType != null) {
+                    put("MarketingType", listOf(marketingType.toString()))
+                }
+                if (page != null) {
+                    put("page", listOf(page.toString()))
+                }
+                if (limit != null) {
+                    put("limit", listOf(limit.toString()))
+                }
+                if (lastRetrieved != null) {
+                    put("lastRetrieved", listOf(parseDateToQueryString(lastRetrieved)))
+                }
+                if (current != null) {
+                    put("Current", listOf(current.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableConfig = RequestConfig(
+            RequestMethod.GET,
+            "/api/v1/search/specialtytypes",
+            query = localVariableQuery,
+            headers = localVariableHeaders
+        )
+        val localVarResponse = request<SpecialtyTypeSearchResultViewModel>(
+            localVariableConfig,
+            localVariableBody
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SpecialtyTypeSearchResultViewModel
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **photoThumbnail** | **kotlin.String** |  |  [optional]
 **gender** | [**Gender**](Gender.md) |  |  [optional]
 **dateOfBirth** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**timeZone** | **kotlin.String** |  |  [optional]
+**communicationUserId** | **kotlin.String** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

@@ -15,6 +15,7 @@ import org.openapitools.client.models.Hospital
 import org.openapitools.client.models.Manager
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param managerId 

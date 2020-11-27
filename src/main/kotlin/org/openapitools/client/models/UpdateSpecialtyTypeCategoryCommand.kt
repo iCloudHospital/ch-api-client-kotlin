@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.SpecialtyTypeItemViewModel
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param order 
@@ -29,7 +30,7 @@ data class UpdateSpecialtyTypeCategoryCommand (
     @SerializedName("order")
     val order: kotlin.Int? = null,
     @SerializedName("selectedSpecialtyTypes")
-    val selectedSpecialtyTypes: kotlin.Array<java.util.UUID>? = null,
+    val selectedSpecialtyTypes: kotlin.collections.List<java.util.UUID>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("name")
@@ -39,6 +40,6 @@ data class UpdateSpecialtyTypeCategoryCommand (
     @SerializedName("specialtyTypeCount")
     val specialtyTypeCount: kotlin.Int? = null,
     @SerializedName("specialtyTypes")
-    val specialtyTypes: kotlin.Array<SpecialtyTypeItemViewModel>? = null
+    val specialtyTypes: kotlin.collections.List<SpecialtyTypeItemViewModel>? = null
 )
 

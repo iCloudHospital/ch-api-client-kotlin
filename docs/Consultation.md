@@ -40,8 +40,8 @@ Name | Type | Description | Notes
 **paymentId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **payment** | [**Payment**](Payment.md) |  |  [optional]
 **timeZone** | **kotlin.String** |  |  [optional]
-**statusChangeLogs** | [**kotlin.Array&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
-**medias** | [**kotlin.Array&lt;Media&gt;**](Media.md) |  |  [optional]
+**statusChangeLogs** | [**kotlin.collections.List&lt;ChangeLog&gt;**](ChangeLog.md) |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

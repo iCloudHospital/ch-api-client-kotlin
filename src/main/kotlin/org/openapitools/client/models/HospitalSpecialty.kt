@@ -16,6 +16,7 @@ import org.openapitools.client.models.Service
 import org.openapitools.client.models.Specialty
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param hospitalId 
@@ -38,6 +39,6 @@ data class HospitalSpecialty (
     @SerializedName("order")
     val order: kotlin.Int? = null,
     @SerializedName("services")
-    val services: kotlin.Array<Service>? = null
+    val services: kotlin.collections.List<Service>? = null
 )
 

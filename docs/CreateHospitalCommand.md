@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **consultationEnabled** | **kotlin.Boolean** |  |  [optional]
 **consultationFee** | **kotlin.Double** |  |  [optional]
 **timeZone** | **kotlin.String** |  |  [optional]
-**awards** | [**kotlin.Array&lt;AwardViewModel&gt;**](AwardViewModel.md) |  |  [optional]
-**medias** | [**kotlin.Array&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**awards** | [**kotlin.collections.List&lt;AwardViewModel&gt;**](AwardViewModel.md) |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 **location** | [**LocationViewModel**](LocationViewModel.md) |  |  [optional]
 
 

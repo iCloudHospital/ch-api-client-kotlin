@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**kotlin.Array&lt;ArticleItemViewModel&gt;**](ArticleItemViewModel.md) |  |  [optional]
+**items** | [**kotlin.collections.List&lt;ArticleItemViewModel&gt;**](ArticleItemViewModel.md) |  |  [optional]
 **metaData** | [**PagedListMetaData**](PagedListMetaData.md) |  |  [optional]
 
 

@@ -15,6 +15,7 @@ import org.openapitools.client.models.Doctor
 import org.openapitools.client.models.Specialty
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * 
  * @param doctorId 
