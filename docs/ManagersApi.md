@@ -4,16 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1ManagersGet**](ManagersApi.md#apiV1ManagersGet) | **GET** /api/v1/managers | Get all hospital managers.
-[**apiV1ManagersManagerIdDelete**](ManagersApi.md#apiV1ManagersManagerIdDelete) | **DELETE** /api/v1/managers/{managerId} | Delete hospital manager.
-[**apiV1ManagersManagerIdGet**](ManagersApi.md#apiV1ManagersManagerIdGet) | **GET** /api/v1/managers/{managerId} | Get hospital manager.
-[**apiV1ManagersManagerIdPut**](ManagersApi.md#apiV1ManagersManagerIdPut) | **PUT** /api/v1/managers/{managerId} | Update hospital manager.
-[**apiV1ManagersPost**](ManagersApi.md#apiV1ManagersPost) | **POST** /api/v1/managers | Create hospital manager.
+[**apiV1ManagersGet**](ManagersApi.md#apiV1ManagersGet) | **GET** api/v1/managers | Get all hospital managers.
+[**apiV1ManagersManagerIdDelete**](ManagersApi.md#apiV1ManagersManagerIdDelete) | **DELETE** api/v1/managers/{managerId} | Delete hospital manager.
+[**apiV1ManagersManagerIdGet**](ManagersApi.md#apiV1ManagersManagerIdGet) | **GET** api/v1/managers/{managerId} | Get hospital manager.
+[**apiV1ManagersManagerIdPut**](ManagersApi.md#apiV1ManagersManagerIdPut) | **PUT** api/v1/managers/{managerId} | Update hospital manager.
+[**apiV1ManagersPost**](ManagersApi.md#apiV1ManagersPost) | **POST** api/v1/managers | Create hospital manager.
 
 
-<a name="apiV1ManagersGet"></a>
-# **apiV1ManagersGet**
-> ManagersViewModel apiV1ManagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current, hospitalId)
 
 Get all hospital managers.
 
@@ -22,10 +19,12 @@ Sample request:        GET /api/v1/managers      {          \&quot;pageQueryFilt
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ManagersApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
@@ -37,16 +36,8 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : ManagersViewModel = apiInstance.apiV1ManagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current, hospitalId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ManagersApi#apiV1ManagersGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ManagersApi#apiV1ManagersGet")
-    e.printStackTrace()
-}
+
+val result : ManagersViewModel = webService.apiV1ManagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current, hospitalId)
 ```
 
 ### Parameters
@@ -78,9 +69,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ManagersManagerIdDelete"></a>
-# **apiV1ManagersManagerIdDelete**
-> kotlin.Boolean apiV1ManagersManagerIdDelete(managerId)
 
 Delete hospital manager.
 
@@ -89,21 +77,15 @@ Sample request:        DELETE /api/v1/managers/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1ManagersManagerIdDelete(managerId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ManagersApi#apiV1ManagersManagerIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ManagersApi#apiV1ManagersManagerIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1ManagersManagerIdDelete(managerId)
 ```
 
 ### Parameters
@@ -119,17 +101,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ManagersManagerIdGet"></a>
-# **apiV1ManagersManagerIdGet**
-> ManagerViewModel apiV1ManagersManagerIdGet(managerId)
 
 Get hospital manager.
 
@@ -138,21 +115,15 @@ Sample request:        GET /api/v1/managers/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : ManagerViewModel = apiInstance.apiV1ManagersManagerIdGet(managerId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ManagersApi#apiV1ManagersManagerIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ManagersApi#apiV1ManagersManagerIdGet")
-    e.printStackTrace()
-}
+
+val result : ManagerViewModel = webService.apiV1ManagersManagerIdGet(managerId)
 ```
 
 ### Parameters
@@ -174,9 +145,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ManagersManagerIdPut"></a>
-# **apiV1ManagersManagerIdPut**
-> kotlin.Boolean apiV1ManagersManagerIdPut(managerId, updateManagerCommand)
 
 Update hospital manager.
 
@@ -185,22 +153,16 @@ Sample request:        PUT /api/v1/managers/1      {          \&quot;firstName\&
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateManagerCommand : UpdateManagerCommand =  // UpdateManagerCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1ManagersManagerIdPut(managerId, updateManagerCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ManagersApi#apiV1ManagersManagerIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ManagersApi#apiV1ManagersManagerIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1ManagersManagerIdPut(managerId, updateManagerCommand)
 ```
 
 ### Parameters
@@ -217,17 +179,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ManagersPost"></a>
-# **apiV1ManagersPost**
-> java.util.UUID apiV1ManagersPost(createManagerCommand)
 
 Create hospital manager.
 
@@ -236,21 +193,15 @@ Sample request:        POST /api/v1/managers      {          \&quot;userName\&qu
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ManagersApi::class.java)
 val createManagerCommand : CreateManagerCommand =  // CreateManagerCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1ManagersPost(createManagerCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ManagersApi#apiV1ManagersPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ManagersApi#apiV1ManagersPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1ManagersPost(createManagerCommand)
 ```
 
 ### Parameters
@@ -266,8 +217,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 

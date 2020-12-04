@@ -4,16 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1ChmanagersChManagerIdDelete**](CHManagersApi.md#apiV1ChmanagersChManagerIdDelete) | **DELETE** /api/v1/chmanagers/{chManagerId} | Delete cloud hospital manager.
-[**apiV1ChmanagersChManagerIdGet**](CHManagersApi.md#apiV1ChmanagersChManagerIdGet) | **GET** /api/v1/chmanagers/{chManagerId} | Get cloud hospital manager.
-[**apiV1ChmanagersChManagerIdPut**](CHManagersApi.md#apiV1ChmanagersChManagerIdPut) | **PUT** /api/v1/chmanagers/{chManagerId} | Update cloud hospital manager.
-[**apiV1ChmanagersGet**](CHManagersApi.md#apiV1ChmanagersGet) | **GET** /api/v1/chmanagers | Get cloud hospital managers.
-[**apiV1ChmanagersPost**](CHManagersApi.md#apiV1ChmanagersPost) | **POST** /api/v1/chmanagers | Create cloud hospital manager.
+[**apiV1ChmanagersChManagerIdDelete**](CHManagersApi.md#apiV1ChmanagersChManagerIdDelete) | **DELETE** api/v1/chmanagers/{chManagerId} | Delete cloud hospital manager.
+[**apiV1ChmanagersChManagerIdGet**](CHManagersApi.md#apiV1ChmanagersChManagerIdGet) | **GET** api/v1/chmanagers/{chManagerId} | Get cloud hospital manager.
+[**apiV1ChmanagersChManagerIdPut**](CHManagersApi.md#apiV1ChmanagersChManagerIdPut) | **PUT** api/v1/chmanagers/{chManagerId} | Update cloud hospital manager.
+[**apiV1ChmanagersGet**](CHManagersApi.md#apiV1ChmanagersGet) | **GET** api/v1/chmanagers | Get cloud hospital managers.
+[**apiV1ChmanagersPost**](CHManagersApi.md#apiV1ChmanagersPost) | **POST** api/v1/chmanagers | Create cloud hospital manager.
 
 
-<a name="apiV1ChmanagersChManagerIdDelete"></a>
-# **apiV1ChmanagersChManagerIdDelete**
-> kotlin.Boolean apiV1ChmanagersChManagerIdDelete(chManagerId)
 
 Delete cloud hospital manager.
 
@@ -22,21 +19,15 @@ Smaple request:        DELETE /api/v1/chmanagers/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val chManagerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1ChmanagersChManagerIdDelete(chManagerId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHManagersApi#apiV1ChmanagersChManagerIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHManagersApi#apiV1ChmanagersChManagerIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1ChmanagersChManagerIdDelete(chManagerId)
 ```
 
 ### Parameters
@@ -52,17 +43,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChmanagersChManagerIdGet"></a>
-# **apiV1ChmanagersChManagerIdGet**
-> CHManagerViewModel apiV1ChmanagersChManagerIdGet(managerId, chManagerId)
 
 Get cloud hospital manager.
 
@@ -71,22 +57,16 @@ Sample request:        GET /api/v1/chmanagers/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val chManagerId : kotlin.String = chManagerId_example // kotlin.String | 
-try {
-    val result : CHManagerViewModel = apiInstance.apiV1ChmanagersChManagerIdGet(managerId, chManagerId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHManagersApi#apiV1ChmanagersChManagerIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHManagersApi#apiV1ChmanagersChManagerIdGet")
-    e.printStackTrace()
-}
+
+val result : CHManagerViewModel = webService.apiV1ChmanagersChManagerIdGet(managerId, chManagerId)
 ```
 
 ### Parameters
@@ -103,17 +83,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChmanagersChManagerIdPut"></a>
-# **apiV1ChmanagersChManagerIdPut**
-> kotlin.Boolean apiV1ChmanagersChManagerIdPut(chManagerId, updateCHManagerCommand)
 
 Update cloud hospital manager.
 
@@ -122,22 +97,16 @@ Sample request:        PUT /api/v1/chmanagers/1      {          \&quot;firstName
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val chManagerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateCHManagerCommand : UpdateCHManagerCommand =  // UpdateCHManagerCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1ChmanagersChManagerIdPut(chManagerId, updateCHManagerCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHManagersApi#apiV1ChmanagersChManagerIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHManagersApi#apiV1ChmanagersChManagerIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1ChmanagersChManagerIdPut(chManagerId, updateCHManagerCommand)
 ```
 
 ### Parameters
@@ -154,17 +123,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChmanagersGet"></a>
-# **apiV1ChmanagersGet**
-> CHManagersViewModel apiV1ChmanagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 
 Get cloud hospital managers.
 
@@ -173,10 +137,12 @@ Sample request:        GET /api/v1/chmanagers      {          \&quot;pageQueryFi
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
@@ -187,16 +153,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : CHManagersViewModel = apiInstance.apiV1ChmanagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHManagersApi#apiV1ChmanagersGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHManagersApi#apiV1ChmanagersGet")
-    e.printStackTrace()
-}
+
+val result : CHManagersViewModel = webService.apiV1ChmanagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -221,17 +179,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChmanagersPost"></a>
-# **apiV1ChmanagersPost**
-> java.util.UUID apiV1ChmanagersPost(createCHManagerCommand)
 
 Create cloud hospital manager.
 
@@ -240,21 +193,15 @@ Sample request:        POST /api/v1/chmanagers      {          \&quot;userName\&
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHManagersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val createCHManagerCommand : CreateCHManagerCommand =  // CreateCHManagerCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1ChmanagersPost(createCHManagerCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHManagersApi#apiV1ChmanagersPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHManagersApi#apiV1ChmanagersPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1ChmanagersPost(createCHManagerCommand)
 ```
 
 ### Parameters
@@ -270,8 +217,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 

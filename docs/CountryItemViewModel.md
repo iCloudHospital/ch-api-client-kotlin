@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
+**content** | **kotlin.String** |  |  [optional]
 **hospitalsCount** | **kotlin.Int** |  |  [optional]
 **doctorsCount** | **kotlin.Int** |  |  [optional]
 **specialitiesCount** | **kotlin.Int** |  |  [optional]

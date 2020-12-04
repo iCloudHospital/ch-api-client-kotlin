@@ -4,17 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1SpecialtytypesGet**](SpecialtyTypesApi.md#apiV1SpecialtytypesGet) | **GET** /api/v1/specialtytypes | Get all SpecialtyTypes.
-[**apiV1SpecialtytypesPost**](SpecialtyTypesApi.md#apiV1SpecialtytypesPost) | **POST** /api/v1/specialtytypes | Create specialtyType.
-[**apiV1SpecialtytypesSlugsSlugGet**](SpecialtyTypesApi.md#apiV1SpecialtytypesSlugsSlugGet) | **GET** /api/v1/specialtytypes/slugs/{slug} | Get specialtyType by slug.
-[**apiV1SpecialtytypesSpecialtyTypeIdDelete**](SpecialtyTypesApi.md#apiV1SpecialtytypesSpecialtyTypeIdDelete) | **DELETE** /api/v1/specialtytypes/{specialtyTypeId} | Delete specialtyType.
-[**apiV1SpecialtytypesSpecialtyTypeIdGet**](SpecialtyTypesApi.md#apiV1SpecialtytypesSpecialtyTypeIdGet) | **GET** /api/v1/specialtytypes/{specialtyTypeId} | Get specialtyType.
-[**apiV1SpecialtytypesSpecialtyTypeIdPut**](SpecialtyTypesApi.md#apiV1SpecialtytypesSpecialtyTypeIdPut) | **PUT** /api/v1/specialtytypes/{specialtyTypeId} | Update specialtyType
+[**apiV1SpecialtytypesGet**](SpecialtyTypesApi.md#apiV1SpecialtytypesGet) | **GET** api/v1/specialtytypes | Get all SpecialtyTypes.
+[**apiV1SpecialtytypesPost**](SpecialtyTypesApi.md#apiV1SpecialtytypesPost) | **POST** api/v1/specialtytypes | Create specialtyType.
+[**apiV1SpecialtytypesSlugsSlugGet**](SpecialtyTypesApi.md#apiV1SpecialtytypesSlugsSlugGet) | **GET** api/v1/specialtytypes/slugs/{slug} | Get specialtyType by slug.
+[**apiV1SpecialtytypesSpecialtyTypeIdDelete**](SpecialtyTypesApi.md#apiV1SpecialtytypesSpecialtyTypeIdDelete) | **DELETE** api/v1/specialtytypes/{specialtyTypeId} | Delete specialtyType.
+[**apiV1SpecialtytypesSpecialtyTypeIdGet**](SpecialtyTypesApi.md#apiV1SpecialtytypesSpecialtyTypeIdGet) | **GET** api/v1/specialtytypes/{specialtyTypeId} | Get specialtyType.
+[**apiV1SpecialtytypesSpecialtyTypeIdPut**](SpecialtyTypesApi.md#apiV1SpecialtytypesSpecialtyTypeIdPut) | **PUT** api/v1/specialtytypes/{specialtyTypeId} | Update specialtyType
 
 
-<a name="apiV1SpecialtytypesGet"></a>
-# **apiV1SpecialtytypesGet**
-> SpecialtyTypesViewModel apiV1SpecialtytypesGet(id, name, description, marketingType, created, page, limit, lastRetrieved, current)
 
 Get all SpecialtyTypes.
 
@@ -23,10 +20,12 @@ Sample request:        GET /api/v1/SpecialtyTypes
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = SpecialtyTypesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(SpecialtyTypesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
@@ -36,16 +35,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : SpecialtyTypesViewModel = apiInstance.apiV1SpecialtytypesGet(id, name, description, marketingType, created, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SpecialtyTypesApi#apiV1SpecialtytypesGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SpecialtyTypesApi#apiV1SpecialtytypesGet")
-    e.printStackTrace()
-}
+
+val result : SpecialtyTypesViewModel = webService.apiV1SpecialtytypesGet(id, name, description, marketingType, created, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -75,9 +66,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1SpecialtytypesPost"></a>
-# **apiV1SpecialtytypesPost**
-> java.util.UUID apiV1SpecialtytypesPost(specialtyTypeId, createSpecialtyTypeCommand)
 
 Create specialtyType.
 
@@ -86,22 +74,16 @@ Sample request:        POST /api/v1/SpecialtyTypes      {          \&quot;name\&
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = SpecialtyTypesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(SpecialtyTypesApi::class.java)
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createSpecialtyTypeCommand : CreateSpecialtyTypeCommand =  // CreateSpecialtyTypeCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1SpecialtytypesPost(specialtyTypeId, createSpecialtyTypeCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SpecialtyTypesApi#apiV1SpecialtytypesPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SpecialtyTypesApi#apiV1SpecialtytypesPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1SpecialtytypesPost(specialtyTypeId, createSpecialtyTypeCommand)
 ```
 
 ### Parameters
@@ -118,38 +100,27 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1SpecialtytypesSlugsSlugGet"></a>
-# **apiV1SpecialtytypesSlugsSlugGet**
-> SpecialtyTypeViewModel apiV1SpecialtytypesSlugsSlugGet(slug)
 
 Get specialtyType by slug.
 
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = SpecialtyTypesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(SpecialtyTypesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
-try {
-    val result : SpecialtyTypeViewModel = apiInstance.apiV1SpecialtytypesSlugsSlugGet(slug)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSlugsSlugGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSlugsSlugGet")
-    e.printStackTrace()
-}
+
+val result : SpecialtyTypeViewModel = webService.apiV1SpecialtytypesSlugsSlugGet(slug)
 ```
 
 ### Parameters
@@ -171,9 +142,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1SpecialtytypesSpecialtyTypeIdDelete"></a>
-# **apiV1SpecialtytypesSpecialtyTypeIdDelete**
-> kotlin.Boolean apiV1SpecialtytypesSpecialtyTypeIdDelete(specialtyTypeId)
 
 Delete specialtyType.
 
@@ -182,21 +150,15 @@ Sample request:        DELETE /api/v1/SpecialtyTypes/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = SpecialtyTypesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(SpecialtyTypesApi::class.java)
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1SpecialtytypesSpecialtyTypeIdDelete(specialtyTypeId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSpecialtyTypeIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSpecialtyTypeIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1SpecialtytypesSpecialtyTypeIdDelete(specialtyTypeId)
 ```
 
 ### Parameters
@@ -212,17 +174,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1SpecialtytypesSpecialtyTypeIdGet"></a>
-# **apiV1SpecialtytypesSpecialtyTypeIdGet**
-> SpecialtyTypeViewModel apiV1SpecialtytypesSpecialtyTypeIdGet(specialtyTypeId)
 
 Get specialtyType.
 
@@ -231,21 +188,15 @@ Sample request:        GET /api/v1/SpecialtyTypes/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = SpecialtyTypesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(SpecialtyTypesApi::class.java)
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : SpecialtyTypeViewModel = apiInstance.apiV1SpecialtytypesSpecialtyTypeIdGet(specialtyTypeId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSpecialtyTypeIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSpecialtyTypeIdGet")
-    e.printStackTrace()
-}
+
+val result : SpecialtyTypeViewModel = webService.apiV1SpecialtytypesSpecialtyTypeIdGet(specialtyTypeId)
 ```
 
 ### Parameters
@@ -267,9 +218,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1SpecialtytypesSpecialtyTypeIdPut"></a>
-# **apiV1SpecialtytypesSpecialtyTypeIdPut**
-> kotlin.Boolean apiV1SpecialtytypesSpecialtyTypeIdPut(specialtyTypeId, updateSpecialtyTypeCommand)
 
 Update specialtyType
 
@@ -278,22 +226,16 @@ Sample request:        PUT /api/v1/SpecialtyTypes/1      {          \&quot;name\
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = SpecialtyTypesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(SpecialtyTypesApi::class.java)
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateSpecialtyTypeCommand : UpdateSpecialtyTypeCommand =  // UpdateSpecialtyTypeCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1SpecialtytypesSpecialtyTypeIdPut(specialtyTypeId, updateSpecialtyTypeCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSpecialtyTypeIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling SpecialtyTypesApi#apiV1SpecialtytypesSpecialtyTypeIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1SpecialtytypesSpecialtyTypeIdPut(specialtyTypeId, updateSpecialtyTypeCommand)
 ```
 
 ### Parameters
@@ -310,8 +252,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 

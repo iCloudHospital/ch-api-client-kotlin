@@ -4,17 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost) | **POST** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services | Create service.
-[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete) | **DELETE** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Delete service.
-[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet) | **GET** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Get service.
-[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut) | **PUT** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Update service.
-[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut) | **PUT** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence | Update service sequence.
-[**apiV1HospitalsServicesGet**](ServicesApi.md#apiV1HospitalsServicesGet) | **GET** /api/v1/hospitals/services | Get all services.
+[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost) | **POST** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services | Create service.
+[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete) | **DELETE** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Delete service.
+[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet) | **GET** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Get service.
+[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Update service.
+[**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence | Update service sequence.
+[**apiV1HospitalsServicesGet**](ServicesApi.md#apiV1HospitalsServicesGet) | **GET** api/v1/hospitals/services | Get all services.
 
 
-<a name="apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost"></a>
-# **apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost**
-> java.util.UUID apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(hospitalId, specialtyId, createServiceCommand)
 
 Create service.
 
@@ -23,23 +20,17 @@ Sample request:        POST /api/v1/hospitals/1/specialties/1/services      {   
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ServicesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ServicesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createServiceCommand : CreateServiceCommand =  // CreateServiceCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(hospitalId, specialtyId, createServiceCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(hospitalId, specialtyId, createServiceCommand)
 ```
 
 ### Parameters
@@ -57,17 +48,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete"></a>
-# **apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete**
-> kotlin.Boolean apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(hospitalId, specialtyId, serviceId)
 
 Delete service.
 
@@ -76,23 +62,17 @@ Sample request:        DELETE /api/v1/hospitals/1/specialties/1/services/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ServicesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ServicesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(hospitalId, specialtyId, serviceId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(hospitalId, specialtyId, serviceId)
 ```
 
 ### Parameters
@@ -110,17 +90,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet"></a>
-# **apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet**
-> ServiceViewModel apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(hospitalId, specialtyId, serviceId)
 
 Get service.
 
@@ -129,23 +104,17 @@ Sample request:        GET /api/v1/hospitals/1/specialties/1/services/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ServicesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ServicesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : ServiceViewModel = apiInstance.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(hospitalId, specialtyId, serviceId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet")
-    e.printStackTrace()
-}
+
+val result : ServiceViewModel = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(hospitalId, specialtyId, serviceId)
 ```
 
 ### Parameters
@@ -169,9 +138,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut"></a>
-# **apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut**
-> kotlin.Boolean apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(hospitalId, specialtyId, serviceId, updateServiceCommand)
 
 Update service.
 
@@ -180,24 +146,18 @@ Sample request:        PUT /api/v1/hospitals/1/specialties/1/services/1      {  
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ServicesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ServicesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateServiceCommand : UpdateServiceCommand =  // UpdateServiceCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(hospitalId, specialtyId, serviceId, updateServiceCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(hospitalId, specialtyId, serviceId, updateServiceCommand)
 ```
 
 ### Parameters
@@ -216,17 +176,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut"></a>
-# **apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut**
-> kotlin.Boolean apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(hospitalId, specialtyId, updateServiceSequenceCommand)
 
 Update service sequence.
 
@@ -235,23 +190,17 @@ Smaple request:        PUT /api/v1/hospitals/1/specialties/1/servicesquence     
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ServicesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ServicesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateServiceSequenceCommand : UpdateServiceSequenceCommand =  // UpdateServiceSequenceCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(hospitalId, specialtyId, updateServiceSequenceCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ServicesApi#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(hospitalId, specialtyId, updateServiceSequenceCommand)
 ```
 
 ### Parameters
@@ -269,17 +218,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsServicesGet"></a>
-# **apiV1HospitalsServicesGet**
-> ServicesViewModel apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
 
 Get all services.
 
@@ -288,10 +232,12 @@ Sample request:        GET /api/v1/hospitals/services
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = ServicesApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ServicesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
@@ -308,16 +254,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : ServicesViewModel = apiInstance.apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ServicesApi#apiV1HospitalsServicesGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ServicesApi#apiV1HospitalsServicesGet")
-    e.printStackTrace()
-}
+
+val result : ServicesViewModel = webService.apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters

@@ -4,17 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1DoctorsDoctorIdDelete**](DoctorsApi.md#apiV1DoctorsDoctorIdDelete) | **DELETE** /api/v1/doctors/{doctorId} | Delete doctor.
-[**apiV1DoctorsDoctorIdGet**](DoctorsApi.md#apiV1DoctorsDoctorIdGet) | **GET** /api/v1/doctors/{doctorId} | Get hospital doctor.
-[**apiV1DoctorsDoctorIdPut**](DoctorsApi.md#apiV1DoctorsDoctorIdPut) | **PUT** /api/v1/doctors/{doctorId} | Update hospital doctor.
-[**apiV1DoctorsGet**](DoctorsApi.md#apiV1DoctorsGet) | **GET** /api/v1/doctors | Get all hospital doctors.
-[**apiV1DoctorsPost**](DoctorsApi.md#apiV1DoctorsPost) | **POST** /api/v1/doctors | Create hospital doctor.
-[**apiV1DoctorsSlugsSlugGet**](DoctorsApi.md#apiV1DoctorsSlugsSlugGet) | **GET** /api/v1/doctors/slugs/{slug} | Get hospital doctor by slug.
+[**apiV1DoctorsDoctorIdDelete**](DoctorsApi.md#apiV1DoctorsDoctorIdDelete) | **DELETE** api/v1/doctors/{doctorId} | Delete doctor.
+[**apiV1DoctorsDoctorIdGet**](DoctorsApi.md#apiV1DoctorsDoctorIdGet) | **GET** api/v1/doctors/{doctorId} | Get hospital doctor.
+[**apiV1DoctorsDoctorIdPut**](DoctorsApi.md#apiV1DoctorsDoctorIdPut) | **PUT** api/v1/doctors/{doctorId} | Update hospital doctor.
+[**apiV1DoctorsGet**](DoctorsApi.md#apiV1DoctorsGet) | **GET** api/v1/doctors | Get all hospital doctors.
+[**apiV1DoctorsPost**](DoctorsApi.md#apiV1DoctorsPost) | **POST** api/v1/doctors | Create hospital doctor.
+[**apiV1DoctorsSlugsSlugGet**](DoctorsApi.md#apiV1DoctorsSlugsSlugGet) | **GET** api/v1/doctors/slugs/{slug} | Get hospital doctor by slug.
 
 
-<a name="apiV1DoctorsDoctorIdDelete"></a>
-# **apiV1DoctorsDoctorIdDelete**
-> kotlin.Boolean apiV1DoctorsDoctorIdDelete(doctorId)
 
 Delete doctor.
 
@@ -23,21 +20,15 @@ Sample request:        DELETE /api/v1/doctors/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = DoctorsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1DoctorsDoctorIdDelete(doctorId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling DoctorsApi#apiV1DoctorsDoctorIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DoctorsApi#apiV1DoctorsDoctorIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdDelete(doctorId)
 ```
 
 ### Parameters
@@ -53,17 +44,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1DoctorsDoctorIdGet"></a>
-# **apiV1DoctorsDoctorIdGet**
-> DoctorViewModel apiV1DoctorsDoctorIdGet(doctorId)
 
 Get hospital doctor.
 
@@ -72,21 +58,15 @@ Sample request:        GET /api/v1/doctors/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = DoctorsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : DoctorViewModel = apiInstance.apiV1DoctorsDoctorIdGet(doctorId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling DoctorsApi#apiV1DoctorsDoctorIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DoctorsApi#apiV1DoctorsDoctorIdGet")
-    e.printStackTrace()
-}
+
+val result : DoctorViewModel = webService.apiV1DoctorsDoctorIdGet(doctorId)
 ```
 
 ### Parameters
@@ -108,9 +88,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1DoctorsDoctorIdPut"></a>
-# **apiV1DoctorsDoctorIdPut**
-> kotlin.Boolean apiV1DoctorsDoctorIdPut(doctorId, updateDoctorCommand)
 
 Update hospital doctor.
 
@@ -119,22 +96,16 @@ Sample request:        PUT /api/v1/doctors/1      {          \&quot;firstName\&q
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = DoctorsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateDoctorCommand : UpdateDoctorCommand =  // UpdateDoctorCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1DoctorsDoctorIdPut(doctorId, updateDoctorCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling DoctorsApi#apiV1DoctorsDoctorIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DoctorsApi#apiV1DoctorsDoctorIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdPut(doctorId, updateDoctorCommand)
 ```
 
 ### Parameters
@@ -151,27 +122,24 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1DoctorsGet"></a>
-# **apiV1DoctorsGet**
-> DoctorsViewModel apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 
 Get all hospital doctors.
 
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = DoctorsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val marketingType : MarketingType =  // MarketingType | 
@@ -190,16 +158,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : DoctorsViewModel = apiInstance.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling DoctorsApi#apiV1DoctorsGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DoctorsApi#apiV1DoctorsGet")
-    e.printStackTrace()
-}
+
+val result : DoctorsViewModel = webService.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -238,9 +198,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1DoctorsPost"></a>
-# **apiV1DoctorsPost**
-> java.util.UUID apiV1DoctorsPost(createDoctorCommand)
 
 Create hospital doctor.
 
@@ -249,21 +206,15 @@ Sample request:        POST /api/v1/doctors      {          \&quot;userName\&quo
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = DoctorsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val createDoctorCommand : CreateDoctorCommand =  // CreateDoctorCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1DoctorsPost(createDoctorCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling DoctorsApi#apiV1DoctorsPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DoctorsApi#apiV1DoctorsPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1DoctorsPost(createDoctorCommand)
 ```
 
 ### Parameters
@@ -279,38 +230,27 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1DoctorsSlugsSlugGet"></a>
-# **apiV1DoctorsSlugsSlugGet**
-> DoctorViewModel apiV1DoctorsSlugsSlugGet(slug)
 
 Get hospital doctor by slug.
 
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = DoctorsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
-try {
-    val result : DoctorViewModel = apiInstance.apiV1DoctorsSlugsSlugGet(slug)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling DoctorsApi#apiV1DoctorsSlugsSlugGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DoctorsApi#apiV1DoctorsSlugsSlugGet")
-    e.printStackTrace()
-}
+
+val result : DoctorViewModel = webService.apiV1DoctorsSlugsSlugGet(slug)
 ```
 
 ### Parameters

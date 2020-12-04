@@ -19,6 +19,7 @@ import com.google.gson.annotations.SerializedName
  * 
  * @param name 
  * @param description 
+ * @param content 
  * @param medias 
  */
 
@@ -27,6 +28,8 @@ data class UpdateCountryCommand (
     val name: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("content")
+    val content: kotlin.String? = null,
     @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )

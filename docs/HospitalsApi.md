@@ -4,28 +4,27 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1HospitalsCurrentGet**](HospitalsApi.md#apiV1HospitalsCurrentGet) | **GET** /api/v1/hospitals/current | 
-[**apiV1HospitalsGet**](HospitalsApi.md#apiV1HospitalsGet) | **GET** /api/v1/hospitals | Get all hospitals.
-[**apiV1HospitalsHospitalIdDelete**](HospitalsApi.md#apiV1HospitalsHospitalIdDelete) | **DELETE** /api/v1/hospitals/{hospitalId} | Delete hospital.
-[**apiV1HospitalsHospitalIdGet**](HospitalsApi.md#apiV1HospitalsHospitalIdGet) | **GET** /api/v1/hospitals/{hospitalId} | Get hospita.
-[**apiV1HospitalsHospitalIdPut**](HospitalsApi.md#apiV1HospitalsHospitalIdPut) | **PUT** /api/v1/hospitals/{hospitalId} | Update hospital.
-[**apiV1HospitalsPost**](HospitalsApi.md#apiV1HospitalsPost) | **POST** /api/v1/hospitals | Create a hospital.
-[**apiV1HospitalsSlugsSlugGet**](HospitalsApi.md#apiV1HospitalsSlugsSlugGet) | **GET** /api/v1/hospitals/slugs/{slug} | Get hospital by slug.
+[**apiV1HospitalsCurrentGet**](HospitalsApi.md#apiV1HospitalsCurrentGet) | **GET** api/v1/hospitals/current | 
+[**apiV1HospitalsGet**](HospitalsApi.md#apiV1HospitalsGet) | **GET** api/v1/hospitals | Get all hospitals.
+[**apiV1HospitalsHospitalIdDelete**](HospitalsApi.md#apiV1HospitalsHospitalIdDelete) | **DELETE** api/v1/hospitals/{hospitalId} | Delete hospital.
+[**apiV1HospitalsHospitalIdGet**](HospitalsApi.md#apiV1HospitalsHospitalIdGet) | **GET** api/v1/hospitals/{hospitalId} | Get hospita.
+[**apiV1HospitalsHospitalIdPut**](HospitalsApi.md#apiV1HospitalsHospitalIdPut) | **PUT** api/v1/hospitals/{hospitalId} | Update hospital.
+[**apiV1HospitalsPost**](HospitalsApi.md#apiV1HospitalsPost) | **POST** api/v1/hospitals | Create a hospital.
+[**apiV1HospitalsSlugsSlugGet**](HospitalsApi.md#apiV1HospitalsSlugsSlugGet) | **GET** api/v1/hospitals/slugs/{slug} | Get hospital by slug.
 
 
-<a name="apiV1HospitalsCurrentGet"></a>
-# **apiV1HospitalsCurrentGet**
-> HospitalsViewModel apiV1HospitalsCurrentGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, page, limit, lastRetrieved, current)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = HospitalsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
@@ -41,16 +40,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : HospitalsViewModel = apiInstance.apiV1HospitalsCurrentGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling HospitalsApi#apiV1HospitalsCurrentGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling HospitalsApi#apiV1HospitalsCurrentGet")
-    e.printStackTrace()
-}
+
+val result : HospitalsViewModel = webService.apiV1HospitalsCurrentGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -80,17 +71,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsGet"></a>
-# **apiV1HospitalsGet**
-> HospitalsViewModel apiV1HospitalsGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, page, limit, lastRetrieved, current)
 
 Get all hospitals.
 
@@ -99,10 +85,12 @@ Sample request:        GET /api/v1/hospitals      {          \&quot;pageQueryFil
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = HospitalsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
@@ -118,16 +106,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : HospitalsViewModel = apiInstance.apiV1HospitalsGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling HospitalsApi#apiV1HospitalsGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling HospitalsApi#apiV1HospitalsGet")
-    e.printStackTrace()
-}
+
+val result : HospitalsViewModel = webService.apiV1HospitalsGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -163,9 +143,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdDelete"></a>
-# **apiV1HospitalsHospitalIdDelete**
-> kotlin.Boolean apiV1HospitalsHospitalIdDelete(hospitalId)
 
 Delete hospital.
 
@@ -174,21 +151,15 @@ Sample request:        DELETE /api/v1/hospitals/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = HospitalsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1HospitalsHospitalIdDelete(hospitalId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling HospitalsApi#apiV1HospitalsHospitalIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling HospitalsApi#apiV1HospitalsHospitalIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDelete(hospitalId)
 ```
 
 ### Parameters
@@ -204,17 +175,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdGet"></a>
-# **apiV1HospitalsHospitalIdGet**
-> HospitalViewModel apiV1HospitalsHospitalIdGet(hospitalId)
 
 Get hospita.
 
@@ -223,21 +189,15 @@ Sample request:        GET /api/v1/hospitals/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = HospitalsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : HospitalViewModel = apiInstance.apiV1HospitalsHospitalIdGet(hospitalId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling HospitalsApi#apiV1HospitalsHospitalIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling HospitalsApi#apiV1HospitalsHospitalIdGet")
-    e.printStackTrace()
-}
+
+val result : HospitalViewModel = webService.apiV1HospitalsHospitalIdGet(hospitalId)
 ```
 
 ### Parameters
@@ -259,9 +219,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdPut"></a>
-# **apiV1HospitalsHospitalIdPut**
-> kotlin.Boolean apiV1HospitalsHospitalIdPut(hospitalId, updateHospitalCommand)
 
 Update hospital.
 
@@ -270,22 +227,16 @@ Sameple request:        PUT /api/v1/hospitals      {          \&quot;overview\&q
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = HospitalsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateHospitalCommand : UpdateHospitalCommand =  // UpdateHospitalCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1HospitalsHospitalIdPut(hospitalId, updateHospitalCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling HospitalsApi#apiV1HospitalsHospitalIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling HospitalsApi#apiV1HospitalsHospitalIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdPut(hospitalId, updateHospitalCommand)
 ```
 
 ### Parameters
@@ -302,17 +253,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsPost"></a>
-# **apiV1HospitalsPost**
-> java.util.UUID apiV1HospitalsPost(createHospitalCommand)
 
 Create a hospital.
 
@@ -321,21 +267,15 @@ Sample request:        POST /api/v1/hospitals      {          \&quot;name\&quot;
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = HospitalsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val createHospitalCommand : CreateHospitalCommand =  // CreateHospitalCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1HospitalsPost(createHospitalCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling HospitalsApi#apiV1HospitalsPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling HospitalsApi#apiV1HospitalsPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1HospitalsPost(createHospitalCommand)
 ```
 
 ### Parameters
@@ -351,38 +291,27 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsSlugsSlugGet"></a>
-# **apiV1HospitalsSlugsSlugGet**
-> HospitalViewModel apiV1HospitalsSlugsSlugGet(slug)
 
 Get hospital by slug.
 
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = HospitalsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
-try {
-    val result : HospitalViewModel = apiInstance.apiV1HospitalsSlugsSlugGet(slug)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling HospitalsApi#apiV1HospitalsSlugsSlugGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling HospitalsApi#apiV1HospitalsSlugsSlugGet")
-    e.printStackTrace()
-}
+
+val result : HospitalViewModel = webService.apiV1HospitalsSlugsSlugGet(slug)
 ```
 
 ### Parameters

@@ -4,16 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1HospitalsEquipmentsGet**](EquipmentsApi.md#apiV1HospitalsEquipmentsGet) | **GET** /api/v1/hospitals/equipments | Get all equipments.
-[**apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete) | **DELETE** /api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Delete equipment.
-[**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet) | **GET** /api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
-[**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut) | **PUT** /api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
-[**apiV1HospitalsHospitalIdEquipmentsPost**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsPost) | **POST** /api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
+[**apiV1HospitalsEquipmentsGet**](EquipmentsApi.md#apiV1HospitalsEquipmentsGet) | **GET** api/v1/hospitals/equipments | Get all equipments.
+[**apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete) | **DELETE** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Delete equipment.
+[**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet) | **GET** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
+[**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut) | **PUT** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
+[**apiV1HospitalsHospitalIdEquipmentsPost**](EquipmentsApi.md#apiV1HospitalsHospitalIdEquipmentsPost) | **POST** api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
 
 
-<a name="apiV1HospitalsEquipmentsGet"></a>
-# **apiV1HospitalsEquipmentsGet**
-> EquipmentsViewModel apiV1HospitalsEquipmentsGet(id, name, description, hospitalId, hospitalName, created, page, limit, lastRetrieved, current)
 
 Get all equipments.
 
@@ -22,10 +19,12 @@ Sample request:        GET /api/v1/hospitals/1/equipments      {          \&quot
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = EquipmentsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(EquipmentsApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
@@ -36,16 +35,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : EquipmentsViewModel = apiInstance.apiV1HospitalsEquipmentsGet(id, name, description, hospitalId, hospitalName, created, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling EquipmentsApi#apiV1HospitalsEquipmentsGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling EquipmentsApi#apiV1HospitalsEquipmentsGet")
-    e.printStackTrace()
-}
+
+val result : EquipmentsViewModel = webService.apiV1HospitalsEquipmentsGet(id, name, description, hospitalId, hospitalName, created, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -76,9 +67,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete"></a>
-# **apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete**
-> kotlin.Boolean apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete(hospitalId, equipmentId)
 
 Delete equipment.
 
@@ -87,22 +75,16 @@ Sample request:        DELETE /api/v1/hospitals/1/equipments/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = EquipmentsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(EquipmentsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val equipmentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete(hospitalId, equipmentId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete(hospitalId, equipmentId)
 ```
 
 ### Parameters
@@ -119,17 +101,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet"></a>
-# **apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**
-> EquipmentViewModel apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet(hospitalId, equipmentId)
 
 Get equipment.
 
@@ -138,22 +115,16 @@ Sample request:        GET /api/v1/hospitals/1/equipments/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = EquipmentsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(EquipmentsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val equipmentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : EquipmentViewModel = apiInstance.apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet(hospitalId, equipmentId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet")
-    e.printStackTrace()
-}
+
+val result : EquipmentViewModel = webService.apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet(hospitalId, equipmentId)
 ```
 
 ### Parameters
@@ -176,9 +147,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut"></a>
-# **apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**
-> kotlin.Boolean apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut(hospitalId, equipmentId, updateEquipmentCommand)
 
 Update equipment.
 
@@ -187,23 +155,17 @@ Sample request:        PUT /api/v1/hospitals/1/equipments/1      {          \&qu
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = EquipmentsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(EquipmentsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val equipmentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateEquipmentCommand : UpdateEquipmentCommand =  // UpdateEquipmentCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut(hospitalId, equipmentId, updateEquipmentCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut(hospitalId, equipmentId, updateEquipmentCommand)
 ```
 
 ### Parameters
@@ -221,17 +183,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1HospitalsHospitalIdEquipmentsPost"></a>
-# **apiV1HospitalsHospitalIdEquipmentsPost**
-> java.util.UUID apiV1HospitalsHospitalIdEquipmentsPost(hospitalId, createEquipmentCommand)
 
 Create an equipment and add to a hospital.
 
@@ -240,22 +197,16 @@ Sample request:        POST /api/v1/hospitals/1/equipments      {          \&quo
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = EquipmentsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(EquipmentsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createEquipmentCommand : CreateEquipmentCommand =  // CreateEquipmentCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1HospitalsHospitalIdEquipmentsPost(hospitalId, createEquipmentCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling EquipmentsApi#apiV1HospitalsHospitalIdEquipmentsPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1HospitalsHospitalIdEquipmentsPost(hospitalId, createEquipmentCommand)
 ```
 
 ### Parameters
@@ -272,8 +223,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 

@@ -1,0 +1,26 @@
+{
+  "name": "ch-api-client-kotlin",
+  "version": "1.0.6",
+  "description": "Openapi generated kotlin client for CloudHospital",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "openapi-generator-cli version-manager set 5.0.0-beta3 && openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o . --additional-properties=serializationLibrary=gson --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime", 
+    "build-retrofit2": "openapi-generator-cli version-manager set 5.0.0-beta3 && openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o . --additional-properties=serializationLibrary=gson --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudhospital/ch-api-client-kotlin"
+  },
+  "keywords": [
+    "CloudHospital",
+    "kotlin",
+    "client"
+  ],
+  "author": "hyounoosung@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.1.7"
+  }
+}

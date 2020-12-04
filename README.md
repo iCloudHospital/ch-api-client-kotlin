@@ -35,184 +35,184 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AffiliationsApi* | [**apiV1HospitalsHospitalIdDoctorsDoctorIdDelete**](docs/AffiliationsApi.md#apiv1hospitalshospitaliddoctorsdoctoriddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/doctors/{doctorId} | Remove link between the doctor and the hospital.
-*AffiliationsApi* | [**apiV1HospitalsHospitalIdDoctorsDoctorIdPost**](docs/AffiliationsApi.md#apiv1hospitalshospitaliddoctorsdoctoridpost) | **POST** /api/v1/hospitals/{hospitalId}/doctors/{doctorId} | Link a doctor to a hospital.
-*AffiliationsApi* | [**apiV1HospitalsHospitalIdManagersManagerIdDelete**](docs/AffiliationsApi.md#apiv1hospitalshospitalidmanagersmanageriddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/managers/{managerId} | Remove link between the manager and the hospital.
-*AffiliationsApi* | [**apiV1HospitalsHospitalIdManagersManagerIdPost**](docs/AffiliationsApi.md#apiv1hospitalshospitalidmanagersmanageridpost) | **POST** /api/v1/hospitals/{hospitalId}/managers/{managerId} | Link a manager to a hospital.
-*ArticlesApi* | [**apiV1HospitalsArticlesGet**](docs/ArticlesApi.md#apiv1hospitalsarticlesget) | **GET** /api/v1/hospitals/articles | Get all articles.
-*ArticlesApi* | [**apiV1HospitalsArticlesSlugsSlugGet**](docs/ArticlesApi.md#apiv1hospitalsarticlesslugsslugget) | **GET** /api/v1/hospitals/articles/slugs/{slug} | Get article by slug.
-*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesArticleIdDelete**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlesarticleiddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/articles/{articleId} | Delete article.
-*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesArticleIdGet**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlesarticleidget) | **GET** /api/v1/hospitals/{hospitalId}/articles/{articleId} | Get article.
-*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesArticleIdPut**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlesarticleidput) | **PUT** /api/v1/hospitals/{hospitalId}/articles/{articleId} | Update article.
-*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesPost**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlespost) | **POST** /api/v1/hospitals/{hospitalId}/articles | Create an article.
-*BookingsApi* | [**apiV1BookingsBookingIdApprovePost**](docs/BookingsApi.md#apiv1bookingsbookingidapprovepost) | **POST** /api/v1/bookings/{bookingId}/approve | Approve booking.
-*BookingsApi* | [**apiV1BookingsBookingIdCancelPost**](docs/BookingsApi.md#apiv1bookingsbookingidcancelpost) | **POST** /api/v1/bookings/{bookingId}/cancel | Cancel booking.
-*BookingsApi* | [**apiV1BookingsBookingIdDelete**](docs/BookingsApi.md#apiv1bookingsbookingiddelete) | **DELETE** /api/v1/bookings/{bookingId} | Delete booking.
-*BookingsApi* | [**apiV1BookingsBookingIdGet**](docs/BookingsApi.md#apiv1bookingsbookingidget) | **GET** /api/v1/bookings/{bookingId} | Get booking.
-*BookingsApi* | [**apiV1BookingsBookingIdPaidPost**](docs/BookingsApi.md#apiv1bookingsbookingidpaidpost) | **POST** /api/v1/bookings/{bookingId}/paid | Mark as Paid booking.
-*BookingsApi* | [**apiV1BookingsBookingIdPayPost**](docs/BookingsApi.md#apiv1bookingsbookingidpaypost) | **POST** /api/v1/bookings/{bookingId}/pay | Pay booking.
-*BookingsApi* | [**apiV1BookingsBookingIdPut**](docs/BookingsApi.md#apiv1bookingsbookingidput) | **PUT** /api/v1/bookings/{bookingId} | Update booking.
-*BookingsApi* | [**apiV1BookingsBookingIdRejectPost**](docs/BookingsApi.md#apiv1bookingsbookingidrejectpost) | **POST** /api/v1/bookings/{bookingId}/reject | Reject booking.
-*BookingsApi* | [**apiV1BookingsGet**](docs/BookingsApi.md#apiv1bookingsget) | **GET** /api/v1/bookings | Get all bookings.
-*BookingsApi* | [**apiV1BookingsRequestIdPost**](docs/BookingsApi.md#apiv1bookingsrequestidpost) | **POST** /api/v1/bookings/{requestId} | Create booking.
-*CHAdminsApi* | [**apiV1ChadminsChAdminIdDelete**](docs/CHAdminsApi.md#apiv1chadminschadminiddelete) | **DELETE** /api/v1/chadmins/{chAdminId} | Delete cloud hospital admin user.
-*CHAdminsApi* | [**apiV1ChadminsChAdminIdGet**](docs/CHAdminsApi.md#apiv1chadminschadminidget) | **GET** /api/v1/chadmins/{chAdminId} | Get cloud hospital admin user by id.
-*CHAdminsApi* | [**apiV1ChadminsChAdminIdPut**](docs/CHAdminsApi.md#apiv1chadminschadminidput) | **PUT** /api/v1/chadmins/{chAdminId} | Update cloud hospital admin user.
-*CHAdminsApi* | [**apiV1ChadminsGet**](docs/CHAdminsApi.md#apiv1chadminsget) | **GET** /api/v1/chadmins | Get cloud hospital admin users.
-*CHAdminsApi* | [**apiV1ChadminsPost**](docs/CHAdminsApi.md#apiv1chadminspost) | **POST** /api/v1/chadmins | Create cloud hospital admin user.
-*CHManagersApi* | [**apiV1ChmanagersChManagerIdDelete**](docs/CHManagersApi.md#apiv1chmanagerschmanageriddelete) | **DELETE** /api/v1/chmanagers/{chManagerId} | Delete cloud hospital manager.
-*CHManagersApi* | [**apiV1ChmanagersChManagerIdGet**](docs/CHManagersApi.md#apiv1chmanagerschmanageridget) | **GET** /api/v1/chmanagers/{chManagerId} | Get cloud hospital manager.
-*CHManagersApi* | [**apiV1ChmanagersChManagerIdPut**](docs/CHManagersApi.md#apiv1chmanagerschmanageridput) | **PUT** /api/v1/chmanagers/{chManagerId} | Update cloud hospital manager.
-*CHManagersApi* | [**apiV1ChmanagersGet**](docs/CHManagersApi.md#apiv1chmanagersget) | **GET** /api/v1/chmanagers | Get cloud hospital managers.
-*CHManagersApi* | [**apiV1ChmanagersPost**](docs/CHManagersApi.md#apiv1chmanagerspost) | **POST** /api/v1/chmanagers | Create cloud hospital manager.
-*CommunicationsApi* | [**apiV1CommunicationsDelete**](docs/CommunicationsApi.md#apiv1communicationsdelete) | **DELETE** /api/v1/communications | 
-*CommunicationsApi* | [**apiV1CommunicationsGet**](docs/CommunicationsApi.md#apiv1communicationsget) | **GET** /api/v1/communications | 
-*CommunicationsApi* | [**apiV1CommunicationsPut**](docs/CommunicationsApi.md#apiv1communicationsput) | **PUT** /api/v1/communications | 
-*ConsultationsApi* | [**apiV1ConsultationsConsultationIdApprovePost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidapprovepost) | **POST** /api/v1/consultations/{consultationId}/approve | Approve consultation.
-*ConsultationsApi* | [**apiV1ConsultationsConsultationIdCancelPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidcancelpost) | **POST** /api/v1/consultations/{consultationId}/cancel | Cancel consultation.
-*ConsultationsApi* | [**apiV1ConsultationsConsultationIdDelete**](docs/ConsultationsApi.md#apiv1consultationsconsultationiddelete) | **DELETE** /api/v1/consultations/{consultationId} | Delete consultation.
-*ConsultationsApi* | [**apiV1ConsultationsConsultationIdGet**](docs/ConsultationsApi.md#apiv1consultationsconsultationidget) | **GET** /api/v1/consultations/{consultationId} | Get consultation.
-*ConsultationsApi* | [**apiV1ConsultationsConsultationIdPayPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidpaypost) | **POST** /api/v1/consultations/{consultationId}/pay | Pay consultation.
-*ConsultationsApi* | [**apiV1ConsultationsConsultationIdPut**](docs/ConsultationsApi.md#apiv1consultationsconsultationidput) | **PUT** /api/v1/consultations/{consultationId} | Update consultation.
-*ConsultationsApi* | [**apiV1ConsultationsConsultationIdRejectPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidrejectpost) | **POST** /api/v1/consultations/{consultationId}/reject | Reject consultation.
-*ConsultationsApi* | [**apiV1ConsultationsGet**](docs/ConsultationsApi.md#apiv1consultationsget) | **GET** /api/v1/consultations | Get all consultations.
-*ConsultationsApi* | [**apiV1ConsultationsRequestIdPost**](docs/ConsultationsApi.md#apiv1consultationsrequestidpost) | **POST** /api/v1/consultations/{requestId} | Create consultation.
-*CountriesApi* | [**apiV1CountriesCountryIdDelete**](docs/CountriesApi.md#apiv1countriescountryiddelete) | **DELETE** /api/v1/countries/{countryId} | Delete country.
-*CountriesApi* | [**apiV1CountriesCountryIdGet**](docs/CountriesApi.md#apiv1countriescountryidget) | **GET** /api/v1/countries/{countryId} | Get country.
-*CountriesApi* | [**apiV1CountriesCountryIdPut**](docs/CountriesApi.md#apiv1countriescountryidput) | **PUT** /api/v1/countries/{countryId} | Update country.
-*CountriesApi* | [**apiV1CountriesGet**](docs/CountriesApi.md#apiv1countriesget) | **GET** /api/v1/countries | Get all countries.
-*CountriesApi* | [**apiV1CountriesPost**](docs/CountriesApi.md#apiv1countriespost) | **POST** /api/v1/countries | Create a country.
-*CountriesApi* | [**apiV1CountriesSlugsSlugGet**](docs/CountriesApi.md#apiv1countriesslugsslugget) | **GET** /api/v1/countries/slugs/{slug} | Get country by slug.
-*DealPackagesApi* | [**apiV1DealsDealIdPackagesPackageIdDelete**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespackageiddelete) | **DELETE** /api/v1/deals/{dealId}/packages/{packageId} | Delete deal package.
-*DealPackagesApi* | [**apiV1DealsDealIdPackagesPackageIdGet**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespackageidget) | **GET** /api/v1/deals/{dealId}/packages/{packageId} | Get deal package.
-*DealPackagesApi* | [**apiV1DealsDealIdPackagesPackageIdPut**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespackageidput) | **PUT** /api/v1/deals/{dealId}/packages/{packageId} | Update deal package.
-*DealPackagesApi* | [**apiV1DealsDealIdPackagesPost**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespost) | **POST** /api/v1/deals/{dealId}/packages | Create deal package.
-*DealsApi* | [**apiV1DealsDealIdDelete**](docs/DealsApi.md#apiv1dealsdealiddelete) | **DELETE** /api/v1/deals/{dealId} | Delete deal.
-*DealsApi* | [**apiV1DealsDealIdGet**](docs/DealsApi.md#apiv1dealsdealidget) | **GET** /api/v1/deals/{dealId} | Get deal.
-*DealsApi* | [**apiV1DealsDealIdPut**](docs/DealsApi.md#apiv1dealsdealidput) | **PUT** /api/v1/deals/{dealId} | Update deal.
-*DealsApi* | [**apiV1DealsGet**](docs/DealsApi.md#apiv1dealsget) | **GET** /api/v1/deals | Get all deals.
-*DealsApi* | [**apiV1DealsPost**](docs/DealsApi.md#apiv1dealspost) | **POST** /api/v1/deals | Create deal.
-*DealsApi* | [**apiV1DealsSlugsSlugGet**](docs/DealsApi.md#apiv1dealsslugsslugget) | **GET** /api/v1/deals/slugs/{slug} | Get deal by slug.
-*DepartmentApi* | [**apiV1HospitalsDepartmentsGet**](docs/DepartmentApi.md#apiv1hospitalsdepartmentsget) | **GET** /api/v1/hospitals/departments | Get all department.
-*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdDelete**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentiddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/departments/{departmentId} | Delete department.
-*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdGet**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidget) | **GET** /api/v1/hospitals/{hospitalId}/departments/{departmentId} | Get department.
-*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPost**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidpost) | **POST** /api/v1/hospitals/{hospitalId}/departments/{departmentId} | Create department.
-*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPut**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidput) | **PUT** /api/v1/hospitals/{hospitalId}/departments/{departmentId} | Update department.
-*DevicesApi* | [**apiV1DevicesDeviceIdDelete**](docs/DevicesApi.md#apiv1devicesdeviceiddelete) | **DELETE** /api/v1/devices/{deviceId} | Delete device.
-*DevicesApi* | [**apiV1DevicesDeviceIdGet**](docs/DevicesApi.md#apiv1devicesdeviceidget) | **GET** /api/v1/devices/{deviceId} | Get device.
-*DevicesApi* | [**apiV1DevicesDeviceIdLoginsPost**](docs/DevicesApi.md#apiv1devicesdeviceidloginspost) | **POST** /api/v1/devices/{deviceId}/logins | Create device login.
-*DevicesApi* | [**apiV1DevicesDeviceIdPut**](docs/DevicesApi.md#apiv1devicesdeviceidput) | **PUT** /api/v1/devices/{deviceId} | Update device.
-*DevicesApi* | [**apiV1DevicesPost**](docs/DevicesApi.md#apiv1devicespost) | **POST** /api/v1/devices | Create device.
-*DoctorCertificatesApi* | [**apiV1DoctorsCertificatesGet**](docs/DoctorCertificatesApi.md#apiv1doctorscertificatesget) | **GET** /api/v1/doctors/certificates | Get all certificates.
-*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdDelete**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateiddelete) | **DELETE** /api/v1/doctors/{doctorId}/certificates/{certificateId} | Delete certificate.
-*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateidget) | **GET** /api/v1/doctors/{doctorId}/certificates/{certificateId} | Get certificate.
-*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdPut**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateidput) | **PUT** /api/v1/doctors/{doctorId}/certificates/{certificateId} | Update department.
-*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesPost**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatespost) | **POST** /api/v1/doctors/{doctorId}/certificates | Create certificate.
-*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPatientIdDelete**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspatientiddelete) | **DELETE** /api/v1/doctors/{doctorId}/reviews/{patientId} | Delete review.
-*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPatientIdGet**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspatientidget) | **GET** /api/v1/doctors/{doctorId}/reviews/{patientId} | Get review.
-*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPatientIdPut**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspatientidput) | **PUT** /api/v1/doctors/{doctorId}/reviews/{patientId} | Update review.
-*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPost**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspost) | **POST** /api/v1/doctors/{doctorId}/reviews | Create review.
-*DoctorReviewsApi* | [**apiV1DoctorsReviewsGet**](docs/DoctorReviewsApi.md#apiv1doctorsreviewsget) | **GET** /api/v1/doctors/reviews | Get all reviews.
-*DoctorSpecialtiesApi* | [**apiV1DoctorsDoctorIdSpecialtySpecialtyIdPost**](docs/DoctorSpecialtiesApi.md#apiv1doctorsdoctoridspecialtyspecialtyidpost) | **POST** /api/v1/doctors/{doctorId}/specialty/{specialtyId} | Link a doctor to a specialty.
-*DoctorSpecialtiesApi* | [**apiV1DoctorsHospitalIdDoctorsDoctorIdDelete**](docs/DoctorSpecialtiesApi.md#apiv1doctorshospitaliddoctorsdoctoriddelete) | **DELETE** /api/v1/doctors/{hospitalId}/doctors/{doctorId} | Remove link between the doctor and the specialty.
-*DoctorsApi* | [**apiV1DoctorsDoctorIdDelete**](docs/DoctorsApi.md#apiv1doctorsdoctoriddelete) | **DELETE** /api/v1/doctors/{doctorId} | Delete doctor.
-*DoctorsApi* | [**apiV1DoctorsDoctorIdGet**](docs/DoctorsApi.md#apiv1doctorsdoctoridget) | **GET** /api/v1/doctors/{doctorId} | Get hospital doctor.
-*DoctorsApi* | [**apiV1DoctorsDoctorIdPut**](docs/DoctorsApi.md#apiv1doctorsdoctoridput) | **PUT** /api/v1/doctors/{doctorId} | Update hospital doctor.
-*DoctorsApi* | [**apiV1DoctorsGet**](docs/DoctorsApi.md#apiv1doctorsget) | **GET** /api/v1/doctors | Get all hospital doctors.
-*DoctorsApi* | [**apiV1DoctorsPost**](docs/DoctorsApi.md#apiv1doctorspost) | **POST** /api/v1/doctors | Create hospital doctor.
-*DoctorsApi* | [**apiV1DoctorsSlugsSlugGet**](docs/DoctorsApi.md#apiv1doctorsslugsslugget) | **GET** /api/v1/doctors/slugs/{slug} | Get hospital doctor by slug.
-*EquipmentsApi* | [**apiV1HospitalsEquipmentsGet**](docs/EquipmentsApi.md#apiv1hospitalsequipmentsget) | **GET** /api/v1/hospitals/equipments | Get all equipments.
-*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentiddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Delete equipment.
-*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidget) | **GET** /api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
-*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidput) | **PUT** /api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
-*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsPost**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentspost) | **POST** /api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
-*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdDelete**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientiddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/reviews/{patientId} | Delete review.
-*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdGet**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidget) | **GET** /api/v1/hospitals/{hospitalId}/reviews/{patientId} | Get review.
-*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdPut**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidput) | **PUT** /api/v1/hospitals/{hospitalId}/reviews/{patientId} | Update review.
-*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPost**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspost) | **POST** /api/v1/hospitals/{hospitalId}/reviews | Create review.
-*HospitalReviewsApi* | [**apiV1HospitalsReviewsGet**](docs/HospitalReviewsApi.md#apiv1hospitalsreviewsget) | **GET** /api/v1/hospitals/reviews | Get all reviews.
-*HospitalSpecialtiesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdDelete**](docs/HospitalSpecialtiesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyiddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId} | Delete hospitalSpecialty.
-*HospitalSpecialtiesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost**](docs/HospitalSpecialtiesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidpost) | **POST** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId} | Create hospitalSpecialty.
-*HospitalSpecialtiesApi* | [**apiV1HospitalsHospitalIdSpecialtysequencePut**](docs/HospitalSpecialtiesApi.md#apiv1hospitalshospitalidspecialtysequenceput) | **PUT** /api/v1/hospitals/{hospitalId}/specialtysequence | Update hospitalSpecialty sequence.
-*HospitalSpecialtiesApi* | [**apiV1HospitalsSpecialtiesGet**](docs/HospitalSpecialtiesApi.md#apiv1hospitalsspecialtiesget) | **GET** /api/v1/hospitals/specialties | Get all hospitalSpecialties.
-*HospitalsApi* | [**apiV1HospitalsCurrentGet**](docs/HospitalsApi.md#apiv1hospitalscurrentget) | **GET** /api/v1/hospitals/current | 
-*HospitalsApi* | [**apiV1HospitalsGet**](docs/HospitalsApi.md#apiv1hospitalsget) | **GET** /api/v1/hospitals | Get all hospitals.
-*HospitalsApi* | [**apiV1HospitalsHospitalIdDelete**](docs/HospitalsApi.md#apiv1hospitalshospitaliddelete) | **DELETE** /api/v1/hospitals/{hospitalId} | Delete hospital.
-*HospitalsApi* | [**apiV1HospitalsHospitalIdGet**](docs/HospitalsApi.md#apiv1hospitalshospitalidget) | **GET** /api/v1/hospitals/{hospitalId} | Get hospita.
-*HospitalsApi* | [**apiV1HospitalsHospitalIdPut**](docs/HospitalsApi.md#apiv1hospitalshospitalidput) | **PUT** /api/v1/hospitals/{hospitalId} | Update hospital.
-*HospitalsApi* | [**apiV1HospitalsPost**](docs/HospitalsApi.md#apiv1hospitalspost) | **POST** /api/v1/hospitals | Create a hospital.
-*HospitalsApi* | [**apiV1HospitalsSlugsSlugGet**](docs/HospitalsApi.md#apiv1hospitalsslugsslugget) | **GET** /api/v1/hospitals/slugs/{slug} | Get hospital by slug.
-*IdentityApi* | [**apiV1IdentityGet**](docs/IdentityApi.md#apiv1identityget) | **GET** /api/v1/identity | Get current user's Identity claims.
-*ImagesApi* | [**apiV1ImagesPost**](docs/ImagesApi.md#apiv1imagespost) | **POST** /api/v1/images | 
-*ManagersApi* | [**apiV1ManagersGet**](docs/ManagersApi.md#apiv1managersget) | **GET** /api/v1/managers | Get all hospital managers.
-*ManagersApi* | [**apiV1ManagersManagerIdDelete**](docs/ManagersApi.md#apiv1managersmanageriddelete) | **DELETE** /api/v1/managers/{managerId} | Delete hospital manager.
-*ManagersApi* | [**apiV1ManagersManagerIdGet**](docs/ManagersApi.md#apiv1managersmanageridget) | **GET** /api/v1/managers/{managerId} | Get hospital manager.
-*ManagersApi* | [**apiV1ManagersManagerIdPut**](docs/ManagersApi.md#apiv1managersmanageridput) | **PUT** /api/v1/managers/{managerId} | Update hospital manager.
-*ManagersApi* | [**apiV1ManagersPost**](docs/ManagersApi.md#apiv1managerspost) | **POST** /api/v1/managers | Create hospital manager.
-*MoviesApi* | [**apiV1MoviesPost**](docs/MoviesApi.md#apiv1moviespost) | **POST** /api/v1/movies | 
-*PartnersApi* | [**apiV1PartnersGet**](docs/PartnersApi.md#apiv1partnersget) | **GET** /api/v1/partners | Get all partners.
-*PartnersApi* | [**apiV1PartnersPartnerIdDelete**](docs/PartnersApi.md#apiv1partnerspartneriddelete) | **DELETE** /api/v1/partners/{partnerId} | Delete patner.
-*PartnersApi* | [**apiV1PartnersPartnerIdGet**](docs/PartnersApi.md#apiv1partnerspartneridget) | **GET** /api/v1/partners/{partnerId} | Get partner.
-*PartnersApi* | [**apiV1PartnersPartnerIdPut**](docs/PartnersApi.md#apiv1partnerspartneridput) | **PUT** /api/v1/partners/{partnerId} | Update partner.
-*PartnersApi* | [**apiV1PartnersPost**](docs/PartnersApi.md#apiv1partnerspost) | **POST** /api/v1/partners | Create partner.
-*PatientsApi* | [**apiV1PatientsGet**](docs/PatientsApi.md#apiv1patientsget) | **GET** /api/v1/patients | Get all patients.
-*PatientsApi* | [**apiV1PatientsPatientIdDelete**](docs/PatientsApi.md#apiv1patientspatientiddelete) | **DELETE** /api/v1/patients/{patientId} | Delete patient.
-*PatientsApi* | [**apiV1PatientsPatientIdGet**](docs/PatientsApi.md#apiv1patientspatientidget) | **GET** /api/v1/patients/{patientId} | Get patient.
-*PatientsApi* | [**apiV1PatientsPatientIdPut**](docs/PatientsApi.md#apiv1patientspatientidput) | **PUT** /api/v1/patients/{patientId} | Update patient.
-*PatientsApi* | [**apiV1PatientsPost**](docs/PatientsApi.md#apiv1patientspost) | **POST** /api/v1/patients | Create patient.
-*ProfilesApi* | [**apiV1ProfilesChangeemailPost**](docs/ProfilesApi.md#apiv1profileschangeemailpost) | **POST** /api/v1/profiles/changeemail | Change user's email on both Identity and Api.
-*ProfilesApi* | [**apiV1ProfilesConfirmemailPost**](docs/ProfilesApi.md#apiv1profilesconfirmemailpost) | **POST** /api/v1/profiles/confirmemail | 
-*ProfilesApi* | [**apiV1ProfilesGet**](docs/ProfilesApi.md#apiv1profilesget) | **GET** /api/v1/profiles | Get current user's profile.
-*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsGet**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsget) | **GET** /api/v1/questions/{questionId}/questioncomments | Get all questionComment.
-*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsPost**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentspost) | **POST** /api/v1/questions/{questionId}/questioncomments | Create an questionComment.
-*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdDelete**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsquestioncommentiddelete) | **DELETE** /api/v1/questions/{questionId}/questioncomments/{questionCommentId} | Delete questionComment.
-*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdGet**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsquestioncommentidget) | **GET** /api/v1/questions/{questionId}/questioncomments/{questionCommentId} | Get questionComment.
-*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdPut**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsquestioncommentidput) | **PUT** /api/v1/questions/{questionId}/questioncomments/{questionCommentId} | Update questionComment.
-*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsPost**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionspost) | **POST** /api/v1/hospitals/{hospitalId}/questions | Create an question.
-*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdDelete**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestioniddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/questions/{questionId} | Delete question.
-*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdGet**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidget) | **GET** /api/v1/hospitals/{hospitalId}/questions/{questionId} | Get question.
-*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdPut**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidput) | **PUT** /api/v1/hospitals/{hospitalId}/questions/{questionId} | Update question.
-*QuestionsApi* | [**apiV1HospitalsQuestionsGet**](docs/QuestionsApi.md#apiv1hospitalsquestionsget) | **GET** /api/v1/hospitals/questions | Get all questions.
-*SearchApi* | [**apiV1SearchDealsGet**](docs/SearchApi.md#apiv1searchdealsget) | **GET** /api/v1/search/deals | 
-*SearchApi* | [**apiV1SearchDoctorsGet**](docs/SearchApi.md#apiv1searchdoctorsget) | **GET** /api/v1/search/doctors | 
-*SearchApi* | [**apiV1SearchGetcountGet**](docs/SearchApi.md#apiv1searchgetcountget) | **GET** /api/v1/search/getcount | 
-*SearchApi* | [**apiV1SearchHospitalsGet**](docs/SearchApi.md#apiv1searchhospitalsget) | **GET** /api/v1/search/hospitals | 
-*SearchApi* | [**apiV1SearchSpecialtiesGet**](docs/SearchApi.md#apiv1searchspecialtiesget) | **GET** /api/v1/search/specialties | 
-*SearchApi* | [**apiV1SearchSpecialtytypesGet**](docs/SearchApi.md#apiv1searchspecialtytypesget) | **GET** /api/v1/search/specialtytypes | 
-*ServiceCategoriesApi* | [**apiV1ServicecategoriesGet**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesget) | **GET** /api/v1/servicecategories | Get all ServiceCategories.
-*ServiceCategoriesApi* | [**apiV1ServicecategoriesPost**](docs/ServiceCategoriesApi.md#apiv1servicecategoriespost) | **POST** /api/v1/servicecategories | Create ServiceCategory.
-*ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdDelete**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryiddelete) | **DELETE** /api/v1/servicecategories/{serviceCategoryId} | Delete ServiceCategory.
-*ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdGet**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryidget) | **GET** /api/v1/servicecategories/{serviceCategoryId} | Get ServiceCategory.
-*ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdPut**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryidput) | **PUT** /api/v1/servicecategories/{serviceCategoryId} | Update ServiceCategory
-*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicespost) | **POST** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services | Create service.
-*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesserviceiddelete) | **DELETE** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Delete service.
-*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesserviceidget) | **GET** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Get service.
-*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesserviceidput) | **PUT** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Update service.
-*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesquenceput) | **PUT** /api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence | Update service sequence.
-*ServicesApi* | [**apiV1HospitalsServicesGet**](docs/ServicesApi.md#apiv1hospitalsservicesget) | **GET** /api/v1/hospitals/services | Get all services.
-*SpecialtiesApi* | [**apiV1SpecialtiesGet**](docs/SpecialtiesApi.md#apiv1specialtiesget) | **GET** /api/v1/specialties | Get all specialties.
-*SpecialtiesApi* | [**apiV1SpecialtiesPost**](docs/SpecialtiesApi.md#apiv1specialtiespost) | **POST** /api/v1/specialties | Create specialty.
-*SpecialtiesApi* | [**apiV1SpecialtiesSlugsSlugGet**](docs/SpecialtiesApi.md#apiv1specialtiesslugsslugget) | **GET** /api/v1/specialties/slugs/{slug} | Get specialty by slug.
-*SpecialtiesApi* | [**apiV1SpecialtiesSpecialtyIdDelete**](docs/SpecialtiesApi.md#apiv1specialtiesspecialtyiddelete) | **DELETE** /api/v1/specialties/{specialtyId} | Delete specialty.
-*SpecialtiesApi* | [**apiV1SpecialtiesSpecialtyIdGet**](docs/SpecialtiesApi.md#apiv1specialtiesspecialtyidget) | **GET** /api/v1/specialties/{specialtyId} | Get specialty.
-*SpecialtiesApi* | [**apiV1SpecialtiesSpecialtyIdPut**](docs/SpecialtiesApi.md#apiv1specialtiesspecialtyidput) | **PUT** /api/v1/specialties/{specialtyId} | Update specialty
-*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesGet**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesget) | **GET** /api/v1/specialtytypecategories | Get all SpecialtyTypeCategories.
-*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesPost**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriespost) | **POST** /api/v1/specialtytypecategories | Create specialtyTypeCategory.
-*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdDelete**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesspecialtytypecategoryiddelete) | **DELETE** /api/v1/specialtytypecategories/{specialtyTypeCategoryId} | Delete specialtyTypeCategory.
-*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesspecialtytypecategoryidget) | **GET** /api/v1/specialtytypecategories/{specialtyTypeCategoryId} | Get specialtyTypeCategory.
-*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdPut**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesspecialtytypecategoryidput) | **PUT** /api/v1/specialtytypecategories/{specialtyTypeCategoryId} | Update specialtyTypeCategory
-*SpecialtyTypesApi* | [**apiV1SpecialtytypesGet**](docs/SpecialtyTypesApi.md#apiv1specialtytypesget) | **GET** /api/v1/specialtytypes | Get all SpecialtyTypes.
-*SpecialtyTypesApi* | [**apiV1SpecialtytypesPost**](docs/SpecialtyTypesApi.md#apiv1specialtytypespost) | **POST** /api/v1/specialtytypes | Create specialtyType.
-*SpecialtyTypesApi* | [**apiV1SpecialtytypesSlugsSlugGet**](docs/SpecialtyTypesApi.md#apiv1specialtytypesslugsslugget) | **GET** /api/v1/specialtytypes/slugs/{slug} | Get specialtyType by slug.
-*SpecialtyTypesApi* | [**apiV1SpecialtytypesSpecialtyTypeIdDelete**](docs/SpecialtyTypesApi.md#apiv1specialtytypesspecialtytypeiddelete) | **DELETE** /api/v1/specialtytypes/{specialtyTypeId} | Delete specialtyType.
-*SpecialtyTypesApi* | [**apiV1SpecialtytypesSpecialtyTypeIdGet**](docs/SpecialtyTypesApi.md#apiv1specialtytypesspecialtytypeidget) | **GET** /api/v1/specialtytypes/{specialtyTypeId} | Get specialtyType.
-*SpecialtyTypesApi* | [**apiV1SpecialtytypesSpecialtyTypeIdPut**](docs/SpecialtyTypesApi.md#apiv1specialtytypesspecialtytypeidput) | **PUT** /api/v1/specialtytypes/{specialtyTypeId} | Update specialtyType
-*YoutubesApi* | [**apiV1YoutubesGet**](docs/YoutubesApi.md#apiv1youtubesget) | **GET** /api/v1/youtubes | Get all youtubes.
-*YoutubesApi* | [**apiV1YoutubesPost**](docs/YoutubesApi.md#apiv1youtubespost) | **POST** /api/v1/youtubes | Create an youtube.
-*YoutubesApi* | [**apiV1YoutubesSlugsSlugGet**](docs/YoutubesApi.md#apiv1youtubesslugsslugget) | **GET** /api/v1/youtubes/slugs/{slug} | Get youtube by slug.
-*YoutubesApi* | [**apiV1YoutubesYoutubeIdDelete**](docs/YoutubesApi.md#apiv1youtubesyoutubeiddelete) | **DELETE** /api/v1/youtubes/{youtubeId} | Delete youtube.
-*YoutubesApi* | [**apiV1YoutubesYoutubeIdGet**](docs/YoutubesApi.md#apiv1youtubesyoutubeidget) | **GET** /api/v1/youtubes/{youtubeId} | Get youtube.
-*YoutubesApi* | [**apiV1YoutubesYoutubeIdPut**](docs/YoutubesApi.md#apiv1youtubesyoutubeidput) | **PUT** /api/v1/youtubes/{youtubeId} | Update youtube.
+*AffiliationsApi* | [**apiV1HospitalsHospitalIdDoctorsDoctorIdDelete**](docs/AffiliationsApi.md#apiv1hospitalshospitaliddoctorsdoctoriddelete) | **DELETE** api/v1/hospitals/{hospitalId}/doctors/{doctorId} | Remove link between the doctor and the hospital.
+*AffiliationsApi* | [**apiV1HospitalsHospitalIdDoctorsDoctorIdPost**](docs/AffiliationsApi.md#apiv1hospitalshospitaliddoctorsdoctoridpost) | **POST** api/v1/hospitals/{hospitalId}/doctors/{doctorId} | Link a doctor to a hospital.
+*AffiliationsApi* | [**apiV1HospitalsHospitalIdManagersManagerIdDelete**](docs/AffiliationsApi.md#apiv1hospitalshospitalidmanagersmanageriddelete) | **DELETE** api/v1/hospitals/{hospitalId}/managers/{managerId} | Remove link between the manager and the hospital.
+*AffiliationsApi* | [**apiV1HospitalsHospitalIdManagersManagerIdPost**](docs/AffiliationsApi.md#apiv1hospitalshospitalidmanagersmanageridpost) | **POST** api/v1/hospitals/{hospitalId}/managers/{managerId} | Link a manager to a hospital.
+*ArticlesApi* | [**apiV1HospitalsArticlesGet**](docs/ArticlesApi.md#apiv1hospitalsarticlesget) | **GET** api/v1/hospitals/articles | Get all articles.
+*ArticlesApi* | [**apiV1HospitalsArticlesSlugsSlugGet**](docs/ArticlesApi.md#apiv1hospitalsarticlesslugsslugget) | **GET** api/v1/hospitals/articles/slugs/{slug} | Get article by slug.
+*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesArticleIdDelete**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlesarticleiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/articles/{articleId} | Delete article.
+*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesArticleIdGet**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlesarticleidget) | **GET** api/v1/hospitals/{hospitalId}/articles/{articleId} | Get article.
+*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesArticleIdPut**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlesarticleidput) | **PUT** api/v1/hospitals/{hospitalId}/articles/{articleId} | Update article.
+*ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesPost**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlespost) | **POST** api/v1/hospitals/{hospitalId}/articles | Create an article.
+*BookingsApi* | [**apiV1BookingsBookingIdApprovePost**](docs/BookingsApi.md#apiv1bookingsbookingidapprovepost) | **POST** api/v1/bookings/{bookingId}/approve | Approve booking.
+*BookingsApi* | [**apiV1BookingsBookingIdCancelPost**](docs/BookingsApi.md#apiv1bookingsbookingidcancelpost) | **POST** api/v1/bookings/{bookingId}/cancel | Cancel booking.
+*BookingsApi* | [**apiV1BookingsBookingIdDelete**](docs/BookingsApi.md#apiv1bookingsbookingiddelete) | **DELETE** api/v1/bookings/{bookingId} | Delete booking.
+*BookingsApi* | [**apiV1BookingsBookingIdGet**](docs/BookingsApi.md#apiv1bookingsbookingidget) | **GET** api/v1/bookings/{bookingId} | Get booking.
+*BookingsApi* | [**apiV1BookingsBookingIdPaidPost**](docs/BookingsApi.md#apiv1bookingsbookingidpaidpost) | **POST** api/v1/bookings/{bookingId}/paid | Mark as Paid booking.
+*BookingsApi* | [**apiV1BookingsBookingIdPayPost**](docs/BookingsApi.md#apiv1bookingsbookingidpaypost) | **POST** api/v1/bookings/{bookingId}/pay | Pay booking.
+*BookingsApi* | [**apiV1BookingsBookingIdPut**](docs/BookingsApi.md#apiv1bookingsbookingidput) | **PUT** api/v1/bookings/{bookingId} | Update booking.
+*BookingsApi* | [**apiV1BookingsBookingIdRejectPost**](docs/BookingsApi.md#apiv1bookingsbookingidrejectpost) | **POST** api/v1/bookings/{bookingId}/reject | Reject booking.
+*BookingsApi* | [**apiV1BookingsGet**](docs/BookingsApi.md#apiv1bookingsget) | **GET** api/v1/bookings | Get all bookings.
+*BookingsApi* | [**apiV1BookingsRequestIdPost**](docs/BookingsApi.md#apiv1bookingsrequestidpost) | **POST** api/v1/bookings/{requestId} | Create booking.
+*CHAdminsApi* | [**apiV1ChadminsChAdminIdDelete**](docs/CHAdminsApi.md#apiv1chadminschadminiddelete) | **DELETE** api/v1/chadmins/{chAdminId} | Delete cloud hospital admin user.
+*CHAdminsApi* | [**apiV1ChadminsChAdminIdGet**](docs/CHAdminsApi.md#apiv1chadminschadminidget) | **GET** api/v1/chadmins/{chAdminId} | Get cloud hospital admin user by id.
+*CHAdminsApi* | [**apiV1ChadminsChAdminIdPut**](docs/CHAdminsApi.md#apiv1chadminschadminidput) | **PUT** api/v1/chadmins/{chAdminId} | Update cloud hospital admin user.
+*CHAdminsApi* | [**apiV1ChadminsGet**](docs/CHAdminsApi.md#apiv1chadminsget) | **GET** api/v1/chadmins | Get cloud hospital admin users.
+*CHAdminsApi* | [**apiV1ChadminsPost**](docs/CHAdminsApi.md#apiv1chadminspost) | **POST** api/v1/chadmins | Create cloud hospital admin user.
+*CHManagersApi* | [**apiV1ChmanagersChManagerIdDelete**](docs/CHManagersApi.md#apiv1chmanagerschmanageriddelete) | **DELETE** api/v1/chmanagers/{chManagerId} | Delete cloud hospital manager.
+*CHManagersApi* | [**apiV1ChmanagersChManagerIdGet**](docs/CHManagersApi.md#apiv1chmanagerschmanageridget) | **GET** api/v1/chmanagers/{chManagerId} | Get cloud hospital manager.
+*CHManagersApi* | [**apiV1ChmanagersChManagerIdPut**](docs/CHManagersApi.md#apiv1chmanagerschmanageridput) | **PUT** api/v1/chmanagers/{chManagerId} | Update cloud hospital manager.
+*CHManagersApi* | [**apiV1ChmanagersGet**](docs/CHManagersApi.md#apiv1chmanagersget) | **GET** api/v1/chmanagers | Get cloud hospital managers.
+*CHManagersApi* | [**apiV1ChmanagersPost**](docs/CHManagersApi.md#apiv1chmanagerspost) | **POST** api/v1/chmanagers | Create cloud hospital manager.
+*CommunicationsApi* | [**apiV1CommunicationsDelete**](docs/CommunicationsApi.md#apiv1communicationsdelete) | **DELETE** api/v1/communications | 
+*CommunicationsApi* | [**apiV1CommunicationsGet**](docs/CommunicationsApi.md#apiv1communicationsget) | **GET** api/v1/communications | 
+*CommunicationsApi* | [**apiV1CommunicationsPut**](docs/CommunicationsApi.md#apiv1communicationsput) | **PUT** api/v1/communications | 
+*ConsultationsApi* | [**apiV1ConsultationsConsultationIdApprovePost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidapprovepost) | **POST** api/v1/consultations/{consultationId}/approve | Approve consultation.
+*ConsultationsApi* | [**apiV1ConsultationsConsultationIdCancelPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidcancelpost) | **POST** api/v1/consultations/{consultationId}/cancel | Cancel consultation.
+*ConsultationsApi* | [**apiV1ConsultationsConsultationIdDelete**](docs/ConsultationsApi.md#apiv1consultationsconsultationiddelete) | **DELETE** api/v1/consultations/{consultationId} | Delete consultation.
+*ConsultationsApi* | [**apiV1ConsultationsConsultationIdGet**](docs/ConsultationsApi.md#apiv1consultationsconsultationidget) | **GET** api/v1/consultations/{consultationId} | Get consultation.
+*ConsultationsApi* | [**apiV1ConsultationsConsultationIdPayPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidpaypost) | **POST** api/v1/consultations/{consultationId}/pay | Pay consultation.
+*ConsultationsApi* | [**apiV1ConsultationsConsultationIdPut**](docs/ConsultationsApi.md#apiv1consultationsconsultationidput) | **PUT** api/v1/consultations/{consultationId} | Update consultation.
+*ConsultationsApi* | [**apiV1ConsultationsConsultationIdRejectPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidrejectpost) | **POST** api/v1/consultations/{consultationId}/reject | Reject consultation.
+*ConsultationsApi* | [**apiV1ConsultationsGet**](docs/ConsultationsApi.md#apiv1consultationsget) | **GET** api/v1/consultations | Get all consultations.
+*ConsultationsApi* | [**apiV1ConsultationsRequestIdPost**](docs/ConsultationsApi.md#apiv1consultationsrequestidpost) | **POST** api/v1/consultations/{requestId} | Create consultation.
+*CountriesApi* | [**apiV1CountriesCountryIdDelete**](docs/CountriesApi.md#apiv1countriescountryiddelete) | **DELETE** api/v1/countries/{countryId} | Delete country.
+*CountriesApi* | [**apiV1CountriesCountryIdGet**](docs/CountriesApi.md#apiv1countriescountryidget) | **GET** api/v1/countries/{countryId} | Get country.
+*CountriesApi* | [**apiV1CountriesCountryIdPut**](docs/CountriesApi.md#apiv1countriescountryidput) | **PUT** api/v1/countries/{countryId} | Update country.
+*CountriesApi* | [**apiV1CountriesGet**](docs/CountriesApi.md#apiv1countriesget) | **GET** api/v1/countries | Get all countries.
+*CountriesApi* | [**apiV1CountriesPost**](docs/CountriesApi.md#apiv1countriespost) | **POST** api/v1/countries | Create a country.
+*CountriesApi* | [**apiV1CountriesSlugsSlugGet**](docs/CountriesApi.md#apiv1countriesslugsslugget) | **GET** api/v1/countries/slugs/{slug} | Get country by slug.
+*DealPackagesApi* | [**apiV1DealsDealIdPackagesPackageIdDelete**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespackageiddelete) | **DELETE** api/v1/deals/{dealId}/packages/{packageId} | Delete deal package.
+*DealPackagesApi* | [**apiV1DealsDealIdPackagesPackageIdGet**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespackageidget) | **GET** api/v1/deals/{dealId}/packages/{packageId} | Get deal package.
+*DealPackagesApi* | [**apiV1DealsDealIdPackagesPackageIdPut**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespackageidput) | **PUT** api/v1/deals/{dealId}/packages/{packageId} | Update deal package.
+*DealPackagesApi* | [**apiV1DealsDealIdPackagesPost**](docs/DealPackagesApi.md#apiv1dealsdealidpackagespost) | **POST** api/v1/deals/{dealId}/packages | Create deal package.
+*DealsApi* | [**apiV1DealsDealIdDelete**](docs/DealsApi.md#apiv1dealsdealiddelete) | **DELETE** api/v1/deals/{dealId} | Delete deal.
+*DealsApi* | [**apiV1DealsDealIdGet**](docs/DealsApi.md#apiv1dealsdealidget) | **GET** api/v1/deals/{dealId} | Get deal.
+*DealsApi* | [**apiV1DealsDealIdPut**](docs/DealsApi.md#apiv1dealsdealidput) | **PUT** api/v1/deals/{dealId} | Update deal.
+*DealsApi* | [**apiV1DealsGet**](docs/DealsApi.md#apiv1dealsget) | **GET** api/v1/deals | Get all deals.
+*DealsApi* | [**apiV1DealsPost**](docs/DealsApi.md#apiv1dealspost) | **POST** api/v1/deals | Create deal.
+*DealsApi* | [**apiV1DealsSlugsSlugGet**](docs/DealsApi.md#apiv1dealsslugsslugget) | **GET** api/v1/deals/slugs/{slug} | Get deal by slug.
+*DepartmentApi* | [**apiV1HospitalsDepartmentsGet**](docs/DepartmentApi.md#apiv1hospitalsdepartmentsget) | **GET** api/v1/hospitals/departments | Get all department.
+*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdDelete**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Delete department.
+*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdGet**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidget) | **GET** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Get department.
+*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPost**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidpost) | **POST** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Create department.
+*DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPut**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidput) | **PUT** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Update department.
+*DevicesApi* | [**apiV1DevicesDeviceIdDelete**](docs/DevicesApi.md#apiv1devicesdeviceiddelete) | **DELETE** api/v1/devices/{deviceId} | Delete device.
+*DevicesApi* | [**apiV1DevicesDeviceIdGet**](docs/DevicesApi.md#apiv1devicesdeviceidget) | **GET** api/v1/devices/{deviceId} | Get device.
+*DevicesApi* | [**apiV1DevicesDeviceIdLoginsPost**](docs/DevicesApi.md#apiv1devicesdeviceidloginspost) | **POST** api/v1/devices/{deviceId}/logins | Create device login.
+*DevicesApi* | [**apiV1DevicesDeviceIdPut**](docs/DevicesApi.md#apiv1devicesdeviceidput) | **PUT** api/v1/devices/{deviceId} | Update device.
+*DevicesApi* | [**apiV1DevicesPost**](docs/DevicesApi.md#apiv1devicespost) | **POST** api/v1/devices | Create device.
+*DoctorCertificatesApi* | [**apiV1DoctorsCertificatesGet**](docs/DoctorCertificatesApi.md#apiv1doctorscertificatesget) | **GET** api/v1/doctors/certificates | Get all certificates.
+*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdDelete**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateiddelete) | **DELETE** api/v1/doctors/{doctorId}/certificates/{certificateId} | Delete certificate.
+*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateidget) | **GET** api/v1/doctors/{doctorId}/certificates/{certificateId} | Get certificate.
+*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdPut**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateidput) | **PUT** api/v1/doctors/{doctorId}/certificates/{certificateId} | Update department.
+*DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesPost**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatespost) | **POST** api/v1/doctors/{doctorId}/certificates | Create certificate.
+*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPatientIdDelete**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspatientiddelete) | **DELETE** api/v1/doctors/{doctorId}/reviews/{patientId} | Delete review.
+*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPatientIdGet**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspatientidget) | **GET** api/v1/doctors/{doctorId}/reviews/{patientId} | Get review.
+*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPatientIdPut**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspatientidput) | **PUT** api/v1/doctors/{doctorId}/reviews/{patientId} | Update review.
+*DoctorReviewsApi* | [**apiV1DoctorsDoctorIdReviewsPost**](docs/DoctorReviewsApi.md#apiv1doctorsdoctoridreviewspost) | **POST** api/v1/doctors/{doctorId}/reviews | Create review.
+*DoctorReviewsApi* | [**apiV1DoctorsReviewsGet**](docs/DoctorReviewsApi.md#apiv1doctorsreviewsget) | **GET** api/v1/doctors/reviews | Get all reviews.
+*DoctorSpecialtiesApi* | [**apiV1DoctorsDoctorIdSpecialtySpecialtyIdPost**](docs/DoctorSpecialtiesApi.md#apiv1doctorsdoctoridspecialtyspecialtyidpost) | **POST** api/v1/doctors/{doctorId}/specialty/{specialtyId} | Link a doctor to a specialty.
+*DoctorSpecialtiesApi* | [**apiV1DoctorsHospitalIdDoctorsDoctorIdDelete**](docs/DoctorSpecialtiesApi.md#apiv1doctorshospitaliddoctorsdoctoriddelete) | **DELETE** api/v1/doctors/{hospitalId}/doctors/{doctorId} | Remove link between the doctor and the specialty.
+*DoctorsApi* | [**apiV1DoctorsDoctorIdDelete**](docs/DoctorsApi.md#apiv1doctorsdoctoriddelete) | **DELETE** api/v1/doctors/{doctorId} | Delete doctor.
+*DoctorsApi* | [**apiV1DoctorsDoctorIdGet**](docs/DoctorsApi.md#apiv1doctorsdoctoridget) | **GET** api/v1/doctors/{doctorId} | Get hospital doctor.
+*DoctorsApi* | [**apiV1DoctorsDoctorIdPut**](docs/DoctorsApi.md#apiv1doctorsdoctoridput) | **PUT** api/v1/doctors/{doctorId} | Update hospital doctor.
+*DoctorsApi* | [**apiV1DoctorsGet**](docs/DoctorsApi.md#apiv1doctorsget) | **GET** api/v1/doctors | Get all hospital doctors.
+*DoctorsApi* | [**apiV1DoctorsPost**](docs/DoctorsApi.md#apiv1doctorspost) | **POST** api/v1/doctors | Create hospital doctor.
+*DoctorsApi* | [**apiV1DoctorsSlugsSlugGet**](docs/DoctorsApi.md#apiv1doctorsslugsslugget) | **GET** api/v1/doctors/slugs/{slug} | Get hospital doctor by slug.
+*EquipmentsApi* | [**apiV1HospitalsEquipmentsGet**](docs/EquipmentsApi.md#apiv1hospitalsequipmentsget) | **GET** api/v1/hospitals/equipments | Get all equipments.
+*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Delete equipment.
+*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidget) | **GET** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
+*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidput) | **PUT** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
+*EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsPost**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentspost) | **POST** api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
+*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdDelete**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Delete review.
+*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdGet**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidget) | **GET** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Get review.
+*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdPut**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidput) | **PUT** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Update review.
+*HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPost**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspost) | **POST** api/v1/hospitals/{hospitalId}/reviews | Create review.
+*HospitalReviewsApi* | [**apiV1HospitalsReviewsGet**](docs/HospitalReviewsApi.md#apiv1hospitalsreviewsget) | **GET** api/v1/hospitals/reviews | Get all reviews.
+*HospitalSpecialtiesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdDelete**](docs/HospitalSpecialtiesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/specialties/{specialtyId} | Delete hospitalSpecialty.
+*HospitalSpecialtiesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost**](docs/HospitalSpecialtiesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidpost) | **POST** api/v1/hospitals/{hospitalId}/specialties/{specialtyId} | Create hospitalSpecialty.
+*HospitalSpecialtiesApi* | [**apiV1HospitalsHospitalIdSpecialtysequencePut**](docs/HospitalSpecialtiesApi.md#apiv1hospitalshospitalidspecialtysequenceput) | **PUT** api/v1/hospitals/{hospitalId}/specialtysequence | Update hospitalSpecialty sequence.
+*HospitalSpecialtiesApi* | [**apiV1HospitalsSpecialtiesGet**](docs/HospitalSpecialtiesApi.md#apiv1hospitalsspecialtiesget) | **GET** api/v1/hospitals/specialties | Get all hospitalSpecialties.
+*HospitalsApi* | [**apiV1HospitalsCurrentGet**](docs/HospitalsApi.md#apiv1hospitalscurrentget) | **GET** api/v1/hospitals/current | 
+*HospitalsApi* | [**apiV1HospitalsGet**](docs/HospitalsApi.md#apiv1hospitalsget) | **GET** api/v1/hospitals | Get all hospitals.
+*HospitalsApi* | [**apiV1HospitalsHospitalIdDelete**](docs/HospitalsApi.md#apiv1hospitalshospitaliddelete) | **DELETE** api/v1/hospitals/{hospitalId} | Delete hospital.
+*HospitalsApi* | [**apiV1HospitalsHospitalIdGet**](docs/HospitalsApi.md#apiv1hospitalshospitalidget) | **GET** api/v1/hospitals/{hospitalId} | Get hospita.
+*HospitalsApi* | [**apiV1HospitalsHospitalIdPut**](docs/HospitalsApi.md#apiv1hospitalshospitalidput) | **PUT** api/v1/hospitals/{hospitalId} | Update hospital.
+*HospitalsApi* | [**apiV1HospitalsPost**](docs/HospitalsApi.md#apiv1hospitalspost) | **POST** api/v1/hospitals | Create a hospital.
+*HospitalsApi* | [**apiV1HospitalsSlugsSlugGet**](docs/HospitalsApi.md#apiv1hospitalsslugsslugget) | **GET** api/v1/hospitals/slugs/{slug} | Get hospital by slug.
+*IdentityApi* | [**apiV1IdentityGet**](docs/IdentityApi.md#apiv1identityget) | **GET** api/v1/identity | Get current user's Identity claims.
+*ImagesApi* | [**apiV1ImagesPost**](docs/ImagesApi.md#apiv1imagespost) | **POST** api/v1/images | 
+*ManagersApi* | [**apiV1ManagersGet**](docs/ManagersApi.md#apiv1managersget) | **GET** api/v1/managers | Get all hospital managers.
+*ManagersApi* | [**apiV1ManagersManagerIdDelete**](docs/ManagersApi.md#apiv1managersmanageriddelete) | **DELETE** api/v1/managers/{managerId} | Delete hospital manager.
+*ManagersApi* | [**apiV1ManagersManagerIdGet**](docs/ManagersApi.md#apiv1managersmanageridget) | **GET** api/v1/managers/{managerId} | Get hospital manager.
+*ManagersApi* | [**apiV1ManagersManagerIdPut**](docs/ManagersApi.md#apiv1managersmanageridput) | **PUT** api/v1/managers/{managerId} | Update hospital manager.
+*ManagersApi* | [**apiV1ManagersPost**](docs/ManagersApi.md#apiv1managerspost) | **POST** api/v1/managers | Create hospital manager.
+*MoviesApi* | [**apiV1MoviesPost**](docs/MoviesApi.md#apiv1moviespost) | **POST** api/v1/movies | 
+*PartnersApi* | [**apiV1PartnersGet**](docs/PartnersApi.md#apiv1partnersget) | **GET** api/v1/partners | Get all partners.
+*PartnersApi* | [**apiV1PartnersPartnerIdDelete**](docs/PartnersApi.md#apiv1partnerspartneriddelete) | **DELETE** api/v1/partners/{partnerId} | Delete patner.
+*PartnersApi* | [**apiV1PartnersPartnerIdGet**](docs/PartnersApi.md#apiv1partnerspartneridget) | **GET** api/v1/partners/{partnerId} | Get partner.
+*PartnersApi* | [**apiV1PartnersPartnerIdPut**](docs/PartnersApi.md#apiv1partnerspartneridput) | **PUT** api/v1/partners/{partnerId} | Update partner.
+*PartnersApi* | [**apiV1PartnersPost**](docs/PartnersApi.md#apiv1partnerspost) | **POST** api/v1/partners | Create partner.
+*PatientsApi* | [**apiV1PatientsGet**](docs/PatientsApi.md#apiv1patientsget) | **GET** api/v1/patients | Get all patients.
+*PatientsApi* | [**apiV1PatientsPatientIdDelete**](docs/PatientsApi.md#apiv1patientspatientiddelete) | **DELETE** api/v1/patients/{patientId} | Delete patient.
+*PatientsApi* | [**apiV1PatientsPatientIdGet**](docs/PatientsApi.md#apiv1patientspatientidget) | **GET** api/v1/patients/{patientId} | Get patient.
+*PatientsApi* | [**apiV1PatientsPatientIdPut**](docs/PatientsApi.md#apiv1patientspatientidput) | **PUT** api/v1/patients/{patientId} | Update patient.
+*PatientsApi* | [**apiV1PatientsPost**](docs/PatientsApi.md#apiv1patientspost) | **POST** api/v1/patients | Create patient.
+*ProfilesApi* | [**apiV1ProfilesChangeemailPost**](docs/ProfilesApi.md#apiv1profileschangeemailpost) | **POST** api/v1/profiles/changeemail | Change user's email on both Identity and Api.
+*ProfilesApi* | [**apiV1ProfilesConfirmemailPost**](docs/ProfilesApi.md#apiv1profilesconfirmemailpost) | **POST** api/v1/profiles/confirmemail | 
+*ProfilesApi* | [**apiV1ProfilesGet**](docs/ProfilesApi.md#apiv1profilesget) | **GET** api/v1/profiles | Get current user's profile.
+*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsGet**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsget) | **GET** api/v1/questions/{questionId}/questioncomments | Get all questionComment.
+*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsPost**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentspost) | **POST** api/v1/questions/{questionId}/questioncomments | Create an questionComment.
+*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdDelete**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsquestioncommentiddelete) | **DELETE** api/v1/questions/{questionId}/questioncomments/{questionCommentId} | Delete questionComment.
+*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdGet**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsquestioncommentidget) | **GET** api/v1/questions/{questionId}/questioncomments/{questionCommentId} | Get questionComment.
+*QuestionCommentsApi* | [**apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdPut**](docs/QuestionCommentsApi.md#apiv1questionsquestionidquestioncommentsquestioncommentidput) | **PUT** api/v1/questions/{questionId}/questioncomments/{questionCommentId} | Update questionComment.
+*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsPost**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionspost) | **POST** api/v1/hospitals/{hospitalId}/questions | Create an question.
+*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdDelete**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestioniddelete) | **DELETE** api/v1/hospitals/{hospitalId}/questions/{questionId} | Delete question.
+*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdGet**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidget) | **GET** api/v1/hospitals/{hospitalId}/questions/{questionId} | Get question.
+*QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdPut**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidput) | **PUT** api/v1/hospitals/{hospitalId}/questions/{questionId} | Update question.
+*QuestionsApi* | [**apiV1HospitalsQuestionsGet**](docs/QuestionsApi.md#apiv1hospitalsquestionsget) | **GET** api/v1/hospitals/questions | Get all questions.
+*SearchApi* | [**apiV1SearchDealsGet**](docs/SearchApi.md#apiv1searchdealsget) | **GET** api/v1/search/deals | 
+*SearchApi* | [**apiV1SearchDoctorsGet**](docs/SearchApi.md#apiv1searchdoctorsget) | **GET** api/v1/search/doctors | 
+*SearchApi* | [**apiV1SearchGetcountGet**](docs/SearchApi.md#apiv1searchgetcountget) | **GET** api/v1/search/getcount | 
+*SearchApi* | [**apiV1SearchHospitalsGet**](docs/SearchApi.md#apiv1searchhospitalsget) | **GET** api/v1/search/hospitals | 
+*SearchApi* | [**apiV1SearchSpecialtiesGet**](docs/SearchApi.md#apiv1searchspecialtiesget) | **GET** api/v1/search/specialties | 
+*SearchApi* | [**apiV1SearchSpecialtytypesGet**](docs/SearchApi.md#apiv1searchspecialtytypesget) | **GET** api/v1/search/specialtytypes | 
+*ServiceCategoriesApi* | [**apiV1ServicecategoriesGet**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesget) | **GET** api/v1/servicecategories | Get all ServiceCategories.
+*ServiceCategoriesApi* | [**apiV1ServicecategoriesPost**](docs/ServiceCategoriesApi.md#apiv1servicecategoriespost) | **POST** api/v1/servicecategories | Create ServiceCategory.
+*ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdDelete**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryiddelete) | **DELETE** api/v1/servicecategories/{serviceCategoryId} | Delete ServiceCategory.
+*ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdGet**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryidget) | **GET** api/v1/servicecategories/{serviceCategoryId} | Get ServiceCategory.
+*ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdPut**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryidput) | **PUT** api/v1/servicecategories/{serviceCategoryId} | Update ServiceCategory
+*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicespost) | **POST** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services | Create service.
+*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesserviceiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Delete service.
+*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesserviceidget) | **GET** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Get service.
+*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesserviceidput) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Update service.
+*ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesquenceput) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence | Update service sequence.
+*ServicesApi* | [**apiV1HospitalsServicesGet**](docs/ServicesApi.md#apiv1hospitalsservicesget) | **GET** api/v1/hospitals/services | Get all services.
+*SpecialtiesApi* | [**apiV1SpecialtiesGet**](docs/SpecialtiesApi.md#apiv1specialtiesget) | **GET** api/v1/specialties | Get all specialties.
+*SpecialtiesApi* | [**apiV1SpecialtiesPost**](docs/SpecialtiesApi.md#apiv1specialtiespost) | **POST** api/v1/specialties | Create specialty.
+*SpecialtiesApi* | [**apiV1SpecialtiesSlugsSlugGet**](docs/SpecialtiesApi.md#apiv1specialtiesslugsslugget) | **GET** api/v1/specialties/slugs/{slug} | Get specialty by slug.
+*SpecialtiesApi* | [**apiV1SpecialtiesSpecialtyIdDelete**](docs/SpecialtiesApi.md#apiv1specialtiesspecialtyiddelete) | **DELETE** api/v1/specialties/{specialtyId} | Delete specialty.
+*SpecialtiesApi* | [**apiV1SpecialtiesSpecialtyIdGet**](docs/SpecialtiesApi.md#apiv1specialtiesspecialtyidget) | **GET** api/v1/specialties/{specialtyId} | Get specialty.
+*SpecialtiesApi* | [**apiV1SpecialtiesSpecialtyIdPut**](docs/SpecialtiesApi.md#apiv1specialtiesspecialtyidput) | **PUT** api/v1/specialties/{specialtyId} | Update specialty
+*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesGet**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesget) | **GET** api/v1/specialtytypecategories | Get all SpecialtyTypeCategories.
+*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesPost**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriespost) | **POST** api/v1/specialtytypecategories | Create specialtyTypeCategory.
+*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdDelete**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesspecialtytypecategoryiddelete) | **DELETE** api/v1/specialtytypecategories/{specialtyTypeCategoryId} | Delete specialtyTypeCategory.
+*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesspecialtytypecategoryidget) | **GET** api/v1/specialtytypecategories/{specialtyTypeCategoryId} | Get specialtyTypeCategory.
+*SpecialtyTypeCategoriesApi* | [**apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdPut**](docs/SpecialtyTypeCategoriesApi.md#apiv1specialtytypecategoriesspecialtytypecategoryidput) | **PUT** api/v1/specialtytypecategories/{specialtyTypeCategoryId} | Update specialtyTypeCategory
+*SpecialtyTypesApi* | [**apiV1SpecialtytypesGet**](docs/SpecialtyTypesApi.md#apiv1specialtytypesget) | **GET** api/v1/specialtytypes | Get all SpecialtyTypes.
+*SpecialtyTypesApi* | [**apiV1SpecialtytypesPost**](docs/SpecialtyTypesApi.md#apiv1specialtytypespost) | **POST** api/v1/specialtytypes | Create specialtyType.
+*SpecialtyTypesApi* | [**apiV1SpecialtytypesSlugsSlugGet**](docs/SpecialtyTypesApi.md#apiv1specialtytypesslugsslugget) | **GET** api/v1/specialtytypes/slugs/{slug} | Get specialtyType by slug.
+*SpecialtyTypesApi* | [**apiV1SpecialtytypesSpecialtyTypeIdDelete**](docs/SpecialtyTypesApi.md#apiv1specialtytypesspecialtytypeiddelete) | **DELETE** api/v1/specialtytypes/{specialtyTypeId} | Delete specialtyType.
+*SpecialtyTypesApi* | [**apiV1SpecialtytypesSpecialtyTypeIdGet**](docs/SpecialtyTypesApi.md#apiv1specialtytypesspecialtytypeidget) | **GET** api/v1/specialtytypes/{specialtyTypeId} | Get specialtyType.
+*SpecialtyTypesApi* | [**apiV1SpecialtytypesSpecialtyTypeIdPut**](docs/SpecialtyTypesApi.md#apiv1specialtytypesspecialtytypeidput) | **PUT** api/v1/specialtytypes/{specialtyTypeId} | Update specialtyType
+*YoutubesApi* | [**apiV1YoutubesGet**](docs/YoutubesApi.md#apiv1youtubesget) | **GET** api/v1/youtubes | Get all youtubes.
+*YoutubesApi* | [**apiV1YoutubesPost**](docs/YoutubesApi.md#apiv1youtubespost) | **POST** api/v1/youtubes | Create an youtube.
+*YoutubesApi* | [**apiV1YoutubesSlugsSlugGet**](docs/YoutubesApi.md#apiv1youtubesslugsslugget) | **GET** api/v1/youtubes/slugs/{slug} | Get youtube by slug.
+*YoutubesApi* | [**apiV1YoutubesYoutubeIdDelete**](docs/YoutubesApi.md#apiv1youtubesyoutubeiddelete) | **DELETE** api/v1/youtubes/{youtubeId} | Delete youtube.
+*YoutubesApi* | [**apiV1YoutubesYoutubeIdGet**](docs/YoutubesApi.md#apiv1youtubesyoutubeidget) | **GET** api/v1/youtubes/{youtubeId} | Get youtube.
+*YoutubesApi* | [**apiV1YoutubesYoutubeIdPut**](docs/YoutubesApi.md#apiv1youtubesyoutubeidput) | **PUT** api/v1/youtubes/{youtubeId} | Update youtube.
 
 
 <a name="documentation-for-models"></a>

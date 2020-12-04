@@ -4,16 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1ChadminsChAdminIdDelete**](CHAdminsApi.md#apiV1ChadminsChAdminIdDelete) | **DELETE** /api/v1/chadmins/{chAdminId} | Delete cloud hospital admin user.
-[**apiV1ChadminsChAdminIdGet**](CHAdminsApi.md#apiV1ChadminsChAdminIdGet) | **GET** /api/v1/chadmins/{chAdminId} | Get cloud hospital admin user by id.
-[**apiV1ChadminsChAdminIdPut**](CHAdminsApi.md#apiV1ChadminsChAdminIdPut) | **PUT** /api/v1/chadmins/{chAdminId} | Update cloud hospital admin user.
-[**apiV1ChadminsGet**](CHAdminsApi.md#apiV1ChadminsGet) | **GET** /api/v1/chadmins | Get cloud hospital admin users.
-[**apiV1ChadminsPost**](CHAdminsApi.md#apiV1ChadminsPost) | **POST** /api/v1/chadmins | Create cloud hospital admin user.
+[**apiV1ChadminsChAdminIdDelete**](CHAdminsApi.md#apiV1ChadminsChAdminIdDelete) | **DELETE** api/v1/chadmins/{chAdminId} | Delete cloud hospital admin user.
+[**apiV1ChadminsChAdminIdGet**](CHAdminsApi.md#apiV1ChadminsChAdminIdGet) | **GET** api/v1/chadmins/{chAdminId} | Get cloud hospital admin user by id.
+[**apiV1ChadminsChAdminIdPut**](CHAdminsApi.md#apiV1ChadminsChAdminIdPut) | **PUT** api/v1/chadmins/{chAdminId} | Update cloud hospital admin user.
+[**apiV1ChadminsGet**](CHAdminsApi.md#apiV1ChadminsGet) | **GET** api/v1/chadmins | Get cloud hospital admin users.
+[**apiV1ChadminsPost**](CHAdminsApi.md#apiV1ChadminsPost) | **POST** api/v1/chadmins | Create cloud hospital admin user.
 
 
-<a name="apiV1ChadminsChAdminIdDelete"></a>
-# **apiV1ChadminsChAdminIdDelete**
-> kotlin.Boolean apiV1ChadminsChAdminIdDelete(chAdminId)
 
 Delete cloud hospital admin user.
 
@@ -22,21 +19,15 @@ Sample request:        DELETE /api/v1/chadmins/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHAdminsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val chAdminId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1ChadminsChAdminIdDelete(chAdminId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHAdminsApi#apiV1ChadminsChAdminIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHAdminsApi#apiV1ChadminsChAdminIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1ChadminsChAdminIdDelete(chAdminId)
 ```
 
 ### Parameters
@@ -52,17 +43,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChadminsChAdminIdGet"></a>
-# **apiV1ChadminsChAdminIdGet**
-> CHAdminViewModel apiV1ChadminsChAdminIdGet(chAdminId)
 
 Get cloud hospital admin user by id.
 
@@ -71,21 +57,15 @@ Sample request:        GET /api/v1/chadmins/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHAdminsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val chAdminId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : CHAdminViewModel = apiInstance.apiV1ChadminsChAdminIdGet(chAdminId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHAdminsApi#apiV1ChadminsChAdminIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHAdminsApi#apiV1ChadminsChAdminIdGet")
-    e.printStackTrace()
-}
+
+val result : CHAdminViewModel = webService.apiV1ChadminsChAdminIdGet(chAdminId)
 ```
 
 ### Parameters
@@ -101,17 +81,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChadminsChAdminIdPut"></a>
-# **apiV1ChadminsChAdminIdPut**
-> kotlin.Boolean apiV1ChadminsChAdminIdPut(chAdminId, updateCHAdminCommand)
 
 Update cloud hospital admin user.
 
@@ -120,22 +95,16 @@ Sample request:        PUT /api/v1/chadmins/1      {          \&quot;email\&quot
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHAdminsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val chAdminId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateCHAdminCommand : UpdateCHAdminCommand =  // UpdateCHAdminCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1ChadminsChAdminIdPut(chAdminId, updateCHAdminCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHAdminsApi#apiV1ChadminsChAdminIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHAdminsApi#apiV1ChadminsChAdminIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1ChadminsChAdminIdPut(chAdminId, updateCHAdminCommand)
 ```
 
 ### Parameters
@@ -152,17 +121,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChadminsGet"></a>
-# **apiV1ChadminsGet**
-> CHAdminsViewModel apiV1ChadminsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 
 Get cloud hospital admin users.
 
@@ -171,10 +135,12 @@ Sample request:        GET /api/v1/chadmin      {          \&quot;pageQueryFilte
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHAdminsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
@@ -185,16 +151,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : CHAdminsViewModel = apiInstance.apiV1ChadminsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHAdminsApi#apiV1ChadminsGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHAdminsApi#apiV1ChadminsGet")
-    e.printStackTrace()
-}
+
+val result : CHAdminsViewModel = webService.apiV1ChadminsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -219,17 +177,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1ChadminsPost"></a>
-# **apiV1ChadminsPost**
-> java.util.UUID apiV1ChadminsPost(createCHAdminCommand)
 
 Create cloud hospital admin user.
 
@@ -238,21 +191,15 @@ Sample request:        POST /api/v1/chadmins      {          \&quot;firstName\&q
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = CHAdminsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val createCHAdminCommand : CreateCHAdminCommand =  // CreateCHAdminCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1ChadminsPost(createCHAdminCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CHAdminsApi#apiV1ChadminsPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CHAdminsApi#apiV1ChadminsPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1ChadminsPost(createCHAdminCommand)
 ```
 
 ### Parameters
@@ -268,8 +215,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 

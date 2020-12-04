@@ -4,16 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1PatientsGet**](PatientsApi.md#apiV1PatientsGet) | **GET** /api/v1/patients | Get all patients.
-[**apiV1PatientsPatientIdDelete**](PatientsApi.md#apiV1PatientsPatientIdDelete) | **DELETE** /api/v1/patients/{patientId} | Delete patient.
-[**apiV1PatientsPatientIdGet**](PatientsApi.md#apiV1PatientsPatientIdGet) | **GET** /api/v1/patients/{patientId} | Get patient.
-[**apiV1PatientsPatientIdPut**](PatientsApi.md#apiV1PatientsPatientIdPut) | **PUT** /api/v1/patients/{patientId} | Update patient.
-[**apiV1PatientsPost**](PatientsApi.md#apiV1PatientsPost) | **POST** /api/v1/patients | Create patient.
+[**apiV1PatientsGet**](PatientsApi.md#apiV1PatientsGet) | **GET** api/v1/patients | Get all patients.
+[**apiV1PatientsPatientIdDelete**](PatientsApi.md#apiV1PatientsPatientIdDelete) | **DELETE** api/v1/patients/{patientId} | Delete patient.
+[**apiV1PatientsPatientIdGet**](PatientsApi.md#apiV1PatientsPatientIdGet) | **GET** api/v1/patients/{patientId} | Get patient.
+[**apiV1PatientsPatientIdPut**](PatientsApi.md#apiV1PatientsPatientIdPut) | **PUT** api/v1/patients/{patientId} | Update patient.
+[**apiV1PatientsPost**](PatientsApi.md#apiV1PatientsPost) | **POST** api/v1/patients | Create patient.
 
 
-<a name="apiV1PatientsGet"></a>
-# **apiV1PatientsGet**
-> PatientsViewModel apiV1PatientsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 
 Get all patients.
 
@@ -22,10 +19,12 @@ Sample request:        GET /api/v1/patients      {          \&quot;pageQueryFilt
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = PatientsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(PatientsApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
@@ -36,16 +35,8 @@ val page : kotlin.Int = 56 // kotlin.Int |
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
-try {
-    val result : PatientsViewModel = apiInstance.apiV1PatientsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling PatientsApi#apiV1PatientsGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling PatientsApi#apiV1PatientsGet")
-    e.printStackTrace()
-}
+
+val result : PatientsViewModel = webService.apiV1PatientsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -70,17 +61,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1PatientsPatientIdDelete"></a>
-# **apiV1PatientsPatientIdDelete**
-> kotlin.Boolean apiV1PatientsPatientIdDelete(patientId)
 
 Delete patient.
 
@@ -89,21 +75,15 @@ Sample request:        DELETE /api/v1/patients/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = PatientsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(PatientsApi::class.java)
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1PatientsPatientIdDelete(patientId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling PatientsApi#apiV1PatientsPatientIdDelete")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling PatientsApi#apiV1PatientsPatientIdDelete")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1PatientsPatientIdDelete(patientId)
 ```
 
 ### Parameters
@@ -119,17 +99,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1PatientsPatientIdGet"></a>
-# **apiV1PatientsPatientIdGet**
-> PatientViewModel apiV1PatientsPatientIdGet(patientId)
 
 Get patient.
 
@@ -138,21 +113,15 @@ Sample request:        GET /api/v1/patients/1
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = PatientsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(PatientsApi::class.java)
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-try {
-    val result : PatientViewModel = apiInstance.apiV1PatientsPatientIdGet(patientId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling PatientsApi#apiV1PatientsPatientIdGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling PatientsApi#apiV1PatientsPatientIdGet")
-    e.printStackTrace()
-}
+
+val result : PatientViewModel = webService.apiV1PatientsPatientIdGet(patientId)
 ```
 
 ### Parameters
@@ -168,17 +137,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1PatientsPatientIdPut"></a>
-# **apiV1PatientsPatientIdPut**
-> kotlin.Boolean apiV1PatientsPatientIdPut(patientId, updatePatientCommand)
 
 Update patient.
 
@@ -187,22 +151,16 @@ Sample request:        PUT /api/v1/patients/1      {          \&quot;referralCod
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = PatientsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(PatientsApi::class.java)
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updatePatientCommand : UpdatePatientCommand =  // UpdatePatientCommand | 
-try {
-    val result : kotlin.Boolean = apiInstance.apiV1PatientsPatientIdPut(patientId, updatePatientCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling PatientsApi#apiV1PatientsPatientIdPut")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling PatientsApi#apiV1PatientsPatientIdPut")
-    e.printStackTrace()
-}
+
+val result : kotlin.Boolean = webService.apiV1PatientsPatientIdPut(patientId, updatePatientCommand)
 ```
 
 ### Parameters
@@ -219,17 +177,12 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
-<a name="apiV1PatientsPost"></a>
-# **apiV1PatientsPost**
-> java.util.UUID apiV1PatientsPost(createPatientCommand)
 
 Create patient.
 
@@ -238,21 +191,15 @@ Sample request:        POST /api/v1/patients      {          \&quot;referralCode
 ### Example
 ```kotlin
 // Import classes:
+//import org.openapitools.client.*
 //import org.openapitools.client.infrastructure.*
 //import org.openapitools.client.models.*
 
-val apiInstance = PatientsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(PatientsApi::class.java)
 val createPatientCommand : CreatePatientCommand =  // CreatePatientCommand | 
-try {
-    val result : java.util.UUID = apiInstance.apiV1PatientsPost(createPatientCommand)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling PatientsApi#apiV1PatientsPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling PatientsApi#apiV1PatientsPost")
-    e.printStackTrace()
-}
+
+val result : java.util.UUID = webService.apiV1PatientsPost(createPatientCommand)
 ```
 
 ### Parameters
@@ -268,8 +215,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 
-Configure oauth2:
-    ApiClient.accessToken = ""
 
 ### HTTP request headers
 

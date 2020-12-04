@@ -22,6 +22,7 @@ import com.google.gson.annotations.SerializedName
  * @param name 
  * @param slug 
  * @param description 
+ * @param content 
  * @param hospitalsCount 
  * @param doctorsCount 
  * @param specialitiesCount 
@@ -40,6 +41,8 @@ data class CountryViewModel (
     val slug: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("content")
+    val content: kotlin.String? = null,
     @SerializedName("hospitalsCount")
     val hospitalsCount: kotlin.Int? = null,
     @SerializedName("doctorsCount")

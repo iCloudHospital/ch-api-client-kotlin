@@ -24,6 +24,7 @@ import com.google.gson.annotations.SerializedName
  * @param normalizedName 
  * @param slug 
  * @param description 
+ * @param content 
  * @param hospitals 
  * @param medias 
  * @param auditableEntity 
@@ -40,6 +41,8 @@ data class Country (
     val slug: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("content")
+    val content: kotlin.String? = null,
     @SerializedName("hospitals")
     val hospitals: kotlin.collections.List<Hospital>? = null,
     @SerializedName("medias")
