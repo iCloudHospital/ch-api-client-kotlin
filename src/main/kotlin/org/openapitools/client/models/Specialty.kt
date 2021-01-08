@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.DoctorSpecialty
 import org.openapitools.client.models.HospitalSpecialty
+import org.openapitools.client.models.Media
 import org.openapitools.client.models.SpecialtyType
 
 import com.google.gson.annotations.SerializedName
@@ -30,6 +31,7 @@ import com.google.gson.annotations.SerializedName
  * @param specialtyType 
  * @param hospitalSpecialties 
  * @param doctorSpecialties 
+ * @param medias 
  * @param auditableEntity 
  */
 
@@ -54,6 +56,8 @@ data class Specialty (
     val hospitalSpecialties: kotlin.collections.List<HospitalSpecialty>? = null,
     @SerializedName("doctorSpecialties")
     val doctorSpecialties: kotlin.collections.List<DoctorSpecialty>? = null,
+    @SerializedName("medias")
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

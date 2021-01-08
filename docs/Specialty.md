@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **specialtyType** | [**SpecialtyType**](SpecialtyType.md) |  |  [optional]
 **hospitalSpecialties** | [**kotlin.collections.List&lt;HospitalSpecialty&gt;**](HospitalSpecialty.md) |  |  [optional]
 **doctorSpecialties** | [**kotlin.collections.List&lt;DoctorSpecialty&gt;**](DoctorSpecialty.md) |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

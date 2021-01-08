@@ -35,6 +35,7 @@ docs/CHManagersViewModel.md
 docs/ChangeEmailCommand.md
 docs/ChangeLog.md
 docs/ChargeStatus.md
+docs/CheckNotificationsCommand.md
 docs/CommunicationUserTokenModel.md
 docs/CommunicationsApi.md
 docs/ConfirmEmailCommand.md
@@ -173,6 +174,10 @@ docs/MediaSearchViewModel.md
 docs/MediaType.md
 docs/MediaViewModel.md
 docs/MoviesApi.md
+docs/NotificationCode.md
+docs/NotificationViewModel.md
+docs/NotificationsApi.md
+docs/NotificationsViewModel.md
 docs/PagedListMetaData.md
 docs/PartnerItemViewModel.md
 docs/PartnerViewModel.md
@@ -308,6 +313,7 @@ src/main/kotlin/org/openapitools/client/apis/IdentityApi.kt
 src/main/kotlin/org/openapitools/client/apis/ImagesApi.kt
 src/main/kotlin/org/openapitools/client/apis/ManagersApi.kt
 src/main/kotlin/org/openapitools/client/apis/MoviesApi.kt
+src/main/kotlin/org/openapitools/client/apis/NotificationsApi.kt
 src/main/kotlin/org/openapitools/client/apis/PartnersApi.kt
 src/main/kotlin/org/openapitools/client/apis/PatientsApi.kt
 src/main/kotlin/org/openapitools/client/apis/ProfilesApi.kt
@@ -363,6 +369,7 @@ src/main/kotlin/org/openapitools/client/models/CHManagersViewModel.kt
 src/main/kotlin/org/openapitools/client/models/ChangeEmailCommand.kt
 src/main/kotlin/org/openapitools/client/models/ChangeLog.kt
 src/main/kotlin/org/openapitools/client/models/ChargeStatus.kt
+src/main/kotlin/org/openapitools/client/models/CheckNotificationsCommand.kt
 src/main/kotlin/org/openapitools/client/models/CommunicationUserTokenModel.kt
 src/main/kotlin/org/openapitools/client/models/ConfirmEmailCommand.kt
 src/main/kotlin/org/openapitools/client/models/Consultation.kt
@@ -482,6 +489,9 @@ src/main/kotlin/org/openapitools/client/models/Media.kt
 src/main/kotlin/org/openapitools/client/models/MediaSearchViewModel.kt
 src/main/kotlin/org/openapitools/client/models/MediaType.kt
 src/main/kotlin/org/openapitools/client/models/MediaViewModel.kt
+src/main/kotlin/org/openapitools/client/models/NotificationCode.kt
+src/main/kotlin/org/openapitools/client/models/NotificationViewModel.kt
+src/main/kotlin/org/openapitools/client/models/NotificationsViewModel.kt
 src/main/kotlin/org/openapitools/client/models/PagedListMetaData.kt
 src/main/kotlin/org/openapitools/client/models/PartnerItemViewModel.kt
 src/main/kotlin/org/openapitools/client/models/PartnerViewModel.kt

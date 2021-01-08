@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **specialtyTypeCategoryId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **specialties** | [**kotlin.collections.List&lt;Specialty&gt;**](Specialty.md) |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

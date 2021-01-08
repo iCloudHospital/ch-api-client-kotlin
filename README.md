@@ -150,6 +150,8 @@ Class | Method | HTTP request | Description
 *ManagersApi* | [**apiV1ManagersManagerIdPut**](docs/ManagersApi.md#apiv1managersmanageridput) | **PUT** api/v1/managers/{managerId} | Update hospital manager.
 *ManagersApi* | [**apiV1ManagersPost**](docs/ManagersApi.md#apiv1managerspost) | **POST** api/v1/managers | Create hospital manager.
 *MoviesApi* | [**apiV1MoviesPost**](docs/MoviesApi.md#apiv1moviespost) | **POST** api/v1/movies | 
+*NotificationsApi* | [**apiV1NotificationsCheckPost**](docs/NotificationsApi.md#apiv1notificationscheckpost) | **POST** api/v1/notifications/check | Check notification.
+*NotificationsApi* | [**apiV1NotificationsGet**](docs/NotificationsApi.md#apiv1notificationsget) | **GET** api/v1/notifications | Get all notifications.
 *PartnersApi* | [**apiV1PartnersGet**](docs/PartnersApi.md#apiv1partnersget) | **GET** api/v1/partners | Get all partners.
 *PartnersApi* | [**apiV1PartnersPartnerIdDelete**](docs/PartnersApi.md#apiv1partnerspartneriddelete) | **DELETE** api/v1/partners/{partnerId} | Delete patner.
 *PartnersApi* | [**apiV1PartnersPartnerIdGet**](docs/PartnersApi.md#apiv1partnerspartneridget) | **GET** api/v1/partners/{partnerId} | Get partner.
@@ -248,6 +250,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.ChangeEmailCommand](docs/ChangeEmailCommand.md)
  - [org.openapitools.client.models.ChangeLog](docs/ChangeLog.md)
  - [org.openapitools.client.models.ChargeStatus](docs/ChargeStatus.md)
+ - [org.openapitools.client.models.CheckNotificationsCommand](docs/CheckNotificationsCommand.md)
  - [org.openapitools.client.models.CommunicationUserTokenModel](docs/CommunicationUserTokenModel.md)
  - [org.openapitools.client.models.ConfirmEmailCommand](docs/ConfirmEmailCommand.md)
  - [org.openapitools.client.models.Consultation](docs/Consultation.md)
@@ -367,6 +370,9 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.MediaSearchViewModel](docs/MediaSearchViewModel.md)
  - [org.openapitools.client.models.MediaType](docs/MediaType.md)
  - [org.openapitools.client.models.MediaViewModel](docs/MediaViewModel.md)
+ - [org.openapitools.client.models.NotificationCode](docs/NotificationCode.md)
+ - [org.openapitools.client.models.NotificationViewModel](docs/NotificationViewModel.md)
+ - [org.openapitools.client.models.NotificationsViewModel](docs/NotificationsViewModel.md)
  - [org.openapitools.client.models.PagedListMetaData](docs/PagedListMetaData.md)
  - [org.openapitools.client.models.PartnerItemViewModel](docs/PartnerItemViewModel.md)
  - [org.openapitools.client.models.PartnerViewModel](docs/PartnerViewModel.md)
