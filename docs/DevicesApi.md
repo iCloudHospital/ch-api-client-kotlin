@@ -5,10 +5,11 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV1DevicesDeviceIdDelete**](DevicesApi.md#apiV1DevicesDeviceIdDelete) | **DELETE** api/v1/devices/{deviceId} | Delete device.
-[**apiV1DevicesDeviceIdGet**](DevicesApi.md#apiV1DevicesDeviceIdGet) | **GET** api/v1/devices/{deviceId} | Get device.
 [**apiV1DevicesDeviceIdLoginsPost**](DevicesApi.md#apiV1DevicesDeviceIdLoginsPost) | **POST** api/v1/devices/{deviceId}/logins | Create device login.
 [**apiV1DevicesDeviceIdPut**](DevicesApi.md#apiV1DevicesDeviceIdPut) | **PUT** api/v1/devices/{deviceId} | Update device.
+[**apiV1DevicesGet**](DevicesApi.md#apiV1DevicesGet) | **GET** api/v1/devices | Get all devices.
 [**apiV1DevicesPost**](DevicesApi.md#apiV1DevicesPost) | **POST** api/v1/devices | Create device.
+[**apiV1DevicesTokenGet**](DevicesApi.md#apiV1DevicesTokenGet) | **GET** api/v1/devices/{token} | Get device.
 
 
 
@@ -37,42 +38,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Get device.
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(DevicesApi::class.java)
-val deviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-val result : DeviceViewModel = webService.apiV1DevicesDeviceIdGet(deviceId)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **deviceId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-[**DeviceViewModel**](DeviceViewModel.md)
 
 ### Authorization
 
@@ -160,6 +125,60 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 
+Get all devices.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DevicesApi::class.java)
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val token : kotlin.String = token_example // kotlin.String | 
+val platform : Platform =  // Platform | 
+val appAlert : kotlin.Boolean = true // kotlin.Boolean | 
+val eventAlert : kotlin.Boolean = true // kotlin.Boolean | 
+val noticeAlert : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val current : kotlin.Boolean = true // kotlin.Boolean | 
+
+val result : DevicesViewModel = webService.apiV1DevicesGet(id, token, platform, appAlert, eventAlert, noticeAlert, page, limit, lastRetrieved, current)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **token** | **kotlin.String**|  | [optional]
+ **platform** | [**Platform**](.md)|  | [optional] [enum: Web, iOS, Android]
+ **appAlert** | **kotlin.Boolean**|  | [optional]
+ **eventAlert** | **kotlin.Boolean**|  | [optional]
+ **noticeAlert** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+ **current** | **kotlin.Boolean**|  | [optional]
+
+### Return type
+
+[**DevicesViewModel**](DevicesViewModel.md)
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
 Create device.
 
 ### Example
@@ -193,5 +212,41 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+
+Get device.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DevicesApi::class.java)
+val token : kotlin.String = token_example // kotlin.String | 
+
+val result : DeviceViewModel = webService.apiV1DevicesTokenGet(token)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **kotlin.String**|  |
+
+### Return type
+
+[**DeviceViewModel**](DeviceViewModel.md)
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 

@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**specialties** | [**kotlin.collections.List&lt;HospitalSpecialtyItemViewModel&gt;**](HospitalSpecialtyItemViewModel.md) |  |  [optional]
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]

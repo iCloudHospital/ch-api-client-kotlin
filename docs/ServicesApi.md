@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Update service.
 [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut**](ServicesApi.md#apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence | Update service sequence.
 [**apiV1HospitalsServicesGet**](ServicesApi.md#apiV1HospitalsServicesGet) | **GET** api/v1/hospitals/services | Get all services.
+[**apiV1HospitalsServicesSlugsSlugGet**](ServicesApi.md#apiV1HospitalsServicesSlugsSlugGet) | **GET** api/v1/hospitals/services/slugs/{slug} | Get service by slug.
 
 
 
@@ -282,6 +283,42 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ServicesViewModel**](ServicesViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+Get service by slug.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ServicesApi::class.java)
+val slug : kotlin.String = slug_example // kotlin.String | 
+
+val result : ServiceViewModel = webService.apiV1HospitalsServicesSlugsSlugGet(slug)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **slug** | **kotlin.String**|  |
+
+### Return type
+
+[**ServiceViewModel**](ServiceViewModel.md)
 
 ### Authorization
 

@@ -15,7 +15,6 @@ import org.openapitools.client.models.AccreditationViewModel
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.AwardViewModel
 import org.openapitools.client.models.HospitalEvaluationViewModel
-import org.openapitools.client.models.HospitalSpecialtyItemViewModel
 import org.openapitools.client.models.LocationViewModel
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
@@ -24,7 +23,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param specialties 
  * @param id 
  * @param name 
  * @param slug 
@@ -61,8 +59,6 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class HospitalViewModel (
-    @SerializedName("specialties")
-    val specialties: kotlin.collections.List<HospitalSpecialtyItemViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("name")

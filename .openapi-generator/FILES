@@ -100,9 +100,11 @@ docs/DepartmentItemViewModel.md
 docs/DepartmentViewModel.md
 docs/DepartmentsViewModel.md
 docs/Device.md
+docs/DeviceItemViewModel.md
 docs/DeviceLogin.md
 docs/DeviceViewModel.md
 docs/DevicesApi.md
+docs/DevicesViewModel.md
 docs/Doctor.md
 docs/DoctorAffiliation.md
 docs/DoctorAffiliationViewModel.md
@@ -428,8 +430,10 @@ src/main/kotlin/org/openapitools/client/models/DepartmentItemViewModel.kt
 src/main/kotlin/org/openapitools/client/models/DepartmentViewModel.kt
 src/main/kotlin/org/openapitools/client/models/DepartmentsViewModel.kt
 src/main/kotlin/org/openapitools/client/models/Device.kt
+src/main/kotlin/org/openapitools/client/models/DeviceItemViewModel.kt
 src/main/kotlin/org/openapitools/client/models/DeviceLogin.kt
 src/main/kotlin/org/openapitools/client/models/DeviceViewModel.kt
+src/main/kotlin/org/openapitools/client/models/DevicesViewModel.kt
 src/main/kotlin/org/openapitools/client/models/Doctor.kt
 src/main/kotlin/org/openapitools/client/models/DoctorAffiliation.kt
 src/main/kotlin/org/openapitools/client/models/DoctorAffiliationViewModel.kt

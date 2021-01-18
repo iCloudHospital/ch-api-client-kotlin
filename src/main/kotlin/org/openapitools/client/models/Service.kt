@@ -14,6 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.DealPackageService
 import org.openapitools.client.models.HospitalSpecialty
+import org.openapitools.client.models.Media
 import org.openapitools.client.models.Procedure
 
 import com.google.gson.annotations.SerializedName
@@ -25,6 +26,7 @@ import com.google.gson.annotations.SerializedName
  * @param normalizedName 
  * @param slug 
  * @param description 
+ * @param content 
  * @param normalizedDescription 
  * @param hospitalId 
  * @param specialtyId 
@@ -37,6 +39,7 @@ import com.google.gson.annotations.SerializedName
  * @param priceReuqest 
  * @param order 
  * @param dealPackageServices 
+ * @param medias 
  * @param auditableEntity 
  */
 
@@ -51,6 +54,8 @@ data class Service (
     val slug: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("content")
+    val content: kotlin.String? = null,
     @SerializedName("normalizedDescription")
     val normalizedDescription: kotlin.String? = null,
     @SerializedName("hospitalId")
@@ -75,6 +80,8 @@ data class Service (
     val order: kotlin.Int? = null,
     @SerializedName("dealPackageServices")
     val dealPackageServices: kotlin.collections.List<DealPackageService>? = null,
+    @SerializedName("medias")
+    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

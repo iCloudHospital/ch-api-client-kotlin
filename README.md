@@ -99,10 +99,11 @@ Class | Method | HTTP request | Description
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPost**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidpost) | **POST** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Create department.
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPut**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidput) | **PUT** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Update department.
 *DevicesApi* | [**apiV1DevicesDeviceIdDelete**](docs/DevicesApi.md#apiv1devicesdeviceiddelete) | **DELETE** api/v1/devices/{deviceId} | Delete device.
-*DevicesApi* | [**apiV1DevicesDeviceIdGet**](docs/DevicesApi.md#apiv1devicesdeviceidget) | **GET** api/v1/devices/{deviceId} | Get device.
 *DevicesApi* | [**apiV1DevicesDeviceIdLoginsPost**](docs/DevicesApi.md#apiv1devicesdeviceidloginspost) | **POST** api/v1/devices/{deviceId}/logins | Create device login.
 *DevicesApi* | [**apiV1DevicesDeviceIdPut**](docs/DevicesApi.md#apiv1devicesdeviceidput) | **PUT** api/v1/devices/{deviceId} | Update device.
+*DevicesApi* | [**apiV1DevicesGet**](docs/DevicesApi.md#apiv1devicesget) | **GET** api/v1/devices | Get all devices.
 *DevicesApi* | [**apiV1DevicesPost**](docs/DevicesApi.md#apiv1devicespost) | **POST** api/v1/devices | Create device.
+*DevicesApi* | [**apiV1DevicesTokenGet**](docs/DevicesApi.md#apiv1devicestokenget) | **GET** api/v1/devices/{token} | Get device.
 *DoctorCertificatesApi* | [**apiV1DoctorsCertificatesGet**](docs/DoctorCertificatesApi.md#apiv1doctorscertificatesget) | **GET** api/v1/doctors/certificates | Get all certificates.
 *DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdDelete**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateiddelete) | **DELETE** api/v1/doctors/{doctorId}/certificates/{certificateId} | Delete certificate.
 *DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateidget) | **GET** api/v1/doctors/{doctorId}/certificates/{certificateId} | Get certificate.
@@ -192,6 +193,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesserviceidput) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Update service.
 *ServicesApi* | [**apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut**](docs/ServicesApi.md#apiv1hospitalshospitalidspecialtiesspecialtyidservicesquenceput) | **PUT** api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence | Update service sequence.
 *ServicesApi* | [**apiV1HospitalsServicesGet**](docs/ServicesApi.md#apiv1hospitalsservicesget) | **GET** api/v1/hospitals/services | Get all services.
+*ServicesApi* | [**apiV1HospitalsServicesSlugsSlugGet**](docs/ServicesApi.md#apiv1hospitalsservicesslugsslugget) | **GET** api/v1/hospitals/services/slugs/{slug} | Get service by slug.
 *SpecialtiesApi* | [**apiV1SpecialtiesGet**](docs/SpecialtiesApi.md#apiv1specialtiesget) | **GET** api/v1/specialties | Get all specialties.
 *SpecialtiesApi* | [**apiV1SpecialtiesPost**](docs/SpecialtiesApi.md#apiv1specialtiespost) | **POST** api/v1/specialties | Create specialty.
 *SpecialtiesApi* | [**apiV1SpecialtiesSlugsSlugGet**](docs/SpecialtiesApi.md#apiv1specialtiesslugsslugget) | **GET** api/v1/specialties/slugs/{slug} | Get specialty by slug.
@@ -309,8 +311,10 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.DepartmentViewModel](docs/DepartmentViewModel.md)
  - [org.openapitools.client.models.DepartmentsViewModel](docs/DepartmentsViewModel.md)
  - [org.openapitools.client.models.Device](docs/Device.md)
+ - [org.openapitools.client.models.DeviceItemViewModel](docs/DeviceItemViewModel.md)
  - [org.openapitools.client.models.DeviceLogin](docs/DeviceLogin.md)
  - [org.openapitools.client.models.DeviceViewModel](docs/DeviceViewModel.md)
+ - [org.openapitools.client.models.DevicesViewModel](docs/DevicesViewModel.md)
  - [org.openapitools.client.models.Doctor](docs/Doctor.md)
  - [org.openapitools.client.models.DoctorAffiliation](docs/DoctorAffiliation.md)
  - [org.openapitools.client.models.DoctorAffiliationViewModel](docs/DoctorAffiliationViewModel.md)

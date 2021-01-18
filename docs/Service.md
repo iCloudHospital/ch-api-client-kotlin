@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **normalizedName** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
+**content** | **kotlin.String** |  |  [optional]
 **normalizedDescription** | **kotlin.String** |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **specialtyId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 **priceReuqest** | **kotlin.Boolean** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **dealPackageServices** | [**kotlin.collections.List&lt;DealPackageService&gt;**](DealPackageService.md) |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 
