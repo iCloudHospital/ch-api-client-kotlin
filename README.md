@@ -65,6 +65,11 @@ Class | Method | HTTP request | Description
 *CHManagersApi* | [**apiV1ChmanagersChManagerIdPut**](docs/CHManagersApi.md#apiv1chmanagerschmanageridput) | **PUT** api/v1/chmanagers/{chManagerId} | Update cloud hospital manager.
 *CHManagersApi* | [**apiV1ChmanagersGet**](docs/CHManagersApi.md#apiv1chmanagersget) | **GET** api/v1/chmanagers | Get cloud hospital managers.
 *CHManagersApi* | [**apiV1ChmanagersPost**](docs/CHManagersApi.md#apiv1chmanagerspost) | **POST** api/v1/chmanagers | Create cloud hospital manager.
+*ChatUsersApi* | [**apiV1ChatusersCurrentGet**](docs/ChatUsersApi.md#apiv1chatuserscurrentget) | **GET** api/v1/chatusers/current | 
+*ChatUsersApi* | [**apiV1ChatusersCurrentPost**](docs/ChatUsersApi.md#apiv1chatuserscurrentpost) | **POST** api/v1/chatusers/current | 
+*ChatUsersApi* | [**apiV1ChatusersDelete**](docs/ChatUsersApi.md#apiv1chatusersdelete) | **DELETE** api/v1/chatusers | 
+*ChatUsersApi* | [**apiV1ChatusersPut**](docs/ChatUsersApi.md#apiv1chatusersput) | **PUT** api/v1/chatusers | 
+*ChatUsersApi* | [**apiV1ChatusersUserIdGet**](docs/ChatUsersApi.md#apiv1chatusersuseridget) | **GET** api/v1/chatusers/{userId} | 
 *CommunicationsApi* | [**apiV1CommunicationsDelete**](docs/CommunicationsApi.md#apiv1communicationsdelete) | **DELETE** api/v1/communications | 
 *CommunicationsApi* | [**apiV1CommunicationsGet**](docs/CommunicationsApi.md#apiv1communicationsget) | **GET** api/v1/communications | 
 *CommunicationsApi* | [**apiV1CommunicationsPut**](docs/CommunicationsApi.md#apiv1communicationsput) | **PUT** api/v1/communications | 
@@ -127,6 +132,11 @@ Class | Method | HTTP request | Description
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidget) | **GET** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidput) | **PUT** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsPost**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentspost) | **POST** api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
+*GroupChannelsApi* | [**apiV1GroupchannelsChannelUrlInvitePost**](docs/GroupChannelsApi.md#apiv1groupchannelschannelurlinvitepost) | **POST** api/v1/groupchannels/{channelUrl}/invite | 
+*GroupChannelsApi* | [**apiV1GroupchannelsDealDealIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelsdealdealidpost) | **POST** api/v1/groupchannels/deal/{dealId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsDealIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdealidget) | **GET** api/v1/groupchannels/{dealId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsDoctorDoctorIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelsdoctordoctoridpost) | **POST** api/v1/groupchannels/doctor/{doctorId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsHospitalHospitalIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelshospitalhospitalidpost) | **POST** api/v1/groupchannels/hospital/{hospitalId} | 
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdDelete**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Delete review.
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdGet**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidget) | **GET** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Get review.
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdPut**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidput) | **PUT** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Update review.
@@ -225,6 +235,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.Account](docs/Account.md)
  - [org.openapitools.client.models.Accreditation](docs/Accreditation.md)
  - [org.openapitools.client.models.AccreditationViewModel](docs/AccreditationViewModel.md)
+ - [org.openapitools.client.models.AdminMessageViewModel](docs/AdminMessageViewModel.md)
  - [org.openapitools.client.models.ApproveBookingCommand](docs/ApproveBookingCommand.md)
  - [org.openapitools.client.models.ApproveConsultationCommand](docs/ApproveConsultationCommand.md)
  - [org.openapitools.client.models.Article](docs/Article.md)
@@ -287,6 +298,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.CreatePatientCommand](docs/CreatePatientCommand.md)
  - [org.openapitools.client.models.CreateQuestionCommand](docs/CreateQuestionCommand.md)
  - [org.openapitools.client.models.CreateQuestionCommentCommand](docs/CreateQuestionCommentCommand.md)
+ - [org.openapitools.client.models.CreateSendBirdCurrentUserCommand](docs/CreateSendBirdCurrentUserCommand.md)
  - [org.openapitools.client.models.CreateServiceCategoryCommand](docs/CreateServiceCategoryCommand.md)
  - [org.openapitools.client.models.CreateServiceCommand](docs/CreateServiceCommand.md)
  - [org.openapitools.client.models.CreateSpecialtyCommand](docs/CreateSpecialtyCommand.md)
@@ -362,6 +374,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.HospitalSpecialtyViewModel](docs/HospitalSpecialtyViewModel.md)
  - [org.openapitools.client.models.HospitalViewModel](docs/HospitalViewModel.md)
  - [org.openapitools.client.models.HospitalsViewModel](docs/HospitalsViewModel.md)
+ - [org.openapitools.client.models.InviteSendBirdGroupChannelCommand](docs/InviteSendBirdGroupChannelCommand.md)
  - [org.openapitools.client.models.Location](docs/Location.md)
  - [org.openapitools.client.models.LocationViewModel](docs/LocationViewModel.md)
  - [org.openapitools.client.models.Manager](docs/Manager.md)
@@ -374,6 +387,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.MediaSearchViewModel](docs/MediaSearchViewModel.md)
  - [org.openapitools.client.models.MediaType](docs/MediaType.md)
  - [org.openapitools.client.models.MediaViewModel](docs/MediaViewModel.md)
+ - [org.openapitools.client.models.Metadata](docs/Metadata.md)
  - [org.openapitools.client.models.NotificationCode](docs/NotificationCode.md)
  - [org.openapitools.client.models.NotificationViewModel](docs/NotificationViewModel.md)
  - [org.openapitools.client.models.NotificationsViewModel](docs/NotificationsViewModel.md)
@@ -407,6 +421,10 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.RejectReason](docs/RejectReason.md)
  - [org.openapitools.client.models.ReviewCategory](docs/ReviewCategory.md)
  - [org.openapitools.client.models.SearchMetaData](docs/SearchMetaData.md)
+ - [org.openapitools.client.models.SendBirdGroupChannelMember](docs/SendBirdGroupChannelMember.md)
+ - [org.openapitools.client.models.SendBirdGroupChannelViewModel](docs/SendBirdGroupChannelViewModel.md)
+ - [org.openapitools.client.models.SendBirdGroupChannelrOperator](docs/SendBirdGroupChannelrOperator.md)
+ - [org.openapitools.client.models.SendBirdUserViewModel](docs/SendBirdUserViewModel.md)
  - [org.openapitools.client.models.Service](docs/Service.md)
  - [org.openapitools.client.models.ServiceCategoriesViewModel](docs/ServiceCategoriesViewModel.md)
  - [org.openapitools.client.models.ServiceCategoryItemViewModel](docs/ServiceCategoryItemViewModel.md)
@@ -453,6 +471,7 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.UpdatePatientCommand](docs/UpdatePatientCommand.md)
  - [org.openapitools.client.models.UpdateQuestionCommand](docs/UpdateQuestionCommand.md)
  - [org.openapitools.client.models.UpdateQuestionCommentCommand](docs/UpdateQuestionCommentCommand.md)
+ - [org.openapitools.client.models.UpdateSendBirdUserCommand](docs/UpdateSendBirdUserCommand.md)
  - [org.openapitools.client.models.UpdateServiceCategoryCommand](docs/UpdateServiceCategoryCommand.md)
  - [org.openapitools.client.models.UpdateServiceCommand](docs/UpdateServiceCommand.md)
  - [org.openapitools.client.models.UpdateServiceSequenceCommand](docs/UpdateServiceSequenceCommand.md)

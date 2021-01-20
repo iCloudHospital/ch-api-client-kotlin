@@ -89,10 +89,10 @@ interface DevicesApi {
      *  - 403: Forbidden
      * 
      * @param createDeviceCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [Call]<[DeviceViewModel]>
      */
     @POST("api/v1/devices")
-    fun apiV1DevicesPost(@Body createDeviceCommand: CreateDeviceCommand? = null): Call<java.util.UUID>
+    fun apiV1DevicesPost(@Body createDeviceCommand: CreateDeviceCommand? = null): Call<DeviceViewModel>
 
     /**
      * Get device.

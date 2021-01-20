@@ -192,7 +192,7 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DevicesApi::class.java)
 val createDeviceCommand : CreateDeviceCommand =  // CreateDeviceCommand | 
 
-val result : java.util.UUID = webService.apiV1DevicesPost(createDeviceCommand)
+val result : DeviceViewModel = webService.apiV1DevicesPost(createDeviceCommand)
 ```
 
 ### Parameters
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**java.util.UUID**](java.util.UUID.md)
+[**DeviceViewModel**](DeviceViewModel.md)
 
 ### Authorization
 

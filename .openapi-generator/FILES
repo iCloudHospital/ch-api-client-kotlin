@@ -3,6 +3,7 @@ build.gradle
 docs/Account.md
 docs/Accreditation.md
 docs/AccreditationViewModel.md
+docs/AdminMessageViewModel.md
 docs/AffiliationsApi.md
 docs/ApproveBookingCommand.md
 docs/ApproveConsultationCommand.md
@@ -35,6 +36,7 @@ docs/CHManagersViewModel.md
 docs/ChangeEmailCommand.md
 docs/ChangeLog.md
 docs/ChargeStatus.md
+docs/ChatUsersApi.md
 docs/CheckNotificationsCommand.md
 docs/CommunicationUserTokenModel.md
 docs/CommunicationsApi.md
@@ -73,6 +75,7 @@ docs/CreatePartnerCommand.md
 docs/CreatePatientCommand.md
 docs/CreateQuestionCommand.md
 docs/CreateQuestionCommentCommand.md
+docs/CreateSendBirdCurrentUserCommand.md
 docs/CreateServiceCategoryCommand.md
 docs/CreateServiceCommand.md
 docs/CreateSpecialtyCommand.md
@@ -139,6 +142,7 @@ docs/EquipmentViewModel.md
 docs/EquipmentsApi.md
 docs/EquipmentsViewModel.md
 docs/Gender.md
+docs/GroupChannelsApi.md
 docs/Hospital.md
 docs/HospitalAccreditation.md
 docs/HospitalAffiliationViewModel.md
@@ -162,6 +166,7 @@ docs/HospitalsApi.md
 docs/HospitalsViewModel.md
 docs/IdentityApi.md
 docs/ImagesApi.md
+docs/InviteSendBirdGroupChannelCommand.md
 docs/Location.md
 docs/LocationViewModel.md
 docs/Manager.md
@@ -175,6 +180,7 @@ docs/Media.md
 docs/MediaSearchViewModel.md
 docs/MediaType.md
 docs/MediaViewModel.md
+docs/Metadata.md
 docs/MoviesApi.md
 docs/NotificationCode.md
 docs/NotificationViewModel.md
@@ -216,6 +222,10 @@ docs/RejectReason.md
 docs/ReviewCategory.md
 docs/SearchApi.md
 docs/SearchMetaData.md
+docs/SendBirdGroupChannelMember.md
+docs/SendBirdGroupChannelViewModel.md
+docs/SendBirdGroupChannelrOperator.md
+docs/SendBirdUserViewModel.md
 docs/Service.md
 docs/ServiceCategoriesApi.md
 docs/ServiceCategoriesViewModel.md
@@ -267,6 +277,7 @@ docs/UpdatePartnerCommand.md
 docs/UpdatePatientCommand.md
 docs/UpdateQuestionCommand.md
 docs/UpdateQuestionCommentCommand.md
+docs/UpdateSendBirdUserCommand.md
 docs/UpdateServiceCategoryCommand.md
 docs/UpdateServiceCommand.md
 docs/UpdateServiceSequenceCommand.md
@@ -296,6 +307,7 @@ src/main/kotlin/org/openapitools/client/apis/ArticlesApi.kt
 src/main/kotlin/org/openapitools/client/apis/BookingsApi.kt
 src/main/kotlin/org/openapitools/client/apis/CHAdminsApi.kt
 src/main/kotlin/org/openapitools/client/apis/CHManagersApi.kt
+src/main/kotlin/org/openapitools/client/apis/ChatUsersApi.kt
 src/main/kotlin/org/openapitools/client/apis/CommunicationsApi.kt
 src/main/kotlin/org/openapitools/client/apis/ConsultationsApi.kt
 src/main/kotlin/org/openapitools/client/apis/CountriesApi.kt
@@ -308,6 +320,7 @@ src/main/kotlin/org/openapitools/client/apis/DoctorReviewsApi.kt
 src/main/kotlin/org/openapitools/client/apis/DoctorSpecialtiesApi.kt
 src/main/kotlin/org/openapitools/client/apis/DoctorsApi.kt
 src/main/kotlin/org/openapitools/client/apis/EquipmentsApi.kt
+src/main/kotlin/org/openapitools/client/apis/GroupChannelsApi.kt
 src/main/kotlin/org/openapitools/client/apis/HospitalReviewsApi.kt
 src/main/kotlin/org/openapitools/client/apis/HospitalSpecialtiesApi.kt
 src/main/kotlin/org/openapitools/client/apis/HospitalsApi.kt
@@ -344,6 +357,7 @@ src/main/kotlin/org/openapitools/client/infrastructure/Serializer.kt
 src/main/kotlin/org/openapitools/client/models/Account.kt
 src/main/kotlin/org/openapitools/client/models/Accreditation.kt
 src/main/kotlin/org/openapitools/client/models/AccreditationViewModel.kt
+src/main/kotlin/org/openapitools/client/models/AdminMessageViewModel.kt
 src/main/kotlin/org/openapitools/client/models/ApproveBookingCommand.kt
 src/main/kotlin/org/openapitools/client/models/ApproveConsultationCommand.kt
 src/main/kotlin/org/openapitools/client/models/Article.kt
@@ -406,6 +420,7 @@ src/main/kotlin/org/openapitools/client/models/CreatePartnerCommand.kt
 src/main/kotlin/org/openapitools/client/models/CreatePatientCommand.kt
 src/main/kotlin/org/openapitools/client/models/CreateQuestionCommand.kt
 src/main/kotlin/org/openapitools/client/models/CreateQuestionCommentCommand.kt
+src/main/kotlin/org/openapitools/client/models/CreateSendBirdCurrentUserCommand.kt
 src/main/kotlin/org/openapitools/client/models/CreateServiceCategoryCommand.kt
 src/main/kotlin/org/openapitools/client/models/CreateServiceCommand.kt
 src/main/kotlin/org/openapitools/client/models/CreateSpecialtyCommand.kt
@@ -481,6 +496,7 @@ src/main/kotlin/org/openapitools/client/models/HospitalSpecialtyItemViewModel.kt
 src/main/kotlin/org/openapitools/client/models/HospitalSpecialtyViewModel.kt
 src/main/kotlin/org/openapitools/client/models/HospitalViewModel.kt
 src/main/kotlin/org/openapitools/client/models/HospitalsViewModel.kt
+src/main/kotlin/org/openapitools/client/models/InviteSendBirdGroupChannelCommand.kt
 src/main/kotlin/org/openapitools/client/models/Location.kt
 src/main/kotlin/org/openapitools/client/models/LocationViewModel.kt
 src/main/kotlin/org/openapitools/client/models/Manager.kt
@@ -493,6 +509,7 @@ src/main/kotlin/org/openapitools/client/models/Media.kt
 src/main/kotlin/org/openapitools/client/models/MediaSearchViewModel.kt
 src/main/kotlin/org/openapitools/client/models/MediaType.kt
 src/main/kotlin/org/openapitools/client/models/MediaViewModel.kt
+src/main/kotlin/org/openapitools/client/models/Metadata.kt
 src/main/kotlin/org/openapitools/client/models/NotificationCode.kt
 src/main/kotlin/org/openapitools/client/models/NotificationViewModel.kt
 src/main/kotlin/org/openapitools/client/models/NotificationsViewModel.kt
@@ -526,6 +543,10 @@ src/main/kotlin/org/openapitools/client/models/RejectConsultationCommand.kt
 src/main/kotlin/org/openapitools/client/models/RejectReason.kt
 src/main/kotlin/org/openapitools/client/models/ReviewCategory.kt
 src/main/kotlin/org/openapitools/client/models/SearchMetaData.kt
+src/main/kotlin/org/openapitools/client/models/SendBirdGroupChannelMember.kt
+src/main/kotlin/org/openapitools/client/models/SendBirdGroupChannelViewModel.kt
+src/main/kotlin/org/openapitools/client/models/SendBirdGroupChannelrOperator.kt
+src/main/kotlin/org/openapitools/client/models/SendBirdUserViewModel.kt
 src/main/kotlin/org/openapitools/client/models/Service.kt
 src/main/kotlin/org/openapitools/client/models/ServiceCategoriesViewModel.kt
 src/main/kotlin/org/openapitools/client/models/ServiceCategoryItemViewModel.kt
@@ -572,6 +593,7 @@ src/main/kotlin/org/openapitools/client/models/UpdatePartnerCommand.kt
 src/main/kotlin/org/openapitools/client/models/UpdatePatientCommand.kt
 src/main/kotlin/org/openapitools/client/models/UpdateQuestionCommand.kt
 src/main/kotlin/org/openapitools/client/models/UpdateQuestionCommentCommand.kt
+src/main/kotlin/org/openapitools/client/models/UpdateSendBirdUserCommand.kt
 src/main/kotlin/org/openapitools/client/models/UpdateServiceCategoryCommand.kt
 src/main/kotlin/org/openapitools/client/models/UpdateServiceCommand.kt
 src/main/kotlin/org/openapitools/client/models/UpdateServiceSequenceCommand.kt
