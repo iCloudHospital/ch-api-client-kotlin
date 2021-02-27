@@ -15,7 +15,7 @@ import org.openapitools.client.models.Doctor
 import org.openapitools.client.models.Patient
 import org.openapitools.client.models.ReviewCategory
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -30,21 +30,21 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DoctorReview (
-    @SerializedName("patientId")
+    @Json(name = "patientId")
     val patientId: java.util.UUID? = null,
-    @SerializedName("patient")
+    @Json(name = "patient")
     val patient: Patient? = null,
-    @SerializedName("doctorId")
+    @Json(name = "doctorId")
     val doctorId: java.util.UUID? = null,
-    @SerializedName("doctor")
+    @Json(name = "doctor")
     val doctor: Doctor? = null,
-    @SerializedName("body")
+    @Json(name = "body")
     val body: kotlin.String? = null,
-    @SerializedName("recommended")
+    @Json(name = "recommended")
     val recommended: kotlin.Boolean? = null,
-    @SerializedName("reviewCategory")
+    @Json(name = "reviewCategory")
     val reviewCategory: ReviewCategory? = null,
-    @SerializedName("rate")
+    @Json(name = "rate")
     val rate: kotlin.Int? = null
 )
 

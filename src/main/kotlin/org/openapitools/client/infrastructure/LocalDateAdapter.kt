@@ -1,35 +1,19 @@
 package org.openapitools.client.infrastructure
 
-import com.google.gson.TypeAdapter
-import com.google.gson.stream.JsonReader
-import com.google.gson.stream.JsonWriter
-import com.google.gson.stream.JsonToken.NULL
-import java.io.IOException
+import com.squareup.moshi.FromJson
+import com.squareup.moshi.ToJson
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-class LocalDateAdapter(private val formatter: DateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE) : TypeAdapter<LocalDate>() {
-    @Throws(IOException::class)
-    override fun write(out: JsonWriter?, value: LocalDate?) {
-        if (value == null) {
-            out?.nullValue()
-        } else {
-            out?.value(formatter.format(value))
-        }
+class LocalDateAdapter {
+    @ToJson
+    fun toJson(value: LocalDate): String {
+        return DateTimeFormatter.ISO_LOCAL_DATE.format(value)
     }
 
-    @Throws(IOException::class)
-    override fun read(out: JsonReader?): LocalDate? {
-        out ?: return null
-
-        when (out.peek()) {
-            NULL -> {
-                out.nextNull()
-                return null
-            }
-            else -> {
-                return LocalDate.parse(out.nextString(), formatter)
-            }
-        }
+    @FromJson
+    fun fromJson(value: String): LocalDate {
+        return LocalDate.parse(value, DateTimeFormatter.ISO_LOCAL_DATE)
     }
+
 }

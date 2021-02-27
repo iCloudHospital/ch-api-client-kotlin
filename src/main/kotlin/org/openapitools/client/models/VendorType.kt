@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,11 +22,11 @@ import com.google.gson.annotations.SerializedName
 enum class VendorType(val value: kotlin.String){
 
 
-    @SerializedName(value = "Stripe")
+    @Json(name = "Stripe")
     stripe("Stripe"),
 
 
-    @SerializedName(value = "WeChat")
+    @Json(name = "WeChat")
     weChat("WeChat");
 
 

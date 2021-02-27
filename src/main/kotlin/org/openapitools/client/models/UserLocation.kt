@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.UserLocationType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -29,23 +29,23 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UserLocation (
-    @SerializedName("latitude")
+    @Json(name = "latitude")
     val latitude: kotlin.Double? = null,
-    @SerializedName("longitude")
+    @Json(name = "longitude")
     val longitude: kotlin.Double? = null,
-    @SerializedName("country")
+    @Json(name = "country")
     val country: kotlin.String? = null,
-    @SerializedName("state")
+    @Json(name = "state")
     val state: kotlin.String? = null,
-    @SerializedName("county")
+    @Json(name = "county")
     val county: kotlin.String? = null,
-    @SerializedName("city")
+    @Json(name = "city")
     val city: kotlin.String? = null,
-    @SerializedName("zipCode")
+    @Json(name = "zipCode")
     val zipCode: kotlin.String? = null,
-    @SerializedName("address")
+    @Json(name = "address")
     val address: kotlin.String? = null,
-    @SerializedName("locationType")
+    @Json(name = "locationType")
     val locationType: UserLocationType? = null
 )
 

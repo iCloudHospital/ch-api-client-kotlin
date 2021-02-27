@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class YoutubeTagItemViewModel (
-    @SerializedName("youtubeId")
+    @Json(name = "youtubeId")
     val youtubeId: java.util.UUID? = null,
-    @SerializedName("tagId")
+    @Json(name = "tagId")
     val tagId: kotlin.String? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null
 )
 

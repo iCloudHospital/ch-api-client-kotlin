@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -27,21 +27,21 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class AuditableEntity (
-    @SerializedName("createdBy")
+    @Json(name = "createdBy")
     val createdBy: java.util.UUID? = null,
-    @SerializedName("updatedBy")
+    @Json(name = "updatedBy")
     val updatedBy: java.util.UUID? = null,
-    @SerializedName("deletedBy")
+    @Json(name = "deletedBy")
     val deletedBy: java.util.UUID? = null,
-    @SerializedName("createdDate")
+    @Json(name = "createdDate")
     val createdDate: java.time.LocalDateTime? = null,
-    @SerializedName("updatedDate")
+    @Json(name = "updatedDate")
     val updatedDate: java.time.LocalDateTime? = null,
-    @SerializedName("deletedDate")
+    @Json(name = "deletedDate")
     val deletedDate: java.time.LocalDateTime? = null,
-    @SerializedName("isHidden")
+    @Json(name = "isHidden")
     val isHidden: kotlin.Boolean? = null,
-    @SerializedName("isDeleted")
+    @Json(name = "isDeleted")
     val isDeleted: kotlin.Boolean? = null
 )
 

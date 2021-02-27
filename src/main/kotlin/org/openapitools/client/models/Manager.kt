@@ -21,7 +21,7 @@ import org.openapitools.client.models.QuestionComment
 import org.openapitools.client.models.UserLanguage
 import org.openapitools.client.models.UserLocation
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -49,47 +49,47 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Manager (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("userName")
+    @Json(name = "userName")
     val userName: kotlin.String? = null,
-    @SerializedName("email")
+    @Json(name = "email")
     val email: kotlin.String? = null,
-    @SerializedName("firstName")
+    @Json(name = "firstName")
     val firstName: kotlin.String? = null,
-    @SerializedName("lastName")
+    @Json(name = "lastName")
     val lastName: kotlin.String? = null,
-    @SerializedName("normalizedName")
+    @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @SerializedName("phone")
+    @Json(name = "phone")
     val phone: kotlin.String? = null,
-    @SerializedName("photo")
+    @Json(name = "photo")
     val photo: kotlin.String? = null,
-    @SerializedName("photoThumbnail")
+    @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @SerializedName("gender")
+    @Json(name = "gender")
     val gender: Gender? = null,
-    @SerializedName("dateOfBirth")
+    @Json(name = "dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-    @SerializedName("timeZone")
+    @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
-    @SerializedName("communicationUserId")
+    @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null,
-    @SerializedName("devices")
+    @Json(name = "devices")
     val devices: kotlin.collections.List<Device>? = null,
-    @SerializedName("articles")
+    @Json(name = "articles")
     val articles: kotlin.collections.List<Article>? = null,
-    @SerializedName("questionComments")
+    @Json(name = "questionComments")
     val questionComments: kotlin.collections.List<QuestionComment>? = null,
-    @SerializedName("locations")
+    @Json(name = "locations")
     val locations: kotlin.collections.List<UserLocation>? = null,
-    @SerializedName("languages")
+    @Json(name = "languages")
     val languages: kotlin.collections.List<UserLanguage>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @SerializedName("accounts")
+    @Json(name = "accounts")
     val accounts: kotlin.collections.List<Account>? = null,
-    @SerializedName("affiliations")
+    @Json(name = "affiliations")
     val affiliations: kotlin.collections.List<ManagerAffiliation>? = null
 )
 

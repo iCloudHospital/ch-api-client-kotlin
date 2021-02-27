@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,19 +22,19 @@ import com.google.gson.annotations.SerializedName
 enum class MediaType(val value: kotlin.String){
 
 
-    @SerializedName(value = "Photo")
+    @Json(name = "Photo")
     photo("Photo"),
 
 
-    @SerializedName(value = "Video")
+    @Json(name = "Video")
     video("Video"),
 
 
-    @SerializedName(value = "Youtube")
+    @Json(name = "Youtube")
     youtube("Youtube"),
 
 
-    @SerializedName(value = "Document")
+    @Json(name = "Document")
     document("Document");
 
 

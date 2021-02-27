@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -21,9 +21,9 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UserLanguage (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("language")
+    @Json(name = "language")
     val language: kotlin.String? = null
 )
 

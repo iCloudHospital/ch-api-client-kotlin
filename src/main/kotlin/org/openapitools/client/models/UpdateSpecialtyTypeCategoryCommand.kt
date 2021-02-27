@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.SpecialtyTypeItemViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -27,19 +27,19 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UpdateSpecialtyTypeCategoryCommand (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null,
-    @SerializedName("specialtyTypeCount")
+    @Json(name = "specialtyTypeCount")
     val specialtyTypeCount: kotlin.Int? = null,
-    @SerializedName("specialtyTypes")
+    @Json(name = "specialtyTypes")
     val specialtyTypes: kotlin.collections.List<SpecialtyTypeItemViewModel>? = null,
-    @SerializedName("selectedSpecialtyTypes")
+    @Json(name = "selectedSpecialtyTypes")
     val selectedSpecialtyTypes: kotlin.collections.List<java.util.UUID>? = null
 )
 

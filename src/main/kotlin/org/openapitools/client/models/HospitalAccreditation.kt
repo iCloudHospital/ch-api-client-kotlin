@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.Accreditation
 import org.openapitools.client.models.Hospital
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -25,13 +25,13 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class HospitalAccreditation (
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("hospital")
+    @Json(name = "hospital")
     val hospital: Hospital? = null,
-    @SerializedName("accreditationId")
+    @Json(name = "accreditationId")
     val accreditationId: java.util.UUID? = null,
-    @SerializedName("accreditation")
+    @Json(name = "accreditation")
     val accreditation: Accreditation? = null
 )
 

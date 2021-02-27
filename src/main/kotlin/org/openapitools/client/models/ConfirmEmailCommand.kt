@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class ConfirmEmailCommand (
-    @SerializedName("code")
+    @Json(name = "code")
     val code: kotlin.String? = null
 )
 

@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,11 +22,11 @@ import com.google.gson.annotations.SerializedName
 enum class UserLocationType(val value: kotlin.String){
 
 
-    @SerializedName(value = "LivesIn")
+    @Json(name = "LivesIn")
     livesIn("LivesIn"),
 
 
-    @SerializedName(value = "BirthPlace")
+    @Json(name = "BirthPlace")
     birthPlace("BirthPlace");
 
 

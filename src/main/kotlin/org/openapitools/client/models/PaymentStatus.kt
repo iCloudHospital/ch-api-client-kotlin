@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,19 +22,19 @@ import com.google.gson.annotations.SerializedName
 enum class PaymentStatus(val value: kotlin.String){
 
 
-    @SerializedName(value = "Unpaid")
+    @Json(name = "Unpaid")
     unpaid("Unpaid"),
 
 
-    @SerializedName(value = "Paid")
+    @Json(name = "Paid")
     paid("Paid"),
 
 
-    @SerializedName(value = "RefundRequested")
+    @Json(name = "RefundRequested")
     refundRequested("RefundRequested"),
 
 
-    @SerializedName(value = "Refunded")
+    @Json(name = "Refunded")
     refunded("Refunded");
 
 
