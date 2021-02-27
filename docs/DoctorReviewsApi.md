@@ -28,7 +28,9 @@ val webService = apiClient.createWebservice(DoctorReviewsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdReviewsPatientIdDelete(doctorId, patientId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdReviewsPatientIdDelete(doctorId, patientId)
+}
 ```
 
 ### Parameters
@@ -68,7 +70,9 @@ val webService = apiClient.createWebservice(DoctorReviewsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : DoctorReviewViewModel = webService.apiV1DoctorsDoctorIdReviewsPatientIdGet(doctorId, patientId)
+launch(Dispatchers.IO) {
+    val result : DoctorReviewViewModel = webService.apiV1DoctorsDoctorIdReviewsPatientIdGet(doctorId, patientId)
+}
 ```
 
 ### Parameters
@@ -109,7 +113,9 @@ val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.uti
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateDoctorReviewCommand : UpdateDoctorReviewCommand =  // UpdateDoctorReviewCommand | 
 
-val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdReviewsPatientIdPut(doctorId, patientId, updateDoctorReviewCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdReviewsPatientIdPut(doctorId, patientId, updateDoctorReviewCommand)
+}
 ```
 
 ### Parameters
@@ -151,7 +157,9 @@ val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.uti
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createDoctorReviewCommand : CreateDoctorReviewCommand =  // CreateDoctorReviewCommand | 
 
-val result : DoctorReview = webService.apiV1DoctorsDoctorIdReviewsPost(doctorId, patientId, createDoctorReviewCommand)
+launch(Dispatchers.IO) {
+    val result : DoctorReview = webService.apiV1DoctorsDoctorIdReviewsPost(doctorId, patientId, createDoctorReviewCommand)
+}
 ```
 
 ### Parameters
@@ -203,7 +211,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : DoctorReviewsViewModel = webService.apiV1DoctorsReviewsGet(doctorId, doctorName, patientId, patientName, body, recommended, reviewCategory, rate, created, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : DoctorReviewsViewModel = webService.apiV1DoctorsReviewsGet(doctorId, doctorName, patientId, patientName, body, recommended, reviewCategory, rate, created, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters

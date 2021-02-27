@@ -20,12 +20,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param contact 
- * @param contactNumber 
- * @param nationality 
- * @param userType 
- * @param languages 
- * @param locations 
  * @param id 
  * @param userName 
  * @param firstName 
@@ -40,21 +34,15 @@ import com.google.gson.annotations.SerializedName
  * @param timeZone 
  * @param communicationUserId 
  * @param auditableEntity 
+ * @param userType 
+ * @param languages 
+ * @param locations 
+ * @param contact 
+ * @param contactNumber 
+ * @param nationality 
  */
 
 data class PatientViewModel (
-    @SerializedName("contact")
-    val contact: kotlin.String? = null,
-    @SerializedName("contactNumber")
-    val contactNumber: kotlin.String? = null,
-    @SerializedName("nationality")
-    val nationality: kotlin.String? = null,
-    @SerializedName("userType")
-    val userType: kotlin.String? = null,
-    @SerializedName("languages")
-    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @SerializedName("locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -82,6 +70,18 @@ data class PatientViewModel (
     @SerializedName("communicationUserId")
     val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("userType")
+    val userType: kotlin.String? = null,
+    @SerializedName("languages")
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
+    @SerializedName("locations")
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
+    @SerializedName("contact")
+    val contact: kotlin.String? = null,
+    @SerializedName("contactNumber")
+    val contactNumber: kotlin.String? = null,
+    @SerializedName("nationality")
+    val nationality: kotlin.String? = null
 )
 

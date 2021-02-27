@@ -22,7 +22,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(NotificationsApi::class.java)
 val checkNotificationsCommand : CheckNotificationsCommand =  // CheckNotificationsCommand | 
 
-val result : kotlin.Boolean = webService.apiV1NotificationsCheckPost(checkNotificationsCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1NotificationsCheckPost(checkNotificationsCommand)
+}
 ```
 
 ### Parameters
@@ -62,7 +64,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : NotificationsViewModel = webService.apiV1NotificationsGet(notificationCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : NotificationsViewModel = webService.apiV1NotificationsGet(notificationCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters

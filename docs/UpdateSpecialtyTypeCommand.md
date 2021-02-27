@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **kotlin.String** |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
@@ -13,6 +12,7 @@ Name | Type | Description | Notes
 **hospitalSpecialtyCount** | **kotlin.Int** |  |  [optional]
 **serviceCount** | **kotlin.Int** |  |  [optional]
 **created** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**content** | **kotlin.String** |  |  [optional]
 
 
 

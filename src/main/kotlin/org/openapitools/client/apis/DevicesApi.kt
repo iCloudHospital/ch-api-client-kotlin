@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateDeviceCommand
@@ -13,50 +13,6 @@ import org.openapitools.client.models.Platform
 import org.openapitools.client.models.UpdateDeviceCommand
 
 interface DevicesApi {
-    /**
-     * Delete device.
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param deviceId  
-     * @return [Call]<[kotlin.Boolean]>
-     */
-    @DELETE("api/v1/devices/{deviceId}")
-    fun apiV1DevicesDeviceIdDelete(@Path("deviceId") deviceId: java.util.UUID): Call<kotlin.Boolean>
-
-    /**
-     * Create device login.
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param deviceId  
-     * @param createDeviceLoginCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
-     */
-    @POST("api/v1/devices/{deviceId}/logins")
-    fun apiV1DevicesDeviceIdLoginsPost(@Path("deviceId") deviceId: java.util.UUID, @Body createDeviceLoginCommand: CreateDeviceLoginCommand? = null): Call<java.util.UUID>
-
-    /**
-     * Update device.
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param deviceId  
-     * @param updateDeviceCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
-     */
-    @PUT("api/v1/devices/{deviceId}")
-    fun apiV1DevicesDeviceIdPut(@Path("deviceId") deviceId: java.util.UUID, @Body updateDeviceCommand: UpdateDeviceCommand? = null): Call<kotlin.Boolean>
-
     /**
      * Get all devices.
      * 
@@ -75,10 +31,68 @@ interface DevicesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[DevicesViewModel]>
+     * @return [DevicesViewModel]
      */
     @GET("api/v1/devices")
-    fun apiV1DevicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Token") token: kotlin.String? = null, @Query("Platform") platform: Platform? = null, @Query("AppAlert") appAlert: kotlin.Boolean? = null, @Query("EventAlert") eventAlert: kotlin.Boolean? = null, @Query("NoticeAlert") noticeAlert: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<DevicesViewModel>
+    suspend fun apiV1DevicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Token") token: kotlin.String? = null, @Query("Platform") platform: Platform? = null, @Query("AppAlert") appAlert: kotlin.Boolean? = null, @Query("EventAlert") eventAlert: kotlin.Boolean? = null, @Query("NoticeAlert") noticeAlert: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DevicesViewModel>
+
+    /**
+     * Delete device.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param id  
+     * @return [kotlin.Boolean]
+     */
+    @DELETE("api/v1/devices/{id}")
+    suspend fun apiV1DevicesIdDelete(@Path("id") id: java.util.UUID): Response<kotlin.Boolean>
+
+    /**
+     * Get device.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param id  
+     * @return [DeviceViewModel]
+     */
+    @GET("api/v1/devices/{id}")
+    suspend fun apiV1DevicesIdGet(@Path("id") id: java.util.UUID): Response<DeviceViewModel>
+
+    /**
+     * Create device login.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param id  
+     * @param createDeviceLoginCommand  (optional)
+     * @return [java.util.UUID]
+     */
+    @POST("api/v1/devices/{id}/logins")
+    suspend fun apiV1DevicesIdLoginsPost(@Path("id") id: java.util.UUID, @Body createDeviceLoginCommand: CreateDeviceLoginCommand? = null): Response<java.util.UUID>
+
+    /**
+     * Update device.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param id  
+     * @param updateDeviceCommand  (optional)
+     * @return [kotlin.Boolean]
+     */
+    @PUT("api/v1/devices/{id}")
+    suspend fun apiV1DevicesIdPut(@Path("id") id: java.util.UUID, @Body updateDeviceCommand: UpdateDeviceCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create device.
@@ -89,23 +103,9 @@ interface DevicesApi {
      *  - 403: Forbidden
      * 
      * @param createDeviceCommand  (optional)
-     * @return [Call]<[DeviceViewModel]>
+     * @return [DeviceViewModel]
      */
     @POST("api/v1/devices")
-    fun apiV1DevicesPost(@Body createDeviceCommand: CreateDeviceCommand? = null): Call<DeviceViewModel>
-
-    /**
-     * Get device.
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param token  
-     * @return [Call]<[DeviceViewModel]>
-     */
-    @GET("api/v1/devices/{token}")
-    fun apiV1DevicesTokenGet(@Path("token") token: kotlin.String): Call<DeviceViewModel>
+    suspend fun apiV1DevicesPost(@Body createDeviceCommand: CreateDeviceCommand? = null): Response<DeviceViewModel>
 
 }

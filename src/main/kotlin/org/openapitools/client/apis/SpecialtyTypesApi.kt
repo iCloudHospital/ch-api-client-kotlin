@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateSpecialtyTypeCommand
@@ -27,10 +27,10 @@ interface SpecialtyTypesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[SpecialtyTypesViewModel]>
+     * @return [SpecialtyTypesViewModel]
      */
     @GET("api/v1/specialtytypes")
-    fun apiV1SpecialtytypesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<SpecialtyTypesViewModel>
+    suspend fun apiV1SpecialtytypesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtyTypesViewModel>
 
     /**
      * Create specialtyType.
@@ -42,10 +42,10 @@ interface SpecialtyTypesApi {
      * 
      * @param specialtyTypeId  (optional)
      * @param createSpecialtyTypeCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/specialtytypes")
-    fun apiV1SpecialtytypesPost(@Query("specialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Body createSpecialtyTypeCommand: CreateSpecialtyTypeCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1SpecialtytypesPost(@Query("specialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Body createSpecialtyTypeCommand: CreateSpecialtyTypeCommand? = null): Response<java.util.UUID>
 
     /**
      * Get specialtyType by slug.
@@ -54,10 +54,10 @@ interface SpecialtyTypesApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[SpecialtyTypeViewModel]>
+     * @return [SpecialtyTypeViewModel]
      */
     @GET("api/v1/specialtytypes/slugs/{slug}")
-    fun apiV1SpecialtytypesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<SpecialtyTypeViewModel>
+    suspend fun apiV1SpecialtytypesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<SpecialtyTypeViewModel>
 
     /**
      * Delete specialtyType.
@@ -68,10 +68,10 @@ interface SpecialtyTypesApi {
      *  - 403: Forbidden
      * 
      * @param specialtyTypeId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/specialtytypes/{specialtyTypeId}")
-    fun apiV1SpecialtytypesSpecialtyTypeIdDelete(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1SpecialtytypesSpecialtyTypeIdDelete(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get specialtyType.
@@ -80,10 +80,10 @@ interface SpecialtyTypesApi {
      *  - 200: Success
      * 
      * @param specialtyTypeId  
-     * @return [Call]<[SpecialtyTypeViewModel]>
+     * @return [SpecialtyTypeViewModel]
      */
     @GET("api/v1/specialtytypes/{specialtyTypeId}")
-    fun apiV1SpecialtytypesSpecialtyTypeIdGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID): Call<SpecialtyTypeViewModel>
+    suspend fun apiV1SpecialtytypesSpecialtyTypeIdGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID): Response<SpecialtyTypeViewModel>
 
     /**
      * Update specialtyType
@@ -95,9 +95,9 @@ interface SpecialtyTypesApi {
      * 
      * @param specialtyTypeId  
      * @param updateSpecialtyTypeCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/specialtytypes/{specialtyTypeId}")
-    fun apiV1SpecialtytypesSpecialtyTypeIdPut(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Body updateSpecialtyTypeCommand: UpdateSpecialtyTypeCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1SpecialtytypesSpecialtyTypeIdPut(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Body updateSpecialtyTypeCommand: UpdateSpecialtyTypeCommand? = null): Response<kotlin.Boolean>
 
 }

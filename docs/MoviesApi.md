@@ -20,7 +20,9 @@ Method | HTTP request | Description
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(MoviesApi::class.java)
 
-webService.apiV1MoviesPost()
+launch(Dispatchers.IO) {
+    webService.apiV1MoviesPost()
+}
 ```
 
 ### Parameters

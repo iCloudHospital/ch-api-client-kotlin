@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**referralCount** | **kotlin.Int** |  |  [optional]
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **userName** | **kotlin.String** |  |  [optional]
 **firstName** | **kotlin.String** |  |  [optional]
@@ -19,6 +18,7 @@ Name | Type | Description | Notes
 **timeZone** | **kotlin.String** |  |  [optional]
 **communicationUserId** | **kotlin.String** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**referralCount** | **kotlin.Int** |  |  [optional]
 
 
 

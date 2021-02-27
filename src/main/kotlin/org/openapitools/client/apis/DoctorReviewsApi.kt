@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateDoctorReviewCommand
@@ -23,10 +23,10 @@ interface DoctorReviewsApi {
      * 
      * @param doctorId  
      * @param patientId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/doctors/{doctorId}/reviews/{patientId}")
-    fun apiV1DoctorsDoctorIdReviewsPatientIdDelete(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1DoctorsDoctorIdReviewsPatientIdDelete(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get review.
@@ -36,10 +36,10 @@ interface DoctorReviewsApi {
      * 
      * @param doctorId  
      * @param patientId  
-     * @return [Call]<[DoctorReviewViewModel]>
+     * @return [DoctorReviewViewModel]
      */
     @GET("api/v1/doctors/{doctorId}/reviews/{patientId}")
-    fun apiV1DoctorsDoctorIdReviewsPatientIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Call<DoctorReviewViewModel>
+    suspend fun apiV1DoctorsDoctorIdReviewsPatientIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Response<DoctorReviewViewModel>
 
     /**
      * Update review.
@@ -52,10 +52,10 @@ interface DoctorReviewsApi {
      * @param doctorId  
      * @param patientId  
      * @param updateDoctorReviewCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/doctors/{doctorId}/reviews/{patientId}")
-    fun apiV1DoctorsDoctorIdReviewsPatientIdPut(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body updateDoctorReviewCommand: UpdateDoctorReviewCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1DoctorsDoctorIdReviewsPatientIdPut(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body updateDoctorReviewCommand: UpdateDoctorReviewCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create review.
@@ -68,10 +68,10 @@ interface DoctorReviewsApi {
      * @param doctorId  
      * @param patientId  
      * @param createDoctorReviewCommand  (optional)
-     * @return [Call]<[DoctorReview]>
+     * @return [DoctorReview]
      */
     @POST("api/v1/doctors/{doctorId}/reviews")
-    fun apiV1DoctorsDoctorIdReviewsPost(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body createDoctorReviewCommand: CreateDoctorReviewCommand? = null): Call<DoctorReview>
+    suspend fun apiV1DoctorsDoctorIdReviewsPost(@Path("doctorId") doctorId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body createDoctorReviewCommand: CreateDoctorReviewCommand? = null): Response<DoctorReview>
 
     /**
      * Get all reviews.
@@ -92,9 +92,9 @@ interface DoctorReviewsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[DoctorReviewsViewModel]>
+     * @return [DoctorReviewsViewModel]
      */
     @GET("api/v1/doctors/reviews")
-    fun apiV1DoctorsReviewsGet(@Query("DoctorId") doctorId: java.util.UUID? = null, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("PatientName") patientName: kotlin.String? = null, @Query("Body") body: kotlin.String? = null, @Query("Recommended") recommended: kotlin.Boolean? = null, @Query("ReviewCategory") reviewCategory: ReviewCategory? = null, @Query("Rate") rate: kotlin.Int? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<DoctorReviewsViewModel>
+    suspend fun apiV1DoctorsReviewsGet(@Query("DoctorId") doctorId: java.util.UUID? = null, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("PatientName") patientName: kotlin.String? = null, @Query("Body") body: kotlin.String? = null, @Query("Recommended") recommended: kotlin.Boolean? = null, @Query("ReviewCategory") reviewCategory: ReviewCategory? = null, @Query("Rate") rate: kotlin.Int? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DoctorReviewsViewModel>
 
 }

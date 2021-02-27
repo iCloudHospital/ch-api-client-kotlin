@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.DoctorSpecialtyViewModel
@@ -18,10 +18,10 @@ interface DoctorSpecialtiesApi {
      * 
      * @param doctorId  
      * @param specialtyId  
-     * @return [Call]<[DoctorSpecialtyViewModel]>
+     * @return [DoctorSpecialtyViewModel]
      */
     @POST("api/v1/doctors/{doctorId}/specialty/{specialtyId}")
-    fun apiV1DoctorsDoctorIdSpecialtySpecialtyIdPost(@Path("doctorId") doctorId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Call<DoctorSpecialtyViewModel>
+    suspend fun apiV1DoctorsDoctorIdSpecialtySpecialtyIdPost(@Path("doctorId") doctorId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Response<DoctorSpecialtyViewModel>
 
     /**
      * Remove link between the doctor and the specialty.
@@ -34,9 +34,9 @@ interface DoctorSpecialtiesApi {
      * @param doctorId  
      * @param specailtyId  
      * @param hospitalId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/doctors/{hospitalId}/doctors/{doctorId}")
-    fun apiV1DoctorsHospitalIdDoctorsDoctorIdDelete(@Path("doctorId") doctorId: java.util.UUID, @Path("specailtyId") specailtyId: java.util.UUID, @Path("hospitalId") hospitalId: kotlin.String): Call<kotlin.Boolean>
+    suspend fun apiV1DoctorsHospitalIdDoctorsDoctorIdDelete(@Path("doctorId") doctorId: java.util.UUID, @Path("specailtyId") specailtyId: java.util.UUID, @Path("hospitalId") hospitalId: kotlin.String): Response<kotlin.Boolean>
 
 }

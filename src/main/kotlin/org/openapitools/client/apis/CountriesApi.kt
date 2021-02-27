@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CountriesViewModel
@@ -20,10 +20,10 @@ interface CountriesApi {
      *  - 403: Forbidden
      * 
      * @param countryId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/countries/{countryId}")
-    fun apiV1CountriesCountryIdDelete(@Path("countryId") countryId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1CountriesCountryIdDelete(@Path("countryId") countryId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get country.
@@ -32,10 +32,10 @@ interface CountriesApi {
      *  - 200: Success
      * 
      * @param countryId  
-     * @return [Call]<[CountryViewModel]>
+     * @return [CountryViewModel]
      */
     @GET("api/v1/countries/{countryId}")
-    fun apiV1CountriesCountryIdGet(@Path("countryId") countryId: java.util.UUID): Call<CountryViewModel>
+    suspend fun apiV1CountriesCountryIdGet(@Path("countryId") countryId: java.util.UUID): Response<CountryViewModel>
 
     /**
      * Update country.
@@ -47,10 +47,10 @@ interface CountriesApi {
      * 
      * @param countryId  
      * @param updateCountryCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/countries/{countryId}")
-    fun apiV1CountriesCountryIdPut(@Path("countryId") countryId: java.util.UUID, @Body updateCountryCommand: UpdateCountryCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1CountriesCountryIdPut(@Path("countryId") countryId: java.util.UUID, @Body updateCountryCommand: UpdateCountryCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get all countries.
@@ -66,10 +66,10 @@ interface CountriesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[CountriesViewModel]>
+     * @return [CountriesViewModel]
      */
     @GET("api/v1/countries")
-    fun apiV1CountriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CreatedDate") createdDate: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<CountriesViewModel>
+    suspend fun apiV1CountriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CreatedDate") createdDate: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<CountriesViewModel>
 
     /**
      * Create a country.
@@ -80,10 +80,10 @@ interface CountriesApi {
      *  - 403: Forbidden
      * 
      * @param createCountryCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/countries")
-    fun apiV1CountriesPost(@Body createCountryCommand: CreateCountryCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1CountriesPost(@Body createCountryCommand: CreateCountryCommand? = null): Response<java.util.UUID>
 
     /**
      * Get country by slug.
@@ -92,9 +92,9 @@ interface CountriesApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[CountryViewModel]>
+     * @return [CountryViewModel]
      */
     @GET("api/v1/countries/slugs/{slug}")
-    fun apiV1CountriesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<CountryViewModel>
+    suspend fun apiV1CountriesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<CountryViewModel>
 
 }

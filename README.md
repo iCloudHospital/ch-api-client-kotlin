@@ -103,12 +103,12 @@ Class | Method | HTTP request | Description
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdGet**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidget) | **GET** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Get department.
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPost**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidpost) | **POST** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Create department.
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPut**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidput) | **PUT** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Update department.
-*DevicesApi* | [**apiV1DevicesDeviceIdDelete**](docs/DevicesApi.md#apiv1devicesdeviceiddelete) | **DELETE** api/v1/devices/{deviceId} | Delete device.
-*DevicesApi* | [**apiV1DevicesDeviceIdLoginsPost**](docs/DevicesApi.md#apiv1devicesdeviceidloginspost) | **POST** api/v1/devices/{deviceId}/logins | Create device login.
-*DevicesApi* | [**apiV1DevicesDeviceIdPut**](docs/DevicesApi.md#apiv1devicesdeviceidput) | **PUT** api/v1/devices/{deviceId} | Update device.
 *DevicesApi* | [**apiV1DevicesGet**](docs/DevicesApi.md#apiv1devicesget) | **GET** api/v1/devices | Get all devices.
+*DevicesApi* | [**apiV1DevicesIdDelete**](docs/DevicesApi.md#apiv1devicesiddelete) | **DELETE** api/v1/devices/{id} | Delete device.
+*DevicesApi* | [**apiV1DevicesIdGet**](docs/DevicesApi.md#apiv1devicesidget) | **GET** api/v1/devices/{id} | Get device.
+*DevicesApi* | [**apiV1DevicesIdLoginsPost**](docs/DevicesApi.md#apiv1devicesidloginspost) | **POST** api/v1/devices/{id}/logins | Create device login.
+*DevicesApi* | [**apiV1DevicesIdPut**](docs/DevicesApi.md#apiv1devicesidput) | **PUT** api/v1/devices/{id} | Update device.
 *DevicesApi* | [**apiV1DevicesPost**](docs/DevicesApi.md#apiv1devicespost) | **POST** api/v1/devices | Create device.
-*DevicesApi* | [**apiV1DevicesTokenGet**](docs/DevicesApi.md#apiv1devicestokenget) | **GET** api/v1/devices/{token} | Get device.
 *DoctorCertificatesApi* | [**apiV1DoctorsCertificatesGet**](docs/DoctorCertificatesApi.md#apiv1doctorscertificatesget) | **GET** api/v1/doctors/certificates | Get all certificates.
 *DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdDelete**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateiddelete) | **DELETE** api/v1/doctors/{doctorId}/certificates/{certificateId} | Delete certificate.
 *DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateidget) | **GET** api/v1/doctors/{doctorId}/certificates/{certificateId} | Get certificate.

@@ -28,7 +28,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1CountriesCountryIdDelete(countryId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1CountriesCountryIdDelete(countryId)
+}
 ```
 
 ### Parameters
@@ -66,7 +68,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : CountryViewModel = webService.apiV1CountriesCountryIdGet(countryId)
+launch(Dispatchers.IO) {
+    val result : CountryViewModel = webService.apiV1CountriesCountryIdGet(countryId)
+}
 ```
 
 ### Parameters
@@ -105,7 +109,9 @@ val webService = apiClient.createWebservice(CountriesApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateCountryCommand : UpdateCountryCommand =  // UpdateCountryCommand | 
 
-val result : kotlin.Boolean = webService.apiV1CountriesCountryIdPut(countryId, updateCountryCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1CountriesCountryIdPut(countryId, updateCountryCommand)
+}
 ```
 
 ### Parameters
@@ -151,7 +157,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : CountriesViewModel = webService.apiV1CountriesGet(id, name, description, createdDate, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : CountriesViewModel = webService.apiV1CountriesGet(id, name, description, createdDate, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -196,7 +204,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val createCountryCommand : CreateCountryCommand =  // CreateCountryCommand | 
 
-val result : java.util.UUID = webService.apiV1CountriesPost(createCountryCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1CountriesPost(createCountryCommand)
+}
 ```
 
 ### Parameters
@@ -232,7 +242,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 
-val result : CountryViewModel = webService.apiV1CountriesSlugsSlugGet(slug)
+launch(Dispatchers.IO) {
+    val result : CountryViewModel = webService.apiV1CountriesSlugsSlugGet(slug)
+}
 ```
 
 ### Parameters

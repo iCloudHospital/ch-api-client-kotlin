@@ -22,6 +22,7 @@ import com.google.gson.annotations.SerializedName
  * @param name 
  * @param slug 
  * @param description 
+ * @param content 
  * @param hospitalName 
  * @param specialtyTypeId 
  * @param specialtyTypeName 
@@ -42,6 +43,8 @@ data class UpdateServiceCommand (
     val slug: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("content")
+    val content: kotlin.String? = null,
     @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
     @SerializedName("specialtyTypeId")

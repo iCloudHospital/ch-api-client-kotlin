@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CHAdminViewModel
@@ -21,10 +21,10 @@ interface CHAdminsApi {
      *  - 403: Forbidden
      * 
      * @param chAdminId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/chadmins/{chAdminId}")
-    fun apiV1ChadminsChAdminIdDelete(@Path("chAdminId") chAdminId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1ChadminsChAdminIdDelete(@Path("chAdminId") chAdminId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get cloud hospital admin user by id.
@@ -35,10 +35,10 @@ interface CHAdminsApi {
      *  - 403: Forbidden
      * 
      * @param chAdminId  
-     * @return [Call]<[CHAdminViewModel]>
+     * @return [CHAdminViewModel]
      */
     @GET("api/v1/chadmins/{chAdminId}")
-    fun apiV1ChadminsChAdminIdGet(@Path("chAdminId") chAdminId: java.util.UUID): Call<CHAdminViewModel>
+    suspend fun apiV1ChadminsChAdminIdGet(@Path("chAdminId") chAdminId: java.util.UUID): Response<CHAdminViewModel>
 
     /**
      * Update cloud hospital admin user.
@@ -50,10 +50,10 @@ interface CHAdminsApi {
      * 
      * @param chAdminId  
      * @param updateCHAdminCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/chadmins/{chAdminId}")
-    fun apiV1ChadminsChAdminIdPut(@Path("chAdminId") chAdminId: java.util.UUID, @Body updateCHAdminCommand: UpdateCHAdminCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1ChadminsChAdminIdPut(@Path("chAdminId") chAdminId: java.util.UUID, @Body updateCHAdminCommand: UpdateCHAdminCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get cloud hospital admin users.
@@ -73,10 +73,10 @@ interface CHAdminsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[CHAdminsViewModel]>
+     * @return [CHAdminsViewModel]
      */
     @GET("api/v1/chadmins")
-    fun apiV1ChadminsGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<CHAdminsViewModel>
+    suspend fun apiV1ChadminsGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<CHAdminsViewModel>
 
     /**
      * Create cloud hospital admin user.
@@ -87,9 +87,9 @@ interface CHAdminsApi {
      *  - 403: Forbidden
      * 
      * @param createCHAdminCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/chadmins")
-    fun apiV1ChadminsPost(@Body createCHAdminCommand: CreateCHAdminCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1ChadminsPost(@Body createCHAdminCommand: CreateCHAdminCommand? = null): Response<java.util.UUID>
 
 }

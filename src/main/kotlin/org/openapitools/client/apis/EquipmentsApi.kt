@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateEquipmentCommand
@@ -27,10 +27,10 @@ interface EquipmentsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[EquipmentsViewModel]>
+     * @return [EquipmentsViewModel]
      */
     @GET("api/v1/hospitals/equipments")
-    fun apiV1HospitalsEquipmentsGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<EquipmentsViewModel>
+    suspend fun apiV1HospitalsEquipmentsGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<EquipmentsViewModel>
 
     /**
      * Delete equipment.
@@ -42,10 +42,10 @@ interface EquipmentsApi {
      * 
      * @param hospitalId  
      * @param equipmentId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/equipments/{equipmentId}")
-    fun apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("equipmentId") equipmentId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdEquipmentsEquipmentIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("equipmentId") equipmentId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get equipment.
@@ -55,10 +55,10 @@ interface EquipmentsApi {
      * 
      * @param hospitalId  
      * @param equipmentId  
-     * @return [Call]<[EquipmentViewModel]>
+     * @return [EquipmentViewModel]
      */
     @GET("api/v1/hospitals/{hospitalId}/equipments/{equipmentId}")
-    fun apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("equipmentId") equipmentId: java.util.UUID): Call<EquipmentViewModel>
+    suspend fun apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("equipmentId") equipmentId: java.util.UUID): Response<EquipmentViewModel>
 
     /**
      * Update equipment.
@@ -71,10 +71,10 @@ interface EquipmentsApi {
      * @param hospitalId  
      * @param equipmentId  
      * @param updateEquipmentCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/equipments/{equipmentId}")
-    fun apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("equipmentId") equipmentId: java.util.UUID, @Body updateEquipmentCommand: UpdateEquipmentCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("equipmentId") equipmentId: java.util.UUID, @Body updateEquipmentCommand: UpdateEquipmentCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create an equipment and add to a hospital.
@@ -86,9 +86,9 @@ interface EquipmentsApi {
      * 
      * @param hospitalId  
      * @param createEquipmentCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/hospitals/{hospitalId}/equipments")
-    fun apiV1HospitalsHospitalIdEquipmentsPost(@Path("hospitalId") hospitalId: java.util.UUID, @Body createEquipmentCommand: CreateEquipmentCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1HospitalsHospitalIdEquipmentsPost(@Path("hospitalId") hospitalId: java.util.UUID, @Body createEquipmentCommand: CreateEquipmentCommand? = null): Response<java.util.UUID>
 
 }

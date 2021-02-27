@@ -27,7 +27,9 @@ val webService = apiClient.createWebservice(HospitalSpecialtiesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdDelete(hospitalId, specialtyId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdDelete(hospitalId, specialtyId)
+}
 ```
 
 ### Parameters
@@ -67,7 +69,9 @@ val webService = apiClient.createWebservice(HospitalSpecialtiesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : HospitalSpecialtyViewModel = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost(hospitalId, specialtyId)
+launch(Dispatchers.IO) {
+    val result : HospitalSpecialtyViewModel = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost(hospitalId, specialtyId)
+}
 ```
 
 ### Parameters
@@ -108,7 +112,9 @@ val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateHospitalSpecialtySequenceCommand : UpdateHospitalSpecialtySequenceCommand =  // UpdateHospitalSpecialtySequenceCommand | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtysequencePut(hospitalId, specialtyTypeId, updateHospitalSpecialtySequenceCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtysequencePut(hospitalId, specialtyTypeId, updateHospitalSpecialtySequenceCommand)
+}
 ```
 
 ### Parameters
@@ -158,7 +164,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : HospitalSpecialtiesViewModel = webService.apiV1HospitalsSpecialtiesGet(hospitalId, hospitalName, specialtyId, specialtyName, specialtyTypeId, marketingType, created, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : HospitalSpecialtiesViewModel = webService.apiV1HospitalsSpecialtiesGet(hospitalId, hospitalName, specialtyId, specialtyName, specialtyTypeId, marketingType, created, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters

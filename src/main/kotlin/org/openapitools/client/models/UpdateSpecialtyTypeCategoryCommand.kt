@@ -17,29 +17,29 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param order 
- * @param selectedSpecialtyTypes 
  * @param id 
  * @param name 
  * @param description 
+ * @param order 
  * @param specialtyTypeCount 
  * @param specialtyTypes 
+ * @param selectedSpecialtyTypes 
  */
 
 data class UpdateSpecialtyTypeCategoryCommand (
-    @SerializedName("order")
-    val order: kotlin.Int? = null,
-    @SerializedName("selectedSpecialtyTypes")
-    val selectedSpecialtyTypes: kotlin.collections.List<java.util.UUID>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("name")
     val name: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("order")
+    val order: kotlin.Int? = null,
     @SerializedName("specialtyTypeCount")
     val specialtyTypeCount: kotlin.Int? = null,
     @SerializedName("specialtyTypes")
-    val specialtyTypes: kotlin.collections.List<SpecialtyTypeItemViewModel>? = null
+    val specialtyTypes: kotlin.collections.List<SpecialtyTypeItemViewModel>? = null,
+    @SerializedName("selectedSpecialtyTypes")
+    val selectedSpecialtyTypes: kotlin.collections.List<java.util.UUID>? = null
 )
 

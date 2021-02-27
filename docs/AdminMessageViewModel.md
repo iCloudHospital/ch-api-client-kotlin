@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **customType** | **kotlin.String** |  |  [optional]
 **channelUrl** | **kotlin.String** |  |  [optional]
 **mentionType** | **kotlin.String** |  |  [optional]
-**mentionedUsers** | [**kotlin.collections.List&lt;kotlin.Any&gt;**](kotlin.Any.md) |  |  [optional]
 **isRemoved** | **kotlin.Boolean** |  |  [optional]
 **message** | **kotlin.String** |  |  [optional]
 **data** | **kotlin.String** |  |  [optional]

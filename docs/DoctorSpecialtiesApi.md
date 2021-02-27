@@ -25,7 +25,9 @@ val webService = apiClient.createWebservice(DoctorSpecialtiesApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : DoctorSpecialtyViewModel = webService.apiV1DoctorsDoctorIdSpecialtySpecialtyIdPost(doctorId, specialtyId)
+launch(Dispatchers.IO) {
+    val result : DoctorSpecialtyViewModel = webService.apiV1DoctorsDoctorIdSpecialtySpecialtyIdPost(doctorId, specialtyId)
+}
 ```
 
 ### Parameters
@@ -66,7 +68,9 @@ val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.uti
 val specailtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalId : kotlin.String = hospitalId_example // kotlin.String | 
 
-val result : kotlin.Boolean = webService.apiV1DoctorsHospitalIdDoctorsDoctorIdDelete(doctorId, specailtyId, hospitalId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DoctorsHospitalIdDoctorsDoctorIdDelete(doctorId, specailtyId, hospitalId)
+}
 ```
 
 ### Parameters

@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreatePatientCommand
@@ -30,10 +30,10 @@ interface PatientsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[PatientsViewModel]>
+     * @return [PatientsViewModel]
      */
     @GET("api/v1/patients")
-    fun apiV1PatientsGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<PatientsViewModel>
+    suspend fun apiV1PatientsGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<PatientsViewModel>
 
     /**
      * Delete patient.
@@ -44,10 +44,10 @@ interface PatientsApi {
      *  - 403: Forbidden
      * 
      * @param patientId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/patients/{patientId}")
-    fun apiV1PatientsPatientIdDelete(@Path("patientId") patientId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1PatientsPatientIdDelete(@Path("patientId") patientId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get patient.
@@ -58,10 +58,10 @@ interface PatientsApi {
      *  - 403: Forbidden
      * 
      * @param patientId  
-     * @return [Call]<[PatientViewModel]>
+     * @return [PatientViewModel]
      */
     @GET("api/v1/patients/{patientId}")
-    fun apiV1PatientsPatientIdGet(@Path("patientId") patientId: java.util.UUID): Call<PatientViewModel>
+    suspend fun apiV1PatientsPatientIdGet(@Path("patientId") patientId: java.util.UUID): Response<PatientViewModel>
 
     /**
      * Update patient.
@@ -73,10 +73,10 @@ interface PatientsApi {
      * 
      * @param patientId  
      * @param updatePatientCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/patients/{patientId}")
-    fun apiV1PatientsPatientIdPut(@Path("patientId") patientId: java.util.UUID, @Body updatePatientCommand: UpdatePatientCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1PatientsPatientIdPut(@Path("patientId") patientId: java.util.UUID, @Body updatePatientCommand: UpdatePatientCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create patient.
@@ -87,9 +87,9 @@ interface PatientsApi {
      *  - 403: Forbidden
      * 
      * @param createPatientCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/patients")
-    fun apiV1PatientsPost(@Body createPatientCommand: CreatePatientCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1PatientsPost(@Body createPatientCommand: CreatePatientCommand? = null): Response<java.util.UUID>
 
 }

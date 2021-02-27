@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateQuestionCommentCommand
@@ -27,10 +27,10 @@ interface QuestionCommentsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[QuestionCommentsViewModel]>
+     * @return [QuestionCommentsViewModel]
      */
     @GET("api/v1/questions/{questionId}/questioncomments")
-    fun apiV1QuestionsQuestionIdQuestioncommentsGet(@Path("questionId") questionId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("QuestionId") questionId2: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<QuestionCommentsViewModel>
+    suspend fun apiV1QuestionsQuestionIdQuestioncommentsGet(@Path("questionId") questionId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("QuestionId") questionId2: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<QuestionCommentsViewModel>
 
     /**
      * Create an questionComment.
@@ -42,10 +42,10 @@ interface QuestionCommentsApi {
      * 
      * @param questionId  
      * @param createQuestionCommentCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/questions/{questionId}/questioncomments")
-    fun apiV1QuestionsQuestionIdQuestioncommentsPost(@Path("questionId") questionId: java.util.UUID, @Body createQuestionCommentCommand: CreateQuestionCommentCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1QuestionsQuestionIdQuestioncommentsPost(@Path("questionId") questionId: java.util.UUID, @Body createQuestionCommentCommand: CreateQuestionCommentCommand? = null): Response<java.util.UUID>
 
     /**
      * Delete questionComment.
@@ -57,10 +57,10 @@ interface QuestionCommentsApi {
      * 
      * @param questionId  
      * @param questionCommentId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/questions/{questionId}/questioncomments/{questionCommentId}")
-    fun apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdDelete(@Path("questionId") questionId: java.util.UUID, @Path("questionCommentId") questionCommentId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdDelete(@Path("questionId") questionId: java.util.UUID, @Path("questionCommentId") questionCommentId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get questionComment.
@@ -72,10 +72,10 @@ interface QuestionCommentsApi {
      * 
      * @param questionId  
      * @param questionCommentId  
-     * @return [Call]<[QuestionCommentViewModel]>
+     * @return [QuestionCommentViewModel]
      */
     @GET("api/v1/questions/{questionId}/questioncomments/{questionCommentId}")
-    fun apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdGet(@Path("questionId") questionId: java.util.UUID, @Path("questionCommentId") questionCommentId: java.util.UUID): Call<QuestionCommentViewModel>
+    suspend fun apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdGet(@Path("questionId") questionId: java.util.UUID, @Path("questionCommentId") questionCommentId: java.util.UUID): Response<QuestionCommentViewModel>
 
     /**
      * Update questionComment.
@@ -88,9 +88,9 @@ interface QuestionCommentsApi {
      * @param questionId  
      * @param questionCommentId  
      * @param updateQuestionCommentCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/questions/{questionId}/questioncomments/{questionCommentId}")
-    fun apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdPut(@Path("questionId") questionId: java.util.UUID, @Path("questionCommentId") questionCommentId: java.util.UUID, @Body updateQuestionCommentCommand: UpdateQuestionCommentCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdPut(@Path("questionId") questionId: java.util.UUID, @Path("questionCommentId") questionCommentId: java.util.UUID, @Body updateQuestionCommentCommand: UpdateQuestionCommentCommand? = null): Response<kotlin.Boolean>
 
 }

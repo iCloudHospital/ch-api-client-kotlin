@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.HospitalSpecialtiesViewModel
@@ -21,10 +21,10 @@ interface HospitalSpecialtiesApi {
      * 
      * @param hospitalId  
      * @param specialtyId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Create hospitalSpecialty.
@@ -36,10 +36,10 @@ interface HospitalSpecialtiesApi {
      * 
      * @param hospitalId  
      * @param specialtyId  
-     * @return [Call]<[HospitalSpecialtyViewModel]>
+     * @return [HospitalSpecialtyViewModel]
      */
     @POST("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Call<HospitalSpecialtyViewModel>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Response<HospitalSpecialtyViewModel>
 
     /**
      * Update hospitalSpecialty sequence.
@@ -52,10 +52,10 @@ interface HospitalSpecialtiesApi {
      * @param hospitalId  
      * @param specialtyTypeId  
      * @param updateHospitalSpecialtySequenceCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/specialtysequence")
-    fun apiV1HospitalsHospitalIdSpecialtysequencePut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("SpecialtyTypeId") specialtyTypeId: java.util.UUID, @Body updateHospitalSpecialtySequenceCommand: UpdateHospitalSpecialtySequenceCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdSpecialtysequencePut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("SpecialtyTypeId") specialtyTypeId: java.util.UUID, @Body updateHospitalSpecialtySequenceCommand: UpdateHospitalSpecialtySequenceCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get all hospitalSpecialties.
@@ -74,9 +74,9 @@ interface HospitalSpecialtiesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[HospitalSpecialtiesViewModel]>
+     * @return [HospitalSpecialtiesViewModel]
      */
     @GET("api/v1/hospitals/specialties")
-    fun apiV1HospitalsSpecialtiesGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<HospitalSpecialtiesViewModel>
+    suspend fun apiV1HospitalsSpecialtiesGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<HospitalSpecialtiesViewModel>
 
 }

@@ -19,8 +19,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param photo 
- * @param photoThumbnail 
  * @param id 
  * @param name 
  * @param normalizedName 
@@ -32,13 +30,11 @@ import com.google.gson.annotations.SerializedName
  * @param marketingType 
  * @param dealPackages 
  * @param auditableEntity 
+ * @param photo 
+ * @param photoThumbnail 
  */
 
 data class UpdateDealCommand (
-    @SerializedName("photo")
-    val photo: kotlin.String? = null,
-    @SerializedName("photoThumbnail")
-    val photoThumbnail: kotlin.String? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("name")
@@ -60,6 +56,10 @@ data class UpdateDealCommand (
     @SerializedName("dealPackages")
     val dealPackages: kotlin.collections.List<DealPackageItemViewModel>? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("photo")
+    val photo: kotlin.String? = null,
+    @SerializedName("photoThumbnail")
+    val photoThumbnail: kotlin.String? = null
 )
 

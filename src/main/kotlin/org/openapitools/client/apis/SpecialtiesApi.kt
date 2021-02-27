@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateSpecialtyCommand
@@ -26,10 +26,10 @@ interface SpecialtiesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[SpecialtiesViewModel]>
+     * @return [SpecialtiesViewModel]
      */
     @GET("api/v1/specialties")
-    fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<SpecialtiesViewModel>
+    suspend fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtiesViewModel>
 
     /**
      * Create specialty.
@@ -41,10 +41,10 @@ interface SpecialtiesApi {
      * 
      * @param specialtyTypeId  (optional)
      * @param createSpecialtyCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/specialties")
-    fun apiV1SpecialtiesPost(@Query("specialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Body createSpecialtyCommand: CreateSpecialtyCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1SpecialtiesPost(@Query("specialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Body createSpecialtyCommand: CreateSpecialtyCommand? = null): Response<java.util.UUID>
 
     /**
      * Get specialty by slug.
@@ -53,10 +53,10 @@ interface SpecialtiesApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[SpecialtyViewModel]>
+     * @return [SpecialtyViewModel]
      */
     @GET("api/v1/specialties/slugs/{slug}")
-    fun apiV1SpecialtiesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<SpecialtyViewModel>
+    suspend fun apiV1SpecialtiesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<SpecialtyViewModel>
 
     /**
      * Delete specialty.
@@ -67,10 +67,10 @@ interface SpecialtiesApi {
      *  - 403: Forbidden
      * 
      * @param specialtyId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/specialties/{specialtyId}")
-    fun apiV1SpecialtiesSpecialtyIdDelete(@Path("specialtyId") specialtyId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1SpecialtiesSpecialtyIdDelete(@Path("specialtyId") specialtyId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get specialty.
@@ -79,10 +79,10 @@ interface SpecialtiesApi {
      *  - 200: Success
      * 
      * @param specialtyId  
-     * @return [Call]<[SpecialtyViewModel]>
+     * @return [SpecialtyViewModel]
      */
     @GET("api/v1/specialties/{specialtyId}")
-    fun apiV1SpecialtiesSpecialtyIdGet(@Path("specialtyId") specialtyId: java.util.UUID): Call<SpecialtyViewModel>
+    suspend fun apiV1SpecialtiesSpecialtyIdGet(@Path("specialtyId") specialtyId: java.util.UUID): Response<SpecialtyViewModel>
 
     /**
      * Update specialty
@@ -94,9 +94,9 @@ interface SpecialtiesApi {
      * 
      * @param specialtyId  
      * @param updateSpecialtyCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/specialties/{specialtyId}")
-    fun apiV1SpecialtiesSpecialtyIdPut(@Path("specialtyId") specialtyId: java.util.UUID, @Body updateSpecialtyCommand: UpdateSpecialtyCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1SpecialtiesSpecialtyIdPut(@Path("specialtyId") specialtyId: java.util.UUID, @Body updateSpecialtyCommand: UpdateSpecialtyCommand? = null): Response<kotlin.Boolean>
 
 }

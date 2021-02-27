@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.ChangeEmailCommand
@@ -19,10 +19,10 @@ interface ProfilesApi {
      *  - 403: Forbidden
      * 
      * @param changeEmailCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/profiles/changeemail")
-    fun apiV1ProfilesChangeemailPost(@Body changeEmailCommand: ChangeEmailCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1ProfilesChangeemailPost(@Body changeEmailCommand: ChangeEmailCommand? = null): Response<kotlin.Boolean>
 
     /**
      * 
@@ -33,10 +33,10 @@ interface ProfilesApi {
      *  - 403: Forbidden
      * 
      * @param confirmEmailCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/profiles/confirmemail")
-    fun apiV1ProfilesConfirmemailPost(@Body confirmEmailCommand: ConfirmEmailCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1ProfilesConfirmemailPost(@Body confirmEmailCommand: ConfirmEmailCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get current user&#39;s profile.
@@ -46,9 +46,9 @@ interface ProfilesApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @return [Call]<[UserViewModel]>
+     * @return [UserViewModel]
      */
     @GET("api/v1/profiles")
-    fun apiV1ProfilesGet(): Call<UserViewModel>
+    suspend fun apiV1ProfilesGet(): Response<UserViewModel>
 
 }

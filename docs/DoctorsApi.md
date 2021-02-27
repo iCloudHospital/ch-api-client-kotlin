@@ -28,7 +28,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdDelete(doctorId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdDelete(doctorId)
+}
 ```
 
 ### Parameters
@@ -66,7 +68,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : DoctorViewModel = webService.apiV1DoctorsDoctorIdGet(doctorId)
+launch(Dispatchers.IO) {
+    val result : DoctorViewModel = webService.apiV1DoctorsDoctorIdGet(doctorId)
+}
 ```
 
 ### Parameters
@@ -105,7 +109,9 @@ val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateDoctorCommand : UpdateDoctorCommand =  // UpdateDoctorCommand | 
 
-val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdPut(doctorId, updateDoctorCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdPut(doctorId, updateDoctorCommand)
+}
 ```
 
 ### Parameters
@@ -159,7 +165,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : DoctorsViewModel = webService.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : DoctorsViewModel = webService.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -214,7 +222,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val createDoctorCommand : CreateDoctorCommand =  // CreateDoctorCommand | 
 
-val result : java.util.UUID = webService.apiV1DoctorsPost(createDoctorCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1DoctorsPost(createDoctorCommand)
+}
 ```
 
 ### Parameters
@@ -250,7 +260,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 
-val result : DoctorViewModel = webService.apiV1DoctorsSlugsSlugGet(slug)
+launch(Dispatchers.IO) {
+    val result : DoctorViewModel = webService.apiV1DoctorsSlugsSlugGet(slug)
+}
 ```
 
 ### Parameters

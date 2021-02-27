@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateDealCommand
@@ -21,10 +21,10 @@ interface DealsApi {
      *  - 403: Forbidden
      * 
      * @param dealId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/deals/{dealId}")
-    fun apiV1DealsDealIdDelete(@Path("dealId") dealId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1DealsDealIdDelete(@Path("dealId") dealId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get deal.
@@ -33,10 +33,10 @@ interface DealsApi {
      *  - 200: Success
      * 
      * @param dealId  
-     * @return [Call]<[DealViewModel]>
+     * @return [DealViewModel]
      */
     @GET("api/v1/deals/{dealId}")
-    fun apiV1DealsDealIdGet(@Path("dealId") dealId: java.util.UUID): Call<DealViewModel>
+    suspend fun apiV1DealsDealIdGet(@Path("dealId") dealId: java.util.UUID): Response<DealViewModel>
 
     /**
      * Update deal.
@@ -48,10 +48,10 @@ interface DealsApi {
      * 
      * @param dealId  
      * @param updateDealCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/deals/{dealId}")
-    fun apiV1DealsDealIdPut(@Path("dealId") dealId: java.util.UUID, @Body updateDealCommand: UpdateDealCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1DealsDealIdPut(@Path("dealId") dealId: java.util.UUID, @Body updateDealCommand: UpdateDealCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get all deals.
@@ -71,10 +71,10 @@ interface DealsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[DealsViewModel]>
+     * @return [DealsViewModel]
      */
     @GET("api/v1/deals")
-    fun apiV1DealsGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<DealsViewModel>
+    suspend fun apiV1DealsGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DealsViewModel>
 
     /**
      * Create deal.
@@ -85,10 +85,10 @@ interface DealsApi {
      *  - 403: Forbidden
      * 
      * @param createDealCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/deals")
-    fun apiV1DealsPost(@Body createDealCommand: CreateDealCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1DealsPost(@Body createDealCommand: CreateDealCommand? = null): Response<java.util.UUID>
 
     /**
      * Get deal by slug.
@@ -97,9 +97,9 @@ interface DealsApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[DealViewModel]>
+     * @return [DealViewModel]
      */
     @GET("api/v1/deals/slugs/{slug}")
-    fun apiV1DealsSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<DealViewModel>
+    suspend fun apiV1DealsSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<DealViewModel>
 
 }

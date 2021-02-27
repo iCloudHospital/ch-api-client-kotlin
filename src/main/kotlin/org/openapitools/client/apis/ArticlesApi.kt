@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.ArticleStatus
@@ -35,10 +35,10 @@ interface ArticlesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[ArticlesViewModel]>
+     * @return [ArticlesViewModel]
      */
     @GET("api/v1/hospitals/articles")
-    fun apiV1HospitalsArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<ArticlesViewModel>
+    suspend fun apiV1HospitalsArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ArticlesViewModel>
 
     /**
      * Get article by slug.
@@ -47,10 +47,10 @@ interface ArticlesApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[ArticleViewModel]>
+     * @return [ArticleViewModel]
      */
     @GET("api/v1/hospitals/articles/slugs/{slug}")
-    fun apiV1HospitalsArticlesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<ArticleViewModel>
+    suspend fun apiV1HospitalsArticlesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<ArticleViewModel>
 
     /**
      * Delete article.
@@ -62,10 +62,10 @@ interface ArticlesApi {
      * 
      * @param hospitalId  
      * @param articleId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/articles/{articleId}")
-    fun apiV1HospitalsHospitalIdArticlesArticleIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get article.
@@ -75,10 +75,10 @@ interface ArticlesApi {
      * 
      * @param hospitalId  
      * @param articleId  
-     * @return [Call]<[ArticleViewModel]>
+     * @return [ArticleViewModel]
      */
     @GET("api/v1/hospitals/{hospitalId}/articles/{articleId}")
-    fun apiV1HospitalsHospitalIdArticlesArticleIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID): Call<ArticleViewModel>
+    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID): Response<ArticleViewModel>
 
     /**
      * Update article.
@@ -91,10 +91,10 @@ interface ArticlesApi {
      * @param hospitalId  
      * @param articleId  
      * @param updateArticleCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/articles/{articleId}")
-    fun apiV1HospitalsHospitalIdArticlesArticleIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID, @Body updateArticleCommand: UpdateArticleCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID, @Body updateArticleCommand: UpdateArticleCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create an article.
@@ -106,9 +106,9 @@ interface ArticlesApi {
      * 
      * @param hospitalId  
      * @param createArticleCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/hospitals/{hospitalId}/articles")
-    fun apiV1HospitalsHospitalIdArticlesPost(@Path("hospitalId") hospitalId: java.util.UUID, @Body createArticleCommand: CreateArticleCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1HospitalsHospitalIdArticlesPost(@Path("hospitalId") hospitalId: java.util.UUID, @Body createArticleCommand: CreateArticleCommand? = null): Response<java.util.UUID>
 
 }

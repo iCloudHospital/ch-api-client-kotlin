@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.InviteSendBirdGroupChannelCommand
@@ -19,10 +19,10 @@ interface GroupChannelsApi {
      * 
      * @param channelUrl  
      * @param inviteSendBirdGroupChannelCommand  (optional)
-     * @return [Call]<[SendBirdGroupChannelViewModel]>
+     * @return [SendBirdGroupChannelViewModel]
      */
     @POST("api/v1/groupchannels/{channelUrl}/invite")
-    fun apiV1GroupchannelsChannelUrlInvitePost(@Path("channelUrl") channelUrl: kotlin.String, @Body inviteSendBirdGroupChannelCommand: InviteSendBirdGroupChannelCommand? = null): Call<SendBirdGroupChannelViewModel>
+    suspend fun apiV1GroupchannelsChannelUrlInvitePost(@Path("channelUrl") channelUrl: kotlin.String, @Body inviteSendBirdGroupChannelCommand: InviteSendBirdGroupChannelCommand? = null): Response<SendBirdGroupChannelViewModel>
 
     /**
      * 
@@ -33,10 +33,10 @@ interface GroupChannelsApi {
      *  - 403: Forbidden
      * 
      * @param dealId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/groupchannels/deal/{dealId}")
-    fun apiV1GroupchannelsDealDealIdPost(@Path("dealId") dealId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1GroupchannelsDealDealIdPost(@Path("dealId") dealId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * 
@@ -47,10 +47,10 @@ interface GroupChannelsApi {
      *  - 403: Forbidden
      * 
      * @param dealId  
-     * @return [Call]<[SendBirdGroupChannelViewModel]>
+     * @return [SendBirdGroupChannelViewModel]
      */
     @GET("api/v1/groupchannels/{dealId}")
-    fun apiV1GroupchannelsDealIdGet(@Path("dealId") dealId: java.util.UUID): Call<SendBirdGroupChannelViewModel>
+    suspend fun apiV1GroupchannelsDealIdGet(@Path("dealId") dealId: java.util.UUID): Response<SendBirdGroupChannelViewModel>
 
     /**
      * 
@@ -61,10 +61,10 @@ interface GroupChannelsApi {
      *  - 403: Forbidden
      * 
      * @param doctorId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/groupchannels/doctor/{doctorId}")
-    fun apiV1GroupchannelsDoctorDoctorIdPost(@Path("doctorId") doctorId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1GroupchannelsDoctorDoctorIdPost(@Path("doctorId") doctorId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * 
@@ -75,9 +75,9 @@ interface GroupChannelsApi {
      *  - 403: Forbidden
      * 
      * @param hospitalId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/groupchannels/hospital/{hospitalId}")
-    fun apiV1GroupchannelsHospitalHospitalIdPost(@Path("hospitalId") hospitalId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1GroupchannelsHospitalHospitalIdPost(@Path("hospitalId") hospitalId: java.util.UUID): Response<kotlin.Boolean>
 
 }

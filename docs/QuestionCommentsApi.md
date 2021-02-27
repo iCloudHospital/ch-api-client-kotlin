@@ -34,7 +34,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : QuestionCommentsViewModel = webService.apiV1QuestionsQuestionIdQuestioncommentsGet(questionId, id, userId, questionId2, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : QuestionCommentsViewModel = webService.apiV1QuestionsQuestionIdQuestioncommentsGet(questionId, id, userId, questionId2, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -80,7 +82,9 @@ val webService = apiClient.createWebservice(QuestionCommentsApi::class.java)
 val questionId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createQuestionCommentCommand : CreateQuestionCommentCommand =  // CreateQuestionCommentCommand | 
 
-val result : java.util.UUID = webService.apiV1QuestionsQuestionIdQuestioncommentsPost(questionId, createQuestionCommentCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1QuestionsQuestionIdQuestioncommentsPost(questionId, createQuestionCommentCommand)
+}
 ```
 
 ### Parameters
@@ -120,7 +124,9 @@ val webService = apiClient.createWebservice(QuestionCommentsApi::class.java)
 val questionId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val questionCommentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdDelete(questionId, questionCommentId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdDelete(questionId, questionCommentId)
+}
 ```
 
 ### Parameters
@@ -160,7 +166,9 @@ val webService = apiClient.createWebservice(QuestionCommentsApi::class.java)
 val questionId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val questionCommentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : QuestionCommentViewModel = webService.apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdGet(questionId, questionCommentId)
+launch(Dispatchers.IO) {
+    val result : QuestionCommentViewModel = webService.apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdGet(questionId, questionCommentId)
+}
 ```
 
 ### Parameters
@@ -201,7 +209,9 @@ val questionId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val questionCommentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateQuestionCommentCommand : UpdateQuestionCommentCommand =  // UpdateQuestionCommentCommand | 
 
-val result : kotlin.Boolean = webService.apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdPut(questionId, questionCommentId, updateQuestionCommentCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1QuestionsQuestionIdQuestioncommentsQuestionCommentIdPut(questionId, questionCommentId, updateQuestionCommentCommand)
+}
 ```
 
 ### Parameters

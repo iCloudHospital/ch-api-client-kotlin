@@ -26,7 +26,9 @@ val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val channelUrl : kotlin.String = channelUrl_example // kotlin.String | 
 val inviteSendBirdGroupChannelCommand : InviteSendBirdGroupChannelCommand =  // InviteSendBirdGroupChannelCommand | 
 
-val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsChannelUrlInvitePost(channelUrl, inviteSendBirdGroupChannelCommand)
+launch(Dispatchers.IO) {
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsChannelUrlInvitePost(channelUrl, inviteSendBirdGroupChannelCommand)
+}
 ```
 
 ### Parameters
@@ -63,7 +65,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1GroupchannelsDealDealIdPost(dealId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1GroupchannelsDealDealIdPost(dealId)
+}
 ```
 
 ### Parameters
@@ -99,7 +103,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealIdGet(dealId)
+launch(Dispatchers.IO) {
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealIdGet(dealId)
+}
 ```
 
 ### Parameters
@@ -135,7 +141,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1GroupchannelsDoctorDoctorIdPost(doctorId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1GroupchannelsDoctorDoctorIdPost(doctorId)
+}
 ```
 
 ### Parameters
@@ -171,7 +179,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1GroupchannelsHospitalHospitalIdPost(hospitalId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1GroupchannelsHospitalHospitalIdPost(hospitalId)
+}
 ```
 
 ### Parameters

@@ -23,6 +23,7 @@ import com.google.gson.annotations.SerializedName
  * @param name 
  * @param slug 
  * @param description 
+ * @param content 
  * @param hospitalId 
  * @param hospitalName 
  * @param specialtyTypeId 
@@ -47,6 +48,8 @@ data class ServiceViewModel (
     val slug: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("content")
+    val content: kotlin.String? = null,
     @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
     @SerializedName("hospitalName")

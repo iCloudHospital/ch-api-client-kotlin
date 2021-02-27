@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateSpecialtyTypeCategoryCommand
@@ -24,10 +24,10 @@ interface SpecialtyTypeCategoriesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[SpecialtyTypeCategoriesViewModel]>
+     * @return [SpecialtyTypeCategoriesViewModel]
      */
     @GET("api/v1/specialtytypecategories")
-    fun apiV1SpecialtytypecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<SpecialtyTypeCategoriesViewModel>
+    suspend fun apiV1SpecialtytypecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtyTypeCategoriesViewModel>
 
     /**
      * Create specialtyTypeCategory.
@@ -38,10 +38,10 @@ interface SpecialtyTypeCategoriesApi {
      *  - 403: Forbidden
      * 
      * @param createSpecialtyTypeCategoryCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/specialtytypecategories")
-    fun apiV1SpecialtytypecategoriesPost(@Body createSpecialtyTypeCategoryCommand: CreateSpecialtyTypeCategoryCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1SpecialtytypecategoriesPost(@Body createSpecialtyTypeCategoryCommand: CreateSpecialtyTypeCategoryCommand? = null): Response<java.util.UUID>
 
     /**
      * Delete specialtyTypeCategory.
@@ -52,10 +52,10 @@ interface SpecialtyTypeCategoriesApi {
      *  - 403: Forbidden
      * 
      * @param specialtyTypeCategoryId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/specialtytypecategories/{specialtyTypeCategoryId}")
-    fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdDelete(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdDelete(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get specialtyTypeCategory.
@@ -64,10 +64,10 @@ interface SpecialtyTypeCategoriesApi {
      *  - 200: Success
      * 
      * @param specialtyTypeCategoryId  
-     * @return [Call]<[SpecialtyTypeCategoryViewModel]>
+     * @return [SpecialtyTypeCategoryViewModel]
      */
     @GET("api/v1/specialtytypecategories/{specialtyTypeCategoryId}")
-    fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID): Call<SpecialtyTypeCategoryViewModel>
+    suspend fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID): Response<SpecialtyTypeCategoryViewModel>
 
     /**
      * Update specialtyTypeCategory
@@ -79,9 +79,9 @@ interface SpecialtyTypeCategoriesApi {
      * 
      * @param specialtyTypeCategoryId  
      * @param updateSpecialtyTypeCategoryCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/specialtytypecategories/{specialtyTypeCategoryId}")
-    fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdPut(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID, @Body updateSpecialtyTypeCategoryCommand: UpdateSpecialtyTypeCategoryCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdPut(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID, @Body updateSpecialtyTypeCategoryCommand: UpdateSpecialtyTypeCategoryCommand? = null): Response<kotlin.Boolean>
 
 }

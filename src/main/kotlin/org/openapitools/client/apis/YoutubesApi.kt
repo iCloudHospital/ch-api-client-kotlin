@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateYoutubeCommand
@@ -28,10 +28,10 @@ interface YoutubesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[YoutubesViewModel]>
+     * @return [YoutubesViewModel]
      */
     @GET("api/v1/youtubes")
-    fun apiV1YoutubesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("NormalizedTitle") normalizedTitle: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Tag") tag: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<YoutubesViewModel>
+    suspend fun apiV1YoutubesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("NormalizedTitle") normalizedTitle: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Tag") tag: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<YoutubesViewModel>
 
     /**
      * Create an youtube.
@@ -42,10 +42,10 @@ interface YoutubesApi {
      *  - 403: Forbidden
      * 
      * @param createYoutubeCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/youtubes")
-    fun apiV1YoutubesPost(@Body createYoutubeCommand: CreateYoutubeCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1YoutubesPost(@Body createYoutubeCommand: CreateYoutubeCommand? = null): Response<java.util.UUID>
 
     /**
      * Get youtube by slug.
@@ -54,10 +54,10 @@ interface YoutubesApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[YoutubeViewModel]>
+     * @return [YoutubeViewModel]
      */
     @GET("api/v1/youtubes/slugs/{slug}")
-    fun apiV1YoutubesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<YoutubeViewModel>
+    suspend fun apiV1YoutubesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<YoutubeViewModel>
 
     /**
      * Delete youtube.
@@ -68,10 +68,10 @@ interface YoutubesApi {
      *  - 403: Forbidden
      * 
      * @param youtubeId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/youtubes/{youtubeId}")
-    fun apiV1YoutubesYoutubeIdDelete(@Path("youtubeId") youtubeId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1YoutubesYoutubeIdDelete(@Path("youtubeId") youtubeId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get youtube.
@@ -80,10 +80,10 @@ interface YoutubesApi {
      *  - 200: Success
      * 
      * @param youtubeId  
-     * @return [Call]<[YoutubeViewModel]>
+     * @return [YoutubeViewModel]
      */
     @GET("api/v1/youtubes/{youtubeId}")
-    fun apiV1YoutubesYoutubeIdGet(@Path("youtubeId") youtubeId: java.util.UUID): Call<YoutubeViewModel>
+    suspend fun apiV1YoutubesYoutubeIdGet(@Path("youtubeId") youtubeId: java.util.UUID): Response<YoutubeViewModel>
 
     /**
      * Update youtube.
@@ -95,9 +95,9 @@ interface YoutubesApi {
      * 
      * @param youtubeId  
      * @param updateYoutubeCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/youtubes/{youtubeId}")
-    fun apiV1YoutubesYoutubeIdPut(@Path("youtubeId") youtubeId: java.util.UUID, @Body updateYoutubeCommand: UpdateYoutubeCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1YoutubesYoutubeIdPut(@Path("youtubeId") youtubeId: java.util.UUID, @Body updateYoutubeCommand: UpdateYoutubeCommand? = null): Response<kotlin.Boolean>
 
 }

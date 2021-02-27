@@ -30,7 +30,9 @@ val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val approveConsultationCommand : ApproveConsultationCommand =  // ApproveConsultationCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdApprovePost(consultationId, approveConsultationCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdApprovePost(consultationId, approveConsultationCommand)
+}
 ```
 
 ### Parameters
@@ -67,7 +69,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdCancelPost(consultationId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdCancelPost(consultationId)
+}
 ```
 
 ### Parameters
@@ -103,7 +107,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdDelete(consultationId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdDelete(consultationId)
+}
 ```
 
 ### Parameters
@@ -139,7 +145,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ConsultationViewModel = webService.apiV1ConsultationsConsultationIdGet(consultationId)
+launch(Dispatchers.IO) {
+    val result : ConsultationViewModel = webService.apiV1ConsultationsConsultationIdGet(consultationId)
+}
 ```
 
 ### Parameters
@@ -175,7 +183,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.String = webService.apiV1ConsultationsConsultationIdPayPost(consultationId)
+launch(Dispatchers.IO) {
+    val result : kotlin.String = webService.apiV1ConsultationsConsultationIdPayPost(consultationId)
+}
 ```
 
 ### Parameters
@@ -212,7 +222,9 @@ val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateConsultationCommand : UpdateConsultationCommand =  // UpdateConsultationCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdPut(consultationId, updateConsultationCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdPut(consultationId, updateConsultationCommand)
+}
 ```
 
 ### Parameters
@@ -250,7 +262,9 @@ val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val rejectConsultationCommand : RejectConsultationCommand =  // RejectConsultationCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdRejectPost(consultationId, rejectConsultationCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ConsultationsConsultationIdRejectPost(consultationId, rejectConsultationCommand)
+}
 ```
 
 ### Parameters
@@ -294,7 +308,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : ConsultationsViewModel = webService.apiV1ConsultationsGet(searchString, isOpen, isCompleted, status, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : ConsultationsViewModel = webService.apiV1ConsultationsGet(searchString, isOpen, isCompleted, status, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -338,7 +354,9 @@ val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val requestId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createConsultationCommand : CreateConsultationCommand =  // CreateConsultationCommand | 
 
-val result : java.util.UUID = webService.apiV1ConsultationsRequestIdPost(requestId, createConsultationCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1ConsultationsRequestIdPost(requestId, createConsultationCommand)
+}
 ```
 
 ### Parameters

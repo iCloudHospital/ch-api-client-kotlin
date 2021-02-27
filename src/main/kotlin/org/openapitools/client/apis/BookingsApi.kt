@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.ApproveBookingCommand
@@ -24,10 +24,10 @@ interface BookingsApi {
      * 
      * @param bookingId  
      * @param approveBookingCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/bookings/{bookingId}/approve")
-    fun apiV1BookingsBookingIdApprovePost(@Path("bookingId") bookingId: java.util.UUID, @Body approveBookingCommand: ApproveBookingCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1BookingsBookingIdApprovePost(@Path("bookingId") bookingId: java.util.UUID, @Body approveBookingCommand: ApproveBookingCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Cancel booking.
@@ -38,10 +38,10 @@ interface BookingsApi {
      *  - 403: Forbidden
      * 
      * @param bookingId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/bookings/{bookingId}/cancel")
-    fun apiV1BookingsBookingIdCancelPost(@Path("bookingId") bookingId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1BookingsBookingIdCancelPost(@Path("bookingId") bookingId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Delete booking.
@@ -52,10 +52,10 @@ interface BookingsApi {
      *  - 403: Forbidden
      * 
      * @param bookingId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/bookings/{bookingId}")
-    fun apiV1BookingsBookingIdDelete(@Path("bookingId") bookingId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1BookingsBookingIdDelete(@Path("bookingId") bookingId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get booking.
@@ -66,10 +66,10 @@ interface BookingsApi {
      *  - 403: Forbidden
      * 
      * @param bookingId  
-     * @return [Call]<[BookingViewModel]>
+     * @return [BookingViewModel]
      */
     @GET("api/v1/bookings/{bookingId}")
-    fun apiV1BookingsBookingIdGet(@Path("bookingId") bookingId: java.util.UUID): Call<BookingViewModel>
+    suspend fun apiV1BookingsBookingIdGet(@Path("bookingId") bookingId: java.util.UUID): Response<BookingViewModel>
 
     /**
      * Mark as Paid booking.
@@ -80,10 +80,10 @@ interface BookingsApi {
      *  - 403: Forbidden
      * 
      * @param bookingId  
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/bookings/{bookingId}/paid")
-    fun apiV1BookingsBookingIdPaidPost(@Path("bookingId") bookingId: java.util.UUID): Call<java.util.UUID>
+    suspend fun apiV1BookingsBookingIdPaidPost(@Path("bookingId") bookingId: java.util.UUID): Response<java.util.UUID>
 
     /**
      * Pay booking.
@@ -94,10 +94,10 @@ interface BookingsApi {
      *  - 403: Forbidden
      * 
      * @param bookingId  
-     * @return [Call]<[kotlin.String]>
+     * @return [kotlin.String]
      */
     @POST("api/v1/bookings/{bookingId}/pay")
-    fun apiV1BookingsBookingIdPayPost(@Path("bookingId") bookingId: java.util.UUID): Call<kotlin.String>
+    suspend fun apiV1BookingsBookingIdPayPost(@Path("bookingId") bookingId: java.util.UUID): Response<kotlin.String>
 
     /**
      * Update booking.
@@ -109,10 +109,10 @@ interface BookingsApi {
      * 
      * @param bookingId  
      * @param updateBookingCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/bookings/{bookingId}")
-    fun apiV1BookingsBookingIdPut(@Path("bookingId") bookingId: java.util.UUID, @Body updateBookingCommand: UpdateBookingCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1BookingsBookingIdPut(@Path("bookingId") bookingId: java.util.UUID, @Body updateBookingCommand: UpdateBookingCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Reject booking.
@@ -124,10 +124,10 @@ interface BookingsApi {
      * 
      * @param bookingId  
      * @param rejectBookingCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @POST("api/v1/bookings/{bookingId}/reject")
-    fun apiV1BookingsBookingIdRejectPost(@Path("bookingId") bookingId: java.util.UUID, @Body rejectBookingCommand: RejectBookingCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1BookingsBookingIdRejectPost(@Path("bookingId") bookingId: java.util.UUID, @Body rejectBookingCommand: RejectBookingCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get all bookings.
@@ -146,10 +146,10 @@ interface BookingsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[BookingsViewModel]>
+     * @return [BookingsViewModel]
      */
     @GET("api/v1/bookings")
-    fun apiV1BookingsGet(@Query("SearchString") searchString: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: BookingStatus? = null, @Query("DealPackageId") dealPackageId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<BookingsViewModel>
+    suspend fun apiV1BookingsGet(@Query("SearchString") searchString: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: BookingStatus? = null, @Query("DealPackageId") dealPackageId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<BookingsViewModel>
 
     /**
      * Create booking.
@@ -161,9 +161,9 @@ interface BookingsApi {
      * 
      * @param requestId  
      * @param createBookingCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/bookings/{requestId}")
-    fun apiV1BookingsRequestIdPost(@Path("requestId") requestId: java.util.UUID, @Body createBookingCommand: CreateBookingCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1BookingsRequestIdPost(@Path("requestId") requestId: java.util.UUID, @Body createBookingCommand: CreateBookingCommand? = null): Response<java.util.UUID>
 
 }

@@ -33,7 +33,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : ServiceCategoriesViewModel = webService.apiV1ServicecategoriesGet(id, name, description, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : ServiceCategoriesViewModel = webService.apiV1ServicecategoriesGet(id, name, description, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -77,7 +79,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServiceCategoriesApi::class.java)
 val createServiceCategoryCommand : CreateServiceCategoryCommand =  // CreateServiceCategoryCommand | 
 
-val result : java.util.UUID = webService.apiV1ServicecategoriesPost(createServiceCategoryCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1ServicecategoriesPost(createServiceCategoryCommand)
+}
 ```
 
 ### Parameters
@@ -115,7 +119,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServiceCategoriesApi::class.java)
 val serviceCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1ServicecategoriesServiceCategoryIdDelete(serviceCategoryId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ServicecategoriesServiceCategoryIdDelete(serviceCategoryId)
+}
 ```
 
 ### Parameters
@@ -153,7 +159,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServiceCategoriesApi::class.java)
 val serviceCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ServiceCategoryViewModel = webService.apiV1ServicecategoriesServiceCategoryIdGet(serviceCategoryId)
+launch(Dispatchers.IO) {
+    val result : ServiceCategoryViewModel = webService.apiV1ServicecategoriesServiceCategoryIdGet(serviceCategoryId)
+}
 ```
 
 ### Parameters
@@ -192,7 +200,9 @@ val webService = apiClient.createWebservice(ServiceCategoriesApi::class.java)
 val serviceCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateServiceCategoryCommand : UpdateServiceCategoryCommand =  // UpdateServiceCategoryCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ServicecategoriesServiceCategoryIdPut(serviceCategoryId, updateServiceCategoryCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ServicecategoriesServiceCategoryIdPut(serviceCategoryId, updateServiceCategoryCommand)
+}
 ```
 
 ### Parameters

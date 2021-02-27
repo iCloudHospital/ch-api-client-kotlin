@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CHManagerViewModel
@@ -21,10 +21,10 @@ interface CHManagersApi {
      *  - 403: Forbidden
      * 
      * @param chManagerId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/chmanagers/{chManagerId}")
-    fun apiV1ChmanagersChManagerIdDelete(@Path("chManagerId") chManagerId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1ChmanagersChManagerIdDelete(@Path("chManagerId") chManagerId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get cloud hospital manager.
@@ -36,10 +36,10 @@ interface CHManagersApi {
      * 
      * @param managerId  
      * @param chManagerId  
-     * @return [Call]<[CHManagerViewModel]>
+     * @return [CHManagerViewModel]
      */
     @GET("api/v1/chmanagers/{chManagerId}")
-    fun apiV1ChmanagersChManagerIdGet(@Path("managerId") managerId: java.util.UUID, @Path("chManagerId") chManagerId: kotlin.String): Call<CHManagerViewModel>
+    suspend fun apiV1ChmanagersChManagerIdGet(@Path("managerId") managerId: java.util.UUID, @Path("chManagerId") chManagerId: kotlin.String): Response<CHManagerViewModel>
 
     /**
      * Update cloud hospital manager.
@@ -51,10 +51,10 @@ interface CHManagersApi {
      * 
      * @param chManagerId  
      * @param updateCHManagerCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/chmanagers/{chManagerId}")
-    fun apiV1ChmanagersChManagerIdPut(@Path("chManagerId") chManagerId: java.util.UUID, @Body updateCHManagerCommand: UpdateCHManagerCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1ChmanagersChManagerIdPut(@Path("chManagerId") chManagerId: java.util.UUID, @Body updateCHManagerCommand: UpdateCHManagerCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get cloud hospital managers.
@@ -74,10 +74,10 @@ interface CHManagersApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[CHManagersViewModel]>
+     * @return [CHManagersViewModel]
      */
     @GET("api/v1/chmanagers")
-    fun apiV1ChmanagersGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<CHManagersViewModel>
+    suspend fun apiV1ChmanagersGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<CHManagersViewModel>
 
     /**
      * Create cloud hospital manager.
@@ -88,9 +88,9 @@ interface CHManagersApi {
      *  - 403: Forbidden
      * 
      * @param createCHManagerCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/chmanagers")
-    fun apiV1ChmanagersPost(@Body createCHManagerCommand: CreateCHManagerCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1ChmanagersPost(@Body createCHManagerCommand: CreateCHManagerCommand? = null): Response<java.util.UUID>
 
 }

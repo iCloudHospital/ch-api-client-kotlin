@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateDoctorCommand
@@ -22,10 +22,10 @@ interface DoctorsApi {
      *  - 403: Forbidden
      * 
      * @param doctorId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/doctors/{doctorId}")
-    fun apiV1DoctorsDoctorIdDelete(@Path("doctorId") doctorId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1DoctorsDoctorIdDelete(@Path("doctorId") doctorId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get hospital doctor.
@@ -34,10 +34,10 @@ interface DoctorsApi {
      *  - 200: Success
      * 
      * @param doctorId  
-     * @return [Call]<[DoctorViewModel]>
+     * @return [DoctorViewModel]
      */
     @GET("api/v1/doctors/{doctorId}")
-    fun apiV1DoctorsDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID): Call<DoctorViewModel>
+    suspend fun apiV1DoctorsDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID): Response<DoctorViewModel>
 
     /**
      * Update hospital doctor.
@@ -49,10 +49,10 @@ interface DoctorsApi {
      * 
      * @param doctorId  
      * @param updateDoctorCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/doctors/{doctorId}")
-    fun apiV1DoctorsDoctorIdPut(@Path("doctorId") doctorId: java.util.UUID, @Body updateDoctorCommand: UpdateDoctorCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1DoctorsDoctorIdPut(@Path("doctorId") doctorId: java.util.UUID, @Body updateDoctorCommand: UpdateDoctorCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get all hospital doctors.
@@ -78,10 +78,10 @@ interface DoctorsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[DoctorsViewModel]>
+     * @return [DoctorsViewModel]
      */
     @GET("api/v1/doctors")
-    fun apiV1DoctorsGet(@Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("ExceptDoctorId") exceptDoctorId: java.util.UUID? = null, @Query("ExceptDoctorIds") exceptDoctorIds: kotlin.collections.List<java.util.UUID>? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<DoctorsViewModel>
+    suspend fun apiV1DoctorsGet(@Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("ExceptDoctorId") exceptDoctorId: java.util.UUID? = null, @Query("ExceptDoctorIds") exceptDoctorIds: kotlin.collections.List<java.util.UUID>? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DoctorsViewModel>
 
     /**
      * Create hospital doctor.
@@ -92,10 +92,10 @@ interface DoctorsApi {
      *  - 403: Forbidden
      * 
      * @param createDoctorCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/doctors")
-    fun apiV1DoctorsPost(@Body createDoctorCommand: CreateDoctorCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1DoctorsPost(@Body createDoctorCommand: CreateDoctorCommand? = null): Response<java.util.UUID>
 
     /**
      * Get hospital doctor by slug.
@@ -104,9 +104,9 @@ interface DoctorsApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[DoctorViewModel]>
+     * @return [DoctorViewModel]
      */
     @GET("api/v1/doctors/slugs/{slug}")
-    fun apiV1DoctorsSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<DoctorViewModel>
+    suspend fun apiV1DoctorsSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<DoctorViewModel>
 
 }

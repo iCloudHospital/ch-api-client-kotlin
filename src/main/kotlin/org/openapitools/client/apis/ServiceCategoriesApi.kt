@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateServiceCategoryCommand
@@ -24,10 +24,10 @@ interface ServiceCategoriesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[ServiceCategoriesViewModel]>
+     * @return [ServiceCategoriesViewModel]
      */
     @GET("api/v1/servicecategories")
-    fun apiV1ServicecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<ServiceCategoriesViewModel>
+    suspend fun apiV1ServicecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ServiceCategoriesViewModel>
 
     /**
      * Create ServiceCategory.
@@ -38,10 +38,10 @@ interface ServiceCategoriesApi {
      *  - 403: Forbidden
      * 
      * @param createServiceCategoryCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/servicecategories")
-    fun apiV1ServicecategoriesPost(@Body createServiceCategoryCommand: CreateServiceCategoryCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1ServicecategoriesPost(@Body createServiceCategoryCommand: CreateServiceCategoryCommand? = null): Response<java.util.UUID>
 
     /**
      * Delete ServiceCategory.
@@ -52,10 +52,10 @@ interface ServiceCategoriesApi {
      *  - 403: Forbidden
      * 
      * @param serviceCategoryId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/servicecategories/{serviceCategoryId}")
-    fun apiV1ServicecategoriesServiceCategoryIdDelete(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1ServicecategoriesServiceCategoryIdDelete(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get ServiceCategory.
@@ -64,10 +64,10 @@ interface ServiceCategoriesApi {
      *  - 200: Success
      * 
      * @param serviceCategoryId  
-     * @return [Call]<[ServiceCategoryViewModel]>
+     * @return [ServiceCategoryViewModel]
      */
     @GET("api/v1/servicecategories/{serviceCategoryId}")
-    fun apiV1ServicecategoriesServiceCategoryIdGet(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID): Call<ServiceCategoryViewModel>
+    suspend fun apiV1ServicecategoriesServiceCategoryIdGet(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID): Response<ServiceCategoryViewModel>
 
     /**
      * Update ServiceCategory
@@ -79,9 +79,9 @@ interface ServiceCategoriesApi {
      * 
      * @param serviceCategoryId  
      * @param updateServiceCategoryCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/servicecategories/{serviceCategoryId}")
-    fun apiV1ServicecategoriesServiceCategoryIdPut(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID, @Body updateServiceCategoryCommand: UpdateServiceCategoryCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1ServicecategoriesServiceCategoryIdPut(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID, @Body updateServiceCategoryCommand: UpdateServiceCategoryCommand? = null): Response<kotlin.Boolean>
 
 }

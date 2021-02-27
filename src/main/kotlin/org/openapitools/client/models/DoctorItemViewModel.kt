@@ -20,19 +20,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param slug 
- * @param consultationEnabled 
- * @param consultationFee 
- * @param overview 
- * @param doctorReviewsCount 
- * @param doctorEducationsCount 
- * @param doctorPortfoliosCount 
- * @param doctorSpecialtiesCount 
- * @param doctorSpecialties 
- * @param doctorCertificatesCount 
- * @param doctorAffiliationsCount 
- * @param doctorAffiliations 
- * @param articlesCount 
  * @param id 
  * @param userName 
  * @param firstName 
@@ -47,35 +34,22 @@ import com.google.gson.annotations.SerializedName
  * @param timeZone 
  * @param communicationUserId 
  * @param auditableEntity 
+ * @param slug 
+ * @param consultationEnabled 
+ * @param consultationFee 
+ * @param overview 
+ * @param doctorReviewsCount 
+ * @param doctorEducationsCount 
+ * @param doctorPortfoliosCount 
+ * @param doctorSpecialtiesCount 
+ * @param doctorSpecialties 
+ * @param doctorCertificatesCount 
+ * @param doctorAffiliationsCount 
+ * @param doctorAffiliations 
+ * @param articlesCount 
  */
 
 data class DoctorItemViewModel (
-    @SerializedName("slug")
-    val slug: kotlin.String? = null,
-    @SerializedName("consultationEnabled")
-    val consultationEnabled: kotlin.Boolean? = null,
-    @SerializedName("consultationFee")
-    val consultationFee: kotlin.Double? = null,
-    @SerializedName("overview")
-    val overview: kotlin.String? = null,
-    @SerializedName("doctorReviewsCount")
-    val doctorReviewsCount: kotlin.Int? = null,
-    @SerializedName("doctorEducationsCount")
-    val doctorEducationsCount: kotlin.Int? = null,
-    @SerializedName("doctorPortfoliosCount")
-    val doctorPortfoliosCount: kotlin.Int? = null,
-    @SerializedName("doctorSpecialtiesCount")
-    val doctorSpecialtiesCount: kotlin.Int? = null,
-    @SerializedName("doctorSpecialties")
-    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
-    @SerializedName("doctorCertificatesCount")
-    val doctorCertificatesCount: kotlin.Int? = null,
-    @SerializedName("doctorAffiliationsCount")
-    val doctorAffiliationsCount: kotlin.Int? = null,
-    @SerializedName("doctorAffiliations")
-    val doctorAffiliations: kotlin.collections.List<HospitalAffiliationViewModel>? = null,
-    @SerializedName("articlesCount")
-    val articlesCount: kotlin.Int? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -103,6 +77,32 @@ data class DoctorItemViewModel (
     @SerializedName("communicationUserId")
     val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("slug")
+    val slug: kotlin.String? = null,
+    @SerializedName("consultationEnabled")
+    val consultationEnabled: kotlin.Boolean? = null,
+    @SerializedName("consultationFee")
+    val consultationFee: kotlin.Double? = null,
+    @SerializedName("overview")
+    val overview: kotlin.String? = null,
+    @SerializedName("doctorReviewsCount")
+    val doctorReviewsCount: kotlin.Int? = null,
+    @SerializedName("doctorEducationsCount")
+    val doctorEducationsCount: kotlin.Int? = null,
+    @SerializedName("doctorPortfoliosCount")
+    val doctorPortfoliosCount: kotlin.Int? = null,
+    @SerializedName("doctorSpecialtiesCount")
+    val doctorSpecialtiesCount: kotlin.Int? = null,
+    @SerializedName("doctorSpecialties")
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
+    @SerializedName("doctorCertificatesCount")
+    val doctorCertificatesCount: kotlin.Int? = null,
+    @SerializedName("doctorAffiliationsCount")
+    val doctorAffiliationsCount: kotlin.Int? = null,
+    @SerializedName("doctorAffiliations")
+    val doctorAffiliations: kotlin.collections.List<HospitalAffiliationViewModel>? = null,
+    @SerializedName("articlesCount")
+    val articlesCount: kotlin.Int? = null
 )
 

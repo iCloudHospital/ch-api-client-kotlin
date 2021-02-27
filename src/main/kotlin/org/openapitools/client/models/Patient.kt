@@ -30,16 +30,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param contact 
- * @param contactNumber 
- * @param nationality 
- * @param questions 
- * @param bookings 
- * @param consultations 
- * @param payments 
- * @param customers 
- * @param doctorReviews 
- * @param hospitalReviews 
  * @param id 
  * @param userName 
  * @param email 
@@ -59,29 +49,19 @@ import com.google.gson.annotations.SerializedName
  * @param locations 
  * @param languages 
  * @param auditableEntity 
+ * @param contact 
+ * @param contactNumber 
+ * @param nationality 
+ * @param questions 
+ * @param bookings 
+ * @param consultations 
+ * @param payments 
+ * @param customers 
+ * @param doctorReviews 
+ * @param hospitalReviews 
  */
 
 data class Patient (
-    @SerializedName("contact")
-    val contact: kotlin.String? = null,
-    @SerializedName("contactNumber")
-    val contactNumber: kotlin.String? = null,
-    @SerializedName("nationality")
-    val nationality: kotlin.String? = null,
-    @SerializedName("questions")
-    val questions: kotlin.collections.List<Question>? = null,
-    @SerializedName("bookings")
-    val bookings: kotlin.collections.List<Booking>? = null,
-    @SerializedName("consultations")
-    val consultations: kotlin.collections.List<Consultation>? = null,
-    @SerializedName("payments")
-    val payments: kotlin.collections.List<Payment>? = null,
-    @SerializedName("customers")
-    val customers: kotlin.collections.List<Customer>? = null,
-    @SerializedName("doctorReviews")
-    val doctorReviews: kotlin.collections.List<DoctorReview>? = null,
-    @SerializedName("hospitalReviews")
-    val hospitalReviews: kotlin.collections.List<HospitalReview>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -119,6 +99,26 @@ data class Patient (
     @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguage>? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("contact")
+    val contact: kotlin.String? = null,
+    @SerializedName("contactNumber")
+    val contactNumber: kotlin.String? = null,
+    @SerializedName("nationality")
+    val nationality: kotlin.String? = null,
+    @SerializedName("questions")
+    val questions: kotlin.collections.List<Question>? = null,
+    @SerializedName("bookings")
+    val bookings: kotlin.collections.List<Booking>? = null,
+    @SerializedName("consultations")
+    val consultations: kotlin.collections.List<Consultation>? = null,
+    @SerializedName("payments")
+    val payments: kotlin.collections.List<Payment>? = null,
+    @SerializedName("customers")
+    val customers: kotlin.collections.List<Customer>? = null,
+    @SerializedName("doctorReviews")
+    val doctorReviews: kotlin.collections.List<DoctorReview>? = null,
+    @SerializedName("hospitalReviews")
+    val hospitalReviews: kotlin.collections.List<HospitalReview>? = null
 )
 

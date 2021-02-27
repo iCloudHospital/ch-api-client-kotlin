@@ -31,7 +31,9 @@ val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createServiceCommand : CreateServiceCommand =  // CreateServiceCommand | 
 
-val result : java.util.UUID = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(hospitalId, specialtyId, createServiceCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(hospitalId, specialtyId, createServiceCommand)
+}
 ```
 
 ### Parameters
@@ -73,7 +75,9 @@ val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(hospitalId, specialtyId, serviceId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(hospitalId, specialtyId, serviceId)
+}
 ```
 
 ### Parameters
@@ -115,7 +119,9 @@ val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ServiceViewModel = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(hospitalId, specialtyId, serviceId)
+launch(Dispatchers.IO) {
+    val result : ServiceViewModel = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(hospitalId, specialtyId, serviceId)
+}
 ```
 
 ### Parameters
@@ -158,7 +164,9 @@ val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.
 val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateServiceCommand : UpdateServiceCommand =  // UpdateServiceCommand | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(hospitalId, specialtyId, serviceId, updateServiceCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(hospitalId, specialtyId, serviceId, updateServiceCommand)
+}
 ```
 
 ### Parameters
@@ -201,7 +209,9 @@ val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateServiceSequenceCommand : UpdateServiceSequenceCommand =  // UpdateServiceSequenceCommand | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(hospitalId, specialtyId, updateServiceSequenceCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(hospitalId, specialtyId, updateServiceSequenceCommand)
+}
 ```
 
 ### Parameters
@@ -256,7 +266,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : ServicesViewModel = webService.apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : ServicesViewModel = webService.apiV1HospitalsServicesGet(id, name, description, hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyTypeId, specialtyTypeName, marketingType, procedure, created, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -307,7 +319,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServicesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 
-val result : ServiceViewModel = webService.apiV1HospitalsServicesSlugsSlugGet(slug)
+launch(Dispatchers.IO) {
+    val result : ServiceViewModel = webService.apiV1HospitalsServicesSlugsSlugGet(slug)
+}
 ```
 
 ### Parameters

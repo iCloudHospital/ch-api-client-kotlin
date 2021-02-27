@@ -28,7 +28,9 @@ val webService = apiClient.createWebservice(QuestionsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createQuestionCommand : CreateQuestionCommand =  // CreateQuestionCommand | 
 
-val result : java.util.UUID = webService.apiV1HospitalsHospitalIdQuestionsPost(hospitalId, createQuestionCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1HospitalsHospitalIdQuestionsPost(hospitalId, createQuestionCommand)
+}
 ```
 
 ### Parameters
@@ -68,7 +70,9 @@ val webService = apiClient.createWebservice(QuestionsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val questionId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdQuestionsQuestionIdDelete(hospitalId, questionId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdQuestionsQuestionIdDelete(hospitalId, questionId)
+}
 ```
 
 ### Parameters
@@ -108,7 +112,9 @@ val webService = apiClient.createWebservice(QuestionsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val questionId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : QuestionViewModel = webService.apiV1HospitalsHospitalIdQuestionsQuestionIdGet(hospitalId, questionId)
+launch(Dispatchers.IO) {
+    val result : QuestionViewModel = webService.apiV1HospitalsHospitalIdQuestionsQuestionIdGet(hospitalId, questionId)
+}
 ```
 
 ### Parameters
@@ -149,7 +155,9 @@ val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val questionId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateQuestionCommand : UpdateQuestionCommand =  // UpdateQuestionCommand | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdQuestionsQuestionIdPut(hospitalId, questionId, updateQuestionCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdQuestionsQuestionIdPut(hospitalId, questionId, updateQuestionCommand)
+}
 ```
 
 ### Parameters
@@ -198,7 +206,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : QuestionsViewModel = webService.apiV1HospitalsQuestionsGet(id, title, hospitalId, patientId, questionType, questionStatus, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : QuestionsViewModel = webService.apiV1HospitalsQuestionsGet(id, title, hospitalId, patientId, questionType, questionStatus, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters

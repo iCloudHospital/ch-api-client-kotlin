@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CommunicationUserTokenModel
@@ -16,10 +16,10 @@ interface CommunicationsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @return [Call]<[kotlin.Int]>
+     * @return [kotlin.Int]
      */
     @DELETE("api/v1/communications")
-    fun apiV1CommunicationsDelete(): Call<kotlin.Int>
+    suspend fun apiV1CommunicationsDelete(): Response<kotlin.Int>
 
     /**
      * 
@@ -29,10 +29,10 @@ interface CommunicationsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @return [Call]<[CommunicationUserTokenModel]>
+     * @return [CommunicationUserTokenModel]
      */
     @GET("api/v1/communications")
-    fun apiV1CommunicationsGet(): Call<CommunicationUserTokenModel>
+    suspend fun apiV1CommunicationsGet(): Response<CommunicationUserTokenModel>
 
     /**
      * 
@@ -42,9 +42,9 @@ interface CommunicationsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @return [Call]<[CommunicationUserTokenModel]>
+     * @return [CommunicationUserTokenModel]
      */
     @PUT("api/v1/communications")
-    fun apiV1CommunicationsPut(): Call<CommunicationUserTokenModel>
+    suspend fun apiV1CommunicationsPut(): Response<CommunicationUserTokenModel>
 
 }
