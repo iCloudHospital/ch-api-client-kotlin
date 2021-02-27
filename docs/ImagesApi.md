@@ -20,7 +20,9 @@ Method | HTTP request | Description
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ImagesApi::class.java)
 
-webService.apiV1ImagesPost()
+launch(Dispatchers.IO) {
+    webService.apiV1ImagesPost()
+}
 ```
 
 ### Parameters

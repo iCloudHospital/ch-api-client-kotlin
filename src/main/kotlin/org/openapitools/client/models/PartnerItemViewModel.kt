@@ -18,7 +18,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param referralCount 
  * @param id 
  * @param userName 
  * @param firstName 
@@ -33,11 +32,10 @@ import com.google.gson.annotations.SerializedName
  * @param timeZone 
  * @param communicationUserId 
  * @param auditableEntity 
+ * @param referralCount 
  */
 
 data class PartnerItemViewModel (
-    @SerializedName("referralCount")
-    val referralCount: kotlin.Int? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -65,6 +63,8 @@ data class PartnerItemViewModel (
     @SerializedName("communicationUserId")
     val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("referralCount")
+    val referralCount: kotlin.Int? = null
 )
 

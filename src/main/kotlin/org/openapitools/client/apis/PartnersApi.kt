@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreatePartnerCommand
@@ -28,10 +28,10 @@ interface PartnersApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[PartnersViewModel]>
+     * @return [PartnersViewModel]
      */
     @GET("api/v1/partners")
-    fun apiV1PartnersGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<PartnersViewModel>
+    suspend fun apiV1PartnersGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<PartnersViewModel>
 
     /**
      * Delete patner.
@@ -42,10 +42,10 @@ interface PartnersApi {
      *  - 403: Forbidden
      * 
      * @param partnerId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/partners/{partnerId}")
-    fun apiV1PartnersPartnerIdDelete(@Path("partnerId") partnerId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1PartnersPartnerIdDelete(@Path("partnerId") partnerId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get partner.
@@ -54,10 +54,10 @@ interface PartnersApi {
      *  - 200: Success
      * 
      * @param partnerId  
-     * @return [Call]<[PartnerViewModel]>
+     * @return [PartnerViewModel]
      */
     @GET("api/v1/partners/{partnerId}")
-    fun apiV1PartnersPartnerIdGet(@Path("partnerId") partnerId: java.util.UUID): Call<PartnerViewModel>
+    suspend fun apiV1PartnersPartnerIdGet(@Path("partnerId") partnerId: java.util.UUID): Response<PartnerViewModel>
 
     /**
      * Update partner.
@@ -69,10 +69,10 @@ interface PartnersApi {
      * 
      * @param partnerId  
      * @param updatePartnerCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/partners/{partnerId}")
-    fun apiV1PartnersPartnerIdPut(@Path("partnerId") partnerId: java.util.UUID, @Body updatePartnerCommand: UpdatePartnerCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1PartnersPartnerIdPut(@Path("partnerId") partnerId: java.util.UUID, @Body updatePartnerCommand: UpdatePartnerCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create partner.
@@ -83,9 +83,9 @@ interface PartnersApi {
      *  - 403: Forbidden
      * 
      * @param createPartnerCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/partners")
-    fun apiV1PartnersPost(@Body createPartnerCommand: CreatePartnerCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1PartnersPost(@Body createPartnerCommand: CreatePartnerCommand? = null): Response<java.util.UUID>
 
 }

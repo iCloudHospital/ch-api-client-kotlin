@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 
@@ -15,9 +15,9 @@ interface MoviesApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @return [Call]<[Unit]>
+     * @return [Unit]
      */
     @POST("api/v1/movies")
-    fun apiV1MoviesPost(): Call<Unit>
+    suspend fun apiV1MoviesPost(): Response<Unit>
 
 }

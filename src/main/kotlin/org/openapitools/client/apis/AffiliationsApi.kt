@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.DoctorAffiliationViewModel
@@ -19,10 +19,10 @@ interface AffiliationsApi {
      * 
      * @param hospitalId  
      * @param doctorId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/doctors/{doctorId}")
-    fun apiV1HospitalsHospitalIdDoctorsDoctorIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("doctorId") doctorId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdDoctorsDoctorIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("doctorId") doctorId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Link a doctor to a hospital.
@@ -34,10 +34,10 @@ interface AffiliationsApi {
      * 
      * @param hospitalId  
      * @param doctorId  
-     * @return [Call]<[DoctorAffiliationViewModel]>
+     * @return [DoctorAffiliationViewModel]
      */
     @POST("api/v1/hospitals/{hospitalId}/doctors/{doctorId}")
-    fun apiV1HospitalsHospitalIdDoctorsDoctorIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("doctorId") doctorId: java.util.UUID): Call<DoctorAffiliationViewModel>
+    suspend fun apiV1HospitalsHospitalIdDoctorsDoctorIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("doctorId") doctorId: java.util.UUID): Response<DoctorAffiliationViewModel>
 
     /**
      * Remove link between the manager and the hospital.
@@ -49,10 +49,10 @@ interface AffiliationsApi {
      * 
      * @param hospitalId  
      * @param managerId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/managers/{managerId}")
-    fun apiV1HospitalsHospitalIdManagersManagerIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("managerId") managerId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdManagersManagerIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("managerId") managerId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Link a manager to a hospital.
@@ -64,9 +64,9 @@ interface AffiliationsApi {
      * 
      * @param hospitalId  
      * @param managerId  
-     * @return [Call]<[ManagerAffiliationViewModel]>
+     * @return [ManagerAffiliationViewModel]
      */
     @POST("api/v1/hospitals/{hospitalId}/managers/{managerId}")
-    fun apiV1HospitalsHospitalIdManagersManagerIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("managerId") managerId: java.util.UUID): Call<ManagerAffiliationViewModel>
+    suspend fun apiV1HospitalsHospitalIdManagersManagerIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("managerId") managerId: java.util.UUID): Response<ManagerAffiliationViewModel>
 
 }

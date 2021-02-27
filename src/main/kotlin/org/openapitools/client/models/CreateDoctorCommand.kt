@@ -25,16 +25,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param userName 
- * @param email 
- * @param hospitalId 
- * @param consultationEnabled 
- * @param consultationFee 
- * @param educations 
- * @param portfolios 
- * @param specialties 
- * @param certificates 
- * @param awards 
  * @param firstName 
  * @param lastName 
  * @param phone 
@@ -45,29 +35,19 @@ import com.google.gson.annotations.SerializedName
  * @param medias 
  * @param languages 
  * @param locations 
+ * @param userName 
+ * @param email 
+ * @param hospitalId 
+ * @param consultationEnabled 
+ * @param consultationFee 
+ * @param educations 
+ * @param portfolios 
+ * @param specialties 
+ * @param certificates 
+ * @param awards 
  */
 
 data class CreateDoctorCommand (
-    @SerializedName("userName")
-    val userName: kotlin.String? = null,
-    @SerializedName("email")
-    val email: kotlin.String? = null,
-    @SerializedName("hospitalId")
-    val hospitalId: java.util.UUID? = null,
-    @SerializedName("consultationEnabled")
-    val consultationEnabled: kotlin.Boolean? = null,
-    @SerializedName("consultationFee")
-    val consultationFee: kotlin.Double? = null,
-    @SerializedName("educations")
-    val educations: kotlin.collections.List<DoctorEducationViewModel>? = null,
-    @SerializedName("portfolios")
-    val portfolios: kotlin.collections.List<DoctorPortfolioViewModel>? = null,
-    @SerializedName("specialties")
-    val specialties: kotlin.collections.List<DoctorSpecialtyViewModel>? = null,
-    @SerializedName("certificates")
-    val certificates: kotlin.collections.List<DoctorCertificateViewModel>? = null,
-    @SerializedName("awards")
-    val awards: kotlin.collections.List<AwardViewModel>? = null,
     @SerializedName("firstName")
     val firstName: kotlin.String? = null,
     @SerializedName("lastName")
@@ -87,6 +67,26 @@ data class CreateDoctorCommand (
     @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @SerializedName("locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
+    @SerializedName("userName")
+    val userName: kotlin.String? = null,
+    @SerializedName("email")
+    val email: kotlin.String? = null,
+    @SerializedName("hospitalId")
+    val hospitalId: java.util.UUID? = null,
+    @SerializedName("consultationEnabled")
+    val consultationEnabled: kotlin.Boolean? = null,
+    @SerializedName("consultationFee")
+    val consultationFee: kotlin.Double? = null,
+    @SerializedName("educations")
+    val educations: kotlin.collections.List<DoctorEducationViewModel>? = null,
+    @SerializedName("portfolios")
+    val portfolios: kotlin.collections.List<DoctorPortfolioViewModel>? = null,
+    @SerializedName("specialties")
+    val specialties: kotlin.collections.List<DoctorSpecialtyViewModel>? = null,
+    @SerializedName("certificates")
+    val certificates: kotlin.collections.List<DoctorCertificateViewModel>? = null,
+    @SerializedName("awards")
+    val awards: kotlin.collections.List<AwardViewModel>? = null
 )
 

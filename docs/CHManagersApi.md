@@ -27,7 +27,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val chManagerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1ChmanagersChManagerIdDelete(chManagerId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ChmanagersChManagerIdDelete(chManagerId)
+}
 ```
 
 ### Parameters
@@ -66,7 +68,9 @@ val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val chManagerId : kotlin.String = chManagerId_example // kotlin.String | 
 
-val result : CHManagerViewModel = webService.apiV1ChmanagersChManagerIdGet(managerId, chManagerId)
+launch(Dispatchers.IO) {
+    val result : CHManagerViewModel = webService.apiV1ChmanagersChManagerIdGet(managerId, chManagerId)
+}
 ```
 
 ### Parameters
@@ -106,7 +110,9 @@ val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val chManagerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateCHManagerCommand : UpdateCHManagerCommand =  // UpdateCHManagerCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ChmanagersChManagerIdPut(chManagerId, updateCHManagerCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ChmanagersChManagerIdPut(chManagerId, updateCHManagerCommand)
+}
 ```
 
 ### Parameters
@@ -154,7 +160,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : CHManagersViewModel = webService.apiV1ChmanagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : CHManagersViewModel = webService.apiV1ChmanagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -201,7 +209,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHManagersApi::class.java)
 val createCHManagerCommand : CreateCHManagerCommand =  // CreateCHManagerCommand | 
 
-val result : java.util.UUID = webService.apiV1ChmanagersPost(createCHManagerCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1ChmanagersPost(createCHManagerCommand)
+}
 ```
 
 ### Parameters

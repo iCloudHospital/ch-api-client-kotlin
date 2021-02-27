@@ -22,7 +22,9 @@ Method | HTTP request | Description
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CommunicationsApi::class.java)
 
-val result : kotlin.Int = webService.apiV1CommunicationsDelete()
+launch(Dispatchers.IO) {
+    val result : kotlin.Int = webService.apiV1CommunicationsDelete()
+}
 ```
 
 ### Parameters
@@ -54,7 +56,9 @@ This endpoint does not need any parameter.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CommunicationsApi::class.java)
 
-val result : CommunicationUserTokenModel = webService.apiV1CommunicationsGet()
+launch(Dispatchers.IO) {
+    val result : CommunicationUserTokenModel = webService.apiV1CommunicationsGet()
+}
 ```
 
 ### Parameters
@@ -86,7 +90,9 @@ This endpoint does not need any parameter.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CommunicationsApi::class.java)
 
-val result : CommunicationUserTokenModel = webService.apiV1CommunicationsPut()
+launch(Dispatchers.IO) {
+    val result : CommunicationUserTokenModel = webService.apiV1CommunicationsPut()
+}
 ```
 
 ### Parameters

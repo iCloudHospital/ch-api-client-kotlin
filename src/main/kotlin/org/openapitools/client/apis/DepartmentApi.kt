@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateDepartmentCommand
@@ -27,10 +27,10 @@ interface DepartmentApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[DepartmentsViewModel]>
+     * @return [DepartmentsViewModel]
      */
     @GET("api/v1/hospitals/departments")
-    fun apiV1HospitalsDepartmentsGet(@Query("Id") id: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Name") name: kotlin.String? = null, @Query("AdditionalInfo") additionalInfo: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<DepartmentsViewModel>
+    suspend fun apiV1HospitalsDepartmentsGet(@Query("Id") id: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Name") name: kotlin.String? = null, @Query("AdditionalInfo") additionalInfo: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DepartmentsViewModel>
 
     /**
      * Delete department.
@@ -42,10 +42,10 @@ interface DepartmentApi {
      * 
      * @param hospitalId  
      * @param departmentId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/departments/{departmentId}")
-    fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get department.
@@ -55,10 +55,10 @@ interface DepartmentApi {
      * 
      * @param hospitalId  
      * @param departmentId  
-     * @return [Call]<[DepartmentViewModel]>
+     * @return [DepartmentViewModel]
      */
     @GET("api/v1/hospitals/{hospitalId}/departments/{departmentId}")
-    fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: java.util.UUID): Call<DepartmentViewModel>
+    suspend fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: java.util.UUID): Response<DepartmentViewModel>
 
     /**
      * Create department.
@@ -71,10 +71,10 @@ interface DepartmentApi {
      * @param hospitalId  
      * @param departmentId  
      * @param createDepartmentCommand  (optional)
-     * @return [Call]<[Department]>
+     * @return [Department]
      */
     @POST("api/v1/hospitals/{hospitalId}/departments/{departmentId}")
-    fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: kotlin.String, @Body createDepartmentCommand: CreateDepartmentCommand? = null): Call<Department>
+    suspend fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: kotlin.String, @Body createDepartmentCommand: CreateDepartmentCommand? = null): Response<Department>
 
     /**
      * Update department.
@@ -87,9 +87,9 @@ interface DepartmentApi {
      * @param hospitalId  
      * @param departmentId  
      * @param updateDepartmentCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/departments/{departmentId}")
-    fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: java.util.UUID, @Body updateDepartmentCommand: UpdateDepartmentCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdDepartmentsDepartmentIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("departmentId") departmentId: java.util.UUID, @Body updateDepartmentCommand: UpdateDepartmentCommand? = null): Response<kotlin.Boolean>
 
 }

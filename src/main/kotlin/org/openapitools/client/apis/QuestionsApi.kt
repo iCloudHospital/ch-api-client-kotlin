@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateQuestionCommand
@@ -23,10 +23,10 @@ interface QuestionsApi {
      * 
      * @param hospitalId  
      * @param createQuestionCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/hospitals/{hospitalId}/questions")
-    fun apiV1HospitalsHospitalIdQuestionsPost(@Path("hospitalId") hospitalId: java.util.UUID, @Body createQuestionCommand: CreateQuestionCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1HospitalsHospitalIdQuestionsPost(@Path("hospitalId") hospitalId: java.util.UUID, @Body createQuestionCommand: CreateQuestionCommand? = null): Response<java.util.UUID>
 
     /**
      * Delete question.
@@ -38,10 +38,10 @@ interface QuestionsApi {
      * 
      * @param hospitalId  
      * @param questionId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/questions/{questionId}")
-    fun apiV1HospitalsHospitalIdQuestionsQuestionIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("questionId") questionId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdQuestionsQuestionIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("questionId") questionId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get question.
@@ -53,10 +53,10 @@ interface QuestionsApi {
      * 
      * @param hospitalId  
      * @param questionId  
-     * @return [Call]<[QuestionViewModel]>
+     * @return [QuestionViewModel]
      */
     @GET("api/v1/hospitals/{hospitalId}/questions/{questionId}")
-    fun apiV1HospitalsHospitalIdQuestionsQuestionIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("questionId") questionId: java.util.UUID): Call<QuestionViewModel>
+    suspend fun apiV1HospitalsHospitalIdQuestionsQuestionIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("questionId") questionId: java.util.UUID): Response<QuestionViewModel>
 
     /**
      * Update question.
@@ -69,10 +69,10 @@ interface QuestionsApi {
      * @param hospitalId  
      * @param questionId  
      * @param updateQuestionCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/questions/{questionId}")
-    fun apiV1HospitalsHospitalIdQuestionsQuestionIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("questionId") questionId: java.util.UUID, @Body updateQuestionCommand: UpdateQuestionCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdQuestionsQuestionIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("questionId") questionId: java.util.UUID, @Body updateQuestionCommand: UpdateQuestionCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get all questions.
@@ -92,9 +92,9 @@ interface QuestionsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[QuestionsViewModel]>
+     * @return [QuestionsViewModel]
      */
     @GET("api/v1/hospitals/questions")
-    fun apiV1HospitalsQuestionsGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("QuestionType") questionType: QuestionType? = null, @Query("QuestionStatus") questionStatus: QuestionStatus? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<QuestionsViewModel>
+    suspend fun apiV1HospitalsQuestionsGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("QuestionType") questionType: QuestionType? = null, @Query("QuestionStatus") questionStatus: QuestionStatus? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<QuestionsViewModel>
 
 }

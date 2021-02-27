@@ -22,7 +22,9 @@ Smaple request:        GET /api/v1/identity
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(IdentityApi::class.java)
 
-webService.apiV1IdentityGet()
+launch(Dispatchers.IO) {
+    webService.apiV1IdentityGet()
+}
 ```
 
 ### Parameters

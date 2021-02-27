@@ -17,7 +17,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param hospitals 
  * @param specialtyTypeId 
  * @param specialtyTypeName 
  * @param slug 
@@ -27,11 +26,10 @@ import com.google.gson.annotations.SerializedName
  * @param specialtyTypeCategoryName 
  * @param marketingType 
  * @param order 
+ * @param hospitals 
  */
 
 data class SpecialtyTypeSearchViewModel (
-    @SerializedName("hospitals")
-    val hospitals: kotlin.collections.List<HospitalSearchItemViewModel>? = null,
     @SerializedName("specialtyTypeId")
     val specialtyTypeId: kotlin.String? = null,
     @SerializedName("specialtyTypeName")
@@ -49,6 +47,8 @@ data class SpecialtyTypeSearchViewModel (
     @SerializedName("marketingType")
     val marketingType: kotlin.Int? = null,
     @SerializedName("order")
-    val order: kotlin.Int? = null
+    val order: kotlin.Int? = null,
+    @SerializedName("hospitals")
+    val hospitals: kotlin.collections.List<HospitalSearchItemViewModel>? = null
 )
 

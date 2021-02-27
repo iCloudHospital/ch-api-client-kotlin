@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateServiceCommand
@@ -25,10 +25,10 @@ interface ServicesApi {
      * @param hospitalId  
      * @param specialtyId  
      * @param createServiceCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body createServiceCommand: CreateServiceCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body createServiceCommand: CreateServiceCommand? = null): Response<java.util.UUID>
 
     /**
      * Delete service.
@@ -41,10 +41,10 @@ interface ServicesApi {
      * @param hospitalId  
      * @param specialtyId  
      * @param serviceId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get service.
@@ -55,10 +55,10 @@ interface ServicesApi {
      * @param hospitalId  
      * @param specialtyId  
      * @param serviceId  
-     * @return [Call]<[ServiceViewModel]>
+     * @return [ServiceViewModel]
      */
     @GET("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID): Call<ServiceViewModel>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID): Response<ServiceViewModel>
 
     /**
      * Update service.
@@ -72,10 +72,10 @@ interface ServicesApi {
      * @param specialtyId  
      * @param serviceId  
      * @param updateServiceCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID, @Body updateServiceCommand: UpdateServiceCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID, @Body updateServiceCommand: UpdateServiceCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Update service sequence.
@@ -88,10 +88,10 @@ interface ServicesApi {
      * @param hospitalId  
      * @param specialtyId  
      * @param updateServiceSequenceCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body updateServiceSequenceCommand: UpdateServiceSequenceCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body updateServiceSequenceCommand: UpdateServiceSequenceCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Get all services.
@@ -115,10 +115,10 @@ interface ServicesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[ServicesViewModel]>
+     * @return [ServicesViewModel]
      */
     @GET("api/v1/hospitals/services")
-    fun apiV1HospitalsServicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Procedure") procedure: Procedure? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<ServicesViewModel>
+    suspend fun apiV1HospitalsServicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Procedure") procedure: Procedure? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ServicesViewModel>
 
     /**
      * Get service by slug.
@@ -127,9 +127,9 @@ interface ServicesApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @return [Call]<[ServiceViewModel]>
+     * @return [ServiceViewModel]
      */
     @GET("api/v1/hospitals/services/slugs/{slug}")
-    fun apiV1HospitalsServicesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<ServiceViewModel>
+    suspend fun apiV1HospitalsServicesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<ServiceViewModel>
 
 }

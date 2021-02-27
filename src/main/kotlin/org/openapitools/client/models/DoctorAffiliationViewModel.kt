@@ -16,9 +16,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param doctorId 
- * @param doctorName 
- * @param order 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
@@ -26,15 +23,12 @@ import com.google.gson.annotations.SerializedName
  * @param countryName 
  * @param stateName 
  * @param cityName 
+ * @param doctorId 
+ * @param doctorName 
+ * @param order 
  */
 
 data class DoctorAffiliationViewModel (
-    @SerializedName("doctorId")
-    val doctorId: java.util.UUID? = null,
-    @SerializedName("doctorName")
-    val doctorName: kotlin.String? = null,
-    @SerializedName("order")
-    val order: kotlin.Int? = null,
     @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
     @SerializedName("hospitalName")
@@ -48,6 +42,12 @@ data class DoctorAffiliationViewModel (
     @SerializedName("stateName")
     val stateName: kotlin.String? = null,
     @SerializedName("cityName")
-    val cityName: kotlin.String? = null
+    val cityName: kotlin.String? = null,
+    @SerializedName("doctorId")
+    val doctorId: java.util.UUID? = null,
+    @SerializedName("doctorName")
+    val doctorName: kotlin.String? = null,
+    @SerializedName("order")
+    val order: kotlin.Int? = null
 )
 

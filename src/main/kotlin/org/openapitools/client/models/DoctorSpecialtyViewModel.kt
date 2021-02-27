@@ -16,20 +16,16 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param doctorId 
- * @param doctorName 
  * @param specialtyId 
  * @param specialtyName 
  * @param specialtyTypeId 
  * @param specialtyTypeName 
  * @param order 
+ * @param doctorId 
+ * @param doctorName 
  */
 
 data class DoctorSpecialtyViewModel (
-    @SerializedName("doctorId")
-    val doctorId: java.util.UUID? = null,
-    @SerializedName("doctorName")
-    val doctorName: kotlin.String? = null,
     @SerializedName("specialtyId")
     val specialtyId: java.util.UUID? = null,
     @SerializedName("specialtyName")
@@ -39,6 +35,10 @@ data class DoctorSpecialtyViewModel (
     @SerializedName("specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
     @SerializedName("order")
-    val order: kotlin.Int? = null
+    val order: kotlin.Int? = null,
+    @SerializedName("doctorId")
+    val doctorId: java.util.UUID? = null,
+    @SerializedName("doctorName")
+    val doctorName: kotlin.String? = null
 )
 

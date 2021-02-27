@@ -27,12 +27,16 @@ import com.google.gson.annotations.SerializedName
  * @param communicationUserId 
  * @param hospitalId 
  * @param hospitalName 
+ * @param hospitalSlug 
  * @param specialtyId 
  * @param specialtyName 
+ * @param specialtySlug 
  * @param doctorId 
  * @param doctorName 
+ * @param doctorSlug 
  * @param dealId 
  * @param dealName 
+ * @param dealSlug 
  * @param language 
  * @param isAccountHolder 
  * @param firstName 
@@ -73,18 +77,26 @@ data class ConsultationItemViewModel (
     val hospitalId: java.util.UUID? = null,
     @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
+    @SerializedName("hospitalSlug")
+    val hospitalSlug: kotlin.String? = null,
     @SerializedName("specialtyId")
     val specialtyId: java.util.UUID? = null,
     @SerializedName("specialtyName")
     val specialtyName: kotlin.String? = null,
+    @SerializedName("specialtySlug")
+    val specialtySlug: kotlin.String? = null,
     @SerializedName("doctorId")
     val doctorId: java.util.UUID? = null,
     @SerializedName("doctorName")
     val doctorName: kotlin.String? = null,
+    @SerializedName("doctorSlug")
+    val doctorSlug: kotlin.String? = null,
     @SerializedName("dealId")
     val dealId: java.util.UUID? = null,
     @SerializedName("dealName")
     val dealName: kotlin.String? = null,
+    @SerializedName("dealSlug")
+    val dealSlug: kotlin.String? = null,
     @SerializedName("language")
     val language: kotlin.String? = null,
     @SerializedName("isAccountHolder")

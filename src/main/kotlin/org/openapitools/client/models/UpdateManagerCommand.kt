@@ -19,7 +19,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param hospitalId 
  * @param firstName 
  * @param lastName 
  * @param phone 
@@ -29,11 +28,10 @@ import com.google.gson.annotations.SerializedName
  * @param dateOfBirth 
  * @param languages 
  * @param locations 
+ * @param hospitalId 
  */
 
 data class UpdateManagerCommand (
-    @SerializedName("hospitalId")
-    val hospitalId: java.util.UUID? = null,
     @SerializedName("firstName")
     val firstName: kotlin.String? = null,
     @SerializedName("lastName")
@@ -51,6 +49,8 @@ data class UpdateManagerCommand (
     @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @SerializedName("locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
+    @SerializedName("hospitalId")
+    val hospitalId: java.util.UUID? = null
 )
 

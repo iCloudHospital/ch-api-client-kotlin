@@ -25,7 +25,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ProfilesApi::class.java)
 val changeEmailCommand : ChangeEmailCommand =  // ChangeEmailCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ProfilesChangeemailPost(changeEmailCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ProfilesChangeemailPost(changeEmailCommand)
+}
 ```
 
 ### Parameters
@@ -61,7 +63,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ProfilesApi::class.java)
 val confirmEmailCommand : ConfirmEmailCommand =  // ConfirmEmailCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ProfilesConfirmemailPost(confirmEmailCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ProfilesConfirmemailPost(confirmEmailCommand)
+}
 ```
 
 ### Parameters
@@ -98,7 +102,9 @@ Sample request:        GET /api/v1/profiles
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ProfilesApi::class.java)
 
-val result : UserViewModel = webService.apiV1ProfilesGet()
+launch(Dispatchers.IO) {
+    val result : UserViewModel = webService.apiV1ProfilesGet()
+}
 ```
 
 ### Parameters

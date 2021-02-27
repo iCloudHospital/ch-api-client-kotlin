@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateHospitalReviewCommand
@@ -23,10 +23,10 @@ interface HospitalReviewsApi {
      * 
      * @param hospitalId  
      * @param patientId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/hospitals/{hospitalId}/reviews/{patientId}")
-    fun apiV1HospitalsHospitalIdReviewsPatientIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdReviewsPatientIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get review.
@@ -36,10 +36,10 @@ interface HospitalReviewsApi {
      * 
      * @param hospitalId  
      * @param patientId  
-     * @return [Call]<[HospitalReviewViewModel]>
+     * @return [HospitalReviewViewModel]
      */
     @GET("api/v1/hospitals/{hospitalId}/reviews/{patientId}")
-    fun apiV1HospitalsHospitalIdReviewsPatientIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Call<HospitalReviewViewModel>
+    suspend fun apiV1HospitalsHospitalIdReviewsPatientIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID): Response<HospitalReviewViewModel>
 
     /**
      * Update review.
@@ -52,10 +52,10 @@ interface HospitalReviewsApi {
      * @param hospitalId  
      * @param patientId  
      * @param updateHospitalReviewCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/hospitals/{hospitalId}/reviews/{patientId}")
-    fun apiV1HospitalsHospitalIdReviewsPatientIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body updateHospitalReviewCommand: UpdateHospitalReviewCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1HospitalsHospitalIdReviewsPatientIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body updateHospitalReviewCommand: UpdateHospitalReviewCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create review.
@@ -68,10 +68,10 @@ interface HospitalReviewsApi {
      * @param hospitalId  
      * @param patientId  
      * @param createHospitalReviewCommand  (optional)
-     * @return [Call]<[HospitalReview]>
+     * @return [HospitalReview]
      */
     @POST("api/v1/hospitals/{hospitalId}/reviews")
-    fun apiV1HospitalsHospitalIdReviewsPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body createHospitalReviewCommand: CreateHospitalReviewCommand? = null): Call<HospitalReview>
+    suspend fun apiV1HospitalsHospitalIdReviewsPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("patientId") patientId: java.util.UUID, @Body createHospitalReviewCommand: CreateHospitalReviewCommand? = null): Response<HospitalReview>
 
     /**
      * Get all reviews.
@@ -92,9 +92,9 @@ interface HospitalReviewsApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[HospitalReviewsViewModel]>
+     * @return [HospitalReviewsViewModel]
      */
     @GET("api/v1/hospitals/reviews")
-    fun apiV1HospitalsReviewsGet(@Query("PatientId") patientId: java.util.UUID? = null, @Query("PatientName") patientName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Body") body: kotlin.String? = null, @Query("Recommended") recommended: kotlin.Boolean? = null, @Query("ReviewCategory") reviewCategory: ReviewCategory? = null, @Query("Rate") rate: kotlin.Int? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<HospitalReviewsViewModel>
+    suspend fun apiV1HospitalsReviewsGet(@Query("PatientId") patientId: java.util.UUID? = null, @Query("PatientName") patientName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Body") body: kotlin.String? = null, @Query("Recommended") recommended: kotlin.Boolean? = null, @Query("ReviewCategory") reviewCategory: ReviewCategory? = null, @Query("Rate") rate: kotlin.Int? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<HospitalReviewsViewModel>
 
 }

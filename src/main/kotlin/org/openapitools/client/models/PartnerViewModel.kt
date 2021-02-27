@@ -20,11 +20,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param referralCode 
- * @param referralCount 
- * @param userType 
- * @param languages 
- * @param locations 
  * @param id 
  * @param userName 
  * @param firstName 
@@ -39,19 +34,14 @@ import com.google.gson.annotations.SerializedName
  * @param timeZone 
  * @param communicationUserId 
  * @param auditableEntity 
+ * @param userType 
+ * @param languages 
+ * @param locations 
+ * @param referralCode 
+ * @param referralCount 
  */
 
 data class PartnerViewModel (
-    @SerializedName("referralCode")
-    val referralCode: kotlin.String? = null,
-    @SerializedName("referralCount")
-    val referralCount: kotlin.Int? = null,
-    @SerializedName("userType")
-    val userType: kotlin.String? = null,
-    @SerializedName("languages")
-    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @SerializedName("locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -79,6 +69,16 @@ data class PartnerViewModel (
     @SerializedName("communicationUserId")
     val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("userType")
+    val userType: kotlin.String? = null,
+    @SerializedName("languages")
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
+    @SerializedName("locations")
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
+    @SerializedName("referralCode")
+    val referralCode: kotlin.String? = null,
+    @SerializedName("referralCount")
+    val referralCount: kotlin.Int? = null
 )
 

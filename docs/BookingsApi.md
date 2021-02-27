@@ -31,7 +31,9 @@ val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val approveBookingCommand : ApproveBookingCommand =  // ApproveBookingCommand | 
 
-val result : kotlin.Boolean = webService.apiV1BookingsBookingIdApprovePost(bookingId, approveBookingCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdApprovePost(bookingId, approveBookingCommand)
+}
 ```
 
 ### Parameters
@@ -68,7 +70,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1BookingsBookingIdCancelPost(bookingId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdCancelPost(bookingId)
+}
 ```
 
 ### Parameters
@@ -104,7 +108,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1BookingsBookingIdDelete(bookingId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdDelete(bookingId)
+}
 ```
 
 ### Parameters
@@ -140,7 +146,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : BookingViewModel = webService.apiV1BookingsBookingIdGet(bookingId)
+launch(Dispatchers.IO) {
+    val result : BookingViewModel = webService.apiV1BookingsBookingIdGet(bookingId)
+}
 ```
 
 ### Parameters
@@ -176,7 +184,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : java.util.UUID = webService.apiV1BookingsBookingIdPaidPost(bookingId)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1BookingsBookingIdPaidPost(bookingId)
+}
 ```
 
 ### Parameters
@@ -212,7 +222,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.String = webService.apiV1BookingsBookingIdPayPost(bookingId)
+launch(Dispatchers.IO) {
+    val result : kotlin.String = webService.apiV1BookingsBookingIdPayPost(bookingId)
+}
 ```
 
 ### Parameters
@@ -249,7 +261,9 @@ val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateBookingCommand : UpdateBookingCommand =  // UpdateBookingCommand | 
 
-val result : kotlin.Boolean = webService.apiV1BookingsBookingIdPut(bookingId, updateBookingCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdPut(bookingId, updateBookingCommand)
+}
 ```
 
 ### Parameters
@@ -287,7 +301,9 @@ val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val rejectBookingCommand : RejectBookingCommand =  // RejectBookingCommand | 
 
-val result : kotlin.Boolean = webService.apiV1BookingsBookingIdRejectPost(bookingId, rejectBookingCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdRejectPost(bookingId, rejectBookingCommand)
+}
 ```
 
 ### Parameters
@@ -332,7 +348,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : BookingsViewModel = webService.apiV1BookingsGet(searchString, isOpen, isCompleted, status, dealPackageId, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : BookingsViewModel = webService.apiV1BookingsGet(searchString, isOpen, isCompleted, status, dealPackageId, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -377,7 +395,9 @@ val webService = apiClient.createWebservice(BookingsApi::class.java)
 val requestId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createBookingCommand : CreateBookingCommand =  // CreateBookingCommand | 
 
-val result : java.util.UUID = webService.apiV1BookingsRequestIdPost(requestId, createBookingCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1BookingsRequestIdPost(requestId, createBookingCommand)
+}
 ```
 
 ### Parameters

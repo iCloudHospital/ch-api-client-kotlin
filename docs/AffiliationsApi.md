@@ -27,7 +27,9 @@ val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdDelete(hospitalId, doctorId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdDelete(hospitalId, doctorId)
+}
 ```
 
 ### Parameters
@@ -67,7 +69,9 @@ val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : DoctorAffiliationViewModel = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdPost(hospitalId, doctorId)
+launch(Dispatchers.IO) {
+    val result : DoctorAffiliationViewModel = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdPost(hospitalId, doctorId)
+}
 ```
 
 ### Parameters
@@ -107,7 +111,9 @@ val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdManagersManagerIdDelete(hospitalId, managerId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdManagersManagerIdDelete(hospitalId, managerId)
+}
 ```
 
 ### Parameters
@@ -147,7 +153,9 @@ val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ManagerAffiliationViewModel = webService.apiV1HospitalsHospitalIdManagersManagerIdPost(hospitalId, managerId)
+launch(Dispatchers.IO) {
+    val result : ManagerAffiliationViewModel = webService.apiV1HospitalsHospitalIdManagersManagerIdPost(hospitalId, managerId)
+}
 ```
 
 ### Parameters

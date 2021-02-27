@@ -37,7 +37,9 @@ val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ManagersViewModel = webService.apiV1ManagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current, hospitalId)
+launch(Dispatchers.IO) {
+    val result : ManagersViewModel = webService.apiV1ManagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current, hospitalId)
+}
 ```
 
 ### Parameters
@@ -85,7 +87,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1ManagersManagerIdDelete(managerId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ManagersManagerIdDelete(managerId)
+}
 ```
 
 ### Parameters
@@ -123,7 +127,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ManagerViewModel = webService.apiV1ManagersManagerIdGet(managerId)
+launch(Dispatchers.IO) {
+    val result : ManagerViewModel = webService.apiV1ManagersManagerIdGet(managerId)
+}
 ```
 
 ### Parameters
@@ -162,7 +168,9 @@ val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateManagerCommand : UpdateManagerCommand =  // UpdateManagerCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ManagersManagerIdPut(managerId, updateManagerCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ManagersManagerIdPut(managerId, updateManagerCommand)
+}
 ```
 
 ### Parameters
@@ -201,7 +209,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
 val createManagerCommand : CreateManagerCommand =  // CreateManagerCommand | 
 
-val result : java.util.UUID = webService.apiV1ManagersPost(createManagerCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1ManagersPost(createManagerCommand)
+}
 ```
 
 ### Parameters

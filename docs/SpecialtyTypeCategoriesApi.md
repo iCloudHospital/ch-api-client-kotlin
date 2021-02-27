@@ -33,7 +33,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : SpecialtyTypeCategoriesViewModel = webService.apiV1SpecialtytypecategoriesGet(id, name, description, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : SpecialtyTypeCategoriesViewModel = webService.apiV1SpecialtytypecategoriesGet(id, name, description, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -77,7 +79,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtyTypeCategoriesApi::class.java)
 val createSpecialtyTypeCategoryCommand : CreateSpecialtyTypeCategoryCommand =  // CreateSpecialtyTypeCategoryCommand | 
 
-val result : java.util.UUID = webService.apiV1SpecialtytypecategoriesPost(createSpecialtyTypeCategoryCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1SpecialtytypecategoriesPost(createSpecialtyTypeCategoryCommand)
+}
 ```
 
 ### Parameters
@@ -115,7 +119,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtyTypeCategoriesApi::class.java)
 val specialtyTypeCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdDelete(specialtyTypeCategoryId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdDelete(specialtyTypeCategoryId)
+}
 ```
 
 ### Parameters
@@ -153,7 +159,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtyTypeCategoriesApi::class.java)
 val specialtyTypeCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SpecialtyTypeCategoryViewModel = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(specialtyTypeCategoryId)
+launch(Dispatchers.IO) {
+    val result : SpecialtyTypeCategoryViewModel = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(specialtyTypeCategoryId)
+}
 ```
 
 ### Parameters
@@ -192,7 +200,9 @@ val webService = apiClient.createWebservice(SpecialtyTypeCategoriesApi::class.ja
 val specialtyTypeCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateSpecialtyTypeCategoryCommand : UpdateSpecialtyTypeCategoryCommand =  // UpdateSpecialtyTypeCategoryCommand | 
 
-val result : kotlin.Boolean = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdPut(specialtyTypeCategoryId, updateSpecialtyTypeCategoryCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdPut(specialtyTypeCategoryId, updateSpecialtyTypeCategoryCommand)
+}
 ```
 
 ### Parameters

@@ -27,7 +27,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val chAdminId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1ChadminsChAdminIdDelete(chAdminId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ChadminsChAdminIdDelete(chAdminId)
+}
 ```
 
 ### Parameters
@@ -65,7 +67,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val chAdminId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : CHAdminViewModel = webService.apiV1ChadminsChAdminIdGet(chAdminId)
+launch(Dispatchers.IO) {
+    val result : CHAdminViewModel = webService.apiV1ChadminsChAdminIdGet(chAdminId)
+}
 ```
 
 ### Parameters
@@ -104,7 +108,9 @@ val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val chAdminId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateCHAdminCommand : UpdateCHAdminCommand =  // UpdateCHAdminCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ChadminsChAdminIdPut(chAdminId, updateCHAdminCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ChadminsChAdminIdPut(chAdminId, updateCHAdminCommand)
+}
 ```
 
 ### Parameters
@@ -152,7 +158,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : CHAdminsViewModel = webService.apiV1ChadminsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : CHAdminsViewModel = webService.apiV1ChadminsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -199,7 +207,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)
 val createCHAdminCommand : CreateCHAdminCommand =  // CreateCHAdminCommand | 
 
-val result : java.util.UUID = webService.apiV1ChadminsPost(createCHAdminCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1ChadminsPost(createCHAdminCommand)
+}
 ```
 
 ### Parameters

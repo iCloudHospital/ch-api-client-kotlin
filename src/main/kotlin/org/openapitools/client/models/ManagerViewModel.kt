@@ -21,11 +21,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param hospitalId 
- * @param managerAffiliations 
- * @param userType 
- * @param languages 
- * @param locations 
  * @param id 
  * @param userName 
  * @param firstName 
@@ -40,19 +35,14 @@ import com.google.gson.annotations.SerializedName
  * @param timeZone 
  * @param communicationUserId 
  * @param auditableEntity 
+ * @param userType 
+ * @param languages 
+ * @param locations 
+ * @param hospitalId 
+ * @param managerAffiliations 
  */
 
 data class ManagerViewModel (
-    @SerializedName("hospitalId")
-    val hospitalId: java.util.UUID? = null,
-    @SerializedName("managerAffiliations")
-    val managerAffiliations: kotlin.collections.List<ManagerAffiliationViewModel>? = null,
-    @SerializedName("userType")
-    val userType: kotlin.String? = null,
-    @SerializedName("languages")
-    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @SerializedName("locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -80,6 +70,16 @@ data class ManagerViewModel (
     @SerializedName("communicationUserId")
     val communicationUserId: kotlin.String? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("userType")
+    val userType: kotlin.String? = null,
+    @SerializedName("languages")
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
+    @SerializedName("locations")
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
+    @SerializedName("hospitalId")
+    val hospitalId: java.util.UUID? = null,
+    @SerializedName("managerAffiliations")
+    val managerAffiliations: kotlin.collections.List<ManagerAffiliationViewModel>? = null
 )
 

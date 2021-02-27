@@ -36,7 +36,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : SpecialtiesViewModel = webService.apiV1SpecialtiesGet(id, name, description, specialtyTypeId, created, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : SpecialtiesViewModel = webService.apiV1SpecialtiesGet(id, name, description, specialtyTypeId, created, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -83,7 +85,9 @@ val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createSpecialtyCommand : CreateSpecialtyCommand =  // CreateSpecialtyCommand | 
 
-val result : java.util.UUID = webService.apiV1SpecialtiesPost(specialtyTypeId, createSpecialtyCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1SpecialtiesPost(specialtyTypeId, createSpecialtyCommand)
+}
 ```
 
 ### Parameters
@@ -120,7 +124,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 
-val result : SpecialtyViewModel = webService.apiV1SpecialtiesSlugsSlugGet(slug)
+launch(Dispatchers.IO) {
+    val result : SpecialtyViewModel = webService.apiV1SpecialtiesSlugsSlugGet(slug)
+}
 ```
 
 ### Parameters
@@ -158,7 +164,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1SpecialtiesSpecialtyIdDelete(specialtyId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1SpecialtiesSpecialtyIdDelete(specialtyId)
+}
 ```
 
 ### Parameters
@@ -196,7 +204,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SpecialtyViewModel = webService.apiV1SpecialtiesSpecialtyIdGet(specialtyId)
+launch(Dispatchers.IO) {
+    val result : SpecialtyViewModel = webService.apiV1SpecialtiesSpecialtyIdGet(specialtyId)
+}
 ```
 
 ### Parameters
@@ -235,7 +245,9 @@ val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateSpecialtyCommand : UpdateSpecialtyCommand =  // UpdateSpecialtyCommand | 
 
-val result : kotlin.Boolean = webService.apiV1SpecialtiesSpecialtyIdPut(specialtyId, updateSpecialtyCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1SpecialtiesSpecialtyIdPut(specialtyId, updateSpecialtyCommand)
+}
 ```
 
 ### Parameters

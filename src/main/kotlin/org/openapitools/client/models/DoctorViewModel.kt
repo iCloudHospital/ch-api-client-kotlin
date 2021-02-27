@@ -29,6 +29,23 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
+ * @param id 
+ * @param userName 
+ * @param firstName 
+ * @param lastName 
+ * @param fullname 
+ * @param phone 
+ * @param email 
+ * @param photo 
+ * @param photoThumbnail 
+ * @param gender 
+ * @param dateOfBirth 
+ * @param timeZone 
+ * @param communicationUserId 
+ * @param auditableEntity 
+ * @param userType 
+ * @param languages 
+ * @param locations 
  * @param slug 
  * @param startPracticeDate 
  * @param yearOfExperience 
@@ -44,26 +61,43 @@ import com.google.gson.annotations.SerializedName
  * @param articles 
  * @param awards 
  * @param medias 
- * @param userType 
- * @param languages 
- * @param locations 
- * @param id 
- * @param userName 
- * @param firstName 
- * @param lastName 
- * @param fullname 
- * @param phone 
- * @param email 
- * @param photo 
- * @param photoThumbnail 
- * @param gender 
- * @param dateOfBirth 
- * @param timeZone 
- * @param communicationUserId 
- * @param auditableEntity 
  */
 
 data class DoctorViewModel (
+    @SerializedName("id")
+    val id: java.util.UUID? = null,
+    @SerializedName("userName")
+    val userName: kotlin.String? = null,
+    @SerializedName("firstName")
+    val firstName: kotlin.String? = null,
+    @SerializedName("lastName")
+    val lastName: kotlin.String? = null,
+    @SerializedName("fullname")
+    val fullname: kotlin.String? = null,
+    @SerializedName("phone")
+    val phone: kotlin.String? = null,
+    @SerializedName("email")
+    val email: kotlin.String? = null,
+    @SerializedName("photo")
+    val photo: kotlin.String? = null,
+    @SerializedName("photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
+    @SerializedName("gender")
+    val gender: Gender? = null,
+    @SerializedName("dateOfBirth")
+    val dateOfBirth: java.time.LocalDateTime? = null,
+    @SerializedName("timeZone")
+    val timeZone: kotlin.String? = null,
+    @SerializedName("communicationUserId")
+    val communicationUserId: kotlin.String? = null,
+    @SerializedName("auditableEntity")
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("userType")
+    val userType: kotlin.String? = null,
+    @SerializedName("languages")
+    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
+    @SerializedName("locations")
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
     @SerializedName("slug")
     val slug: kotlin.String? = null,
     @SerializedName("startPracticeDate")
@@ -93,40 +127,6 @@ data class DoctorViewModel (
     @SerializedName("awards")
     val awards: kotlin.collections.List<AwardViewModel>? = null,
     @SerializedName("medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @SerializedName("userType")
-    val userType: kotlin.String? = null,
-    @SerializedName("languages")
-    val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @SerializedName("locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
-    @SerializedName("id")
-    val id: java.util.UUID? = null,
-    @SerializedName("userName")
-    val userName: kotlin.String? = null,
-    @SerializedName("firstName")
-    val firstName: kotlin.String? = null,
-    @SerializedName("lastName")
-    val lastName: kotlin.String? = null,
-    @SerializedName("fullname")
-    val fullname: kotlin.String? = null,
-    @SerializedName("phone")
-    val phone: kotlin.String? = null,
-    @SerializedName("email")
-    val email: kotlin.String? = null,
-    @SerializedName("photo")
-    val photo: kotlin.String? = null,
-    @SerializedName("photoThumbnail")
-    val photoThumbnail: kotlin.String? = null,
-    @SerializedName("gender")
-    val gender: Gender? = null,
-    @SerializedName("dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
-    @SerializedName("timeZone")
-    val timeZone: kotlin.String? = null,
-    @SerializedName("communicationUserId")
-    val communicationUserId: kotlin.String? = null,
-    @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

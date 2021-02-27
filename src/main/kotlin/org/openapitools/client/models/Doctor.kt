@@ -31,19 +31,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param slug 
- * @param startPracticeDate 
- * @param overview 
- * @param consultationEnabled 
- * @param consultationFee 
- * @param doctorReviews 
- * @param doctorEducations 
- * @param doctorPortfolios 
- * @param doctorSpecialties 
- * @param doctorCertificates 
- * @param doctorAffiliations 
- * @param awards 
- * @param medias 
  * @param id 
  * @param userName 
  * @param email 
@@ -63,35 +50,22 @@ import com.google.gson.annotations.SerializedName
  * @param locations 
  * @param languages 
  * @param auditableEntity 
+ * @param slug 
+ * @param startPracticeDate 
+ * @param overview 
+ * @param consultationEnabled 
+ * @param consultationFee 
+ * @param doctorReviews 
+ * @param doctorEducations 
+ * @param doctorPortfolios 
+ * @param doctorSpecialties 
+ * @param doctorCertificates 
+ * @param doctorAffiliations 
+ * @param awards 
+ * @param medias 
  */
 
 data class Doctor (
-    @SerializedName("slug")
-    val slug: kotlin.String? = null,
-    @SerializedName("startPracticeDate")
-    val startPracticeDate: java.time.LocalDateTime? = null,
-    @SerializedName("overview")
-    val overview: kotlin.String? = null,
-    @SerializedName("consultationEnabled")
-    val consultationEnabled: kotlin.Boolean? = null,
-    @SerializedName("consultationFee")
-    val consultationFee: kotlin.Double? = null,
-    @SerializedName("doctorReviews")
-    val doctorReviews: kotlin.collections.List<DoctorReview>? = null,
-    @SerializedName("doctorEducations")
-    val doctorEducations: kotlin.collections.List<DoctorEducation>? = null,
-    @SerializedName("doctorPortfolios")
-    val doctorPortfolios: kotlin.collections.List<DoctorPortfolio>? = null,
-    @SerializedName("doctorSpecialties")
-    val doctorSpecialties: kotlin.collections.List<DoctorSpecialty>? = null,
-    @SerializedName("doctorCertificates")
-    val doctorCertificates: kotlin.collections.List<DoctorCertificate>? = null,
-    @SerializedName("doctorAffiliations")
-    val doctorAffiliations: kotlin.collections.List<DoctorAffiliation>? = null,
-    @SerializedName("awards")
-    val awards: kotlin.collections.List<Award>? = null,
-    @SerializedName("medias")
-    val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -129,6 +103,32 @@ data class Doctor (
     @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguage>? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("slug")
+    val slug: kotlin.String? = null,
+    @SerializedName("startPracticeDate")
+    val startPracticeDate: java.time.LocalDateTime? = null,
+    @SerializedName("overview")
+    val overview: kotlin.String? = null,
+    @SerializedName("consultationEnabled")
+    val consultationEnabled: kotlin.Boolean? = null,
+    @SerializedName("consultationFee")
+    val consultationFee: kotlin.Double? = null,
+    @SerializedName("doctorReviews")
+    val doctorReviews: kotlin.collections.List<DoctorReview>? = null,
+    @SerializedName("doctorEducations")
+    val doctorEducations: kotlin.collections.List<DoctorEducation>? = null,
+    @SerializedName("doctorPortfolios")
+    val doctorPortfolios: kotlin.collections.List<DoctorPortfolio>? = null,
+    @SerializedName("doctorSpecialties")
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialty>? = null,
+    @SerializedName("doctorCertificates")
+    val doctorCertificates: kotlin.collections.List<DoctorCertificate>? = null,
+    @SerializedName("doctorAffiliations")
+    val doctorAffiliations: kotlin.collections.List<DoctorAffiliation>? = null,
+    @SerializedName("awards")
+    val awards: kotlin.collections.List<Award>? = null,
+    @SerializedName("medias")
+    val medias: kotlin.collections.List<Media>? = null
 )
 

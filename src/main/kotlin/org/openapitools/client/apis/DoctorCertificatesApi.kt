@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateDoctorCertificateCommand
@@ -28,10 +28,10 @@ interface DoctorCertificatesApi {
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @param current  (optional)
-     * @return [Call]<[DoctorCertificatesViewModel]>
+     * @return [DoctorCertificatesViewModel]
      */
     @GET("api/v1/doctors/certificates")
-    fun apiV1DoctorsCertificatesGet(@Query("Id") id: java.util.UUID? = null, @Query("DoctorId") doctorId: java.util.UUID? = null, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("Certificate") certificate: kotlin.String? = null, @Query("ActiveFrom") activeFrom: java.time.LocalDateTime? = null, @Query("ActiveTo") activeTo: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<DoctorCertificatesViewModel>
+    suspend fun apiV1DoctorsCertificatesGet(@Query("Id") id: java.util.UUID? = null, @Query("DoctorId") doctorId: java.util.UUID? = null, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("Certificate") certificate: kotlin.String? = null, @Query("ActiveFrom") activeFrom: java.time.LocalDateTime? = null, @Query("ActiveTo") activeTo: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DoctorCertificatesViewModel>
 
     /**
      * Delete certificate.
@@ -43,10 +43,10 @@ interface DoctorCertificatesApi {
      * 
      * @param doctorId  
      * @param certificateId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/doctors/{doctorId}/certificates/{certificateId}")
-    fun apiV1DoctorsDoctorIdCertificatesCertificateIdDelete(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1DoctorsDoctorIdCertificatesCertificateIdDelete(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get certificate.
@@ -56,10 +56,10 @@ interface DoctorCertificatesApi {
      * 
      * @param doctorId  
      * @param certificateId  
-     * @return [Call]<[DoctorCertificateViewModel]>
+     * @return [DoctorCertificateViewModel]
      */
     @GET("api/v1/doctors/{doctorId}/certificates/{certificateId}")
-    fun apiV1DoctorsDoctorIdCertificatesCertificateIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID): Call<DoctorCertificateViewModel>
+    suspend fun apiV1DoctorsDoctorIdCertificatesCertificateIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID): Response<DoctorCertificateViewModel>
 
     /**
      * Update department.
@@ -72,10 +72,10 @@ interface DoctorCertificatesApi {
      * @param doctorId  
      * @param certificateId  
      * @param updateDoctorCertificateCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/doctors/{doctorId}/certificates/{certificateId}")
-    fun apiV1DoctorsDoctorIdCertificatesCertificateIdPut(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID, @Body updateDoctorCertificateCommand: UpdateDoctorCertificateCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1DoctorsDoctorIdCertificatesCertificateIdPut(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID, @Body updateDoctorCertificateCommand: UpdateDoctorCertificateCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create certificate.
@@ -87,9 +87,9 @@ interface DoctorCertificatesApi {
      * 
      * @param doctorId  
      * @param createDoctorCertificateCommand  (optional)
-     * @return [Call]<[DoctorCertificate]>
+     * @return [DoctorCertificate]
      */
     @POST("api/v1/doctors/{doctorId}/certificates")
-    fun apiV1DoctorsDoctorIdCertificatesPost(@Path("doctorId") doctorId: java.util.UUID, @Body createDoctorCertificateCommand: CreateDoctorCertificateCommand? = null): Call<DoctorCertificate>
+    suspend fun apiV1DoctorsDoctorIdCertificatesPost(@Path("doctorId") doctorId: java.util.UUID, @Body createDoctorCertificateCommand: CreateDoctorCertificateCommand? = null): Response<DoctorCertificate>
 
 }

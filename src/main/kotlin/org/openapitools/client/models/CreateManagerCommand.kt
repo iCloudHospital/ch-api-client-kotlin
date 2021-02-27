@@ -20,9 +20,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param userName 
- * @param email 
- * @param hospitalId 
  * @param firstName 
  * @param lastName 
  * @param phone 
@@ -33,15 +30,12 @@ import com.google.gson.annotations.SerializedName
  * @param medias 
  * @param languages 
  * @param locations 
+ * @param userName 
+ * @param email 
+ * @param hospitalId 
  */
 
 data class CreateManagerCommand (
-    @SerializedName("userName")
-    val userName: kotlin.String? = null,
-    @SerializedName("email")
-    val email: kotlin.String? = null,
-    @SerializedName("hospitalId")
-    val hospitalId: java.util.UUID? = null,
     @SerializedName("firstName")
     val firstName: kotlin.String? = null,
     @SerializedName("lastName")
@@ -61,6 +55,12 @@ data class CreateManagerCommand (
     @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @SerializedName("locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
+    @SerializedName("userName")
+    val userName: kotlin.String? = null,
+    @SerializedName("email")
+    val email: kotlin.String? = null,
+    @SerializedName("hospitalId")
+    val hospitalId: java.util.UUID? = null
 )
 

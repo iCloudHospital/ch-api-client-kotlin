@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hospitals** | [**kotlin.collections.List&lt;HospitalSearchItemViewModel&gt;**](HospitalSearchItemViewModel.md) |  |  [optional]
 **specialtyTypeId** | **kotlin.String** |  |  [optional]
 **specialtyTypeName** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
@@ -14,6 +13,7 @@ Name | Type | Description | Notes
 **specialtyTypeCategoryName** | **kotlin.String** |  |  [optional]
 **marketingType** | **kotlin.Int** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
+**hospitals** | [**kotlin.collections.List&lt;HospitalSearchItemViewModel&gt;**](HospitalSearchItemViewModel.md) |  |  [optional]
 
 
 

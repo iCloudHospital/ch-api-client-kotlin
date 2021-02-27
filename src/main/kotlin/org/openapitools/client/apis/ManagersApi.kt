@@ -2,7 +2,7 @@ package org.openapitools.client.apis
 
 import org.openapitools.client.infrastructure.CollectionFormats.*
 import retrofit2.http.*
-import retrofit2.Call
+import retrofit2.Response
 import okhttp3.RequestBody
 
 import org.openapitools.client.models.CreateManagerCommand
@@ -29,10 +29,10 @@ interface ManagersApi {
      * @param lastRetrieved  (optional)
      * @param current  (optional)
      * @param hospitalId  (optional)
-     * @return [Call]<[ManagersViewModel]>
+     * @return [ManagersViewModel]
      */
     @GET("api/v1/managers")
-    fun apiV1ManagersGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null, @Query("hospitalId") hospitalId: java.util.UUID? = null): Call<ManagersViewModel>
+    suspend fun apiV1ManagersGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null, @Query("hospitalId") hospitalId: java.util.UUID? = null): Response<ManagersViewModel>
 
     /**
      * Delete hospital manager.
@@ -43,10 +43,10 @@ interface ManagersApi {
      *  - 403: Forbidden
      * 
      * @param managerId  
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @DELETE("api/v1/managers/{managerId}")
-    fun apiV1ManagersManagerIdDelete(@Path("managerId") managerId: java.util.UUID): Call<kotlin.Boolean>
+    suspend fun apiV1ManagersManagerIdDelete(@Path("managerId") managerId: java.util.UUID): Response<kotlin.Boolean>
 
     /**
      * Get hospital manager.
@@ -55,10 +55,10 @@ interface ManagersApi {
      *  - 200: Success
      * 
      * @param managerId  
-     * @return [Call]<[ManagerViewModel]>
+     * @return [ManagerViewModel]
      */
     @GET("api/v1/managers/{managerId}")
-    fun apiV1ManagersManagerIdGet(@Path("managerId") managerId: java.util.UUID): Call<ManagerViewModel>
+    suspend fun apiV1ManagersManagerIdGet(@Path("managerId") managerId: java.util.UUID): Response<ManagerViewModel>
 
     /**
      * Update hospital manager.
@@ -70,10 +70,10 @@ interface ManagersApi {
      * 
      * @param managerId  
      * @param updateManagerCommand  (optional)
-     * @return [Call]<[kotlin.Boolean]>
+     * @return [kotlin.Boolean]
      */
     @PUT("api/v1/managers/{managerId}")
-    fun apiV1ManagersManagerIdPut(@Path("managerId") managerId: java.util.UUID, @Body updateManagerCommand: UpdateManagerCommand? = null): Call<kotlin.Boolean>
+    suspend fun apiV1ManagersManagerIdPut(@Path("managerId") managerId: java.util.UUID, @Body updateManagerCommand: UpdateManagerCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Create hospital manager.
@@ -84,9 +84,9 @@ interface ManagersApi {
      *  - 403: Forbidden
      * 
      * @param createManagerCommand  (optional)
-     * @return [Call]<[java.util.UUID]>
+     * @return [java.util.UUID]
      */
     @POST("api/v1/managers")
-    fun apiV1ManagersPost(@Body createManagerCommand: CreateManagerCommand? = null): Call<java.util.UUID>
+    suspend fun apiV1ManagersPost(@Body createManagerCommand: CreateManagerCommand? = null): Response<java.util.UUID>
 
 }

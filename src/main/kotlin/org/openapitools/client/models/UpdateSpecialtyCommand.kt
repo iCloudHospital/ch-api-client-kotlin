@@ -17,18 +17,16 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param content 
  * @param name 
  * @param slug 
  * @param description 
  * @param specialtyTypeId 
  * @param specialtyTypeName 
  * @param auditableEntity 
+ * @param content 
  */
 
 data class UpdateSpecialtyCommand (
-    @SerializedName("content")
-    val content: kotlin.String? = null,
     @SerializedName("name")
     val name: kotlin.String? = null,
     @SerializedName("slug")
@@ -40,6 +38,8 @@ data class UpdateSpecialtyCommand (
     @SerializedName("specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("content")
+    val content: kotlin.String? = null
 )
 
