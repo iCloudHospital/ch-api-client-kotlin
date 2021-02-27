@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.MarketingType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -30,25 +30,25 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class SpecialtyTypeViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("content")
+    @Json(name = "content")
     val content: kotlin.String? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("specialtyCount")
+    @Json(name = "specialtyCount")
     val specialtyCount: kotlin.Int? = null,
-    @SerializedName("hospitalSpecialtyCount")
+    @Json(name = "hospitalSpecialtyCount")
     val hospitalSpecialtyCount: kotlin.Int? = null,
-    @SerializedName("serviceCount")
+    @Json(name = "serviceCount")
     val serviceCount: kotlin.Int? = null,
-    @SerializedName("created")
+    @Json(name = "created")
     val created: java.time.LocalDateTime? = null
 )
 

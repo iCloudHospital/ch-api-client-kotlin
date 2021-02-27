@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,19 +22,19 @@ import com.google.gson.annotations.SerializedName
 enum class RejectReason(val value: kotlin.String){
 
 
-    @SerializedName(value = "AssessmentNotCompleted")
+    @Json(name = "AssessmentNotCompleted")
     assessmentNotCompleted("AssessmentNotCompleted"),
 
 
-    @SerializedName(value = "PaymentNotCompleted")
+    @Json(name = "PaymentNotCompleted")
     paymentNotCompleted("PaymentNotCompleted"),
 
 
-    @SerializedName(value = "ScheduleNotAvailable")
+    @Json(name = "ScheduleNotAvailable")
     scheduleNotAvailable("ScheduleNotAvailable"),
 
 
-    @SerializedName(value = "OtherReason")
+    @Json(name = "OtherReason")
     otherReason("OtherReason");
 
 

@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.VendorType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -24,11 +24,11 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Account (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: kotlin.String? = null,
-    @SerializedName("vendor")
+    @Json(name = "vendor")
     val vendor: VendorType? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

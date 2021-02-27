@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.Metadata
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -30,25 +30,25 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class SendBirdGroupChannelMember (
-    @SerializedName("user_id")
+    @Json(name = "user_id")
     val userId: kotlin.String? = null,
-    @SerializedName("nickname")
+    @Json(name = "nickname")
     val nickname: kotlin.String? = null,
-    @SerializedName("profile_url")
+    @Json(name = "profile_url")
     val profileUrl: kotlin.String? = null,
-    @SerializedName("is_active")
+    @Json(name = "is_active")
     val isActive: kotlin.Boolean? = null,
-    @SerializedName("is_online")
+    @Json(name = "is_online")
     val isOnline: kotlin.Boolean? = null,
-    @SerializedName("friend_discovery_key")
+    @Json(name = "friend_discovery_key")
     val friendDiscoveryKey: kotlin.collections.List<kotlin.String>? = null,
-    @SerializedName("last_seen_at")
+    @Json(name = "last_seen_at")
     val lastSeenAt: kotlin.Long? = null,
-    @SerializedName("state")
+    @Json(name = "state")
     val state: kotlin.String? = null,
-    @SerializedName("role")
+    @Json(name = "role")
     val role: kotlin.String? = null,
-    @SerializedName("metadata")
+    @Json(name = "metadata")
     val metadata: Metadata? = null
 )
 

@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.MediaViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -28,19 +28,19 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateDealCommand (
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("photo")
+    @Json(name = "photo")
     val photo: kotlin.String? = null,
-    @SerializedName("photoThumbnail")
+    @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

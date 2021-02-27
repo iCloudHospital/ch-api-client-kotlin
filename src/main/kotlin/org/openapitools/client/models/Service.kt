@@ -17,7 +17,7 @@ import org.openapitools.client.models.HospitalSpecialty
 import org.openapitools.client.models.Media
 import org.openapitools.client.models.Procedure
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -44,45 +44,45 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Service (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("normalizedName")
+    @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("content")
+    @Json(name = "content")
     val content: kotlin.String? = null,
-    @SerializedName("normalizedDescription")
+    @Json(name = "normalizedDescription")
     val normalizedDescription: kotlin.String? = null,
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("specialtyId")
+    @Json(name = "specialtyId")
     val specialtyId: java.util.UUID? = null,
-    @SerializedName("packageServiceId")
+    @Json(name = "packageServiceId")
     val packageServiceId: java.util.UUID? = null,
-    @SerializedName("hospitalSpecialty")
+    @Json(name = "hospitalSpecialty")
     val hospitalSpecialty: HospitalSpecialty? = null,
-    @SerializedName("procedure")
+    @Json(name = "procedure")
     val procedure: Procedure? = null,
-    @SerializedName("serviceCategoryId")
+    @Json(name = "serviceCategoryId")
     val serviceCategoryId: java.util.UUID? = null,
-    @SerializedName("minPrice")
+    @Json(name = "minPrice")
     val minPrice: kotlin.Double? = null,
-    @SerializedName("maxPrice")
+    @Json(name = "maxPrice")
     val maxPrice: kotlin.Double? = null,
-    @SerializedName("priceReuqest")
+    @Json(name = "priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null,
-    @SerializedName("dealPackageServices")
+    @Json(name = "dealPackageServices")
     val dealPackageServices: kotlin.collections.List<DealPackageService>? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

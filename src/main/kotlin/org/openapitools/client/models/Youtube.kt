@@ -15,7 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.YoutubeTag
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -31,23 +31,23 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Youtube (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("title")
+    @Json(name = "title")
     val title: kotlin.String? = null,
-    @SerializedName("normalizedTitle")
+    @Json(name = "normalizedTitle")
     val normalizedTitle: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("url")
+    @Json(name = "url")
     val url: kotlin.String? = null,
-    @SerializedName("youtubeTags")
+    @Json(name = "youtubeTags")
     val youtubeTags: kotlin.collections.List<YoutubeTag>? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

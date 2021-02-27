@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.MediaType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -28,21 +28,21 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Media (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("mediaType")
+    @Json(name = "mediaType")
     val mediaType: MediaType? = null,
-    @SerializedName("url")
+    @Json(name = "url")
     val url: kotlin.String? = null,
-    @SerializedName("thumbnailUrl")
+    @Json(name = "thumbnailUrl")
     val thumbnailUrl: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("height")
+    @Json(name = "height")
     val height: kotlin.Int? = null,
-    @SerializedName("width")
+    @Json(name = "width")
     val width: kotlin.Int? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null
 )
 

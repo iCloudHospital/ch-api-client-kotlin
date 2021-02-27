@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.Gender
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -35,33 +35,33 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CHAdminItemViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("userName")
+    @Json(name = "userName")
     val userName: kotlin.String? = null,
-    @SerializedName("firstName")
+    @Json(name = "firstName")
     val firstName: kotlin.String? = null,
-    @SerializedName("lastName")
+    @Json(name = "lastName")
     val lastName: kotlin.String? = null,
-    @SerializedName("fullname")
+    @Json(name = "fullname")
     val fullname: kotlin.String? = null,
-    @SerializedName("phone")
+    @Json(name = "phone")
     val phone: kotlin.String? = null,
-    @SerializedName("email")
+    @Json(name = "email")
     val email: kotlin.String? = null,
-    @SerializedName("photo")
+    @Json(name = "photo")
     val photo: kotlin.String? = null,
-    @SerializedName("photoThumbnail")
+    @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @SerializedName("gender")
+    @Json(name = "gender")
     val gender: Gender? = null,
-    @SerializedName("dateOfBirth")
+    @Json(name = "dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-    @SerializedName("timeZone")
+    @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
-    @SerializedName("communicationUserId")
+    @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

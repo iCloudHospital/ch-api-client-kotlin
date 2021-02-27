@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.google.gson.annotations.SerializedName
 enum class MarketingType(val value: kotlin.String){
 
 
-    @SerializedName(value = "Both")
+    @Json(name = "Both")
     both("Both"),
 
 
-    @SerializedName(value = "GeneralHealth")
+    @Json(name = "GeneralHealth")
     generalHealth("GeneralHealth"),
 
 
-    @SerializedName(value = "Beauty")
+    @Json(name = "Beauty")
     beauty("Beauty");
 
 
