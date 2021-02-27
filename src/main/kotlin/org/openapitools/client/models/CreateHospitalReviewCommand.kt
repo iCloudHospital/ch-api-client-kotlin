@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.ReviewCategory
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -24,13 +24,13 @@ import com.squareup.moshi.Json
  */
 
 data class CreateHospitalReviewCommand (
-    @Json(name = "body")
+    @SerializedName("body")
     val body: kotlin.String? = null,
-    @Json(name = "recommended")
+    @SerializedName("recommended")
     val recommended: kotlin.Boolean? = null,
-    @Json(name = "reviewCategory")
+    @SerializedName("reviewCategory")
     val reviewCategory: ReviewCategory? = null,
-    @Json(name = "rate")
+    @SerializedName("rate")
     val rate: kotlin.Int? = null
 )
 

@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.RejectReason
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -22,9 +22,9 @@ import com.squareup.moshi.Json
  */
 
 data class RejectConsultationCommand (
-    @Json(name = "rejectReason")
+    @SerializedName("rejectReason")
     val rejectReason: RejectReason? = null,
-    @Json(name = "rejectComment")
+    @SerializedName("rejectComment")
     val rejectComment: kotlin.String? = null
 )
 

@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.PagedListMetaData
 import org.openapitools.client.models.QuestionItemViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -23,9 +23,9 @@ import com.squareup.moshi.Json
  */
 
 data class QuestionsViewModel (
-    @Json(name = "items")
+    @SerializedName("items")
     val items: kotlin.collections.List<QuestionItemViewModel>? = null,
-    @Json(name = "metaData")
+    @SerializedName("metaData")
     val metaData: PagedListMetaData? = null
 )
 

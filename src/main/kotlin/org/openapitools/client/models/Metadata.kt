@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.squareup.moshi.Json
  */
 
 data class Metadata (
-    @Json(name = "location")
+    @SerializedName("location")
     val location: kotlin.String? = null,
-    @Json(name = "marriage")
+    @SerializedName("marriage")
     val marriage: kotlin.String? = null,
-    @Json(name = "hasSomeone")
+    @SerializedName("hasSomeone")
     val hasSomeone: kotlin.String? = null
 )
 

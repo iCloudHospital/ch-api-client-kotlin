@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,31 +22,31 @@ import com.squareup.moshi.Json
 enum class BookingStatus(val value: kotlin.String){
 
 
-    @Json(name = "New")
+    @SerializedName(value = "New")
     new("New"),
 
 
-    @Json(name = "Rejected")
+    @SerializedName(value = "Rejected")
     rejected("Rejected"),
 
 
-    @Json(name = "Approved")
+    @SerializedName(value = "Approved")
     approved("Approved"),
 
 
-    @Json(name = "Paid")
+    @SerializedName(value = "Paid")
     paid("Paid"),
 
 
-    @Json(name = "Canceled")
+    @SerializedName(value = "Canceled")
     canceled("Canceled"),
 
 
-    @Json(name = "RefundRequested")
+    @SerializedName(value = "RefundRequested")
     refundRequested("RefundRequested"),
 
 
-    @Json(name = "Refunded")
+    @SerializedName(value = "Refunded")
     refunded("Refunded");
 
 

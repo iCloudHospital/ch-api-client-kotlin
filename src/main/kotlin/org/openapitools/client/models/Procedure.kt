@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,11 +22,11 @@ import com.squareup.moshi.Json
 enum class Procedure(val value: kotlin.String){
 
 
-    @Json(name = "Treatment")
+    @SerializedName(value = "Treatment")
     treatment("Treatment"),
 
 
-    @Json(name = "Diagnostic")
+    @SerializedName(value = "Diagnostic")
     diagnostic("Diagnostic");
 
 

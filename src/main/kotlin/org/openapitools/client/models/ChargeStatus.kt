@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.squareup.moshi.Json
 enum class ChargeStatus(val value: kotlin.String){
 
 
-    @Json(name = "Pending")
+    @SerializedName(value = "Pending")
     pending("Pending"),
 
 
-    @Json(name = "Succeeded")
+    @SerializedName(value = "Succeeded")
     succeeded("Succeeded"),
 
 
-    @Json(name = "Failed")
+    @SerializedName(value = "Failed")
     failed("Failed");
 
 

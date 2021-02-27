@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -28,23 +28,23 @@ import com.squareup.moshi.Json
  */
 
 data class ServiceSearchViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: kotlin.String? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "specialtyId")
+    @SerializedName("specialtyId")
     val specialtyId: kotlin.String? = null,
-    @Json(name = "specialtyName")
+    @SerializedName("specialtyName")
     val specialtyName: kotlin.String? = null,
-    @Json(name = "specialtyTypeId")
+    @SerializedName("specialtyTypeId")
     val specialtyTypeId: kotlin.String? = null,
-    @Json(name = "specialtyTypeName")
+    @SerializedName("specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @Json(name = "procedure")
+    @SerializedName("procedure")
     val procedure: kotlin.Int? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null
 )
 

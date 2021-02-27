@@ -15,7 +15,7 @@ import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MarketingType
 import org.openapitools.client.models.Procedure
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -40,41 +40,41 @@ import com.squareup.moshi.Json
  */
 
 data class ServiceItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "content")
+    @SerializedName("content")
     val content: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "specialtyTypeId")
+    @SerializedName("specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-    @Json(name = "specialtyTypeName")
+    @SerializedName("specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @Json(name = "specialtyId")
+    @SerializedName("specialtyId")
     val specialtyId: java.util.UUID? = null,
-    @Json(name = "specialtyName")
+    @SerializedName("specialtyName")
     val specialtyName: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "procedure")
+    @SerializedName("procedure")
     val procedure: Procedure? = null,
-    @Json(name = "minPrice")
+    @SerializedName("minPrice")
     val minPrice: kotlin.Double? = null,
-    @Json(name = "maxPrice")
+    @SerializedName("maxPrice")
     val maxPrice: kotlin.Double? = null,
-    @Json(name = "priceReuqest")
+    @SerializedName("priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

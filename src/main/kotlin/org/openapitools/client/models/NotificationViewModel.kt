@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.NotificationCode
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -30,25 +30,25 @@ import com.squareup.moshi.Json
  */
 
 data class NotificationViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "notificationCode")
+    @SerializedName("notificationCode")
     val notificationCode: NotificationCode? = null,
-    @Json(name = "notificationTargetId")
+    @SerializedName("notificationTargetId")
     val notificationTargetId: java.util.UUID? = null,
-    @Json(name = "senderId")
+    @SerializedName("senderId")
     val senderId: java.util.UUID? = null,
-    @Json(name = "senderName")
+    @SerializedName("senderName")
     val senderName: kotlin.String? = null,
-    @Json(name = "receiverId")
+    @SerializedName("receiverId")
     val receiverId: java.util.UUID? = null,
-    @Json(name = "receiverName")
+    @SerializedName("receiverName")
     val receiverName: kotlin.String? = null,
-    @Json(name = "message")
+    @SerializedName("message")
     val message: kotlin.String? = null,
-    @Json(name = "createdAt")
+    @SerializedName("createdAt")
     val createdAt: java.time.LocalDateTime? = null,
-    @Json(name = "isChecked")
+    @SerializedName("isChecked")
     val isChecked: kotlin.Boolean? = null
 )
 

@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.MarketingType
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -29,23 +29,23 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateSpecialtyTypeCommand (
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: MarketingType? = null,
-    @Json(name = "specialtyCount")
+    @SerializedName("specialtyCount")
     val specialtyCount: kotlin.Int? = null,
-    @Json(name = "hospitalSpecialtyCount")
+    @SerializedName("hospitalSpecialtyCount")
     val hospitalSpecialtyCount: kotlin.Int? = null,
-    @Json(name = "serviceCount")
+    @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
-    @Json(name = "created")
+    @SerializedName("created")
     val created: java.time.LocalDateTime? = null,
-    @Json(name = "content")
+    @SerializedName("content")
     val content: kotlin.String? = null
 )
 

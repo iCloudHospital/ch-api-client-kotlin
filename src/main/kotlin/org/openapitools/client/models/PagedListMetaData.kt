@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -29,25 +29,25 @@ import com.squareup.moshi.Json
  */
 
 data class PagedListMetaData (
-    @Json(name = "pageCount")
+    @SerializedName("pageCount")
     val pageCount: kotlin.Int? = null,
-    @Json(name = "totalItemCount")
+    @SerializedName("totalItemCount")
     val totalItemCount: kotlin.Int? = null,
-    @Json(name = "pageNumber")
+    @SerializedName("pageNumber")
     val pageNumber: kotlin.Int? = null,
-    @Json(name = "pageSize")
+    @SerializedName("pageSize")
     val pageSize: kotlin.Int? = null,
-    @Json(name = "hasPreviousPage")
+    @SerializedName("hasPreviousPage")
     val hasPreviousPage: kotlin.Boolean? = null,
-    @Json(name = "hasNextPage")
+    @SerializedName("hasNextPage")
     val hasNextPage: kotlin.Boolean? = null,
-    @Json(name = "isFirstPage")
+    @SerializedName("isFirstPage")
     val isFirstPage: kotlin.Boolean? = null,
-    @Json(name = "isLastPage")
+    @SerializedName("isLastPage")
     val isLastPage: kotlin.Boolean? = null,
-    @Json(name = "firstItemOnPage")
+    @SerializedName("firstItemOnPage")
     val firstItemOnPage: kotlin.Int? = null,
-    @Json(name = "lastItemOnPage")
+    @SerializedName("lastItemOnPage")
     val lastItemOnPage: kotlin.Int? = null
 )
 

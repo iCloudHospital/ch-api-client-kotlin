@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.squareup.moshi.Json
  */
 
 data class UpdateDoctorCertificateCommand (
-    @Json(name = "certificate")
+    @SerializedName("certificate")
     val certificate: kotlin.String? = null,
-    @Json(name = "activeFrom")
+    @SerializedName("activeFrom")
     val activeFrom: java.time.LocalDateTime? = null,
-    @Json(name = "activeTo")
+    @SerializedName("activeTo")
     val activeTo: java.time.LocalDateTime? = null
 )
 

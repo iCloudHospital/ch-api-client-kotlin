@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,19 +22,19 @@ import com.squareup.moshi.Json
 enum class ReviewCategory(val value: kotlin.String){
 
 
-    @Json(name = "Services")
+    @SerializedName(value = "Services")
     services("Services"),
 
 
-    @Json(name = "Hospitality")
+    @SerializedName(value = "Hospitality")
     hospitality("Hospitality"),
 
 
-    @Json(name = "Transfer")
+    @SerializedName(value = "Transfer")
     transfer("Transfer"),
 
 
-    @Json(name = "Etc")
+    @SerializedName(value = "Etc")
     etc("Etc");
 
 

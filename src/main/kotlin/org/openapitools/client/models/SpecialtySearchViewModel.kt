@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.HospitalSearchItemViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -32,29 +32,29 @@ import com.squareup.moshi.Json
  */
 
 data class SpecialtySearchViewModel (
-    @Json(name = "specialtyId")
+    @SerializedName("specialtyId")
     val specialtyId: kotlin.String? = null,
-    @Json(name = "specialtyName")
+    @SerializedName("specialtyName")
     val specialtyName: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "content")
+    @SerializedName("content")
     val content: kotlin.String? = null,
-    @Json(name = "specialtyTypeId")
+    @SerializedName("specialtyTypeId")
     val specialtyTypeId: kotlin.String? = null,
-    @Json(name = "specialtyTypeName")
+    @SerializedName("specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @Json(name = "specialtyTypeCategoryId")
+    @SerializedName("specialtyTypeCategoryId")
     val specialtyTypeCategoryId: kotlin.String? = null,
-    @Json(name = "specialtyTypeCategoryName")
+    @SerializedName("specialtyTypeCategoryName")
     val specialtyTypeCategoryName: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: kotlin.Int? = null,
-    @Json(name = "order")
+    @SerializedName("order")
     val order: kotlin.Int? = null,
-    @Json(name = "hospitals")
+    @SerializedName("hospitals")
     val hospitals: kotlin.collections.List<HospitalSearchItemViewModel>? = null
 )
 

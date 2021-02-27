@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.DealPackageSearchViewModel
 import org.openapitools.client.models.HospitalSearchItemViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -30,23 +30,23 @@ import com.squareup.moshi.Json
  */
 
 data class DealSearchViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: kotlin.String? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: kotlin.Int? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "hospital")
+    @SerializedName("hospital")
     val hospital: HospitalSearchItemViewModel? = null,
-    @Json(name = "packages")
+    @SerializedName("packages")
     val packages: kotlin.collections.List<DealPackageSearchViewModel>? = null
 )
 
