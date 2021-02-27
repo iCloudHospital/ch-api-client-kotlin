@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.squareup.moshi.Json
  */
 
 data class SendBirdGroupChannelrOperator (
-    @Json(name = "user_id")
+    @SerializedName("user_id")
     val userId: kotlin.String? = null,
-    @Json(name = "nickname")
+    @SerializedName("nickname")
     val nickname: kotlin.String? = null,
-    @Json(name = "profile_url")
+    @SerializedName("profile_url")
     val profileUrl: kotlin.String? = null
 )
 

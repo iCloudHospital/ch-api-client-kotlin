@@ -19,7 +19,7 @@ import org.openapitools.client.models.Manager
 import org.openapitools.client.models.Question
 import org.openapitools.client.models.RefundPolicy
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -40,33 +40,33 @@ import com.squareup.moshi.Json
  */
 
 data class DealPackage (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "dealId")
+    @SerializedName("dealId")
     val dealId: java.util.UUID? = null,
-    @Json(name = "deal")
+    @SerializedName("deal")
     val deal: Deal? = null,
-    @Json(name = "refundPolicy")
+    @SerializedName("refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-    @Json(name = "additionalServices")
+    @SerializedName("additionalServices")
     val additionalServices: kotlin.String? = null,
-    @Json(name = "accomodation")
+    @SerializedName("accomodation")
     val accomodation: kotlin.String? = null,
-    @Json(name = "transfer")
+    @SerializedName("transfer")
     val transfer: kotlin.String? = null,
-    @Json(name = "bonus")
+    @SerializedName("bonus")
     val bonus: kotlin.String? = null,
-    @Json(name = "price")
+    @SerializedName("price")
     val price: kotlin.Double? = null,
-    @Json(name = "dealPackageServices")
+    @SerializedName("dealPackageServices")
     val dealPackageServices: kotlin.collections.List<DealPackageService>? = null,
-    @Json(name = "managers")
+    @SerializedName("managers")
     val managers: kotlin.collections.List<Manager>? = null,
-    @Json(name = "questions")
+    @SerializedName("questions")
     val questions: kotlin.collections.List<Question>? = null,
-    @Json(name = "bookings")
+    @SerializedName("bookings")
     val bookings: kotlin.collections.List<Booking>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

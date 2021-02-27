@@ -13,7 +13,7 @@ package org.openapitools.client.models
 
 import org.openapitools.client.models.MediaSearchViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -46,57 +46,57 @@ import com.squareup.moshi.Json
  */
 
 data class HospitalSearchItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: kotlin.String? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "logo")
+    @SerializedName("logo")
     val logo: kotlin.String? = null,
-    @Json(name = "overview")
+    @SerializedName("overview")
     val overview: kotlin.String? = null,
-    @Json(name = "bedsCount")
+    @SerializedName("bedsCount")
     val bedsCount: kotlin.Int? = null,
-    @Json(name = "operationsPerYear")
+    @SerializedName("operationsPerYear")
     val operationsPerYear: kotlin.Int? = null,
-    @Json(name = "foundationYear")
+    @SerializedName("foundationYear")
     val foundationYear: kotlin.Int? = null,
-    @Json(name = "medicalStaffCount")
+    @SerializedName("medicalStaffCount")
     val medicalStaffCount: kotlin.Int? = null,
-    @Json(name = "doctorCount")
+    @SerializedName("doctorCount")
     val doctorCount: kotlin.Int? = null,
-    @Json(name = "countryId")
+    @SerializedName("countryId")
     val countryId: kotlin.String? = null,
-    @Json(name = "countryName")
+    @SerializedName("countryName")
     val countryName: kotlin.String? = null,
-    @Json(name = "marketingType")
+    @SerializedName("marketingType")
     val marketingType: kotlin.Int? = null,
-    @Json(name = "latitude")
+    @SerializedName("latitude")
     val latitude: kotlin.Double? = null,
-    @Json(name = "longitude")
+    @SerializedName("longitude")
     val longitude: kotlin.Double? = null,
-    @Json(name = "country")
+    @SerializedName("country")
     val country: kotlin.String? = null,
-    @Json(name = "state")
+    @SerializedName("state")
     val state: kotlin.String? = null,
-    @Json(name = "county")
+    @SerializedName("county")
     val county: kotlin.String? = null,
-    @Json(name = "city")
+    @SerializedName("city")
     val city: kotlin.String? = null,
-    @Json(name = "zipCode")
+    @SerializedName("zipCode")
     val zipCode: kotlin.String? = null,
-    @Json(name = "address")
+    @SerializedName("address")
     val address: kotlin.String? = null,
-    @Json(name = "medias")
+    @SerializedName("medias")
     val medias: kotlin.collections.List<MediaSearchViewModel>? = null,
-    @Json(name = "consultationEnabled")
+    @SerializedName("consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
-    @Json(name = "consultationFee")
+    @SerializedName("consultationFee")
     val consultationFee: kotlin.Double? = null,
-    @Json(name = "specialtiesSummerized")
+    @SerializedName("specialtiesSummerized")
     val specialtiesSummerized: kotlin.String? = null
 )
 

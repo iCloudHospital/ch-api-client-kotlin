@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -31,29 +31,29 @@ import com.squareup.moshi.Json
  */
 
 data class SendBirdUserViewModel (
-    @Json(name = "phone_number")
+    @SerializedName("phone_number")
     val phoneNumber: kotlin.String? = null,
-    @Json(name = "has_ever_logged_in")
+    @SerializedName("has_ever_logged_in")
     val hasEverLoggedIn: kotlin.Boolean? = null,
-    @Json(name = "user_id")
+    @SerializedName("user_id")
     val userId: kotlin.String? = null,
-    @Json(name = "access_token")
+    @SerializedName("access_token")
     val accessToken: kotlin.String? = null,
-    @Json(name = "created_at")
+    @SerializedName("created_at")
     val createdAt: kotlin.Long? = null,
-    @Json(name = "is_active")
+    @SerializedName("is_active")
     val isActive: kotlin.Boolean? = null,
-    @Json(name = "locale")
+    @SerializedName("locale")
     val locale: kotlin.String? = null,
-    @Json(name = "is_online")
+    @SerializedName("is_online")
     val isOnline: kotlin.Boolean? = null,
-    @Json(name = "last_seen_at")
+    @SerializedName("last_seen_at")
     val lastSeenAt: kotlin.Long? = null,
-    @Json(name = "is_shadow_blocked")
+    @SerializedName("is_shadow_blocked")
     val isShadowBlocked: kotlin.Boolean? = null,
-    @Json(name = "nickname")
+    @SerializedName("nickname")
     val nickname: kotlin.String? = null,
-    @Json(name = "profile_url")
+    @SerializedName("profile_url")
     val profileUrl: kotlin.String? = null
 )
 

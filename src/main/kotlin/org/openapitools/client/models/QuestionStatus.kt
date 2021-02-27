@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,19 +22,19 @@ import com.squareup.moshi.Json
 enum class QuestionStatus(val value: kotlin.String){
 
 
-    @Json(name = "New")
+    @SerializedName(value = "New")
     new("New"),
 
 
-    @Json(name = "Answered")
+    @SerializedName(value = "Answered")
     answered("Answered"),
 
 
-    @Json(name = "Replied")
+    @SerializedName(value = "Replied")
     replied("Replied"),
 
 
-    @Json(name = "Archived")
+    @SerializedName(value = "Archived")
     archived("Archived");
 
 

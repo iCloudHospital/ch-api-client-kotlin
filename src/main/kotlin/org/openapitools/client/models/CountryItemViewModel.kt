@@ -14,7 +14,7 @@ package org.openapitools.client.models
 import org.openapitools.client.models.AuditableEntity
 import org.openapitools.client.models.MediaViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -33,29 +33,29 @@ import com.squareup.moshi.Json
  */
 
 data class CountryItemViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: kotlin.String? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
+    @SerializedName("description")
     val description: kotlin.String? = null,
-    @Json(name = "content")
+    @SerializedName("content")
     val content: kotlin.String? = null,
-    @Json(name = "hospitalsCount")
+    @SerializedName("hospitalsCount")
     val hospitalsCount: kotlin.Int? = null,
-    @Json(name = "doctorsCount")
+    @SerializedName("doctorsCount")
     val doctorsCount: kotlin.Int? = null,
-    @Json(name = "specialitiesCount")
+    @SerializedName("specialitiesCount")
     val specialitiesCount: kotlin.Int? = null,
-    @Json(name = "packagesCount")
+    @SerializedName("packagesCount")
     val packagesCount: kotlin.Int? = null,
-    @Json(name = "articlesCount")
+    @SerializedName("articlesCount")
     val articlesCount: kotlin.Int? = null,
-    @Json(name = "medias")
+    @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

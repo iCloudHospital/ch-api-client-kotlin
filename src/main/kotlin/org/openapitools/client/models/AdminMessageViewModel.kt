@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -29,25 +29,25 @@ import com.squareup.moshi.Json
  */
 
 data class AdminMessageViewModel (
-    @Json(name = "message_id")
+    @SerializedName("message_id")
     val messageId: kotlin.Int? = null,
-    @Json(name = "type")
+    @SerializedName("type")
     val type: kotlin.String? = null,
-    @Json(name = "custom_type")
+    @SerializedName("custom_type")
     val customType: kotlin.String? = null,
-    @Json(name = "channel_url")
+    @SerializedName("channel_url")
     val channelUrl: kotlin.String? = null,
-    @Json(name = "mention_type")
+    @SerializedName("mention_type")
     val mentionType: kotlin.String? = null,
-    @Json(name = "is_removed")
+    @SerializedName("is_removed")
     val isRemoved: kotlin.Boolean? = null,
-    @Json(name = "message")
+    @SerializedName("message")
     val message: kotlin.String? = null,
-    @Json(name = "data")
+    @SerializedName("data")
     val data: kotlin.String? = null,
-    @Json(name = "created_at")
+    @SerializedName("created_at")
     val createdAt: kotlin.Long? = null,
-    @Json(name = "updated_at")
+    @SerializedName("updated_at")
     val updatedAt: kotlin.Int? = null
 )
 

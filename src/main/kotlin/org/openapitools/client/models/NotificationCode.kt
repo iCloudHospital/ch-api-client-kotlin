@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
 * 
@@ -22,75 +22,75 @@ import com.squareup.moshi.Json
 enum class NotificationCode(val value: kotlin.String){
 
 
-    @Json(name = "WelcomeEmail")
+    @SerializedName(value = "WelcomeEmail")
     welcomeEmail("WelcomeEmail"),
 
 
-    @Json(name = "DirectMessageSent")
+    @SerializedName(value = "DirectMessageSent")
     directMessageSent("DirectMessageSent"),
 
 
-    @Json(name = "BookingNew")
+    @SerializedName(value = "BookingNew")
     bookingNew("BookingNew"),
 
 
-    @Json(name = "BookingUpdated")
+    @SerializedName(value = "BookingUpdated")
     bookingUpdated("BookingUpdated"),
 
 
-    @Json(name = "BookingRejected")
+    @SerializedName(value = "BookingRejected")
     bookingRejected("BookingRejected"),
 
 
-    @Json(name = "BookingApproved")
+    @SerializedName(value = "BookingApproved")
     bookingApproved("BookingApproved"),
 
 
-    @Json(name = "BookingPaid")
+    @SerializedName(value = "BookingPaid")
     bookingPaid("BookingPaid"),
 
 
-    @Json(name = "BookingCanceled")
+    @SerializedName(value = "BookingCanceled")
     bookingCanceled("BookingCanceled"),
 
 
-    @Json(name = "BookingRefundRequested")
+    @SerializedName(value = "BookingRefundRequested")
     bookingRefundRequested("BookingRefundRequested"),
 
 
-    @Json(name = "BookingRefunded")
+    @SerializedName(value = "BookingRefunded")
     bookingRefunded("BookingRefunded"),
 
 
-    @Json(name = "ConsultationNew")
+    @SerializedName(value = "ConsultationNew")
     consultationNew("ConsultationNew"),
 
 
-    @Json(name = "ConsultationUpdated")
+    @SerializedName(value = "ConsultationUpdated")
     consultationUpdated("ConsultationUpdated"),
 
 
-    @Json(name = "ConsultationRejected")
+    @SerializedName(value = "ConsultationRejected")
     consultationRejected("ConsultationRejected"),
 
 
-    @Json(name = "ConsultationApproved")
+    @SerializedName(value = "ConsultationApproved")
     consultationApproved("ConsultationApproved"),
 
 
-    @Json(name = "ConsultationPaid")
+    @SerializedName(value = "ConsultationPaid")
     consultationPaid("ConsultationPaid"),
 
 
-    @Json(name = "ConsultationCanceled")
+    @SerializedName(value = "ConsultationCanceled")
     consultationCanceled("ConsultationCanceled"),
 
 
-    @Json(name = "ConsultationRefundRequested")
+    @SerializedName(value = "ConsultationRefundRequested")
     consultationRefundRequested("ConsultationRefundRequested"),
 
 
-    @Json(name = "ConsultationRefunded")
+    @SerializedName(value = "ConsultationRefunded")
     consultationRefunded("ConsultationRefunded");
 
 

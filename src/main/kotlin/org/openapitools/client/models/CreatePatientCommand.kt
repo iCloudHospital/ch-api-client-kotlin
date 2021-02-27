@@ -16,7 +16,7 @@ import org.openapitools.client.models.MediaViewModel
 import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -36,31 +36,31 @@ import com.squareup.moshi.Json
  */
 
 data class CreatePatientCommand (
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "dateOfBirth")
+    @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-    @Json(name = "medias")
+    @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @Json(name = "languages")
+    @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @Json(name = "locations")
+    @SerializedName("locations")
     val locations: kotlin.collections.List<UserLocationViewModel>? = null,
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "isAdmin")
+    @SerializedName("isAdmin")
     val isAdmin: kotlin.Boolean? = null
 )
 

@@ -16,7 +16,7 @@ import org.openapitools.client.models.ConsultationType
 import org.openapitools.client.models.Gender
 import org.openapitools.client.models.RejectReason
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -63,85 +63,85 @@ import com.squareup.moshi.Json
  */
 
 data class ConsultationViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "consultationType")
+    @SerializedName("consultationType")
     val consultationType: ConsultationType? = null,
-    @Json(name = "patientId")
+    @SerializedName("patientId")
     val patientId: java.util.UUID? = null,
-    @Json(name = "patientName")
+    @SerializedName("patientName")
     val patientName: kotlin.String? = null,
-    @Json(name = "communicationUserId")
+    @SerializedName("communicationUserId")
     val communicationUserId: kotlin.String? = null,
-    @Json(name = "hospitalId")
+    @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
+    @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
-    @Json(name = "hospitalSlug")
+    @SerializedName("hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
-    @Json(name = "specialtyId")
+    @SerializedName("specialtyId")
     val specialtyId: java.util.UUID? = null,
-    @Json(name = "specialtyName")
+    @SerializedName("specialtyName")
     val specialtyName: kotlin.String? = null,
-    @Json(name = "specialtySlug")
+    @SerializedName("specialtySlug")
     val specialtySlug: kotlin.String? = null,
-    @Json(name = "doctorId")
+    @SerializedName("doctorId")
     val doctorId: java.util.UUID? = null,
-    @Json(name = "doctorName")
+    @SerializedName("doctorName")
     val doctorName: kotlin.String? = null,
-    @Json(name = "doctorSlug")
+    @SerializedName("doctorSlug")
     val doctorSlug: kotlin.String? = null,
-    @Json(name = "dealId")
+    @SerializedName("dealId")
     val dealId: java.util.UUID? = null,
-    @Json(name = "dealName")
+    @SerializedName("dealName")
     val dealName: kotlin.String? = null,
-    @Json(name = "dealSlug")
+    @SerializedName("dealSlug")
     val dealSlug: kotlin.String? = null,
-    @Json(name = "language")
+    @SerializedName("language")
     val language: kotlin.String? = null,
-    @Json(name = "isAccountHolder")
+    @SerializedName("isAccountHolder")
     val isAccountHolder: kotlin.Boolean? = null,
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "dateOfBirth")
+    @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "comment")
+    @SerializedName("comment")
     val comment: kotlin.String? = null,
-    @Json(name = "timeRange")
+    @SerializedName("timeRange")
     val timeRange: kotlin.String? = null,
-    @Json(name = "approximateDateStart")
+    @SerializedName("approximateDateStart")
     val approximateDateStart: java.time.LocalDateTime? = null,
-    @Json(name = "approximateDateEnd")
+    @SerializedName("approximateDateEnd")
     val approximateDateEnd: java.time.LocalDateTime? = null,
-    @Json(name = "confirmedDateStart")
+    @SerializedName("confirmedDateStart")
     val confirmedDateStart: java.time.LocalDateTime? = null,
-    @Json(name = "confirmedDateEnd")
+    @SerializedName("confirmedDateEnd")
     val confirmedDateEnd: java.time.LocalDateTime? = null,
-    @Json(name = "callerName")
+    @SerializedName("callerName")
     val callerName: kotlin.String? = null,
-    @Json(name = "callerId")
+    @SerializedName("callerId")
     val callerId: java.util.UUID? = null,
-    @Json(name = "fee")
+    @SerializedName("fee")
     val fee: kotlin.Double? = null,
-    @Json(name = "applicationFee")
+    @SerializedName("applicationFee")
     val applicationFee: kotlin.Double? = null,
-    @Json(name = "timeZone")
+    @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
-    @Json(name = "status")
+    @SerializedName("status")
     val status: ConsultationStatus? = null,
-    @Json(name = "rejectReason")
+    @SerializedName("rejectReason")
     val rejectReason: RejectReason? = null,
-    @Json(name = "isOpen")
+    @SerializedName("isOpen")
     val isOpen: kotlin.Boolean? = null,
-    @Json(name = "paymentId")
+    @SerializedName("paymentId")
     val paymentId: java.util.UUID? = null
 )
 

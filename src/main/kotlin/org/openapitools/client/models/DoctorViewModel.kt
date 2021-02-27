@@ -25,7 +25,7 @@ import org.openapitools.client.models.MediaViewModel
 import org.openapitools.client.models.UserLanguageViewModel
 import org.openapitools.client.models.UserLocationViewModel
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -64,69 +64,69 @@ import com.squareup.moshi.Json
  */
 
 data class DoctorViewModel (
-    @Json(name = "id")
+    @SerializedName("id")
     val id: java.util.UUID? = null,
-    @Json(name = "userName")
+    @SerializedName("userName")
     val userName: kotlin.String? = null,
-    @Json(name = "firstName")
+    @SerializedName("firstName")
     val firstName: kotlin.String? = null,
-    @Json(name = "lastName")
+    @SerializedName("lastName")
     val lastName: kotlin.String? = null,
-    @Json(name = "fullname")
+    @SerializedName("fullname")
     val fullname: kotlin.String? = null,
-    @Json(name = "phone")
+    @SerializedName("phone")
     val phone: kotlin.String? = null,
-    @Json(name = "email")
+    @SerializedName("email")
     val email: kotlin.String? = null,
-    @Json(name = "photo")
+    @SerializedName("photo")
     val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
+    @SerializedName("photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: Gender? = null,
-    @Json(name = "dateOfBirth")
+    @SerializedName("dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-    @Json(name = "timeZone")
+    @SerializedName("timeZone")
     val timeZone: kotlin.String? = null,
-    @Json(name = "communicationUserId")
+    @SerializedName("communicationUserId")
     val communicationUserId: kotlin.String? = null,
-    @Json(name = "auditableEntity")
+    @SerializedName("auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @Json(name = "userType")
+    @SerializedName("userType")
     val userType: kotlin.String? = null,
-    @Json(name = "languages")
+    @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
-    @Json(name = "locations")
+    @SerializedName("locations")
     val locations: kotlin.collections.List<UserLocationViewModel>? = null,
-    @Json(name = "slug")
+    @SerializedName("slug")
     val slug: kotlin.String? = null,
-    @Json(name = "startPracticeDate")
+    @SerializedName("startPracticeDate")
     val startPracticeDate: java.time.LocalDateTime? = null,
-    @Json(name = "yearOfExperience")
+    @SerializedName("yearOfExperience")
     val yearOfExperience: kotlin.Double? = null,
-    @Json(name = "overview")
+    @SerializedName("overview")
     val overview: kotlin.String? = null,
-    @Json(name = "consultationEnabled")
+    @SerializedName("consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
-    @Json(name = "consultationFee")
+    @SerializedName("consultationFee")
     val consultationFee: kotlin.Double? = null,
-    @Json(name = "doctorReviews")
+    @SerializedName("doctorReviews")
     val doctorReviews: kotlin.collections.List<DoctorReviewItemViewModel>? = null,
-    @Json(name = "doctorEducations")
+    @SerializedName("doctorEducations")
     val doctorEducations: kotlin.collections.List<DoctorEducationItemViewModel>? = null,
-    @Json(name = "doctorPortfolios")
+    @SerializedName("doctorPortfolios")
     val doctorPortfolios: kotlin.collections.List<DoctorPortfolioItemViewModel>? = null,
-    @Json(name = "doctorSpecialties")
+    @SerializedName("doctorSpecialties")
     val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemViewModel>? = null,
-    @Json(name = "doctorCertificates")
+    @SerializedName("doctorCertificates")
     val doctorCertificates: kotlin.collections.List<DoctorCertificateItemViewModel>? = null,
-    @Json(name = "doctorAffiliations")
+    @SerializedName("doctorAffiliations")
     val doctorAffiliations: kotlin.collections.List<HospitalAffiliationViewModel>? = null,
-    @Json(name = "articles")
+    @SerializedName("articles")
     val articles: kotlin.collections.List<Article>? = null,
-    @Json(name = "awards")
+    @SerializedName("awards")
     val awards: kotlin.collections.List<AwardViewModel>? = null,
-    @Json(name = "medias")
+    @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

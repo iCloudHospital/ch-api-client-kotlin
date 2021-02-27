@@ -12,7 +12,7 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * 
@@ -21,9 +21,9 @@ import com.squareup.moshi.Json
  */
 
 data class CheckNotificationsCommand (
-    @Json(name = "notificationId")
+    @SerializedName("notificationId")
     val notificationId: java.util.UUID? = null,
-    @Json(name = "delete")
+    @SerializedName("delete")
     val delete: kotlin.Boolean? = null
 )
 
