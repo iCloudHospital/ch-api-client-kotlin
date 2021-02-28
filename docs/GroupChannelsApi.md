@@ -17,9 +17,9 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
@@ -57,9 +57,9 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
@@ -95,9 +95,9 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
@@ -133,9 +133,9 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
@@ -171,9 +171,9 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)

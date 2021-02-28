@@ -18,9 +18,9 @@ Sample request:        DELETE /api/v1/hospitals/1/specialties/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalSpecialtiesApi::class.java)
@@ -60,9 +60,9 @@ Sample request:        POST /api/v1/hospitals/1/specialties/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalSpecialtiesApi::class.java)
@@ -102,9 +102,9 @@ Sample request:        PUT /api/v1/hospitals/1/specialtysequence      {         
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalSpecialtiesApi::class.java)
@@ -146,9 +146,9 @@ Sample request:        GET /api/v1/hospitals/specialties
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalSpecialtiesApi::class.java)

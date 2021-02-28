@@ -22,9 +22,9 @@ Approve booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -62,9 +62,9 @@ Cancel booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -100,9 +100,9 @@ Delete booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -138,9 +138,9 @@ Get booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -176,9 +176,9 @@ Mark as Paid booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -214,9 +214,9 @@ Pay booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -252,9 +252,9 @@ Update booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -292,9 +292,9 @@ Reject booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -332,9 +332,9 @@ Get all bookings.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)
@@ -386,9 +386,9 @@ Create booking.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(BookingsApi::class.java)

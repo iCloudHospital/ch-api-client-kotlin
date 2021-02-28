@@ -19,9 +19,9 @@ Sample request:        DELETE /api/v1/chadmins/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)
@@ -59,9 +59,9 @@ Sample request:        GET /api/v1/chadmins/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)
@@ -99,9 +99,9 @@ Sample request:        PUT /api/v1/chadmins/1      {          \&quot;email\&quot
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)
@@ -141,9 +141,9 @@ Sample request:        GET /api/v1/chadmin      {          \&quot;pageQueryFilte
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)
@@ -199,9 +199,9 @@ Sample request:        POST /api/v1/chadmins      {          \&quot;firstName\&q
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CHAdminsApi::class.java)

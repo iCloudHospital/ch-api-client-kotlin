@@ -20,9 +20,9 @@ Sample request:        GET /api/v1/youtubes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(YoutubesApi::class.java)
@@ -78,9 +78,9 @@ Sample request:        POST /api/v1/youtubes      {          \&quot;title\&quot;
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(YoutubesApi::class.java)
@@ -116,9 +116,9 @@ Get youtube by slug.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(YoutubesApi::class.java)
@@ -156,9 +156,9 @@ Sample request:        DELETE /api/v1/youtubes/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(YoutubesApi::class.java)
@@ -196,9 +196,9 @@ Sample request:        GET /api/v1/youtubes/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(YoutubesApi::class.java)
@@ -236,9 +236,9 @@ Sample request:        PUT /api/v1/youtubes/1      {          \&quot;title\&quot
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(YoutubesApi::class.java)
