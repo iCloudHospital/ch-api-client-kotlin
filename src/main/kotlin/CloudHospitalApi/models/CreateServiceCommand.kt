@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.Procedure
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -26,17 +26,17 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateServiceCommand (
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("minPrice")
+    @Json(name = "minPrice")
     val minPrice: kotlin.Double? = null,
-    @SerializedName("maxPrice")
+    @Json(name = "maxPrice")
     val maxPrice: kotlin.Double? = null,
-    @SerializedName("priceReuqest")
+    @Json(name = "priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
-    @SerializedName("procedure")
+    @Json(name = "procedure")
     val procedure: Procedure? = null
 )
 

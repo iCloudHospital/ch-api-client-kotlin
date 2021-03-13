@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.LocationViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -22,9 +22,9 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateDeviceLoginCommand (
-    @SerializedName("version")
+    @Json(name = "version")
     val version: kotlin.String? = null,
-    @SerializedName("location")
+    @Json(name = "location")
     val location: LocationViewModel? = null
 )
 

@@ -19,7 +19,7 @@ import CloudHospitalApi.models.LocationViewModel
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -59,71 +59,71 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class HospitalViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("logo")
+    @Json(name = "logo")
     val logo: kotlin.String? = null,
-    @SerializedName("overview")
+    @Json(name = "overview")
     val overview: kotlin.String? = null,
-    @SerializedName("bedsCount")
+    @Json(name = "bedsCount")
     val bedsCount: kotlin.Int? = null,
-    @SerializedName("operationsPerYear")
+    @Json(name = "operationsPerYear")
     val operationsPerYear: kotlin.Int? = null,
-    @SerializedName("foundationYear")
+    @Json(name = "foundationYear")
     val foundationYear: kotlin.Int? = null,
-    @SerializedName("medicalStaffCount")
+    @Json(name = "medicalStaffCount")
     val medicalStaffCount: kotlin.Int? = null,
-    @SerializedName("doctorCount")
+    @Json(name = "doctorCount")
     val doctorCount: kotlin.Int? = null,
-    @SerializedName("countryId")
+    @Json(name = "countryId")
     val countryId: java.util.UUID? = null,
-    @SerializedName("countryName")
+    @Json(name = "countryName")
     val countryName: kotlin.String? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("consultationEnabled")
+    @Json(name = "consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
-    @SerializedName("consultationFee")
+    @Json(name = "consultationFee")
     val consultationFee: kotlin.Double? = null,
-    @SerializedName("timeZone")
+    @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
-    @SerializedName("articlesCount")
+    @Json(name = "articlesCount")
     val articlesCount: kotlin.Int? = null,
-    @SerializedName("packagesCount")
+    @Json(name = "packagesCount")
     val packagesCount: kotlin.Int? = null,
-    @SerializedName("equipmentsCount")
+    @Json(name = "equipmentsCount")
     val equipmentsCount: kotlin.Int? = null,
-    @SerializedName("reviewsCount")
+    @Json(name = "reviewsCount")
     val reviewsCount: kotlin.Int? = null,
-    @SerializedName("departmentsCount")
+    @Json(name = "departmentsCount")
     val departmentsCount: kotlin.Int? = null,
-    @SerializedName("specialtiesCount")
+    @Json(name = "specialtiesCount")
     val specialtiesCount: kotlin.Int? = null,
-    @SerializedName("accreditationsCount")
+    @Json(name = "accreditationsCount")
     val accreditationsCount: kotlin.Int? = null,
-    @SerializedName("doctorAffiliationsCount")
+    @Json(name = "doctorAffiliationsCount")
     val doctorAffiliationsCount: kotlin.Int? = null,
-    @SerializedName("managerAffiliationsCount")
+    @Json(name = "managerAffiliationsCount")
     val managerAffiliationsCount: kotlin.Int? = null,
-    @SerializedName("specialtiesSummerized")
+    @Json(name = "specialtiesSummerized")
     val specialtiesSummerized: kotlin.String? = null,
-    @SerializedName("awards")
+    @Json(name = "awards")
     val awards: kotlin.collections.List<AwardViewModel>? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @SerializedName("accreditations")
+    @Json(name = "accreditations")
     val accreditations: kotlin.collections.List<AccreditationViewModel>? = null,
-    @SerializedName("evaluations")
+    @Json(name = "evaluations")
     val evaluations: kotlin.collections.List<HospitalEvaluationViewModel>? = null,
-    @SerializedName("location")
+    @Json(name = "location")
     val location: LocationViewModel? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateDepartmentCommand (
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("additionalInfo")
+    @Json(name = "additionalInfo")
     val additionalInfo: kotlin.String? = null
 )
 

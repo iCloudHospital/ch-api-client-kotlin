@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.ServiceSearchViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -28,21 +28,21 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DealPackageSearchViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: kotlin.String? = null,
-    @SerializedName("refundPolicy")
+    @Json(name = "refundPolicy")
     val refundPolicy: kotlin.Int? = null,
-    @SerializedName("additionalServices")
+    @Json(name = "additionalServices")
     val additionalServices: kotlin.String? = null,
-    @SerializedName("accomodation")
+    @Json(name = "accomodation")
     val accomodation: kotlin.String? = null,
-    @SerializedName("transfer")
+    @Json(name = "transfer")
     val transfer: kotlin.String? = null,
-    @SerializedName("bonus")
+    @Json(name = "bonus")
     val bonus: kotlin.String? = null,
-    @SerializedName("price")
+    @Json(name = "price")
     val price: kotlin.Double? = null,
-    @SerializedName("services")
+    @Json(name = "services")
     val services: kotlin.collections.List<ServiceSearchViewModel>? = null
 )
 

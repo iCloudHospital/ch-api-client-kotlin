@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.MediaType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -26,17 +26,17 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class MediaViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("mediaType")
+    @Json(name = "mediaType")
     val mediaType: MediaType? = null,
-    @SerializedName("url")
+    @Json(name = "url")
     val url: kotlin.String? = null,
-    @SerializedName("thumbnailUrl")
+    @Json(name = "thumbnailUrl")
     val thumbnailUrl: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null
 )
 

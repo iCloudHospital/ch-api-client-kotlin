@@ -17,7 +17,7 @@ import CloudHospitalApi.models.HospitalSpecialty
 import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.SpecialtyType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -36,29 +36,29 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Specialty (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("normalizedName")
+    @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("content")
+    @Json(name = "content")
     val content: kotlin.String? = null,
-    @SerializedName("specialtyTypeId")
+    @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-    @SerializedName("specialtyType")
+    @Json(name = "specialtyType")
     val specialtyType: SpecialtyType? = null,
-    @SerializedName("hospitalSpecialties")
+    @Json(name = "hospitalSpecialties")
     val hospitalSpecialties: kotlin.collections.List<HospitalSpecialty>? = null,
-    @SerializedName("doctorSpecialties")
+    @Json(name = "doctorSpecialties")
     val doctorSpecialties: kotlin.collections.List<DoctorSpecialty>? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

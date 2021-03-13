@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.MediaViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -22,9 +22,9 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UpdateQuestionCommentCommand (
-    @SerializedName("body")
+    @Json(name = "body")
     val body: kotlin.String? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

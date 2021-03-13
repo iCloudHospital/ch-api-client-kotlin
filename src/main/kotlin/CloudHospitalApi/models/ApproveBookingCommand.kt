@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -21,9 +21,9 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class ApproveBookingCommand (
-    @SerializedName("confirmedDateStart")
+    @Json(name = "confirmedDateStart")
     val confirmedDateStart: java.time.LocalDateTime? = null,
-    @SerializedName("confirmedDateEnd")
+    @Json(name = "confirmedDateEnd")
     val confirmedDateEnd: java.time.LocalDateTime? = null
 )
 

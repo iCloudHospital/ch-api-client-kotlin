@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -27,21 +27,21 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DoctorEducationItemViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("doctorId")
+    @Json(name = "doctorId")
     val doctorId: java.util.UUID? = null,
-    @SerializedName("doctorName")
+    @Json(name = "doctorName")
     val doctorName: kotlin.String? = null,
-    @SerializedName("institution")
+    @Json(name = "institution")
     val institution: kotlin.String? = null,
-    @SerializedName("qualification")
+    @Json(name = "qualification")
     val qualification: kotlin.String? = null,
-    @SerializedName("graduationDate")
+    @Json(name = "graduationDate")
     val graduationDate: java.time.LocalDateTime? = null,
-    @SerializedName("graduationYear")
+    @Json(name = "graduationYear")
     val graduationYear: kotlin.Int? = null,
-    @SerializedName("graduationMonth")
+    @Json(name = "graduationMonth")
     val graduationMonth: kotlin.Int? = null
 )
 

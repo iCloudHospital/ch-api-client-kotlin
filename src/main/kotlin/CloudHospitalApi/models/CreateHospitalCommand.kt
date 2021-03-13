@@ -16,7 +16,7 @@ import CloudHospitalApi.models.LocationViewModel
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -40,39 +40,39 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateHospitalCommand (
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("logo")
+    @Json(name = "logo")
     val logo: kotlin.String? = null,
-    @SerializedName("overview")
+    @Json(name = "overview")
     val overview: kotlin.String? = null,
-    @SerializedName("bedsCount")
+    @Json(name = "bedsCount")
     val bedsCount: kotlin.Int? = null,
-    @SerializedName("operationsPerYear")
+    @Json(name = "operationsPerYear")
     val operationsPerYear: kotlin.Int? = null,
-    @SerializedName("foundationYear")
+    @Json(name = "foundationYear")
     val foundationYear: kotlin.Int? = null,
-    @SerializedName("departmentsCount")
+    @Json(name = "departmentsCount")
     val departmentsCount: kotlin.Int? = null,
-    @SerializedName("medicalStaffCount")
+    @Json(name = "medicalStaffCount")
     val medicalStaffCount: kotlin.Int? = null,
-    @SerializedName("countryId")
+    @Json(name = "countryId")
     val countryId: java.util.UUID? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("consultationEnabled")
+    @Json(name = "consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
-    @SerializedName("consultationFee")
+    @Json(name = "consultationFee")
     val consultationFee: kotlin.Double? = null,
-    @SerializedName("timeZone")
+    @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
-    @SerializedName("awards")
+    @Json(name = "awards")
     val awards: kotlin.collections.List<AwardViewModel>? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @SerializedName("location")
+    @Json(name = "location")
     val location: LocationViewModel? = null
 )
 

@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.YoutubeTagItemViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -26,15 +26,15 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateYoutubeCommand (
-    @SerializedName("title")
+    @Json(name = "title")
     val title: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("url")
+    @Json(name = "url")
     val url: kotlin.String? = null,
-    @SerializedName("youtubeTags")
+    @Json(name = "youtubeTags")
     val youtubeTags: kotlin.collections.List<YoutubeTagItemViewModel>? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null
 )
 

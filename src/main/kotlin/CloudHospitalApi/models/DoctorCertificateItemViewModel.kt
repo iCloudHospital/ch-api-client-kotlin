@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -25,17 +25,17 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DoctorCertificateItemViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("doctorId")
+    @Json(name = "doctorId")
     val doctorId: java.util.UUID? = null,
-    @SerializedName("doctorName")
+    @Json(name = "doctorName")
     val doctorName: kotlin.String? = null,
-    @SerializedName("certificate")
+    @Json(name = "certificate")
     val certificate: kotlin.String? = null,
-    @SerializedName("activeFrom")
+    @Json(name = "activeFrom")
     val activeFrom: java.time.LocalDateTime? = null,
-    @SerializedName("activeTo")
+    @Json(name = "activeTo")
     val activeTo: java.time.LocalDateTime? = null
 )
 

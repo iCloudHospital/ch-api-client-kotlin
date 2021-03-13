@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,19 +22,19 @@ import com.google.gson.annotations.SerializedName
 enum class ReviewCategory(val value: kotlin.String){
 
 
-    @SerializedName(value = "Services")
+    @Json(name = "Services")
     services("Services"),
 
 
-    @SerializedName(value = "Hospitality")
+    @Json(name = "Hospitality")
     hospitality("Hospitality"),
 
 
-    @SerializedName(value = "Transfer")
+    @Json(name = "Transfer")
     transfer("Transfer"),
 
 
-    @SerializedName(value = "Etc")
+    @Json(name = "Etc")
     etc("Etc");
 
 

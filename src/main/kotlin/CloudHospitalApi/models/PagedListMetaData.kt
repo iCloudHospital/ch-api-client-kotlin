@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -29,25 +29,25 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class PagedListMetaData (
-    @SerializedName("pageCount")
+    @Json(name = "pageCount")
     val pageCount: kotlin.Int? = null,
-    @SerializedName("totalItemCount")
+    @Json(name = "totalItemCount")
     val totalItemCount: kotlin.Int? = null,
-    @SerializedName("pageNumber")
+    @Json(name = "pageNumber")
     val pageNumber: kotlin.Int? = null,
-    @SerializedName("pageSize")
+    @Json(name = "pageSize")
     val pageSize: kotlin.Int? = null,
-    @SerializedName("hasPreviousPage")
+    @Json(name = "hasPreviousPage")
     val hasPreviousPage: kotlin.Boolean? = null,
-    @SerializedName("hasNextPage")
+    @Json(name = "hasNextPage")
     val hasNextPage: kotlin.Boolean? = null,
-    @SerializedName("isFirstPage")
+    @Json(name = "isFirstPage")
     val isFirstPage: kotlin.Boolean? = null,
-    @SerializedName("isLastPage")
+    @Json(name = "isLastPage")
     val isLastPage: kotlin.Boolean? = null,
-    @SerializedName("firstItemOnPage")
+    @Json(name = "firstItemOnPage")
     val firstItemOnPage: kotlin.Int? = null,
-    @SerializedName("lastItemOnPage")
+    @Json(name = "lastItemOnPage")
     val lastItemOnPage: kotlin.Int? = null
 )
 

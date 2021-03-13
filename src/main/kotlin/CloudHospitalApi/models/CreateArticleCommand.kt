@@ -16,7 +16,7 @@ import CloudHospitalApi.models.ArticleTagItemViewModel
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -30,19 +30,19 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateArticleCommand (
-    @SerializedName("title")
+    @Json(name = "title")
     val title: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("body")
+    @Json(name = "body")
     val body: kotlin.String? = null,
-    @SerializedName("status")
+    @Json(name = "status")
     val status: ArticleStatus? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("articleTags")
+    @Json(name = "articleTags")
     val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

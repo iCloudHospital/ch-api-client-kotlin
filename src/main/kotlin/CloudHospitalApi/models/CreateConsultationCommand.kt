@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.ConsultationType
 import CloudHospitalApi.models.Gender
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -39,41 +39,41 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateConsultationCommand (
-    @SerializedName("consultationType")
+    @Json(name = "consultationType")
     val consultationType: ConsultationType? = null,
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("specialtyId")
+    @Json(name = "specialtyId")
     val specialtyId: java.util.UUID? = null,
-    @SerializedName("doctorId")
+    @Json(name = "doctorId")
     val doctorId: java.util.UUID? = null,
-    @SerializedName("dealId")
+    @Json(name = "dealId")
     val dealId: java.util.UUID? = null,
-    @SerializedName("language")
+    @Json(name = "language")
     val language: kotlin.String? = null,
-    @SerializedName("isAccountHolder")
+    @Json(name = "isAccountHolder")
     val isAccountHolder: kotlin.Boolean? = null,
-    @SerializedName("firstName")
+    @Json(name = "firstName")
     val firstName: kotlin.String? = null,
-    @SerializedName("lastName")
+    @Json(name = "lastName")
     val lastName: kotlin.String? = null,
-    @SerializedName("email")
+    @Json(name = "email")
     val email: kotlin.String? = null,
-    @SerializedName("phone")
+    @Json(name = "phone")
     val phone: kotlin.String? = null,
-    @SerializedName("dateOfBirth")
+    @Json(name = "dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-    @SerializedName("gender")
+    @Json(name = "gender")
     val gender: Gender? = null,
-    @SerializedName("comment")
+    @Json(name = "comment")
     val comment: kotlin.String? = null,
-    @SerializedName("timeRange")
+    @Json(name = "timeRange")
     val timeRange: kotlin.String? = null,
-    @SerializedName("approximateDateStart")
+    @Json(name = "approximateDateStart")
     val approximateDateStart: java.time.LocalDateTime? = null,
-    @SerializedName("approximateDateEnd")
+    @Json(name = "approximateDateEnd")
     val approximateDateEnd: java.time.LocalDateTime? = null,
-    @SerializedName("timeZone")
+    @Json(name = "timeZone")
     val timeZone: kotlin.String? = null
 )
 

@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -24,15 +24,15 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class AzureSearchViewModel (
-    @SerializedName("hospitals")
+    @Json(name = "hospitals")
     val hospitals: kotlin.Int? = null,
-    @SerializedName("doctors")
+    @Json(name = "doctors")
     val doctors: kotlin.Int? = null,
-    @SerializedName("deals")
+    @Json(name = "deals")
     val deals: kotlin.Int? = null,
-    @SerializedName("specialties")
+    @Json(name = "specialties")
     val specialties: kotlin.Int? = null,
-    @SerializedName("specialtyTypes")
+    @Json(name = "specialtyTypes")
     val specialtyTypes: kotlin.Int? = null
 )
 

@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -27,19 +27,19 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UpdateSpecialtyCommand (
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("specialtyTypeId")
+    @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-    @SerializedName("specialtyTypeName")
+    @Json(name = "specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @SerializedName("content")
+    @Json(name = "content")
     val content: kotlin.String? = null
 )
 

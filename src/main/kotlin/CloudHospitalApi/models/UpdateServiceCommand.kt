@@ -15,7 +15,7 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.Procedure
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -37,35 +37,35 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UpdateServiceCommand (
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("content")
+    @Json(name = "content")
     val content: kotlin.String? = null,
-    @SerializedName("hospitalName")
+    @Json(name = "hospitalName")
     val hospitalName: kotlin.String? = null,
-    @SerializedName("specialtyTypeId")
+    @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-    @SerializedName("specialtyTypeName")
+    @Json(name = "specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @SerializedName("specialtyName")
+    @Json(name = "specialtyName")
     val specialtyName: kotlin.String? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("procedure")
+    @Json(name = "procedure")
     val procedure: Procedure? = null,
-    @SerializedName("minPrice")
+    @Json(name = "minPrice")
     val minPrice: kotlin.Double? = null,
-    @SerializedName("maxPrice")
+    @Json(name = "maxPrice")
     val maxPrice: kotlin.Double? = null,
-    @SerializedName("priceReuqest")
+    @Json(name = "priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

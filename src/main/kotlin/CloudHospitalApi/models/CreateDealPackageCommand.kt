@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.RefundPolicy
 import CloudHospitalApi.models.ServiceViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -29,21 +29,21 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateDealPackageCommand (
-    @SerializedName("dealId")
+    @Json(name = "dealId")
     val dealId: java.util.UUID? = null,
-    @SerializedName("refundPolicy")
+    @Json(name = "refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-    @SerializedName("additionalServices")
+    @Json(name = "additionalServices")
     val additionalServices: kotlin.String? = null,
-    @SerializedName("accomodation")
+    @Json(name = "accomodation")
     val accomodation: kotlin.String? = null,
-    @SerializedName("transfer")
+    @Json(name = "transfer")
     val transfer: kotlin.String? = null,
-    @SerializedName("bonus")
+    @Json(name = "bonus")
     val bonus: kotlin.String? = null,
-    @SerializedName("price")
+    @Json(name = "price")
     val price: kotlin.Double? = null,
-    @SerializedName("dealPackageServices")
+    @Json(name = "dealPackageServices")
     val dealPackageServices: kotlin.collections.List<ServiceViewModel>? = null
 )
 

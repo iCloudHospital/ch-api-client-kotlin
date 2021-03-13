@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class SendBirdGroupChannelrOperator (
-    @SerializedName("user_id")
+    @Json(name = "user_id")
     val userId: kotlin.String? = null,
-    @SerializedName("nickname")
+    @Json(name = "nickname")
     val nickname: kotlin.String? = null,
-    @SerializedName("profile_url")
+    @Json(name = "profile_url")
     val profileUrl: kotlin.String? = null
 )
 

@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.HospitalAccreditation
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -26,17 +26,17 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Accreditation (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("normalizedName")
+    @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @SerializedName("logo")
+    @Json(name = "logo")
     val logo: kotlin.String? = null,
-    @SerializedName("country")
+    @Json(name = "country")
     val country: kotlin.String? = null,
-    @SerializedName("accreditations")
+    @Json(name = "accreditations")
     val accreditations: kotlin.collections.List<HospitalAccreditation>? = null
 )
 

@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.NotificationCode
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -30,25 +30,25 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class NotificationViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("notificationCode")
+    @Json(name = "notificationCode")
     val notificationCode: NotificationCode? = null,
-    @SerializedName("notificationTargetId")
+    @Json(name = "notificationTargetId")
     val notificationTargetId: java.util.UUID? = null,
-    @SerializedName("senderId")
+    @Json(name = "senderId")
     val senderId: java.util.UUID? = null,
-    @SerializedName("senderName")
+    @Json(name = "senderName")
     val senderName: kotlin.String? = null,
-    @SerializedName("receiverId")
+    @Json(name = "receiverId")
     val receiverId: java.util.UUID? = null,
-    @SerializedName("receiverName")
+    @Json(name = "receiverName")
     val receiverName: kotlin.String? = null,
-    @SerializedName("message")
+    @Json(name = "message")
     val message: kotlin.String? = null,
-    @SerializedName("createdAt")
+    @Json(name = "createdAt")
     val createdAt: java.time.LocalDateTime? = null,
-    @SerializedName("isChecked")
+    @Json(name = "isChecked")
     val isChecked: kotlin.Boolean? = null
 )
 

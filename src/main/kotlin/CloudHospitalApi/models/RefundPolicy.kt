@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.google.gson.annotations.SerializedName
 enum class RefundPolicy(val value: kotlin.String){
 
 
-    @SerializedName(value = "NonRefundable")
+    @Json(name = "NonRefundable")
     nonRefundable("NonRefundable"),
 
 
-    @SerializedName(value = "Refundable")
+    @Json(name = "Refundable")
     refundable("Refundable"),
 
 
-    @SerializedName(value = "PartialRefundable")
+    @Json(name = "PartialRefundable")
     partialRefundable("PartialRefundable");
 
 

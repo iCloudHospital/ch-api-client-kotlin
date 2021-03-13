@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.MediaViewModel
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -33,29 +33,29 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CountryViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("content")
+    @Json(name = "content")
     val content: kotlin.String? = null,
-    @SerializedName("hospitalsCount")
+    @Json(name = "hospitalsCount")
     val hospitalsCount: kotlin.Int? = null,
-    @SerializedName("doctorsCount")
+    @Json(name = "doctorsCount")
     val doctorsCount: kotlin.Int? = null,
-    @SerializedName("specialitiesCount")
+    @Json(name = "specialitiesCount")
     val specialitiesCount: kotlin.Int? = null,
-    @SerializedName("packagesCount")
+    @Json(name = "packagesCount")
     val packagesCount: kotlin.Int? = null,
-    @SerializedName("articlesCount")
+    @Json(name = "articlesCount")
     val articlesCount: kotlin.Int? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

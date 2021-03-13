@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.google.gson.annotations.SerializedName
 enum class Platform(val value: kotlin.String){
 
 
-    @SerializedName(value = "Web")
+    @Json(name = "Web")
     web("Web"),
 
 
-    @SerializedName(value = "iOS")
+    @Json(name = "iOS")
     iOS("iOS"),
 
 
-    @SerializedName(value = "Android")
+    @Json(name = "Android")
     android("Android");
 
 

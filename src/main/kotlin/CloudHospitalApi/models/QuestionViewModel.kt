@@ -17,7 +17,7 @@ import CloudHospitalApi.models.QuestionStatus
 import CloudHospitalApi.models.QuestionType
 import CloudHospitalApi.models.RefundPolicy
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -42,41 +42,41 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class QuestionViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("title")
+    @Json(name = "title")
     val title: kotlin.String? = null,
-    @SerializedName("userId")
+    @Json(name = "userId")
     val userId: java.util.UUID? = null,
-    @SerializedName("userName")
+    @Json(name = "userName")
     val userName: kotlin.String? = null,
-    @SerializedName("fullName")
+    @Json(name = "fullName")
     val fullName: kotlin.String? = null,
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("hospitalName")
+    @Json(name = "hospitalName")
     val hospitalName: kotlin.String? = null,
-    @SerializedName("questionType")
+    @Json(name = "questionType")
     val questionType: QuestionType? = null,
-    @SerializedName("questionStatus")
+    @Json(name = "questionStatus")
     val questionStatus: QuestionStatus? = null,
-    @SerializedName("questionCommentsCount")
+    @Json(name = "questionCommentsCount")
     val questionCommentsCount: kotlin.Int? = null,
-    @SerializedName("dealId")
+    @Json(name = "dealId")
     val dealId: java.util.UUID? = null,
-    @SerializedName("dealName")
+    @Json(name = "dealName")
     val dealName: kotlin.String? = null,
-    @SerializedName("dealPackageId")
+    @Json(name = "dealPackageId")
     val dealPackageId: java.util.UUID? = null,
-    @SerializedName("refundPolicy")
+    @Json(name = "refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-    @SerializedName("quantity")
+    @Json(name = "quantity")
     val quantity: kotlin.Int? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @SerializedName("body")
+    @Json(name = "body")
     val body: kotlin.String? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

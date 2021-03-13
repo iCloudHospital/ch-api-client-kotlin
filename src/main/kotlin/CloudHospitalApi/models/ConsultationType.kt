@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.google.gson.annotations.SerializedName
 enum class ConsultationType(val value: kotlin.String){
 
 
-    @SerializedName(value = "Hospital")
+    @Json(name = "Hospital")
     hospital("Hospital"),
 
 
-    @SerializedName(value = "Doctor")
+    @Json(name = "Doctor")
     doctor("Doctor"),
 
 
-    @SerializedName(value = "Deal")
+    @Json(name = "Deal")
     deal("Deal");
 
 

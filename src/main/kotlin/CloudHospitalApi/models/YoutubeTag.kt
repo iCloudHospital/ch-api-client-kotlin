@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.Tag
 import CloudHospitalApi.models.Youtube
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -26,15 +26,15 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class YoutubeTag (
-    @SerializedName("youtubeId")
+    @Json(name = "youtubeId")
     val youtubeId: java.util.UUID? = null,
-    @SerializedName("youtube")
+    @Json(name = "youtube")
     val youtube: Youtube? = null,
-    @SerializedName("tagId")
+    @Json(name = "tagId")
     val tagId: kotlin.String? = null,
-    @SerializedName("tag")
+    @Json(name = "tag")
     val tag: Tag? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null
 )
 

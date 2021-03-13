@@ -15,7 +15,7 @@ import CloudHospitalApi.models.MediaViewModel
 import CloudHospitalApi.models.QuestionStatus
 import CloudHospitalApi.models.QuestionType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -27,15 +27,15 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UpdateQuestionCommand (
-    @SerializedName("title")
+    @Json(name = "title")
     val title: kotlin.String? = null,
-    @SerializedName("body")
+    @Json(name = "body")
     val body: kotlin.String? = null,
-    @SerializedName("questionType")
+    @Json(name = "questionType")
     val questionType: QuestionType? = null,
-    @SerializedName("questionStatus")
+    @Json(name = "questionStatus")
     val questionStatus: QuestionStatus? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

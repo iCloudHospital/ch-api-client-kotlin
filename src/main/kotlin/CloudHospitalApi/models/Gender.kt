@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,23 +22,23 @@ import com.google.gson.annotations.SerializedName
 enum class Gender(val value: kotlin.String){
 
 
-    @SerializedName(value = "NotSpecified")
+    @Json(name = "NotSpecified")
     notSpecified("NotSpecified"),
 
 
-    @SerializedName(value = "Male")
+    @Json(name = "Male")
     male("Male"),
 
 
-    @SerializedName(value = "Female")
+    @Json(name = "Female")
     female("Female"),
 
 
-    @SerializedName(value = "NonBinary")
+    @Json(name = "NonBinary")
     nonBinary("NonBinary"),
 
 
-    @SerializedName(value = "PreferNotToSay")
+    @Json(name = "PreferNotToSay")
     preferNotToSay("PreferNotToSay");
 
 

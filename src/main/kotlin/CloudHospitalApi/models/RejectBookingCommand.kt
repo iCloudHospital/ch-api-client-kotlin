@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.RejectReason
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -22,9 +22,9 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class RejectBookingCommand (
-    @SerializedName("rejectReason")
+    @Json(name = "rejectReason")
     val rejectReason: RejectReason? = null,
-    @SerializedName("rejectComment")
+    @Json(name = "rejectComment")
     val rejectComment: kotlin.String? = null
 )
 

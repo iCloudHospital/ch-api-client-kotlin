@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -24,15 +24,15 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class UpdateDeviceCommand (
-    @SerializedName("token")
+    @Json(name = "token")
     val token: kotlin.String? = null,
-    @SerializedName("tags")
+    @Json(name = "tags")
     val tags: kotlin.collections.List<kotlin.String>? = null,
-    @SerializedName("appAlert")
+    @Json(name = "appAlert")
     val appAlert: kotlin.Boolean? = null,
-    @SerializedName("eventAlert")
+    @Json(name = "eventAlert")
     val eventAlert: kotlin.Boolean? = null,
-    @SerializedName("noticeAlert")
+    @Json(name = "noticeAlert")
     val noticeAlert: kotlin.Boolean? = null
 )
 

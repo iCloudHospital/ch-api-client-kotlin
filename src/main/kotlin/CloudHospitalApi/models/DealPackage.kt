@@ -19,7 +19,7 @@ import CloudHospitalApi.models.Manager
 import CloudHospitalApi.models.Question
 import CloudHospitalApi.models.RefundPolicy
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -40,33 +40,33 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DealPackage (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("dealId")
+    @Json(name = "dealId")
     val dealId: java.util.UUID? = null,
-    @SerializedName("deal")
+    @Json(name = "deal")
     val deal: Deal? = null,
-    @SerializedName("refundPolicy")
+    @Json(name = "refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-    @SerializedName("additionalServices")
+    @Json(name = "additionalServices")
     val additionalServices: kotlin.String? = null,
-    @SerializedName("accomodation")
+    @Json(name = "accomodation")
     val accomodation: kotlin.String? = null,
-    @SerializedName("transfer")
+    @Json(name = "transfer")
     val transfer: kotlin.String? = null,
-    @SerializedName("bonus")
+    @Json(name = "bonus")
     val bonus: kotlin.String? = null,
-    @SerializedName("price")
+    @Json(name = "price")
     val price: kotlin.Double? = null,
-    @SerializedName("dealPackageServices")
+    @Json(name = "dealPackageServices")
     val dealPackageServices: kotlin.collections.List<DealPackageService>? = null,
-    @SerializedName("managers")
+    @Json(name = "managers")
     val managers: kotlin.collections.List<Manager>? = null,
-    @SerializedName("questions")
+    @Json(name = "questions")
     val questions: kotlin.collections.List<Question>? = null,
-    @SerializedName("bookings")
+    @Json(name = "bookings")
     val bookings: kotlin.collections.List<Booking>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

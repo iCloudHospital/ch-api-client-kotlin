@@ -15,7 +15,7 @@ import CloudHospitalApi.models.AdminMessageViewModel
 import CloudHospitalApi.models.SendBirdGroupChannelMember
 import CloudHospitalApi.models.SendBirdGroupChannelrOperator
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -42,45 +42,45 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class SendBirdGroupChannelViewModel (
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("channel_url")
+    @Json(name = "channel_url")
     val channelUrl: kotlin.String? = null,
-    @SerializedName("cover_url")
+    @Json(name = "cover_url")
     val coverUrl: kotlin.String? = null,
-    @SerializedName("custom_type")
+    @Json(name = "custom_type")
     val customType: kotlin.String? = null,
-    @SerializedName("unread_message_count")
+    @Json(name = "unread_message_count")
     val unreadMessageCount: kotlin.Int? = null,
-    @SerializedName("data")
+    @Json(name = "data")
     val data: kotlin.String? = null,
-    @SerializedName("is_distinct")
+    @Json(name = "is_distinct")
     val isDistinct: kotlin.Boolean? = null,
-    @SerializedName("is_public")
+    @Json(name = "is_public")
     val isPublic: kotlin.Boolean? = null,
-    @SerializedName("is_super")
+    @Json(name = "is_super")
     val isSuper: kotlin.Boolean? = null,
-    @SerializedName("is_ephemeral")
+    @Json(name = "is_ephemeral")
     val isEphemeral: kotlin.Boolean? = null,
-    @SerializedName("is_access_code_required")
+    @Json(name = "is_access_code_required")
     val isAccessCodeRequired: kotlin.Boolean? = null,
-    @SerializedName("hidden_state")
+    @Json(name = "hidden_state")
     val hiddenState: kotlin.String? = null,
-    @SerializedName("member_count")
+    @Json(name = "member_count")
     val memberCount: kotlin.Int? = null,
-    @SerializedName("joined_member_count")
+    @Json(name = "joined_member_count")
     val joinedMemberCount: kotlin.Int? = null,
-    @SerializedName("members")
+    @Json(name = "members")
     val members: kotlin.collections.List<SendBirdGroupChannelMember>? = null,
-    @SerializedName("operators")
+    @Json(name = "operators")
     val operators: kotlin.collections.List<SendBirdGroupChannelrOperator>? = null,
-    @SerializedName("max_length_message")
+    @Json(name = "max_length_message")
     val maxLengthMessage: kotlin.Int? = null,
-    @SerializedName("last_message")
+    @Json(name = "last_message")
     val lastMessage: AdminMessageViewModel? = null,
-    @SerializedName("created_at")
+    @Json(name = "created_at")
     val createdAt: kotlin.Int? = null,
-    @SerializedName("freeze")
+    @Json(name = "freeze")
     val freeze: kotlin.Boolean? = null
 )
 

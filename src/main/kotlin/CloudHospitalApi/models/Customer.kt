@@ -16,7 +16,7 @@ import CloudHospitalApi.models.Patient
 import CloudHospitalApi.models.Payment
 import CloudHospitalApi.models.VendorType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -29,17 +29,17 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Customer (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: kotlin.String? = null,
-    @SerializedName("vendor")
+    @Json(name = "vendor")
     val vendor: VendorType? = null,
-    @SerializedName("patientId")
+    @Json(name = "patientId")
     val patientId: java.util.UUID? = null,
-    @SerializedName("patient")
+    @Json(name = "patient")
     val patient: Patient? = null,
-    @SerializedName("payments")
+    @Json(name = "payments")
     val payments: kotlin.collections.List<Payment>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

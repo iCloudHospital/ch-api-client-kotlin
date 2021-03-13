@@ -26,7 +26,7 @@ import CloudHospitalApi.models.QuestionComment
 import CloudHospitalApi.models.UserLanguage
 import CloudHospitalApi.models.UserLocation
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -62,63 +62,63 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Patient (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("userName")
+    @Json(name = "userName")
     val userName: kotlin.String? = null,
-    @SerializedName("email")
+    @Json(name = "email")
     val email: kotlin.String? = null,
-    @SerializedName("firstName")
+    @Json(name = "firstName")
     val firstName: kotlin.String? = null,
-    @SerializedName("lastName")
+    @Json(name = "lastName")
     val lastName: kotlin.String? = null,
-    @SerializedName("normalizedName")
+    @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @SerializedName("phone")
+    @Json(name = "phone")
     val phone: kotlin.String? = null,
-    @SerializedName("photo")
+    @Json(name = "photo")
     val photo: kotlin.String? = null,
-    @SerializedName("photoThumbnail")
+    @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
-    @SerializedName("gender")
+    @Json(name = "gender")
     val gender: Gender? = null,
-    @SerializedName("dateOfBirth")
+    @Json(name = "dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-    @SerializedName("timeZone")
+    @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
-    @SerializedName("communicationUserId")
+    @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null,
-    @SerializedName("devices")
+    @Json(name = "devices")
     val devices: kotlin.collections.List<Device>? = null,
-    @SerializedName("articles")
+    @Json(name = "articles")
     val articles: kotlin.collections.List<Article>? = null,
-    @SerializedName("questionComments")
+    @Json(name = "questionComments")
     val questionComments: kotlin.collections.List<QuestionComment>? = null,
-    @SerializedName("locations")
+    @Json(name = "locations")
     val locations: kotlin.collections.List<UserLocation>? = null,
-    @SerializedName("languages")
+    @Json(name = "languages")
     val languages: kotlin.collections.List<UserLanguage>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @SerializedName("contact")
+    @Json(name = "contact")
     val contact: kotlin.String? = null,
-    @SerializedName("contactNumber")
+    @Json(name = "contactNumber")
     val contactNumber: kotlin.String? = null,
-    @SerializedName("nationality")
+    @Json(name = "nationality")
     val nationality: kotlin.String? = null,
-    @SerializedName("questions")
+    @Json(name = "questions")
     val questions: kotlin.collections.List<Question>? = null,
-    @SerializedName("bookings")
+    @Json(name = "bookings")
     val bookings: kotlin.collections.List<Booking>? = null,
-    @SerializedName("consultations")
+    @Json(name = "consultations")
     val consultations: kotlin.collections.List<Consultation>? = null,
-    @SerializedName("payments")
+    @Json(name = "payments")
     val payments: kotlin.collections.List<Payment>? = null,
-    @SerializedName("customers")
+    @Json(name = "customers")
     val customers: kotlin.collections.List<Customer>? = null,
-    @SerializedName("doctorReviews")
+    @Json(name = "doctorReviews")
     val doctorReviews: kotlin.collections.List<DoctorReview>? = null,
-    @SerializedName("hospitalReviews")
+    @Json(name = "hospitalReviews")
     val hospitalReviews: kotlin.collections.List<HospitalReview>? = null
 )
 

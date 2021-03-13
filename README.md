@@ -132,6 +132,11 @@ Class | Method | HTTP request | Description
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidget) | **GET** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidput) | **PUT** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsPost**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentspost) | **POST** api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
+*FaqCategoriesApi* | [**apiV1FaqcategoriesFaqCategoryIdGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesfaqcategoryidget) | **GET** api/v1/faqcategories/{faqCategoryId} | Get faqCategory.
+*FaqCategoriesApi* | [**apiV1FaqcategoriesGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesget) | **GET** api/v1/faqcategories | Get all faqCategory.
+*FaqsApi* | [**apiV1FaqsFaqIdGet**](docs/FaqsApi.md#apiv1faqsfaqidget) | **GET** api/v1/faqs/{faqId} | Get faq.
+*FaqsApi* | [**apiV1FaqsGet**](docs/FaqsApi.md#apiv1faqsget) | **GET** api/v1/faqs | Get all faq.
+*FaqsApi* | [**apiV1FaqsSlugsSlugGet**](docs/FaqsApi.md#apiv1faqsslugsslugget) | **GET** api/v1/faqs/slugs/{slug} | Get faq by slug.
 *GroupChannelsApi* | [**apiV1GroupchannelsChannelUrlInvitePost**](docs/GroupChannelsApi.md#apiv1groupchannelschannelurlinvitepost) | **POST** api/v1/groupchannels/{channelUrl}/invite | 
 *GroupChannelsApi* | [**apiV1GroupchannelsDealDealIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelsdealdealidpost) | **POST** api/v1/groupchannels/deal/{dealId} | 
 *GroupChannelsApi* | [**apiV1GroupchannelsDealIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdealidget) | **GET** api/v1/groupchannels/{dealId} | 
@@ -355,6 +360,12 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.EquipmentItemViewModel](docs/EquipmentItemViewModel.md)
  - [CloudHospitalApi.models.EquipmentViewModel](docs/EquipmentViewModel.md)
  - [CloudHospitalApi.models.EquipmentsViewModel](docs/EquipmentsViewModel.md)
+ - [CloudHospitalApi.models.FaqCategoriesViewModel](docs/FaqCategoriesViewModel.md)
+ - [CloudHospitalApi.models.FaqCategoryItemViewModel](docs/FaqCategoryItemViewModel.md)
+ - [CloudHospitalApi.models.FaqCategoryViewModel](docs/FaqCategoryViewModel.md)
+ - [CloudHospitalApi.models.FaqItemViewModel](docs/FaqItemViewModel.md)
+ - [CloudHospitalApi.models.FaqViewModel](docs/FaqViewModel.md)
+ - [CloudHospitalApi.models.FaqsViewModel](docs/FaqsViewModel.md)
  - [CloudHospitalApi.models.Gender](docs/Gender.md)
  - [CloudHospitalApi.models.Hospital](docs/Hospital.md)
  - [CloudHospitalApi.models.HospitalAccreditation](docs/HospitalAccreditation.md)

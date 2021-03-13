@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.ReviewCategory
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -24,13 +24,13 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateDoctorReviewCommand (
-    @SerializedName("body")
+    @Json(name = "body")
     val body: kotlin.String? = null,
-    @SerializedName("recommended")
+    @Json(name = "recommended")
     val recommended: kotlin.Boolean? = null,
-    @SerializedName("reviewCategory")
+    @Json(name = "reviewCategory")
     val reviewCategory: ReviewCategory? = null,
-    @SerializedName("rate")
+    @Json(name = "rate")
     val rate: kotlin.Int? = null
 )
 

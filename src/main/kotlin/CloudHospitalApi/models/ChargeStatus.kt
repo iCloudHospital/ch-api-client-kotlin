@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.google.gson.annotations.SerializedName
 enum class ChargeStatus(val value: kotlin.String){
 
 
-    @SerializedName(value = "Pending")
+    @Json(name = "Pending")
     pending("Pending"),
 
 
-    @SerializedName(value = "Succeeded")
+    @Json(name = "Succeeded")
     succeeded("Succeeded"),
 
 
-    @SerializedName(value = "Failed")
+    @Json(name = "Failed")
     failed("Failed");
 
 

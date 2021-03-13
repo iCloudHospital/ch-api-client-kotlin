@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class ChangeEmailCommand (
-    @SerializedName("email")
+    @Json(name = "email")
     val email: kotlin.String? = null
 )
 

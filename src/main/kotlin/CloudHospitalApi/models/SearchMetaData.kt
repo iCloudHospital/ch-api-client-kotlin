@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -23,13 +23,13 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class SearchMetaData (
-    @SerializedName("pageCount")
+    @Json(name = "pageCount")
     val pageCount: kotlin.Int? = null,
-    @SerializedName("totalItemCount")
+    @Json(name = "totalItemCount")
     val totalItemCount: kotlin.Int? = null,
-    @SerializedName("pageNumber")
+    @Json(name = "pageNumber")
     val pageNumber: kotlin.Int? = null,
-    @SerializedName("pageSize")
+    @Json(name = "pageSize")
     val pageSize: kotlin.Int? = null
 )
 

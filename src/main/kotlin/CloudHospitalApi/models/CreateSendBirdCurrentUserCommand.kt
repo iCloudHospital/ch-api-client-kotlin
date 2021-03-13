@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CreateSendBirdCurrentUserCommand (
-    @SerializedName("nickname")
+    @Json(name = "nickname")
     val nickname: kotlin.String? = null
 )
 

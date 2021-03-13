@@ -20,7 +20,7 @@ import CloudHospitalApi.models.QuestionComment
 import CloudHospitalApi.models.QuestionStatus
 import CloudHospitalApi.models.QuestionType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -43,37 +43,37 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Question (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("title")
+    @Json(name = "title")
     val title: kotlin.String? = null,
-    @SerializedName("normalizedTitle")
+    @Json(name = "normalizedTitle")
     val normalizedTitle: kotlin.String? = null,
-    @SerializedName("body")
+    @Json(name = "body")
     val body: kotlin.String? = null,
-    @SerializedName("questionType")
+    @Json(name = "questionType")
     val questionType: QuestionType? = null,
-    @SerializedName("questionStatus")
+    @Json(name = "questionStatus")
     val questionStatus: QuestionStatus? = null,
-    @SerializedName("patientId")
+    @Json(name = "patientId")
     val patientId: java.util.UUID? = null,
-    @SerializedName("patient")
+    @Json(name = "patient")
     val patient: Patient? = null,
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("hospital")
+    @Json(name = "hospital")
     val hospital: Hospital? = null,
-    @SerializedName("dealPackageId")
+    @Json(name = "dealPackageId")
     val dealPackageId: java.util.UUID? = null,
-    @SerializedName("dealPackage")
+    @Json(name = "dealPackage")
     val dealPackage: DealPackage? = null,
-    @SerializedName("quantity")
+    @Json(name = "quantity")
     val quantity: kotlin.Int? = null,
-    @SerializedName("questionComments")
+    @Json(name = "questionComments")
     val questionComments: kotlin.collections.List<QuestionComment>? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

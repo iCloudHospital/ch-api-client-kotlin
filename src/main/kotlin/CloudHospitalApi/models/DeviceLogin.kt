@@ -15,7 +15,7 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.Device
 import CloudHospitalApi.models.Location
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -28,17 +28,17 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DeviceLogin (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("deviceId")
+    @Json(name = "deviceId")
     val deviceId: java.util.UUID? = null,
-    @SerializedName("device")
+    @Json(name = "device")
     val device: Device? = null,
-    @SerializedName("version")
+    @Json(name = "version")
     val version: kotlin.String? = null,
-    @SerializedName("location")
+    @Json(name = "location")
     val location: Location? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

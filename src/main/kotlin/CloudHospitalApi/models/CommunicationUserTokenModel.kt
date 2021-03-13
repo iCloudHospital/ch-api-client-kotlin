@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -22,11 +22,11 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class CommunicationUserTokenModel (
-    @SerializedName("token")
+    @Json(name = "token")
     val token: kotlin.String? = null,
-    @SerializedName("expiresOn")
+    @Json(name = "expiresOn")
     val expiresOn: java.time.LocalDateTime? = null,
-    @SerializedName("communicationUserId")
+    @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null
 )
 

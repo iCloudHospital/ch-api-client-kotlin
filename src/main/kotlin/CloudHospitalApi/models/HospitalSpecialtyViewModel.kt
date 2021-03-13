@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.MarketingType
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -30,23 +30,23 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class HospitalSpecialtyViewModel (
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("hospitalName")
+    @Json(name = "hospitalName")
     val hospitalName: kotlin.String? = null,
-    @SerializedName("specialtyId")
+    @Json(name = "specialtyId")
     val specialtyId: java.util.UUID? = null,
-    @SerializedName("specialtyName")
+    @Json(name = "specialtyName")
     val specialtyName: kotlin.String? = null,
-    @SerializedName("specialtyTypeId")
+    @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-    @SerializedName("specialtyTypeName")
+    @Json(name = "specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
-    @SerializedName("order")
+    @Json(name = "order")
     val order: kotlin.Int? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null
 )
 

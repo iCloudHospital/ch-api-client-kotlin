@@ -31,7 +31,7 @@ import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.Question
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -74,77 +74,77 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Hospital (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("normalizedName")
+    @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @SerializedName("slug")
+    @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @SerializedName("description")
+    @Json(name = "description")
     val description: kotlin.String? = null,
-    @SerializedName("normalizedDescription")
+    @Json(name = "normalizedDescription")
     val normalizedDescription: kotlin.String? = null,
-    @SerializedName("logo")
+    @Json(name = "logo")
     val logo: kotlin.String? = null,
-    @SerializedName("overview")
+    @Json(name = "overview")
     val overview: kotlin.String? = null,
-    @SerializedName("bedsCount")
+    @Json(name = "bedsCount")
     val bedsCount: kotlin.Int? = null,
-    @SerializedName("operationsPerYear")
+    @Json(name = "operationsPerYear")
     val operationsPerYear: kotlin.Int? = null,
-    @SerializedName("foundationYear")
+    @Json(name = "foundationYear")
     val foundationYear: kotlin.Int? = null,
-    @SerializedName("medicalStaffCount")
+    @Json(name = "medicalStaffCount")
     val medicalStaffCount: kotlin.Int? = null,
-    @SerializedName("doctorCount")
+    @Json(name = "doctorCount")
     val doctorCount: kotlin.Int? = null,
-    @SerializedName("countryId")
+    @Json(name = "countryId")
     val countryId: java.util.UUID? = null,
-    @SerializedName("country")
+    @Json(name = "country")
     val country: Country? = null,
-    @SerializedName("marketingType")
+    @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
-    @SerializedName("consultationEnabled")
+    @Json(name = "consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
-    @SerializedName("consultationFee")
+    @Json(name = "consultationFee")
     val consultationFee: kotlin.Double? = null,
-    @SerializedName("timeZone")
+    @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
-    @SerializedName("articles")
+    @Json(name = "articles")
     val articles: kotlin.collections.List<Article>? = null,
-    @SerializedName("questions")
+    @Json(name = "questions")
     val questions: kotlin.collections.List<Question>? = null,
-    @SerializedName("deals")
+    @Json(name = "deals")
     val deals: kotlin.collections.List<Deal>? = null,
-    @SerializedName("equipments")
+    @Json(name = "equipments")
     val equipments: kotlin.collections.List<Equipment>? = null,
-    @SerializedName("reviews")
+    @Json(name = "reviews")
     val reviews: kotlin.collections.List<HospitalReview>? = null,
-    @SerializedName("departments")
+    @Json(name = "departments")
     val departments: kotlin.collections.List<Department>? = null,
-    @SerializedName("specialties")
+    @Json(name = "specialties")
     val specialties: kotlin.collections.List<HospitalSpecialty>? = null,
-    @SerializedName("accreditations")
+    @Json(name = "accreditations")
     val accreditations: kotlin.collections.List<HospitalAccreditation>? = null,
-    @SerializedName("doctorAffiliations")
+    @Json(name = "doctorAffiliations")
     val doctorAffiliations: kotlin.collections.List<DoctorAffiliation>? = null,
-    @SerializedName("managerAffiliations")
+    @Json(name = "managerAffiliations")
     val managerAffiliations: kotlin.collections.List<ManagerAffiliation>? = null,
-    @SerializedName("bookings")
+    @Json(name = "bookings")
     val bookings: kotlin.collections.List<Booking>? = null,
-    @SerializedName("consultations")
+    @Json(name = "consultations")
     val consultations: kotlin.collections.List<Consultation>? = null,
-    @SerializedName("evaluations")
+    @Json(name = "evaluations")
     val evaluations: kotlin.collections.List<HospitalEvaluation>? = null,
-    @SerializedName("awards")
+    @Json(name = "awards")
     val awards: kotlin.collections.List<Award>? = null,
-    @SerializedName("medias")
+    @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
-    @SerializedName("location")
+    @Json(name = "location")
     val location: Location? = null,
-    @SerializedName("auditableEntity")
+    @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )
 

@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.DoctorReviewItemViewModel
 import CloudHospitalApi.models.PagedListMetaData
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -23,9 +23,9 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DoctorReviewsViewModel (
-    @SerializedName("items")
+    @Json(name = "items")
     val items: kotlin.collections.List<DoctorReviewItemViewModel>? = null,
-    @SerializedName("metaData")
+    @Json(name = "metaData")
     val metaData: PagedListMetaData? = null
 )
 

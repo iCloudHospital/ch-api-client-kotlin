@@ -14,7 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.Hospital
 import CloudHospitalApi.models.Manager
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -25,13 +25,13 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class ManagerAffiliation (
-    @SerializedName("managerId")
+    @Json(name = "managerId")
     val managerId: java.util.UUID? = null,
-    @SerializedName("manager")
+    @Json(name = "manager")
     val manager: Manager? = null,
-    @SerializedName("hospitalId")
+    @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
-    @SerializedName("hospital")
+    @Json(name = "hospital")
     val hospital: Hospital? = null
 )
 

@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,15 +22,15 @@ import com.google.gson.annotations.SerializedName
 enum class ArticleStatus(val value: kotlin.String){
 
 
-    @SerializedName(value = "Draft")
+    @Json(name = "Draft")
     draft("Draft"),
 
 
-    @SerializedName(value = "Active")
+    @Json(name = "Active")
     active("Active"),
 
 
-    @SerializedName(value = "Archived")
+    @Json(name = "Archived")
     archived("Archived");
 
 

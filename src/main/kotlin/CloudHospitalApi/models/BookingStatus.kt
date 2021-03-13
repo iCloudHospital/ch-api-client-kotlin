@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
 * 
@@ -22,31 +22,31 @@ import com.google.gson.annotations.SerializedName
 enum class BookingStatus(val value: kotlin.String){
 
 
-    @SerializedName(value = "New")
+    @Json(name = "New")
     new("New"),
 
 
-    @SerializedName(value = "Rejected")
+    @Json(name = "Rejected")
     rejected("Rejected"),
 
 
-    @SerializedName(value = "Approved")
+    @Json(name = "Approved")
     approved("Approved"),
 
 
-    @SerializedName(value = "Paid")
+    @Json(name = "Paid")
     paid("Paid"),
 
 
-    @SerializedName(value = "Canceled")
+    @Json(name = "Canceled")
     canceled("Canceled"),
 
 
-    @SerializedName(value = "RefundRequested")
+    @Json(name = "RefundRequested")
     refundRequested("RefundRequested"),
 
 
-    @SerializedName(value = "Refunded")
+    @Json(name = "Refunded")
     refunded("Refunded");
 
 

@@ -13,7 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.Platform
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -26,17 +26,17 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class DeviceItemViewModel (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("token")
+    @Json(name = "token")
     val token: kotlin.String? = null,
-    @SerializedName("platform")
+    @Json(name = "platform")
     val platform: Platform? = null,
-    @SerializedName("appAlert")
+    @Json(name = "appAlert")
     val appAlert: kotlin.Boolean? = null,
-    @SerializedName("eventAlert")
+    @Json(name = "eventAlert")
     val eventAlert: kotlin.Boolean? = null,
-    @SerializedName("noticeAlert")
+    @Json(name = "noticeAlert")
     val noticeAlert: kotlin.Boolean? = null
 )
 

@@ -12,14 +12,13 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.converter.scalars.ScalarsConverterFactory
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import retrofit2.converter.gson.GsonConverterFactory
+import com.squareup.moshi.Moshi
+import retrofit2.converter.moshi.MoshiConverterFactory
 
 class ApiClient(
     private var baseUrl: String = defaultBasePath,
     private val okHttpClientBuilder: OkHttpClient.Builder? = null,
-    private val serializerBuilder: GsonBuilder = Serializer.gsonBuilder,
+    private val serializerBuilder: Moshi.Builder = Serializer.moshiBuilder,
     private val okHttpClient : OkHttpClient? = null
 ) {
     private val apiAuthorizations = mutableMapOf<String, Interceptor>()
@@ -29,7 +28,7 @@ class ApiClient(
         Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(ScalarsConverterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create(serializerBuilder.create()))
+            .addConverterFactory(MoshiConverterFactory.create(serializerBuilder.build()))
     }
 
     private val clientBuilder: OkHttpClient.Builder by lazy {
@@ -55,7 +54,7 @@ class ApiClient(
     constructor(
         baseUrl: String = defaultBasePath,
         okHttpClientBuilder: OkHttpClient.Builder? = null,
-        serializerBuilder: GsonBuilder = Serializer.gsonBuilder,
+        serializerBuilder: Moshi.Builder = Serializer.moshiBuilder,
         authNames: Array<String>
     ) : this(baseUrl, okHttpClientBuilder, serializerBuilder) {
         authNames.forEach { authName ->
@@ -70,7 +69,7 @@ class ApiClient(
     constructor(
         baseUrl: String = defaultBasePath,
         okHttpClientBuilder: OkHttpClient.Builder? = null,
-        serializerBuilder: GsonBuilder = Serializer.gsonBuilder,
+        serializerBuilder: Moshi.Builder = Serializer.moshiBuilder,
         authName: String,
         clientId: String,
         secret: String,

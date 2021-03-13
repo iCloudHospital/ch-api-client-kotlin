@@ -12,7 +12,7 @@
 package CloudHospitalApi.models
 
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /**
  * 
@@ -23,13 +23,13 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Award (
-    @SerializedName("id")
+    @Json(name = "id")
     val id: java.util.UUID? = null,
-    @SerializedName("name")
+    @Json(name = "name")
     val name: kotlin.String? = null,
-    @SerializedName("image")
+    @Json(name = "image")
     val image: kotlin.String? = null,
-    @SerializedName("date")
+    @Json(name = "date")
     val date: java.time.LocalDateTime? = null
 )
 
