@@ -61,7 +61,7 @@ val webService = apiClient.createWebservice(NotificationsApi::class.java)
 val notificationCode : NotificationCode =  // NotificationCode | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
  **notificationCode** | [**NotificationCode**](.md)|  | [optional] [enum: WelcomeEmail, DirectMessageSent, BookingNew, BookingUpdated, BookingRejected, BookingApproved, BookingPaid, BookingCanceled, BookingRefundRequested, BookingRefunded, ConsultationNew, ConsultationUpdated, ConsultationRejected, ConsultationApproved, ConsultationPaid, ConsultationCanceled, ConsultationRefundRequested, ConsultationRefunded]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type

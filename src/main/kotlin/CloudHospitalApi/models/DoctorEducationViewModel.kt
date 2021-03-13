@@ -38,7 +38,7 @@ data class DoctorEducationViewModel (
     @Json(name = "qualification")
     val qualification: kotlin.String? = null,
     @Json(name = "graduationDate")
-    val graduationDate: java.time.OffsetDateTime? = null,
+    val graduationDate: java.time.LocalDateTime? = null,
     @Json(name = "graduationYear")
     val graduationYear: kotlin.Int? = null,
     @Json(name = "graduationMonth")

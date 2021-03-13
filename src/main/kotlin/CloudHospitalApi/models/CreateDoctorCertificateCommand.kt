@@ -25,8 +25,8 @@ data class CreateDoctorCertificateCommand (
     @Json(name = "certificate")
     val certificate: kotlin.String? = null,
     @Json(name = "activeFrom")
-    val activeFrom: java.time.OffsetDateTime? = null,
+    val activeFrom: java.time.LocalDateTime? = null,
     @Json(name = "activeTo")
-    val activeTo: java.time.OffsetDateTime? = null
+    val activeTo: java.time.LocalDateTime? = null
 )
 

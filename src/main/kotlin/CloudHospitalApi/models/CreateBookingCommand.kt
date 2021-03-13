@@ -48,13 +48,13 @@ data class CreateBookingCommand (
     @Json(name = "phone")
     val phone: kotlin.String? = null,
     @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.OffsetDateTime? = null,
+    val dateOfBirth: java.time.LocalDateTime? = null,
     @Json(name = "gender")
     val gender: Gender? = null,
     @Json(name = "approximateDateStart")
-    val approximateDateStart: java.time.OffsetDateTime? = null,
+    val approximateDateStart: java.time.LocalDateTime? = null,
     @Json(name = "approximateDateEnd")
-    val approximateDateEnd: java.time.OffsetDateTime? = null,
+    val approximateDateEnd: java.time.LocalDateTime? = null,
     @Json(name = "comment")
     val comment: kotlin.String? = null,
     @Json(name = "timeZone")

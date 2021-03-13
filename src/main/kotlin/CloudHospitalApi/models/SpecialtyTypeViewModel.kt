@@ -49,6 +49,6 @@ data class SpecialtyTypeViewModel (
     @Json(name = "serviceCount")
     val serviceCount: kotlin.Int? = null,
     @Json(name = "created")
-    val created: java.time.OffsetDateTime? = null
+    val created: java.time.LocalDateTime? = null
 )
 

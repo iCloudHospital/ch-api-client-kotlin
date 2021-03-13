@@ -34,11 +34,11 @@ data class AuditableEntity (
     @Json(name = "deletedBy")
     val deletedBy: java.util.UUID? = null,
     @Json(name = "createdDate")
-    val createdDate: java.time.OffsetDateTime? = null,
+    val createdDate: java.time.LocalDateTime? = null,
     @Json(name = "updatedDate")
-    val updatedDate: java.time.OffsetDateTime? = null,
+    val updatedDate: java.time.LocalDateTime? = null,
     @Json(name = "deletedDate")
-    val deletedDate: java.time.OffsetDateTime? = null,
+    val deletedDate: java.time.LocalDateTime? = null,
     @Json(name = "isHidden")
     val isHidden: kotlin.Boolean? = null,
     @Json(name = "isDeleted")

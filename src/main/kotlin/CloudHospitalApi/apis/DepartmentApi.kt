@@ -30,7 +30,7 @@ interface DepartmentApi {
      * @return [DepartmentsViewModel]
      */
     @GET("api/v1/hospitals/departments")
-    suspend fun apiV1HospitalsDepartmentsGet(@Query("Id") id: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Name") name: kotlin.String? = null, @Query("AdditionalInfo") additionalInfo: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.OffsetDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DepartmentsViewModel>
+    suspend fun apiV1HospitalsDepartmentsGet(@Query("Id") id: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Name") name: kotlin.String? = null, @Query("AdditionalInfo") additionalInfo: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DepartmentsViewModel>
 
     /**
      * Delete department.

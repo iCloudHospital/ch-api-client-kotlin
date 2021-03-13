@@ -23,9 +23,9 @@ import com.squareup.moshi.Json
 
 data class ApproveConsultationCommand (
     @Json(name = "confirmedDateStart")
-    val confirmedDateStart: java.time.OffsetDateTime? = null,
+    val confirmedDateStart: java.time.LocalDateTime? = null,
     @Json(name = "confirmedDateEnd")
-    val confirmedDateEnd: java.time.OffsetDateTime? = null,
+    val confirmedDateEnd: java.time.LocalDateTime? = null,
     @Json(name = "callerId")
     val callerId: java.util.UUID? = null
 )

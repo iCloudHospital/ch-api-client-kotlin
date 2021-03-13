@@ -38,7 +38,7 @@ interface FaqsApi {
      * @return [FaqsViewModel]
      */
     @GET("api/v1/faqs")
-    suspend fun apiV1FaqsGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Content") content: kotlin.String? = null, @Query("CategoryId") categoryId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.OffsetDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<FaqsViewModel>
+    suspend fun apiV1FaqsGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Content") content: kotlin.String? = null, @Query("CategoryId") categoryId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<FaqsViewModel>
 
     /**
      * Get faq by slug.

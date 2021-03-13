@@ -38,8 +38,8 @@ data class DoctorCertificate (
     @Json(name = "normalizedCertificate")
     val normalizedCertificate: kotlin.String? = null,
     @Json(name = "activeFrom")
-    val activeFrom: java.time.OffsetDateTime? = null,
+    val activeFrom: java.time.LocalDateTime? = null,
     @Json(name = "activeTo")
-    val activeTo: java.time.OffsetDateTime? = null
+    val activeTo: java.time.LocalDateTime? = null
 )
 

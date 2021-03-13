@@ -30,6 +30,6 @@ data class ChangeLog (
     @Json(name = "actorId")
     val actorId: java.util.UUID? = null,
     @Json(name = "createdDate")
-    val createdDate: java.time.OffsetDateTime? = null
+    val createdDate: java.time.LocalDateTime? = null
 )
 
