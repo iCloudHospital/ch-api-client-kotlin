@@ -29,11 +29,11 @@ val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val doctorName : kotlin.String = doctorName_example // kotlin.String | 
 val certificate : kotlin.String = certificate_example // kotlin.String | 
-val activeFrom : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val activeTo : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val activeFrom : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val activeTo : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val lastRetrieved : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
@@ -49,11 +49,11 @@ Name | Type | Description  | Notes
  **doctorId** | [**java.util.UUID**](.md)|  | [optional]
  **doctorName** | **kotlin.String**|  | [optional]
  **certificate** | **kotlin.String**|  | [optional]
- **activeFrom** | **java.time.LocalDateTime**|  | [optional]
- **activeTo** | **java.time.LocalDateTime**|  | [optional]
+ **activeFrom** | **java.time.OffsetDateTime**|  | [optional]
+ **activeTo** | **java.time.OffsetDateTime**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+ **lastRetrieved** | **java.time.OffsetDateTime**|  | [optional]
  **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type

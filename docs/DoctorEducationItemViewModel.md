@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **doctorName** | **kotlin.String** |  |  [optional]
 **institution** | **kotlin.String** |  |  [optional]
 **qualification** | **kotlin.String** |  |  [optional]
-**graduationDate** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**graduationDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **graduationYear** | **kotlin.Int** |  |  [optional] [readonly]
 **graduationMonth** | **kotlin.Int** |  |  [optional] [readonly]
 

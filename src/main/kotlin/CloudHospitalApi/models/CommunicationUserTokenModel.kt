@@ -25,7 +25,7 @@ data class CommunicationUserTokenModel (
     @Json(name = "token")
     val token: kotlin.String? = null,
     @Json(name = "expiresOn")
-    val expiresOn: java.time.LocalDateTime? = null,
+    val expiresOn: java.time.OffsetDateTime? = null,
     @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null
 )

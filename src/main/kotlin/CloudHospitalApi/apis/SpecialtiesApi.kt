@@ -29,7 +29,7 @@ interface SpecialtiesApi {
      * @return [SpecialtiesViewModel]
      */
     @GET("api/v1/specialties")
-    suspend fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtiesViewModel>
+    suspend fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.OffsetDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.OffsetDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtiesViewModel>
 
     /**
      * Create specialty.

@@ -30,6 +30,6 @@ data class AwardViewModel (
     @Json(name = "image")
     val image: kotlin.String? = null,
     @Json(name = "date")
-    val date: java.time.LocalDateTime? = null
+    val date: java.time.OffsetDateTime? = null
 )
 

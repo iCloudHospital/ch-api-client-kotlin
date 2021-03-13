@@ -44,7 +44,7 @@ data class UpdatePartnerCommand (
     @Json(name = "gender")
     val gender: Gender? = null,
     @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
+    val dateOfBirth: java.time.OffsetDateTime? = null,
     @Json(name = "languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @Json(name = "locations")

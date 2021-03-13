@@ -47,7 +47,7 @@ data class NotificationViewModel (
     @Json(name = "message")
     val message: kotlin.String? = null,
     @Json(name = "createdAt")
-    val createdAt: java.time.LocalDateTime? = null,
+    val createdAt: java.time.OffsetDateTime? = null,
     @Json(name = "isChecked")
     val isChecked: kotlin.Boolean? = null
 )

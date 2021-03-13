@@ -58,13 +58,13 @@ data class UpdateDoctorCommand (
     @Json(name = "gender")
     val gender: Gender? = null,
     @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
+    val dateOfBirth: java.time.OffsetDateTime? = null,
     @Json(name = "languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @Json(name = "locations")
     val locations: kotlin.collections.List<UserLocationViewModel>? = null,
     @Json(name = "startPracticeDate")
-    val startPracticeDate: java.time.LocalDateTime? = null,
+    val startPracticeDate: java.time.OffsetDateTime? = null,
     @Json(name = "overview")
     val overview: kotlin.String? = null,
     @Json(name = "consultationEnabled")

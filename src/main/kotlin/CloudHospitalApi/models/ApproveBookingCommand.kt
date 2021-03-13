@@ -22,8 +22,8 @@ import com.squareup.moshi.Json
 
 data class ApproveBookingCommand (
     @Json(name = "confirmedDateStart")
-    val confirmedDateStart: java.time.LocalDateTime? = null,
+    val confirmedDateStart: java.time.OffsetDateTime? = null,
     @Json(name = "confirmedDateEnd")
-    val confirmedDateEnd: java.time.LocalDateTime? = null
+    val confirmedDateEnd: java.time.OffsetDateTime? = null
 )
 

@@ -66,7 +66,7 @@ data class User (
     @Json(name = "gender")
     val gender: Gender? = null,
     @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
+    val dateOfBirth: java.time.OffsetDateTime? = null,
     @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
     @Json(name = "communicationUserId")

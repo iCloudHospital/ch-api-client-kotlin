@@ -87,7 +87,7 @@ data class Doctor (
     @Json(name = "gender")
     val gender: Gender? = null,
     @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
+    val dateOfBirth: java.time.OffsetDateTime? = null,
     @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
     @Json(name = "communicationUserId")
@@ -107,7 +107,7 @@ data class Doctor (
     @Json(name = "slug")
     val slug: kotlin.String? = null,
     @Json(name = "startPracticeDate")
-    val startPracticeDate: java.time.LocalDateTime? = null,
+    val startPracticeDate: java.time.OffsetDateTime? = null,
     @Json(name = "overview")
     val overview: kotlin.String? = null,
     @Json(name = "consultationEnabled")

@@ -1,12 +1,12 @@
 {
   "name": "ch-api-client-kotlin",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Openapi generated kotlin client for CloudHospital",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",    
     "build-retrofit2": "openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o . --additional-properties=serializationLibrary=gson --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime",
-    "build-coroutine": "openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o . --additional-properties=useCoroutines=true --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalApi"
+    "build-coroutine": "openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v1/swagger.json -o . --additional-properties=useCoroutines=true --library jvm-retrofit2 --package-name=CloudHospitalApi"
   },
   "repository": {
     "type": "git",

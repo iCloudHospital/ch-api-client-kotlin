@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **doctorId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **doctorName** | **kotlin.String** |  |  [optional]
 **certificate** | **kotlin.String** |  |  [optional]
-**activeFrom** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
-**activeTo** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**activeFrom** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**activeTo** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 
 
 

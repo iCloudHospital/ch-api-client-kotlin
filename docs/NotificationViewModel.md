@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **receiverId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **receiverName** | **kotlin.String** |  |  [optional]
 **message** | **kotlin.String** |  |  [optional]
-**createdAt** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**createdAt** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **isChecked** | **kotlin.Boolean** |  |  [optional]
 
 

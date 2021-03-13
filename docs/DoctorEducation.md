@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **normalizedInstitution** | **kotlin.String** |  |  [optional]
 **qualification** | **kotlin.String** |  |  [optional]
 **normalizedQualification** | **kotlin.String** |  |  [optional]
-**graduationDate** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**graduationDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 
 
 

@@ -43,6 +43,6 @@ data class DoctorEducation (
     @Json(name = "normalizedQualification")
     val normalizedQualification: kotlin.String? = null,
     @Json(name = "graduationDate")
-    val graduationDate: java.time.LocalDateTime? = null
+    val graduationDate: java.time.OffsetDateTime? = null
 )
 

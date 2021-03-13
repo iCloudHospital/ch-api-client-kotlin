@@ -49,7 +49,7 @@ data class CreateManagerCommand (
     @Json(name = "gender")
     val gender: Gender? = null,
     @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
+    val dateOfBirth: java.time.OffsetDateTime? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
     @Json(name = "languages")
