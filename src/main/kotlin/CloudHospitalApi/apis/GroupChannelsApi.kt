@@ -32,9 +32,25 @@ interface GroupChannelsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
+     * @param hospitalId  
+     * @param dealId  
+     * @return [SendBirdGroupChannelViewModel]
+     */
+    @GET("api/v1/groupchannels/deal/{dealId}")
+    suspend fun apiV1GroupchannelsDealDealIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("dealId") dealId: kotlin.String): Response<SendBirdGroupChannelViewModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
      * @param dealId  
      * @return [kotlin.Boolean]
      */
+    @Deprecated("This api was deprecated")
     @POST("api/v1/groupchannels/deal/{dealId}")
     suspend fun apiV1GroupchannelsDealDealIdPost(@Path("dealId") dealId: java.util.UUID): Response<kotlin.Boolean>
 
@@ -46,11 +62,12 @@ interface GroupChannelsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @param dealId  
+     * @param hospitalId  
+     * @param doctorId  
      * @return [SendBirdGroupChannelViewModel]
      */
-    @GET("api/v1/groupchannels/{dealId}")
-    suspend fun apiV1GroupchannelsDealIdGet(@Path("dealId") dealId: java.util.UUID): Response<SendBirdGroupChannelViewModel>
+    @GET("api/v1/groupchannels/doctor/{doctorId}")
+    suspend fun apiV1GroupchannelsDoctorDoctorIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("doctorId") doctorId: kotlin.String): Response<SendBirdGroupChannelViewModel>
 
     /**
      * 
@@ -63,6 +80,7 @@ interface GroupChannelsApi {
      * @param doctorId  
      * @return [kotlin.Boolean]
      */
+    @Deprecated("This api was deprecated")
     @POST("api/v1/groupchannels/doctor/{doctorId}")
     suspend fun apiV1GroupchannelsDoctorDoctorIdPost(@Path("doctorId") doctorId: java.util.UUID): Response<kotlin.Boolean>
 
@@ -75,9 +93,39 @@ interface GroupChannelsApi {
      *  - 403: Forbidden
      * 
      * @param hospitalId  
+     * @return [SendBirdGroupChannelViewModel]
+     */
+    @GET("api/v1/groupchannels/hospital/{hospitalId}")
+    suspend fun apiV1GroupchannelsHospitalHospitalIdGet(@Path("hospitalId") hospitalId: java.util.UUID): Response<SendBirdGroupChannelViewModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param hospitalId  
      * @return [kotlin.Boolean]
      */
+    @Deprecated("This api was deprecated")
     @POST("api/v1/groupchannels/hospital/{hospitalId}")
     suspend fun apiV1GroupchannelsHospitalHospitalIdPost(@Path("hospitalId") hospitalId: java.util.UUID): Response<kotlin.Boolean>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param id  
+     * @return [kotlin.Boolean]
+     */
+    @Deprecated("This api was deprecated")
+    @GET("api/v1/groupchannels/{id}")
+    suspend fun apiV1GroupchannelsIdGet(@Path("id") id: java.util.UUID): Response<kotlin.Boolean>
 
 }
