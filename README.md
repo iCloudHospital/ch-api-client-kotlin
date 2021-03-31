@@ -138,10 +138,13 @@ Class | Method | HTTP request | Description
 *FaqsApi* | [**apiV1FaqsGet**](docs/FaqsApi.md#apiv1faqsget) | **GET** api/v1/faqs | Get all faq.
 *FaqsApi* | [**apiV1FaqsSlugsSlugGet**](docs/FaqsApi.md#apiv1faqsslugsslugget) | **GET** api/v1/faqs/slugs/{slug} | Get faq by slug.
 *GroupChannelsApi* | [**apiV1GroupchannelsChannelUrlInvitePost**](docs/GroupChannelsApi.md#apiv1groupchannelschannelurlinvitepost) | **POST** api/v1/groupchannels/{channelUrl}/invite | 
+*GroupChannelsApi* | [**apiV1GroupchannelsDealDealIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdealdealidget) | **GET** api/v1/groupchannels/deal/{dealId} | 
 *GroupChannelsApi* | [**apiV1GroupchannelsDealDealIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelsdealdealidpost) | **POST** api/v1/groupchannels/deal/{dealId} | 
-*GroupChannelsApi* | [**apiV1GroupchannelsDealIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdealidget) | **GET** api/v1/groupchannels/{dealId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsDoctorDoctorIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdoctordoctoridget) | **GET** api/v1/groupchannels/doctor/{doctorId} | 
 *GroupChannelsApi* | [**apiV1GroupchannelsDoctorDoctorIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelsdoctordoctoridpost) | **POST** api/v1/groupchannels/doctor/{doctorId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsHospitalHospitalIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelshospitalhospitalidget) | **GET** api/v1/groupchannels/hospital/{hospitalId} | 
 *GroupChannelsApi* | [**apiV1GroupchannelsHospitalHospitalIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelshospitalhospitalidpost) | **POST** api/v1/groupchannels/hospital/{hospitalId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsidget) | **GET** api/v1/groupchannels/{id} | 
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdDelete**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Delete review.
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdGet**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidget) | **GET** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Get review.
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdPut**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidput) | **PUT** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Update review.
