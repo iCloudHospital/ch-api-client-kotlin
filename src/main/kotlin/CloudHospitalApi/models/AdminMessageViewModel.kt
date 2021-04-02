@@ -48,6 +48,6 @@ data class AdminMessageViewModel (
     @Json(name = "created_at")
     val createdAt: kotlin.Long? = null,
     @Json(name = "updated_at")
-    val updatedAt: kotlin.Int? = null
+    val updatedAt: kotlin.Long? = null
 )
 

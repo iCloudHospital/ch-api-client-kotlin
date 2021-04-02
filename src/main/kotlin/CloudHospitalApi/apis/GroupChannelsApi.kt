@@ -32,12 +32,11 @@ interface GroupChannelsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @param hospitalId  
      * @param dealId  
      * @return [SendBirdGroupChannelViewModel]
      */
     @GET("api/v1/groupchannels/deal/{dealId}")
-    suspend fun apiV1GroupchannelsDealDealIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("dealId") dealId: kotlin.String): Response<SendBirdGroupChannelViewModel>
+    suspend fun apiV1GroupchannelsDealDealIdGet(@Path("dealId") dealId: java.util.UUID): Response<SendBirdGroupChannelViewModel>
 
     /**
      * 
@@ -62,12 +61,11 @@ interface GroupChannelsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @param hospitalId  
      * @param doctorId  
      * @return [SendBirdGroupChannelViewModel]
      */
     @GET("api/v1/groupchannels/doctor/{doctorId}")
-    suspend fun apiV1GroupchannelsDoctorDoctorIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("doctorId") doctorId: kotlin.String): Response<SendBirdGroupChannelViewModel>
+    suspend fun apiV1GroupchannelsDoctorDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID): Response<SendBirdGroupChannelViewModel>
 
     /**
      * 

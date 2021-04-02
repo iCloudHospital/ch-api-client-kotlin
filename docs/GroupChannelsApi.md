@@ -66,11 +66,10 @@ Name | Type | Description  | Notes
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
-val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val dealId : kotlin.String = dealId_example // kotlin.String | 
+val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealDealIdGet(hospitalId, dealId)
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealDealIdGet(dealId)
 }
 ```
 
@@ -78,8 +77,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  |
- **dealId** | **kotlin.String**|  |
+ **dealId** | [**java.util.UUID**](.md)|  |
 
 ### Return type
 
@@ -144,11 +142,10 @@ Name | Type | Description  | Notes
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
-val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val doctorId : kotlin.String = doctorId_example // kotlin.String | 
+val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDoctorDoctorIdGet(hospitalId, doctorId)
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDoctorDoctorIdGet(doctorId)
 }
 ```
 
@@ -156,8 +153,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  |
- **doctorId** | **kotlin.String**|  |
+ **doctorId** | [**java.util.UUID**](.md)|  |
 
 ### Return type
 

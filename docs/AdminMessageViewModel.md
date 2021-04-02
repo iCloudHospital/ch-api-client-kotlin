@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **message** | **kotlin.String** |  |  [optional]
 **data** | **kotlin.String** |  |  [optional]
 **createdAt** | **kotlin.Long** |  |  [optional]
-**updatedAt** | **kotlin.Int** |  |  [optional]
+**updatedAt** | **kotlin.Long** |  |  [optional]
 
 
 
