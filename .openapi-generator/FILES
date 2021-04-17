@@ -33,6 +33,7 @@ docs/CHManagerItemViewModel.md
 docs/CHManagerViewModel.md
 docs/CHManagersApi.md
 docs/CHManagersViewModel.md
+docs/CacheApi.md
 docs/ChangeEmailCommand.md
 docs/ChangeLog.md
 docs/ChargeStatus.md
@@ -315,6 +316,7 @@ src/main/kotlin/CloudHospitalApi/apis/ArticlesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/BookingsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CHAdminsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CHManagersApi.kt
+src/main/kotlin/CloudHospitalApi/apis/CacheApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ChatUsersApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CommunicationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ConsultationsApi.kt

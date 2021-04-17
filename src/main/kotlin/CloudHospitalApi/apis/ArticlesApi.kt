@@ -31,6 +31,7 @@ interface ArticlesApi {
      * @param countryId  (optional)
      * @param tag  (optional)
      * @param exceptHospitalId  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -38,7 +39,7 @@ interface ArticlesApi {
      * @return [ArticlesViewModel]
      */
     @GET("api/v1/hospitals/articles")
-    suspend fun apiV1HospitalsArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ArticlesViewModel>
+    suspend fun apiV1HospitalsArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ArticlesViewModel>
 
     /**
      * Get article by slug.
@@ -47,10 +48,11 @@ interface ArticlesApi {
      *  - 200: Success
      * 
      * @param slug  
+     * @param languageCode  (optional, default to "")
      * @return [ArticleViewModel]
      */
     @GET("api/v1/hospitals/articles/slugs/{slug}")
-    suspend fun apiV1HospitalsArticlesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<ArticleViewModel>
+    suspend fun apiV1HospitalsArticlesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<ArticleViewModel>
 
     /**
      * Delete article.
@@ -75,10 +77,11 @@ interface ArticlesApi {
      * 
      * @param hospitalId  
      * @param articleId  
+     * @param languageCode  (optional, default to "")
      * @return [ArticleViewModel]
      */
     @GET("api/v1/hospitals/{hospitalId}/articles/{articleId}")
-    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID): Response<ArticleViewModel>
+    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<ArticleViewModel>
 
     /**
      * Update article.

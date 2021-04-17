@@ -38,13 +38,14 @@ val hospitalName : kotlin.String = hospitalName_example // kotlin.String |
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val tag : kotlin.String = tag_example // kotlin.String | 
 val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : ArticlesViewModel = webService.apiV1HospitalsArticlesGet(id, title, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptHospitalId, page, limit, lastRetrieved, current)
+    val result : ArticlesViewModel = webService.apiV1HospitalsArticlesGet(id, title, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptHospitalId, languageCode, page, limit, lastRetrieved, current)
 }
 ```
 
@@ -64,6 +65,7 @@ Name | Type | Description  | Notes
  **countryId** | [**java.util.UUID**](.md)|  | [optional]
  **tag** | **kotlin.String**|  | [optional]
  **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -95,9 +97,10 @@ Get article by slug.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ArticlesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : ArticleViewModel = webService.apiV1HospitalsArticlesSlugsSlugGet(slug)
+    val result : ArticleViewModel = webService.apiV1HospitalsArticlesSlugsSlugGet(slug, languageCode)
 }
 ```
 
@@ -106,6 +109,7 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **kotlin.String**|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 
@@ -178,9 +182,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ArticlesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val articleId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : ArticleViewModel = webService.apiV1HospitalsHospitalIdArticlesArticleIdGet(hospitalId, articleId)
+    val result : ArticleViewModel = webService.apiV1HospitalsHospitalIdArticlesArticleIdGet(hospitalId, articleId, languageCode)
 }
 ```
 
@@ -190,6 +195,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | [**java.util.UUID**](.md)|  |
  **articleId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 
