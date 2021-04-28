@@ -38,6 +38,7 @@ val hospitalName : kotlin.String = hospitalName_example // kotlin.String |
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val tag : kotlin.String = tag_example // kotlin.String | 
 val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val reviewerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
@@ -45,7 +46,7 @@ val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : ArticlesViewModel = webService.apiV1HospitalsArticlesGet(id, title, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptHospitalId, languageCode, page, limit, lastRetrieved, current)
+    val result : ArticlesViewModel = webService.apiV1HospitalsArticlesGet(id, title, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptHospitalId, reviewerId, languageCode, page, limit, lastRetrieved, current)
 }
 ```
 
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
  **countryId** | [**java.util.UUID**](.md)|  | [optional]
  **tag** | **kotlin.String**|  | [optional]
  **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **reviewerId** | [**java.util.UUID**](.md)|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]

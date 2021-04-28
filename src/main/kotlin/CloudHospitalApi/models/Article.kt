@@ -11,12 +11,14 @@
 */
 package CloudHospitalApi.models
 
+import CloudHospitalApi.models.ArticleSource
 import CloudHospitalApi.models.ArticleStatus
 import CloudHospitalApi.models.ArticleTag
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.Hospital
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.Media
+import CloudHospitalApi.models.Reviewer
 import CloudHospitalApi.models.User
 
 import com.squareup.moshi.Json
@@ -35,7 +37,11 @@ import com.squareup.moshi.Json
  * @param user 
  * @param hospitalId 
  * @param hospital 
+ * @param reviewerId 
+ * @param reviewer 
+ * @param youtubeUrl 
  * @param articleTags 
+ * @param articleSources 
  * @param medias 
  * @param auditableEntity 
  */
@@ -65,8 +71,16 @@ data class Article (
     val hospitalId: java.util.UUID? = null,
     @Json(name = "hospital")
     val hospital: Hospital? = null,
+    @Json(name = "reviewerId")
+    val reviewerId: java.util.UUID? = null,
+    @Json(name = "reviewer")
+    val reviewer: Reviewer? = null,
+    @Json(name = "youtubeUrl")
+    val youtubeUrl: kotlin.String? = null,
     @Json(name = "articleTags")
     val articleTags: kotlin.collections.List<ArticleTag>? = null,
+    @Json(name = "articleSources")
+    val articleSources: kotlin.collections.List<ArticleSource>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
     @Json(name = "auditableEntity")

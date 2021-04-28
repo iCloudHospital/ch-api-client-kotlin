@@ -9,6 +9,8 @@ docs/ApproveBookingCommand.md
 docs/ApproveConsultationCommand.md
 docs/Article.md
 docs/ArticleItemViewModel.md
+docs/ArticleSource.md
+docs/ArticleSourceItemViewModel.md
 docs/ArticleStatus.md
 docs/ArticleTag.md
 docs/ArticleTagItemViewModel.md
@@ -229,6 +231,11 @@ docs/RejectBookingCommand.md
 docs/RejectConsultationCommand.md
 docs/RejectReason.md
 docs/ReviewCategory.md
+docs/Reviewer.md
+docs/ReviewerItemViewModel.md
+docs/ReviewerViewModel.md
+docs/ReviewersApi.md
+docs/ReviewersViewModel.md
 docs/SearchApi.md
 docs/SearchMetaData.md
 docs/SendBirdGroupChannelMember.md
@@ -245,6 +252,9 @@ docs/ServiceSearchViewModel.md
 docs/ServiceViewModel.md
 docs/ServicesApi.md
 docs/ServicesViewModel.md
+docs/SnsHandle.md
+docs/SnsHandleViewModel.md
+docs/SnsType.md
 docs/SpecialtiesApi.md
 docs/SpecialtiesViewModel.md
 docs/Specialty.md
@@ -346,6 +356,7 @@ src/main/kotlin/CloudHospitalApi/apis/PatientsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ProfilesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/QuestionCommentsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/QuestionsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/ReviewersApi.kt
 src/main/kotlin/CloudHospitalApi/apis/SearchApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ServiceCategoriesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ServicesApi.kt
@@ -374,6 +385,8 @@ src/main/kotlin/CloudHospitalApi/models/ApproveBookingCommand.kt
 src/main/kotlin/CloudHospitalApi/models/ApproveConsultationCommand.kt
 src/main/kotlin/CloudHospitalApi/models/Article.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleItemViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/ArticleSource.kt
+src/main/kotlin/CloudHospitalApi/models/ArticleSourceItemViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleStatus.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleTag.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleTagItemViewModel.kt
@@ -560,6 +573,10 @@ src/main/kotlin/CloudHospitalApi/models/RejectBookingCommand.kt
 src/main/kotlin/CloudHospitalApi/models/RejectConsultationCommand.kt
 src/main/kotlin/CloudHospitalApi/models/RejectReason.kt
 src/main/kotlin/CloudHospitalApi/models/ReviewCategory.kt
+src/main/kotlin/CloudHospitalApi/models/Reviewer.kt
+src/main/kotlin/CloudHospitalApi/models/ReviewerItemViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/ReviewerViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/ReviewersViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/SearchMetaData.kt
 src/main/kotlin/CloudHospitalApi/models/SendBirdGroupChannelMember.kt
 src/main/kotlin/CloudHospitalApi/models/SendBirdGroupChannelViewModel.kt
@@ -573,6 +590,9 @@ src/main/kotlin/CloudHospitalApi/models/ServiceItemViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/ServiceSearchViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/ServiceViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/ServicesViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/SnsHandle.kt
+src/main/kotlin/CloudHospitalApi/models/SnsHandleViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/SnsType.kt
 src/main/kotlin/CloudHospitalApi/models/SpecialtiesViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/Specialty.kt
 src/main/kotlin/CloudHospitalApi/models/SpecialtyItemViewModel.kt

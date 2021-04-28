@@ -32,10 +32,11 @@ interface CountriesApi {
      *  - 200: Success
      * 
      * @param countryId  
+     * @param languageCode  (optional, default to "")
      * @return [CountryViewModel]
      */
     @GET("api/v1/countries/{countryId}")
-    suspend fun apiV1CountriesCountryIdGet(@Path("countryId") countryId: java.util.UUID): Response<CountryViewModel>
+    suspend fun apiV1CountriesCountryIdGet(@Path("countryId") countryId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<CountryViewModel>
 
     /**
      * Update country.
@@ -54,7 +55,7 @@ interface CountriesApi {
 
     /**
      * Get all countries.
-     * Sample request:        GET /api/v1/countries      {          \&quot;countryPageQueryFilter\&quot;: {              \&quot;page\&quot;: 1,              \&quot;limit\&quot;: 20,              \&quot;lastRetrived\&quot;: \&quot;2020-02-05T08:40\&quot;          }      }
+     * Sample request:        GET /api/v1/countries      {          \&quot;countryPageQueryFilter\&quot;: {              \&quot;page\&quot;: 1,              \&quot;limit\&quot;: 20,              \&quot;lastRetrived\&quot;: \&quot;2020-02-05T08:40\&quot;,              \&quot;languageCode\&quot;: \&quot;en\&quot;          }      }
      * Responses:
      *  - 200: Success
      * 
@@ -62,6 +63,7 @@ interface CountriesApi {
      * @param name  (optional)
      * @param description  (optional)
      * @param createdDate  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -69,7 +71,7 @@ interface CountriesApi {
      * @return [CountriesViewModel]
      */
     @GET("api/v1/countries")
-    suspend fun apiV1CountriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CreatedDate") createdDate: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<CountriesViewModel>
+    suspend fun apiV1CountriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CreatedDate") createdDate: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<CountriesViewModel>
 
     /**
      * Create a country.
@@ -92,9 +94,10 @@ interface CountriesApi {
      *  - 200: Success
      * 
      * @param slug  
+     * @param languageCode  (optional, default to "")
      * @return [CountryViewModel]
      */
     @GET("api/v1/countries/slugs/{slug}")
-    suspend fun apiV1CountriesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<CountryViewModel>
+    suspend fun apiV1CountriesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<CountryViewModel>
 
 }

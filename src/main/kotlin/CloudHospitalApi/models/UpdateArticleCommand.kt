@@ -11,6 +11,7 @@
 */
 package CloudHospitalApi.models
 
+import CloudHospitalApi.models.ArticleSourceItemViewModel
 import CloudHospitalApi.models.ArticleStatus
 import CloudHospitalApi.models.ArticleTagItemViewModel
 import CloudHospitalApi.models.MarketingType
@@ -27,7 +28,13 @@ import com.squareup.moshi.Json
  * @param status 
  * @param marketingType 
  * @param hospitalSlug 
+ * @param reviewerId 
+ * @param reviewerName 
+ * @param reviewerSlug 
+ * @param reviewerPhoto 
+ * @param youtubeUrl 
  * @param articleTags 
+ * @param articleSources 
  * @param medias 
  */
 
@@ -46,8 +53,20 @@ data class UpdateArticleCommand (
     val marketingType: MarketingType? = null,
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
+    @Json(name = "reviewerId")
+    val reviewerId: java.util.UUID? = null,
+    @Json(name = "reviewerName")
+    val reviewerName: kotlin.String? = null,
+    @Json(name = "reviewerSlug")
+    val reviewerSlug: kotlin.String? = null,
+    @Json(name = "reviewerPhoto")
+    val reviewerPhoto: kotlin.String? = null,
+    @Json(name = "youtubeUrl")
+    val youtubeUrl: kotlin.String? = null,
     @Json(name = "articleTags")
     val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
+    @Json(name = "articleSources")
+    val articleSources: kotlin.collections.List<ArticleSourceItemViewModel>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )

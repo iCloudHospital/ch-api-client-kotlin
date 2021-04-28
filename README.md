@@ -195,6 +195,9 @@ Class | Method | HTTP request | Description
 *QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdGet**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidget) | **GET** api/v1/hospitals/{hospitalId}/questions/{questionId} | Get question.
 *QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdPut**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidput) | **PUT** api/v1/hospitals/{hospitalId}/questions/{questionId} | Update question.
 *QuestionsApi* | [**apiV1HospitalsQuestionsGet**](docs/QuestionsApi.md#apiv1hospitalsquestionsget) | **GET** api/v1/hospitals/questions | Get all questions.
+*ReviewersApi* | [**apiV1ReviewersGet**](docs/ReviewersApi.md#apiv1reviewersget) | **GET** api/v1/reviewers | Get all reviewers.
+*ReviewersApi* | [**apiV1ReviewersReviewerIdGet**](docs/ReviewersApi.md#apiv1reviewersrevieweridget) | **GET** api/v1/reviewers/{reviewerId} | Get reviewer.
+*ReviewersApi* | [**apiV1ReviewersSlugsSlugGet**](docs/ReviewersApi.md#apiv1reviewersslugsslugget) | **GET** api/v1/reviewers/slugs/{slug} | Get reviewer by slug.
 *SearchApi* | [**apiV1SearchDealsGet**](docs/SearchApi.md#apiv1searchdealsget) | **GET** api/v1/search/deals | 
 *SearchApi* | [**apiV1SearchDoctorsGet**](docs/SearchApi.md#apiv1searchdoctorsget) | **GET** api/v1/search/doctors | 
 *SearchApi* | [**apiV1SearchGetcountGet**](docs/SearchApi.md#apiv1searchgetcountget) | **GET** api/v1/search/getcount | 
@@ -249,6 +252,8 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.ApproveConsultationCommand](docs/ApproveConsultationCommand.md)
  - [CloudHospitalApi.models.Article](docs/Article.md)
  - [CloudHospitalApi.models.ArticleItemViewModel](docs/ArticleItemViewModel.md)
+ - [CloudHospitalApi.models.ArticleSource](docs/ArticleSource.md)
+ - [CloudHospitalApi.models.ArticleSourceItemViewModel](docs/ArticleSourceItemViewModel.md)
  - [CloudHospitalApi.models.ArticleStatus](docs/ArticleStatus.md)
  - [CloudHospitalApi.models.ArticleTag](docs/ArticleTag.md)
  - [CloudHospitalApi.models.ArticleTagItemViewModel](docs/ArticleTagItemViewModel.md)
@@ -435,6 +440,10 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.RejectConsultationCommand](docs/RejectConsultationCommand.md)
  - [CloudHospitalApi.models.RejectReason](docs/RejectReason.md)
  - [CloudHospitalApi.models.ReviewCategory](docs/ReviewCategory.md)
+ - [CloudHospitalApi.models.Reviewer](docs/Reviewer.md)
+ - [CloudHospitalApi.models.ReviewerItemViewModel](docs/ReviewerItemViewModel.md)
+ - [CloudHospitalApi.models.ReviewerViewModel](docs/ReviewerViewModel.md)
+ - [CloudHospitalApi.models.ReviewersViewModel](docs/ReviewersViewModel.md)
  - [CloudHospitalApi.models.SearchMetaData](docs/SearchMetaData.md)
  - [CloudHospitalApi.models.SendBirdGroupChannelMember](docs/SendBirdGroupChannelMember.md)
  - [CloudHospitalApi.models.SendBirdGroupChannelViewModel](docs/SendBirdGroupChannelViewModel.md)
@@ -448,6 +457,9 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.ServiceSearchViewModel](docs/ServiceSearchViewModel.md)
  - [CloudHospitalApi.models.ServiceViewModel](docs/ServiceViewModel.md)
  - [CloudHospitalApi.models.ServicesViewModel](docs/ServicesViewModel.md)
+ - [CloudHospitalApi.models.SnsHandle](docs/SnsHandle.md)
+ - [CloudHospitalApi.models.SnsHandleViewModel](docs/SnsHandleViewModel.md)
+ - [CloudHospitalApi.models.SnsType](docs/SnsType.md)
  - [CloudHospitalApi.models.SpecialtiesViewModel](docs/SpecialtiesViewModel.md)
  - [CloudHospitalApi.models.Specialty](docs/Specialty.md)
  - [CloudHospitalApi.models.SpecialtyItemViewModel](docs/SpecialtyItemViewModel.md)

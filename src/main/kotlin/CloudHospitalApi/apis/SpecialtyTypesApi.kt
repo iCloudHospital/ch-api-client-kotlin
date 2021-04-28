@@ -23,6 +23,7 @@ interface SpecialtyTypesApi {
      * @param description  (optional)
      * @param marketingType  (optional)
      * @param created  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -30,7 +31,7 @@ interface SpecialtyTypesApi {
      * @return [SpecialtyTypesViewModel]
      */
     @GET("api/v1/specialtytypes")
-    suspend fun apiV1SpecialtytypesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtyTypesViewModel>
+    suspend fun apiV1SpecialtytypesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtyTypesViewModel>
 
     /**
      * Create specialtyType.
@@ -54,10 +55,11 @@ interface SpecialtyTypesApi {
      *  - 200: Success
      * 
      * @param slug  
+     * @param languageCode  (optional, default to "")
      * @return [SpecialtyTypeViewModel]
      */
     @GET("api/v1/specialtytypes/slugs/{slug}")
-    suspend fun apiV1SpecialtytypesSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<SpecialtyTypeViewModel>
+    suspend fun apiV1SpecialtytypesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<SpecialtyTypeViewModel>
 
     /**
      * Delete specialtyType.
@@ -80,10 +82,11 @@ interface SpecialtyTypesApi {
      *  - 200: Success
      * 
      * @param specialtyTypeId  
+     * @param languageCode  (optional, default to "")
      * @return [SpecialtyTypeViewModel]
      */
     @GET("api/v1/specialtytypes/{specialtyTypeId}")
-    suspend fun apiV1SpecialtytypesSpecialtyTypeIdGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID): Response<SpecialtyTypeViewModel>
+    suspend fun apiV1SpecialtytypesSpecialtyTypeIdGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<SpecialtyTypeViewModel>
 
     /**
      * Update specialtyType
