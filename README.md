@@ -164,6 +164,9 @@ Class | Method | HTTP request | Description
 *HospitalsApi* | [**apiV1HospitalsSlugsSlugGet**](docs/HospitalsApi.md#apiv1hospitalsslugsslugget) | **GET** api/v1/hospitals/slugs/{slug} | Get hospital by slug.
 *IdentityApi* | [**apiV1IdentityGet**](docs/IdentityApi.md#apiv1identityget) | **GET** api/v1/identity | Get current user's Identity claims.
 *ImagesApi* | [**apiV1ImagesPost**](docs/ImagesApi.md#apiv1imagespost) | **POST** api/v1/images | 
+*LanguagesApi* | [**apiV1LanguagesCodeGet**](docs/LanguagesApi.md#apiv1languagescodeget) | **GET** api/v1/languages/{code} | Get a language by code
+*LanguagesApi* | [**apiV1LanguagesGet**](docs/LanguagesApi.md#apiv1languagesget) | **GET** api/v1/languages | Get all languages.
+*LanguagesApi* | [**apiV1LanguagesIdGet**](docs/LanguagesApi.md#apiv1languagesidget) | **GET** api/v1/languages/{id} | Get a language by id
 *ManagersApi* | [**apiV1ManagersGet**](docs/ManagersApi.md#apiv1managersget) | **GET** api/v1/managers | Get all hospital managers.
 *ManagersApi* | [**apiV1ManagersManagerIdDelete**](docs/ManagersApi.md#apiv1managersmanageriddelete) | **DELETE** api/v1/managers/{managerId} | Delete hospital manager.
 *ManagersApi* | [**apiV1ManagersManagerIdGet**](docs/ManagersApi.md#apiv1managersmanageridget) | **GET** api/v1/managers/{managerId} | Get hospital manager.
@@ -395,6 +398,9 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.HospitalViewModel](docs/HospitalViewModel.md)
  - [CloudHospitalApi.models.HospitalsViewModel](docs/HospitalsViewModel.md)
  - [CloudHospitalApi.models.InviteSendBirdGroupChannelCommand](docs/InviteSendBirdGroupChannelCommand.md)
+ - [CloudHospitalApi.models.LanguageItemViewModel](docs/LanguageItemViewModel.md)
+ - [CloudHospitalApi.models.LanguageViewModel](docs/LanguageViewModel.md)
+ - [CloudHospitalApi.models.LanguagesViewModel](docs/LanguagesViewModel.md)
  - [CloudHospitalApi.models.Location](docs/Location.md)
  - [CloudHospitalApi.models.LocationViewModel](docs/LocationViewModel.md)
  - [CloudHospitalApi.models.Manager](docs/Manager.md)

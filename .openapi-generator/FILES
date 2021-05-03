@@ -178,6 +178,10 @@ docs/HospitalsViewModel.md
 docs/IdentityApi.md
 docs/ImagesApi.md
 docs/InviteSendBirdGroupChannelCommand.md
+docs/LanguageItemViewModel.md
+docs/LanguageViewModel.md
+docs/LanguagesApi.md
+docs/LanguagesViewModel.md
 docs/Location.md
 docs/LocationViewModel.md
 docs/Manager.md
@@ -348,6 +352,7 @@ src/main/kotlin/CloudHospitalApi/apis/HospitalSpecialtiesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/HospitalsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/IdentityApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ImagesApi.kt
+src/main/kotlin/CloudHospitalApi/apis/LanguagesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ManagersApi.kt
 src/main/kotlin/CloudHospitalApi/apis/MoviesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/NotificationsApi.kt
@@ -528,6 +533,9 @@ src/main/kotlin/CloudHospitalApi/models/HospitalSpecialtyViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalsViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/InviteSendBirdGroupChannelCommand.kt
+src/main/kotlin/CloudHospitalApi/models/LanguageItemViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/LanguageViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/LanguagesViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/Location.kt
 src/main/kotlin/CloudHospitalApi/models/LocationViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/Manager.kt
