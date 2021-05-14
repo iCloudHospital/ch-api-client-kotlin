@@ -34,10 +34,11 @@ interface DoctorsApi {
      *  - 200: Success
      * 
      * @param doctorId  
+     * @param languageCode  (optional, default to "")
      * @return [DoctorViewModel]
      */
     @GET("api/v1/doctors/{doctorId}")
-    suspend fun apiV1DoctorsDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID): Response<DoctorViewModel>
+    suspend fun apiV1DoctorsDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorViewModel>
 
     /**
      * Update hospital doctor.
@@ -68,6 +69,7 @@ interface DoctorsApi {
      * @param consultationEnabled  (optional)
      * @param exceptDoctorId  (optional)
      * @param exceptDoctorIds  (optional)
+     * @param languageCode  (optional)
      * @param id  (optional)
      * @param fullname  (optional)
      * @param email  (optional)
@@ -81,7 +83,7 @@ interface DoctorsApi {
      * @return [DoctorsViewModel]
      */
     @GET("api/v1/doctors")
-    suspend fun apiV1DoctorsGet(@Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("ExceptDoctorId") exceptDoctorId: java.util.UUID? = null, @Query("ExceptDoctorIds") exceptDoctorIds: kotlin.collections.List<java.util.UUID>? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DoctorsViewModel>
+    suspend fun apiV1DoctorsGet(@Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("ExceptDoctorId") exceptDoctorId: java.util.UUID? = null, @Query("ExceptDoctorIds") exceptDoctorIds: kotlin.collections.List<java.util.UUID>? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DoctorsViewModel>
 
     /**
      * Create hospital doctor.
@@ -104,9 +106,10 @@ interface DoctorsApi {
      *  - 200: Success
      * 
      * @param slug  
+     * @param languageCode  (optional, default to "")
      * @return [DoctorViewModel]
      */
     @GET("api/v1/doctors/slugs/{slug}")
-    suspend fun apiV1DoctorsSlugsSlugGet(@Path("slug") slug: kotlin.String): Response<DoctorViewModel>
+    suspend fun apiV1DoctorsSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorViewModel>
 
 }

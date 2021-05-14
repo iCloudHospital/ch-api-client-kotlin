@@ -20,6 +20,7 @@ import com.squareup.moshi.Json
  * 
  * @param id 
  * @param name 
+ * @param logo 
  * @param slug 
  * @param description 
  * @param content 
@@ -37,6 +38,8 @@ data class CountryItemViewModel (
     val id: java.util.UUID? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
+    @Json(name = "logo")
+    val logo: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
     @Json(name = "description")

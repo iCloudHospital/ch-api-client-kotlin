@@ -22,6 +22,7 @@ import com.squareup.moshi.Json
  * @param id 
  * @param name 
  * @param normalizedName 
+ * @param logo 
  * @param slug 
  * @param description 
  * @param content 
@@ -37,6 +38,8 @@ data class Country (
     val name: kotlin.String? = null,
     @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
+    @Json(name = "logo")
+    val logo: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
     @Json(name = "description")

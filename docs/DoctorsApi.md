@@ -67,9 +67,10 @@ Sample request:        GET /api/v1/doctors/1
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorViewModel = webService.apiV1DoctorsDoctorIdGet(doctorId)
+    val result : DoctorViewModel = webService.apiV1DoctorsDoctorIdGet(doctorId, languageCode)
 }
 ```
 
@@ -78,6 +79,7 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **doctorId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 
@@ -154,6 +156,7 @@ val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // j
 val consultationEnabled : kotlin.Boolean = true // kotlin.Boolean | 
 val exceptDoctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val exceptDoctorIds : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
@@ -166,7 +169,7 @@ val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorsViewModel = webService.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+    val result : DoctorsViewModel = webService.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, languageCode, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 }
 ```
 
@@ -182,6 +185,7 @@ Name | Type | Description  | Notes
  **consultationEnabled** | **kotlin.Boolean**|  | [optional]
  **exceptDoctorId** | [**java.util.UUID**](.md)|  | [optional]
  **exceptDoctorIds** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
  **id** | [**java.util.UUID**](.md)|  | [optional]
  **fullname** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]
@@ -259,9 +263,10 @@ Get hospital doctor by slug.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorViewModel = webService.apiV1DoctorsSlugsSlugGet(slug)
+    val result : DoctorViewModel = webService.apiV1DoctorsSlugsSlugGet(slug, languageCode)
 }
 ```
 
@@ -270,6 +275,7 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **kotlin.String**|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 

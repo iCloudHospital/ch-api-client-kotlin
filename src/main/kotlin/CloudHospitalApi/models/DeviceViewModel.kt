@@ -23,6 +23,7 @@ import com.squareup.moshi.Json
  * @param appAlert 
  * @param eventAlert 
  * @param noticeAlert 
+ * @param tags 
  */
 
 data class DeviceViewModel (
@@ -37,6 +38,8 @@ data class DeviceViewModel (
     @Json(name = "eventAlert")
     val eventAlert: kotlin.Boolean? = null,
     @Json(name = "noticeAlert")
-    val noticeAlert: kotlin.Boolean? = null
+    val noticeAlert: kotlin.Boolean? = null,
+    @Json(name = "tags")
+    val tags: kotlin.collections.List<kotlin.String>? = null
 )
 
