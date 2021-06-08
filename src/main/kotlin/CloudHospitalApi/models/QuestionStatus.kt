@@ -19,24 +19,20 @@ import com.squareup.moshi.Json
 * Values: new,answered,replied,archived
 */
 
-enum class QuestionStatus(val value: kotlin.String){
+enum class QuestionStatus(val value: kotlin.String) {
 
 
     @Json(name = "New")
     new("New"),
 
-
     @Json(name = "Answered")
     answered("Answered"),
-
 
     @Json(name = "Replied")
     replied("Replied"),
 
-
     @Json(name = "Archived")
     archived("Archived");
-
 
 
     /**
@@ -46,6 +42,5 @@ enum class QuestionStatus(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

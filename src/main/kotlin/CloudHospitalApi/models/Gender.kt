@@ -19,28 +19,23 @@ import com.squareup.moshi.Json
 * Values: notSpecified,male,female,nonBinary,preferNotToSay
 */
 
-enum class Gender(val value: kotlin.String){
+enum class Gender(val value: kotlin.String) {
 
 
     @Json(name = "NotSpecified")
     notSpecified("NotSpecified"),
 
-
     @Json(name = "Male")
     male("Male"),
-
 
     @Json(name = "Female")
     female("Female"),
 
-
     @Json(name = "NonBinary")
     nonBinary("NonBinary"),
 
-
     @Json(name = "PreferNotToSay")
     preferNotToSay("PreferNotToSay");
-
 
 
     /**
@@ -50,6 +45,5 @@ enum class Gender(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

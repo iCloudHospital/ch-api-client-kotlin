@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: stripe,paypal,bankTransfer
 */
 
-enum class PaymentMethod(val value: kotlin.String){
+enum class PaymentMethod(val value: kotlin.String) {
 
 
     @Json(name = "Stripe")
     stripe("Stripe"),
 
-
     @Json(name = "Paypal")
     paypal("Paypal"),
 
-
     @Json(name = "BankTransfer")
     bankTransfer("BankTransfer");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class PaymentMethod(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

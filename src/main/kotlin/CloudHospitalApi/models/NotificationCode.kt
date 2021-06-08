@@ -19,80 +19,62 @@ import com.squareup.moshi.Json
 * Values: welcomeEmail,directMessageSent,bookingNew,bookingUpdated,bookingRejected,bookingApproved,bookingPaid,bookingCanceled,bookingRefundRequested,bookingRefunded,consultationNew,consultationUpdated,consultationRejected,consultationApproved,consultationPaid,consultationCanceled,consultationRefundRequested,consultationRefunded
 */
 
-enum class NotificationCode(val value: kotlin.String){
+enum class NotificationCode(val value: kotlin.String) {
 
 
     @Json(name = "WelcomeEmail")
     welcomeEmail("WelcomeEmail"),
 
-
     @Json(name = "DirectMessageSent")
     directMessageSent("DirectMessageSent"),
-
 
     @Json(name = "BookingNew")
     bookingNew("BookingNew"),
 
-
     @Json(name = "BookingUpdated")
     bookingUpdated("BookingUpdated"),
-
 
     @Json(name = "BookingRejected")
     bookingRejected("BookingRejected"),
 
-
     @Json(name = "BookingApproved")
     bookingApproved("BookingApproved"),
-
 
     @Json(name = "BookingPaid")
     bookingPaid("BookingPaid"),
 
-
     @Json(name = "BookingCanceled")
     bookingCanceled("BookingCanceled"),
-
 
     @Json(name = "BookingRefundRequested")
     bookingRefundRequested("BookingRefundRequested"),
 
-
     @Json(name = "BookingRefunded")
     bookingRefunded("BookingRefunded"),
-
 
     @Json(name = "ConsultationNew")
     consultationNew("ConsultationNew"),
 
-
     @Json(name = "ConsultationUpdated")
     consultationUpdated("ConsultationUpdated"),
-
 
     @Json(name = "ConsultationRejected")
     consultationRejected("ConsultationRejected"),
 
-
     @Json(name = "ConsultationApproved")
     consultationApproved("ConsultationApproved"),
-
 
     @Json(name = "ConsultationPaid")
     consultationPaid("ConsultationPaid"),
 
-
     @Json(name = "ConsultationCanceled")
     consultationCanceled("ConsultationCanceled"),
-
 
     @Json(name = "ConsultationRefundRequested")
     consultationRefundRequested("ConsultationRefundRequested"),
 
-
     @Json(name = "ConsultationRefunded")
     consultationRefunded("ConsultationRefunded");
-
 
 
     /**
@@ -102,6 +84,5 @@ enum class NotificationCode(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

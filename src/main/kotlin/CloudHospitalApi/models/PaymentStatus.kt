@@ -19,24 +19,20 @@ import com.squareup.moshi.Json
 * Values: unpaid,paid,refundRequested,refunded
 */
 
-enum class PaymentStatus(val value: kotlin.String){
+enum class PaymentStatus(val value: kotlin.String) {
 
 
     @Json(name = "Unpaid")
     unpaid("Unpaid"),
 
-
     @Json(name = "Paid")
     paid("Paid"),
-
 
     @Json(name = "RefundRequested")
     refundRequested("RefundRequested"),
 
-
     @Json(name = "Refunded")
     refunded("Refunded");
-
 
 
     /**
@@ -46,6 +42,5 @@ enum class PaymentStatus(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

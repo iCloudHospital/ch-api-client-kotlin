@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: nonRefundable,refundable,partialRefundable
 */
 
-enum class RefundPolicy(val value: kotlin.String){
+enum class RefundPolicy(val value: kotlin.String) {
 
 
     @Json(name = "NonRefundable")
     nonRefundable("NonRefundable"),
 
-
     @Json(name = "Refundable")
     refundable("Refundable"),
 
-
     @Json(name = "PartialRefundable")
     partialRefundable("PartialRefundable");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class RefundPolicy(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

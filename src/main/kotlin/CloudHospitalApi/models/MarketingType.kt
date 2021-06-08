@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: both,generalHealth,beauty
 */
 
-enum class MarketingType(val value: kotlin.String){
+enum class MarketingType(val value: kotlin.String) {
 
 
     @Json(name = "Both")
     both("Both"),
 
-
     @Json(name = "GeneralHealth")
     generalHealth("GeneralHealth"),
 
-
     @Json(name = "Beauty")
     beauty("Beauty");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class MarketingType(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

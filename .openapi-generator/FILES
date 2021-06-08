@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 README.md
 build.gradle
 docs/Account.md
@@ -327,6 +328,10 @@ docs/YoutubeTagItemViewModel.md
 docs/YoutubeViewModel.md
 docs/YoutubesApi.md
 docs/YoutubesViewModel.md
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
 settings.gradle
 src/main/kotlin/CloudHospitalApi/apis/AffiliationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ArticlesApi.kt
@@ -377,6 +382,8 @@ src/main/kotlin/CloudHospitalApi/auth/OAuth.kt
 src/main/kotlin/CloudHospitalApi/auth/OAuthFlow.kt
 src/main/kotlin/CloudHospitalApi/auth/OAuthOkHttpClient.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/ApiClient.kt
+src/main/kotlin/CloudHospitalApi/infrastructure/BigDecimalAdapter.kt
+src/main/kotlin/CloudHospitalApi/infrastructure/BigIntegerAdapter.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/ByteArrayAdapter.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/CollectionFormats.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/LocalDateAdapter.kt

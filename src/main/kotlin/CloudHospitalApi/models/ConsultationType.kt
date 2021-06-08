@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: hospital,doctor,deal
 */
 
-enum class ConsultationType(val value: kotlin.String){
+enum class ConsultationType(val value: kotlin.String) {
 
 
     @Json(name = "Hospital")
     hospital("Hospital"),
 
-
     @Json(name = "Doctor")
     doctor("Doctor"),
 
-
     @Json(name = "Deal")
     deal("Deal");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class ConsultationType(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

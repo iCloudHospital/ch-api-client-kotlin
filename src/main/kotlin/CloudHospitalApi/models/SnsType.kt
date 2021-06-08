@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: twitter,facebook,instagram
 */
 
-enum class SnsType(val value: kotlin.String){
+enum class SnsType(val value: kotlin.String) {
 
 
     @Json(name = "Twitter")
     twitter("Twitter"),
 
-
     @Json(name = "Facebook")
     facebook("Facebook"),
 
-
     @Json(name = "Instagram")
     instagram("Instagram");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class SnsType(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: draft,active,archived
 */
 
-enum class ArticleStatus(val value: kotlin.String){
+enum class ArticleStatus(val value: kotlin.String) {
 
 
     @Json(name = "Draft")
     draft("Draft"),
 
-
     @Json(name = "Active")
     active("Active"),
 
-
     @Json(name = "Archived")
     archived("Archived");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class ArticleStatus(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

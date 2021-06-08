@@ -19,16 +19,14 @@ import com.squareup.moshi.Json
 * Values: stripe,weChat
 */
 
-enum class VendorType(val value: kotlin.String){
+enum class VendorType(val value: kotlin.String) {
 
 
     @Json(name = "Stripe")
     stripe("Stripe"),
 
-
     @Json(name = "WeChat")
     weChat("WeChat");
-
 
 
     /**
@@ -38,6 +36,5 @@ enum class VendorType(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

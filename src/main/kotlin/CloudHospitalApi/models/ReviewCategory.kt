@@ -19,24 +19,20 @@ import com.squareup.moshi.Json
 * Values: services,hospitality,transfer,etc
 */
 
-enum class ReviewCategory(val value: kotlin.String){
+enum class ReviewCategory(val value: kotlin.String) {
 
 
     @Json(name = "Services")
     services("Services"),
 
-
     @Json(name = "Hospitality")
     hospitality("Hospitality"),
-
 
     @Json(name = "Transfer")
     transfer("Transfer"),
 
-
     @Json(name = "Etc")
     etc("Etc");
-
 
 
     /**
@@ -46,6 +42,5 @@ enum class ReviewCategory(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

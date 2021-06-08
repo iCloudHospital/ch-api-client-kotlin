@@ -19,16 +19,14 @@ import com.squareup.moshi.Json
 * Values: livesIn,birthPlace
 */
 
-enum class UserLocationType(val value: kotlin.String){
+enum class UserLocationType(val value: kotlin.String) {
 
 
     @Json(name = "LivesIn")
     livesIn("LivesIn"),
 
-
     @Json(name = "BirthPlace")
     birthPlace("BirthPlace");
-
 
 
     /**
@@ -38,6 +36,5 @@ enum class UserLocationType(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

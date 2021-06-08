@@ -19,36 +19,29 @@ import com.squareup.moshi.Json
 * Values: new,rejected,approved,paid,canceled,refundRequested,refunded
 */
 
-enum class ConsultationStatus(val value: kotlin.String){
+enum class ConsultationStatus(val value: kotlin.String) {
 
 
     @Json(name = "New")
     new("New"),
 
-
     @Json(name = "Rejected")
     rejected("Rejected"),
-
 
     @Json(name = "Approved")
     approved("Approved"),
 
-
     @Json(name = "Paid")
     paid("Paid"),
-
 
     @Json(name = "Canceled")
     canceled("Canceled"),
 
-
     @Json(name = "RefundRequested")
     refundRequested("RefundRequested"),
 
-
     @Json(name = "Refunded")
     refunded("Refunded");
-
 
 
     /**
@@ -58,6 +51,5 @@ enum class ConsultationStatus(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

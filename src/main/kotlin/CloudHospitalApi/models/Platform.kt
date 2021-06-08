@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: web,iOS,android
 */
 
-enum class Platform(val value: kotlin.String){
+enum class Platform(val value: kotlin.String) {
 
 
     @Json(name = "Web")
     web("Web"),
 
-
     @Json(name = "iOS")
     iOS("iOS"),
 
-
     @Json(name = "Android")
     android("Android");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class Platform(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

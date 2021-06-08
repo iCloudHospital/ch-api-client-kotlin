@@ -19,28 +19,23 @@ import com.squareup.moshi.Json
 * Values: general,health,treatment,travel,consult
 */
 
-enum class QuestionType(val value: kotlin.String){
+enum class QuestionType(val value: kotlin.String) {
 
 
     @Json(name = "General")
     general("General"),
 
-
     @Json(name = "Health")
     health("Health"),
-
 
     @Json(name = "Treatment")
     treatment("Treatment"),
 
-
     @Json(name = "Travel")
     travel("Travel"),
 
-
     @Json(name = "Consult")
     consult("Consult");
-
 
 
     /**
@@ -50,6 +45,5 @@ enum class QuestionType(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

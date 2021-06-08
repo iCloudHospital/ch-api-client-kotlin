@@ -19,24 +19,20 @@ import com.squareup.moshi.Json
 * Values: assessmentNotCompleted,paymentNotCompleted,scheduleNotAvailable,otherReason
 */
 
-enum class RejectReason(val value: kotlin.String){
+enum class RejectReason(val value: kotlin.String) {
 
 
     @Json(name = "AssessmentNotCompleted")
     assessmentNotCompleted("AssessmentNotCompleted"),
 
-
     @Json(name = "PaymentNotCompleted")
     paymentNotCompleted("PaymentNotCompleted"),
-
 
     @Json(name = "ScheduleNotAvailable")
     scheduleNotAvailable("ScheduleNotAvailable"),
 
-
     @Json(name = "OtherReason")
     otherReason("OtherReason");
-
 
 
     /**
@@ -46,6 +42,5 @@ enum class RejectReason(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

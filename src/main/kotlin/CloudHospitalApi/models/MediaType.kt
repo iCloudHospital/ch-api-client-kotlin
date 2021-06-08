@@ -19,24 +19,20 @@ import com.squareup.moshi.Json
 * Values: photo,video,youtube,document
 */
 
-enum class MediaType(val value: kotlin.String){
+enum class MediaType(val value: kotlin.String) {
 
 
     @Json(name = "Photo")
     photo("Photo"),
 
-
     @Json(name = "Video")
     video("Video"),
-
 
     @Json(name = "Youtube")
     youtube("Youtube"),
 
-
     @Json(name = "Document")
     document("Document");
-
 
 
     /**
@@ -46,6 +42,5 @@ enum class MediaType(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 

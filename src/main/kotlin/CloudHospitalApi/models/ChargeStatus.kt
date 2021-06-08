@@ -19,20 +19,17 @@ import com.squareup.moshi.Json
 * Values: pending,succeeded,failed
 */
 
-enum class ChargeStatus(val value: kotlin.String){
+enum class ChargeStatus(val value: kotlin.String) {
 
 
     @Json(name = "Pending")
     pending("Pending"),
 
-
     @Json(name = "Succeeded")
     succeeded("Succeeded"),
 
-
     @Json(name = "Failed")
     failed("Failed");
-
 
 
     /**
@@ -42,6 +39,5 @@ enum class ChargeStatus(val value: kotlin.String){
     override fun toString(): String {
         return value
     }
-
 }
 
