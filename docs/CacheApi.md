@@ -13,15 +13,17 @@ Remove cache with specified key
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CacheApi::class.java)
 val key : kotlin.String = key_example // kotlin.String | 
 
-val result : kotlin.Boolean = webService.apiV1CacheKeyDelete(key)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1CacheKeyDelete(key)
+}
 ```
 
 ### Parameters

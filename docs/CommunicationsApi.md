@@ -15,14 +15,16 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CommunicationsApi::class.java)
 
-val result : kotlin.Int = webService.apiV1CommunicationsDelete()
+launch(Dispatchers.IO) {
+    val result : kotlin.Int = webService.apiV1CommunicationsDelete()
+}
 ```
 
 ### Parameters
@@ -47,14 +49,16 @@ This endpoint does not need any parameter.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CommunicationsApi::class.java)
 
-val result : CommunicationUserTokenModel = webService.apiV1CommunicationsGet()
+launch(Dispatchers.IO) {
+    val result : CommunicationUserTokenModel = webService.apiV1CommunicationsGet()
+}
 ```
 
 ### Parameters
@@ -79,14 +83,16 @@ This endpoint does not need any parameter.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CommunicationsApi::class.java)
 
-val result : CommunicationUserTokenModel = webService.apiV1CommunicationsPut()
+launch(Dispatchers.IO) {
+    val result : CommunicationUserTokenModel = webService.apiV1CommunicationsPut()
+}
 ```
 
 ### Parameters

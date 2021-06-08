@@ -20,16 +20,18 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val channelUrl : kotlin.String = channelUrl_example // kotlin.String | 
 val inviteSendBirdGroupChannelCommand : InviteSendBirdGroupChannelCommand =  // InviteSendBirdGroupChannelCommand | 
 
-val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsChannelUrlInvitePost(channelUrl, inviteSendBirdGroupChannelCommand)
+launch(Dispatchers.IO) {
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsChannelUrlInvitePost(channelUrl, inviteSendBirdGroupChannelCommand)
+}
 ```
 
 ### Parameters
@@ -58,15 +60,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealDealIdGet(dealId)
+launch(Dispatchers.IO) {
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealDealIdGet(dealId)
+}
 ```
 
 ### Parameters
@@ -94,15 +98,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1GroupchannelsDealDealIdPost(dealId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1GroupchannelsDealDealIdPost(dealId)
+}
 ```
 
 ### Parameters
@@ -130,15 +136,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDoctorDoctorIdGet(doctorId)
+launch(Dispatchers.IO) {
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDoctorDoctorIdGet(doctorId)
+}
 ```
 
 ### Parameters
@@ -166,15 +174,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1GroupchannelsDoctorDoctorIdPost(doctorId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1GroupchannelsDoctorDoctorIdPost(doctorId)
+}
 ```
 
 ### Parameters
@@ -202,15 +212,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsHospitalHospitalIdGet(hospitalId)
+launch(Dispatchers.IO) {
+    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsHospitalHospitalIdGet(hospitalId)
+}
 ```
 
 ### Parameters
@@ -238,15 +250,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1GroupchannelsHospitalHospitalIdPost(hospitalId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1GroupchannelsHospitalHospitalIdPost(hospitalId)
+}
 ```
 
 ### Parameters
@@ -274,15 +288,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1GroupchannelsIdGet(id)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1GroupchannelsIdGet(id)
+}
 ```
 
 ### Parameters

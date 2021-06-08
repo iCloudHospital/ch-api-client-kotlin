@@ -16,16 +16,18 @@ Delete deal package.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealPackagesApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val packageId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1DealsDealIdPackagesPackageIdDelete(dealId, packageId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DealsDealIdPackagesPackageIdDelete(dealId, packageId)
+}
 ```
 
 ### Parameters
@@ -54,16 +56,18 @@ Get deal package.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealPackagesApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val packageId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : DealPackageViewModel = webService.apiV1DealsDealIdPackagesPackageIdGet(dealId, packageId)
+launch(Dispatchers.IO) {
+    val result : DealPackageViewModel = webService.apiV1DealsDealIdPackagesPackageIdGet(dealId, packageId)
+}
 ```
 
 ### Parameters
@@ -92,9 +96,9 @@ Update deal package.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealPackagesApi::class.java)
@@ -102,7 +106,9 @@ val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.
 val packageId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateDealPackageCommand : UpdateDealPackageCommand =  // UpdateDealPackageCommand | 
 
-val result : kotlin.Boolean = webService.apiV1DealsDealIdPackagesPackageIdPut(dealId, packageId, updateDealPackageCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DealsDealIdPackagesPackageIdPut(dealId, packageId, updateDealPackageCommand)
+}
 ```
 
 ### Parameters
@@ -132,16 +138,18 @@ Create deal package.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealPackagesApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createDealPackageCommand : CreateDealPackageCommand =  // CreateDealPackageCommand | 
 
-val result : java.util.UUID = webService.apiV1DealsDealIdPackagesPost(dealId, createDealPackageCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1DealsDealIdPackagesPost(dealId, createDealPackageCommand)
+}
 ```
 
 ### Parameters

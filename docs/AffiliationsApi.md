@@ -18,16 +18,18 @@ Sample request:        DELETE /api/v1/hospitals/1/doctors/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdDelete(hospitalId, doctorId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdDelete(hospitalId, doctorId)
+}
 ```
 
 ### Parameters
@@ -58,16 +60,18 @@ Sample request:        POST /api/v1/hospitals/1/doctors/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : DoctorAffiliationViewModel = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdPost(hospitalId, doctorId)
+launch(Dispatchers.IO) {
+    val result : DoctorAffiliationViewModel = webService.apiV1HospitalsHospitalIdDoctorsDoctorIdPost(hospitalId, doctorId)
+}
 ```
 
 ### Parameters
@@ -98,16 +102,18 @@ Sample request:        DELETE /api/v1/hospitals/1/managers/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdManagersManagerIdDelete(hospitalId, managerId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdManagersManagerIdDelete(hospitalId, managerId)
+}
 ```
 
 ### Parameters
@@ -138,16 +144,18 @@ Sample request:        POST /api/v1/hospitals/1/managers/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(AffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ManagerAffiliationViewModel = webService.apiV1HospitalsHospitalIdManagersManagerIdPost(hospitalId, managerId)
+launch(Dispatchers.IO) {
+    val result : ManagerAffiliationViewModel = webService.apiV1HospitalsHospitalIdManagersManagerIdPost(hospitalId, managerId)
+}
 ```
 
 ### Parameters

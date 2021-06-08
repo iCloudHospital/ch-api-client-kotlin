@@ -19,9 +19,9 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
@@ -42,7 +42,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : HospitalsViewModel = webService.apiV1HospitalsCurrentGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : HospitalsViewModel = webService.apiV1HospitalsCurrentGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -87,9 +89,9 @@ Sample request:        GET /api/v1/hospitals      {          \&quot;pageQueryFil
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
@@ -110,7 +112,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : HospitalsViewModel = webService.apiV1HospitalsGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : HospitalsViewModel = webService.apiV1HospitalsGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -155,15 +159,17 @@ Sample request:        DELETE /api/v1/hospitals/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDelete(hospitalId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDelete(hospitalId)
+}
 ```
 
 ### Parameters
@@ -193,16 +199,18 @@ Sample request:        GET /api/v1/hospitals/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
-val result : HospitalViewModel = webService.apiV1HospitalsHospitalIdGet(hospitalId, languageCode)
+launch(Dispatchers.IO) {
+    val result : HospitalViewModel = webService.apiV1HospitalsHospitalIdGet(hospitalId, languageCode)
+}
 ```
 
 ### Parameters
@@ -233,16 +241,18 @@ Sameple request:        PUT /api/v1/hospitals      {          \&quot;overview\&q
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateHospitalCommand : UpdateHospitalCommand =  // UpdateHospitalCommand | 
 
-val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdPut(hospitalId, updateHospitalCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdPut(hospitalId, updateHospitalCommand)
+}
 ```
 
 ### Parameters
@@ -273,15 +283,17 @@ Sample request:        POST /api/v1/hospitals      {          \&quot;name\&quot;
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val createHospitalCommand : CreateHospitalCommand =  // CreateHospitalCommand | 
 
-val result : java.util.UUID = webService.apiV1HospitalsPost(createHospitalCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1HospitalsPost(createHospitalCommand)
+}
 ```
 
 ### Parameters
@@ -309,16 +321,18 @@ Get hospital by slug.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
-val result : HospitalViewModel = webService.apiV1HospitalsSlugsSlugGet(slug, languageCode)
+launch(Dispatchers.IO) {
+    val result : HospitalViewModel = webService.apiV1HospitalsSlugsSlugGet(slug, languageCode)
+}
 ```
 
 ### Parameters

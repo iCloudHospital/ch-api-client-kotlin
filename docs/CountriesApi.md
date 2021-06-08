@@ -20,15 +20,17 @@ Sample request:        DELETE /api/v1/countries/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1CountriesCountryIdDelete(countryId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1CountriesCountryIdDelete(countryId)
+}
 ```
 
 ### Parameters
@@ -58,16 +60,18 @@ Sample request:        GET /api/v1/countries/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
-val result : CountryViewModel = webService.apiV1CountriesCountryIdGet(countryId, languageCode)
+launch(Dispatchers.IO) {
+    val result : CountryViewModel = webService.apiV1CountriesCountryIdGet(countryId, languageCode)
+}
 ```
 
 ### Parameters
@@ -98,16 +102,18 @@ Sample request:        PUT /api/v1/countries/1      {          \&quot;name\&quot
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateCountryCommand : UpdateCountryCommand =  // UpdateCountryCommand | 
 
-val result : kotlin.Boolean = webService.apiV1CountriesCountryIdPut(countryId, updateCountryCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1CountriesCountryIdPut(countryId, updateCountryCommand)
+}
 ```
 
 ### Parameters
@@ -138,9 +144,9 @@ Sample request:        GET /api/v1/countries      {          \&quot;countryPageQ
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
@@ -154,7 +160,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : CountriesViewModel = webService.apiV1CountriesGet(id, name, description, createdDate, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : CountriesViewModel = webService.apiV1CountriesGet(id, name, description, createdDate, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -192,15 +200,17 @@ Sample request:        POST /api/v1/countries      {          \&quot;name\&quot;
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val createCountryCommand : CreateCountryCommand =  // CreateCountryCommand | 
 
-val result : java.util.UUID = webService.apiV1CountriesPost(createCountryCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1CountriesPost(createCountryCommand)
+}
 ```
 
 ### Parameters
@@ -228,16 +238,18 @@ Get country by slug.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
-val result : CountryViewModel = webService.apiV1CountriesSlugsSlugGet(slug, languageCode)
+launch(Dispatchers.IO) {
+    val result : CountryViewModel = webService.apiV1CountriesSlugsSlugGet(slug, languageCode)
+}
 ```
 
 ### Parameters

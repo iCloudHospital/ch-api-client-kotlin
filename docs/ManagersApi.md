@@ -19,9 +19,9 @@ Sample request:        GET /api/v1/managers      {          \&quot;pageQueryFilt
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
@@ -37,7 +37,9 @@ val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ManagersViewModel = webService.apiV1ManagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current, hospitalId)
+launch(Dispatchers.IO) {
+    val result : ManagersViewModel = webService.apiV1ManagersGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current, hospitalId)
+}
 ```
 
 ### Parameters
@@ -77,15 +79,17 @@ Sample request:        DELETE /api/v1/managers/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1ManagersManagerIdDelete(managerId)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ManagersManagerIdDelete(managerId)
+}
 ```
 
 ### Parameters
@@ -115,15 +119,17 @@ Sample request:        GET /api/v1/managers/1
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : ManagerViewModel = webService.apiV1ManagersManagerIdGet(managerId)
+launch(Dispatchers.IO) {
+    val result : ManagerViewModel = webService.apiV1ManagersManagerIdGet(managerId)
+}
 ```
 
 ### Parameters
@@ -153,16 +159,18 @@ Sample request:        PUT /api/v1/managers/1      {          \&quot;firstName\&
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
 val managerId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateManagerCommand : UpdateManagerCommand =  // UpdateManagerCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ManagersManagerIdPut(managerId, updateManagerCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ManagersManagerIdPut(managerId, updateManagerCommand)
+}
 ```
 
 ### Parameters
@@ -193,15 +201,17 @@ Sample request:        POST /api/v1/managers      {          \&quot;userName\&qu
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ManagersApi::class.java)
 val createManagerCommand : CreateManagerCommand =  // CreateManagerCommand | 
 
-val result : java.util.UUID = webService.apiV1ManagersPost(createManagerCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1ManagersPost(createManagerCommand)
+}
 ```
 
 ### Parameters

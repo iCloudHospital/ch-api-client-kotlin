@@ -15,15 +15,17 @@ Get a language by code
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(LanguagesApi::class.java)
 val code : kotlin.String = code_example // kotlin.String | 
 
-val result : LanguageViewModel = webService.apiV1LanguagesCodeGet(code)
+launch(Dispatchers.IO) {
+    val result : LanguageViewModel = webService.apiV1LanguagesCodeGet(code)
+}
 ```
 
 ### Parameters
@@ -53,9 +55,9 @@ Sample request:        GET: /api/v1/languages
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(LanguagesApi::class.java)
@@ -68,7 +70,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : LanguagesViewModel = webService.apiV1LanguagesGet(id, name, code, description, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : LanguagesViewModel = webService.apiV1LanguagesGet(id, name, code, description, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -103,15 +107,17 @@ Get a language by id
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(LanguagesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : LanguageViewModel = webService.apiV1LanguagesIdGet(id)
+launch(Dispatchers.IO) {
+    val result : LanguageViewModel = webService.apiV1LanguagesIdGet(id)
+}
 ```
 
 ### Parameters

@@ -18,9 +18,9 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SearchApi::class.java)
@@ -35,7 +35,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : DealSearchResultViewModel = webService.apiV1SearchDealsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : DealSearchResultViewModel = webService.apiV1SearchDealsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -72,9 +74,9 @@ No authorization required
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SearchApi::class.java)
@@ -89,7 +91,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : DoctorSearchResultViewModel = webService.apiV1SearchDoctorsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : DoctorSearchResultViewModel = webService.apiV1SearchDoctorsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -126,9 +130,9 @@ No authorization required
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SearchApi::class.java)
@@ -143,7 +147,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : AzureSearchViewModel = webService.apiV1SearchGetcountGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : AzureSearchViewModel = webService.apiV1SearchGetcountGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -180,9 +186,9 @@ No authorization required
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SearchApi::class.java)
@@ -197,7 +203,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : HospitalSearchResultViewModel = webService.apiV1SearchHospitalsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : HospitalSearchResultViewModel = webService.apiV1SearchHospitalsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -234,9 +242,9 @@ No authorization required
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SearchApi::class.java)
@@ -251,7 +259,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : SpecialtySearchResultViewModel = webService.apiV1SearchSpecialtiesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : SpecialtySearchResultViewModel = webService.apiV1SearchSpecialtiesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -288,9 +298,9 @@ No authorization required
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SearchApi::class.java)
@@ -305,7 +315,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : SpecialtyTypeSearchResultViewModel = webService.apiV1SearchSpecialtytypesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : SpecialtyTypeSearchResultViewModel = webService.apiV1SearchSpecialtytypesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters

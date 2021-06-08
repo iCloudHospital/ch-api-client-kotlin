@@ -17,15 +17,17 @@ Sample request:        POST /api/v1/profiles/changeEmail      {          \&quot;
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ProfilesApi::class.java)
 val changeEmailCommand : ChangeEmailCommand =  // ChangeEmailCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ProfilesChangeemailPost(changeEmailCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ProfilesChangeemailPost(changeEmailCommand)
+}
 ```
 
 ### Parameters
@@ -53,15 +55,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ProfilesApi::class.java)
 val confirmEmailCommand : ConfirmEmailCommand =  // ConfirmEmailCommand | 
 
-val result : kotlin.Boolean = webService.apiV1ProfilesConfirmemailPost(confirmEmailCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ProfilesConfirmemailPost(confirmEmailCommand)
+}
 ```
 
 ### Parameters
@@ -91,14 +95,16 @@ Sample request:        GET /api/v1/profiles
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ProfilesApi::class.java)
 
-val result : UserViewModel = webService.apiV1ProfilesGet()
+launch(Dispatchers.IO) {
+    val result : UserViewModel = webService.apiV1ProfilesGet()
+}
 ```
 
 ### Parameters

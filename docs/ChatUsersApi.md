@@ -17,14 +17,16 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ChatUsersApi::class.java)
 
-val result : SendBirdUserViewModel = webService.apiV1ChatusersCurrentGet()
+launch(Dispatchers.IO) {
+    val result : SendBirdUserViewModel = webService.apiV1ChatusersCurrentGet()
+}
 ```
 
 ### Parameters
@@ -49,15 +51,17 @@ This endpoint does not need any parameter.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ChatUsersApi::class.java)
 val createSendBirdCurrentUserCommand : CreateSendBirdCurrentUserCommand =  // CreateSendBirdCurrentUserCommand | 
 
-val result : SendBirdUserViewModel = webService.apiV1ChatusersCurrentPost(createSendBirdCurrentUserCommand)
+launch(Dispatchers.IO) {
+    val result : SendBirdUserViewModel = webService.apiV1ChatusersCurrentPost(createSendBirdCurrentUserCommand)
+}
 ```
 
 ### Parameters
@@ -85,14 +89,16 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ChatUsersApi::class.java)
 
-val result : kotlin.Boolean = webService.apiV1ChatusersDelete()
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1ChatusersDelete()
+}
 ```
 
 ### Parameters
@@ -117,15 +123,17 @@ This endpoint does not need any parameter.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ChatUsersApi::class.java)
 val updateSendBirdUserCommand : UpdateSendBirdUserCommand =  // UpdateSendBirdUserCommand | 
 
-val result : SendBirdUserViewModel = webService.apiV1ChatusersPut(updateSendBirdUserCommand)
+launch(Dispatchers.IO) {
+    val result : SendBirdUserViewModel = webService.apiV1ChatusersPut(updateSendBirdUserCommand)
+}
 ```
 
 ### Parameters
@@ -153,15 +161,17 @@ Name | Type | Description  | Notes
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ChatUsersApi::class.java)
 val userId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SendBirdUserViewModel = webService.apiV1ChatusersUserIdGet(userId)
+launch(Dispatchers.IO) {
+    val result : SendBirdUserViewModel = webService.apiV1ChatusersUserIdGet(userId)
+}
 ```
 
 ### Parameters

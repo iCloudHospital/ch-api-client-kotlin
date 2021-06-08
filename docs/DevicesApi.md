@@ -18,9 +18,9 @@ Get all devices.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DevicesApi::class.java)
@@ -35,7 +35,9 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : DevicesViewModel = webService.apiV1DevicesGet(id, token, platform, appAlert, eventAlert, noticeAlert, page, limit, lastRetrieved, current)
+launch(Dispatchers.IO) {
+    val result : DevicesViewModel = webService.apiV1DevicesGet(id, token, platform, appAlert, eventAlert, noticeAlert, page, limit, lastRetrieved, current)
+}
 ```
 
 ### Parameters
@@ -72,15 +74,17 @@ Delete device.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DevicesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : kotlin.Boolean = webService.apiV1DevicesIdDelete(id)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DevicesIdDelete(id)
+}
 ```
 
 ### Parameters
@@ -108,15 +112,17 @@ Get device.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DevicesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : DeviceViewModel = webService.apiV1DevicesIdGet(id)
+launch(Dispatchers.IO) {
+    val result : DeviceViewModel = webService.apiV1DevicesIdGet(id)
+}
 ```
 
 ### Parameters
@@ -144,16 +150,18 @@ Create device login.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DevicesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val createDeviceLoginCommand : CreateDeviceLoginCommand =  // CreateDeviceLoginCommand | 
 
-val result : java.util.UUID = webService.apiV1DevicesIdLoginsPost(id, createDeviceLoginCommand)
+launch(Dispatchers.IO) {
+    val result : java.util.UUID = webService.apiV1DevicesIdLoginsPost(id, createDeviceLoginCommand)
+}
 ```
 
 ### Parameters
@@ -182,16 +190,18 @@ Update device.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DevicesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val updateDeviceCommand : UpdateDeviceCommand =  // UpdateDeviceCommand | 
 
-val result : kotlin.Boolean = webService.apiV1DevicesIdPut(id, updateDeviceCommand)
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1DevicesIdPut(id, updateDeviceCommand)
+}
 ```
 
 ### Parameters
@@ -220,15 +230,17 @@ Create device.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.*
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DevicesApi::class.java)
 val createDeviceCommand : CreateDeviceCommand =  // CreateDeviceCommand | 
 
-val result : DeviceViewModel = webService.apiV1DevicesPost(createDeviceCommand)
+launch(Dispatchers.IO) {
+    val result : DeviceViewModel = webService.apiV1DevicesPost(createDeviceCommand)
+}
 ```
 
 ### Parameters
