@@ -22,6 +22,7 @@ import com.google.gson.annotations.SerializedName
  * @param id 
  * @param name 
  * @param normalizedName 
+ * @param logo 
  * @param slug 
  * @param description 
  * @param content 
@@ -37,6 +38,8 @@ data class Country (
     val name: kotlin.String? = null,
     @SerializedName("normalizedName")
     val normalizedName: kotlin.String? = null,
+    @SerializedName("logo")
+    val logo: kotlin.String? = null,
     @SerializedName("slug")
     val slug: kotlin.String? = null,
     @SerializedName("description")

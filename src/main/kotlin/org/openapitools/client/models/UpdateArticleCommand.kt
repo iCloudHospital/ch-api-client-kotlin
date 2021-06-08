@@ -11,6 +11,8 @@
 */
 package org.openapitools.client.models
 
+import org.openapitools.client.models.ArticleContributorItemViewModel
+import org.openapitools.client.models.ArticleSourceItemViewModel
 import org.openapitools.client.models.ArticleStatus
 import org.openapitools.client.models.ArticleTagItemViewModel
 import org.openapitools.client.models.MarketingType
@@ -27,7 +29,10 @@ import com.google.gson.annotations.SerializedName
  * @param status 
  * @param marketingType 
  * @param hospitalSlug 
+ * @param youtubeUrl 
  * @param articleTags 
+ * @param articleSources 
+ * @param articleContributors 
  * @param medias 
  */
 
@@ -46,8 +51,14 @@ data class UpdateArticleCommand (
     val marketingType: MarketingType? = null,
     @SerializedName("hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
+    @SerializedName("youtubeUrl")
+    val youtubeUrl: kotlin.String? = null,
     @SerializedName("articleTags")
     val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
+    @SerializedName("articleSources")
+    val articleSources: kotlin.collections.List<ArticleSourceItemViewModel>? = null,
+    @SerializedName("articleContributors")
+    val articleContributors: kotlin.collections.List<ArticleContributorItemViewModel>? = null,
     @SerializedName("medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null
 )

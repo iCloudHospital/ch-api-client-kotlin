@@ -18,7 +18,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param medias 
  * @param id 
  * @param userId 
  * @param userName 
@@ -27,11 +26,10 @@ import com.google.gson.annotations.SerializedName
  * @param questionTitle 
  * @param body 
  * @param auditableEntity 
+ * @param medias 
  */
 
 data class QuestionCommentViewModel (
-    @SerializedName("medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userId")
@@ -47,6 +45,8 @@ data class QuestionCommentViewModel (
     @SerializedName("body")
     val body: kotlin.String? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("medias")
+    val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

@@ -142,12 +142,14 @@ val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.u
 val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val exceptDealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : DealsViewModel = webService.apiV1DealsGet(id, name, marketingType, countryId, hospitalId, hospitalName, specialtyId, specialtyTypeId, page, limit, lastRetrieved, current)
+val result : DealsViewModel = webService.apiV1DealsGet(id, name, marketingType, countryId, hospitalId, hospitalName, specialtyId, specialtyTypeId, exceptHospitalId, exceptDealId, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -162,6 +164,8 @@ Name | Type | Description  | Notes
  **hospitalName** | **kotlin.String**|  | [optional]
  **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **exceptDealId** | [**java.util.UUID**](.md)|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]

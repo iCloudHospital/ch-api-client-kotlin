@@ -28,12 +28,13 @@ val webService = apiClient.createWebservice(ServiceCategoriesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : ServiceCategoriesViewModel = webService.apiV1ServicecategoriesGet(id, name, description, page, limit, lastRetrieved, current)
+val result : ServiceCategoriesViewModel = webService.apiV1ServicecategoriesGet(id, name, description, languageCode, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -43,6 +44,7 @@ Name | Type | Description  | Notes
  **id** | [**java.util.UUID**](.md)|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -152,8 +154,9 @@ Sample request:        GET /api/v1/ServiceCategories/1
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServiceCategoriesApi::class.java)
 val serviceCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
-val result : ServiceCategoryViewModel = webService.apiV1ServicecategoriesServiceCategoryIdGet(serviceCategoryId)
+val result : ServiceCategoryViewModel = webService.apiV1ServicecategoriesServiceCategoryIdGet(serviceCategoryId, languageCode)
 ```
 
 ### Parameters
@@ -161,6 +164,7 @@ val result : ServiceCategoryViewModel = webService.apiV1ServicecategoriesService
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serviceCategoryId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 

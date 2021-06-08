@@ -65,6 +65,7 @@ Class | Method | HTTP request | Description
 *CHManagersApi* | [**apiV1ChmanagersChManagerIdPut**](docs/CHManagersApi.md#apiv1chmanagerschmanageridput) | **PUT** api/v1/chmanagers/{chManagerId} | Update cloud hospital manager.
 *CHManagersApi* | [**apiV1ChmanagersGet**](docs/CHManagersApi.md#apiv1chmanagersget) | **GET** api/v1/chmanagers | Get cloud hospital managers.
 *CHManagersApi* | [**apiV1ChmanagersPost**](docs/CHManagersApi.md#apiv1chmanagerspost) | **POST** api/v1/chmanagers | Create cloud hospital manager.
+*CacheApi* | [**apiV1CacheKeyDelete**](docs/CacheApi.md#apiv1cachekeydelete) | **DELETE** api/v1/cache/{key} | Remove cache with specified key
 *ChatUsersApi* | [**apiV1ChatusersCurrentGet**](docs/ChatUsersApi.md#apiv1chatuserscurrentget) | **GET** api/v1/chatusers/current | 
 *ChatUsersApi* | [**apiV1ChatusersCurrentPost**](docs/ChatUsersApi.md#apiv1chatuserscurrentpost) | **POST** api/v1/chatusers/current | 
 *ChatUsersApi* | [**apiV1ChatusersDelete**](docs/ChatUsersApi.md#apiv1chatusersdelete) | **DELETE** api/v1/chatusers | 
@@ -82,6 +83,9 @@ Class | Method | HTTP request | Description
 *ConsultationsApi* | [**apiV1ConsultationsConsultationIdRejectPost**](docs/ConsultationsApi.md#apiv1consultationsconsultationidrejectpost) | **POST** api/v1/consultations/{consultationId}/reject | Reject consultation.
 *ConsultationsApi* | [**apiV1ConsultationsGet**](docs/ConsultationsApi.md#apiv1consultationsget) | **GET** api/v1/consultations | Get all consultations.
 *ConsultationsApi* | [**apiV1ConsultationsRequestIdPost**](docs/ConsultationsApi.md#apiv1consultationsrequestidpost) | **POST** api/v1/consultations/{requestId} | Create consultation.
+*ContributorsApi* | [**apiV1ContributorsContributorIdGet**](docs/ContributorsApi.md#apiv1contributorscontributoridget) | **GET** api/v1/contributors/{contributorId} | Get contributor.
+*ContributorsApi* | [**apiV1ContributorsGet**](docs/ContributorsApi.md#apiv1contributorsget) | **GET** api/v1/contributors | Get all contributors.
+*ContributorsApi* | [**apiV1ContributorsSlugsSlugGet**](docs/ContributorsApi.md#apiv1contributorsslugsslugget) | **GET** api/v1/contributors/slugs/{slug} | Get contributor by slug.
 *CountriesApi* | [**apiV1CountriesCountryIdDelete**](docs/CountriesApi.md#apiv1countriescountryiddelete) | **DELETE** api/v1/countries/{countryId} | Delete country.
 *CountriesApi* | [**apiV1CountriesCountryIdGet**](docs/CountriesApi.md#apiv1countriescountryidget) | **GET** api/v1/countries/{countryId} | Get country.
 *CountriesApi* | [**apiV1CountriesCountryIdPut**](docs/CountriesApi.md#apiv1countriescountryidput) | **PUT** api/v1/countries/{countryId} | Update country.
@@ -103,12 +107,12 @@ Class | Method | HTTP request | Description
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdGet**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidget) | **GET** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Get department.
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPost**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidpost) | **POST** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Create department.
 *DepartmentApi* | [**apiV1HospitalsHospitalIdDepartmentsDepartmentIdPut**](docs/DepartmentApi.md#apiv1hospitalshospitaliddepartmentsdepartmentidput) | **PUT** api/v1/hospitals/{hospitalId}/departments/{departmentId} | Update department.
-*DevicesApi* | [**apiV1DevicesDeviceIdDelete**](docs/DevicesApi.md#apiv1devicesdeviceiddelete) | **DELETE** api/v1/devices/{deviceId} | Delete device.
-*DevicesApi* | [**apiV1DevicesDeviceIdLoginsPost**](docs/DevicesApi.md#apiv1devicesdeviceidloginspost) | **POST** api/v1/devices/{deviceId}/logins | Create device login.
-*DevicesApi* | [**apiV1DevicesDeviceIdPut**](docs/DevicesApi.md#apiv1devicesdeviceidput) | **PUT** api/v1/devices/{deviceId} | Update device.
 *DevicesApi* | [**apiV1DevicesGet**](docs/DevicesApi.md#apiv1devicesget) | **GET** api/v1/devices | Get all devices.
+*DevicesApi* | [**apiV1DevicesIdDelete**](docs/DevicesApi.md#apiv1devicesiddelete) | **DELETE** api/v1/devices/{id} | Delete device.
+*DevicesApi* | [**apiV1DevicesIdGet**](docs/DevicesApi.md#apiv1devicesidget) | **GET** api/v1/devices/{id} | Get device.
+*DevicesApi* | [**apiV1DevicesIdLoginsPost**](docs/DevicesApi.md#apiv1devicesidloginspost) | **POST** api/v1/devices/{id}/logins | Create device login.
+*DevicesApi* | [**apiV1DevicesIdPut**](docs/DevicesApi.md#apiv1devicesidput) | **PUT** api/v1/devices/{id} | Update device.
 *DevicesApi* | [**apiV1DevicesPost**](docs/DevicesApi.md#apiv1devicespost) | **POST** api/v1/devices | Create device.
-*DevicesApi* | [**apiV1DevicesTokenGet**](docs/DevicesApi.md#apiv1devicestokenget) | **GET** api/v1/devices/{token} | Get device.
 *DoctorCertificatesApi* | [**apiV1DoctorsCertificatesGet**](docs/DoctorCertificatesApi.md#apiv1doctorscertificatesget) | **GET** api/v1/doctors/certificates | Get all certificates.
 *DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdDelete**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateiddelete) | **DELETE** api/v1/doctors/{doctorId}/certificates/{certificateId} | Delete certificate.
 *DoctorCertificatesApi* | [**apiV1DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorCertificatesApi.md#apiv1doctorsdoctoridcertificatescertificateidget) | **GET** api/v1/doctors/{doctorId}/certificates/{certificateId} | Get certificate.
@@ -132,11 +136,19 @@ Class | Method | HTTP request | Description
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidget) | **GET** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidput) | **PUT** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsPost**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentspost) | **POST** api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
+*FaqCategoriesApi* | [**apiV1FaqcategoriesFaqCategoryIdGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesfaqcategoryidget) | **GET** api/v1/faqcategories/{faqCategoryId} | Get faqCategory.
+*FaqCategoriesApi* | [**apiV1FaqcategoriesGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesget) | **GET** api/v1/faqcategories | Get all faqCategory.
+*FaqsApi* | [**apiV1FaqsFaqIdGet**](docs/FaqsApi.md#apiv1faqsfaqidget) | **GET** api/v1/faqs/{faqId} | Get faq.
+*FaqsApi* | [**apiV1FaqsGet**](docs/FaqsApi.md#apiv1faqsget) | **GET** api/v1/faqs | Get all faq.
+*FaqsApi* | [**apiV1FaqsSlugsSlugGet**](docs/FaqsApi.md#apiv1faqsslugsslugget) | **GET** api/v1/faqs/slugs/{slug} | Get faq by slug.
 *GroupChannelsApi* | [**apiV1GroupchannelsChannelUrlInvitePost**](docs/GroupChannelsApi.md#apiv1groupchannelschannelurlinvitepost) | **POST** api/v1/groupchannels/{channelUrl}/invite | 
+*GroupChannelsApi* | [**apiV1GroupchannelsDealDealIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdealdealidget) | **GET** api/v1/groupchannels/deal/{dealId} | 
 *GroupChannelsApi* | [**apiV1GroupchannelsDealDealIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelsdealdealidpost) | **POST** api/v1/groupchannels/deal/{dealId} | 
-*GroupChannelsApi* | [**apiV1GroupchannelsDealIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdealidget) | **GET** api/v1/groupchannels/{dealId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsDoctorDoctorIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsdoctordoctoridget) | **GET** api/v1/groupchannels/doctor/{doctorId} | 
 *GroupChannelsApi* | [**apiV1GroupchannelsDoctorDoctorIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelsdoctordoctoridpost) | **POST** api/v1/groupchannels/doctor/{doctorId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsHospitalHospitalIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelshospitalhospitalidget) | **GET** api/v1/groupchannels/hospital/{hospitalId} | 
 *GroupChannelsApi* | [**apiV1GroupchannelsHospitalHospitalIdPost**](docs/GroupChannelsApi.md#apiv1groupchannelshospitalhospitalidpost) | **POST** api/v1/groupchannels/hospital/{hospitalId} | 
+*GroupChannelsApi* | [**apiV1GroupchannelsIdGet**](docs/GroupChannelsApi.md#apiv1groupchannelsidget) | **GET** api/v1/groupchannels/{id} | 
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdDelete**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Delete review.
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdGet**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidget) | **GET** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Get review.
 *HospitalReviewsApi* | [**apiV1HospitalsHospitalIdReviewsPatientIdPut**](docs/HospitalReviewsApi.md#apiv1hospitalshospitalidreviewspatientidput) | **PUT** api/v1/hospitals/{hospitalId}/reviews/{patientId} | Update review.
@@ -155,6 +167,9 @@ Class | Method | HTTP request | Description
 *HospitalsApi* | [**apiV1HospitalsSlugsSlugGet**](docs/HospitalsApi.md#apiv1hospitalsslugsslugget) | **GET** api/v1/hospitals/slugs/{slug} | Get hospital by slug.
 *IdentityApi* | [**apiV1IdentityGet**](docs/IdentityApi.md#apiv1identityget) | **GET** api/v1/identity | Get current user's Identity claims.
 *ImagesApi* | [**apiV1ImagesPost**](docs/ImagesApi.md#apiv1imagespost) | **POST** api/v1/images | 
+*LanguagesApi* | [**apiV1LanguagesCodeGet**](docs/LanguagesApi.md#apiv1languagescodeget) | **GET** api/v1/languages/{code} | Get a language by code
+*LanguagesApi* | [**apiV1LanguagesGet**](docs/LanguagesApi.md#apiv1languagesget) | **GET** api/v1/languages | Get all languages.
+*LanguagesApi* | [**apiV1LanguagesIdGet**](docs/LanguagesApi.md#apiv1languagesidget) | **GET** api/v1/languages/{id} | Get a language by id
 *ManagersApi* | [**apiV1ManagersGet**](docs/ManagersApi.md#apiv1managersget) | **GET** api/v1/managers | Get all hospital managers.
 *ManagersApi* | [**apiV1ManagersManagerIdDelete**](docs/ManagersApi.md#apiv1managersmanageriddelete) | **DELETE** api/v1/managers/{managerId} | Delete hospital manager.
 *ManagersApi* | [**apiV1ManagersManagerIdGet**](docs/ManagersApi.md#apiv1managersmanageridget) | **GET** api/v1/managers/{managerId} | Get hospital manager.
@@ -239,7 +254,11 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.ApproveBookingCommand](docs/ApproveBookingCommand.md)
  - [org.openapitools.client.models.ApproveConsultationCommand](docs/ApproveConsultationCommand.md)
  - [org.openapitools.client.models.Article](docs/Article.md)
+ - [org.openapitools.client.models.ArticleContributor](docs/ArticleContributor.md)
+ - [org.openapitools.client.models.ArticleContributorItemViewModel](docs/ArticleContributorItemViewModel.md)
  - [org.openapitools.client.models.ArticleItemViewModel](docs/ArticleItemViewModel.md)
+ - [org.openapitools.client.models.ArticleSource](docs/ArticleSource.md)
+ - [org.openapitools.client.models.ArticleSourceItemViewModel](docs/ArticleSourceItemViewModel.md)
  - [org.openapitools.client.models.ArticleStatus](docs/ArticleStatus.md)
  - [org.openapitools.client.models.ArticleTag](docs/ArticleTag.md)
  - [org.openapitools.client.models.ArticleTagItemViewModel](docs/ArticleTagItemViewModel.md)
@@ -272,6 +291,11 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.ConsultationType](docs/ConsultationType.md)
  - [org.openapitools.client.models.ConsultationViewModel](docs/ConsultationViewModel.md)
  - [org.openapitools.client.models.ConsultationsViewModel](docs/ConsultationsViewModel.md)
+ - [org.openapitools.client.models.ContributionType](docs/ContributionType.md)
+ - [org.openapitools.client.models.Contributor](docs/Contributor.md)
+ - [org.openapitools.client.models.ContributorItemViewModel](docs/ContributorItemViewModel.md)
+ - [org.openapitools.client.models.ContributorViewModel](docs/ContributorViewModel.md)
+ - [org.openapitools.client.models.ContributorsViewModel](docs/ContributorsViewModel.md)
  - [org.openapitools.client.models.CountriesViewModel](docs/CountriesViewModel.md)
  - [org.openapitools.client.models.Country](docs/Country.md)
  - [org.openapitools.client.models.CountryItemViewModel](docs/CountryItemViewModel.md)
@@ -355,6 +379,12 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.EquipmentItemViewModel](docs/EquipmentItemViewModel.md)
  - [org.openapitools.client.models.EquipmentViewModel](docs/EquipmentViewModel.md)
  - [org.openapitools.client.models.EquipmentsViewModel](docs/EquipmentsViewModel.md)
+ - [org.openapitools.client.models.FaqCategoriesViewModel](docs/FaqCategoriesViewModel.md)
+ - [org.openapitools.client.models.FaqCategoryItemViewModel](docs/FaqCategoryItemViewModel.md)
+ - [org.openapitools.client.models.FaqCategoryViewModel](docs/FaqCategoryViewModel.md)
+ - [org.openapitools.client.models.FaqItemViewModel](docs/FaqItemViewModel.md)
+ - [org.openapitools.client.models.FaqViewModel](docs/FaqViewModel.md)
+ - [org.openapitools.client.models.FaqsViewModel](docs/FaqsViewModel.md)
  - [org.openapitools.client.models.Gender](docs/Gender.md)
  - [org.openapitools.client.models.Hospital](docs/Hospital.md)
  - [org.openapitools.client.models.HospitalAccreditation](docs/HospitalAccreditation.md)
@@ -375,6 +405,9 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.HospitalViewModel](docs/HospitalViewModel.md)
  - [org.openapitools.client.models.HospitalsViewModel](docs/HospitalsViewModel.md)
  - [org.openapitools.client.models.InviteSendBirdGroupChannelCommand](docs/InviteSendBirdGroupChannelCommand.md)
+ - [org.openapitools.client.models.LanguageItemViewModel](docs/LanguageItemViewModel.md)
+ - [org.openapitools.client.models.LanguageViewModel](docs/LanguageViewModel.md)
+ - [org.openapitools.client.models.LanguagesViewModel](docs/LanguagesViewModel.md)
  - [org.openapitools.client.models.Location](docs/Location.md)
  - [org.openapitools.client.models.LocationViewModel](docs/LocationViewModel.md)
  - [org.openapitools.client.models.Manager](docs/Manager.md)
@@ -433,6 +466,9 @@ Class | Method | HTTP request | Description
  - [org.openapitools.client.models.ServiceSearchViewModel](docs/ServiceSearchViewModel.md)
  - [org.openapitools.client.models.ServiceViewModel](docs/ServiceViewModel.md)
  - [org.openapitools.client.models.ServicesViewModel](docs/ServicesViewModel.md)
+ - [org.openapitools.client.models.SnsHandle](docs/SnsHandle.md)
+ - [org.openapitools.client.models.SnsHandleViewModel](docs/SnsHandleViewModel.md)
+ - [org.openapitools.client.models.SnsType](docs/SnsType.md)
  - [org.openapitools.client.models.SpecialtiesViewModel](docs/SpecialtiesViewModel.md)
  - [org.openapitools.client.models.Specialty](docs/Specialty.md)
  - [org.openapitools.client.models.SpecialtyItemViewModel](docs/SpecialtyItemViewModel.md)

@@ -17,7 +17,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param locationType 
  * @param latitude 
  * @param longitude 
  * @param country 
@@ -26,11 +25,10 @@ import com.google.gson.annotations.SerializedName
  * @param city 
  * @param zipCode 
  * @param address 
+ * @param locationType 
  */
 
 data class UserLocationViewModel (
-    @SerializedName("locationType")
-    val locationType: UserLocationType? = null,
     @SerializedName("latitude")
     val latitude: kotlin.Double? = null,
     @SerializedName("longitude")
@@ -46,6 +44,8 @@ data class UserLocationViewModel (
     @SerializedName("zipCode")
     val zipCode: kotlin.String? = null,
     @SerializedName("address")
-    val address: kotlin.String? = null
+    val address: kotlin.String? = null,
+    @SerializedName("locationType")
+    val locationType: UserLocationType? = null
 )
 

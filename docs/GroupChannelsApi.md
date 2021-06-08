@@ -5,10 +5,13 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV1GroupchannelsChannelUrlInvitePost**](GroupChannelsApi.md#apiV1GroupchannelsChannelUrlInvitePost) | **POST** api/v1/groupchannels/{channelUrl}/invite | 
+[**apiV1GroupchannelsDealDealIdGet**](GroupChannelsApi.md#apiV1GroupchannelsDealDealIdGet) | **GET** api/v1/groupchannels/deal/{dealId} | 
 [**apiV1GroupchannelsDealDealIdPost**](GroupChannelsApi.md#apiV1GroupchannelsDealDealIdPost) | **POST** api/v1/groupchannels/deal/{dealId} | 
-[**apiV1GroupchannelsDealIdGet**](GroupChannelsApi.md#apiV1GroupchannelsDealIdGet) | **GET** api/v1/groupchannels/{dealId} | 
+[**apiV1GroupchannelsDoctorDoctorIdGet**](GroupChannelsApi.md#apiV1GroupchannelsDoctorDoctorIdGet) | **GET** api/v1/groupchannels/doctor/{doctorId} | 
 [**apiV1GroupchannelsDoctorDoctorIdPost**](GroupChannelsApi.md#apiV1GroupchannelsDoctorDoctorIdPost) | **POST** api/v1/groupchannels/doctor/{doctorId} | 
+[**apiV1GroupchannelsHospitalHospitalIdGet**](GroupChannelsApi.md#apiV1GroupchannelsHospitalHospitalIdGet) | **GET** api/v1/groupchannels/hospital/{hospitalId} | 
 [**apiV1GroupchannelsHospitalHospitalIdPost**](GroupChannelsApi.md#apiV1GroupchannelsHospitalHospitalIdPost) | **POST** api/v1/groupchannels/hospital/{hospitalId} | 
+[**apiV1GroupchannelsIdGet**](GroupChannelsApi.md#apiV1GroupchannelsIdGet) | **GET** api/v1/groupchannels/{id} | 
 
 
 
@@ -63,6 +66,42 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
+val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealDealIdGet(dealId)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dealId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**SendBirdGroupChannelViewModel**](SendBirdGroupChannelViewModel.md)
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
+val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
 val result : kotlin.Boolean = webService.apiV1GroupchannelsDealDealIdPost(dealId)
 ```
 
@@ -97,16 +136,16 @@ Name | Type | Description  | Notes
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
-val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
-val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealIdGet(dealId)
+val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDoctorDoctorIdGet(doctorId)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | [**java.util.UUID**](.md)|  |
 
 ### Return type
 
@@ -171,6 +210,42 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
+val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsHospitalHospitalIdGet(hospitalId)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**SendBirdGroupChannelViewModel**](SendBirdGroupChannelViewModel.md)
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
 val result : kotlin.Boolean = webService.apiV1GroupchannelsHospitalHospitalIdPost(hospitalId)
 ```
 
@@ -179,6 +254,42 @@ val result : kotlin.Boolean = webService.apiV1GroupchannelsHospitalHospitalIdPos
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+**kotlin.Boolean**
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+val result : kotlin.Boolean = webService.apiV1GroupchannelsIdGet(id)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**java.util.UUID**](.md)|  |
 
 ### Return type
 

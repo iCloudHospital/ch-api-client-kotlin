@@ -25,8 +25,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param accounts 
- * @param affiliations 
  * @param id 
  * @param userName 
  * @param email 
@@ -46,13 +44,11 @@ import com.google.gson.annotations.SerializedName
  * @param locations 
  * @param languages 
  * @param auditableEntity 
+ * @param accounts 
+ * @param affiliations 
  */
 
 data class Manager (
-    @SerializedName("accounts")
-    val accounts: kotlin.collections.List<Account>? = null,
-    @SerializedName("affiliations")
-    val affiliations: kotlin.collections.List<ManagerAffiliation>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("userName")
@@ -90,6 +86,10 @@ data class Manager (
     @SerializedName("languages")
     val languages: kotlin.collections.List<UserLanguage>? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("accounts")
+    val accounts: kotlin.collections.List<Account>? = null,
+    @SerializedName("affiliations")
+    val affiliations: kotlin.collections.List<ManagerAffiliation>? = null
 )
 

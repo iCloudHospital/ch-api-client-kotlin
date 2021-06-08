@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param body 
- * @param medias 
  * @param id 
  * @param title 
  * @param userId 
@@ -39,13 +37,11 @@ import com.google.gson.annotations.SerializedName
  * @param refundPolicy 
  * @param quantity 
  * @param auditableEntity 
+ * @param body 
+ * @param medias 
  */
 
 data class QuestionViewModel (
-    @SerializedName("body")
-    val body: kotlin.String? = null,
-    @SerializedName("medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("title")
@@ -77,6 +73,10 @@ data class QuestionViewModel (
     @SerializedName("quantity")
     val quantity: kotlin.Int? = null,
     @SerializedName("auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @SerializedName("body")
+    val body: kotlin.String? = null,
+    @SerializedName("medias")
+    val medias: kotlin.collections.List<MediaViewModel>? = null
 )
 

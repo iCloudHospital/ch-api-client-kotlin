@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
+**content** | **kotlin.String** |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional]
 **specialtyTypeId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]

@@ -4,11 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
-**managerAffiliations** | [**kotlin.collections.List&lt;ManagerAffiliationViewModel&gt;**](ManagerAffiliationViewModel.md) |  |  [optional]
-**userType** | **kotlin.String** |  |  [optional]
-**languages** | [**kotlin.collections.List&lt;UserLanguageViewModel&gt;**](UserLanguageViewModel.md) |  |  [optional]
-**locations** | [**kotlin.collections.List&lt;UserLocationViewModel&gt;**](UserLocationViewModel.md) |  |  [optional]
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **userName** | **kotlin.String** |  |  [optional]
 **firstName** | **kotlin.String** |  |  [optional]
@@ -23,6 +18,11 @@ Name | Type | Description | Notes
 **timeZone** | **kotlin.String** |  |  [optional]
 **communicationUserId** | **kotlin.String** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**userType** | **kotlin.String** |  |  [optional]
+**languages** | [**kotlin.collections.List&lt;UserLanguageViewModel&gt;**](UserLanguageViewModel.md) |  |  [optional]
+**locations** | [**kotlin.collections.List&lt;UserLocationViewModel&gt;**](UserLocationViewModel.md) |  |  [optional]
+**hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**managerAffiliations** | [**kotlin.collections.List&lt;ManagerAffiliationViewModel&gt;**](ManagerAffiliationViewModel.md) |  |  [optional]
 
 
 

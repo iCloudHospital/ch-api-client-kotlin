@@ -16,12 +16,18 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
+ * @param token 
+ * @param tags 
  * @param appAlert 
  * @param eventAlert 
  * @param noticeAlert 
  */
 
 data class UpdateDeviceCommand (
+    @SerializedName("token")
+    val token: kotlin.String? = null,
+    @SerializedName("tags")
+    val tags: kotlin.collections.List<kotlin.String>? = null,
     @SerializedName("appAlert")
     val appAlert: kotlin.Boolean? = null,
     @SerializedName("eventAlert")

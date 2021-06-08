@@ -4,16 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contact** | **kotlin.String** |  |  [optional]
-**contactNumber** | **kotlin.String** |  |  [optional]
-**nationality** | **kotlin.String** |  |  [optional]
-**questions** | [**kotlin.collections.List&lt;Question&gt;**](Question.md) |  |  [optional]
-**bookings** | [**kotlin.collections.List&lt;Booking&gt;**](Booking.md) |  |  [optional]
-**consultations** | [**kotlin.collections.List&lt;Consultation&gt;**](Consultation.md) |  |  [optional]
-**payments** | [**kotlin.collections.List&lt;Payment&gt;**](Payment.md) |  |  [optional]
-**customers** | [**kotlin.collections.List&lt;Customer&gt;**](Customer.md) |  |  [optional]
-**doctorReviews** | [**kotlin.collections.List&lt;DoctorReview&gt;**](DoctorReview.md) |  |  [optional]
-**hospitalReviews** | [**kotlin.collections.List&lt;HospitalReview&gt;**](HospitalReview.md) |  |  [optional]
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **userName** | **kotlin.String** |  |  [optional]
 **email** | **kotlin.String** |  |  [optional]
@@ -33,6 +23,16 @@ Name | Type | Description | Notes
 **locations** | [**kotlin.collections.List&lt;UserLocation&gt;**](UserLocation.md) |  |  [optional]
 **languages** | [**kotlin.collections.List&lt;UserLanguage&gt;**](UserLanguage.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**contact** | **kotlin.String** |  |  [optional]
+**contactNumber** | **kotlin.String** |  |  [optional]
+**nationality** | **kotlin.String** |  |  [optional]
+**questions** | [**kotlin.collections.List&lt;Question&gt;**](Question.md) |  |  [optional]
+**bookings** | [**kotlin.collections.List&lt;Booking&gt;**](Booking.md) |  |  [optional]
+**consultations** | [**kotlin.collections.List&lt;Consultation&gt;**](Consultation.md) |  |  [optional]
+**payments** | [**kotlin.collections.List&lt;Payment&gt;**](Payment.md) |  |  [optional]
+**customers** | [**kotlin.collections.List&lt;Customer&gt;**](Customer.md) |  |  [optional]
+**doctorReviews** | [**kotlin.collections.List&lt;DoctorReview&gt;**](DoctorReview.md) |  |  [optional]
+**hospitalReviews** | [**kotlin.collections.List&lt;HospitalReview&gt;**](HospitalReview.md) |  |  [optional]
 
 
 

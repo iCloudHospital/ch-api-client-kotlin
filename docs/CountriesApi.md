@@ -65,8 +65,9 @@ Sample request:        GET /api/v1/countries/1
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
-val result : CountryViewModel = webService.apiV1CountriesCountryIdGet(countryId)
+val result : CountryViewModel = webService.apiV1CountriesCountryIdGet(countryId, languageCode)
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ val result : CountryViewModel = webService.apiV1CountriesCountryIdGet(countryId)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 
@@ -131,7 +133,7 @@ Name | Type | Description  | Notes
 
 Get all countries.
 
-Sample request:        GET /api/v1/countries      {          \&quot;countryPageQueryFilter\&quot;: {              \&quot;page\&quot;: 1,              \&quot;limit\&quot;: 20,              \&quot;lastRetrived\&quot;: \&quot;2020-02-05T08:40\&quot;          }      }
+Sample request:        GET /api/v1/countries      {          \&quot;countryPageQueryFilter\&quot;: {              \&quot;page\&quot;: 1,              \&quot;limit\&quot;: 20,              \&quot;lastRetrived\&quot;: \&quot;2020-02-05T08:40\&quot;,              \&quot;languageCode\&quot;: \&quot;en\&quot;          }      }
 
 ### Example
 ```kotlin
@@ -146,12 +148,13 @@ val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
 val createdDate : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
-val result : CountriesViewModel = webService.apiV1CountriesGet(id, name, description, createdDate, page, limit, lastRetrieved, current)
+val result : CountriesViewModel = webService.apiV1CountriesGet(id, name, description, createdDate, languageCode, page, limit, lastRetrieved, current)
 ```
 
 ### Parameters
@@ -162,6 +165,7 @@ Name | Type | Description  | Notes
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
  **createdDate** | **java.time.LocalDateTime**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -231,8 +235,9 @@ Get country by slug.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(CountriesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
-val result : CountryViewModel = webService.apiV1CountriesSlugsSlugGet(slug)
+val result : CountryViewModel = webService.apiV1CountriesSlugsSlugGet(slug, languageCode)
 ```
 
 ### Parameters
@@ -240,6 +245,7 @@ val result : CountryViewModel = webService.apiV1CountriesSlugsSlugGet(slug)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **kotlin.String**|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 

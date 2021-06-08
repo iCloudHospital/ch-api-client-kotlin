@@ -25,8 +25,10 @@ import com.google.gson.annotations.SerializedName
  * @param patientName 
  * @param hospitalId 
  * @param hospitalName 
+ * @param hospitalSlug 
  * @param dealId 
  * @param dealName 
+ * @param dealSlug 
  * @param dealPackageId 
  * @param refundPolicy 
  * @param quantity 
@@ -61,10 +63,14 @@ data class BookingViewModel (
     val hospitalId: java.util.UUID? = null,
     @SerializedName("hospitalName")
     val hospitalName: kotlin.String? = null,
+    @SerializedName("hospitalSlug")
+    val hospitalSlug: kotlin.String? = null,
     @SerializedName("dealId")
     val dealId: java.util.UUID? = null,
     @SerializedName("dealName")
     val dealName: kotlin.String? = null,
+    @SerializedName("dealSlug")
+    val dealSlug: kotlin.String? = null,
     @SerializedName("dealPackageId")
     val dealPackageId: java.util.UUID? = null,
     @SerializedName("refundPolicy")

@@ -4,8 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**body** | **kotlin.String** |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **title** | **kotlin.String** |  |  [optional]
 **userId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
@@ -22,6 +20,8 @@ Name | Type | Description | Notes
 **refundPolicy** | [**RefundPolicy**](RefundPolicy.md) |  |  [optional]
 **quantity** | **kotlin.Int** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**body** | **kotlin.String** |  |  [optional]
+**medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 
 
 

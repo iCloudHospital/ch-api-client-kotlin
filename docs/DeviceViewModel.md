@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **appAlert** | **kotlin.Boolean** |  |  [optional]
 **eventAlert** | **kotlin.Boolean** |  |  [optional]
 **noticeAlert** | **kotlin.Boolean** |  |  [optional]
+**tags** | **kotlin.collections.List&lt;kotlin.String&gt;** |  |  [optional]
 
 
 

@@ -16,8 +16,6 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param managerId 
- * @param managerName 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
@@ -25,13 +23,11 @@ import com.google.gson.annotations.SerializedName
  * @param countryName 
  * @param stateName 
  * @param cityName 
+ * @param managerId 
+ * @param managerName 
  */
 
 data class ManagerAffiliationViewModel (
-    @SerializedName("managerId")
-    val managerId: java.util.UUID? = null,
-    @SerializedName("managerName")
-    val managerName: kotlin.String? = null,
     @SerializedName("hospitalId")
     val hospitalId: java.util.UUID? = null,
     @SerializedName("hospitalName")
@@ -45,6 +41,10 @@ data class ManagerAffiliationViewModel (
     @SerializedName("stateName")
     val stateName: kotlin.String? = null,
     @SerializedName("cityName")
-    val cityName: kotlin.String? = null
+    val cityName: kotlin.String? = null,
+    @SerializedName("managerId")
+    val managerId: java.util.UUID? = null,
+    @SerializedName("managerName")
+    val managerName: kotlin.String? = null
 )
 

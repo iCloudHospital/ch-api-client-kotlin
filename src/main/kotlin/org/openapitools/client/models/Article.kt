@@ -11,6 +11,8 @@
 */
 package org.openapitools.client.models
 
+import org.openapitools.client.models.ArticleContributor
+import org.openapitools.client.models.ArticleSource
 import org.openapitools.client.models.ArticleStatus
 import org.openapitools.client.models.ArticleTag
 import org.openapitools.client.models.AuditableEntity
@@ -35,7 +37,10 @@ import com.google.gson.annotations.SerializedName
  * @param user 
  * @param hospitalId 
  * @param hospital 
+ * @param youtubeUrl 
  * @param articleTags 
+ * @param articleSources 
+ * @param articleContributors 
  * @param medias 
  * @param auditableEntity 
  */
@@ -65,8 +70,14 @@ data class Article (
     val hospitalId: java.util.UUID? = null,
     @SerializedName("hospital")
     val hospital: Hospital? = null,
+    @SerializedName("youtubeUrl")
+    val youtubeUrl: kotlin.String? = null,
     @SerializedName("articleTags")
     val articleTags: kotlin.collections.List<ArticleTag>? = null,
+    @SerializedName("articleSources")
+    val articleSources: kotlin.collections.List<ArticleSource>? = null,
+    @SerializedName("articleContributors")
+    val articleContributors: kotlin.collections.List<ArticleContributor>? = null,
     @SerializedName("medias")
     val medias: kotlin.collections.List<Media>? = null,
     @SerializedName("auditableEntity")

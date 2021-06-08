@@ -55,10 +55,11 @@ interface ServicesApi {
      * @param hospitalId  
      * @param specialtyId  
      * @param serviceId  
+     * @param languageCode  (optional, default to "")
      * @return [Call]<[ServiceViewModel]>
      */
     @GET("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}")
-    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID): Call<ServiceViewModel>
+    fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Call<ServiceViewModel>
 
     /**
      * Update service.
@@ -111,6 +112,7 @@ interface ServicesApi {
      * @param marketingType  (optional)
      * @param procedure  (optional)
      * @param created  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -118,7 +120,7 @@ interface ServicesApi {
      * @return [Call]<[ServicesViewModel]>
      */
     @GET("api/v1/hospitals/services")
-    fun apiV1HospitalsServicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Procedure") procedure: Procedure? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<ServicesViewModel>
+    fun apiV1HospitalsServicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Procedure") procedure: Procedure? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<ServicesViewModel>
 
     /**
      * Get service by slug.
@@ -127,9 +129,10 @@ interface ServicesApi {
      *  - 200: Success
      * 
      * @param slug  
+     * @param languageCode  (optional, default to "")
      * @return [Call]<[ServiceViewModel]>
      */
     @GET("api/v1/hospitals/services/slugs/{slug}")
-    fun apiV1HospitalsServicesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<ServiceViewModel>
+    fun apiV1HospitalsServicesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Call<ServiceViewModel>
 
 }

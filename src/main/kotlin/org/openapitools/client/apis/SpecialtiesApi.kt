@@ -22,6 +22,7 @@ interface SpecialtiesApi {
      * @param description  (optional)
      * @param specialtyTypeId  (optional)
      * @param created  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -29,7 +30,7 @@ interface SpecialtiesApi {
      * @return [Call]<[SpecialtiesViewModel]>
      */
     @GET("api/v1/specialties")
-    fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<SpecialtiesViewModel>
+    fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<SpecialtiesViewModel>
 
     /**
      * Create specialty.
@@ -53,10 +54,11 @@ interface SpecialtiesApi {
      *  - 200: Success
      * 
      * @param slug  
+     * @param languageCode  (optional, default to "")
      * @return [Call]<[SpecialtyViewModel]>
      */
     @GET("api/v1/specialties/slugs/{slug}")
-    fun apiV1SpecialtiesSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<SpecialtyViewModel>
+    fun apiV1SpecialtiesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Call<SpecialtyViewModel>
 
     /**
      * Delete specialty.
@@ -79,10 +81,11 @@ interface SpecialtiesApi {
      *  - 200: Success
      * 
      * @param specialtyId  
+     * @param languageCode  (optional, default to "")
      * @return [Call]<[SpecialtyViewModel]>
      */
     @GET("api/v1/specialties/{specialtyId}")
-    fun apiV1SpecialtiesSpecialtyIdGet(@Path("specialtyId") specialtyId: java.util.UUID): Call<SpecialtyViewModel>
+    fun apiV1SpecialtiesSpecialtyIdGet(@Path("specialtyId") specialtyId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Call<SpecialtyViewModel>
 
     /**
      * Update specialty

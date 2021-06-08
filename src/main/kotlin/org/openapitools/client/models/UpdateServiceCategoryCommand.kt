@@ -17,21 +17,17 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
- * @param order 
- * @param selectedServices 
  * @param id 
  * @param name 
  * @param normalizedName 
  * @param description 
+ * @param order 
  * @param serviceCount 
  * @param services 
+ * @param selectedServices 
  */
 
 data class UpdateServiceCategoryCommand (
-    @SerializedName("order")
-    val order: kotlin.Int? = null,
-    @SerializedName("selectedServices")
-    val selectedServices: kotlin.collections.List<java.util.UUID>? = null,
     @SerializedName("id")
     val id: java.util.UUID? = null,
     @SerializedName("name")
@@ -40,9 +36,13 @@ data class UpdateServiceCategoryCommand (
     val normalizedName: kotlin.String? = null,
     @SerializedName("description")
     val description: kotlin.String? = null,
+    @SerializedName("order")
+    val order: kotlin.Int? = null,
     @SerializedName("serviceCount")
     val serviceCount: kotlin.Int? = null,
     @SerializedName("services")
-    val services: kotlin.collections.List<ServiceItemViewModel>? = null
+    val services: kotlin.collections.List<ServiceItemViewModel>? = null,
+    @SerializedName("selectedServices")
+    val selectedServices: kotlin.collections.List<java.util.UUID>? = null
 )
 

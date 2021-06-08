@@ -31,6 +31,7 @@ interface HospitalsApi {
      * @param serviceId  (optional)
      * @param exceptHospitalId  (optional)
      * @param showHidden  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -38,7 +39,7 @@ interface HospitalsApi {
      * @return [Call]<[HospitalsViewModel]>
      */
     @GET("api/v1/hospitals/current")
-    fun apiV1HospitalsCurrentGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<HospitalsViewModel>
+    fun apiV1HospitalsCurrentGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<HospitalsViewModel>
 
     /**
      * Get all hospitals.
@@ -57,6 +58,7 @@ interface HospitalsApi {
      * @param serviceId  (optional)
      * @param exceptHospitalId  (optional)
      * @param showHidden  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -64,7 +66,7 @@ interface HospitalsApi {
      * @return [Call]<[HospitalsViewModel]>
      */
     @GET("api/v1/hospitals")
-    fun apiV1HospitalsGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<HospitalsViewModel>
+    fun apiV1HospitalsGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<HospitalsViewModel>
 
     /**
      * Delete hospital.
@@ -87,10 +89,11 @@ interface HospitalsApi {
      *  - 200: Success
      * 
      * @param hospitalId  
+     * @param languageCode  (optional, default to "")
      * @return [Call]<[HospitalViewModel]>
      */
     @GET("api/v1/hospitals/{hospitalId}")
-    fun apiV1HospitalsHospitalIdGet(@Path("hospitalId") hospitalId: java.util.UUID): Call<HospitalViewModel>
+    fun apiV1HospitalsHospitalIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Call<HospitalViewModel>
 
     /**
      * Update hospital.
@@ -128,9 +131,10 @@ interface HospitalsApi {
      *  - 200: Success
      * 
      * @param slug  
+     * @param languageCode  (optional, default to "")
      * @return [Call]<[HospitalViewModel]>
      */
     @GET("api/v1/hospitals/slugs/{slug}")
-    fun apiV1HospitalsSlugsSlugGet(@Path("slug") slug: kotlin.String): Call<HospitalViewModel>
+    fun apiV1HospitalsSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Call<HospitalViewModel>
 
 }

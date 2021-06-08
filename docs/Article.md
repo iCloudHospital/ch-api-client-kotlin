@@ -16,7 +16,10 @@ Name | Type | Description | Notes
 **user** | [**User**](User.md) |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospital** | [**Hospital**](Hospital.md) |  |  [optional]
+**youtubeUrl** | **kotlin.String** |  |  [optional]
 **articleTags** | [**kotlin.collections.List&lt;ArticleTag&gt;**](ArticleTag.md) |  |  [optional]
+**articleSources** | [**kotlin.collections.List&lt;ArticleSource&gt;**](ArticleSource.md) |  |  [optional]
+**articleContributors** | [**kotlin.collections.List&lt;ArticleContributor&gt;**](ArticleContributor.md) |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 

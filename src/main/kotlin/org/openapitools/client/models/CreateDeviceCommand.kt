@@ -17,18 +17,24 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * 
+ * @param id 
  * @param token 
  * @param platform 
+ * @param tags 
  * @param appAlert 
  * @param eventAlert 
  * @param noticeAlert 
  */
 
 data class CreateDeviceCommand (
+    @SerializedName("id")
+    val id: java.util.UUID? = null,
     @SerializedName("token")
     val token: kotlin.String? = null,
     @SerializedName("platform")
     val platform: Platform? = null,
+    @SerializedName("tags")
+    val tags: kotlin.collections.List<kotlin.String>? = null,
     @SerializedName("appAlert")
     val appAlert: kotlin.Boolean? = null,
     @SerializedName("eventAlert")

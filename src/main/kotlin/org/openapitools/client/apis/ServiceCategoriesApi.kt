@@ -20,6 +20,7 @@ interface ServiceCategoriesApi {
      * @param id  (optional)
      * @param name  (optional)
      * @param description  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -27,7 +28,7 @@ interface ServiceCategoriesApi {
      * @return [Call]<[ServiceCategoriesViewModel]>
      */
     @GET("api/v1/servicecategories")
-    fun apiV1ServicecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<ServiceCategoriesViewModel>
+    fun apiV1ServicecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Call<ServiceCategoriesViewModel>
 
     /**
      * Create ServiceCategory.
@@ -64,10 +65,11 @@ interface ServiceCategoriesApi {
      *  - 200: Success
      * 
      * @param serviceCategoryId  
+     * @param languageCode  (optional, default to "")
      * @return [Call]<[ServiceCategoryViewModel]>
      */
     @GET("api/v1/servicecategories/{serviceCategoryId}")
-    fun apiV1ServicecategoriesServiceCategoryIdGet(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID): Call<ServiceCategoryViewModel>
+    fun apiV1ServicecategoriesServiceCategoryIdGet(@Path("serviceCategoryId") serviceCategoryId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Call<ServiceCategoryViewModel>
 
     /**
      * Update ServiceCategory

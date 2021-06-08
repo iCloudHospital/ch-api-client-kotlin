@@ -23,6 +23,7 @@ import com.google.gson.annotations.SerializedName
  * @param appAlert 
  * @param eventAlert 
  * @param noticeAlert 
+ * @param tags 
  */
 
 data class DeviceViewModel (
@@ -37,6 +38,8 @@ data class DeviceViewModel (
     @SerializedName("eventAlert")
     val eventAlert: kotlin.Boolean? = null,
     @SerializedName("noticeAlert")
-    val noticeAlert: kotlin.Boolean? = null
+    val noticeAlert: kotlin.Boolean? = null,
+    @SerializedName("tags")
+    val tags: kotlin.collections.List<kotlin.String>? = null
 )
 

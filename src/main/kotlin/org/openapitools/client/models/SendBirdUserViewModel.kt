@@ -18,14 +18,11 @@ import com.google.gson.annotations.SerializedName
  * 
  * @param phoneNumber 
  * @param hasEverLoggedIn 
- * @param sessionTokens 
  * @param userId 
  * @param accessToken 
- * @param preferredLanguages 
  * @param createdAt 
  * @param isActive 
  * @param locale 
- * @param discoveryKeys 
  * @param isOnline 
  * @param lastSeenAt 
  * @param isShadowBlocked 
@@ -38,22 +35,16 @@ data class SendBirdUserViewModel (
     val phoneNumber: kotlin.String? = null,
     @SerializedName("has_ever_logged_in")
     val hasEverLoggedIn: kotlin.Boolean? = null,
-    @SerializedName("session_tokens")
-    val sessionTokens: kotlin.collections.List<kotlin.Any>? = null,
     @SerializedName("user_id")
     val userId: kotlin.String? = null,
     @SerializedName("access_token")
     val accessToken: kotlin.String? = null,
-    @SerializedName("preferred_languages")
-    val preferredLanguages: kotlin.collections.List<kotlin.Any>? = null,
     @SerializedName("created_at")
     val createdAt: kotlin.Long? = null,
     @SerializedName("is_active")
     val isActive: kotlin.Boolean? = null,
     @SerializedName("locale")
     val locale: kotlin.String? = null,
-    @SerializedName("discovery_keys")
-    val discoveryKeys: kotlin.collections.List<kotlin.Any>? = null,
     @SerializedName("is_online")
     val isOnline: kotlin.Boolean? = null,
     @SerializedName("last_seen_at")

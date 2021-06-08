@@ -4,8 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userName** | **kotlin.String** |  |  [optional]
-**email** | **kotlin.String** |  |  [optional]
 **firstName** | **kotlin.String** |  |  [optional]
 **lastName** | **kotlin.String** |  |  [optional]
 **phone** | **kotlin.String** |  |  [optional]
@@ -16,6 +14,8 @@ Name | Type | Description | Notes
 **medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 **languages** | [**kotlin.collections.List&lt;UserLanguageViewModel&gt;**](UserLanguageViewModel.md) |  |  [optional]
 **locations** | [**kotlin.collections.List&lt;UserLocationViewModel&gt;**](UserLocationViewModel.md) |  |  [optional]
+**userName** | **kotlin.String** |  |  [optional]
+**email** | **kotlin.String** |  |  [optional]
 
 
 

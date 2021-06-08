@@ -17,10 +17,16 @@ import com.google.gson.annotations.SerializedName
 /**
  * 
  * @param nickname 
+ * @param firstName 
+ * @param lastName 
  */
 
 data class CreateSendBirdCurrentUserCommand (
     @SerializedName("nickname")
-    val nickname: kotlin.String? = null
+    val nickname: kotlin.String? = null,
+    @SerializedName("firstName")
+    val firstName: kotlin.String? = null,
+    @SerializedName("lastName")
+    val lastName: kotlin.String? = null
 )
 

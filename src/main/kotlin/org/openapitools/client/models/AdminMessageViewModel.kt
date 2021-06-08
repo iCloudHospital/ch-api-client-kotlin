@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName
  * @param customType 
  * @param channelUrl 
  * @param mentionType 
- * @param mentionedUsers 
  * @param isRemoved 
  * @param message 
  * @param data 
@@ -40,8 +39,6 @@ data class AdminMessageViewModel (
     val channelUrl: kotlin.String? = null,
     @SerializedName("mention_type")
     val mentionType: kotlin.String? = null,
-    @SerializedName("mentioned_users")
-    val mentionedUsers: kotlin.collections.List<kotlin.Any>? = null,
     @SerializedName("is_removed")
     val isRemoved: kotlin.Boolean? = null,
     @SerializedName("message")
@@ -51,6 +48,6 @@ data class AdminMessageViewModel (
     @SerializedName("created_at")
     val createdAt: kotlin.Long? = null,
     @SerializedName("updated_at")
-    val updatedAt: kotlin.Int? = null
+    val updatedAt: kotlin.Long? = null
 )
 
