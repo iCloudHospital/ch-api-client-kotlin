@@ -11,35 +11,25 @@
 */
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.FaqItemViewModel
 
 import com.squareup.moshi.Json
 
 /**
  * 
  * @param id 
- * @param parentId 
  * @param name 
  * @param slug 
- * @param description 
- * @param order 
- * @param faqs 
+ * @param parentId 
  */
 
-data class FaqCategoryViewModel (
+data class FaqCategoryBreadCrumbViewModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
-    @Json(name = "parentId")
-    val parentId: java.util.UUID? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
-    val description: kotlin.String? = null,
-    @Json(name = "order")
-    val order: kotlin.Int? = null,
-    @Json(name = "faqs")
-    val faqs: kotlin.collections.List<FaqItemViewModel>? = null
+    @Json(name = "parentId")
+    val parentId: java.util.UUID? = null
 )
 

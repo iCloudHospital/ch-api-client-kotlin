@@ -42,4 +42,17 @@ interface FaqCategoriesApi {
     @GET("api/v1/faqcategories")
     suspend fun apiV1FaqcategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("ParentId") parentId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<FaqCategoriesViewModel>
 
+    /**
+     * Get faqCategory by slug.
+     * 
+     * Responses:
+     *  - 200: Success
+     * 
+     * @param slug  
+     * @param languageCode  (optional, default to "")
+     * @return [FaqCategoryViewModel]
+     */
+    @GET("api/v1/faqcategories/slugs/{slug}")
+    suspend fun apiV1FaqcategoriesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<FaqCategoryViewModel>
+
 }

@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsPost**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentspost) | **POST** api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
 *FaqCategoriesApi* | [**apiV1FaqcategoriesFaqCategoryIdGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesfaqcategoryidget) | **GET** api/v1/faqcategories/{faqCategoryId} | Get faqCategory.
 *FaqCategoriesApi* | [**apiV1FaqcategoriesGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesget) | **GET** api/v1/faqcategories | Get all faqCategory.
+*FaqCategoriesApi* | [**apiV1FaqcategoriesSlugsSlugGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesslugsslugget) | **GET** api/v1/faqcategories/slugs/{slug} | Get faqCategory by slug.
 *FaqsApi* | [**apiV1FaqsFaqIdGet**](docs/FaqsApi.md#apiv1faqsfaqidget) | **GET** api/v1/faqs/{faqId} | Get faq.
 *FaqsApi* | [**apiV1FaqsGet**](docs/FaqsApi.md#apiv1faqsget) | **GET** api/v1/faqs | Get all faq.
 *FaqsApi* | [**apiV1FaqsSlugsSlugGet**](docs/FaqsApi.md#apiv1faqsslugsslugget) | **GET** api/v1/faqs/slugs/{slug} | Get faq by slug.
@@ -380,6 +381,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.EquipmentViewModel](docs/EquipmentViewModel.md)
  - [CloudHospitalApi.models.EquipmentsViewModel](docs/EquipmentsViewModel.md)
  - [CloudHospitalApi.models.FaqCategoriesViewModel](docs/FaqCategoriesViewModel.md)
+ - [CloudHospitalApi.models.FaqCategoryBreadCrumbViewModel](docs/FaqCategoryBreadCrumbViewModel.md)
  - [CloudHospitalApi.models.FaqCategoryItemViewModel](docs/FaqCategoryItemViewModel.md)
  - [CloudHospitalApi.models.FaqCategoryViewModel](docs/FaqCategoryViewModel.md)
  - [CloudHospitalApi.models.FaqItemViewModel](docs/FaqItemViewModel.md)

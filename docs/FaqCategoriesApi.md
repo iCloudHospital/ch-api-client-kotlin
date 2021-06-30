@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV1FaqcategoriesFaqCategoryIdGet**](FaqCategoriesApi.md#apiV1FaqcategoriesFaqCategoryIdGet) | **GET** api/v1/faqcategories/{faqCategoryId} | Get faqCategory.
 [**apiV1FaqcategoriesGet**](FaqCategoriesApi.md#apiV1FaqcategoriesGet) | **GET** api/v1/faqcategories | Get all faqCategory.
+[**apiV1FaqcategoriesSlugsSlugGet**](FaqCategoriesApi.md#apiV1FaqcategoriesSlugsSlugGet) | **GET** api/v1/faqcategories/slugs/{slug} | Get faqCategory by slug.
 
 
 
@@ -92,6 +93,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FaqCategoriesViewModel**](FaqCategoriesViewModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+Get faqCategory by slug.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(FaqCategoriesApi::class.java)
+val slug : kotlin.String = slug_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+
+launch(Dispatchers.IO) {
+    val result : FaqCategoryViewModel = webService.apiV1FaqcategoriesSlugsSlugGet(slug, languageCode)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **slug** | **kotlin.String**|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
+
+### Return type
+
+[**FaqCategoryViewModel**](FaqCategoryViewModel.md)
 
 ### Authorization
 

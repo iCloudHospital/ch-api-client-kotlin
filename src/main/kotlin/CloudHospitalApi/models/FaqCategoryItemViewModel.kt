@@ -20,6 +20,7 @@ import com.squareup.moshi.Json
  * @param id 
  * @param parentId 
  * @param name 
+ * @param slug 
  * @param description 
  * @param order 
  * @param faqs 
@@ -32,6 +33,8 @@ data class FaqCategoryItemViewModel (
     val parentId: java.util.UUID? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
+    @Json(name = "slug")
+    val slug: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "order")

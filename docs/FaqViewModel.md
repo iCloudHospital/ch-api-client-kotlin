@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **content** | **kotlin.String** |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**categories** | [**kotlin.collections.List&lt;FaqCategoryBreadCrumbViewModel&gt;**](FaqCategoryBreadCrumbViewModel.md) |  |  [optional]
 
 
 

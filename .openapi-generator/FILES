@@ -154,6 +154,7 @@ docs/EquipmentsApi.md
 docs/EquipmentsViewModel.md
 docs/FaqCategoriesApi.md
 docs/FaqCategoriesViewModel.md
+docs/FaqCategoryBreadCrumbViewModel.md
 docs/FaqCategoryItemViewModel.md
 docs/FaqCategoryViewModel.md
 docs/FaqItemViewModel.md
@@ -524,6 +525,7 @@ src/main/kotlin/CloudHospitalApi/models/EquipmentItemViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/EquipmentViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/EquipmentsViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoriesViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/FaqCategoryBreadCrumbViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryItemViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqItemViewModel.kt

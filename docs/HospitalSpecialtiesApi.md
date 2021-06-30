@@ -154,6 +154,7 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalSpecialtiesApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val hospitalSlug : kotlin.String = hospitalSlug_example // kotlin.String | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyName : kotlin.String = specialtyName_example // kotlin.String | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
@@ -165,7 +166,7 @@ val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalSpecialtiesViewModel = webService.apiV1HospitalsSpecialtiesGet(hospitalId, hospitalName, specialtyId, specialtyName, specialtyTypeId, marketingType, created, page, limit, lastRetrieved, current)
+    val result : HospitalSpecialtiesViewModel = webService.apiV1HospitalsSpecialtiesGet(hospitalId, hospitalName, hospitalSlug, specialtyId, specialtyName, specialtyTypeId, marketingType, created, page, limit, lastRetrieved, current)
 }
 ```
 
@@ -175,6 +176,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
+ **hospitalSlug** | **kotlin.String**|  | [optional]
  **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
  **specialtyName** | **kotlin.String**|  | [optional]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]

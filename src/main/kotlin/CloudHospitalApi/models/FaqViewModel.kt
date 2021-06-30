@@ -12,6 +12,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.FaqCategoryBreadCrumbViewModel
 import CloudHospitalApi.models.MediaViewModel
 
 import com.squareup.moshi.Json
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * @param content 
  * @param medias 
  * @param auditableEntity 
+ * @param categories 
  */
 
 data class FaqViewModel (
@@ -38,6 +40,8 @@ data class FaqViewModel (
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @Json(name = "categories")
+    val categories: kotlin.collections.List<FaqCategoryBreadCrumbViewModel>? = null
 )
 
