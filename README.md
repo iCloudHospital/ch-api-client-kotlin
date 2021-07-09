@@ -202,12 +202,14 @@ Class | Method | HTTP request | Description
 *QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdGet**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidget) | **GET** api/v1/hospitals/{hospitalId}/questions/{questionId} | Get question.
 *QuestionsApi* | [**apiV1HospitalsHospitalIdQuestionsQuestionIdPut**](docs/QuestionsApi.md#apiv1hospitalshospitalidquestionsquestionidput) | **PUT** api/v1/hospitals/{hospitalId}/questions/{questionId} | Update question.
 *QuestionsApi* | [**apiV1HospitalsQuestionsGet**](docs/QuestionsApi.md#apiv1hospitalsquestionsget) | **GET** api/v1/hospitals/questions | Get all questions.
+*SearchApi* | [**apiV1SearchAutocompleteGet**](docs/SearchApi.md#apiv1searchautocompleteget) | **GET** api/v1/search/autocomplete | 
 *SearchApi* | [**apiV1SearchDealsGet**](docs/SearchApi.md#apiv1searchdealsget) | **GET** api/v1/search/deals | 
 *SearchApi* | [**apiV1SearchDoctorsGet**](docs/SearchApi.md#apiv1searchdoctorsget) | **GET** api/v1/search/doctors | 
 *SearchApi* | [**apiV1SearchGetcountGet**](docs/SearchApi.md#apiv1searchgetcountget) | **GET** api/v1/search/getcount | 
 *SearchApi* | [**apiV1SearchHospitalsGet**](docs/SearchApi.md#apiv1searchhospitalsget) | **GET** api/v1/search/hospitals | 
 *SearchApi* | [**apiV1SearchSpecialtiesGet**](docs/SearchApi.md#apiv1searchspecialtiesget) | **GET** api/v1/search/specialties | 
 *SearchApi* | [**apiV1SearchSpecialtytypesGet**](docs/SearchApi.md#apiv1searchspecialtytypesget) | **GET** api/v1/search/specialtytypes | 
+*SearchApi* | [**apiV1SearchSuggestGet**](docs/SearchApi.md#apiv1searchsuggestget) | **GET** api/v1/search/suggest | 
 *ServiceCategoriesApi* | [**apiV1ServicecategoriesGet**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesget) | **GET** api/v1/servicecategories | Get all ServiceCategories.
 *ServiceCategoriesApi* | [**apiV1ServicecategoriesPost**](docs/ServiceCategoriesApi.md#apiv1servicecategoriespost) | **POST** api/v1/servicecategories | Create ServiceCategory.
 *ServiceCategoriesApi* | [**apiV1ServicecategoriesServiceCategoryIdDelete**](docs/ServiceCategoriesApi.md#apiv1servicecategoriesservicecategoryiddelete) | **DELETE** api/v1/servicecategories/{serviceCategoryId} | Delete ServiceCategory.
@@ -266,8 +268,11 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.ArticleViewModel](docs/ArticleViewModel.md)
  - [CloudHospitalApi.models.ArticlesViewModel](docs/ArticlesViewModel.md)
  - [CloudHospitalApi.models.AuditableEntity](docs/AuditableEntity.md)
+ - [CloudHospitalApi.models.AutocompleteMode](docs/AutocompleteMode.md)
  - [CloudHospitalApi.models.Award](docs/Award.md)
  - [CloudHospitalApi.models.AwardViewModel](docs/AwardViewModel.md)
+ - [CloudHospitalApi.models.AzureSearchServiceAutocompleteModel](docs/AzureSearchServiceAutocompleteModel.md)
+ - [CloudHospitalApi.models.AzureSearchServiceSuggestModel](docs/AzureSearchServiceSuggestModel.md)
  - [CloudHospitalApi.models.AzureSearchViewModel](docs/AzureSearchViewModel.md)
  - [CloudHospitalApi.models.Booking](docs/Booking.md)
  - [CloudHospitalApi.models.BookingItemViewModel](docs/BookingItemViewModel.md)
@@ -335,12 +340,9 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.DealItemViewModel](docs/DealItemViewModel.md)
  - [CloudHospitalApi.models.DealPackage](docs/DealPackage.md)
  - [CloudHospitalApi.models.DealPackageItemViewModel](docs/DealPackageItemViewModel.md)
- - [CloudHospitalApi.models.DealPackageSearchViewModel](docs/DealPackageSearchViewModel.md)
- - [CloudHospitalApi.models.DealPackageService](docs/DealPackageService.md)
- - [CloudHospitalApi.models.DealPackageServiceItemViewModel](docs/DealPackageServiceItemViewModel.md)
  - [CloudHospitalApi.models.DealPackageViewModel](docs/DealPackageViewModel.md)
- - [CloudHospitalApi.models.DealSearchResultViewModel](docs/DealSearchResultViewModel.md)
- - [CloudHospitalApi.models.DealSearchViewModel](docs/DealSearchViewModel.md)
+ - [CloudHospitalApi.models.DealService](docs/DealService.md)
+ - [CloudHospitalApi.models.DealServiceItemViewModel](docs/DealServiceItemViewModel.md)
  - [CloudHospitalApi.models.DealViewModel](docs/DealViewModel.md)
  - [CloudHospitalApi.models.DealsViewModel](docs/DealsViewModel.md)
  - [CloudHospitalApi.models.Department](docs/Department.md)
@@ -370,7 +372,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.DoctorReviewItemViewModel](docs/DoctorReviewItemViewModel.md)
  - [CloudHospitalApi.models.DoctorReviewViewModel](docs/DoctorReviewViewModel.md)
  - [CloudHospitalApi.models.DoctorReviewsViewModel](docs/DoctorReviewsViewModel.md)
- - [CloudHospitalApi.models.DoctorSearchResultViewModel](docs/DoctorSearchResultViewModel.md)
  - [CloudHospitalApi.models.DoctorSpecialty](docs/DoctorSpecialty.md)
  - [CloudHospitalApi.models.DoctorSpecialtyItemViewModel](docs/DoctorSpecialtyItemViewModel.md)
  - [CloudHospitalApi.models.DoctorSpecialtyViewModel](docs/DoctorSpecialtyViewModel.md)
@@ -398,8 +399,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.HospitalReviewItemViewModel](docs/HospitalReviewItemViewModel.md)
  - [CloudHospitalApi.models.HospitalReviewViewModel](docs/HospitalReviewViewModel.md)
  - [CloudHospitalApi.models.HospitalReviewsViewModel](docs/HospitalReviewsViewModel.md)
- - [CloudHospitalApi.models.HospitalSearchItemViewModel](docs/HospitalSearchItemViewModel.md)
- - [CloudHospitalApi.models.HospitalSearchResultViewModel](docs/HospitalSearchResultViewModel.md)
  - [CloudHospitalApi.models.HospitalSpecialtiesViewModel](docs/HospitalSpecialtiesViewModel.md)
  - [CloudHospitalApi.models.HospitalSpecialty](docs/HospitalSpecialty.md)
  - [CloudHospitalApi.models.HospitalSpecialtyItemViewModel](docs/HospitalSpecialtyItemViewModel.md)
@@ -419,7 +418,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.ManagersViewModel](docs/ManagersViewModel.md)
  - [CloudHospitalApi.models.MarketingType](docs/MarketingType.md)
  - [CloudHospitalApi.models.Media](docs/Media.md)
- - [CloudHospitalApi.models.MediaSearchViewModel](docs/MediaSearchViewModel.md)
  - [CloudHospitalApi.models.MediaType](docs/MediaType.md)
  - [CloudHospitalApi.models.MediaViewModel](docs/MediaViewModel.md)
  - [CloudHospitalApi.models.Metadata](docs/Metadata.md)
@@ -455,7 +453,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.RejectConsultationCommand](docs/RejectConsultationCommand.md)
  - [CloudHospitalApi.models.RejectReason](docs/RejectReason.md)
  - [CloudHospitalApi.models.ReviewCategory](docs/ReviewCategory.md)
- - [CloudHospitalApi.models.SearchMetaData](docs/SearchMetaData.md)
  - [CloudHospitalApi.models.SendBirdGroupChannelMember](docs/SendBirdGroupChannelMember.md)
  - [CloudHospitalApi.models.SendBirdGroupChannelViewModel](docs/SendBirdGroupChannelViewModel.md)
  - [CloudHospitalApi.models.SendBirdGroupChannelrOperator](docs/SendBirdGroupChannelrOperator.md)
@@ -465,7 +462,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.ServiceCategoryItemViewModel](docs/ServiceCategoryItemViewModel.md)
  - [CloudHospitalApi.models.ServiceCategoryViewModel](docs/ServiceCategoryViewModel.md)
  - [CloudHospitalApi.models.ServiceItemViewModel](docs/ServiceItemViewModel.md)
- - [CloudHospitalApi.models.ServiceSearchViewModel](docs/ServiceSearchViewModel.md)
  - [CloudHospitalApi.models.ServiceViewModel](docs/ServiceViewModel.md)
  - [CloudHospitalApi.models.ServicesViewModel](docs/ServicesViewModel.md)
  - [CloudHospitalApi.models.SnsHandle](docs/SnsHandle.md)
@@ -474,15 +470,11 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.SpecialtiesViewModel](docs/SpecialtiesViewModel.md)
  - [CloudHospitalApi.models.Specialty](docs/Specialty.md)
  - [CloudHospitalApi.models.SpecialtyItemViewModel](docs/SpecialtyItemViewModel.md)
- - [CloudHospitalApi.models.SpecialtySearchResultViewModel](docs/SpecialtySearchResultViewModel.md)
- - [CloudHospitalApi.models.SpecialtySearchViewModel](docs/SpecialtySearchViewModel.md)
  - [CloudHospitalApi.models.SpecialtyType](docs/SpecialtyType.md)
  - [CloudHospitalApi.models.SpecialtyTypeCategoriesViewModel](docs/SpecialtyTypeCategoriesViewModel.md)
  - [CloudHospitalApi.models.SpecialtyTypeCategoryItemViewModel](docs/SpecialtyTypeCategoryItemViewModel.md)
  - [CloudHospitalApi.models.SpecialtyTypeCategoryViewModel](docs/SpecialtyTypeCategoryViewModel.md)
  - [CloudHospitalApi.models.SpecialtyTypeItemViewModel](docs/SpecialtyTypeItemViewModel.md)
- - [CloudHospitalApi.models.SpecialtyTypeSearchResultViewModel](docs/SpecialtyTypeSearchResultViewModel.md)
- - [CloudHospitalApi.models.SpecialtyTypeSearchViewModel](docs/SpecialtyTypeSearchViewModel.md)
  - [CloudHospitalApi.models.SpecialtyTypeViewModel](docs/SpecialtyTypeViewModel.md)
  - [CloudHospitalApi.models.SpecialtyTypesViewModel](docs/SpecialtyTypesViewModel.md)
  - [CloudHospitalApi.models.SpecialtyViewModel](docs/SpecialtyViewModel.md)

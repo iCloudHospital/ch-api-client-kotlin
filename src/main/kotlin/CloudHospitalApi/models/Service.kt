@@ -12,7 +12,6 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.DealPackageService
 import CloudHospitalApi.models.HospitalSpecialty
 import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.Procedure
@@ -38,7 +37,6 @@ import com.squareup.moshi.Json
  * @param maxPrice 
  * @param priceReuqest 
  * @param order 
- * @param dealPackageServices 
  * @param medias 
  * @param auditableEntity 
  */
@@ -78,8 +76,6 @@ data class Service (
     val priceReuqest: kotlin.Boolean? = null,
     @Json(name = "order")
     val order: kotlin.Int? = null,
-    @Json(name = "dealPackageServices")
-    val dealPackageServices: kotlin.collections.List<DealPackageService>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
     @Json(name = "auditableEntity")

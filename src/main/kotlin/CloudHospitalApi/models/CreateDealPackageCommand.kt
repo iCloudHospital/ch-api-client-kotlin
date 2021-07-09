@@ -12,7 +12,6 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.RefundPolicy
-import CloudHospitalApi.models.ServiceViewModel
 
 import com.squareup.moshi.Json
 
@@ -25,7 +24,6 @@ import com.squareup.moshi.Json
  * @param transfer 
  * @param bonus 
  * @param price 
- * @param dealPackageServices 
  */
 
 data class CreateDealPackageCommand (
@@ -42,8 +40,6 @@ data class CreateDealPackageCommand (
     @Json(name = "bonus")
     val bonus: kotlin.String? = null,
     @Json(name = "price")
-    val price: kotlin.Double? = null,
-    @Json(name = "dealPackageServices")
-    val dealPackageServices: kotlin.collections.List<ServiceViewModel>? = null
+    val price: kotlin.Double? = null
 )
 

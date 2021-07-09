@@ -21,7 +21,6 @@ Name | Type | Description | Notes
 **maxPrice** | **kotlin.Double** |  |  [optional]
 **priceReuqest** | **kotlin.Boolean** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
-**dealPackageServices** | [**kotlin.collections.List&lt;DealPackageService&gt;**](DealPackageService.md) |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 

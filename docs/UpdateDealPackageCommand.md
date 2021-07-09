@@ -13,8 +13,6 @@ Name | Type | Description | Notes
 **transfer** | **kotlin.String** |  |  [optional]
 **bonus** | **kotlin.String** |  |  [optional]
 **price** | **kotlin.Double** |  |  [optional]
-**serviceCount** | **kotlin.Int** |  |  [optional]
-**dealPackageServices** | [**kotlin.collections.List&lt;DealPackageServiceItemViewModel&gt;**](DealPackageServiceItemViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

@@ -157,6 +157,7 @@ val consultationEnabled : kotlin.Boolean = true // kotlin.Boolean |
 val exceptDoctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val exceptDoctorIds : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val fullname : kotlin.String = fullname_example // kotlin.String | 
 val email : kotlin.String = email_example // kotlin.String | 
@@ -169,7 +170,7 @@ val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorsViewModel = webService.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, languageCode, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+    val result : DoctorsViewModel = webService.apiV1DoctorsGet(countryId, hospitalId, marketingType, specialtyId, specialtyTypeId, consultationEnabled, exceptDoctorId, exceptDoctorIds, languageCode, ids, id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
 }
 ```
 
@@ -186,6 +187,7 @@ Name | Type | Description  | Notes
  **exceptDoctorId** | [**java.util.UUID**](.md)|  | [optional]
  **exceptDoctorIds** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
+ **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
  **id** | [**java.util.UUID**](.md)|  | [optional]
  **fullname** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]

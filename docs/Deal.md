@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
 **dealPackages** | [**kotlin.collections.List&lt;DealPackage&gt;**](DealPackage.md) |  |  [optional]
+**dealServices** | [**kotlin.collections.List&lt;DealService&gt;**](DealService.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **transfer** | **kotlin.String** |  |  [optional]
 **bonus** | **kotlin.String** |  |  [optional]
 **price** | **kotlin.Double** |  |  [optional]
-**dealPackageServices** | [**kotlin.collections.List&lt;ServiceViewModel&gt;**](ServiceViewModel.md) |  |  [optional]
 
 
 
