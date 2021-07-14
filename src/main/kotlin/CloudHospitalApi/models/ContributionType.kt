@@ -16,7 +16,7 @@ import com.squareup.moshi.Json
 
 /**
 * 
-* Values: reviewedBy,writtenBy,translatedBy
+* Values: reviewedBy,writtenBy,interviewWith
 */
 
 enum class ContributionType(val value: kotlin.String) {
@@ -28,8 +28,8 @@ enum class ContributionType(val value: kotlin.String) {
     @Json(name = "WrittenBy")
     writtenBy("WrittenBy"),
 
-    @Json(name = "TranslatedBy")
-    translatedBy("TranslatedBy");
+    @Json(name = "InterviewWith")
+    interviewWith("InterviewWith");
 
 
     /**

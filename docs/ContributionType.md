@@ -8,7 +8,7 @@
 
     * `writtenBy` (value: `"WrittenBy"`)
 
-    * `translatedBy` (value: `"TranslatedBy"`)
+    * `interviewWith` (value: `"InterviewWith"`)
 
 
 
