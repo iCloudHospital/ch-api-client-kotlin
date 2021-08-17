@@ -16,7 +16,7 @@ import com.squareup.moshi.Json
 
 /**
 * 
-* Values: welcomeEmail,directMessageSent,bookingNew,bookingUpdated,bookingRejected,bookingApproved,bookingPaid,bookingCanceled,bookingRefundRequested,bookingRefunded,consultationNew,consultationUpdated,consultationRejected,consultationApproved,consultationPaid,consultationCanceled,consultationRefundRequested,consultationRefunded
+* Values: welcomeEmail,directMessageSent,bookingNew,bookingUpdated,bookingRejected,bookingApproved,bookingPaid,bookingCanceled,bookingRefundRequested,bookingRefunded,consultationNew,consultationUpdated,consultationRejected,consultationApproved,consultationPaid,consultationCanceled,consultationRefundRequested,consultationRefunded,consultationReady
 */
 
 enum class NotificationCode(val value: kotlin.String) {
@@ -74,7 +74,10 @@ enum class NotificationCode(val value: kotlin.String) {
     consultationRefundRequested("ConsultationRefundRequested"),
 
     @Json(name = "ConsultationRefunded")
-    consultationRefunded("ConsultationRefunded");
+    consultationRefunded("ConsultationRefunded"),
+
+    @Json(name = "ConsultationReady")
+    consultationReady("ConsultationReady");
 
 
     /**

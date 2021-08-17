@@ -11,25 +11,23 @@
 */
 package CloudHospitalApi.models
 
+import CloudHospitalApi.models.Platform
 
 import com.squareup.moshi.Json
 
 /**
  * 
- * @param token 
- * @param expiresOn 
- * @param communicationUserId 
- * @param gateway 
+ * @param platform 
+ * @param version 
+ * @param committedDate 
  */
 
-data class CommunicationUserTokenModel (
-    @Json(name = "token")
-    val token: kotlin.String? = null,
-    @Json(name = "expiresOn")
-    val expiresOn: java.time.LocalDateTime? = null,
-    @Json(name = "communicationUserId")
-    val communicationUserId: kotlin.String? = null,
-    @Json(name = "gateway")
-    val gateway: kotlin.String? = null
+data class AppVersionViewModel (
+    @Json(name = "platform")
+    val platform: Platform? = null,
+    @Json(name = "version")
+    val version: kotlin.String? = null,
+    @Json(name = "committedDate")
+    val committedDate: java.time.LocalDateTime? = null
 )
 

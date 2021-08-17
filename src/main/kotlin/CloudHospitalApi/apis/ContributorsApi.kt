@@ -30,6 +30,7 @@ interface ContributorsApi {
      * 
      * @param id  (optional)
      * @param languageCode  (optional)
+     * @param interviewerOnly  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -37,7 +38,7 @@ interface ContributorsApi {
      * @return [ContributorsViewModel]
      */
     @GET("api/v1/contributors")
-    suspend fun apiV1ContributorsGet(@Query("Id") id: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ContributorsViewModel>
+    suspend fun apiV1ContributorsGet(@Query("Id") id: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("InterviewerOnly") interviewerOnly: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ContributorsViewModel>
 
     /**
      * Get contributor by slug.

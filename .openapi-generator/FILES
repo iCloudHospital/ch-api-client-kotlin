@@ -5,6 +5,8 @@ docs/Accreditation.md
 docs/AccreditationViewModel.md
 docs/AdminMessageViewModel.md
 docs/AffiliationsApi.md
+docs/AppVersionApi.md
+docs/AppVersionViewModel.md
 docs/ApproveBookingCommand.md
 docs/ApproveConsultationCommand.md
 docs/Article.md
@@ -44,6 +46,7 @@ docs/CacheApi.md
 docs/ChangeEmailCommand.md
 docs/ChangeLog.md
 docs/ChargeStatus.md
+docs/ChatMessagesApi.md
 docs/ChatUsersApi.md
 docs/CheckNotificationsCommand.md
 docs/CommunicationUserTokenModel.md
@@ -151,6 +154,8 @@ docs/EquipmentItemViewModel.md
 docs/EquipmentViewModel.md
 docs/EquipmentsApi.md
 docs/EquipmentsViewModel.md
+docs/ExternalApi.md
+docs/FacebookUserDataDeletionResponseModel.md
 docs/FaqCategoriesApi.md
 docs/FaqCategoriesViewModel.md
 docs/FaqCategoryBreadCrumbViewModel.md
@@ -245,6 +250,7 @@ docs/SendBirdGroupChannelMember.md
 docs/SendBirdGroupChannelViewModel.md
 docs/SendBirdGroupChannelrOperator.md
 docs/SendBirdUserViewModel.md
+docs/SendFileRequestModel.md
 docs/Service.md
 docs/ServiceCategoriesApi.md
 docs/ServiceCategoriesViewModel.md
@@ -324,11 +330,13 @@ gradlew
 gradlew.bat
 settings.gradle
 src/main/kotlin/CloudHospitalApi/apis/AffiliationsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/AppVersionApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ArticlesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/BookingsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CHAdminsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CHManagersApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CacheApi.kt
+src/main/kotlin/CloudHospitalApi/apis/ChatMessagesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ChatUsersApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CommunicationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ConsultationsApi.kt
@@ -343,6 +351,7 @@ src/main/kotlin/CloudHospitalApi/apis/DoctorReviewsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DoctorSpecialtiesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DoctorsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/EquipmentsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/ExternalApi.kt
 src/main/kotlin/CloudHospitalApi/apis/FaqCategoriesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/FaqsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/GroupChannelsApi.kt
@@ -386,6 +395,7 @@ src/main/kotlin/CloudHospitalApi/models/Account.kt
 src/main/kotlin/CloudHospitalApi/models/Accreditation.kt
 src/main/kotlin/CloudHospitalApi/models/AccreditationViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/AdminMessageViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/AppVersionViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/ApproveBookingCommand.kt
 src/main/kotlin/CloudHospitalApi/models/ApproveConsultationCommand.kt
 src/main/kotlin/CloudHospitalApi/models/Article.kt
@@ -513,6 +523,7 @@ src/main/kotlin/CloudHospitalApi/models/Equipment.kt
 src/main/kotlin/CloudHospitalApi/models/EquipmentItemViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/EquipmentViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/EquipmentsViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/FacebookUserDataDeletionResponseModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoriesViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryBreadCrumbViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryItemViewModel.kt
@@ -589,6 +600,7 @@ src/main/kotlin/CloudHospitalApi/models/SendBirdGroupChannelMember.kt
 src/main/kotlin/CloudHospitalApi/models/SendBirdGroupChannelViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/SendBirdGroupChannelrOperator.kt
 src/main/kotlin/CloudHospitalApi/models/SendBirdUserViewModel.kt
+src/main/kotlin/CloudHospitalApi/models/SendFileRequestModel.kt
 src/main/kotlin/CloudHospitalApi/models/Service.kt
 src/main/kotlin/CloudHospitalApi/models/ServiceCategoriesViewModel.kt
 src/main/kotlin/CloudHospitalApi/models/ServiceCategoryItemViewModel.kt

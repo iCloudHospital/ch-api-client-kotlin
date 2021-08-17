@@ -16,20 +16,20 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param token 
- * @param expiresOn 
- * @param communicationUserId 
- * @param gateway 
+ * @param userId 
+ * @param isLockout 
+ * @param provider 
+ * @param providerKey 
  */
 
-data class CommunicationUserTokenModel (
-    @Json(name = "token")
-    val token: kotlin.String? = null,
-    @Json(name = "expiresOn")
-    val expiresOn: java.time.LocalDateTime? = null,
-    @Json(name = "communicationUserId")
-    val communicationUserId: kotlin.String? = null,
-    @Json(name = "gateway")
-    val gateway: kotlin.String? = null
+data class FacebookUserDataDeletionResponseModel (
+    @Json(name = "userId")
+    val userId: kotlin.String? = null,
+    @Json(name = "isLockout")
+    val isLockout: kotlin.Boolean? = null,
+    @Json(name = "provider")
+    val provider: kotlin.String? = null,
+    @Json(name = "providerKey")
+    val providerKey: kotlin.String? = null
 )
 

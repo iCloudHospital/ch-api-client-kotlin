@@ -40,5 +40,7 @@
 
     * `consultationRefunded` (value: `"ConsultationRefunded"`)
 
+    * `consultationReady` (value: `"ConsultationReady"`)
+
 
 

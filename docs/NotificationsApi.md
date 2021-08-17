@@ -59,13 +59,14 @@ Get all notifications.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(NotificationsApi::class.java)
 val notificationCode : NotificationCode =  // NotificationCode | 
+val unreadCountOnly : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : NotificationsViewModel = webService.apiV1NotificationsGet(notificationCode, page, limit, lastRetrieved, current)
+    val result : NotificationsViewModel = webService.apiV1NotificationsGet(notificationCode, unreadCountOnly, page, limit, lastRetrieved, current)
 }
 ```
 
@@ -73,7 +74,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notificationCode** | [**NotificationCode**](.md)|  | [optional] [enum: WelcomeEmail, DirectMessageSent, BookingNew, BookingUpdated, BookingRejected, BookingApproved, BookingPaid, BookingCanceled, BookingRefundRequested, BookingRefunded, ConsultationNew, ConsultationUpdated, ConsultationRejected, ConsultationApproved, ConsultationPaid, ConsultationCanceled, ConsultationRefundRequested, ConsultationRefunded]
+ **notificationCode** | [**NotificationCode**](.md)|  | [optional] [enum: WelcomeEmail, DirectMessageSent, BookingNew, BookingUpdated, BookingRejected, BookingApproved, BookingPaid, BookingCanceled, BookingRefundRequested, BookingRefunded, ConsultationNew, ConsultationUpdated, ConsultationRejected, ConsultationApproved, ConsultationPaid, ConsultationCanceled, ConsultationRefundRequested, ConsultationRefunded, ConsultationReady]
+ **unreadCountOnly** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]

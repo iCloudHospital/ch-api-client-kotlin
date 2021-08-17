@@ -16,20 +16,17 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param token 
- * @param expiresOn 
- * @param communicationUserId 
- * @param gateway 
+ * @param threadId 
+ * @param senderId 
+ * @param files 
  */
 
-data class CommunicationUserTokenModel (
-    @Json(name = "token")
-    val token: kotlin.String? = null,
-    @Json(name = "expiresOn")
-    val expiresOn: java.time.LocalDateTime? = null,
-    @Json(name = "communicationUserId")
-    val communicationUserId: kotlin.String? = null,
-    @Json(name = "gateway")
-    val gateway: kotlin.String? = null
+data class SendFileRequestModel (
+    @Json(name = "threadId")
+    val threadId: kotlin.String? = null,
+    @Json(name = "senderId")
+    val senderId: kotlin.String? = null,
+    @Json(name = "files")
+    val files: kotlin.collections.List<java.io.File>? = null
 )
 

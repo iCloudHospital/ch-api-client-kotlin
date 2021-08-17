@@ -39,6 +39,7 @@ Class | Method | HTTP request | Description
 *AffiliationsApi* | [**apiV1HospitalsHospitalIdDoctorsDoctorIdPost**](docs/AffiliationsApi.md#apiv1hospitalshospitaliddoctorsdoctoridpost) | **POST** api/v1/hospitals/{hospitalId}/doctors/{doctorId} | Link a doctor to a hospital.
 *AffiliationsApi* | [**apiV1HospitalsHospitalIdManagersManagerIdDelete**](docs/AffiliationsApi.md#apiv1hospitalshospitalidmanagersmanageriddelete) | **DELETE** api/v1/hospitals/{hospitalId}/managers/{managerId} | Remove link between the manager and the hospital.
 *AffiliationsApi* | [**apiV1HospitalsHospitalIdManagersManagerIdPost**](docs/AffiliationsApi.md#apiv1hospitalshospitalidmanagersmanageridpost) | **POST** api/v1/hospitals/{hospitalId}/managers/{managerId} | Link a manager to a hospital.
+*AppVersionApi* | [**apiV1AppversionPlatformGet**](docs/AppVersionApi.md#apiv1appversionplatformget) | **GET** api/v1/appversion/{platform} | 
 *ArticlesApi* | [**apiV1HospitalsArticlesGet**](docs/ArticlesApi.md#apiv1hospitalsarticlesget) | **GET** api/v1/hospitals/articles | Get all articles.
 *ArticlesApi* | [**apiV1HospitalsArticlesSlugsSlugGet**](docs/ArticlesApi.md#apiv1hospitalsarticlesslugsslugget) | **GET** api/v1/hospitals/articles/slugs/{slug} | Get article by slug.
 *ArticlesApi* | [**apiV1HospitalsHospitalIdArticlesArticleIdDelete**](docs/ArticlesApi.md#apiv1hospitalshospitalidarticlesarticleiddelete) | **DELETE** api/v1/hospitals/{hospitalId}/articles/{articleId} | Delete article.
@@ -66,6 +67,7 @@ Class | Method | HTTP request | Description
 *CHManagersApi* | [**apiV1ChmanagersGet**](docs/CHManagersApi.md#apiv1chmanagersget) | **GET** api/v1/chmanagers | Get cloud hospital managers.
 *CHManagersApi* | [**apiV1ChmanagersPost**](docs/CHManagersApi.md#apiv1chmanagerspost) | **POST** api/v1/chmanagers | Create cloud hospital manager.
 *CacheApi* | [**apiV1CacheKeyDelete**](docs/CacheApi.md#apiv1cachekeydelete) | **DELETE** api/v1/cache/{key} | Remove cache with specified key
+*ChatMessagesApi* | [**apiV1ChatmessagesFilesPost**](docs/ChatMessagesApi.md#apiv1chatmessagesfilespost) | **POST** api/v1/chatmessages/files | 
 *ChatUsersApi* | [**apiV1ChatusersCurrentGet**](docs/ChatUsersApi.md#apiv1chatuserscurrentget) | **GET** api/v1/chatusers/current | 
 *ChatUsersApi* | [**apiV1ChatusersCurrentPost**](docs/ChatUsersApi.md#apiv1chatuserscurrentpost) | **POST** api/v1/chatusers/current | 
 *ChatUsersApi* | [**apiV1ChatusersDelete**](docs/ChatUsersApi.md#apiv1chatusersdelete) | **DELETE** api/v1/chatusers | 
@@ -136,6 +138,7 @@ Class | Method | HTTP request | Description
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdGet**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidget) | **GET** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Get equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsEquipmentIdPut**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentsequipmentidput) | **PUT** api/v1/hospitals/{hospitalId}/equipments/{equipmentId} | Update equipment.
 *EquipmentsApi* | [**apiV1HospitalsHospitalIdEquipmentsPost**](docs/EquipmentsApi.md#apiv1hospitalshospitalidequipmentspost) | **POST** api/v1/hospitals/{hospitalId}/equipments | Create an equipment and add to a hospital.
+*ExternalApi* | [**apiV1ExternalFacebookDeleteuserdataPost**](docs/ExternalApi.md#apiv1externalfacebookdeleteuserdatapost) | **POST** api/v1/external/facebook/deleteuserdata | Callback for Facebook user data deletion
 *FaqCategoriesApi* | [**apiV1FaqcategoriesFaqCategoryIdGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesfaqcategoryidget) | **GET** api/v1/faqcategories/{faqCategoryId} | Get faqCategory.
 *FaqCategoriesApi* | [**apiV1FaqcategoriesGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesget) | **GET** api/v1/faqcategories | Get all faqCategory.
 *FaqCategoriesApi* | [**apiV1FaqcategoriesSlugsSlugGet**](docs/FaqCategoriesApi.md#apiv1faqcategoriesslugsslugget) | **GET** api/v1/faqcategories/slugs/{slug} | Get faqCategory by slug.
@@ -254,6 +257,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.Accreditation](docs/Accreditation.md)
  - [CloudHospitalApi.models.AccreditationViewModel](docs/AccreditationViewModel.md)
  - [CloudHospitalApi.models.AdminMessageViewModel](docs/AdminMessageViewModel.md)
+ - [CloudHospitalApi.models.AppVersionViewModel](docs/AppVersionViewModel.md)
  - [CloudHospitalApi.models.ApproveBookingCommand](docs/ApproveBookingCommand.md)
  - [CloudHospitalApi.models.ApproveConsultationCommand](docs/ApproveConsultationCommand.md)
  - [CloudHospitalApi.models.Article](docs/Article.md)
@@ -381,6 +385,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.EquipmentItemViewModel](docs/EquipmentItemViewModel.md)
  - [CloudHospitalApi.models.EquipmentViewModel](docs/EquipmentViewModel.md)
  - [CloudHospitalApi.models.EquipmentsViewModel](docs/EquipmentsViewModel.md)
+ - [CloudHospitalApi.models.FacebookUserDataDeletionResponseModel](docs/FacebookUserDataDeletionResponseModel.md)
  - [CloudHospitalApi.models.FaqCategoriesViewModel](docs/FaqCategoriesViewModel.md)
  - [CloudHospitalApi.models.FaqCategoryBreadCrumbViewModel](docs/FaqCategoryBreadCrumbViewModel.md)
  - [CloudHospitalApi.models.FaqCategoryItemViewModel](docs/FaqCategoryItemViewModel.md)
@@ -457,6 +462,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.SendBirdGroupChannelViewModel](docs/SendBirdGroupChannelViewModel.md)
  - [CloudHospitalApi.models.SendBirdGroupChannelrOperator](docs/SendBirdGroupChannelrOperator.md)
  - [CloudHospitalApi.models.SendBirdUserViewModel](docs/SendBirdUserViewModel.md)
+ - [CloudHospitalApi.models.SendFileRequestModel](docs/SendFileRequestModel.md)
  - [CloudHospitalApi.models.Service](docs/Service.md)
  - [CloudHospitalApi.models.ServiceCategoriesViewModel](docs/ServiceCategoriesViewModel.md)
  - [CloudHospitalApi.models.ServiceCategoryItemViewModel](docs/ServiceCategoryItemViewModel.md)
