@@ -18,15 +18,18 @@ import com.squareup.moshi.Json
 /**
  * 
  * @param platform 
- * @param version 
+ * @param latestVersion 
+ * @param minimumVersion 
  * @param committedDate 
  */
 
 data class AppVersionViewModel (
     @Json(name = "platform")
     val platform: Platform? = null,
-    @Json(name = "version")
-    val version: kotlin.String? = null,
+    @Json(name = "latestVersion")
+    val latestVersion: kotlin.String? = null,
+    @Json(name = "minimumVersion")
+    val minimumVersion: kotlin.String? = null,
     @Json(name = "committedDate")
     val committedDate: java.time.LocalDateTime? = null
 )
