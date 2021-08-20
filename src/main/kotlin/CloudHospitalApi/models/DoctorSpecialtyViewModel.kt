@@ -18,6 +18,7 @@ import com.squareup.moshi.Json
  * 
  * @param specialtyId 
  * @param specialtyName 
+ * @param specialtySlug 
  * @param specialtyTypeId 
  * @param specialtyTypeName 
  * @param order 
@@ -30,6 +31,8 @@ data class DoctorSpecialtyViewModel (
     val specialtyId: java.util.UUID? = null,
     @Json(name = "specialtyName")
     val specialtyName: kotlin.String? = null,
+    @Json(name = "specialtySlug")
+    val specialtySlug: kotlin.String? = null,
     @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
     @Json(name = "specialtyTypeName")
