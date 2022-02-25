@@ -36,6 +36,7 @@ import com.squareup.moshi.Json
  * @param dateOfBirth 
  * @param timeZone 
  * @param communicationUserId 
+ * @param fullName 
  * @param devices 
  * @param articles 
  * @param questionComments 
@@ -71,6 +72,8 @@ data class User (
     val timeZone: kotlin.String? = null,
     @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null,
+    @Json(name = "fullName")
+    val fullName: kotlin.String? = null,
     @Json(name = "devices")
     val devices: kotlin.collections.List<Device>? = null,
     @Json(name = "articles")

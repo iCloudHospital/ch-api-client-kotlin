@@ -36,6 +36,8 @@ Name | Type | Description | Notes
 **articles** | [**kotlin.collections.List&lt;Article&gt;**](Article.md) |  |  [optional]
 **awards** | [**kotlin.collections.List&lt;AwardViewModel&gt;**](AwardViewModel.md) |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlViewModel&gt;**](LocalizedUrlViewModel.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

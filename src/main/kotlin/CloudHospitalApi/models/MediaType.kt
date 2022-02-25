@@ -16,7 +16,7 @@ import com.squareup.moshi.Json
 
 /**
 * 
-* Values: photo,video,youtube,document
+* Values: photo,video,youtube,document,frontal,diagonal,side
 */
 
 enum class MediaType(val value: kotlin.String) {
@@ -32,7 +32,16 @@ enum class MediaType(val value: kotlin.String) {
     youtube("Youtube"),
 
     @Json(name = "Document")
-    document("Document");
+    document("Document"),
+
+    @Json(name = "Frontal")
+    frontal("Frontal"),
+
+    @Json(name = "Diagonal")
+    diagonal("Diagonal"),
+
+    @Json(name = "Side")
+    side("Side");
 
 
     /**

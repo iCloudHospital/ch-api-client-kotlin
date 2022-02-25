@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **dateOfBirth** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **timeZone** | **kotlin.String** |  |  [optional]
 **communicationUserId** | **kotlin.String** |  |  [optional]
+**fullName** | **kotlin.String** |  |  [optional] [readonly]
 **devices** | [**kotlin.collections.List&lt;Device&gt;**](Device.md) |  |  [optional]
 **articles** | [**kotlin.collections.List&lt;Article&gt;**](Article.md) |  |  [optional]
 **questionComments** | [**kotlin.collections.List&lt;QuestionComment&gt;**](QuestionComment.md) |  |  [optional]

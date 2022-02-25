@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **message** | **kotlin.String** |  |  [optional]
 **createdAt** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **isChecked** | **kotlin.Boolean** |  |  [optional]
+**isDeleted** | **kotlin.Boolean** |  |  [optional]
 
 
 

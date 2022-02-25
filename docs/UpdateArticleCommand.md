@@ -13,9 +13,11 @@ Name | Type | Description | Notes
 **hospitalSlug** | **kotlin.String** |  |  [optional]
 **youtubeUrl** | **kotlin.String** |  |  [optional]
 **articleTags** | [**kotlin.collections.List&lt;ArticleTagItemViewModel&gt;**](ArticleTagItemViewModel.md) |  |  [optional]
-**articleSources** | [**kotlin.collections.List&lt;ArticleSourceItemViewModel&gt;**](ArticleSourceItemViewModel.md) |  |  [optional]
 **articleContributors** | [**kotlin.collections.List&lt;ArticleContributorItemViewModel&gt;**](ArticleContributorItemViewModel.md) |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md) |  |  [optional]
+**sources** | [**kotlin.collections.List&lt;SourceViewModel&gt;**](SourceViewModel.md) |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlViewModel&gt;**](LocalizedUrlViewModel.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

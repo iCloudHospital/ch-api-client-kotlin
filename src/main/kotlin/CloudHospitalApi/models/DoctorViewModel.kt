@@ -21,6 +21,7 @@ import CloudHospitalApi.models.DoctorReviewItemViewModel
 import CloudHospitalApi.models.DoctorSpecialtyItemViewModel
 import CloudHospitalApi.models.Gender
 import CloudHospitalApi.models.HospitalAffiliationViewModel
+import CloudHospitalApi.models.LocalizedUrlViewModel
 import CloudHospitalApi.models.MediaViewModel
 import CloudHospitalApi.models.UserLanguageViewModel
 import CloudHospitalApi.models.UserLocationViewModel
@@ -61,6 +62,8 @@ import com.squareup.moshi.Json
  * @param articles 
  * @param awards 
  * @param medias 
+ * @param localizedUrls 
+ * @param confirmed 
  */
 
 data class DoctorViewModel (
@@ -127,6 +130,10 @@ data class DoctorViewModel (
     @Json(name = "awards")
     val awards: kotlin.collections.List<AwardViewModel>? = null,
     @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaViewModel>? = null
+    val medias: kotlin.collections.List<MediaViewModel>? = null,
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlViewModel>? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

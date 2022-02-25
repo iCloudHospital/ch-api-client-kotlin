@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **specialtyTypeId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **specialtyTypeName** | **kotlin.String** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlViewModel&gt;**](LocalizedUrlViewModel.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

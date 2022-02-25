@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **consultationType** | [**ConsultationType**](ConsultationType.md) |  |  [optional]
 **patientId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **patientName** | **kotlin.String** |  |  [optional]
+**patientPhoto** | **kotlin.String** |  |  [optional]
 **communicationUserId** | **kotlin.String** |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional]
@@ -44,6 +45,7 @@ Name | Type | Description | Notes
 **rejectReason** | [**RejectReason**](RejectReason.md) |  |  [optional]
 **isOpen** | **kotlin.Boolean** |  |  [optional]
 **paymentId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**completionRate** | **kotlin.Int** |  |  [optional]
 
 
 

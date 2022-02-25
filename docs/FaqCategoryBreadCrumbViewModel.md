@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional]
 **slug** | **kotlin.String** |  |  [optional]
 **parentId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

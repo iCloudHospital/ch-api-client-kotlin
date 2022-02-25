@@ -35,6 +35,8 @@ Name | Type | Description | Notes
 **evaluations** | [**kotlin.collections.List&lt;HospitalEvaluationViewModel&gt;**](HospitalEvaluationViewModel.md) |  |  [optional]
 **location** | [**LocationViewModel**](LocationViewModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlViewModel&gt;**](LocalizedUrlViewModel.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

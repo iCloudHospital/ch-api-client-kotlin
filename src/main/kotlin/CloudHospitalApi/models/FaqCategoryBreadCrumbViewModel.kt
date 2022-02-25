@@ -20,6 +20,7 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param parentId 
+ * @param confirmed 
  */
 
 data class FaqCategoryBreadCrumbViewModel (
@@ -30,6 +31,8 @@ data class FaqCategoryBreadCrumbViewModel (
     @Json(name = "slug")
     val slug: kotlin.String? = null,
     @Json(name = "parentId")
-    val parentId: java.util.UUID? = null
+    val parentId: java.util.UUID? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

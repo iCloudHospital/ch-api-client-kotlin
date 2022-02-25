@@ -12,5 +12,11 @@
 
     * `document` (value: `"Document"`)
 
+    * `frontal` (value: `"Frontal"`)
+
+    * `diagonal` (value: `"Diagonal"`)
+
+    * `side` (value: `"Side"`)
+
 
 

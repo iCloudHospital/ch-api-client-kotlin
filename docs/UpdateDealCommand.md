@@ -16,11 +16,10 @@ Name | Type | Description | Notes
 **hospitalLocationState** | **kotlin.String** |  |  [optional]
 **hospitalConsultationEnabled** | **kotlin.Boolean** |  |  [optional]
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
-**dealPackages** | [**kotlin.collections.List&lt;DealPackageItemViewModel&gt;**](DealPackageItemViewModel.md) |  |  [optional]
-**dealServices** | [**kotlin.collections.List&lt;DealServiceItemViewModel&gt;**](DealServiceItemViewModel.md) |  |  [optional]
-**auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
+**dealPackages** | [**kotlin.collections.List&lt;DealPackageItemViewModel&gt;**](DealPackageItemViewModel.md) |  |  [optional]
+**dealServices** | [**kotlin.collections.List&lt;DealServiceItemViewModel&gt;**](DealServiceItemViewModel.md) |  |  [optional]
 
 
 

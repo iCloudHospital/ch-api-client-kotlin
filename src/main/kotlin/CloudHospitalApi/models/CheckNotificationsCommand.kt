@@ -17,13 +17,13 @@ import com.squareup.moshi.Json
 /**
  * 
  * @param notificationId 
- * @param delete 
+ * @param isDelete 
  */
 
 data class CheckNotificationsCommand (
     @Json(name = "notificationId")
     val notificationId: java.util.UUID? = null,
-    @Json(name = "delete")
-    val delete: kotlin.Boolean? = null
+    @Json(name = "isDelete")
+    val isDelete: kotlin.Boolean? = null
 )
 

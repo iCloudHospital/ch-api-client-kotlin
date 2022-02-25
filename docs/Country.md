@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional]
 **normalizedName** | **kotlin.String** |  |  [optional]
 **logo** | **kotlin.String** |  |  [optional]
-**slug** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
 **content** | **kotlin.String** |  |  [optional]
 **hospitals** | [**kotlin.collections.List&lt;Hospital&gt;**](Hospital.md) |  |  [optional]

@@ -41,10 +41,9 @@ val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalsViewModel = webService.apiV1HospitalsCurrentGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, page, limit, lastRetrieved, current)
+    val result : HospitalsViewModel = webService.apiV1HospitalsCurrentGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, page, limit, lastRetrieved)
 }
 ```
 
@@ -68,7 +67,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -113,10 +111,9 @@ val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalsViewModel = webService.apiV1HospitalsGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, page, limit, lastRetrieved, current)
+    val result : HospitalsViewModel = webService.apiV1HospitalsGet(id, name, description, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, page, limit, lastRetrieved)
 }
 ```
 
@@ -140,7 +137,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 

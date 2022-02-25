@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **hospitalSpecialtyCount** | **kotlin.Int** |  |  [optional]
 **serviceCount** | **kotlin.Int** |  |  [optional]
 **created** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlViewModel&gt;**](LocalizedUrlViewModel.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

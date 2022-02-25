@@ -5,6 +5,8 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV1PatientsGet**](PatientsApi.md#apiV1PatientsGet) | **GET** api/v1/patients | Get all patients.
+[**apiV1PatientsHealthprofileGet**](PatientsApi.md#apiV1PatientsHealthprofileGet) | **GET** api/v1/patients/healthprofile | Get health profile for patient.
+[**apiV1PatientsHealthprofilePut**](PatientsApi.md#apiV1PatientsHealthprofilePut) | **PUT** api/v1/patients/healthprofile | Update health profile for patient.
 [**apiV1PatientsPatientIdDelete**](PatientsApi.md#apiV1PatientsPatientIdDelete) | **DELETE** api/v1/patients/{patientId} | Delete patient.
 [**apiV1PatientsPatientIdGet**](PatientsApi.md#apiV1PatientsPatientIdGet) | **GET** api/v1/patients/{patientId} | Get patient.
 [**apiV1PatientsPatientIdPut**](PatientsApi.md#apiV1PatientsPatientIdPut) | **PUT** api/v1/patients/{patientId} | Update patient.
@@ -34,10 +36,9 @@ val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.L
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : PatientsViewModel = webService.apiV1PatientsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved, current)
+    val result : PatientsViewModel = webService.apiV1PatientsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved)
 }
 ```
 
@@ -54,7 +55,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -67,6 +67,78 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+Get health profile for patient.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(PatientsApi::class.java)
+
+launch(Dispatchers.IO) {
+    val result : HealthProfileViewModel = webService.apiV1PatientsHealthprofileGet()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**HealthProfileViewModel**](HealthProfileViewModel.md)
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+Update health profile for patient.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(PatientsApi::class.java)
+val updateHealthProfileCommand : UpdateHealthProfileCommand =  // UpdateHealthProfileCommand | 
+
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.apiV1PatientsHealthprofilePut(updateHealthProfileCommand)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateHealthProfileCommand** | [**UpdateHealthProfileCommand**](UpdateHealthProfileCommand.md)|  | [optional]
+
+### Return type
+
+**kotlin.Boolean**
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 

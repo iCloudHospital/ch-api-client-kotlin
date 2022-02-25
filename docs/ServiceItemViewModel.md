@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **priceReuqest** | **kotlin.Boolean** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

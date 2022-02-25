@@ -27,11 +27,10 @@ interface SpecialtiesApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [SpecialtiesViewModel]
      */
     @GET("api/v1/specialties")
-    suspend fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtiesViewModel>
+    suspend fun apiV1SpecialtiesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtiesViewModel>
 
     /**
      * Create specialty.
@@ -41,12 +40,11 @@ interface SpecialtiesApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @param specialtyTypeId  (optional)
      * @param createSpecialtyCommand  (optional)
      * @return [java.util.UUID]
      */
     @POST("api/v1/specialties")
-    suspend fun apiV1SpecialtiesPost(@Query("specialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Body createSpecialtyCommand: CreateSpecialtyCommand? = null): Response<java.util.UUID>
+    suspend fun apiV1SpecialtiesPost(@Body createSpecialtyCommand: CreateSpecialtyCommand? = null): Response<java.util.UUID>
 
     /**
      * Get specialty by slug.

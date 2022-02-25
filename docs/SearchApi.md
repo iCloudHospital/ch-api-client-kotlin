@@ -26,15 +26,15 @@ Method | HTTP request | Description
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SearchApi::class.java)
-val mode : AutocompleteMode =  // AutocompleteMode | 
 val keyword : kotlin.String = keyword_example // kotlin.String | 
+val mode : AutocompleteMode =  // AutocompleteMode | 
 val fuzzy : kotlin.Boolean = true // kotlin.Boolean | 
 val highlights : kotlin.Boolean = true // kotlin.Boolean | 
 val size : kotlin.Int = 56 // kotlin.Int | 
 val minimumCoverage : kotlin.Double = 1.2 // kotlin.Double | 
 
 launch(Dispatchers.IO) {
-    val result : AzureSearchServiceAutocompleteModel = webService.apiV1SearchAutocompleteGet(mode, keyword, fuzzy, highlights, size, minimumCoverage)
+    val result : AzureSearchServiceAutocompleteModel = webService.apiV1SearchAutocompleteGet(keyword, mode, fuzzy, highlights, size, minimumCoverage)
 }
 ```
 
@@ -42,8 +42,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **keyword** | **kotlin.String**|  |
  **mode** | [**AutocompleteMode**](.md)|  | [optional] [enum: OneTerm, TwoTerms, OneTermWithContext]
- **keyword** | **kotlin.String**|  | [optional]
  **fuzzy** | **kotlin.Boolean**|  | [optional]
  **highlights** | **kotlin.Boolean**|  | [optional]
  **size** | **kotlin.Int**|  | [optional]
@@ -83,10 +83,9 @@ val languageCode : kotlin.String = languageCode_example // kotlin.String |
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : DealsViewModel = webService.apiV1SearchDealsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+    val result : DealsViewModel = webService.apiV1SearchDealsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -103,7 +102,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -139,10 +137,9 @@ val languageCode : kotlin.String = languageCode_example // kotlin.String |
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorsViewModel = webService.apiV1SearchDoctorsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+    val result : DoctorsViewModel = webService.apiV1SearchDoctorsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -159,7 +156,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -195,10 +191,9 @@ val languageCode : kotlin.String = languageCode_example // kotlin.String |
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : AzureSearchViewModel = webService.apiV1SearchGetcountGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+    val result : AzureSearchViewModel = webService.apiV1SearchGetcountGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -215,7 +210,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -251,10 +245,9 @@ val languageCode : kotlin.String = languageCode_example // kotlin.String |
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalsViewModel = webService.apiV1SearchHospitalsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+    val result : HospitalsViewModel = webService.apiV1SearchHospitalsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -271,7 +264,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -307,10 +299,9 @@ val languageCode : kotlin.String = languageCode_example // kotlin.String |
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtiesViewModel = webService.apiV1SearchSpecialtiesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+    val result : SpecialtiesViewModel = webService.apiV1SearchSpecialtiesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -327,7 +318,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -363,10 +353,9 @@ val languageCode : kotlin.String = languageCode_example // kotlin.String |
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtyTypesViewModel = webService.apiV1SearchSpecialtytypesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved, current)
+    val result : SpecialtyTypesViewModel = webService.apiV1SearchSpecialtytypesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -383,7 +372,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -424,7 +412,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyword** | **kotlin.String**|  | [optional]
+ **keyword** | **kotlin.String**|  |
  **fuzzy** | **kotlin.Boolean**|  | [optional]
  **highlights** | **kotlin.Boolean**|  | [optional]
  **size** | **kotlin.Int**|  | [optional]

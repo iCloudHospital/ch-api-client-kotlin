@@ -204,10 +204,9 @@ val questionStatus : QuestionStatus =  // QuestionStatus |
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : QuestionsViewModel = webService.apiV1HospitalsQuestionsGet(id, title, hospitalId, patientId, questionType, questionStatus, page, limit, lastRetrieved, current)
+    val result : QuestionsViewModel = webService.apiV1HospitalsQuestionsGet(id, title, hospitalId, patientId, questionType, questionStatus, page, limit, lastRetrieved)
 }
 ```
 
@@ -224,7 +223,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 

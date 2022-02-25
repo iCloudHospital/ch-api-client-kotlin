@@ -23,6 +23,7 @@ import com.squareup.moshi.Json
  * @param id 
  * @param patientId 
  * @param patientName 
+ * @param patientPhoto 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
@@ -50,6 +51,7 @@ import com.squareup.moshi.Json
  * @param rejectReason 
  * @param rejectComment 
  * @param isOpen 
+ * @param completionRate 
  */
 
 data class BookingItemViewModel (
@@ -59,6 +61,8 @@ data class BookingItemViewModel (
     val patientId: java.util.UUID? = null,
     @Json(name = "patientName")
     val patientName: kotlin.String? = null,
+    @Json(name = "patientPhoto")
+    val patientPhoto: kotlin.String? = null,
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
     @Json(name = "hospitalName")
@@ -112,6 +116,8 @@ data class BookingItemViewModel (
     @Json(name = "rejectComment")
     val rejectComment: kotlin.String? = null,
     @Json(name = "isOpen")
-    val isOpen: kotlin.Boolean? = null
+    val isOpen: kotlin.Boolean? = null,
+    @Json(name = "completionRate")
+    val completionRate: kotlin.Int? = null
 )
 

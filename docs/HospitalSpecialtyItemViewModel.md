@@ -12,8 +12,6 @@ Name | Type | Description | Notes
 **specialtyTypeId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **specialtyTypeName** | **kotlin.String** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
-**auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
-**marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 
 
 

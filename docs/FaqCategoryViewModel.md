@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **description** | **kotlin.String** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **faqs** | [**kotlin.collections.List&lt;FaqItemViewModel&gt;**](FaqItemViewModel.md) |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlViewModel&gt;**](LocalizedUrlViewModel.md) |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

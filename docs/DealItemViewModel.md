@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **photoThumbnail** | **kotlin.String** |  |  [optional]
 **dealPackages** | [**kotlin.collections.List&lt;DealPackageItemViewModel&gt;**](DealPackageItemViewModel.md) |  |  [optional]
 **dealServices** | [**kotlin.collections.List&lt;DealServiceItemViewModel&gt;**](DealServiceItemViewModel.md) |  |  [optional]
-**auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 
 

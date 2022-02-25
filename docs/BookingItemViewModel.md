@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **patientId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **patientName** | **kotlin.String** |  |  [optional]
+**patientPhoto** | **kotlin.String** |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional]
 **hospitalSlug** | **kotlin.String** |  |  [optional]
@@ -34,6 +35,7 @@ Name | Type | Description | Notes
 **rejectReason** | [**RejectReason**](RejectReason.md) |  |  [optional]
 **rejectComment** | **kotlin.String** |  |  [optional]
 **isOpen** | **kotlin.Boolean** |  |  [optional]
+**completionRate** | **kotlin.Int** |  |  [optional]
 
 
 

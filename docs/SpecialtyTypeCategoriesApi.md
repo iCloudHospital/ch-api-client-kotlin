@@ -28,13 +28,13 @@ val webService = apiClient.createWebservice(SpecialtyTypeCategoriesApi::class.ja
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtyTypeCategoriesViewModel = webService.apiV1SpecialtytypecategoriesGet(id, name, description, page, limit, lastRetrieved, current)
+    val result : SpecialtyTypeCategoriesViewModel = webService.apiV1SpecialtytypecategoriesGet(id, name, description, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -45,10 +45,10 @@ Name | Type | Description  | Notes
  **id** | [**java.util.UUID**](.md)|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -158,9 +158,10 @@ Sample request:        GET /api/v1/SpecialtyTypeCategories/1
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtyTypeCategoriesApi::class.java)
 val specialtyTypeCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtyTypeCategoryViewModel = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(specialtyTypeCategoryId)
+    val result : SpecialtyTypeCategoryViewModel = webService.apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(specialtyTypeCategoryId, languageCode)
 }
 ```
 
@@ -169,6 +170,7 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **specialtyTypeCategoryId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 

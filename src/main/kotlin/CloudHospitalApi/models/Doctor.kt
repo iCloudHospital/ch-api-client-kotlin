@@ -44,13 +44,13 @@ import com.squareup.moshi.Json
  * @param dateOfBirth 
  * @param timeZone 
  * @param communicationUserId 
+ * @param fullName 
  * @param devices 
  * @param articles 
  * @param questionComments 
  * @param locations 
  * @param languages 
  * @param auditableEntity 
- * @param slug 
  * @param startPracticeDate 
  * @param overview 
  * @param consultationEnabled 
@@ -92,6 +92,8 @@ data class Doctor (
     val timeZone: kotlin.String? = null,
     @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null,
+    @Json(name = "fullName")
+    val fullName: kotlin.String? = null,
     @Json(name = "devices")
     val devices: kotlin.collections.List<Device>? = null,
     @Json(name = "articles")
@@ -104,8 +106,6 @@ data class Doctor (
     val languages: kotlin.collections.List<UserLanguage>? = null,
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @Json(name = "slug")
-    val slug: kotlin.String? = null,
     @Json(name = "startPracticeDate")
     val startPracticeDate: java.time.LocalDateTime? = null,
     @Json(name = "overview")

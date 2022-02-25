@@ -33,14 +33,14 @@ interface ArticlesApi {
      * @param exceptHospitalId  (optional)
      * @param contributorId  (optional)
      * @param languageCode  (optional)
+     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [ArticlesViewModel]
      */
     @GET("api/v1/hospitals/articles")
-    suspend fun apiV1HospitalsArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ArticlesViewModel>
+    suspend fun apiV1HospitalsArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticlesViewModel>
 
     /**
      * Get article by slug.
@@ -49,11 +49,42 @@ interface ArticlesApi {
      *  - 200: Success
      * 
      * @param slug  
-     * @param languageCode  (optional, default to "")
+     * @param languageCode  (optional, default to "en")
      * @return [ArticleViewModel]
      */
     @GET("api/v1/hospitals/articles/slugs/{slug}")
     suspend fun apiV1HospitalsArticlesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<ArticleViewModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param id  (optional)
+     * @param title  (optional)
+     * @param description  (optional)
+     * @param status  (optional)
+     * @param marketingType  (optional)
+     * @param userId  (optional)
+     * @param userName  (optional)
+     * @param hospitalId  (optional)
+     * @param hospitalName  (optional)
+     * @param countryId  (optional)
+     * @param tag  (optional)
+     * @param exceptHospitalId  (optional)
+     * @param contributorId  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [ArticlesViewModel]
+     */
+    @GET("api/v1/hospitals/authorized")
+    suspend fun apiV1HospitalsAuthorizedGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticlesViewModel>
 
     /**
      * Delete article.

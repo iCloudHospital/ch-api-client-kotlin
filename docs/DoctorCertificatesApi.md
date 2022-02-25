@@ -34,10 +34,9 @@ val activeTo : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorCertificatesViewModel = webService.apiV1DoctorsCertificatesGet(id, doctorId, doctorName, certificate, activeFrom, activeTo, page, limit, lastRetrieved, current)
+    val result : DoctorCertificatesViewModel = webService.apiV1DoctorsCertificatesGet(id, doctorId, doctorName, certificate, activeFrom, activeTo, page, limit, lastRetrieved)
 }
 ```
 
@@ -54,7 +53,6 @@ Name | Type | Description  | Notes
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -172,7 +170,7 @@ val certificateId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // jav
 val updateDoctorCertificateCommand : UpdateDoctorCertificateCommand =  // UpdateDoctorCertificateCommand | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1DoctorsDoctorIdCertificatesCertificateIdPut(doctorId, certificateId, updateDoctorCertificateCommand)
+    val result : DoctorCertificateViewModel = webService.apiV1DoctorsDoctorIdCertificatesCertificateIdPut(doctorId, certificateId, updateDoctorCertificateCommand)
 }
 ```
 
@@ -186,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**kotlin.Boolean**
+[**DoctorCertificateViewModel**](DoctorCertificateViewModel.md)
 
 ### Authorization
 
@@ -215,7 +213,7 @@ val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.uti
 val createDoctorCertificateCommand : CreateDoctorCertificateCommand =  // CreateDoctorCertificateCommand | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorCertificate = webService.apiV1DoctorsDoctorIdCertificatesPost(doctorId, createDoctorCertificateCommand)
+    val result : DoctorCertificateViewModel = webService.apiV1DoctorsDoctorIdCertificatesPost(doctorId, createDoctorCertificateCommand)
 }
 ```
 
@@ -228,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DoctorCertificate**](DoctorCertificate.md)
+[**DoctorCertificateViewModel**](DoctorCertificateViewModel.md)
 
 ### Authorization
 

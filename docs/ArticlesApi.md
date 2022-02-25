@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV1HospitalsArticlesGet**](ArticlesApi.md#apiV1HospitalsArticlesGet) | **GET** api/v1/hospitals/articles | Get all articles.
 [**apiV1HospitalsArticlesSlugsSlugGet**](ArticlesApi.md#apiV1HospitalsArticlesSlugsSlugGet) | **GET** api/v1/hospitals/articles/slugs/{slug} | Get article by slug.
+[**apiV1HospitalsAuthorizedGet**](ArticlesApi.md#apiV1HospitalsAuthorizedGet) | **GET** api/v1/hospitals/authorized | 
 [**apiV1HospitalsHospitalIdArticlesArticleIdDelete**](ArticlesApi.md#apiV1HospitalsHospitalIdArticlesArticleIdDelete) | **DELETE** api/v1/hospitals/{hospitalId}/articles/{articleId} | Delete article.
 [**apiV1HospitalsHospitalIdArticlesArticleIdGet**](ArticlesApi.md#apiV1HospitalsHospitalIdArticlesArticleIdGet) | **GET** api/v1/hospitals/{hospitalId}/articles/{articleId} | Get article.
 [**apiV1HospitalsHospitalIdArticlesArticleIdPut**](ArticlesApi.md#apiV1HospitalsHospitalIdArticlesArticleIdPut) | **PUT** api/v1/hospitals/{hospitalId}/articles/{articleId} | Update article.
@@ -40,13 +41,13 @@ val tag : kotlin.String = tag_example // kotlin.String |
 val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val contributorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val current : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : ArticlesViewModel = webService.apiV1HospitalsArticlesGet(id, title, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptHospitalId, contributorId, languageCode, page, limit, lastRetrieved, current)
+    val result : ArticlesViewModel = webService.apiV1HospitalsArticlesGet(id, title, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptHospitalId, contributorId, languageCode, showHidden, page, limit, lastRetrieved)
 }
 ```
 
@@ -68,10 +69,10 @@ Name | Type | Description  | Notes
  **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **contributorId** | [**java.util.UUID**](.md)|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
- **current** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
@@ -111,7 +112,7 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **kotlin.String**|  |
- **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
+ **languageCode** | **kotlin.String**|  | [optional] [default to &quot;en&quot;]
 
 ### Return type
 
@@ -120,6 +121,78 @@ Name | Type | Description  | Notes
 ### Authorization
 
 No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ArticlesApi::class.java)
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val title : kotlin.String = title_example // kotlin.String | 
+val description : kotlin.String = description_example // kotlin.String | 
+val status : ArticleStatus =  // ArticleStatus | 
+val marketingType : MarketingType =  // MarketingType | 
+val userId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val userName : kotlin.String = userName_example // kotlin.String | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val tag : kotlin.String = tag_example // kotlin.String | 
+val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val contributorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : ArticlesViewModel = webService.apiV1HospitalsAuthorizedGet(id, title, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptHospitalId, contributorId, languageCode, showHidden, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **title** | **kotlin.String**|  | [optional]
+ **description** | **kotlin.String**|  | [optional]
+ **status** | [**ArticleStatus**](.md)|  | [optional] [enum: Draft, Active, Archived]
+ **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
+ **userId** | [**java.util.UUID**](.md)|  | [optional]
+ **userName** | **kotlin.String**|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalName** | **kotlin.String**|  | [optional]
+ **countryId** | [**java.util.UUID**](.md)|  | [optional]
+ **tag** | **kotlin.String**|  | [optional]
+ **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **contributorId** | [**java.util.UUID**](.md)|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**ArticlesViewModel**](ArticlesViewModel.md)
+
+### Authorization
+
+
 
 ### HTTP request headers
 

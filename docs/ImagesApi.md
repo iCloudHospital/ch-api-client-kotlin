@@ -21,7 +21,7 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ImagesApi::class.java)
 
 launch(Dispatchers.IO) {
-    webService.apiV1ImagesPost()
+    val result : kotlin.collections.List<MediaViewModel> = webService.apiV1ImagesPost()
 }
 ```
 
@@ -30,7 +30,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;MediaViewModel&gt;**](MediaViewModel.md)
 
 ### Authorization
 
@@ -39,5 +39,5 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 

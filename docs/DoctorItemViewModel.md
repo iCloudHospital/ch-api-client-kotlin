@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **doctorAffiliationsCount** | **kotlin.Int** |  |  [optional]
 **doctorAffiliations** | [**kotlin.collections.List&lt;HospitalAffiliationViewModel&gt;**](HospitalAffiliationViewModel.md) |  |  [optional]
 **articlesCount** | **kotlin.Int** |  |  [optional]
+**confirmed** | **kotlin.Boolean** |  |  [optional]
 
 
 

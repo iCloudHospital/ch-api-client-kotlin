@@ -7,8 +7,10 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.CreatePatientCommand
 import CloudHospitalApi.models.Gender
+import CloudHospitalApi.models.HealthProfileViewModel
 import CloudHospitalApi.models.PatientViewModel
 import CloudHospitalApi.models.PatientsViewModel
+import CloudHospitalApi.models.UpdateHealthProfileCommand
 import CloudHospitalApi.models.UpdatePatientCommand
 
 interface PatientsApi {
@@ -29,11 +31,37 @@ interface PatientsApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [PatientsViewModel]
      */
     @GET("api/v1/patients")
-    suspend fun apiV1PatientsGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<PatientsViewModel>
+    suspend fun apiV1PatientsGet(@Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<PatientsViewModel>
+
+    /**
+     * Get health profile for patient.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @return [HealthProfileViewModel]
+     */
+    @GET("api/v1/patients/healthprofile")
+    suspend fun apiV1PatientsHealthprofileGet(): Response<HealthProfileViewModel>
+
+    /**
+     * Update health profile for patient.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     * 
+     * @param updateHealthProfileCommand  (optional)
+     * @return [kotlin.Boolean]
+     */
+    @PUT("api/v1/patients/healthprofile")
+    suspend fun apiV1PatientsHealthprofilePut(@Body updateHealthProfileCommand: UpdateHealthProfileCommand? = null): Response<kotlin.Boolean>
 
     /**
      * Delete patient.

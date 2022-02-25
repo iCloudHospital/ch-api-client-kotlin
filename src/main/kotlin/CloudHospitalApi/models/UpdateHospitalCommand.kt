@@ -15,6 +15,7 @@ import CloudHospitalApi.models.AccreditationViewModel
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.AwardViewModel
 import CloudHospitalApi.models.HospitalEvaluationViewModel
+import CloudHospitalApi.models.LocalizedUrlViewModel
 import CloudHospitalApi.models.LocationViewModel
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaViewModel
@@ -54,6 +55,8 @@ import com.squareup.moshi.Json
  * @param evaluations 
  * @param location 
  * @param auditableEntity 
+ * @param localizedUrls 
+ * @param confirmed 
  */
 
 data class UpdateHospitalCommand (
@@ -118,6 +121,10 @@ data class UpdateHospitalCommand (
     @Json(name = "location")
     val location: LocationViewModel? = null,
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlViewModel>? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

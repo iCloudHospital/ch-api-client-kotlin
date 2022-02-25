@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
  * @param id 
  * @param name 
  * @param logo 
+ * @param country 
  */
 
 data class AccreditationViewModel (
@@ -27,6 +28,8 @@ data class AccreditationViewModel (
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "logo")
-    val logo: kotlin.String? = null
+    val logo: kotlin.String? = null,
+    @Json(name = "country")
+    val country: kotlin.String? = null
 )
 
