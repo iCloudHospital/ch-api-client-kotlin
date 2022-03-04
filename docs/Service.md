@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **normalizedName** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
 **content** | **kotlin.String** |  |  [optional]
-**normalizedDescription** | **kotlin.String** |  |  [optional]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **specialtyId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **packageServiceId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]

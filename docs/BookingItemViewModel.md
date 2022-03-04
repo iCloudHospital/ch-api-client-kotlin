@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional]
 **hospitalSlug** | **kotlin.String** |  |  [optional]
+**hospitalTimeZone** | **kotlin.String** |  |  [optional]
 **dealId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **dealName** | **kotlin.String** |  |  [optional]
 **dealSlug** | **kotlin.String** |  |  [optional]

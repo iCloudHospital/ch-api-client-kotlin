@@ -21,7 +21,6 @@ import com.squareup.moshi.Json
  * @param name 
  * @param normalizedName 
  * @param description 
- * @param normalizedDescription 
  * @param order 
  * @param services 
  */
@@ -35,8 +34,6 @@ data class ServiceCategory (
     val normalizedName: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
-    @Json(name = "normalizedDescription")
-    val normalizedDescription: kotlin.String? = null,
     @Json(name = "order")
     val order: kotlin.Int? = null,
     @Json(name = "services")

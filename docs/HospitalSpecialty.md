@@ -10,6 +10,12 @@ Name | Type | Description | Notes
 **specialty** | [**Specialty**](Specialty.md) |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **services** | [**kotlin.collections.List&lt;Service&gt;**](Service.md) |  |  [optional]
+**title** | **kotlin.String** |  |  [optional]
+**normalizedTitle** | **kotlin.String** |  |  [optional]
+**description** | **kotlin.String** |  |  [optional]
+**body** | **kotlin.String** |  |  [optional]
+**photo** | **kotlin.String** |  |  [optional]
+**photoThumbnail** | **kotlin.String** |  |  [optional]
 
 
 

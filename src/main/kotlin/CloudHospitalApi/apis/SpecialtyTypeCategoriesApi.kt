@@ -19,7 +19,6 @@ interface SpecialtyTypeCategoriesApi {
      * 
      * @param id  (optional)
      * @param name  (optional)
-     * @param description  (optional)
      * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -27,7 +26,7 @@ interface SpecialtyTypeCategoriesApi {
      * @return [SpecialtyTypeCategoriesViewModel]
      */
     @GET("api/v1/specialtytypecategories")
-    suspend fun apiV1SpecialtytypecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypeCategoriesViewModel>
+    suspend fun apiV1SpecialtytypecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypeCategoriesViewModel>
 
     /**
      * Create specialtyTypeCategory.

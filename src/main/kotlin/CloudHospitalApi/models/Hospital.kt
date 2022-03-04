@@ -39,7 +39,6 @@ import com.squareup.moshi.Json
  * @param name 
  * @param normalizedName 
  * @param description 
- * @param normalizedDescription 
  * @param logo 
  * @param overview 
  * @param bedsCount 
@@ -81,8 +80,6 @@ data class Hospital (
     val normalizedName: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
-    @Json(name = "normalizedDescription")
-    val normalizedDescription: kotlin.String? = null,
     @Json(name = "logo")
     val logo: kotlin.String? = null,
     @Json(name = "overview")

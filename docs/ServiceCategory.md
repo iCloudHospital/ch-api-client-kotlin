@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional]
 **normalizedName** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
-**normalizedDescription** | **kotlin.String** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **services** | [**kotlin.collections.List&lt;Service&gt;**](Service.md) |  |  [optional]
 

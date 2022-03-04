@@ -27,7 +27,6 @@ import com.squareup.moshi.Json
  * @param normalizedName 
  * @param description 
  * @param content 
- * @param normalizedDescription 
  * @param hospitalId 
  * @param specialtyId 
  * @param packageServiceId 
@@ -55,8 +54,6 @@ data class Service (
     val description: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
-    @Json(name = "normalizedDescription")
-    val normalizedDescription: kotlin.String? = null,
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
     @Json(name = "specialtyId")

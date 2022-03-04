@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional]
 **normalizedName** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
-**normalizedDescription** | **kotlin.String** |  |  [optional]
 **logo** | **kotlin.String** |  |  [optional]
 **overview** | **kotlin.String** |  |  [optional]
 **bedsCount** | **kotlin.Int** |  |  [optional]

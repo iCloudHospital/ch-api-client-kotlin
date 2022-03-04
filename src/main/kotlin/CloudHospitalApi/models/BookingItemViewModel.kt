@@ -27,6 +27,7 @@ import com.squareup.moshi.Json
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
+ * @param hospitalTimeZone 
  * @param dealId 
  * @param dealName 
  * @param dealSlug 
@@ -69,6 +70,8 @@ data class BookingItemViewModel (
     val hospitalName: kotlin.String? = null,
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
+    @Json(name = "hospitalTimeZone")
+    val hospitalTimeZone: kotlin.String? = null,
     @Json(name = "dealId")
     val dealId: java.util.UUID? = null,
     @Json(name = "dealName")
