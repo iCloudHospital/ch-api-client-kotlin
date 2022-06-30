@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1LanguagesCodeGet**](LanguagesApi.md#apiV1LanguagesCodeGet) | **GET** api/v1/languages/{code} | Get a language by code
-[**apiV1LanguagesGet**](LanguagesApi.md#apiV1LanguagesGet) | **GET** api/v1/languages | Get all languages.
-[**apiV1LanguagesIdGet**](LanguagesApi.md#apiV1LanguagesIdGet) | **GET** api/v1/languages/{id} | Get a language by id
+[**apiV2LanguagesCodeGet**](LanguagesApi.md#apiV2LanguagesCodeGet) | **GET** api/v2/languages/{code} | Get Language by code.
+[**apiV2LanguagesGet**](LanguagesApi.md#apiV2LanguagesGet) | **GET** api/v2/languages | Get all Languages.
+[**apiV2LanguagesIdGet**](LanguagesApi.md#apiV2LanguagesIdGet) | **GET** api/v2/languages/{id} | Get Language.
 
 
 
-Get a language by code
+Get Language by code.
 
 ### Example
 ```kotlin
@@ -24,7 +24,7 @@ val webService = apiClient.createWebservice(LanguagesApi::class.java)
 val code : kotlin.String = code_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : LanguageViewModel = webService.apiV1LanguagesCodeGet(code)
+    val result : LanguageModel = webService.apiV2LanguagesCodeGet(code)
 }
 ```
 
@@ -36,7 +36,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LanguageViewModel**](LanguageViewModel.md)
+[**LanguageModel**](LanguageModel.md)
 
 ### Authorization
 
@@ -45,12 +45,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Get all languages.
-
-Sample request:        GET: /api/v1/languages
+Get all Languages.
 
 ### Example
 ```kotlin
@@ -70,7 +68,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : LanguagesViewModel = webService.apiV1LanguagesGet(id, name, code, description, page, limit, lastRetrieved)
+    val result : LanguagesModel = webService.apiV2LanguagesGet(id, name, code, description, page, limit, lastRetrieved)
 }
 ```
 
@@ -88,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LanguagesViewModel**](LanguagesViewModel.md)
+[**LanguagesModel**](LanguagesModel.md)
 
 ### Authorization
 
@@ -97,10 +95,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Get a language by id
+Get Language.
 
 ### Example
 ```kotlin
@@ -114,7 +112,7 @@ val webService = apiClient.createWebservice(LanguagesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : LanguageViewModel = webService.apiV1LanguagesIdGet(id)
+    val result : LanguageModel = webService.apiV2LanguagesIdGet(id)
 }
 ```
 
@@ -126,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LanguageViewModel**](LanguageViewModel.md)
+[**LanguageModel**](LanguageModel.md)
 
 ### Authorization
 
@@ -135,5 +133,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 

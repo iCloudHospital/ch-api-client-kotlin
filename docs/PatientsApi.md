@@ -4,147 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1PatientsGet**](PatientsApi.md#apiV1PatientsGet) | **GET** api/v1/patients | Get all patients.
-[**apiV1PatientsHealthprofileGet**](PatientsApi.md#apiV1PatientsHealthprofileGet) | **GET** api/v1/patients/healthprofile | Get health profile for patient.
-[**apiV1PatientsHealthprofilePut**](PatientsApi.md#apiV1PatientsHealthprofilePut) | **PUT** api/v1/patients/healthprofile | Update health profile for patient.
-[**apiV1PatientsPatientIdDelete**](PatientsApi.md#apiV1PatientsPatientIdDelete) | **DELETE** api/v1/patients/{patientId} | Delete patient.
-[**apiV1PatientsPatientIdGet**](PatientsApi.md#apiV1PatientsPatientIdGet) | **GET** api/v1/patients/{patientId} | Get patient.
-[**apiV1PatientsPatientIdPut**](PatientsApi.md#apiV1PatientsPatientIdPut) | **PUT** api/v1/patients/{patientId} | Update patient.
-[**apiV1PatientsPost**](PatientsApi.md#apiV1PatientsPost) | **POST** api/v1/patients | Create patient.
+[**apiV2PatientsPatientIdDelete**](PatientsApi.md#apiV2PatientsPatientIdDelete) | **DELETE** api/v2/patients/{patientId} | Delete Patient.
+[**apiV2PatientsPatientIdGet**](PatientsApi.md#apiV2PatientsPatientIdGet) | **GET** api/v2/patients/{patientId} | Get Patient.
+[**apiV2PatientsPatientIdPut**](PatientsApi.md#apiV2PatientsPatientIdPut) | **PUT** api/v2/patients/{patientId} | Update Patient.
+[**apiV2PatientsPost**](PatientsApi.md#apiV2PatientsPost) | **POST** api/v2/patients | Create a Patient.
 
 
 
-Get all patients.
-
-Sample request:        GET /api/v1/patients      {          \&quot;pageQueryFilter\&quot;: {              \&quot;page\&quot;: 1,              \&quot;limit\&quot;: 20,              \&quot;lastRetrived\&quot;: \&quot;2020-02-05T08:40\&quot;          },          \&quot;searchString\&quot;: \&quot;patient\&quot;      }
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(PatientsApi::class.java)
-val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val fullname : kotlin.String = fullname_example // kotlin.String | 
-val email : kotlin.String = email_example // kotlin.String | 
-val gender : Gender =  // Gender | 
-val dateOfBirth : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val page : kotlin.Int = 56 // kotlin.Int | 
-val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-
-launch(Dispatchers.IO) {
-    val result : PatientsViewModel = webService.apiV1PatientsGet(id, fullname, email, gender, dateOfBirth, created, page, limit, lastRetrieved)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
- **fullname** | **kotlin.String**|  | [optional]
- **email** | **kotlin.String**|  | [optional]
- **gender** | [**Gender**](.md)|  | [optional] [enum: NotSpecified, Male, Female, NonBinary, PreferNotToSay]
- **dateOfBirth** | **java.time.LocalDateTime**|  | [optional]
- **created** | **java.time.LocalDateTime**|  | [optional]
- **page** | **kotlin.Int**|  | [optional]
- **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
-
-### Return type
-
-[**PatientsViewModel**](PatientsViewModel.md)
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Get health profile for patient.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(PatientsApi::class.java)
-
-launch(Dispatchers.IO) {
-    val result : HealthProfileViewModel = webService.apiV1PatientsHealthprofileGet()
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**HealthProfileViewModel**](HealthProfileViewModel.md)
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Update health profile for patient.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(PatientsApi::class.java)
-val updateHealthProfileCommand : UpdateHealthProfileCommand =  // UpdateHealthProfileCommand | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1PatientsHealthprofilePut(updateHealthProfileCommand)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateHealthProfileCommand** | [**UpdateHealthProfileCommand**](UpdateHealthProfileCommand.md)|  | [optional]
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-
-Delete patient.
-
-Sample request:        DELETE /api/v1/patients/1
+Delete Patient.
 
 ### Example
 ```kotlin
@@ -158,7 +25,7 @@ val webService = apiClient.createWebservice(PatientsApi::class.java)
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1PatientsPatientIdDelete(patientId)
+    val result : kotlin.Boolean = webService.apiV2PatientsPatientIdDelete(patientId)
 }
 ```
 
@@ -179,12 +46,10 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Get patient.
-
-Sample request:        GET /api/v1/patients/1
+Get Patient.
 
 ### Example
 ```kotlin
@@ -198,7 +63,7 @@ val webService = apiClient.createWebservice(PatientsApi::class.java)
 val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : PatientViewModel = webService.apiV1PatientsPatientIdGet(patientId)
+    val result : PatientModel = webService.apiV2PatientsPatientIdGet(patientId)
 }
 ```
 
@@ -210,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PatientViewModel**](PatientViewModel.md)
+[**PatientModel**](PatientModel.md)
 
 ### Authorization
 
@@ -219,12 +84,10 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Update patient.
-
-Sample request:        PUT /api/v1/patients/1      {          \&quot;referralCode\&quot;: \&quot;string\&quot;,          \&quot;firstName\&quot;: \&quot;patient\&quot;,          \&quot;lastName\&quot;: \&quot;cloud\&quot;,          \&quot;photo\&quot;: \&quot;string\&quot;,          \&quot;locations\&quot;: [            {              \&quot;locationType\&quot;: \&quot;LivesIn\&quot;,              \&quot;latitude\&quot;: 0,              \&quot;longitude\&quot;: 0,              \&quot;country\&quot;: \&quot;string\&quot;,              \&quot;state\&quot;: \&quot;string\&quot;,              \&quot;county\&quot;: \&quot;string\&quot;,              \&quot;city\&quot;: \&quot;string\&quot;,              \&quot;zipCode\&quot;: \&quot;string\&quot;,              \&quot;address\&quot;: \&quot;string\&quot;            }          ]      }
+Update Patient.
 
 ### Example
 ```kotlin
@@ -239,7 +102,7 @@ val patientId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.ut
 val updatePatientCommand : UpdatePatientCommand =  // UpdatePatientCommand | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1PatientsPatientIdPut(patientId, updatePatientCommand)
+    val result : PatientModel = webService.apiV2PatientsPatientIdPut(patientId, updatePatientCommand)
 }
 ```
 
@@ -252,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**kotlin.Boolean**
+[**PatientModel**](PatientModel.md)
 
 ### Authorization
 
@@ -261,12 +124,10 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Create patient.
-
-Sample request:        POST /api/v1/patients      {          \&quot;referralCode\&quot;: \&quot;123456\&quot;,          \&quot;email\&quot;: \&quot;patient@icloudhospital.com\&quot;,          \&quot;firstName\&quot;: \&quot;patient\&quot;,          \&quot;lastName\&quot;: \&quot;cloud\&quot;,          \&quot;photo\&quot;: \&quot;string\&quot;,          \&quot;locations\&quot;: [            {              \&quot;locationType\&quot;: \&quot;LivesIn\&quot;,              \&quot;latitude\&quot;: 0,              \&quot;longitude\&quot;: 0,              \&quot;country\&quot;: \&quot;string\&quot;,              \&quot;state\&quot;: \&quot;string\&quot;,              \&quot;county\&quot;: \&quot;string\&quot;,              \&quot;city\&quot;: \&quot;string\&quot;,              \&quot;zipCode\&quot;: \&quot;string\&quot;,              \&quot;address\&quot;: \&quot;string\&quot;            }          ]      }
+Create a Patient.
 
 ### Example
 ```kotlin
@@ -280,7 +141,7 @@ val webService = apiClient.createWebservice(PatientsApi::class.java)
 val createPatientCommand : CreatePatientCommand =  // CreatePatientCommand | 
 
 launch(Dispatchers.IO) {
-    val result : java.util.UUID = webService.apiV1PatientsPost(createPatientCommand)
+    val result : PatientModel = webService.apiV2PatientsPost(createPatientCommand)
 }
 ```
 
@@ -292,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**java.util.UUID**](java.util.UUID.md)
+[**PatientModel**](PatientModel.md)
 
 ### Authorization
 
@@ -301,5 +162,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 

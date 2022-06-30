@@ -15,6 +15,8 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.HospitalSpecialty
 import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.Procedure
+import CloudHospitalApi.models.ServiceCategory
+import CloudHospitalApi.models.ServiceReview
 
 import com.squareup.moshi.Json
 
@@ -23,20 +25,20 @@ import com.squareup.moshi.Json
  * @param id 
  * @param name 
  * @param normalizedName 
- * @param slug 
  * @param description 
  * @param content 
- * @param normalizedDescription 
  * @param hospitalId 
  * @param specialtyId 
  * @param packageServiceId 
  * @param hospitalSpecialty 
  * @param procedure 
  * @param serviceCategoryId 
+ * @param serviceCategory 
  * @param minPrice 
  * @param maxPrice 
  * @param priceReuqest 
  * @param order 
+ * @param serviceReviews 
  * @param medias 
  * @param auditableEntity 
  */
@@ -48,14 +50,10 @@ data class Service (
     val name: kotlin.String? = null,
     @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "slug")
-    val slug: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
-    @Json(name = "normalizedDescription")
-    val normalizedDescription: kotlin.String? = null,
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
     @Json(name = "specialtyId")
@@ -68,6 +66,8 @@ data class Service (
     val procedure: Procedure? = null,
     @Json(name = "serviceCategoryId")
     val serviceCategoryId: java.util.UUID? = null,
+    @Json(name = "serviceCategory")
+    val serviceCategory: ServiceCategory? = null,
     @Json(name = "minPrice")
     val minPrice: kotlin.Double? = null,
     @Json(name = "maxPrice")
@@ -76,6 +76,8 @@ data class Service (
     val priceReuqest: kotlin.Boolean? = null,
     @Json(name = "order")
     val order: kotlin.Int? = null,
+    @Json(name = "serviceReviews")
+    val serviceReviews: kotlin.collections.List<ServiceReview>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
     @Json(name = "auditableEntity")
