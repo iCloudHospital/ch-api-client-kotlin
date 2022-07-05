@@ -25,6 +25,7 @@ import com.squareup.moshi.Json
  * @param body 
  * @param status 
  * @param marketingType 
+ * @param youtubeUrl 
  * @param articleTags 
  * @param medias 
  */
@@ -40,6 +41,8 @@ data class CreateArticleCommand (
     val status: ArticleStatus? = null,
     @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
+    @Json(name = "youtubeUrl")
+    val youtubeUrl: kotlin.String? = null,
     @Json(name = "articleTags")
     val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
     @Json(name = "medias")

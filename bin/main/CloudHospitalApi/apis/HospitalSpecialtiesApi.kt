@@ -5,10 +5,11 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
+import CloudHospitalApi.models.CreateHospitalSpecialtyCommand
 import CloudHospitalApi.models.HospitalSpecialtiesViewModel
 import CloudHospitalApi.models.HospitalSpecialtyViewModel
 import CloudHospitalApi.models.MarketingType
-import CloudHospitalApi.models.UpdateHospitalSpecialtySequenceCommand
+import CloudHospitalApi.models.UpdateHospitalSpecialtyCommand
 
 interface HospitalSpecialtiesApi {
     /**
@@ -28,7 +29,7 @@ interface HospitalSpecialtiesApi {
 
     /**
      * Create hospitalSpecialty.
-     * Sample request:        POST /api/v1/hospitals/1/specialties/1
+     * 
      * Responses:
      *  - 200: Success
      *  - 401: Unauthorized
@@ -36,26 +37,27 @@ interface HospitalSpecialtiesApi {
      * 
      * @param hospitalId  
      * @param specialtyId  
+     * @param createHospitalSpecialtyCommand  (optional)
      * @return [HospitalSpecialtyViewModel]
      */
     @POST("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}")
-    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Response<HospitalSpecialtyViewModel>
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body createHospitalSpecialtyCommand: CreateHospitalSpecialtyCommand? = null): Response<HospitalSpecialtyViewModel>
 
     /**
-     * Update hospitalSpecialty sequence.
-     * Sample request:        PUT /api/v1/hospitals/1/specialtysequence      {          \&quot;specialtyType\&quot;: \&quot;Endocrinology\&quot;,          \&quot;hospitalSpecialtySequence\&quot;: [14, 30, 5, 7]      }
+     * Update hospitalSpecialty.
+     * 
      * Responses:
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
      * @param hospitalId  
-     * @param specialtyTypeId  
-     * @param updateHospitalSpecialtySequenceCommand  (optional)
-     * @return [kotlin.Boolean]
+     * @param specialtyId  
+     * @param updateHospitalSpecialtyCommand  (optional)
+     * @return [HospitalSpecialtyViewModel]
      */
-    @PUT("api/v1/hospitals/{hospitalId}/specialtysequence")
-    suspend fun apiV1HospitalsHospitalIdSpecialtysequencePut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("SpecialtyTypeId") specialtyTypeId: java.util.UUID, @Body updateHospitalSpecialtySequenceCommand: UpdateHospitalSpecialtySequenceCommand? = null): Response<kotlin.Boolean>
+    @PUT("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}")
+    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body updateHospitalSpecialtyCommand: UpdateHospitalSpecialtyCommand? = null): Response<HospitalSpecialtyViewModel>
 
     /**
      * Get all hospitalSpecialties.
@@ -74,10 +76,9 @@ interface HospitalSpecialtiesApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [HospitalSpecialtiesViewModel]
      */
     @GET("api/v1/hospitals/specialties")
-    suspend fun apiV1HospitalsSpecialtiesGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<HospitalSpecialtiesViewModel>
+    suspend fun apiV1HospitalsSpecialtiesGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalSpecialtiesViewModel>
 
 }

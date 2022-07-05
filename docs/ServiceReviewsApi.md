@@ -169,11 +169,9 @@ Name | Type | Description  | Notes
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServiceReviewsApi::class.java)
 val serviceReviewId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : ServiceReviewModel = webService.apiV2ServicereviewsServiceReviewIdGet(serviceReviewId, languageCode, returnDefaultValue)
+    val result : ServiceReviewModel = webService.apiV2ServicereviewsServiceReviewIdGet(serviceReviewId)
 }
 ```
 
@@ -182,8 +180,6 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serviceReviewId** | [**java.util.UUID**](.md)|  |
- **languageCode** | **kotlin.String**|  | [optional]
- **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 

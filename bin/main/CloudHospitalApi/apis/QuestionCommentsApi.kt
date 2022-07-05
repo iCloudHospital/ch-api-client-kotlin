@@ -26,11 +26,10 @@ interface QuestionCommentsApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [QuestionCommentsViewModel]
      */
     @GET("api/v1/questions/{questionId}/questioncomments")
-    suspend fun apiV1QuestionsQuestionIdQuestioncommentsGet(@Path("questionId") questionId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("QuestionId") questionId2: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<QuestionCommentsViewModel>
+    suspend fun apiV1QuestionsQuestionIdQuestioncommentsGet(@Path("questionId") questionId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("QuestionId") questionId2: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<QuestionCommentsViewModel>
 
     /**
      * Create an questionComment.

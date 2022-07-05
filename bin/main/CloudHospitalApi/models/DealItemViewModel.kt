@@ -11,7 +11,6 @@
 */
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.DealPackageItemViewModel
 import CloudHospitalApi.models.DealServiceItemViewModel
 import CloudHospitalApi.models.MarketingType
@@ -36,7 +35,6 @@ import com.squareup.moshi.Json
  * @param photoThumbnail 
  * @param dealPackages 
  * @param dealServices 
- * @param auditableEntity 
  */
 
 data class DealItemViewModel (
@@ -71,8 +69,6 @@ data class DealItemViewModel (
     @Json(name = "dealPackages")
     val dealPackages: kotlin.collections.List<DealPackageItemViewModel>? = null,
     @Json(name = "dealServices")
-    val dealServices: kotlin.collections.List<DealServiceItemViewModel>? = null,
-    @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val dealServices: kotlin.collections.List<DealServiceItemViewModel>? = null
 )
 

@@ -82,14 +82,14 @@ interface ServiceReviewsApi {
      * 
      * Responses:
      *  - 200: Success
+     *  - 404: Not Found
+     *  - 0: Error
      * 
      * @param serviceReviewId  
-     * @param languageCode  (optional)
-     * @param returnDefaultValue  (optional)
      * @return [ServiceReviewModel]
      */
     @GET("api/v2/servicereviews/{serviceReviewId}")
-    suspend fun apiV2ServicereviewsServiceReviewIdGet(@Path("serviceReviewId") serviceReviewId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<ServiceReviewModel>
+    suspend fun apiV2ServicereviewsServiceReviewIdGet(@Path("serviceReviewId") serviceReviewId: java.util.UUID): Response<ServiceReviewModel>
 
     /**
      * Get all ServiceReviewMedias.

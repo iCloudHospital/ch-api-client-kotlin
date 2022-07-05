@@ -19,10 +19,13 @@ import CloudHospitalApi.models.Customer
 import CloudHospitalApi.models.Device
 import CloudHospitalApi.models.DoctorReview
 import CloudHospitalApi.models.Gender
+import CloudHospitalApi.models.HealthProfile
 import CloudHospitalApi.models.HospitalReview
+import CloudHospitalApi.models.Membership
 import CloudHospitalApi.models.Payment
 import CloudHospitalApi.models.Question
 import CloudHospitalApi.models.QuestionComment
+import CloudHospitalApi.models.ServiceReview
 import CloudHospitalApi.models.UserLanguage
 import CloudHospitalApi.models.UserLocation
 
@@ -43,6 +46,7 @@ import com.squareup.moshi.Json
  * @param dateOfBirth 
  * @param timeZone 
  * @param communicationUserId 
+ * @param fullName 
  * @param devices 
  * @param articles 
  * @param questionComments 
@@ -52,6 +56,9 @@ import com.squareup.moshi.Json
  * @param contact 
  * @param contactNumber 
  * @param nationality 
+ * @param healthProfile 
+ * @param membershipId 
+ * @param membership 
  * @param questions 
  * @param bookings 
  * @param consultations 
@@ -59,6 +66,7 @@ import com.squareup.moshi.Json
  * @param customers 
  * @param doctorReviews 
  * @param hospitalReviews 
+ * @param serviceReviews 
  */
 
 data class Patient (
@@ -88,6 +96,8 @@ data class Patient (
     val timeZone: kotlin.String? = null,
     @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null,
+    @Json(name = "fullName")
+    val fullName: kotlin.String? = null,
     @Json(name = "devices")
     val devices: kotlin.collections.List<Device>? = null,
     @Json(name = "articles")
@@ -106,6 +116,12 @@ data class Patient (
     val contactNumber: kotlin.String? = null,
     @Json(name = "nationality")
     val nationality: kotlin.String? = null,
+    @Json(name = "healthProfile")
+    val healthProfile: HealthProfile? = null,
+    @Json(name = "membershipId")
+    val membershipId: java.util.UUID? = null,
+    @Json(name = "membership")
+    val membership: Membership? = null,
     @Json(name = "questions")
     val questions: kotlin.collections.List<Question>? = null,
     @Json(name = "bookings")
@@ -119,6 +135,8 @@ data class Patient (
     @Json(name = "doctorReviews")
     val doctorReviews: kotlin.collections.List<DoctorReview>? = null,
     @Json(name = "hospitalReviews")
-    val hospitalReviews: kotlin.collections.List<HospitalReview>? = null
+    val hospitalReviews: kotlin.collections.List<HospitalReview>? = null,
+    @Json(name = "serviceReviews")
+    val serviceReviews: kotlin.collections.List<ServiceReview>? = null
 )
 

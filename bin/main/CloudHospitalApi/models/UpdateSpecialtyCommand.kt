@@ -12,6 +12,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.LocalizedUrlViewModel
 
 import com.squareup.moshi.Json
 
@@ -20,10 +21,12 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param description 
+ * @param content 
  * @param specialtyTypeId 
  * @param specialtyTypeName 
  * @param auditableEntity 
- * @param content 
+ * @param localizedUrls 
+ * @param confirmed 
  */
 
 data class UpdateSpecialtyCommand (
@@ -33,13 +36,17 @@ data class UpdateSpecialtyCommand (
     val slug: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
+    @Json(name = "content")
+    val content: kotlin.String? = null,
     @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
     @Json(name = "specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-    @Json(name = "content")
-    val content: kotlin.String? = null
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlViewModel>? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

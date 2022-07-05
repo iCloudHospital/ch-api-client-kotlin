@@ -1,4 +1,4 @@
-# CloudHospitalApi - Kotlin client library for Swagger UI - Cloud Hospital Api-DEV
+# CloudHospitalApi - Kotlin client library for Swagger UI - Cloud Hospital Api-INT
 
 ## Requires
 
@@ -170,14 +170,6 @@ Class | Method | HTTP request | Description
 *ProfilesApi* | [**apiV2ProfilesConfirmemailPost**](docs/ProfilesApi.md#apiv2profilesconfirmemailpost) | **POST** api/v2/profiles/confirmemail | Configm email.
 *ProfilesApi* | [**apiV2ProfilesGet**](docs/ProfilesApi.md#apiv2profilesget) | **GET** api/v2/profiles | Get Profile.
 *ProfilesApi* | [**apiV2ProfilesPut**](docs/ProfilesApi.md#apiv2profilesput) | **PUT** api/v2/profiles | Update Profile.
-*SearchApi* | [**apiV2SearchAutocompleteGet**](docs/SearchApi.md#apiv2searchautocompleteget) | **GET** api/v2/search/autocomplete | 
-*SearchApi* | [**apiV2SearchDealsGet**](docs/SearchApi.md#apiv2searchdealsget) | **GET** api/v2/search/deals | 
-*SearchApi* | [**apiV2SearchDoctorsGet**](docs/SearchApi.md#apiv2searchdoctorsget) | **GET** api/v2/search/doctors | 
-*SearchApi* | [**apiV2SearchGetcountGet**](docs/SearchApi.md#apiv2searchgetcountget) | **GET** api/v2/search/getcount | 
-*SearchApi* | [**apiV2SearchHospitalsGet**](docs/SearchApi.md#apiv2searchhospitalsget) | **GET** api/v2/search/hospitals | 
-*SearchApi* | [**apiV2SearchSpecialtiesGet**](docs/SearchApi.md#apiv2searchspecialtiesget) | **GET** api/v2/search/specialties | 
-*SearchApi* | [**apiV2SearchSpecialtytypesGet**](docs/SearchApi.md#apiv2searchspecialtytypesget) | **GET** api/v2/search/specialtytypes | 
-*SearchApi* | [**apiV2SearchSuggestGet**](docs/SearchApi.md#apiv2searchsuggestget) | **GET** api/v2/search/suggest | 
 *ServiceReviewsApi* | [**apiV2ServicereviewsGet**](docs/ServiceReviewsApi.md#apiv2servicereviewsget) | **GET** api/v2/servicereviews | Get all ServiceReviews.
 *ServiceReviewsApi* | [**apiV2ServicereviewsPost**](docs/ServiceReviewsApi.md#apiv2servicereviewspost) | **POST** api/v2/servicereviews | Create a ServiceReview.
 *ServiceReviewsApi* | [**apiV2ServicereviewsServiceReviewIdDelete**](docs/ServiceReviewsApi.md#apiv2servicereviewsservicereviewiddelete) | **DELETE** api/v2/servicereviews/{serviceReviewId} | Delete ServiceReview.
@@ -231,11 +223,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.ArticleTagsModel](docs/ArticleTagsModel.md)
  - [CloudHospitalApi.models.ArticlesModel](docs/ArticlesModel.md)
  - [CloudHospitalApi.models.AuditableEntity](docs/AuditableEntity.md)
- - [CloudHospitalApi.models.AutocompleteMode](docs/AutocompleteMode.md)
  - [CloudHospitalApi.models.AwardModel](docs/AwardModel.md)
- - [CloudHospitalApi.models.AzureSearchModel](docs/AzureSearchModel.md)
- - [CloudHospitalApi.models.AzureSearchServiceAutocompleteModel](docs/AzureSearchServiceAutocompleteModel.md)
- - [CloudHospitalApi.models.AzureSearchServiceSuggestModel](docs/AzureSearchServiceSuggestModel.md)
  - [CloudHospitalApi.models.BookingChangeLogModel](docs/BookingChangeLogModel.md)
  - [CloudHospitalApi.models.BookingItemModel](docs/BookingItemModel.md)
  - [CloudHospitalApi.models.BookingModel](docs/BookingModel.md)
@@ -297,6 +285,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.DoctorPortfoliosModel](docs/DoctorPortfoliosModel.md)
  - [CloudHospitalApi.models.DoctorSimpleItemModel](docs/DoctorSimpleItemModel.md)
  - [CloudHospitalApi.models.DoctorSpecialtiesModel](docs/DoctorSpecialtiesModel.md)
+ - [CloudHospitalApi.models.DoctorSpecialtyItemModel](docs/DoctorSpecialtyItemModel.md)
  - [CloudHospitalApi.models.DoctorSpecialtyModel](docs/DoctorSpecialtyModel.md)
  - [CloudHospitalApi.models.DoctorsModel](docs/DoctorsModel.md)
  - [CloudHospitalApi.models.DoctorsSimpleModel](docs/DoctorsSimpleModel.md)
@@ -405,6 +394,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.UserLocationModel](docs/UserLocationModel.md)
  - [CloudHospitalApi.models.UserLocationType](docs/UserLocationType.md)
  - [CloudHospitalApi.models.UserModel](docs/UserModel.md)
+ - [CloudHospitalApi.models.UserTranslationModel](docs/UserTranslationModel.md)
  - [CloudHospitalApi.models.WorkingDay](docs/WorkingDay.md)
  - [CloudHospitalApi.models.WorkingDayItemModel](docs/WorkingDayItemModel.md)
  - [CloudHospitalApi.models.WorkingDayModel](docs/WorkingDayModel.md)

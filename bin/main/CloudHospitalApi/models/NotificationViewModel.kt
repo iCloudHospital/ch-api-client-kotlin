@@ -27,6 +27,7 @@ import com.squareup.moshi.Json
  * @param message 
  * @param createdAt 
  * @param isChecked 
+ * @param isDeleted 
  */
 
 data class NotificationViewModel (
@@ -49,6 +50,8 @@ data class NotificationViewModel (
     @Json(name = "createdAt")
     val createdAt: java.time.LocalDateTime? = null,
     @Json(name = "isChecked")
-    val isChecked: kotlin.Boolean? = null
+    val isChecked: kotlin.Boolean? = null,
+    @Json(name = "isDeleted")
+    val isDeleted: kotlin.Boolean? = null
 )
 

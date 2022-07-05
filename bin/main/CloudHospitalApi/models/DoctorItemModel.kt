@@ -1,5 +1,5 @@
 /**
-* Swagger UI - Cloud Hospital Api-DEV
+* Swagger UI - Cloud Hospital Api-INT
 * Cloud Hospital application with Swagger, Swashbuckle, and API versioning.
 *
 * The version of the OpenAPI document: 2
@@ -11,87 +11,39 @@
 */
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.Gender
+import CloudHospitalApi.models.DoctorAffiliationItemModel
+import CloudHospitalApi.models.DoctorSpecialtyItemModel
 
 import com.squareup.moshi.Json
 
 /**
  * 
  * @param id 
- * @param userName 
- * @param firstName 
- * @param middleName 
- * @param lastName 
- * @param fullName 
+ * @param name 
  * @param slug 
- * @param phone 
- * @param email 
- * @param photo 
- * @param photoThumbnail 
- * @param gender 
- * @param dateOfBirth 
- * @param timeZone 
- * @param communicationUserId 
- * @param auditableEntity 
- * @param hospitalId 
- * @param hospitalName 
- * @param hospitalSlug 
- * @param startPracticeDate 
- * @param overview 
  * @param consultationEnabled 
  * @param consultationFee 
  * @param confirmed 
+ * @param doctorSpecialties 
+ * @param doctorAffiliations 
  */
 
 data class DoctorItemModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
-    @Json(name = "userName")
-    val userName: kotlin.String? = null,
-    @Json(name = "firstName")
-    val firstName: kotlin.String? = null,
-    @Json(name = "middleName")
-    val middleName: kotlin.String? = null,
-    @Json(name = "lastName")
-    val lastName: kotlin.String? = null,
-    @Json(name = "fullName")
-    val fullName: kotlin.String? = null,
+    @Json(name = "name")
+    val name: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @Json(name = "phone")
-    val phone: kotlin.String? = null,
-    @Json(name = "email")
-    val email: kotlin.String? = null,
-    @Json(name = "photo")
-    val photo: kotlin.String? = null,
-    @Json(name = "photoThumbnail")
-    val photoThumbnail: kotlin.String? = null,
-    @Json(name = "gender")
-    val gender: Gender? = null,
-    @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
-    @Json(name = "timeZone")
-    val timeZone: kotlin.String? = null,
-    @Json(name = "communicationUserId")
-    val communicationUserId: kotlin.String? = null,
-    @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
-    @Json(name = "hospitalId")
-    val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
-    val hospitalName: kotlin.String? = null,
-    @Json(name = "hospitalSlug")
-    val hospitalSlug: kotlin.String? = null,
-    @Json(name = "startPracticeDate")
-    val startPracticeDate: java.time.LocalDateTime? = null,
-    @Json(name = "overview")
-    val overview: kotlin.String? = null,
     @Json(name = "consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
     @Json(name = "consultationFee")
     val consultationFee: kotlin.Double? = null,
     @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null
+    val confirmed: kotlin.Boolean? = null,
+    @Json(name = "doctorSpecialties")
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemModel>? = null,
+    @Json(name = "doctorAffiliations")
+    val doctorAffiliations: kotlin.collections.List<DoctorAffiliationItemModel>? = null
 )
 

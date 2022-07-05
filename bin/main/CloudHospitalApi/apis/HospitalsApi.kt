@@ -44,7 +44,6 @@ interface HospitalsApi {
      * @param marketingType  (optional)
      * @param specialtyTypeId  (optional)
      * @param specialtyId  (optional)
-     * @param serviceId  (optional)
      * @param exceptHospitalId  (optional)
      * @param showHidden  (optional)
      * @param languageCode  (optional)
@@ -57,7 +56,7 @@ interface HospitalsApi {
      * @return [HospitalsModel]
      */
     @GET("api/v2/hospitals")
-    suspend fun apiV2HospitalsGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("PaymentEnabled") paymentEnabled: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalsModel>
+    suspend fun apiV2HospitalsGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("PaymentEnabled") paymentEnabled: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalsModel>
 
     /**
      * Get HospitalAccreditation.
@@ -501,7 +500,6 @@ interface HospitalsApi {
      * @param marketingType  (optional)
      * @param specialtyTypeId  (optional)
      * @param specialtyId  (optional)
-     * @param serviceId  (optional)
      * @param exceptHospitalId  (optional)
      * @param showHidden  (optional)
      * @param languageCode  (optional)
@@ -514,7 +512,7 @@ interface HospitalsApi {
      * @return [HospitalsSimpleModel]
      */
     @GET("api/v2/hospitals/simple")
-    suspend fun apiV2HospitalsSimpleGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("PaymentEnabled") paymentEnabled: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalsSimpleModel>
+    suspend fun apiV2HospitalsSimpleGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("PaymentEnabled") paymentEnabled: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalsSimpleModel>
 
     /**
      * 

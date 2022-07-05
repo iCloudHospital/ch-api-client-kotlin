@@ -12,12 +12,13 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.ArticleContributorItemViewModel
-import CloudHospitalApi.models.ArticleSourceItemViewModel
 import CloudHospitalApi.models.ArticleStatus
 import CloudHospitalApi.models.ArticleTagItemViewModel
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.LocalizedUrlViewModel
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaViewModel
+import CloudHospitalApi.models.SourceViewModel
 
 import com.squareup.moshi.Json
 
@@ -37,10 +38,12 @@ import com.squareup.moshi.Json
  * @param hospitalSlug 
  * @param youtubeUrl 
  * @param articleTags 
- * @param articleSources 
  * @param articleContributors 
  * @param medias 
+ * @param sources 
  * @param auditableEntity 
+ * @param localizedUrls 
+ * @param confirmed 
  */
 
 data class ArticleItemViewModel (
@@ -72,13 +75,17 @@ data class ArticleItemViewModel (
     val youtubeUrl: kotlin.String? = null,
     @Json(name = "articleTags")
     val articleTags: kotlin.collections.List<ArticleTagItemViewModel>? = null,
-    @Json(name = "articleSources")
-    val articleSources: kotlin.collections.List<ArticleSourceItemViewModel>? = null,
     @Json(name = "articleContributors")
     val articleContributors: kotlin.collections.List<ArticleContributorItemViewModel>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
+    @Json(name = "sources")
+    val sources: kotlin.collections.List<SourceViewModel>? = null,
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlViewModel>? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

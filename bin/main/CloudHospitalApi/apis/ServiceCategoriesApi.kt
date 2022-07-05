@@ -19,16 +19,14 @@ interface ServiceCategoriesApi {
      * 
      * @param id  (optional)
      * @param name  (optional)
-     * @param description  (optional)
      * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [ServiceCategoriesViewModel]
      */
     @GET("api/v1/servicecategories")
-    suspend fun apiV1ServicecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ServiceCategoriesViewModel>
+    suspend fun apiV1ServicecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ServiceCategoriesViewModel>
 
     /**
      * Create ServiceCategory.

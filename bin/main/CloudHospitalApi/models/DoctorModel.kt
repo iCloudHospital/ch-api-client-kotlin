@@ -1,5 +1,5 @@
 /**
-* Swagger UI - Cloud Hospital Api-DEV
+* Swagger UI - Cloud Hospital Api-INT
 * Cloud Hospital application with Swagger, Swashbuckle, and API versioning.
 *
 * The version of the OpenAPI document: 2
@@ -12,10 +12,13 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.DoctorAffiliationModel
+import CloudHospitalApi.models.DoctorSpecialtyItemModel
 import CloudHospitalApi.models.Gender
 import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.UserLanguageModel
 import CloudHospitalApi.models.UserLocationModel
+import CloudHospitalApi.models.UserTranslationModel
 
 import com.squareup.moshi.Json
 
@@ -41,9 +44,6 @@ import com.squareup.moshi.Json
  * @param languages 
  * @param locations 
  * @param languageCode 
- * @param hospitalId 
- * @param hospitalName 
- * @param hospitalSlug 
  * @param startPracticeDate 
  * @param overview 
  * @param description 
@@ -51,6 +51,9 @@ import com.squareup.moshi.Json
  * @param consultationEnabled 
  * @param consultationFee 
  * @param confirmed 
+ * @param doctorSpecialties 
+ * @param doctorAffiliations 
+ * @param translations 
  * @param localizedUrls 
  */
 
@@ -95,12 +98,6 @@ data class DoctorModel (
     val locations: kotlin.collections.List<UserLocationModel>? = null,
     @Json(name = "languageCode")
     val languageCode: kotlin.String? = null,
-    @Json(name = "hospitalId")
-    val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
-    val hospitalName: kotlin.String? = null,
-    @Json(name = "hospitalSlug")
-    val hospitalSlug: kotlin.String? = null,
     @Json(name = "startPracticeDate")
     val startPracticeDate: java.time.LocalDateTime? = null,
     @Json(name = "overview")
@@ -115,6 +112,12 @@ data class DoctorModel (
     val consultationFee: kotlin.Double? = null,
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
+    @Json(name = "doctorSpecialties")
+    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemModel>? = null,
+    @Json(name = "doctorAffiliations")
+    val doctorAffiliations: kotlin.collections.List<DoctorAffiliationModel>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<UserTranslationModel>? = null,
     @Json(name = "localizedUrls")
     val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
 )

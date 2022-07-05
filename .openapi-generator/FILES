@@ -22,11 +22,7 @@ docs/ArticleTagsModel.md
 docs/ArticlesApi.md
 docs/ArticlesModel.md
 docs/AuditableEntity.md
-docs/AutocompleteMode.md
 docs/AwardModel.md
-docs/AzureSearchModel.md
-docs/AzureSearchServiceAutocompleteModel.md
-docs/AzureSearchServiceSuggestModel.md
 docs/BookingChangeLogModel.md
 docs/BookingItemModel.md
 docs/BookingModel.md
@@ -95,6 +91,7 @@ docs/DoctorPortfolioModel.md
 docs/DoctorPortfoliosModel.md
 docs/DoctorSimpleItemModel.md
 docs/DoctorSpecialtiesModel.md
+docs/DoctorSpecialtyItemModel.md
 docs/DoctorSpecialtyModel.md
 docs/DoctorsApi.md
 docs/DoctorsModel.md
@@ -177,7 +174,6 @@ docs/RecurringInterval.md
 docs/RefundPolicy.md
 docs/RejectReason.md
 docs/ReviewType.md
-docs/SearchApi.md
 docs/SendBirdGroupChannelMember.md
 docs/SendBirdGroupChannelModel.md
 docs/SendBirdGroupChannelrOperator.md
@@ -222,6 +218,7 @@ docs/UserLanguageModel.md
 docs/UserLocationModel.md
 docs/UserLocationType.md
 docs/UserModel.md
+docs/UserTranslationModel.md
 docs/WorkingDay.md
 docs/WorkingDayItemModel.md
 docs/WorkingDayModel.md
@@ -253,7 +250,6 @@ src/main/kotlin/CloudHospitalApi/apis/NotificationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/PatientsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/PlansApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ProfilesApi.kt
-src/main/kotlin/CloudHospitalApi/apis/SearchApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ServiceReviewsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ServicesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ServicesCategoriesApi.kt
@@ -294,11 +290,7 @@ src/main/kotlin/CloudHospitalApi/models/ArticleTagModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleTagsModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticlesModel.kt
 src/main/kotlin/CloudHospitalApi/models/AuditableEntity.kt
-src/main/kotlin/CloudHospitalApi/models/AutocompleteMode.kt
 src/main/kotlin/CloudHospitalApi/models/AwardModel.kt
-src/main/kotlin/CloudHospitalApi/models/AzureSearchModel.kt
-src/main/kotlin/CloudHospitalApi/models/AzureSearchServiceAutocompleteModel.kt
-src/main/kotlin/CloudHospitalApi/models/AzureSearchServiceSuggestModel.kt
 src/main/kotlin/CloudHospitalApi/models/BookingChangeLogModel.kt
 src/main/kotlin/CloudHospitalApi/models/BookingItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/BookingModel.kt
@@ -360,6 +352,7 @@ src/main/kotlin/CloudHospitalApi/models/DoctorPortfolioModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorPortfoliosModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorSimpleItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorSpecialtiesModel.kt
+src/main/kotlin/CloudHospitalApi/models/DoctorSpecialtyItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorSpecialtyModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorsModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorsSimpleModel.kt
@@ -468,6 +461,7 @@ src/main/kotlin/CloudHospitalApi/models/UserLanguageModel.kt
 src/main/kotlin/CloudHospitalApi/models/UserLocationModel.kt
 src/main/kotlin/CloudHospitalApi/models/UserLocationType.kt
 src/main/kotlin/CloudHospitalApi/models/UserModel.kt
+src/main/kotlin/CloudHospitalApi/models/UserTranslationModel.kt
 src/main/kotlin/CloudHospitalApi/models/WorkingDay.kt
 src/main/kotlin/CloudHospitalApi/models/WorkingDayItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/WorkingDayModel.kt

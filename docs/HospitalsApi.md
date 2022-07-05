@@ -53,7 +53,6 @@ val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.L
 val marketingType : MarketingType =  // MarketingType | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
@@ -65,7 +64,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalsModel = webService.apiV2HospitalsGet(hospitalId, name, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, returnDefaultValue, paymentEnabled, page, limit, lastRetrieved)
+    val result : HospitalsModel = webService.apiV2HospitalsGet(hospitalId, name, countryId, created, marketingType, specialtyTypeId, specialtyId, exceptHospitalId, showHidden, languageCode, ids, returnDefaultValue, paymentEnabled, page, limit, lastRetrieved)
 }
 ```
 
@@ -80,7 +79,6 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
  **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
- **serviceId** | [**java.util.UUID**](.md)|  | [optional]
  **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **showHidden** | **kotlin.Boolean**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
@@ -1331,7 +1329,6 @@ val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.L
 val marketingType : MarketingType =  // MarketingType | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
@@ -1343,7 +1340,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalsSimpleModel = webService.apiV2HospitalsSimpleGet(hospitalId, name, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, returnDefaultValue, paymentEnabled, page, limit, lastRetrieved)
+    val result : HospitalsSimpleModel = webService.apiV2HospitalsSimpleGet(hospitalId, name, countryId, created, marketingType, specialtyTypeId, specialtyId, exceptHospitalId, showHidden, languageCode, ids, returnDefaultValue, paymentEnabled, page, limit, lastRetrieved)
 }
 ```
 
@@ -1358,7 +1355,6 @@ Name | Type | Description  | Notes
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
  **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
- **serviceId** | [**java.util.UUID**](.md)|  | [optional]
  **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **showHidden** | **kotlin.Boolean**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]

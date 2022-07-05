@@ -17,6 +17,7 @@ import com.squareup.moshi.Json
 
 /**
  * 
+ * @param articleId 
  * @param contributorId 
  * @param contributorName 
  * @param contributorSlug 
@@ -29,6 +30,8 @@ import com.squareup.moshi.Json
  */
 
 data class ArticleContributorItemViewModel (
+    @Json(name = "articleId")
+    val articleId: java.util.UUID? = null,
     @Json(name = "contributorId")
     val contributorId: java.util.UUID? = null,
     @Json(name = "contributorName")

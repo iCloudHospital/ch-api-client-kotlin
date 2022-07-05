@@ -19,15 +19,14 @@ interface SpecialtyTypeCategoriesApi {
      * 
      * @param id  (optional)
      * @param name  (optional)
-     * @param description  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [SpecialtyTypeCategoriesViewModel]
      */
     @GET("api/v1/specialtytypecategories")
-    suspend fun apiV1SpecialtytypecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<SpecialtyTypeCategoriesViewModel>
+    suspend fun apiV1SpecialtytypecategoriesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypeCategoriesViewModel>
 
     /**
      * Create specialtyTypeCategory.
@@ -64,10 +63,11 @@ interface SpecialtyTypeCategoriesApi {
      *  - 200: Success
      * 
      * @param specialtyTypeCategoryId  
+     * @param languageCode  (optional, default to "")
      * @return [SpecialtyTypeCategoryViewModel]
      */
     @GET("api/v1/specialtytypecategories/{specialtyTypeCategoryId}")
-    suspend fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID): Response<SpecialtyTypeCategoryViewModel>
+    suspend fun apiV1SpecialtytypecategoriesSpecialtyTypeCategoryIdGet(@Path("specialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<SpecialtyTypeCategoryViewModel>
 
     /**
      * Update specialtyTypeCategory

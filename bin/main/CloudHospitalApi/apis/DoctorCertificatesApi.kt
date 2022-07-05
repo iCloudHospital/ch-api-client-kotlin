@@ -6,7 +6,6 @@ import retrofit2.Response
 import okhttp3.RequestBody
 
 import CloudHospitalApi.models.CreateDoctorCertificateCommand
-import CloudHospitalApi.models.DoctorCertificate
 import CloudHospitalApi.models.DoctorCertificateViewModel
 import CloudHospitalApi.models.DoctorCertificatesViewModel
 import CloudHospitalApi.models.UpdateDoctorCertificateCommand
@@ -27,11 +26,10 @@ interface DoctorCertificatesApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [DoctorCertificatesViewModel]
      */
     @GET("api/v1/doctors/certificates")
-    suspend fun apiV1DoctorsCertificatesGet(@Query("Id") id: java.util.UUID? = null, @Query("DoctorId") doctorId: java.util.UUID? = null, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("Certificate") certificate: kotlin.String? = null, @Query("ActiveFrom") activeFrom: java.time.LocalDateTime? = null, @Query("ActiveTo") activeTo: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DoctorCertificatesViewModel>
+    suspend fun apiV1DoctorsCertificatesGet(@Query("Id") id: java.util.UUID? = null, @Query("DoctorId") doctorId: java.util.UUID? = null, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("Certificate") certificate: kotlin.String? = null, @Query("ActiveFrom") activeFrom: java.time.LocalDateTime? = null, @Query("ActiveTo") activeTo: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorCertificatesViewModel>
 
     /**
      * Delete certificate.
@@ -72,10 +70,10 @@ interface DoctorCertificatesApi {
      * @param doctorId  
      * @param certificateId  
      * @param updateDoctorCertificateCommand  (optional)
-     * @return [kotlin.Boolean]
+     * @return [DoctorCertificateViewModel]
      */
     @PUT("api/v1/doctors/{doctorId}/certificates/{certificateId}")
-    suspend fun apiV1DoctorsDoctorIdCertificatesCertificateIdPut(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID, @Body updateDoctorCertificateCommand: UpdateDoctorCertificateCommand? = null): Response<kotlin.Boolean>
+    suspend fun apiV1DoctorsDoctorIdCertificatesCertificateIdPut(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID, @Body updateDoctorCertificateCommand: UpdateDoctorCertificateCommand? = null): Response<DoctorCertificateViewModel>
 
     /**
      * Create certificate.
@@ -87,9 +85,9 @@ interface DoctorCertificatesApi {
      * 
      * @param doctorId  
      * @param createDoctorCertificateCommand  (optional)
-     * @return [DoctorCertificate]
+     * @return [DoctorCertificateViewModel]
      */
     @POST("api/v1/doctors/{doctorId}/certificates")
-    suspend fun apiV1DoctorsDoctorIdCertificatesPost(@Path("doctorId") doctorId: java.util.UUID, @Body createDoctorCertificateCommand: CreateDoctorCertificateCommand? = null): Response<DoctorCertificate>
+    suspend fun apiV1DoctorsDoctorIdCertificatesPost(@Path("doctorId") doctorId: java.util.UUID, @Body createDoctorCertificateCommand: CreateDoctorCertificateCommand? = null): Response<DoctorCertificateViewModel>
 
 }

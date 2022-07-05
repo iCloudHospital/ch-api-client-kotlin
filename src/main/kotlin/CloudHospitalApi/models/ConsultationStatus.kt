@@ -1,5 +1,5 @@
 /**
-* Swagger UI - Cloud Hospital Api-DEV
+* Swagger UI - Cloud Hospital Api-INT
 * Cloud Hospital application with Swagger, Swashbuckle, and API versioning.
 *
 * The version of the OpenAPI document: 2

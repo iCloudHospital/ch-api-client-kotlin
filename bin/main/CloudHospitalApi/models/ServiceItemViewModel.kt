@@ -37,6 +37,7 @@ import com.squareup.moshi.Json
  * @param priceReuqest 
  * @param order 
  * @param auditableEntity 
+ * @param confirmed 
  */
 
 data class ServiceItemViewModel (
@@ -75,6 +76,8 @@ data class ServiceItemViewModel (
     @Json(name = "order")
     val order: kotlin.Int? = null,
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

@@ -19,10 +19,13 @@ import com.squareup.moshi.Json
  * 
  * @param name 
  * @param description 
+ * @param content 
  * @param minPrice 
  * @param maxPrice 
  * @param priceReuqest 
  * @param procedure 
+ * @param serviceCategoryId 
+ * @param order 
  */
 
 data class CreateServiceCommand (
@@ -30,6 +33,8 @@ data class CreateServiceCommand (
     val name: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
+    @Json(name = "content")
+    val content: kotlin.String? = null,
     @Json(name = "minPrice")
     val minPrice: kotlin.Double? = null,
     @Json(name = "maxPrice")
@@ -37,6 +42,10 @@ data class CreateServiceCommand (
     @Json(name = "priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
     @Json(name = "procedure")
-    val procedure: Procedure? = null
+    val procedure: Procedure? = null,
+    @Json(name = "serviceCategoryId")
+    val serviceCategoryId: java.util.UUID? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null
 )
 

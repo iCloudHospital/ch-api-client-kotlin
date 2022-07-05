@@ -24,9 +24,6 @@ Name | Type | Description | Notes
 **languages** | [**kotlin.collections.List&lt;UserLanguageModel&gt;**](UserLanguageModel.md) |  |  [optional]
 **locations** | [**kotlin.collections.List&lt;UserLocationModel&gt;**](UserLocationModel.md) |  |  [optional]
 **languageCode** | **kotlin.String** |  |  [optional]
-**hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
-**hospitalName** | **kotlin.String** |  |  [optional]
-**hospitalSlug** | **kotlin.String** |  |  [optional]
 **startPracticeDate** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **overview** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
@@ -34,6 +31,9 @@ Name | Type | Description | Notes
 **consultationEnabled** | **kotlin.Boolean** |  |  [optional]
 **consultationFee** | **kotlin.Double** |  |  [optional]
 **confirmed** | **kotlin.Boolean** |  |  [optional]
+**doctorSpecialties** | [**kotlin.collections.List&lt;DoctorSpecialtyItemModel&gt;**](DoctorSpecialtyItemModel.md) |  |  [optional]
+**doctorAffiliations** | [**kotlin.collections.List&lt;DoctorAffiliationModel&gt;**](DoctorAffiliationModel.md) |  |  [optional]
+**translations** | [**kotlin.collections.List&lt;UserTranslationModel&gt;**](UserTranslationModel.md) |  |  [optional]
 **localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlModel&gt;**](LocalizedUrlModel.md) |  |  [optional]
 
 
