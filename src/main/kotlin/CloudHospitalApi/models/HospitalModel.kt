@@ -11,10 +11,9 @@
 */
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.AccreditationModel
-import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.AwardModel
-import CloudHospitalApi.models.HospitalEvaluationModel
+import CloudHospitalApi.models.HospitalAccreditationItemModel
+import CloudHospitalApi.models.HospitalEvaluationItemModel
 import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.LocationModel
 import CloudHospitalApi.models.MarketingType
@@ -29,47 +28,38 @@ import com.squareup.moshi.Json
  * @param id 
  * @param name 
  * @param slug 
- * @param description 
  * @param logo 
- * @param overview 
- * @param bedsCount 
- * @param operationsPerYear 
- * @param foundationYear 
- * @param medicalStaffCount 
- * @param doctorCount 
+ * @param confirmed 
  * @param countryId 
  * @param countryName 
+ * @param countrySlug 
  * @param marketingType 
  * @param consultationEnabled 
  * @param consultationFee 
  * @param timeZone 
  * @param websiteUrl 
- * @param articlesCount 
- * @param packagesCount 
- * @param equipmentsCount 
- * @param reviewsCount 
- * @param departmentsCount 
- * @param specialtiesCount 
- * @param accreditationsCount 
- * @param doctorAffiliationsCount 
- * @param managerAffiliationsCount 
- * @param specialtiesSummerized 
  * @param paymentEnabled 
- * @param confirmed 
- * @param awards 
- * @param medias 
+ * @param specialtiesSummerized 
  * @param accreditations 
- * @param evaluations 
+ * @param medias 
  * @param location 
- * @param auditableEntity 
  * @param languageCode 
+ * @param description 
+ * @param overview 
  * @param content 
+ * @param bedsCount 
+ * @param operationsPerYear 
+ * @param foundationYear 
+ * @param medicalStaffCount 
+ * @param doctorCount 
  * @param contactTel 
  * @param contactEmail 
  * @param customStyle 
+ * @param evaluations 
  * @param hospitalWorkingDays 
  * @param hospitalSnsHandles 
  * @param localizedUrls 
+ * @param awards 
  */
 
 data class HospitalModel (
@@ -79,26 +69,16 @@ data class HospitalModel (
     val name: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @Json(name = "description")
-    val description: kotlin.String? = null,
     @Json(name = "logo")
     val logo: kotlin.String? = null,
-    @Json(name = "overview")
-    val overview: kotlin.String? = null,
-    @Json(name = "bedsCount")
-    val bedsCount: kotlin.Int? = null,
-    @Json(name = "operationsPerYear")
-    val operationsPerYear: kotlin.Int? = null,
-    @Json(name = "foundationYear")
-    val foundationYear: kotlin.Int? = null,
-    @Json(name = "medicalStaffCount")
-    val medicalStaffCount: kotlin.Int? = null,
-    @Json(name = "doctorCount")
-    val doctorCount: kotlin.Int? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
     @Json(name = "countryId")
     val countryId: java.util.UUID? = null,
     @Json(name = "countryName")
     val countryName: kotlin.String? = null,
+    @Json(name = "countrySlug")
+    val countrySlug: kotlin.String? = null,
     @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
     @Json(name = "consultationEnabled")
@@ -109,57 +89,49 @@ data class HospitalModel (
     val timeZone: kotlin.String? = null,
     @Json(name = "websiteUrl")
     val websiteUrl: kotlin.String? = null,
-    @Json(name = "articlesCount")
-    val articlesCount: kotlin.Int? = null,
-    @Json(name = "packagesCount")
-    val packagesCount: kotlin.Int? = null,
-    @Json(name = "equipmentsCount")
-    val equipmentsCount: kotlin.Int? = null,
-    @Json(name = "reviewsCount")
-    val reviewsCount: kotlin.Int? = null,
-    @Json(name = "departmentsCount")
-    val departmentsCount: kotlin.Int? = null,
-    @Json(name = "specialtiesCount")
-    val specialtiesCount: kotlin.Int? = null,
-    @Json(name = "accreditationsCount")
-    val accreditationsCount: kotlin.Int? = null,
-    @Json(name = "doctorAffiliationsCount")
-    val doctorAffiliationsCount: kotlin.Int? = null,
-    @Json(name = "managerAffiliationsCount")
-    val managerAffiliationsCount: kotlin.Int? = null,
-    @Json(name = "specialtiesSummerized")
-    val specialtiesSummerized: kotlin.String? = null,
     @Json(name = "paymentEnabled")
     val paymentEnabled: kotlin.Boolean? = null,
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
-    @Json(name = "awards")
-    val awards: kotlin.collections.List<AwardModel>? = null,
+    @Json(name = "specialtiesSummerized")
+    val specialtiesSummerized: kotlin.String? = null,
+    @Json(name = "accreditations")
+    val accreditations: kotlin.collections.List<HospitalAccreditationItemModel>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaModel>? = null,
-    @Json(name = "accreditations")
-    val accreditations: kotlin.collections.List<AccreditationModel>? = null,
-    @Json(name = "evaluations")
-    val evaluations: kotlin.collections.List<HospitalEvaluationModel>? = null,
     @Json(name = "location")
     val location: LocationModel? = null,
-    @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
     @Json(name = "languageCode")
     val languageCode: kotlin.String? = null,
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
+    @Json(name = "bedsCount")
+    val bedsCount: kotlin.Int? = null,
+    @Json(name = "operationsPerYear")
+    val operationsPerYear: kotlin.Int? = null,
+    @Json(name = "foundationYear")
+    val foundationYear: kotlin.Int? = null,
+    @Json(name = "medicalStaffCount")
+    val medicalStaffCount: kotlin.Int? = null,
+    @Json(name = "doctorCount")
+    val doctorCount: kotlin.Int? = null,
     @Json(name = "contactTel")
     val contactTel: kotlin.String? = null,
     @Json(name = "contactEmail")
     val contactEmail: kotlin.String? = null,
     @Json(name = "customStyle")
     val customStyle: kotlin.String? = null,
+    @Json(name = "evaluations")
+    val evaluations: kotlin.collections.List<HospitalEvaluationItemModel>? = null,
     @Json(name = "hospitalWorkingDays")
     val hospitalWorkingDays: kotlin.collections.List<WorkingDay>? = null,
     @Json(name = "hospitalSnsHandles")
     val hospitalSnsHandles: kotlin.collections.List<SnsHandle>? = null,
     @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
+    @Json(name = "awards")
+    val awards: kotlin.collections.List<AwardModel>? = null
 )
 

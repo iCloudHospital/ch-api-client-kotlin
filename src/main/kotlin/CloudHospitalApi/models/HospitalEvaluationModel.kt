@@ -16,9 +16,6 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param id 
- * @param hospitalId 
- * @param hospitalName 
  * @param name 
  * @param stars 
  * @param description 
@@ -26,12 +23,6 @@ import com.squareup.moshi.Json
  */
 
 data class HospitalEvaluationModel (
-    @Json(name = "id")
-    val id: java.util.UUID? = null,
-    @Json(name = "hospitalId")
-    val hospitalId: java.util.UUID? = null,
-    @Json(name = "hospitalName")
-    val hospitalName: kotlin.String? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "stars")
