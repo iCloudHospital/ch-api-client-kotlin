@@ -25,6 +25,12 @@ import com.squareup.moshi.Json
  * @param specialty 
  * @param order 
  * @param services 
+ * @param title 
+ * @param normalizedTitle 
+ * @param description 
+ * @param body 
+ * @param photo 
+ * @param photoThumbnail 
  */
 
 data class HospitalSpecialty (
@@ -39,6 +45,18 @@ data class HospitalSpecialty (
     @Json(name = "order")
     val order: kotlin.Int? = null,
     @Json(name = "services")
-    val services: kotlin.collections.List<Service>? = null
+    val services: kotlin.collections.List<Service>? = null,
+    @Json(name = "title")
+    val title: kotlin.String? = null,
+    @Json(name = "normalizedTitle")
+    val normalizedTitle: kotlin.String? = null,
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+    @Json(name = "body")
+    val body: kotlin.String? = null,
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null
 )
 

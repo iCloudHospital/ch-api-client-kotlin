@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1SearchAutocompleteGet**](SearchApi.md#apiV1SearchAutocompleteGet) | **GET** api/v1/search/autocomplete | 
-[**apiV1SearchDealsGet**](SearchApi.md#apiV1SearchDealsGet) | **GET** api/v1/search/deals | 
-[**apiV1SearchDoctorsGet**](SearchApi.md#apiV1SearchDoctorsGet) | **GET** api/v1/search/doctors | 
-[**apiV1SearchGetcountGet**](SearchApi.md#apiV1SearchGetcountGet) | **GET** api/v1/search/getcount | 
-[**apiV1SearchHospitalsGet**](SearchApi.md#apiV1SearchHospitalsGet) | **GET** api/v1/search/hospitals | 
-[**apiV1SearchSpecialtiesGet**](SearchApi.md#apiV1SearchSpecialtiesGet) | **GET** api/v1/search/specialties | 
-[**apiV1SearchSpecialtytypesGet**](SearchApi.md#apiV1SearchSpecialtytypesGet) | **GET** api/v1/search/specialtytypes | 
-[**apiV1SearchSuggestGet**](SearchApi.md#apiV1SearchSuggestGet) | **GET** api/v1/search/suggest | 
+[**apiV2SearchAutocompleteGet**](SearchApi.md#apiV2SearchAutocompleteGet) | **GET** api/v2/search/autocomplete | 
+[**apiV2SearchDealsGet**](SearchApi.md#apiV2SearchDealsGet) | **GET** api/v2/search/deals | 
+[**apiV2SearchDoctorsGet**](SearchApi.md#apiV2SearchDoctorsGet) | **GET** api/v2/search/doctors | 
+[**apiV2SearchGetcountGet**](SearchApi.md#apiV2SearchGetcountGet) | **GET** api/v2/search/getcount | 
+[**apiV2SearchHospitalsGet**](SearchApi.md#apiV2SearchHospitalsGet) | **GET** api/v2/search/hospitals | 
+[**apiV2SearchSpecialtiesGet**](SearchApi.md#apiV2SearchSpecialtiesGet) | **GET** api/v2/search/specialties | 
+[**apiV2SearchSpecialtytypesGet**](SearchApi.md#apiV2SearchSpecialtytypesGet) | **GET** api/v2/search/specialtytypes | 
+[**apiV2SearchSuggestGet**](SearchApi.md#apiV2SearchSuggestGet) | **GET** api/v2/search/suggest | 
 
 
 
@@ -34,7 +34,7 @@ val size : kotlin.Int = 56 // kotlin.Int |
 val minimumCoverage : kotlin.Double = 1.2 // kotlin.Double | 
 
 launch(Dispatchers.IO) {
-    val result : AzureSearchServiceAutocompleteModel = webService.apiV1SearchAutocompleteGet(keyword, mode, fuzzy, highlights, size, minimumCoverage)
+    val result : AzureSearchServiceAutocompleteModel = webService.apiV2SearchAutocompleteGet(keyword, mode, fuzzy, highlights, size, minimumCoverage)
 }
 ```
 
@@ -85,7 +85,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DealsViewModel = webService.apiV1SearchDealsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : DealsModel = webService.apiV2SearchDealsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DealsViewModel**](DealsViewModel.md)
+[**DealsModel**](DealsModel.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorsViewModel = webService.apiV1SearchDoctorsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : DoctorsModel = webService.apiV2SearchDoctorsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DoctorsViewModel**](DoctorsViewModel.md)
+[**DoctorsModel**](DoctorsModel.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : AzureSearchViewModel = webService.apiV1SearchGetcountGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : AzureSearchModel = webService.apiV2SearchGetcountGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AzureSearchViewModel**](AzureSearchViewModel.md)
+[**AzureSearchModel**](AzureSearchModel.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalsViewModel = webService.apiV1SearchHospitalsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : HospitalsModel = webService.apiV2SearchHospitalsGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HospitalsViewModel**](HospitalsViewModel.md)
+[**HospitalsModel**](HospitalsModel.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtiesViewModel = webService.apiV1SearchSpecialtiesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : SpecialtiesModel = webService.apiV2SearchSpecialtiesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SpecialtiesViewModel**](SpecialtiesViewModel.md)
+[**SpecialtiesModel**](SpecialtiesModel.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtyTypesViewModel = webService.apiV1SearchSpecialtytypesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : SpecialtyTypesModel = webService.apiV2SearchSpecialtytypesGet(searchTerm, countOnly, countryId, hospitalId, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SpecialtyTypesViewModel**](SpecialtyTypesViewModel.md)
+[**SpecialtyTypesModel**](SpecialtyTypesModel.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ val highlights : kotlin.Boolean = true // kotlin.Boolean |
 val size : kotlin.Int = 56 // kotlin.Int | 
 
 launch(Dispatchers.IO) {
-    val result : AzureSearchServiceSuggestModel = webService.apiV1SearchSuggestGet(keyword, fuzzy, highlights, size)
+    val result : AzureSearchServiceSuggestModel = webService.apiV2SearchSuggestGet(keyword, fuzzy, highlights, size)
 }
 ```
 

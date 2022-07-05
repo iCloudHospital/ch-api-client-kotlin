@@ -11,8 +11,6 @@
 */
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.Procedure
 
 import com.squareup.moshi.Json
@@ -23,17 +21,12 @@ import com.squareup.moshi.Json
  * @param slug 
  * @param description 
  * @param content 
- * @param hospitalName 
- * @param specialtyTypeId 
- * @param specialtyTypeName 
- * @param specialtyName 
- * @param marketingType 
- * @param procedure 
  * @param minPrice 
  * @param maxPrice 
  * @param priceReuqest 
+ * @param procedure 
+ * @param serviceCategoryId 
  * @param order 
- * @param auditableEntity 
  */
 
 data class UpdateServiceCommand (
@@ -45,27 +38,17 @@ data class UpdateServiceCommand (
     val description: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
-    @Json(name = "hospitalName")
-    val hospitalName: kotlin.String? = null,
-    @Json(name = "specialtyTypeId")
-    val specialtyTypeId: java.util.UUID? = null,
-    @Json(name = "specialtyTypeName")
-    val specialtyTypeName: kotlin.String? = null,
-    @Json(name = "specialtyName")
-    val specialtyName: kotlin.String? = null,
-    @Json(name = "marketingType")
-    val marketingType: MarketingType? = null,
-    @Json(name = "procedure")
-    val procedure: Procedure? = null,
     @Json(name = "minPrice")
     val minPrice: kotlin.Double? = null,
     @Json(name = "maxPrice")
     val maxPrice: kotlin.Double? = null,
     @Json(name = "priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
+    @Json(name = "procedure")
+    val procedure: Procedure? = null,
+    @Json(name = "serviceCategoryId")
+    val serviceCategoryId: java.util.UUID? = null,
     @Json(name = "order")
-    val order: kotlin.Int? = null,
-    @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val order: kotlin.Int? = null
 )
 

@@ -6,15 +6,15 @@ import retrofit2.Response
 import okhttp3.RequestBody
 
 import CloudHospitalApi.models.AutocompleteMode
+import CloudHospitalApi.models.AzureSearchModel
 import CloudHospitalApi.models.AzureSearchServiceAutocompleteModel
 import CloudHospitalApi.models.AzureSearchServiceSuggestModel
-import CloudHospitalApi.models.AzureSearchViewModel
-import CloudHospitalApi.models.DealsViewModel
-import CloudHospitalApi.models.DoctorsViewModel
-import CloudHospitalApi.models.HospitalsViewModel
+import CloudHospitalApi.models.DealsModel
+import CloudHospitalApi.models.DoctorsModel
+import CloudHospitalApi.models.HospitalsModel
 import CloudHospitalApi.models.MarketingType
-import CloudHospitalApi.models.SpecialtiesViewModel
-import CloudHospitalApi.models.SpecialtyTypesViewModel
+import CloudHospitalApi.models.SpecialtiesModel
+import CloudHospitalApi.models.SpecialtyTypesModel
 
 interface SearchApi {
     /**
@@ -31,8 +31,8 @@ interface SearchApi {
      * @param minimumCoverage  (optional)
      * @return [AzureSearchServiceAutocompleteModel]
      */
-    @GET("api/v1/search/autocomplete")
-    suspend fun apiV1SearchAutocompleteGet(@Query("Keyword") keyword: kotlin.String, @Query("Mode") mode: AutocompleteMode? = null, @Query("Fuzzy") fuzzy: kotlin.Boolean? = null, @Query("Highlights") highlights: kotlin.Boolean? = null, @Query("Size") size: kotlin.Int? = null, @Query("MinimumCoverage") minimumCoverage: kotlin.Double? = null): Response<AzureSearchServiceAutocompleteModel>
+    @GET("api/v2/search/autocomplete")
+    suspend fun apiV2SearchAutocompleteGet(@Query("Keyword") keyword: kotlin.String, @Query("Mode") mode: AutocompleteMode? = null, @Query("Fuzzy") fuzzy: kotlin.Boolean? = null, @Query("Highlights") highlights: kotlin.Boolean? = null, @Query("Size") size: kotlin.Int? = null, @Query("MinimumCoverage") minimumCoverage: kotlin.Double? = null): Response<AzureSearchServiceAutocompleteModel>
 
     /**
      * 
@@ -49,10 +49,10 @@ interface SearchApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [DealsViewModel]
+     * @return [DealsModel]
      */
-    @GET("api/v1/search/deals")
-    suspend fun apiV1SearchDealsGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DealsViewModel>
+    @GET("api/v2/search/deals")
+    suspend fun apiV2SearchDealsGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DealsModel>
 
     /**
      * 
@@ -69,10 +69,10 @@ interface SearchApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [DoctorsViewModel]
+     * @return [DoctorsModel]
      */
-    @GET("api/v1/search/doctors")
-    suspend fun apiV1SearchDoctorsGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsViewModel>
+    @GET("api/v2/search/doctors")
+    suspend fun apiV2SearchDoctorsGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsModel>
 
     /**
      * 
@@ -89,10 +89,10 @@ interface SearchApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [AzureSearchViewModel]
+     * @return [AzureSearchModel]
      */
-    @GET("api/v1/search/getcount")
-    suspend fun apiV1SearchGetcountGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<AzureSearchViewModel>
+    @GET("api/v2/search/getcount")
+    suspend fun apiV2SearchGetcountGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<AzureSearchModel>
 
     /**
      * 
@@ -109,10 +109,10 @@ interface SearchApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [HospitalsViewModel]
+     * @return [HospitalsModel]
      */
-    @GET("api/v1/search/hospitals")
-    suspend fun apiV1SearchHospitalsGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalsViewModel>
+    @GET("api/v2/search/hospitals")
+    suspend fun apiV2SearchHospitalsGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalsModel>
 
     /**
      * 
@@ -129,10 +129,10 @@ interface SearchApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [SpecialtiesViewModel]
+     * @return [SpecialtiesModel]
      */
-    @GET("api/v1/search/specialties")
-    suspend fun apiV1SearchSpecialtiesGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtiesViewModel>
+    @GET("api/v2/search/specialties")
+    suspend fun apiV2SearchSpecialtiesGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtiesModel>
 
     /**
      * 
@@ -149,10 +149,10 @@ interface SearchApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [SpecialtyTypesViewModel]
+     * @return [SpecialtyTypesModel]
      */
-    @GET("api/v1/search/specialtytypes")
-    suspend fun apiV1SearchSpecialtytypesGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypesViewModel>
+    @GET("api/v2/search/specialtytypes")
+    suspend fun apiV2SearchSpecialtytypesGet(@Query("SearchTerm") searchTerm: kotlin.String? = null, @Query("CountOnly") countOnly: kotlin.Boolean? = null, @Query("CountryId") countryId: kotlin.String? = null, @Query("HospitalId") hospitalId: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypesModel>
 
     /**
      * 
@@ -166,7 +166,7 @@ interface SearchApi {
      * @param size  (optional)
      * @return [AzureSearchServiceSuggestModel]
      */
-    @GET("api/v1/search/suggest")
-    suspend fun apiV1SearchSuggestGet(@Query("Keyword") keyword: kotlin.String, @Query("Fuzzy") fuzzy: kotlin.Boolean? = null, @Query("Highlights") highlights: kotlin.Boolean? = null, @Query("Size") size: kotlin.Int? = null): Response<AzureSearchServiceSuggestModel>
+    @GET("api/v2/search/suggest")
+    suspend fun apiV2SearchSuggestGet(@Query("Keyword") keyword: kotlin.String, @Query("Fuzzy") fuzzy: kotlin.Boolean? = null, @Query("Highlights") highlights: kotlin.Boolean? = null, @Query("Size") size: kotlin.Int? = null): Response<AzureSearchServiceSuggestModel>
 
 }

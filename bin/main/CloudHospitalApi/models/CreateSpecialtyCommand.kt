@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
  * @param name 
  * @param description 
  * @param content 
+ * @param specialtyTypeId 
  */
 
 data class CreateSpecialtyCommand (
@@ -27,6 +28,8 @@ data class CreateSpecialtyCommand (
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "content")
-    val content: kotlin.String? = null
+    val content: kotlin.String? = null,
+    @Json(name = "specialtyTypeId")
+    val specialtyTypeId: java.util.UUID? = null
 )
 

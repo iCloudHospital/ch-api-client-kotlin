@@ -4,133 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1BookingsBookingIdApprovePost**](BookingsApi.md#apiV1BookingsBookingIdApprovePost) | **POST** api/v1/bookings/{bookingId}/approve | Approve booking.
-[**apiV1BookingsBookingIdCancelPost**](BookingsApi.md#apiV1BookingsBookingIdCancelPost) | **POST** api/v1/bookings/{bookingId}/cancel | Cancel booking.
-[**apiV1BookingsBookingIdDelete**](BookingsApi.md#apiV1BookingsBookingIdDelete) | **DELETE** api/v1/bookings/{bookingId} | Delete booking.
-[**apiV1BookingsBookingIdGet**](BookingsApi.md#apiV1BookingsBookingIdGet) | **GET** api/v1/bookings/{bookingId} | Get booking.
-[**apiV1BookingsBookingIdPaidPost**](BookingsApi.md#apiV1BookingsBookingIdPaidPost) | **POST** api/v1/bookings/{bookingId}/paid | Mark as Paid booking.
-[**apiV1BookingsBookingIdPayPost**](BookingsApi.md#apiV1BookingsBookingIdPayPost) | **POST** api/v1/bookings/{bookingId}/pay | Pay booking.
-[**apiV1BookingsBookingIdPut**](BookingsApi.md#apiV1BookingsBookingIdPut) | **PUT** api/v1/bookings/{bookingId} | Update booking.
-[**apiV1BookingsBookingIdRejectPost**](BookingsApi.md#apiV1BookingsBookingIdRejectPost) | **POST** api/v1/bookings/{bookingId}/reject | Reject booking.
-[**apiV1BookingsGet**](BookingsApi.md#apiV1BookingsGet) | **GET** api/v1/bookings | Get all bookings.
-[**apiV1BookingsRequestIdPost**](BookingsApi.md#apiV1BookingsRequestIdPost) | **POST** api/v1/bookings/{requestId} | Create booking.
+[**apiV2BookingsBookingIdGet**](BookingsApi.md#apiV2BookingsBookingIdGet) | **GET** api/v2/bookings/{bookingId} | Get booking.
+[**apiV2BookingsBookingIdPayPost**](BookingsApi.md#apiV2BookingsBookingIdPayPost) | **POST** api/v2/bookings/{bookingId}/pay | Pay booking.
+[**apiV2BookingsBookingIdPut**](BookingsApi.md#apiV2BookingsBookingIdPut) | **PUT** api/v2/bookings/{bookingId} | Update booking.
+[**apiV2BookingsGet**](BookingsApi.md#apiV2BookingsGet) | **GET** api/v2/bookings | Get all bookings.
+[**apiV2BookingsRequestIdPost**](BookingsApi.md#apiV2BookingsRequestIdPost) | **POST** api/v2/bookings/{requestId} | Create booking.
 
-
-
-Approve booking.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(BookingsApi::class.java)
-val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val approveBookingCommand : ApproveBookingCommand =  // ApproveBookingCommand | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdApprovePost(bookingId, approveBookingCommand)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
- **approveBookingCommand** | [**ApproveBookingCommand**](ApproveBookingCommand.md)|  | [optional]
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-
-Cancel booking.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(BookingsApi::class.java)
-val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdCancelPost(bookingId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Delete booking.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(BookingsApi::class.java)
-val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdDelete(bookingId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
 
 
 Get booking.
@@ -147,7 +26,7 @@ val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : BookingViewModel = webService.apiV1BookingsBookingIdGet(bookingId)
+    val result : BookingModel = webService.apiV2BookingsBookingIdGet(bookingId)
 }
 ```
 
@@ -159,7 +38,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingViewModel**](BookingViewModel.md)
+[**BookingModel**](BookingModel.md)
 
 ### Authorization
 
@@ -168,45 +47,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Mark as Paid booking.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(BookingsApi::class.java)
-val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : java.util.UUID = webService.apiV1BookingsBookingIdPaidPost(bookingId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-[**java.util.UUID**](java.util.UUID.md)
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
 Pay booking.
@@ -223,7 +64,7 @@ val webService = apiClient.createWebservice(BookingsApi::class.java)
 val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.String = webService.apiV1BookingsBookingIdPayPost(bookingId)
+    val result : kotlin.String = webService.apiV2BookingsBookingIdPayPost(bookingId)
 }
 ```
 
@@ -244,7 +85,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
 Update booking.
@@ -262,7 +103,7 @@ val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.ut
 val updateBookingCommand : UpdateBookingCommand =  // UpdateBookingCommand | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdPut(bookingId, updateBookingCommand)
+    val result : BookingModel = webService.apiV2BookingsBookingIdPut(bookingId, updateBookingCommand)
 }
 ```
 
@@ -275,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**kotlin.Boolean**
+[**BookingModel**](BookingModel.md)
 
 ### Authorization
 
@@ -284,47 +125,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-
-Reject booking.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(BookingsApi::class.java)
-val bookingId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val rejectBookingCommand : RejectBookingCommand =  // RejectBookingCommand | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1BookingsBookingIdRejectPost(bookingId, rejectBookingCommand)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
- **rejectBookingCommand** | [**RejectBookingCommand**](RejectBookingCommand.md)|  | [optional]
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
 Get all bookings.
@@ -343,12 +144,13 @@ val isOpen : kotlin.Boolean = true // kotlin.Boolean |
 val isCompleted : kotlin.Boolean = true // kotlin.Boolean | 
 val status : BookingStatus =  // BookingStatus | 
 val dealPackageId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : BookingsViewModel = webService.apiV1BookingsGet(searchString, isOpen, isCompleted, status, dealPackageId, page, limit, lastRetrieved)
+    val result : BookingsModel = webService.apiV2BookingsGet(searchString, isOpen, isCompleted, status, dealPackageId, hospitalId, page, limit, lastRetrieved)
 }
 ```
 
@@ -361,13 +163,14 @@ Name | Type | Description  | Notes
  **isCompleted** | **kotlin.Boolean**|  | [optional]
  **status** | [**BookingStatus**](.md)|  | [optional] [enum: New, Rejected, Approved, Paid, Canceled, RefundRequested, Refunded]
  **dealPackageId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-[**BookingsViewModel**](BookingsViewModel.md)
+[**BookingsModel**](BookingsModel.md)
 
 ### Authorization
 
@@ -376,7 +179,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
 Create booking.
@@ -394,7 +197,7 @@ val requestId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.ut
 val createBookingCommand : CreateBookingCommand =  // CreateBookingCommand | 
 
 launch(Dispatchers.IO) {
-    val result : java.util.UUID = webService.apiV1BookingsRequestIdPost(requestId, createBookingCommand)
+    val result : BookingModel = webService.apiV2BookingsRequestIdPost(requestId, createBookingCommand)
 }
 ```
 
@@ -407,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**java.util.UUID**](java.util.UUID.md)
+[**BookingModel**](BookingModel.md)
 
 ### Authorization
 
@@ -416,5 +219,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 

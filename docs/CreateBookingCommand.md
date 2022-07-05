@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **approximateDateEnd** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **comment** | **kotlin.String** |  |  [optional]
 **timeZone** | **kotlin.String** |  |  [optional]
+**isExternal** | **kotlin.Boolean** |  |  [optional]
 
 
 

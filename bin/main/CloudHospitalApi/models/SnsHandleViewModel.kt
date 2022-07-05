@@ -17,11 +17,14 @@ import com.squareup.moshi.Json
 
 /**
  * 
+ * @param id 
  * @param snsType 
  * @param handle 
  */
 
 data class SnsHandleViewModel (
+    @Json(name = "id")
+    val id: java.util.UUID? = null,
     @Json(name = "snsType")
     val snsType: SnsType? = null,
     @Json(name = "handle")

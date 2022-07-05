@@ -4,18 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1SpecialtiesGet**](SpecialtiesApi.md#apiV1SpecialtiesGet) | **GET** api/v1/specialties | Get all specialties.
-[**apiV1SpecialtiesPost**](SpecialtiesApi.md#apiV1SpecialtiesPost) | **POST** api/v1/specialties | Create specialty.
-[**apiV1SpecialtiesSlugsSlugGet**](SpecialtiesApi.md#apiV1SpecialtiesSlugsSlugGet) | **GET** api/v1/specialties/slugs/{slug} | Get specialty by slug.
-[**apiV1SpecialtiesSpecialtyIdDelete**](SpecialtiesApi.md#apiV1SpecialtiesSpecialtyIdDelete) | **DELETE** api/v1/specialties/{specialtyId} | Delete specialty.
-[**apiV1SpecialtiesSpecialtyIdGet**](SpecialtiesApi.md#apiV1SpecialtiesSpecialtyIdGet) | **GET** api/v1/specialties/{specialtyId} | Get specialty.
-[**apiV1SpecialtiesSpecialtyIdPut**](SpecialtiesApi.md#apiV1SpecialtiesSpecialtyIdPut) | **PUT** api/v1/specialties/{specialtyId} | Update specialty
+[**apiV2SpecialtiesGet**](SpecialtiesApi.md#apiV2SpecialtiesGet) | **GET** api/v2/specialties | Get all Specialties.
+[**apiV2SpecialtiesSimpleGet**](SpecialtiesApi.md#apiV2SpecialtiesSimpleGet) | **GET** api/v2/specialties/simple | Get all Specialties Simple.
+[**apiV2SpecialtiesSlugGet**](SpecialtiesApi.md#apiV2SpecialtiesSlugGet) | **GET** api/v2/specialties/{slug} | 
+[**apiV2SpecialtiesSpecialtyIdGet**](SpecialtiesApi.md#apiV2SpecialtiesSpecialtyIdGet) | **GET** api/v2/specialties/{specialtyId} | 
+[**apiV2SpecialtiesSpecialtyIdMediasGet**](SpecialtiesApi.md#apiV2SpecialtiesSpecialtyIdMediasGet) | **GET** api/v2/specialties/{specialtyId}/medias | Get all SpecialtyMedias.
+[**apiV2SpecialtiesSpecialtyIdMediasMediaIdGet**](SpecialtiesApi.md#apiV2SpecialtiesSpecialtyIdMediasMediaIdGet) | **GET** api/v2/specialties/{specialtyId}/medias/{mediaId} | Get SpecialtyMedia.
 
 
 
-Get all specialties.
-
-Sample request:        GET /api/v1/specialties
+Get all Specialties.
 
 ### Example
 ```kotlin
@@ -30,15 +28,17 @@ val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtiesViewModel = webService.apiV1SpecialtiesGet(id, name, description, specialtyTypeId, created, languageCode, ids, page, limit, lastRetrieved)
+    val result : SpecialtiesModel = webService.apiV2SpecialtiesGet(id, name, description, specialtyTypeId, hospitalId, created, languageCode, ids, returnDefaultValue, page, limit, lastRetrieved)
 }
 ```
 
@@ -50,16 +50,18 @@ Name | Type | Description  | Notes
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **created** | **java.time.LocalDateTime**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-[**SpecialtiesViewModel**](SpecialtiesViewModel.md)
+[**SpecialtiesModel**](SpecialtiesModel.md)
 
 ### Authorization
 
@@ -68,12 +70,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Create specialty.
-
-Sample request:        POST /api/v1/specialties      {          \&quot;name\&quot;: \&quot;Coronary artery disease\&quot;,          \&quot;description\&quot;: \&quot;Coronary artery disease\&quot;,          \&quot;specialtyType\&quot;: \&quot;Cardiology\&quot;      }
+Get all Specialties Simple.
 
 ### Example
 ```kotlin
@@ -84,10 +84,21 @@ Sample request:        POST /api/v1/specialties      {          \&quot;name\&quo
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
-val createSpecialtyCommand : CreateSpecialtyCommand =  // CreateSpecialtyCommand | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val description : kotlin.String = description_example // kotlin.String | 
+val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : java.util.UUID = webService.apiV1SpecialtiesPost(createSpecialtyCommand)
+    val result : SpecialtiesSimpleModel = webService.apiV2SpecialtiesSimpleGet(id, name, description, specialtyTypeId, hospitalId, created, languageCode, ids, returnDefaultValue, page, limit, lastRetrieved)
 }
 ```
 
@@ -95,23 +106,34 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createSpecialtyCommand** | [**CreateSpecialtyCommand**](CreateSpecialtyCommand.md)|  | [optional]
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **description** | **kotlin.String**|  | [optional]
+ **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **created** | **java.time.LocalDateTime**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-[**java.util.UUID**](java.util.UUID.md)
+[**SpecialtiesSimpleModel**](SpecialtiesSimpleModel.md)
 
 ### Authorization
 
-
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
-Get specialty by slug.
+
 
 ### Example
 ```kotlin
@@ -124,9 +146,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtyViewModel = webService.apiV1SpecialtiesSlugsSlugGet(slug, languageCode)
+    val result : SpecialtyModel = webService.apiV2SpecialtiesSlugGet(slug, languageCode, returnDefaultValue)
 }
 ```
 
@@ -135,11 +158,12 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **kotlin.String**|  |
- **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**SpecialtyViewModel**](SpecialtyViewModel.md)
+[**SpecialtyModel**](SpecialtyModel.md)
 
 ### Authorization
 
@@ -148,52 +172,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Delete specialty.
-
-Sample request:        DELETE /api/v1/specialties/1
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
-val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1SpecialtiesSpecialtyIdDelete(specialtyId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **specialtyId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
+ - **Accept**: application/json
 
 
 
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Get specialty.
-
-Sample request:        GET /api/v1/specialties/1
 
 ### Example
 ```kotlin
@@ -206,9 +188,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SpecialtyViewModel = webService.apiV1SpecialtiesSpecialtyIdGet(specialtyId, languageCode)
+    val result : SpecialtyModel = webService.apiV2SpecialtiesSpecialtyIdGet(specialtyId, languageCode, returnDefaultValue)
 }
 ```
 
@@ -217,11 +200,12 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **specialtyId** | [**java.util.UUID**](.md)|  |
- **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**SpecialtyViewModel**](SpecialtyViewModel.md)
+[**SpecialtyModel**](SpecialtyModel.md)
 
 ### Authorization
 
@@ -230,12 +214,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Update specialty
-
-Sample request:        PUT /api/v1/specialties/1      {          \&quot;name\&quot;: \&quot;Dilated cardiomyopathy\&quot;,          \&quot;description\&quot;: \&quot;Dilated cardiomyopathy\&quot;      }
+Get all SpecialtyMedias.
 
 ### Example
 ```kotlin
@@ -247,10 +229,14 @@ Sample request:        PUT /api/v1/specialties/1      {          \&quot;name\&qu
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val updateSpecialtyCommand : UpdateSpecialtyCommand =  // UpdateSpecialtyCommand | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaType : MediaType =  // MediaType | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1SpecialtiesSpecialtyIdPut(specialtyId, updateSpecialtyCommand)
+    val result : MediasModel = webService.apiV2SpecialtiesSpecialtyIdMediasGet(specialtyId, id, mediaType, page, limit, lastRetrieved)
 }
 ```
 
@@ -259,18 +245,62 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **specialtyId** | [**java.util.UUID**](.md)|  |
- **updateSpecialtyCommand** | [**UpdateSpecialtyCommand**](UpdateSpecialtyCommand.md)|  | [optional]
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-**kotlin.Boolean**
+[**MediasModel**](MediasModel.md)
 
 ### Authorization
 
-
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get SpecialtyMedia.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(SpecialtiesApi::class.java)
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : MediaModel = webService.apiV2SpecialtiesSpecialtyIdMediasMediaIdGet(specialtyId, mediaId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **specialtyId** | [**java.util.UUID**](.md)|  |
+ **mediaId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**MediaModel**](MediaModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 

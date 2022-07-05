@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1NotificationsCheckPost**](NotificationsApi.md#apiV1NotificationsCheckPost) | **POST** api/v1/notifications/check | Check notification.
-[**apiV1NotificationsGet**](NotificationsApi.md#apiV1NotificationsGet) | **GET** api/v1/notifications | Get all notifications.
+[**apiV2NotificationsCheckPost**](NotificationsApi.md#apiV2NotificationsCheckPost) | **POST** api/v2/notifications/check | Check notification.
+[**apiV2NotificationsGet**](NotificationsApi.md#apiV2NotificationsGet) | **GET** api/v2/notifications | Get all notifications.
 
 
 
@@ -23,7 +23,7 @@ val webService = apiClient.createWebservice(NotificationsApi::class.java)
 val checkNotificationsCommand : CheckNotificationsCommand =  // CheckNotificationsCommand | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1NotificationsCheckPost(checkNotificationsCommand)
+    val result : kotlin.Boolean = webService.apiV2NotificationsCheckPost(checkNotificationsCommand)
 }
 ```
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
 Get all notifications.
@@ -65,7 +65,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : NotificationsViewModel = webService.apiV1NotificationsGet(notificationCode, unreadCountOnly, page, limit, lastRetrieved)
+    val result : NotificationsModel = webService.apiV2NotificationsGet(notificationCode, unreadCountOnly, page, limit, lastRetrieved)
 }
 ```
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificationsViewModel**](NotificationsViewModel.md)
+[**NotificationsModel**](NotificationsModel.md)
 
 ### Authorization
 
@@ -90,5 +90,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 

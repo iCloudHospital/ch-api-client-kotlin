@@ -4,85 +4,38 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1HospitalsCurrentGet**](HospitalsApi.md#apiV1HospitalsCurrentGet) | **GET** api/v1/hospitals/current | 
-[**apiV1HospitalsGet**](HospitalsApi.md#apiV1HospitalsGet) | **GET** api/v1/hospitals | Get all hospitals.
-[**apiV1HospitalsHospitalIdDelete**](HospitalsApi.md#apiV1HospitalsHospitalIdDelete) | **DELETE** api/v1/hospitals/{hospitalId} | Delete hospital.
-[**apiV1HospitalsHospitalIdGet**](HospitalsApi.md#apiV1HospitalsHospitalIdGet) | **GET** api/v1/hospitals/{hospitalId} | Get hospita.
-[**apiV1HospitalsHospitalIdPut**](HospitalsApi.md#apiV1HospitalsHospitalIdPut) | **PUT** api/v1/hospitals/{hospitalId} | Update hospital.
-[**apiV1HospitalsPost**](HospitalsApi.md#apiV1HospitalsPost) | **POST** api/v1/hospitals | Create a hospital.
-[**apiV1HospitalsSlugsSlugGet**](HospitalsApi.md#apiV1HospitalsSlugsSlugGet) | **GET** api/v1/hospitals/slugs/{slug} | Get hospital by slug.
+[**apiV2HospitalsGet**](HospitalsApi.md#apiV2HospitalsGet) | **GET** api/v2/hospitals | Get all Hospitals.
+[**apiV2HospitalsHospitalIdAccreditationsAccreditationIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdAccreditationsAccreditationIdGet) | **GET** api/v2/hospitals/{hospitalId}/accreditations/{accreditationId} | Get HospitalAccreditation.
+[**apiV2HospitalsHospitalIdAccreditationsGet**](HospitalsApi.md#apiV2HospitalsHospitalIdAccreditationsGet) | **GET** api/v2/hospitals/{hospitalId}/accreditations | Get all HospitalAccreditations.
+[**apiV2HospitalsHospitalIdEquipmentsEquipmentIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdEquipmentsEquipmentIdGet) | **GET** api/v2/hospitals/{hospitalId}/equipments/{equipmentId} | Get HospitalEquipment.
+[**apiV2HospitalsHospitalIdEquipmentsEquipmentIdMediasGet**](HospitalsApi.md#apiV2HospitalsHospitalIdEquipmentsEquipmentIdMediasGet) | **GET** api/v2/hospitals/{hospitalId}/equipments/{equipmentId}/medias | Get all EquipmentMedia.
+[**apiV2HospitalsHospitalIdEquipmentsEquipmentIdMediasMediaIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdEquipmentsEquipmentIdMediasMediaIdGet) | **GET** api/v2/hospitals/{hospitalId}/equipments/{equipmentId}/medias/{mediaId} | Get EquipmentMedia.
+[**apiV2HospitalsHospitalIdEquipmentsGet**](HospitalsApi.md#apiV2HospitalsHospitalIdEquipmentsGet) | **GET** api/v2/hospitals/{hospitalId}/equipments | Get all HospitalEquipments.
+[**apiV2HospitalsHospitalIdEvaluationsEvaluationIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdEvaluationsEvaluationIdGet) | **GET** api/v2/hospitals/{hospitalId}/evaluations/{evaluationId} | Get HospitalEvaluation.
+[**apiV2HospitalsHospitalIdEvaluationsGet**](HospitalsApi.md#apiV2HospitalsHospitalIdEvaluationsGet) | **GET** api/v2/hospitals/{hospitalId}/evaluations | Get all HospitalEvaluations.
+[**apiV2HospitalsHospitalIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdGet) | **GET** api/v2/hospitals/{hospitalId} | 
+[**apiV2HospitalsHospitalIdHandlesGet**](HospitalsApi.md#apiV2HospitalsHospitalIdHandlesGet) | **GET** api/v2/hospitals/{hospitalId}/handles | Get all HospitalHandles.
+[**apiV2HospitalsHospitalIdHandlesHandleIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdHandlesHandleIdGet) | **GET** api/v2/hospitals/{hospitalId}/handles/{handleId} | Get HospitalHandle.
+[**apiV2HospitalsHospitalIdMediasGet**](HospitalsApi.md#apiV2HospitalsHospitalIdMediasGet) | **GET** api/v2/hospitals/{hospitalId}/medias | Get all HospitalMedias.
+[**apiV2HospitalsHospitalIdMediasMediaIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdMediasMediaIdGet) | **GET** api/v2/hospitals/{hospitalId}/medias/{mediaId} | Get HospitalMedia.
+[**apiV2HospitalsHospitalIdSpecialtiesGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesGet) | **GET** api/v2/hospitals/{hospitalId}/specialties | Get all HospitalSpecialties.
+[**apiV2HospitalsHospitalIdSpecialtiesHospitalSpecialtyIdMediasGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesHospitalSpecialtyIdMediasGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{hospitalSpecialtyId}/medias | Get all HospitalServiceMedias.
+[**apiV2HospitalsHospitalIdSpecialtiesHospitalSpecialtyIdMediasMediaIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesHospitalSpecialtyIdMediasMediaIdGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{hospitalSpecialtyId}/medias/{mediaId} | Get HospitalServiceMedia.
+[**apiV2HospitalsHospitalIdSpecialtiesSimpleGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesSimpleGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/simple | Get all HospitalSpecialties.
+[**apiV2HospitalsHospitalIdSpecialtiesSlugGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesSlugGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{slug} | Get HospitalSpecialty by slug.
+[**apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{specialtyId} | Get HospitalSpecialty.
+[**apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{specialtyId}/services | Get all HospitalServices.
+[**apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId} | Get HospitalService.
+[**apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdMediasGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdMediasGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}/medias | Get all HospitalServiceMedias.
+[**apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdMediasMediaIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdMediasMediaIdGet) | **GET** api/v2/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}/medias/{mediaId} | Get HospitalServiceMedia.
+[**apiV2HospitalsHospitalIdWorkingdaysGet**](HospitalsApi.md#apiV2HospitalsHospitalIdWorkingdaysGet) | **GET** api/v2/hospitals/{hospitalId}/workingdays | Get all HospitalWorkingDays.
+[**apiV2HospitalsHospitalIdWorkingdaysWorkingDayIdGet**](HospitalsApi.md#apiV2HospitalsHospitalIdWorkingdaysWorkingDayIdGet) | **GET** api/v2/hospitals/{hospitalId}/workingdays/{workingDayId} | Get HospitalWorkingDay.
+[**apiV2HospitalsSimpleGet**](HospitalsApi.md#apiV2HospitalsSimpleGet) | **GET** api/v2/hospitals/simple | Get all Hospitals.
+[**apiV2HospitalsSlugGet**](HospitalsApi.md#apiV2HospitalsSlugGet) | **GET** api/v2/hospitals/{slug} | 
 
 
 
-
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(HospitalsApi::class.java)
-val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val name : kotlin.String = name_example // kotlin.String | 
-val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-val marketingType : MarketingType =  // MarketingType | 
-val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
-val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
-val page : kotlin.Int = 56 // kotlin.Int | 
-val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-
-launch(Dispatchers.IO) {
-    val result : HospitalsViewModel = webService.apiV1HospitalsCurrentGet(id, name, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, page, limit, lastRetrieved)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
- **name** | **kotlin.String**|  | [optional]
- **countryId** | [**java.util.UUID**](.md)|  | [optional]
- **created** | **java.time.LocalDateTime**|  | [optional]
- **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
- **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
- **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
- **serviceId** | [**java.util.UUID**](.md)|  | [optional]
- **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
- **showHidden** | **kotlin.Boolean**|  | [optional]
- **languageCode** | **kotlin.String**|  | [optional]
- **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
- **page** | **kotlin.Int**|  | [optional]
- **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
-
-### Return type
-
-[**HospitalsViewModel**](HospitalsViewModel.md)
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-Get all hospitals.
-
-Sample request:        GET /api/v1/hospitals      {          \&quot;pageQueryFilter\&quot;: {              \&quot;page\&quot;: 1,              \&quot;limit\&quot;: 20,              \&quot;lastRetrived\&quot;: \&quot;2020-02-05T08:40\&quot;          },          \&quot;searchString\&quot;: \&quot;Samsung\&quot;      }
+Get all Hospitals.
 
 ### Example
 ```kotlin
@@ -93,24 +46,25 @@ Sample request:        GET /api/v1/hospitals      {          \&quot;pageQueryFil
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
-val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 val marketingType : MarketingType =  // MarketingType | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val paymentEnabled : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalsViewModel = webService.apiV1HospitalsGet(id, name, countryId, created, marketingType, specialtyTypeId, specialtyId, serviceId, exceptHospitalId, showHidden, languageCode, ids, page, limit, lastRetrieved)
+    val result : HospitalsModel = webService.apiV2HospitalsGet(hospitalId, name, countryId, created, marketingType, specialtyTypeId, specialtyId, exceptHospitalId, showHidden, languageCode, ids, returnDefaultValue, paymentEnabled, page, limit, lastRetrieved)
 }
 ```
 
@@ -118,25 +72,26 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **countryId** | [**java.util.UUID**](.md)|  | [optional]
  **created** | **java.time.LocalDateTime**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
  **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
- **serviceId** | [**java.util.UUID**](.md)|  | [optional]
  **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **showHidden** | **kotlin.Boolean**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **paymentEnabled** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-[**HospitalsViewModel**](HospitalsViewModel.md)
+[**HospitalsModel**](HospitalsModel.md)
 
 ### Authorization
 
@@ -145,12 +100,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Delete hospital.
-
-Sample request:        DELETE /api/v1/hospitals/1
+Get HospitalAccreditation.
 
 ### Example
 ```kotlin
@@ -162,9 +115,10 @@ Sample request:        DELETE /api/v1/hospitals/1
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val accreditationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdDelete(hospitalId)
+    val result : HospitalAccreditationModel = webService.apiV2HospitalsHospitalIdAccreditationsAccreditationIdGet(hospitalId, accreditationId)
 }
 ```
 
@@ -173,24 +127,351 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | [**java.util.UUID**](.md)|  |
+ **accreditationId** | [**java.util.UUID**](.md)|  |
 
 ### Return type
 
-**kotlin.Boolean**
+[**HospitalAccreditationModel**](HospitalAccreditationModel.md)
 
 ### Authorization
 
-
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Get hospita.
+Get all HospitalAccreditations.
 
-Sample request:        GET /api/v1/hospitals/1
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val accreditationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val accreditationName : kotlin.String = accreditationName_example // kotlin.String | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalAccreditationsModel = webService.apiV2HospitalsHospitalIdAccreditationsGet(hospitalId, hospitalName, accreditationId, accreditationName, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **hospitalName** | **kotlin.String**|  | [optional]
+ **accreditationId** | [**java.util.UUID**](.md)|  | [optional]
+ **accreditationName** | **kotlin.String**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**HospitalAccreditationsModel**](HospitalAccreditationsModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalEquipment.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val equipmentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalEquipmentModel = webService.apiV2HospitalsHospitalIdEquipmentsEquipmentIdGet(hospitalId, equipmentId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **equipmentId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**HospitalEquipmentModel**](HospitalEquipmentModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all EquipmentMedia.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val equipmentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaType : MediaType =  // MediaType | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : MediasModel = webService.apiV2HospitalsHospitalIdEquipmentsEquipmentIdMediasGet(hospitalId, equipmentId, id, mediaType, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **equipmentId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**MediasModel**](MediasModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get EquipmentMedia.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val equipmentId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : MediaModel = webService.apiV2HospitalsHospitalIdEquipmentsEquipmentIdMediasMediaIdGet(hospitalId, equipmentId, mediaId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **equipmentId** | [**java.util.UUID**](.md)|  |
+ **mediaId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**MediaModel**](MediaModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalEquipments.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val hospitalId2 : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val description : kotlin.String = description_example // kotlin.String | 
+val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalEquipmentsModel = webService.apiV2HospitalsHospitalIdEquipmentsGet(hospitalId, id, name, hospitalId2, hospitalName, description, created, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **hospitalId2** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalName** | **kotlin.String**|  | [optional]
+ **description** | **kotlin.String**|  | [optional]
+ **created** | **java.time.LocalDateTime**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**HospitalEquipmentsModel**](HospitalEquipmentsModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalEvaluation.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val evaluationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalEvaluationModel = webService.apiV2HospitalsHospitalIdEvaluationsEvaluationIdGet(hospitalId, evaluationId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **evaluationId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**HospitalEvaluationModel**](HospitalEvaluationModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalEvaluations.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val stars : kotlin.Int = 56 // kotlin.Int | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalEvaluationsModel = webService.apiV2HospitalsHospitalIdEvaluationsGet(hospitalId, id, name, stars, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **stars** | **kotlin.Int**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**HospitalEvaluationsModel**](HospitalEvaluationsModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
 
 ### Example
 ```kotlin
@@ -203,9 +484,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalViewModel = webService.apiV1HospitalsHospitalIdGet(hospitalId, languageCode)
+    val result : HospitalModel = webService.apiV2HospitalsHospitalIdGet(hospitalId, languageCode, returnDefaultValue)
 }
 ```
 
@@ -214,11 +496,12 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | [**java.util.UUID**](.md)|  |
- **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**HospitalViewModel**](HospitalViewModel.md)
+[**HospitalModel**](HospitalModel.md)
 
 ### Authorization
 
@@ -227,12 +510,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Update hospital.
-
-Sameple request:        PUT /api/v1/hospitals      {          \&quot;overview\&quot;: \&quot;Overview of Samsung Medical Center\&quot;,          \&quot;bedsCount\&quot;: 2436,          \&quot;operationsPerYear\&quot;: 44,          \&quot;foundationYear\&quot;: 2012,          \&quot;departmentsCount\&quot;: 200,          \&quot;medicalStaffCount\&quot;: 1200,      }
+Get all HospitalHandles.
 
 ### Example
 ```kotlin
@@ -244,10 +525,15 @@ Sameple request:        PUT /api/v1/hospitals      {          \&quot;overview\&q
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val updateHospitalCommand : UpdateHospitalCommand =  // UpdateHospitalCommand | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val snsType : SnsType =  // SnsType | 
+val handle : kotlin.String = handle_example // kotlin.String | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1HospitalsHospitalIdPut(hospitalId, updateHospitalCommand)
+    val result : HospitalSnsHandlesModel = webService.apiV2HospitalsHospitalIdHandlesGet(hospitalId, id, snsType, handle, page, limit, lastRetrieved)
 }
 ```
 
@@ -256,25 +542,28 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | [**java.util.UUID**](.md)|  |
- **updateHospitalCommand** | [**UpdateHospitalCommand**](UpdateHospitalCommand.md)|  | [optional]
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **snsType** | [**SnsType**](.md)|  | [optional] [enum: Twitter, Facebook, Instagram, LinkedIn, Youtube, KakaoTalk]
+ **handle** | **kotlin.String**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-**kotlin.Boolean**
+[**HospitalSnsHandlesModel**](HospitalSnsHandlesModel.md)
 
 ### Authorization
 
-
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
-Create a hospital.
-
-Sample request:        POST /api/v1/hospitals      {          \&quot;name\&quot;: \&quot;Samsung Medical Center\&quot;,          \&quot;description\&quot;: \&quot;Comprehensive Cancer Center in Seoul, South Korea is nationally ranked in 1 adult specialty.\&quot;,          \&quot;logo\&quot;: \&quot;http://www.samsunghospital.com/home/main/index.do\&quot;,          \&quot;overview\&quot;: \&quot;Overview of Samsung Medical Center\&quot;,          \&quot;bedsCount\&quot;: 1436,          \&quot;operationsPerYear\&quot;: 34,          \&quot;foundationYear\&quot;: 2012,          \&quot;departmentsCount\&quot;: 20,          \&quot;medicalStaffCount\&quot;: 600,          \&quot;countryId\&quot;: 1,          \&quot;awards\&quot;: [            {              \&quot;name\&quot;: \&quot;Award1\&quot;,              \&quot;image\&quot;: \&quot;string\&quot;,              \&quot;date\&quot;: \&quot;2020-02-05T09:29:19.240Z\&quot;            },            {              \&quot;name\&quot;: \&quot;Award2\&quot;,              \&quot;image\&quot;: \&quot;string\&quot;,              \&quot;date\&quot;: \&quot;2020-02-05T09:29:19.240Z\&quot;            }          ],          \&quot;medias\&quot;: [            {              \&quot;mediaType\&quot;: \&quot;Photo\&quot;,              \&quot;url\&quot;: \&quot;https://cloudhospitalblob.blob.core.windows.net/imagecontainer/SamsungMedicalCenter.jpg\&quot;,              \&quot;thumbnailUrl\&quot;: \&quot;https://cloudhospitalblob.blob.core.windows.net/thumbnailcontainer/SamsungMedicalCenter.jpg\&quot;,              \&quot;description\&quot;: \&quot;string\&quot;,              \&quot;order\&quot;: 0            },            {              \&quot;mediaType\&quot;: \&quot;Video\&quot;,              \&quot;url\&quot;: \&quot;string\&quot;,              \&quot;description\&quot;: \&quot;string\&quot;,              \&quot;order\&quot;: 1            }          ],          \&quot;location\&quot;: {            \&quot;latitude\&quot;: 37.4881568,            \&quot;longitude\&quot;: 127.0855952,            \&quot;country\&quot;: \&quot;Korea\&quot;,            \&quot;state\&quot;: \&quot;string\&quot;,            \&quot;county\&quot;: \&quot;Gangnamgu\&quot;,            \&quot;city\&quot;: \&quot;Seoul\&quot;,            \&quot;zipCode\&quot;: \&quot;12345\&quot;,            \&quot;address\&quot;: \&quot;Il-won ro 81\&quot;          }      }
+Get HospitalHandle.
 
 ### Example
 ```kotlin
@@ -285,10 +574,11 @@ Sample request:        POST /api/v1/hospitals      {          \&quot;name\&quot;
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
-val createHospitalCommand : CreateHospitalCommand =  // CreateHospitalCommand | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val handleId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : java.util.UUID = webService.apiV1HospitalsPost(createHospitalCommand)
+    val result : SnsHandleModel = webService.apiV2HospitalsHospitalIdHandlesHandleIdGet(hospitalId, handleId)
 }
 ```
 
@@ -296,23 +586,800 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createHospitalCommand** | [**CreateHospitalCommand**](CreateHospitalCommand.md)|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **handleId** | [**java.util.UUID**](.md)|  |
 
 ### Return type
 
-[**java.util.UUID**](java.util.UUID.md)
+[**SnsHandleModel**](SnsHandleModel.md)
 
 ### Authorization
 
-
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
-Get hospital by slug.
+Get all HospitalMedias.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaType : MediaType =  // MediaType | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : MediasModel = webService.apiV2HospitalsHospitalIdMediasGet(hospitalId, id, mediaType, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**MediasModel**](MediasModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalMedia.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : MediaModel = webService.apiV2HospitalsHospitalIdMediasMediaIdGet(hospitalId, mediaId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **mediaId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**MediaModel**](MediaModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalSpecialties.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyName : kotlin.String = specialtyName_example // kotlin.String | 
+val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyTypeName : kotlin.String = specialtyTypeName_example // kotlin.String | 
+val hospitalSpecialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val slug : kotlin.String = slug_example // kotlin.String | 
+val marketingType : MarketingType =  // MarketingType | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val includeServices : kotlin.Boolean = true // kotlin.Boolean | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalSpecialtiesModel = webService.apiV2HospitalsHospitalIdSpecialtiesGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, returnDefaultValue, includeServices, languageCode, showHidden, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyName** | **kotlin.String**|  | [optional]
+ **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeName** | **kotlin.String**|  | [optional]
+ **hospitalSpecialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **slug** | **kotlin.String**|  | [optional]
+ **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **includeServices** | **kotlin.Boolean**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**HospitalSpecialtiesModel**](HospitalSpecialtiesModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalServiceMedias.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalSpecialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaType : MediaType =  // MediaType | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : MediasModel = webService.apiV2HospitalsHospitalIdSpecialtiesHospitalSpecialtyIdMediasGet(hospitalId, hospitalSpecialtyId, id, mediaType, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **hospitalSpecialtyId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**MediasModel**](MediasModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalServiceMedia.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalSpecialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : MediaModel = webService.apiV2HospitalsHospitalIdSpecialtiesHospitalSpecialtyIdMediasMediaIdGet(hospitalId, hospitalSpecialtyId, mediaId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **hospitalSpecialtyId** | [**java.util.UUID**](.md)|  |
+ **mediaId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**MediaModel**](MediaModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalSpecialties.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyName : kotlin.String = specialtyName_example // kotlin.String | 
+val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyTypeName : kotlin.String = specialtyTypeName_example // kotlin.String | 
+val hospitalSpecialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val slug : kotlin.String = slug_example // kotlin.String | 
+val marketingType : MarketingType =  // MarketingType | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val includeServices : kotlin.Boolean = true // kotlin.Boolean | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalSpecialtiesSimpleModel = webService.apiV2HospitalsHospitalIdSpecialtiesSimpleGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, returnDefaultValue, includeServices, languageCode, showHidden, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyName** | **kotlin.String**|  | [optional]
+ **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeName** | **kotlin.String**|  | [optional]
+ **hospitalSpecialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **slug** | **kotlin.String**|  | [optional]
+ **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **includeServices** | **kotlin.Boolean**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**HospitalSpecialtiesSimpleModel**](HospitalSpecialtiesSimpleModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalSpecialty by slug.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val slug : kotlin.String = slug_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val includeServices : kotlin.Boolean = true // kotlin.Boolean | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalSpecialtyModel = webService.apiV2HospitalsHospitalIdSpecialtiesSlugGet(hospitalId, slug, languageCode, returnDefaultValue, includeServices)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **slug** | **kotlin.String**|  |
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **includeServices** | **kotlin.Boolean**|  | [optional]
+
+### Return type
+
+[**HospitalSpecialtyModel**](HospitalSpecialtyModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalSpecialty.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val includeServices : kotlin.Boolean = true // kotlin.Boolean | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalSpecialtyModel = webService.apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdGet(hospitalId, specialtyId, languageCode, returnDefaultValue, includeServices)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **includeServices** | **kotlin.Boolean**|  | [optional]
+
+### Return type
+
+[**HospitalSpecialtyModel**](HospitalSpecialtyModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalServices.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val slug : kotlin.String = slug_example // kotlin.String | 
+val serviceCategoryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val marketingType : MarketingType =  // MarketingType | 
+val procedure : Procedure =  // Procedure | 
+val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalServicesModel = webService.apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesGet(hospitalId, specialtyId, id, name, slug, serviceCategoryId, marketingType, procedure, created, languageCode, returnDefaultValue, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **slug** | **kotlin.String**|  | [optional]
+ **serviceCategoryId** | [**java.util.UUID**](.md)|  | [optional]
+ **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
+ **procedure** | [**Procedure**](.md)|  | [optional] [enum: Treatment, Diagnostic]
+ **created** | **java.time.LocalDateTime**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**HospitalServicesModel**](HospitalServicesModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalService.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalServiceModel = webService.apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(hospitalId, specialtyId, serviceId, languageCode, returnDefaultValue)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | [**java.util.UUID**](.md)|  |
+ **serviceId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+
+### Return type
+
+[**HospitalServiceModel**](HospitalServiceModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalServiceMedias.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaType : MediaType =  // MediaType | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : MediasModel = webService.apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdMediasGet(hospitalId, specialtyId, serviceId, id, mediaType, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | [**java.util.UUID**](.md)|  |
+ **serviceId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**MediasModel**](MediasModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalServiceMedia.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val mediaId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : MediaModel = webService.apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdMediasMediaIdGet(hospitalId, specialtyId, serviceId, mediaId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | [**java.util.UUID**](.md)|  |
+ **serviceId** | [**java.util.UUID**](.md)|  |
+ **mediaId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**MediaModel**](MediaModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all HospitalWorkingDays.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val dayOfWeek : kotlin.String = dayOfWeek_example // kotlin.String | 
+val timeFrom : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val timeTo : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val checkHoliday : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : WorkingDaysModel = webService.apiV2HospitalsHospitalIdWorkingdaysGet(hospitalId, id, dayOfWeek, timeFrom, timeTo, checkHoliday, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **dayOfWeek** | **kotlin.String**|  | [optional]
+ **timeFrom** | **java.time.LocalDateTime**|  | [optional]
+ **timeTo** | **java.time.LocalDateTime**|  | [optional]
+ **checkHoliday** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**WorkingDaysModel**](WorkingDaysModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get HospitalWorkingDay.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val workingDayId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : WorkingDayModel = webService.apiV2HospitalsHospitalIdWorkingdaysWorkingDayIdGet(hospitalId, workingDayId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  |
+ **workingDayId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**WorkingDayModel**](WorkingDayModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all Hospitals.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(HospitalsApi::class.java)
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val created : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+val marketingType : MarketingType =  // MarketingType | 
+val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val paymentEnabled : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : HospitalsSimpleModel = webService.apiV2HospitalsSimpleGet(hospitalId, name, countryId, created, marketingType, specialtyTypeId, specialtyId, exceptHospitalId, showHidden, languageCode, ids, returnDefaultValue, paymentEnabled, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **countryId** | [**java.util.UUID**](.md)|  | [optional]
+ **created** | **java.time.LocalDateTime**|  | [optional]
+ **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
+ **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **paymentEnabled** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**HospitalsSimpleModel**](HospitalsSimpleModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
 
 ### Example
 ```kotlin
@@ -325,9 +1392,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalViewModel = webService.apiV1HospitalsSlugsSlugGet(slug, languageCode)
+    val result : HospitalModel = webService.apiV2HospitalsSlugGet(slug, languageCode, returnDefaultValue)
 }
 ```
 
@@ -336,11 +1404,12 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **kotlin.String**|  |
- **languageCode** | **kotlin.String**|  | [optional] [default to &quot;&quot;]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**HospitalViewModel**](HospitalViewModel.md)
+[**HospitalModel**](HospitalModel.md)
 
 ### Authorization
 
@@ -349,5 +1418,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 

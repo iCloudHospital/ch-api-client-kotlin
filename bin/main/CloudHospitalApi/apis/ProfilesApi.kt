@@ -7,7 +7,9 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.ChangeEmailCommand
 import CloudHospitalApi.models.ConfirmEmailCommand
-import CloudHospitalApi.models.UserViewModel
+import CloudHospitalApi.models.ProblemDetails
+import CloudHospitalApi.models.UpdateProfileCommand
+import CloudHospitalApi.models.UserModel
 
 interface ProfilesApi {
     /**
@@ -21,11 +23,11 @@ interface ProfilesApi {
      * @param changeEmailCommand  (optional)
      * @return [kotlin.Boolean]
      */
-    @POST("api/v1/profiles/changeemail")
-    suspend fun apiV1ProfilesChangeemailPost(@Body changeEmailCommand: ChangeEmailCommand? = null): Response<kotlin.Boolean>
+    @POST("api/v2/profiles/changeemail")
+    suspend fun apiV2ProfilesChangeemailPost(@Body changeEmailCommand: ChangeEmailCommand? = null): Response<kotlin.Boolean>
 
     /**
-     * 
+     * Configm email.
      * 
      * Responses:
      *  - 200: Success
@@ -35,20 +37,35 @@ interface ProfilesApi {
      * @param confirmEmailCommand  (optional)
      * @return [kotlin.Boolean]
      */
-    @POST("api/v1/profiles/confirmemail")
-    suspend fun apiV1ProfilesConfirmemailPost(@Body confirmEmailCommand: ConfirmEmailCommand? = null): Response<kotlin.Boolean>
+    @POST("api/v2/profiles/confirmemail")
+    suspend fun apiV2ProfilesConfirmemailPost(@Body confirmEmailCommand: ConfirmEmailCommand? = null): Response<kotlin.Boolean>
 
     /**
-     * Get current user&#39;s profile.
-     * Sample request:        GET /api/v1/profiles
+     * Get Profile.
+     * 
      * Responses:
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @return [UserViewModel]
+     * @return [UserModel]
      */
-    @GET("api/v1/profiles")
-    suspend fun apiV1ProfilesGet(): Response<UserViewModel>
+    @GET("api/v2/profiles")
+    suspend fun apiV2ProfilesGet(): Response<UserModel>
+
+    /**
+     * Update Profile.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     *  - 0: Error
+     * 
+     * @param updateProfileCommand  (optional)
+     * @return [UserModel]
+     */
+    @PUT("api/v2/profiles")
+    suspend fun apiV2ProfilesPut(@Body updateProfileCommand: UpdateProfileCommand? = null): Response<UserModel>
 
 }

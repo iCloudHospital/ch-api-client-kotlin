@@ -5,133 +5,68 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.CreateServiceCommand
+import CloudHospitalApi.models.HospitalServiceModel
+import CloudHospitalApi.models.HospitalServicesModel
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.Procedure
-import CloudHospitalApi.models.ServiceViewModel
-import CloudHospitalApi.models.ServicesViewModel
-import CloudHospitalApi.models.UpdateServiceCommand
-import CloudHospitalApi.models.UpdateServiceSequenceCommand
 
 interface ServicesApi {
     /**
-     * Create service.
-     * Sample request:        POST /api/v1/hospitals/1/specialties/1/services      {          \&quot;name\&quot;: \&quot;Heart check up\&quot;,          \&quot;description\&quot;: \&quot;Asan Hospital (Asan Medical Center) is the largest multidisciplinary medical center in South Korea, which can serve 2,700 patients at once.The key specialties in the hospital are organ transplant, oncology, cardiology, and cardiac surgery.Almost half of all heart transplants in South Korea are carried out (45%) at Asan.The success of organ transplants ranges from 90%. Every day, 11,800 outpatients and 2,550 inpatients are treated in Asan Hospital. Medical tourists from the USA, China, the UAE, Russia, Kazakhstan, and Mongolia choose Asan Hospital.\&quot;,          \&quot;minPrice\&quot;: 2235,          \&quot;maxPrice\&quot;: 2566,          \&quot;priceReuqest\&quot;: false,          \&quot;procedure\&quot;: \&quot;Treatment\&quot;      }
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
+     * Get all HospitalServices.
      * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param createServiceCommand  (optional)
-     * @return [java.util.UUID]
-     */
-    @POST("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services")
-    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesPost(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body createServiceCommand: CreateServiceCommand? = null): Response<java.util.UUID>
-
-    /**
-     * Delete service.
-     * Sample request:        DELETE /api/v1/hospitals/1/specialties/1/services/1
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param serviceId  
-     * @return [kotlin.Boolean]
-     */
-    @DELETE("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}")
-    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID): Response<kotlin.Boolean>
-
-    /**
-     * Get service.
-     * Sample request:        GET /api/v1/hospitals/1/specialties/1/services/1
-     * Responses:
-     *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param serviceId  
-     * @param languageCode  (optional, default to "")
-     * @return [ServiceViewModel]
-     */
-    @GET("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}")
-    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<ServiceViewModel>
-
-    /**
-     * Update service.
-     * Sample request:        PUT /api/v1/hospitals/1/specialties/1/services/1      {          \&quot;name\&quot;: \&quot;Extended analysis of blood\&quot;,          \&quot;description\&quot;: \&quot;Extended analysis of blood description.\&quot;,          \&quot;minPrice\&quot;: 1000,          \&quot;maxPrice\&quot;: 2600,          \&quot;priceReuqest\&quot;: false      }
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param serviceId  
-     * @param updateServiceCommand  (optional)
-     * @return [kotlin.Boolean]
-     */
-    @PUT("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}")
-    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesServiceIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID, @Body updateServiceCommand: UpdateServiceCommand? = null): Response<kotlin.Boolean>
-
-    /**
-     * Update service sequence.
-     * Smaple request:        PUT /api/v1/hospitals/1/specialties/1/servicesquence      {          \&quot;serviceSequence\&quot;: [1, 3, 5]      }
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param updateServiceSequenceCommand  (optional)
-     * @return [kotlin.Boolean]
-     */
-    @PUT("api/v1/hospitals/{hospitalId}/specialties/{specialtyId}/servicesquence")
-    suspend fun apiV1HospitalsHospitalIdSpecialtiesSpecialtyIdServicesquencePut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Body updateServiceSequenceCommand: UpdateServiceSequenceCommand? = null): Response<kotlin.Boolean>
-
-    /**
-     * Get all services.
-     * Sample request:        GET /api/v1/hospitals/services
      * Responses:
      *  - 200: Success
      * 
      * @param id  (optional)
      * @param name  (optional)
-     * @param description  (optional)
+     * @param slug  (optional)
      * @param hospitalId  (optional)
      * @param hospitalName  (optional)
      * @param hospitalSlug  (optional)
      * @param specialtyId  (optional)
+     * @param specialtyName  (optional)
      * @param specialtyTypeId  (optional)
      * @param specialtyTypeName  (optional)
+     * @param serviceCategoryId  (optional)
      * @param marketingType  (optional)
      * @param procedure  (optional)
      * @param created  (optional)
      * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [ServicesViewModel]
+     * @return [HospitalServicesModel]
      */
-    @GET("api/v1/hospitals/services")
-    suspend fun apiV1HospitalsServicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Procedure") procedure: Procedure? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ServicesViewModel>
+    @GET("api/v2/services")
+    suspend fun apiV2ServicesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Slug") slug: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("HospitalSlug") hospitalSlug: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("ServiceCategoryId") serviceCategoryId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Procedure") procedure: Procedure? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalServicesModel>
 
     /**
-     * Get service by slug.
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     * 
+     * @param serviceId  
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [HospitalServiceModel]
+     */
+    @GET("api/v2/services/{serviceId}")
+    suspend fun apiV2ServicesServiceIdGet(@Path("serviceId") serviceId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<HospitalServiceModel>
+
+    /**
+     * 
      * 
      * Responses:
      *  - 200: Success
      * 
      * @param slug  
-     * @param languageCode  (optional, default to "")
-     * @return [ServiceViewModel]
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [HospitalServiceModel]
      */
-    @GET("api/v1/hospitals/services/slugs/{slug}")
-    suspend fun apiV1HospitalsServicesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<ServiceViewModel>
+    @GET("api/v2/services/{slug}")
+    suspend fun apiV2ServicesSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<HospitalServiceModel>
 
 }
