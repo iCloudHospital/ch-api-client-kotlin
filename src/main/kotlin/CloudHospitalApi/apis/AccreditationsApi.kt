@@ -5,55 +5,27 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.AccreditationViewModel
-import CloudHospitalApi.models.AccreditationsViewModel
-import CloudHospitalApi.models.CreateAccreditationCommand
-import CloudHospitalApi.models.UpdateAccreditationCommand
+import CloudHospitalApi.models.AccreditationModel
+import CloudHospitalApi.models.AccreditationsModel
+import CloudHospitalApi.models.ProblemDetails
 
 interface AccreditationsApi {
     /**
-     * 
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param accreditationId  
-     * @return [kotlin.Boolean]
-     */
-    @DELETE("api/v1/accreditations/{accreditationId}")
-    suspend fun apiV1AccreditationsAccreditationIdDelete(@Path("accreditationId") accreditationId: java.util.UUID): Response<kotlin.Boolean>
-
-    /**
-     * 
+     * Get Accreditation.
      * 
      * Responses:
      *  - 200: Success
+     *  - 404: Not Found
+     *  - 0: Error
      * 
      * @param accreditationId  
-     * @return [AccreditationViewModel]
+     * @return [AccreditationModel]
      */
-    @GET("api/v1/accreditations/{accreditationId}")
-    suspend fun apiV1AccreditationsAccreditationIdGet(@Path("accreditationId") accreditationId: java.util.UUID): Response<AccreditationViewModel>
+    @GET("api/v2/accreditations/{accreditationId}")
+    suspend fun apiV2AccreditationsAccreditationIdGet(@Path("accreditationId") accreditationId: java.util.UUID): Response<AccreditationModel>
 
     /**
-     * 
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param accreditationId  
-     * @param updateAccreditationCommand  (optional)
-     * @return [kotlin.Boolean]
-     */
-    @PUT("api/v1/accreditations/{accreditationId}")
-    suspend fun apiV1AccreditationsAccreditationIdPut(@Path("accreditationId") accreditationId: java.util.UUID, @Body updateAccreditationCommand: UpdateAccreditationCommand? = null): Response<kotlin.Boolean>
-
-    /**
-     * 
+     * Get all Accreditations.
      * 
      * Responses:
      *  - 200: Success
@@ -64,23 +36,9 @@ interface AccreditationsApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [AccreditationsViewModel]
+     * @return [AccreditationsModel]
      */
-    @GET("api/v1/accreditations")
-    suspend fun apiV1AccreditationsGet(@Query("Name") name: kotlin.String? = null, @Query("Logo") logo: kotlin.String? = null, @Query("Country") country: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<AccreditationsViewModel>
-
-    /**
-     * 
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param createAccreditationCommand  (optional)
-     * @return [java.util.UUID]
-     */
-    @POST("api/v1/accreditations")
-    suspend fun apiV1AccreditationsPost(@Body createAccreditationCommand: CreateAccreditationCommand? = null): Response<java.util.UUID>
+    @GET("api/v2/accreditations")
+    suspend fun apiV2AccreditationsGet(@Query("Name") name: kotlin.String? = null, @Query("Logo") logo: kotlin.String? = null, @Query("Country") country: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<AccreditationsModel>
 
 }

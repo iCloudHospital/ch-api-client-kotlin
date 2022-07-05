@@ -4,51 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1DealsDealIdDelete**](DealsApi.md#apiV1DealsDealIdDelete) | **DELETE** api/v1/deals/{dealId} | Delete deal.
-[**apiV1DealsDealIdGet**](DealsApi.md#apiV1DealsDealIdGet) | **GET** api/v1/deals/{dealId} | Get deal.
-[**apiV1DealsDealIdPut**](DealsApi.md#apiV1DealsDealIdPut) | **PUT** api/v1/deals/{dealId} | Update deal.
-[**apiV1DealsGet**](DealsApi.md#apiV1DealsGet) | **GET** api/v1/deals | Get all deals.
-[**apiV1DealsPost**](DealsApi.md#apiV1DealsPost) | **POST** api/v1/deals | Create deal.
-[**apiV1DealsSlugsSlugGet**](DealsApi.md#apiV1DealsSlugsSlugGet) | **GET** api/v1/deals/slugs/{slug} | Get deal by slug.
+[**apiV2DealsDealIdGet**](DealsApi.md#apiV2DealsDealIdGet) | **GET** api/v2/deals/{dealId} | Get deal.
+[**apiV2DealsDealIdPackagesGet**](DealsApi.md#apiV2DealsDealIdPackagesGet) | **GET** api/v2/deals/{dealId}/packages | Get all DealPackage.
+[**apiV2DealsDealIdPackagesPackageIdGet**](DealsApi.md#apiV2DealsDealIdPackagesPackageIdGet) | **GET** api/v2/deals/{dealId}/packages/{packageId} | Get DealPackage.
+[**apiV2DealsDealIdServicesGet**](DealsApi.md#apiV2DealsDealIdServicesGet) | **GET** api/v2/deals/{dealId}/services | Get all DealService.
+[**apiV2DealsDealIdServicesServiceIdGet**](DealsApi.md#apiV2DealsDealIdServicesServiceIdGet) | **GET** api/v2/deals/{dealId}/services/{serviceId} | Get DealService.
+[**apiV2DealsGet**](DealsApi.md#apiV2DealsGet) | **GET** api/v2/deals | Get all deals.
+[**apiV2DealsSimpleGet**](DealsApi.md#apiV2DealsSimpleGet) | **GET** api/v2/deals/simple | Get all deals.
+[**apiV2DealsSlugGet**](DealsApi.md#apiV2DealsSlugGet) | **GET** api/v2/deals/{slug} | Get deal by slug.
 
-
-
-Delete deal.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(DealsApi::class.java)
-val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1DealsDealIdDelete(dealId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
 
 
 Get deal.
@@ -63,9 +27,11 @@ Get deal.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : DealViewModel = webService.apiV1DealsDealIdGet(dealId)
+    val result : DealModel = webService.apiV2DealsDealIdGet(dealId, languageCode, returnDefaultValue)
 }
 ```
 
@@ -74,10 +40,12 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **dealId** | [**java.util.UUID**](.md)|  |
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**DealViewModel**](DealViewModel.md)
+[**DealModel**](DealModel.md)
 
 ### Authorization
 
@@ -86,10 +54,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Update deal.
+Get all DealPackage.
 
 ### Example
 ```kotlin
@@ -101,10 +69,18 @@ Update deal.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val updateDealCommand : UpdateDealCommand =  // UpdateDealCommand | 
+val relatedDealPackageId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val dealName : kotlin.String = dealName_example // kotlin.String | 
+val name : kotlin.String = name_example // kotlin.String | 
+val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1DealsDealIdPut(dealId, updateDealCommand)
+    val result : DealPackagesModel = webService.apiV2DealsDealIdPackagesGet(dealId, relatedDealPackageId, dealName, name, countryId, hospitalId, hospitalName, page, limit, lastRetrieved)
 }
 ```
 
@@ -113,20 +89,152 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **dealId** | [**java.util.UUID**](.md)|  |
- **updateDealCommand** | [**UpdateDealCommand**](UpdateDealCommand.md)|  | [optional]
+ **relatedDealPackageId** | [**java.util.UUID**](.md)|  | [optional]
+ **dealName** | **kotlin.String**|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **countryId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalName** | **kotlin.String**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-**kotlin.Boolean**
+[**DealPackagesModel**](DealPackagesModel.md)
 
 ### Authorization
 
-
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get DealPackage.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DealsApi::class.java)
+val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val packageId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : DealPackageModel = webService.apiV2DealsDealIdPackagesPackageIdGet(dealId, packageId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dealId** | [**java.util.UUID**](.md)|  |
+ **packageId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**DealPackageModel**](DealPackageModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get all DealService.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DealsApi::class.java)
+val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
+
+launch(Dispatchers.IO) {
+    val result : DealServicesModel = webService.apiV2DealsDealIdServicesGet(dealId, page, limit, lastRetrieved)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dealId** | [**java.util.UUID**](.md)|  |
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
+
+### Return type
+
+[**DealServicesModel**](DealServicesModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+Get DealService.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DealsApi::class.java)
+val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+
+launch(Dispatchers.IO) {
+    val result : DealServiceModel = webService.apiV2DealsDealIdServicesServiceIdGet(dealId, serviceId)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dealId** | [**java.util.UUID**](.md)|  |
+ **serviceId** | [**java.util.UUID**](.md)|  |
+
+### Return type
+
+[**DealServiceModel**](DealServiceModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 Get all deals.
@@ -147,16 +255,24 @@ val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.ut
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyName : kotlin.String = specialtyName_example // kotlin.String | 
 val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyTypeName : kotlin.String = specialtyTypeName_example // kotlin.String | 
+val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val serviceName : kotlin.String = serviceName_example // kotlin.String | 
 val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val exceptDealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val serviceDuration : kotlin.Int = 56 // kotlin.Int | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DealsViewModel = webService.apiV1DealsGet(id, name, marketingType, countryId, hospitalId, hospitalName, specialtyId, specialtyTypeId, exceptHospitalId, exceptDealId, ids, page, limit, lastRetrieved)
+    val result : DealsModel = webService.apiV2DealsGet(id, name, marketingType, countryId, hospitalId, hospitalName, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, serviceId, serviceName, exceptHospitalId, exceptDealId, ids, serviceDuration, languageCode, showHidden, returnDefaultValue, page, limit, lastRetrieved)
 }
 ```
 
@@ -171,17 +287,25 @@ Name | Type | Description  | Notes
  **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyName** | **kotlin.String**|  | [optional]
  **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeName** | **kotlin.String**|  | [optional]
+ **serviceId** | [**java.util.UUID**](.md)|  | [optional]
+ **serviceName** | **kotlin.String**|  | [optional]
  **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
  **exceptDealId** | [**java.util.UUID**](.md)|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **serviceDuration** | **kotlin.Int**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-[**DealsViewModel**](DealsViewModel.md)
+[**DealsModel**](DealsModel.md)
 
 ### Authorization
 
@@ -190,10 +314,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Create deal.
+Get all deals.
 
 ### Example
 ```kotlin
@@ -204,10 +328,31 @@ Create deal.
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealsApi::class.java)
-val createDealCommand : CreateDealCommand =  // CreateDealCommand | 
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val name : kotlin.String = name_example // kotlin.String | 
+val marketingType : MarketingType =  // MarketingType | 
+val countryId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyName : kotlin.String = specialtyName_example // kotlin.String | 
+val specialtyTypeId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val specialtyTypeName : kotlin.String = specialtyTypeName_example // kotlin.String | 
+val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val serviceName : kotlin.String = serviceName_example // kotlin.String | 
+val exceptHospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val exceptDealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val ids : kotlin.collections.List<java.util.UUID> =  // kotlin.collections.List<java.util.UUID> | 
+val serviceDuration : kotlin.Int = 56 // kotlin.Int | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val page : kotlin.Int = 56 // kotlin.Int | 
+val limit : kotlin.Int = 56 // kotlin.Int | 
+val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : java.util.UUID = webService.apiV1DealsPost(createDealCommand)
+    val result : DealsSimpleModel = webService.apiV2DealsSimpleGet(id, name, marketingType, countryId, hospitalId, hospitalName, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, serviceId, serviceName, exceptHospitalId, exceptDealId, ids, serviceDuration, languageCode, showHidden, returnDefaultValue, page, limit, lastRetrieved)
 }
 ```
 
@@ -215,20 +360,41 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createDealCommand** | [**CreateDealCommand**](CreateDealCommand.md)|  | [optional]
+ **id** | [**java.util.UUID**](.md)|  | [optional]
+ **name** | **kotlin.String**|  | [optional]
+ **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
+ **countryId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalName** | **kotlin.String**|  | [optional]
+ **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyName** | **kotlin.String**|  | [optional]
+ **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeName** | **kotlin.String**|  | [optional]
+ **serviceId** | [**java.util.UUID**](.md)|  | [optional]
+ **serviceName** | **kotlin.String**|  | [optional]
+ **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **exceptDealId** | [**java.util.UUID**](.md)|  | [optional]
+ **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
+ **serviceDuration** | **kotlin.Int**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **page** | **kotlin.Int**|  | [optional]
+ **limit** | **kotlin.Int**|  | [optional]
+ **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
 
 ### Return type
 
-[**java.util.UUID**](java.util.UUID.md)
+[**DealsSimpleModel**](DealsSimpleModel.md)
 
 ### Authorization
 
-
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 Get deal by slug.
@@ -243,9 +409,11 @@ Get deal by slug.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DealsApi::class.java)
 val slug : kotlin.String = slug_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : DealViewModel = webService.apiV1DealsSlugsSlugGet(slug)
+    val result : DealModel = webService.apiV2DealsSlugGet(slug, languageCode, returnDefaultValue)
 }
 ```
 
@@ -254,10 +422,12 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **kotlin.String**|  |
+ **languageCode** | **kotlin.String**|  | [optional]
+ **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**DealViewModel**](DealViewModel.md)
+[**DealModel**](DealModel.md)
 
 ### Authorization
 
@@ -266,5 +436,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 

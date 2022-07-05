@@ -5,25 +5,26 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.LanguageViewModel
-import CloudHospitalApi.models.LanguagesViewModel
+import CloudHospitalApi.models.LanguageModel
+import CloudHospitalApi.models.LanguagesModel
+import CloudHospitalApi.models.ProblemDetails
 
 interface LanguagesApi {
     /**
-     * Get a language by code
+     * Get Language by code.
      * 
      * Responses:
      *  - 200: Success
      * 
      * @param code  
-     * @return [LanguageViewModel]
+     * @return [LanguageModel]
      */
-    @GET("api/v1/languages/{code}")
-    suspend fun apiV1LanguagesCodeGet(@Path("code") code: kotlin.String): Response<LanguageViewModel>
+    @GET("api/v2/languages/{code}")
+    suspend fun apiV2LanguagesCodeGet(@Path("code") code: kotlin.String): Response<LanguageModel>
 
     /**
-     * Get all languages.
-     * Sample request:        GET: /api/v1/languages
+     * Get all Languages.
+     * 
      * Responses:
      *  - 200: Success
      * 
@@ -34,21 +35,23 @@ interface LanguagesApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [LanguagesViewModel]
+     * @return [LanguagesModel]
      */
-    @GET("api/v1/languages")
-    suspend fun apiV1LanguagesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Code") code: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<LanguagesViewModel>
+    @GET("api/v2/languages")
+    suspend fun apiV2LanguagesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Code") code: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<LanguagesModel>
 
     /**
-     * Get a language by id
+     * Get Language.
      * 
      * Responses:
      *  - 200: Success
+     *  - 404: Not Found
+     *  - 0: Error
      * 
      * @param id  
-     * @return [LanguageViewModel]
+     * @return [LanguageModel]
      */
-    @GET("api/v1/languages/{id}")
-    suspend fun apiV1LanguagesIdGet(@Path("id") id: java.util.UUID): Response<LanguageViewModel>
+    @GET("api/v2/languages/{id}")
+    suspend fun apiV2LanguagesIdGet(@Path("id") id: java.util.UUID): Response<LanguageModel>
 
 }
