@@ -4,9 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1ProfilesChangeemailPost**](ProfilesApi.md#apiV1ProfilesChangeemailPost) | **POST** api/v1/profiles/changeemail | Change user&#39;s email on both Identity and Api.
-[**apiV1ProfilesConfirmemailPost**](ProfilesApi.md#apiV1ProfilesConfirmemailPost) | **POST** api/v1/profiles/confirmemail | 
-[**apiV1ProfilesGet**](ProfilesApi.md#apiV1ProfilesGet) | **GET** api/v1/profiles | Get current user&#39;s profile.
+[**apiV2ProfilesChangeemailPost**](ProfilesApi.md#apiV2ProfilesChangeemailPost) | **POST** api/v2/profiles/changeemail | Change user&#39;s email on both Identity and Api.
+[**apiV2ProfilesConfirmemailPost**](ProfilesApi.md#apiV2ProfilesConfirmemailPost) | **POST** api/v2/profiles/confirmemail | Configm email.
+[**apiV2ProfilesGet**](ProfilesApi.md#apiV2ProfilesGet) | **GET** api/v2/profiles | Get Profile.
+[**apiV2ProfilesPut**](ProfilesApi.md#apiV2ProfilesPut) | **PUT** api/v2/profiles | Update Profile.
 
 
 
@@ -26,7 +27,7 @@ val webService = apiClient.createWebservice(ProfilesApi::class.java)
 val changeEmailCommand : ChangeEmailCommand =  // ChangeEmailCommand | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1ProfilesChangeemailPost(changeEmailCommand)
+    val result : kotlin.Boolean = webService.apiV2ProfilesChangeemailPost(changeEmailCommand)
 }
 ```
 
@@ -47,10 +48,10 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-
+Configm email.
 
 ### Example
 ```kotlin
@@ -64,7 +65,7 @@ val webService = apiClient.createWebservice(ProfilesApi::class.java)
 val confirmEmailCommand : ConfirmEmailCommand =  // ConfirmEmailCommand | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1ProfilesConfirmemailPost(confirmEmailCommand)
+    val result : kotlin.Boolean = webService.apiV2ProfilesConfirmemailPost(confirmEmailCommand)
 }
 ```
 
@@ -85,12 +86,10 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 
-Get current user&#39;s profile.
-
-Sample request:        GET /api/v1/profiles
+Get Profile.
 
 ### Example
 ```kotlin
@@ -103,7 +102,7 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ProfilesApi::class.java)
 
 launch(Dispatchers.IO) {
-    val result : UserViewModel = webService.apiV1ProfilesGet()
+    val result : UserModel = webService.apiV2ProfilesGet()
 }
 ```
 
@@ -112,7 +111,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**UserViewModel**](UserViewModel.md)
+[**UserModel**](UserModel.md)
 
 ### Authorization
 
@@ -121,5 +120,43 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
+
+
+Update Profile.
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(ProfilesApi::class.java)
+val updateProfileCommand : UpdateProfileCommand =  // UpdateProfileCommand | 
+
+launch(Dispatchers.IO) {
+    val result : UserModel = webService.apiV2ProfilesPut(updateProfileCommand)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateProfileCommand** | [**UpdateProfileCommand**](UpdateProfileCommand.md)|  | [optional]
+
+### Return type
+
+[**UserModel**](UserModel.md)
+
+### Authorization
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: application/json
 
