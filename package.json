@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v2/swagger.json -o . --additional-properties=useCoroutines=true --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalApi",
-    "build-identity": "openapi-generator-cli generate -g kotlin -i https://identity-int.icloudhospital.com/swagger/v1/swagger.json -o Identity --additional-properties=useCoroutines=true --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalIdentityApi",
-    "prepack:local": "npm run build",
-    "pack:local": "mkdir -p out && npm pack --pack-destination out"
+    "build-identity": "openapi-generator-cli generate -g kotlin -i https://identity-int.icloudhospital.com/swagger/v1/swagger.json -o Identity --additional-properties=useCoroutines=true --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalIdentityApi"
   },
   "repository": {
     "type": "git",
