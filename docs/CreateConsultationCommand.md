@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **approximateDateStart** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **approximateDateEnd** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **timeZone** | **kotlin.String** |  |  [optional]
+**isExternal** | **kotlin.Boolean** |  |  [optional]
 
 
 

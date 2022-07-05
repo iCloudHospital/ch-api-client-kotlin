@@ -5,7 +5,7 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.MediaViewModel
+import CloudHospitalApi.models.MediaModel
 
 interface ImagesApi {
     /**
@@ -16,9 +16,9 @@ interface ImagesApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      * 
-     * @return [kotlin.collections.List<MediaViewModel>]
+     * @return [kotlin.collections.List<MediaModel>]
      */
-    @POST("api/v1/images")
-    suspend fun apiV1ImagesPost(): Response<kotlin.collections.List<MediaViewModel>>
+    @POST("api/v2/images")
+    suspend fun apiV2ImagesPost(): Response<kotlin.collections.List<MediaModel>>
 
 }

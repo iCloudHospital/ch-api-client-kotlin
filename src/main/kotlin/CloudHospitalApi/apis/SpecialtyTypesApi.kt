@@ -5,16 +5,18 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.CreateSpecialtyTypeCommand
 import CloudHospitalApi.models.MarketingType
-import CloudHospitalApi.models.SpecialtyTypeViewModel
-import CloudHospitalApi.models.SpecialtyTypesViewModel
-import CloudHospitalApi.models.UpdateSpecialtyTypeCommand
+import CloudHospitalApi.models.MediaModel
+import CloudHospitalApi.models.MediaType
+import CloudHospitalApi.models.MediasModel
+import CloudHospitalApi.models.SpecialtyTypeModel
+import CloudHospitalApi.models.SpecialtyTypesModel
+import CloudHospitalApi.models.SpecialtyTypesSimpleModel
 
 interface SpecialtyTypesApi {
     /**
-     * Get all SpecialtyTypes.
-     * Sample request:        GET /api/v1/SpecialtyTypes
+     * Get all Departments.
+     * 
      * Responses:
      *  - 200: Success
      * 
@@ -22,85 +24,102 @@ interface SpecialtyTypesApi {
      * @param name  (optional)
      * @param description  (optional)
      * @param marketingType  (optional)
+     * @param hospitalId  (optional)
      * @param created  (optional)
-     * @param languageCode  (optional)
      * @param ids  (optional)
      * @param specialtyTypeCategoryId  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
+     * @param returnDefaultValue  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @return [SpecialtyTypesViewModel]
+     * @return [SpecialtyTypesModel]
      */
-    @GET("api/v1/specialtytypes")
-    suspend fun apiV1SpecialtytypesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypesViewModel>
+    @GET("api/v2/specialtytypes")
+    suspend fun apiV2SpecialtytypesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypesModel>
 
     /**
-     * Create specialtyType.
-     * Sample request:        POST /api/v1/SpecialtyTypes      {          \&quot;name\&quot;: \&quot;Coronary artery disease\&quot;,          \&quot;description\&quot;: \&quot;Coronary artery disease\&quot;,          \&quot;specialtyTypeType\&quot;: \&quot;Cardiology\&quot;      }
+     * Get all Hospitals.
+     * 
      * Responses:
      *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
      * 
-     * @param createSpecialtyTypeCommand  (optional)
-     * @return [java.util.UUID]
+     * @param id  (optional)
+     * @param name  (optional)
+     * @param description  (optional)
+     * @param marketingType  (optional)
+     * @param hospitalId  (optional)
+     * @param created  (optional)
+     * @param ids  (optional)
+     * @param specialtyTypeCategoryId  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
+     * @param returnDefaultValue  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [SpecialtyTypesSimpleModel]
      */
-    @POST("api/v1/specialtytypes")
-    suspend fun apiV1SpecialtytypesPost(@Body createSpecialtyTypeCommand: CreateSpecialtyTypeCommand? = null): Response<java.util.UUID>
+    @GET("api/v2/specialtytypes/simple")
+    suspend fun apiV2SpecialtytypesSimpleGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyTypeCategoryId") specialtyTypeCategoryId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<SpecialtyTypesSimpleModel>
 
     /**
-     * Get specialtyType by slug.
+     * 
      * 
      * Responses:
      *  - 200: Success
      * 
      * @param slug  
-     * @param languageCode  (optional, default to "")
-     * @return [SpecialtyTypeViewModel]
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [SpecialtyTypeModel]
      */
-    @GET("api/v1/specialtytypes/slugs/{slug}")
-    suspend fun apiV1SpecialtytypesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<SpecialtyTypeViewModel>
+    @GET("api/v2/specialtytypes/{slug}")
+    suspend fun apiV2SpecialtytypesSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<SpecialtyTypeModel>
 
     /**
-     * Delete specialtyType.
-     * Sample request:        DELETE /api/v1/SpecialtyTypes/1
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
      * 
-     * @param specialtyTypeId  
-     * @return [kotlin.Boolean]
-     */
-    @DELETE("api/v1/specialtytypes/{specialtyTypeId}")
-    suspend fun apiV1SpecialtytypesSpecialtyTypeIdDelete(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID): Response<kotlin.Boolean>
-
-    /**
-     * Get specialtyType.
-     * Sample request:        GET /api/v1/SpecialtyTypes/1
+     * 
      * Responses:
      *  - 200: Success
      * 
      * @param specialtyTypeId  
-     * @param languageCode  (optional, default to "")
-     * @return [SpecialtyTypeViewModel]
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [SpecialtyTypeModel]
      */
-    @GET("api/v1/specialtytypes/{specialtyTypeId}")
-    suspend fun apiV1SpecialtytypesSpecialtyTypeIdGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<SpecialtyTypeViewModel>
+    @GET("api/v2/specialtytypes/{specialtyTypeId}")
+    suspend fun apiV2SpecialtytypesSpecialtyTypeIdGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<SpecialtyTypeModel>
 
     /**
-     * Update specialtyType
-     * Sample request:        PUT /api/v1/SpecialtyTypes/1      {          \&quot;name\&quot;: \&quot;Dilated cardiomyopathy\&quot;,          \&quot;description\&quot;: \&quot;Dilated cardiomyopathy\&quot;      }
+     * Get all SpecialtyTypeMedias.
+     * 
      * Responses:
      *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
      * 
      * @param specialtyTypeId  
-     * @param updateSpecialtyTypeCommand  (optional)
-     * @return [kotlin.Boolean]
+     * @param id  (optional)
+     * @param mediaType  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [MediasModel]
      */
-    @PUT("api/v1/specialtytypes/{specialtyTypeId}")
-    suspend fun apiV1SpecialtytypesSpecialtyTypeIdPut(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Body updateSpecialtyTypeCommand: UpdateSpecialtyTypeCommand? = null): Response<kotlin.Boolean>
+    @GET("api/v2/specialtytypes/{specialtyTypeId}/medias")
+    suspend fun apiV2SpecialtytypesSpecialtyTypeIdMediasGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("MediaType") mediaType: MediaType? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<MediasModel>
+
+    /**
+     * Get SpecialtyTypeMedia.
+     * 
+     * Responses:
+     *  - 200: Success
+     * 
+     * @param specialtyTypeId  
+     * @param mediaId  
+     * @return [MediaModel]
+     */
+    @GET("api/v2/specialtytypes/{specialtyTypeId}/medias/{mediaId}")
+    suspend fun apiV2SpecialtytypesSpecialtyTypeIdMediasMediaIdGet(@Path("specialtyTypeId") specialtyTypeId: java.util.UUID, @Path("mediaId") mediaId: java.util.UUID): Response<MediaModel>
 
 }
