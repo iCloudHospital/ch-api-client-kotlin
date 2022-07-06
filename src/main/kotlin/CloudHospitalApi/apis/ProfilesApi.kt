@@ -7,7 +7,6 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.ChangeEmailCommand
 import CloudHospitalApi.models.ConfirmEmailCommand
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdateProfileCommand
 import CloudHospitalApi.models.UserModel
 

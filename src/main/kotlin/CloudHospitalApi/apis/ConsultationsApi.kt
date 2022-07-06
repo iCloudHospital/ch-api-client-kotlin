@@ -10,7 +10,6 @@ import CloudHospitalApi.models.ConsultationStatus
 import CloudHospitalApi.models.ConsultationType
 import CloudHospitalApi.models.ConsultationsModel
 import CloudHospitalApi.models.CreateConsultationCommand
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdateConsultationCommand
 
 interface ConsultationsApi {

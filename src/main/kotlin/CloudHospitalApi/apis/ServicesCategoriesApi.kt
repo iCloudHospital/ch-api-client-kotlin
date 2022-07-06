@@ -5,7 +5,6 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.ServiceCategoriesModel
 import CloudHospitalApi.models.ServiceCategoryModel
 

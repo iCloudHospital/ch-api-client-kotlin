@@ -9,7 +9,6 @@ import CloudHospitalApi.models.PlanHospitalModel
 import CloudHospitalApi.models.PlanHospitalsModel
 import CloudHospitalApi.models.PlanModel
 import CloudHospitalApi.models.PlansModel
-import CloudHospitalApi.models.ProblemDetails
 
 interface PlansApi {
     /**

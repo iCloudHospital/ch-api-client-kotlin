@@ -8,7 +8,6 @@ import okhttp3.RequestBody
 import CloudHospitalApi.models.ChatUserModel
 import CloudHospitalApi.models.ChatUsersModel
 import CloudHospitalApi.models.CreateChatUserCommand
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdateChatUserCommand
 
 interface ChatUsersApi {
