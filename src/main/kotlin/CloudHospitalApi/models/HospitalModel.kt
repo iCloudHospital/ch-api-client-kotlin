@@ -26,13 +26,11 @@ import com.squareup.moshi.Json
 /**
  * 
  * @param id 
+ * @param languageCode 
  * @param name 
  * @param slug 
- * @param logo 
  * @param confirmed 
- * @param countryId 
- * @param countryName 
- * @param countrySlug 
+ * @param logo 
  * @param marketingType 
  * @param consultationEnabled 
  * @param consultationFee 
@@ -40,13 +38,14 @@ import com.squareup.moshi.Json
  * @param websiteUrl 
  * @param paymentEnabled 
  * @param specialtiesSummerized 
+ * @param countryId 
  * @param accreditations 
  * @param medias 
  * @param location 
- * @param languageCode 
  * @param description 
  * @param overview 
  * @param content 
+ * @param localizedUrls 
  * @param bedsCount 
  * @param operationsPerYear 
  * @param foundationYear 
@@ -58,27 +57,22 @@ import com.squareup.moshi.Json
  * @param evaluations 
  * @param hospitalWorkingDays 
  * @param hospitalSnsHandles 
- * @param localizedUrls 
  * @param awards 
  */
 
 data class HospitalModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @Json(name = "logo")
-    val logo: kotlin.String? = null,
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
-    @Json(name = "countryId")
-    val countryId: java.util.UUID? = null,
-    @Json(name = "countryName")
-    val countryName: kotlin.String? = null,
-    @Json(name = "countrySlug")
-    val countrySlug: kotlin.String? = null,
+    @Json(name = "logo")
+    val logo: kotlin.String? = null,
     @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
     @Json(name = "consultationEnabled")
@@ -93,20 +87,22 @@ data class HospitalModel (
     val paymentEnabled: kotlin.Boolean? = null,
     @Json(name = "specialtiesSummerized")
     val specialtiesSummerized: kotlin.String? = null,
+    @Json(name = "countryId")
+    val countryId: java.util.UUID? = null,
     @Json(name = "accreditations")
     val accreditations: kotlin.collections.List<HospitalAccreditationItemModel>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaModel>? = null,
     @Json(name = "location")
     val location: LocationModel? = null,
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "overview")
     val overview: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
     @Json(name = "bedsCount")
     val bedsCount: kotlin.Int? = null,
     @Json(name = "operationsPerYear")
@@ -129,8 +125,6 @@ data class HospitalModel (
     val hospitalWorkingDays: kotlin.collections.List<WorkingDay>? = null,
     @Json(name = "hospitalSnsHandles")
     val hospitalSnsHandles: kotlin.collections.List<SnsHandle>? = null,
-    @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
     @Json(name = "awards")
     val awards: kotlin.collections.List<AwardModel>? = null
 )

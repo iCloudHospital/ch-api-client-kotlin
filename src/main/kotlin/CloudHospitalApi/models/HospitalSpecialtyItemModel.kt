@@ -11,36 +11,39 @@
 */
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.MarketingType
 
 import com.squareup.moshi.Json
 
 /**
  * 
  * @param id 
+ * @param languageCode 
  * @param name 
  * @param slug 
  * @param description 
- * @param marketingType 
+ * @param confirmed 
  * @param photo 
  * @param photoThumbnail 
  * @param background 
  * @param backgroundThumbnail 
  * @param order 
- * @param confirmed 
+ * @param servicesCount 
+ * @param specialtyId 
  */
 
 data class HospitalSpecialtyItemModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
-    @Json(name = "marketingType")
-    val marketingType: MarketingType? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
     @Json(name = "photo")
     val photo: kotlin.String? = null,
     @Json(name = "photoThumbnail")
@@ -51,7 +54,9 @@ data class HospitalSpecialtyItemModel (
     val backgroundThumbnail: kotlin.String? = null,
     @Json(name = "order")
     val order: kotlin.Int? = null,
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null
+    @Json(name = "servicesCount")
+    val servicesCount: kotlin.Int? = null,
+    @Json(name = "specialtyId")
+    val specialtyId: java.util.UUID? = null
 )
 

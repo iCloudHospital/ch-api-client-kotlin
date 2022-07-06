@@ -417,6 +417,7 @@ src/main/kotlin/CloudHospitalApi/models/PlanHospitalsModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlanItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlanModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlansModel.kt
+src/main/kotlin/CloudHospitalApi/models/ProblemDetails.kt
 src/main/kotlin/CloudHospitalApi/models/Procedure.kt
 src/main/kotlin/CloudHospitalApi/models/RecurringInterval.kt
 src/main/kotlin/CloudHospitalApi/models/RefundPolicy.kt

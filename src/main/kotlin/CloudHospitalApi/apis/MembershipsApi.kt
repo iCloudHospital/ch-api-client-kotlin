@@ -8,6 +8,7 @@ import okhttp3.RequestBody
 import CloudHospitalApi.models.MembersModel
 import CloudHospitalApi.models.MembershipModel
 import CloudHospitalApi.models.MembershipsModel
+import CloudHospitalApi.models.ProblemDetails
 
 interface MembershipsApi {
     /**
