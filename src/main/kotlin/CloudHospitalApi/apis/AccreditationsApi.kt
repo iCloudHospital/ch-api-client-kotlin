@@ -7,7 +7,7 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.AccreditationModel
 import CloudHospitalApi.models.AccreditationsModel
-
+import CloudHospitalApi.models.ProblemDetails
 
 interface AccreditationsApi {
     /**

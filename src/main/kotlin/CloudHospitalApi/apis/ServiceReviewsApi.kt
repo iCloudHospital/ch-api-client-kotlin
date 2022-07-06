@@ -11,6 +11,7 @@ import CloudHospitalApi.models.Gender
 import CloudHospitalApi.models.MediaModel
 import CloudHospitalApi.models.MediaType
 import CloudHospitalApi.models.MediasModel
+import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.ReviewType
 import CloudHospitalApi.models.ServiceReviewModel
 import CloudHospitalApi.models.ServiceReviewsModel

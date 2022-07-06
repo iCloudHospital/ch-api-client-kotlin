@@ -21,13 +21,11 @@ import com.squareup.moshi.Json
 /**
  * 
  * @param id 
+ * @param languageCode 
  * @param name 
  * @param slug 
- * @param logo 
  * @param confirmed 
- * @param countryId 
- * @param countryName 
- * @param countrySlug 
+ * @param logo 
  * @param marketingType 
  * @param consultationEnabled 
  * @param consultationFee 
@@ -35,6 +33,7 @@ import com.squareup.moshi.Json
  * @param websiteUrl 
  * @param paymentEnabled 
  * @param specialtiesSummerized 
+ * @param countryId 
  * @param accreditations 
  * @param medias 
  * @param location 
@@ -43,20 +42,16 @@ import com.squareup.moshi.Json
 data class HospitalItemModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "slug")
     val slug: kotlin.String? = null,
-    @Json(name = "logo")
-    val logo: kotlin.String? = null,
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
-    @Json(name = "countryId")
-    val countryId: java.util.UUID? = null,
-    @Json(name = "countryName")
-    val countryName: kotlin.String? = null,
-    @Json(name = "countrySlug")
-    val countrySlug: kotlin.String? = null,
+    @Json(name = "logo")
+    val logo: kotlin.String? = null,
     @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
     @Json(name = "consultationEnabled")
@@ -71,6 +66,8 @@ data class HospitalItemModel (
     val paymentEnabled: kotlin.Boolean? = null,
     @Json(name = "specialtiesSummerized")
     val specialtiesSummerized: kotlin.String? = null,
+    @Json(name = "countryId")
+    val countryId: java.util.UUID? = null,
     @Json(name = "accreditations")
     val accreditations: kotlin.collections.List<HospitalAccreditationItemModel>? = null,
     @Json(name = "medias")

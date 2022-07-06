@@ -7,6 +7,7 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.CreatePatientCommand
 import CloudHospitalApi.models.PatientModel
+import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdatePatientCommand
 
 interface PatientsApi {

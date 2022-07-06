@@ -9,6 +9,7 @@ import CloudHospitalApi.models.BookingModel
 import CloudHospitalApi.models.BookingStatus
 import CloudHospitalApi.models.BookingsModel
 import CloudHospitalApi.models.CreateBookingCommand
+import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdateBookingCommand
 
 interface BookingsApi {

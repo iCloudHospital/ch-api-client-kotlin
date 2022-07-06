@@ -20,9 +20,12 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param description 
- * @param specialtyName 
  * @param order 
  * @param confirmed 
+ * @param servicesCount 
+ * @param specialtyId 
+ * @param specialtyName 
+ * @param specialtySlug 
  */
 
 data class HospitalSpecialtySimpleItemModel (
@@ -34,11 +37,17 @@ data class HospitalSpecialtySimpleItemModel (
     val slug: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
-    @Json(name = "specialtyName")
-    val specialtyName: kotlin.String? = null,
     @Json(name = "order")
     val order: kotlin.Int? = null,
     @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null
+    val confirmed: kotlin.Boolean? = null,
+    @Json(name = "servicesCount")
+    val servicesCount: kotlin.Int? = null,
+    @Json(name = "specialtyId")
+    val specialtyId: java.util.UUID? = null,
+    @Json(name = "specialtyName")
+    val specialtyName: kotlin.String? = null,
+    @Json(name = "specialtySlug")
+    val specialtySlug: kotlin.String? = null
 )
 
