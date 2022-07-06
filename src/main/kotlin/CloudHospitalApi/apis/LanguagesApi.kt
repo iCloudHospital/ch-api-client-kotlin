@@ -7,7 +7,6 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.LanguageModel
 import CloudHospitalApi.models.LanguagesModel
-import CloudHospitalApi.models.ProblemDetails
 
 interface LanguagesApi {
     /**
