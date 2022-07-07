@@ -37,10 +37,9 @@ interface NotificationsApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [NotificationsViewModel]
      */
     @GET("api/v1/notifications")
-    suspend fun apiV1NotificationsGet(@Query("NotificationCode") notificationCode: NotificationCode? = null, @Query("UnreadCountOnly") unreadCountOnly: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<NotificationsViewModel>
+    suspend fun apiV1NotificationsGet(@Query("NotificationCode") notificationCode: NotificationCode? = null, @Query("UnreadCountOnly") unreadCountOnly: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<NotificationsViewModel>
 
 }

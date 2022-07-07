@@ -13,6 +13,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.ArticleContributor
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.ContributorTranslation
 import CloudHospitalApi.models.Hospital
 import CloudHospitalApi.models.SnsHandle
 
@@ -31,6 +32,7 @@ import com.squareup.moshi.Json
  * @param hospital 
  * @param order 
  * @param articleContributors 
+ * @param translations 
  * @param snsHandles 
  * @param auditableEntity 
  */
@@ -58,6 +60,8 @@ data class Contributor (
     val order: kotlin.Int? = null,
     @Json(name = "articleContributors")
     val articleContributors: kotlin.collections.List<ArticleContributor>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<ContributorTranslation>? = null,
     @Json(name = "snsHandles")
     val snsHandles: kotlin.collections.List<SnsHandle>? = null,
     @Json(name = "auditableEntity")

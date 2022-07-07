@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **rate** | **kotlin.Int** |  |  [optional]
 **reviewType** | [**ReviewType**](ReviewType.md) |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;Media&gt;**](Media.md) |  |  [optional]
+**auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 
 

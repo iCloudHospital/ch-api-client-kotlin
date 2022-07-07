@@ -14,6 +14,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.DealPackage
 import CloudHospitalApi.models.DealService
+import CloudHospitalApi.models.DealTranslation
 import CloudHospitalApi.models.Hospital
 import CloudHospitalApi.models.MarketingType
 
@@ -30,8 +31,11 @@ import com.squareup.moshi.Json
  * @param marketingType 
  * @param photo 
  * @param photoThumbnail 
+ * @param serviceDuration 
+ * @param order 
  * @param dealPackages 
  * @param dealServices 
+ * @param translations 
  * @param auditableEntity 
  */
 
@@ -54,10 +58,16 @@ data class Deal (
     val photo: kotlin.String? = null,
     @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
+    @Json(name = "serviceDuration")
+    val serviceDuration: kotlin.Int? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
     @Json(name = "dealPackages")
     val dealPackages: kotlin.collections.List<DealPackage>? = null,
     @Json(name = "dealServices")
     val dealServices: kotlin.collections.List<DealService>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<DealTranslation>? = null,
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

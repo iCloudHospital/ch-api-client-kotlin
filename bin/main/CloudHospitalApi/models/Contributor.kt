@@ -13,6 +13,8 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.ArticleContributor
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.ContributorTranslation
+import CloudHospitalApi.models.Hospital
 import CloudHospitalApi.models.SnsHandle
 
 import com.squareup.moshi.Json
@@ -21,13 +23,17 @@ import com.squareup.moshi.Json
  * 
  * @param id 
  * @param name 
- * @param slug 
  * @param email 
  * @param photo 
+ * @param photoThumbnail 
  * @param description 
  * @param website 
- * @param snsHandles 
+ * @param hospitalId 
+ * @param hospital 
+ * @param order 
  * @param articleContributors 
+ * @param translations 
+ * @param snsHandles 
  * @param auditableEntity 
  */
 
@@ -36,20 +42,28 @@ data class Contributor (
     val id: java.util.UUID? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
-    @Json(name = "slug")
-    val slug: kotlin.String? = null,
     @Json(name = "email")
     val email: kotlin.String? = null,
     @Json(name = "photo")
     val photo: kotlin.String? = null,
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "website")
     val website: kotlin.String? = null,
-    @Json(name = "snsHandles")
-    val snsHandles: kotlin.collections.List<SnsHandle>? = null,
+    @Json(name = "hospitalId")
+    val hospitalId: java.util.UUID? = null,
+    @Json(name = "hospital")
+    val hospital: Hospital? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
     @Json(name = "articleContributors")
     val articleContributors: kotlin.collections.List<ArticleContributor>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<ContributorTranslation>? = null,
+    @Json(name = "snsHandles")
+    val snsHandles: kotlin.collections.List<SnsHandle>? = null,
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
 )

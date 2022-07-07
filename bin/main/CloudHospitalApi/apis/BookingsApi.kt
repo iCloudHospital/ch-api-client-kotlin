@@ -145,11 +145,10 @@ interface BookingsApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [BookingsViewModel]
      */
     @GET("api/v1/bookings")
-    suspend fun apiV1BookingsGet(@Query("SearchString") searchString: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: BookingStatus? = null, @Query("DealPackageId") dealPackageId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<BookingsViewModel>
+    suspend fun apiV1BookingsGet(@Query("SearchString") searchString: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: BookingStatus? = null, @Query("DealPackageId") dealPackageId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<BookingsViewModel>
 
     /**
      * Create booking.

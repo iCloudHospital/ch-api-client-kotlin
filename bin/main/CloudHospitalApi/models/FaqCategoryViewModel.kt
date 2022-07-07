@@ -12,6 +12,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.FaqItemViewModel
+import CloudHospitalApi.models.LocalizedUrlViewModel
 
 import com.squareup.moshi.Json
 
@@ -24,6 +25,8 @@ import com.squareup.moshi.Json
  * @param description 
  * @param order 
  * @param faqs 
+ * @param localizedUrls 
+ * @param confirmed 
  */
 
 data class FaqCategoryViewModel (
@@ -40,6 +43,10 @@ data class FaqCategoryViewModel (
     @Json(name = "order")
     val order: kotlin.Int? = null,
     @Json(name = "faqs")
-    val faqs: kotlin.collections.List<FaqItemViewModel>? = null
+    val faqs: kotlin.collections.List<FaqItemViewModel>? = null,
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlViewModel>? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

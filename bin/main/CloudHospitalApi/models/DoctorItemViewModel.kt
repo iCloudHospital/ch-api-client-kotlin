@@ -47,6 +47,7 @@ import com.squareup.moshi.Json
  * @param doctorAffiliationsCount 
  * @param doctorAffiliations 
  * @param articlesCount 
+ * @param confirmed 
  */
 
 data class DoctorItemViewModel (
@@ -103,6 +104,8 @@ data class DoctorItemViewModel (
     @Json(name = "doctorAffiliations")
     val doctorAffiliations: kotlin.collections.List<HospitalAffiliationViewModel>? = null,
     @Json(name = "articlesCount")
-    val articlesCount: kotlin.Int? = null
+    val articlesCount: kotlin.Int? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

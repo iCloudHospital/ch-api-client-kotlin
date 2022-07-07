@@ -67,7 +67,7 @@ class ApiClient(
     ) : this(baseUrl, okHttpClientBuilder, serializerBuilder) {
         authNames.forEach { authName ->
             val auth = when (authName) {
-                "oauth2" -> OAuth(OAuthFlow.implicit, "https://identity-int.icloudhospital.com/connect/authorize", "", "CloudHospital_api, IdentityServerApi")
+                "oauth2" -> OAuth(OAuthFlow.implicit, "https://identity-int.icloudhospital.com/connect/authorize", "", "CloudHospital_api, IdentityServerApi, CloudHospital_SignalR")
                 else -> throw RuntimeException("auth name $authName not found in available auth names")
             }
             addAuthorization(authName, auth);

@@ -91,10 +91,9 @@ interface QuestionsApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
      * @return [QuestionsViewModel]
      */
     @GET("api/v1/hospitals/questions")
-    suspend fun apiV1HospitalsQuestionsGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("QuestionType") questionType: QuestionType? = null, @Query("QuestionStatus") questionStatus: QuestionStatus? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<QuestionsViewModel>
+    suspend fun apiV1HospitalsQuestionsGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("QuestionType") questionType: QuestionType? = null, @Query("QuestionStatus") questionStatus: QuestionStatus? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<QuestionsViewModel>
 
 }

@@ -12,6 +12,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.ArticleTag
+import CloudHospitalApi.models.FaqTag
 import CloudHospitalApi.models.YoutubeTag
 
 import com.squareup.moshi.Json
@@ -20,6 +21,7 @@ import com.squareup.moshi.Json
  * 
  * @param tagId 
  * @param normalizedTagId 
+ * @param faqTags 
  * @param articleTags 
  * @param youtubeTags 
  */
@@ -29,6 +31,8 @@ data class Tag (
     val tagId: kotlin.String? = null,
     @Json(name = "normalizedTagId")
     val normalizedTagId: kotlin.String? = null,
+    @Json(name = "faqTags")
+    val faqTags: kotlin.collections.List<FaqTag>? = null,
     @Json(name = "articleTags")
     val articleTags: kotlin.collections.List<ArticleTag>? = null,
     @Json(name = "youtubeTags")

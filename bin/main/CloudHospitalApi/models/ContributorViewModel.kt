@@ -22,8 +22,12 @@ import com.squareup.moshi.Json
  * @param slug 
  * @param email 
  * @param photo 
+ * @param photoThumbnail 
  * @param description 
  * @param website 
+ * @param hospitalId 
+ * @param hospitalName 
+ * @param order 
  * @param snsHandles 
  */
 
@@ -38,10 +42,18 @@ data class ContributorViewModel (
     val email: kotlin.String? = null,
     @Json(name = "photo")
     val photo: kotlin.String? = null,
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "website")
     val website: kotlin.String? = null,
+    @Json(name = "hospitalId")
+    val hospitalId: java.util.UUID? = null,
+    @Json(name = "hospitalName")
+    val hospitalName: kotlin.String? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
     @Json(name = "snsHandles")
     val snsHandles: kotlin.collections.List<SnsHandleViewModel>? = null
 )

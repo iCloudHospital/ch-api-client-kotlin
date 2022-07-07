@@ -26,12 +26,14 @@ import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.QuestionComment
 import CloudHospitalApi.models.UserLanguage
 import CloudHospitalApi.models.UserLocation
+import CloudHospitalApi.models.UserTranslation
 
 import com.squareup.moshi.Json
 
 /**
  * 
  * @param id 
+ * @param userType 
  * @param userName 
  * @param email 
  * @param firstName 
@@ -48,11 +50,14 @@ import com.squareup.moshi.Json
  * @param devices 
  * @param articles 
  * @param questionComments 
+ * @param translations 
  * @param locations 
  * @param languages 
  * @param auditableEntity 
  * @param startPracticeDate 
+ * @param description 
  * @param overview 
+ * @param content 
  * @param consultationEnabled 
  * @param consultationFee 
  * @param doctorReviews 
@@ -68,6 +73,8 @@ import com.squareup.moshi.Json
 data class Doctor (
     @Json(name = "id")
     val id: java.util.UUID? = null,
+    @Json(name = "userType")
+    val userType: kotlin.Int? = null,
     @Json(name = "userName")
     val userName: kotlin.String? = null,
     @Json(name = "email")
@@ -100,6 +107,8 @@ data class Doctor (
     val articles: kotlin.collections.List<Article>? = null,
     @Json(name = "questionComments")
     val questionComments: kotlin.collections.List<QuestionComment>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<UserTranslation>? = null,
     @Json(name = "locations")
     val locations: kotlin.collections.List<UserLocation>? = null,
     @Json(name = "languages")
@@ -108,8 +117,12 @@ data class Doctor (
     val auditableEntity: AuditableEntity? = null,
     @Json(name = "startPracticeDate")
     val startPracticeDate: java.time.LocalDateTime? = null,
+    @Json(name = "description")
+    val description: kotlin.String? = null,
     @Json(name = "overview")
     val overview: kotlin.String? = null,
+    @Json(name = "content")
+    val content: kotlin.String? = null,
     @Json(name = "consultationEnabled")
     val consultationEnabled: kotlin.Boolean? = null,
     @Json(name = "consultationFee")

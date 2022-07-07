@@ -12,6 +12,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.CountryTranslation
 import CloudHospitalApi.models.Hospital
 import CloudHospitalApi.models.Media
 
@@ -22,10 +23,11 @@ import com.squareup.moshi.Json
  * @param id 
  * @param name 
  * @param normalizedName 
- * @param logo 
  * @param description 
+ * @param logo 
  * @param content 
  * @param hospitals 
+ * @param translations 
  * @param medias 
  * @param auditableEntity 
  */
@@ -37,14 +39,16 @@ data class Country (
     val name: kotlin.String? = null,
     @Json(name = "normalizedName")
     val normalizedName: kotlin.String? = null,
-    @Json(name = "logo")
-    val logo: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
+    @Json(name = "logo")
+    val logo: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
     @Json(name = "hospitals")
     val hospitals: kotlin.collections.List<Hospital>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<CountryTranslation>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
     @Json(name = "auditableEntity")

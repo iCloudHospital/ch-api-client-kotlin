@@ -15,6 +15,7 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.DoctorSpecialty
 import CloudHospitalApi.models.HospitalSpecialty
 import CloudHospitalApi.models.Media
+import CloudHospitalApi.models.SpecialtyTranslation
 import CloudHospitalApi.models.SpecialtyType
 
 import com.squareup.moshi.Json
@@ -30,6 +31,7 @@ import com.squareup.moshi.Json
  * @param specialtyType 
  * @param hospitalSpecialties 
  * @param doctorSpecialties 
+ * @param translations 
  * @param medias 
  * @param auditableEntity 
  */
@@ -53,6 +55,8 @@ data class Specialty (
     val hospitalSpecialties: kotlin.collections.List<HospitalSpecialty>? = null,
     @Json(name = "doctorSpecialties")
     val doctorSpecialties: kotlin.collections.List<DoctorSpecialty>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<SpecialtyTranslation>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
     @Json(name = "auditableEntity")

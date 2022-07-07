@@ -12,6 +12,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.LocalizedUrlViewModel
 import CloudHospitalApi.models.MediaViewModel
 
 import com.squareup.moshi.Json
@@ -22,8 +23,11 @@ import com.squareup.moshi.Json
  * @param title 
  * @param slug 
  * @param content 
+ * @param order 
  * @param medias 
  * @param auditableEntity 
+ * @param localizedUrls 
+ * @param confirmed 
  */
 
 data class FaqItemViewModel (
@@ -35,9 +39,15 @@ data class FaqItemViewModel (
     val slug: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaViewModel>? = null,
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlViewModel>? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

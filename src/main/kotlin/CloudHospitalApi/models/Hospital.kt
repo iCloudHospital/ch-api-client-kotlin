@@ -21,15 +21,19 @@ import CloudHospitalApi.models.Deal
 import CloudHospitalApi.models.Department
 import CloudHospitalApi.models.DoctorAffiliation
 import CloudHospitalApi.models.Equipment
+import CloudHospitalApi.models.FaqCategory
 import CloudHospitalApi.models.HospitalAccreditation
 import CloudHospitalApi.models.HospitalEvaluation
 import CloudHospitalApi.models.HospitalReview
 import CloudHospitalApi.models.HospitalSpecialty
+import CloudHospitalApi.models.HospitalTranslation
 import CloudHospitalApi.models.Location
 import CloudHospitalApi.models.ManagerAffiliation
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.Question
+import CloudHospitalApi.models.SnsHandle
+import CloudHospitalApi.models.WorkingDay
 
 import com.squareup.moshi.Json
 
@@ -39,8 +43,10 @@ import com.squareup.moshi.Json
  * @param name 
  * @param normalizedName 
  * @param description 
- * @param logo 
  * @param overview 
+ * @param content 
+ * @param customStyle 
+ * @param logo 
  * @param bedsCount 
  * @param operationsPerYear 
  * @param foundationYear 
@@ -52,6 +58,11 @@ import com.squareup.moshi.Json
  * @param consultationEnabled 
  * @param consultationFee 
  * @param timeZone 
+ * @param websiteUrl 
+ * @param contactTel 
+ * @param contactEmail 
+ * @param paymentEnabled 
+ * @param translations 
  * @param articles 
  * @param questions 
  * @param deals 
@@ -65,6 +76,9 @@ import com.squareup.moshi.Json
  * @param bookings 
  * @param consultations 
  * @param evaluations 
+ * @param hospitalWorkingDays 
+ * @param hospitalSnsHandles 
+ * @param faqCategories 
  * @param awards 
  * @param medias 
  * @param location 
@@ -80,10 +94,14 @@ data class Hospital (
     val normalizedName: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
-    @Json(name = "logo")
-    val logo: kotlin.String? = null,
     @Json(name = "overview")
     val overview: kotlin.String? = null,
+    @Json(name = "content")
+    val content: kotlin.String? = null,
+    @Json(name = "customStyle")
+    val customStyle: kotlin.String? = null,
+    @Json(name = "logo")
+    val logo: kotlin.String? = null,
     @Json(name = "bedsCount")
     val bedsCount: kotlin.Int? = null,
     @Json(name = "operationsPerYear")
@@ -106,6 +124,16 @@ data class Hospital (
     val consultationFee: kotlin.Double? = null,
     @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
+    @Json(name = "websiteUrl")
+    val websiteUrl: kotlin.String? = null,
+    @Json(name = "contactTel")
+    val contactTel: kotlin.String? = null,
+    @Json(name = "contactEmail")
+    val contactEmail: kotlin.String? = null,
+    @Json(name = "paymentEnabled")
+    val paymentEnabled: kotlin.Boolean? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<HospitalTranslation>? = null,
     @Json(name = "articles")
     val articles: kotlin.collections.List<Article>? = null,
     @Json(name = "questions")
@@ -132,6 +160,12 @@ data class Hospital (
     val consultations: kotlin.collections.List<Consultation>? = null,
     @Json(name = "evaluations")
     val evaluations: kotlin.collections.List<HospitalEvaluation>? = null,
+    @Json(name = "hospitalWorkingDays")
+    val hospitalWorkingDays: kotlin.collections.List<WorkingDay>? = null,
+    @Json(name = "hospitalSnsHandles")
+    val hospitalSnsHandles: kotlin.collections.List<SnsHandle>? = null,
+    @Json(name = "faqCategories")
+    val faqCategories: kotlin.collections.List<FaqCategory>? = null,
     @Json(name = "awards")
     val awards: kotlin.collections.List<Award>? = null,
     @Json(name = "medias")

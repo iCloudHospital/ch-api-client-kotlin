@@ -11,6 +11,7 @@
 */
 package CloudHospitalApi.models
 
+import CloudHospitalApi.models.LocalizedUrlViewModel
 import CloudHospitalApi.models.MarketingType
 
 import com.squareup.moshi.Json
@@ -20,12 +21,14 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param description 
+ * @param content 
  * @param marketingType 
  * @param specialtyCount 
  * @param hospitalSpecialtyCount 
  * @param serviceCount 
  * @param created 
- * @param content 
+ * @param localizedUrls 
+ * @param confirmed 
  */
 
 data class UpdateSpecialtyTypeCommand (
@@ -35,6 +38,8 @@ data class UpdateSpecialtyTypeCommand (
     val slug: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
+    @Json(name = "content")
+    val content: kotlin.String? = null,
     @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
     @Json(name = "specialtyCount")
@@ -45,7 +50,9 @@ data class UpdateSpecialtyTypeCommand (
     val serviceCount: kotlin.Int? = null,
     @Json(name = "created")
     val created: java.time.LocalDateTime? = null,
-    @Json(name = "content")
-    val content: kotlin.String? = null
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlViewModel>? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null
 )
 

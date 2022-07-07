@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**userType** | **kotlin.Int** |  |  [optional]
 **userName** | **kotlin.String** |  |  [optional]
 **email** | **kotlin.String** |  |  [optional]
 **firstName** | **kotlin.String** |  |  [optional]
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 **devices** | [**kotlin.collections.List&lt;Device&gt;**](Device.md) |  |  [optional]
 **articles** | [**kotlin.collections.List&lt;Article&gt;**](Article.md) |  |  [optional]
 **questionComments** | [**kotlin.collections.List&lt;QuestionComment&gt;**](QuestionComment.md) |  |  [optional]
+**translations** | [**kotlin.collections.List&lt;UserTranslation&gt;**](UserTranslation.md) |  |  [optional]
 **locations** | [**kotlin.collections.List&lt;UserLocation&gt;**](UserLocation.md) |  |  [optional]
 **languages** | [**kotlin.collections.List&lt;UserLanguage&gt;**](UserLanguage.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]

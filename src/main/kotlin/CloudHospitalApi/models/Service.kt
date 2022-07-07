@@ -12,11 +12,14 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.Hospital
 import CloudHospitalApi.models.HospitalSpecialty
 import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.Procedure
 import CloudHospitalApi.models.ServiceCategory
 import CloudHospitalApi.models.ServiceReview
+import CloudHospitalApi.models.ServiceTranslation
+import CloudHospitalApi.models.Specialty
 
 import com.squareup.moshi.Json
 
@@ -27,9 +30,13 @@ import com.squareup.moshi.Json
  * @param normalizedName 
  * @param description 
  * @param content 
+ * @param customStyle 
  * @param hospitalId 
+ * @param hospital 
  * @param specialtyId 
+ * @param specialty 
  * @param packageServiceId 
+ * @param hospitalSpecialtyId 
  * @param hospitalSpecialty 
  * @param procedure 
  * @param serviceCategoryId 
@@ -38,7 +45,10 @@ import com.squareup.moshi.Json
  * @param maxPrice 
  * @param priceReuqest 
  * @param order 
+ * @param photo 
+ * @param photoThumbnail 
  * @param serviceReviews 
+ * @param translations 
  * @param medias 
  * @param auditableEntity 
  */
@@ -54,12 +64,20 @@ data class Service (
     val description: kotlin.String? = null,
     @Json(name = "content")
     val content: kotlin.String? = null,
+    @Json(name = "customStyle")
+    val customStyle: kotlin.String? = null,
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
+    @Json(name = "hospital")
+    val hospital: Hospital? = null,
     @Json(name = "specialtyId")
     val specialtyId: java.util.UUID? = null,
+    @Json(name = "specialty")
+    val specialty: Specialty? = null,
     @Json(name = "packageServiceId")
     val packageServiceId: java.util.UUID? = null,
+    @Json(name = "hospitalSpecialtyId")
+    val hospitalSpecialtyId: java.util.UUID? = null,
     @Json(name = "hospitalSpecialty")
     val hospitalSpecialty: HospitalSpecialty? = null,
     @Json(name = "procedure")
@@ -76,8 +94,14 @@ data class Service (
     val priceReuqest: kotlin.Boolean? = null,
     @Json(name = "order")
     val order: kotlin.Int? = null,
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
     @Json(name = "serviceReviews")
     val serviceReviews: kotlin.collections.List<ServiceReview>? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<ServiceTranslation>? = null,
     @Json(name = "medias")
     val medias: kotlin.collections.List<Media>? = null,
     @Json(name = "auditableEntity")

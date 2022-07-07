@@ -28,7 +28,6 @@ import com.squareup.moshi.Json
  * @param dateOfBirth 
  * @param languages 
  * @param locations 
- * @param hospitalId 
  */
 
 data class UpdateManagerCommand (
@@ -49,8 +48,6 @@ data class UpdateManagerCommand (
     @Json(name = "languages")
     val languages: kotlin.collections.List<UserLanguageViewModel>? = null,
     @Json(name = "locations")
-    val locations: kotlin.collections.List<UserLocationViewModel>? = null,
-    @Json(name = "hospitalId")
-    val hospitalId: java.util.UUID? = null
+    val locations: kotlin.collections.List<UserLocationViewModel>? = null
 )
 

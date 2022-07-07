@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contributorId** | [**java.util.UUID**](.md)|  |
  **id** | [**java.util.UUID**](.md)|  | [optional]
- **snsType** | [**SnsType**](.md)|  | [optional] [enum: Twitter, Facebook, Instagram]
+ **snsType** | [**SnsType**](.md)|  | [optional] [enum: Twitter, Facebook, Instagram, LinkedIn, Youtube, KakaoTalk]
  **handle** | **kotlin.String**|  | [optional]
  **contributorId2** | [**java.util.UUID**](.md)|  | [optional]
  **page** | **kotlin.Int**|  | [optional]

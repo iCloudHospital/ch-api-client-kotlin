@@ -22,7 +22,6 @@ import com.squareup.moshi.Json
  * @param id 
  * @param title 
  * @param normalizedTitle 
- * @param slug 
  * @param description 
  * @param url 
  * @param youtubeTags 
@@ -37,8 +36,6 @@ data class Youtube (
     val title: kotlin.String? = null,
     @Json(name = "normalizedTitle")
     val normalizedTitle: kotlin.String? = null,
-    @Json(name = "slug")
-    val slug: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "url")

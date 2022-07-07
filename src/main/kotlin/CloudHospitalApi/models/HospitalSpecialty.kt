@@ -11,7 +11,10 @@
 */
 package CloudHospitalApi.models
 
+import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.Hospital
+import CloudHospitalApi.models.HospitalSpecialtyTranslation
+import CloudHospitalApi.models.Media
 import CloudHospitalApi.models.Service
 import CloudHospitalApi.models.Specialty
 
@@ -19,21 +22,30 @@ import com.squareup.moshi.Json
 
 /**
  * 
+ * @param id 
  * @param hospitalId 
  * @param hospital 
  * @param specialtyId 
  * @param specialty 
- * @param order 
  * @param services 
  * @param title 
  * @param normalizedTitle 
  * @param description 
- * @param body 
+ * @param content 
+ * @param customStyle 
+ * @param order 
  * @param photo 
  * @param photoThumbnail 
+ * @param background 
+ * @param backgroundThumbnail 
+ * @param translations 
+ * @param medias 
+ * @param auditableEntity 
  */
 
 data class HospitalSpecialty (
+    @Json(name = "id")
+    val id: java.util.UUID? = null,
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
     @Json(name = "hospital")
@@ -42,8 +54,6 @@ data class HospitalSpecialty (
     val specialtyId: java.util.UUID? = null,
     @Json(name = "specialty")
     val specialty: Specialty? = null,
-    @Json(name = "order")
-    val order: kotlin.Int? = null,
     @Json(name = "services")
     val services: kotlin.collections.List<Service>? = null,
     @Json(name = "title")
@@ -52,11 +62,25 @@ data class HospitalSpecialty (
     val normalizedTitle: kotlin.String? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
-    @Json(name = "body")
-    val body: kotlin.String? = null,
+    @Json(name = "content")
+    val content: kotlin.String? = null,
+    @Json(name = "customStyle")
+    val customStyle: kotlin.String? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
     @Json(name = "photo")
     val photo: kotlin.String? = null,
     @Json(name = "photoThumbnail")
-    val photoThumbnail: kotlin.String? = null
+    val photoThumbnail: kotlin.String? = null,
+    @Json(name = "background")
+    val background: kotlin.String? = null,
+    @Json(name = "backgroundThumbnail")
+    val backgroundThumbnail: kotlin.String? = null,
+    @Json(name = "translations")
+    val translations: kotlin.collections.List<HospitalSpecialtyTranslation>? = null,
+    @Json(name = "medias")
+    val medias: kotlin.collections.List<Media>? = null,
+    @Json(name = "auditableEntity")
+    val auditableEntity: AuditableEntity? = null
 )
 

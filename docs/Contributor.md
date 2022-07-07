@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **hospital** | [**Hospital**](Hospital.md) |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **articleContributors** | [**kotlin.collections.List&lt;ArticleContributor&gt;**](ArticleContributor.md) |  |  [optional]
+**translations** | [**kotlin.collections.List&lt;ContributorTranslation&gt;**](ContributorTranslation.md) |  |  [optional]
 **snsHandles** | [**kotlin.collections.List&lt;SnsHandle&gt;**](SnsHandle.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 

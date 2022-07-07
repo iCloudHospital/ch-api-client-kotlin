@@ -18,12 +18,15 @@ import com.squareup.moshi.Json
  * 
  * @param id 
  * @param language 
+ * @param userId 
  */
 
 data class UserLanguage (
     @Json(name = "id")
     val id: java.util.UUID? = null,
     @Json(name = "language")
-    val language: kotlin.String? = null
+    val language: kotlin.String? = null,
+    @Json(name = "userId")
+    val userId: java.util.UUID? = null
 )
 

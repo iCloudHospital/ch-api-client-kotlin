@@ -66,6 +66,7 @@ import com.squareup.moshi.Json
  * @param paymentId 
  * @param payment 
  * @param timeZone 
+ * @param isExternal 
  * @param statusChangeLogs 
  * @param medias 
  * @param auditableEntity 
@@ -144,6 +145,8 @@ data class Consultation (
     val payment: Payment? = null,
     @Json(name = "timeZone")
     val timeZone: kotlin.String? = null,
+    @Json(name = "isExternal")
+    val isExternal: kotlin.Boolean? = null,
     @Json(name = "statusChangeLogs")
     val statusChangeLogs: kotlin.collections.List<ChangeLog>? = null,
     @Json(name = "medias")
