@@ -21,8 +21,8 @@ interface PatientsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param patientId  
+     *
+     * @param patientId 
      * @return [kotlin.Boolean]
      */
     @DELETE("api/v2/patients/{patientId}")
@@ -37,8 +37,8 @@ interface PatientsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param patientId  
+     *
+     * @param patientId 
      * @return [PatientModel]
      */
     @GET("api/v2/patients/{patientId}")
@@ -53,8 +53,8 @@ interface PatientsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param patientId  
+     *
+     * @param patientId 
      * @param updatePatientCommand  (optional)
      * @return [PatientModel]
      */
@@ -70,7 +70,7 @@ interface PatientsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
+     *
      * @param createPatientCommand  (optional)
      * @return [PatientModel]
      */

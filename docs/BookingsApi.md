@@ -34,7 +34,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
+ **bookingId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -72,7 +72,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
+ **bookingId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -111,7 +111,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bookingId** | [**java.util.UUID**](.md)|  |
+ **bookingId** | **java.util.UUID**|  |
  **updateBookingCommand** | [**UpdateBookingCommand**](UpdateBookingCommand.md)|  | [optional]
 
 ### Return type
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 
 
@@ -162,8 +162,8 @@ Name | Type | Description  | Notes
  **isOpen** | **kotlin.Boolean**|  | [optional]
  **isCompleted** | **kotlin.Boolean**|  | [optional]
  **status** | [**BookingStatus**](.md)|  | [optional] [enum: New, Rejected, Approved, Paid, Canceled, RefundRequested, Refunded]
- **dealPackageId** | [**java.util.UUID**](.md)|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **dealPackageId** | **java.util.UUID**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -205,7 +205,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestId** | [**java.util.UUID**](.md)|  |
+ **requestId** | **java.util.UUID**|  |
  **createBookingCommand** | [**CreateBookingCommand**](CreateBookingCommand.md)|  | [optional]
 
 ### Return type
@@ -218,6 +218,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 

@@ -17,8 +17,8 @@ interface ContributorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param contributorId  
+     *
+     * @param contributorId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [ContributorModel]
@@ -31,8 +31,8 @@ interface ContributorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param contributorId  
+     *
+     * @param contributorId 
      * @param contributorId2  (optional)
      * @param id  (optional)
      * @param snsType  (optional)
@@ -50,9 +50,9 @@ interface ContributorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param contributorId  
-     * @param handleId  
+     *
+     * @param contributorId 
+     * @param handleId 
      * @return [SnsHandleModel]
      */
     @GET("api/v2/contributors/{contributorId}/handles/{handleId}")
@@ -63,7 +63,7 @@ interface ContributorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param email  (optional)
@@ -86,8 +86,8 @@ interface ContributorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [ContributorModel]

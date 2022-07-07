@@ -15,7 +15,7 @@ interface CommunicationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [kotlin.Int]
      */
     @DELETE("api/v2/communications")
@@ -28,7 +28,7 @@ interface CommunicationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [CommunicationUserTokenModel]
      */
     @GET("api/v2/communications")
@@ -41,7 +41,7 @@ interface CommunicationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [CommunicationUserTokenModel]
      */
     @PUT("api/v2/communications")

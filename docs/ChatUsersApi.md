@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 
 
@@ -153,7 +153,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | [**java.util.UUID**](.md)|  |
+ **userId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -191,7 +191,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | [**java.util.UUID**](.md)|  |
+ **userId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -230,7 +230,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | [**java.util.UUID**](.md)|  |
+ **userId** | **java.util.UUID**|  |
  **updateChatUserCommand** | [**UpdateChatUserCommand**](UpdateChatUserCommand.md)|  | [optional]
 
 ### Return type
@@ -243,6 +243,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 

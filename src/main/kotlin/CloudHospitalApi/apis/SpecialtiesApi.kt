@@ -18,7 +18,7 @@ interface SpecialtiesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param description  (optional)
@@ -41,7 +41,7 @@ interface SpecialtiesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param description  (optional)
@@ -64,8 +64,8 @@ interface SpecialtiesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [SpecialtyModel]
@@ -78,8 +78,8 @@ interface SpecialtiesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param specialtyId  
+     *
+     * @param specialtyId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [SpecialtyModel]
@@ -92,8 +92,8 @@ interface SpecialtiesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param specialtyId  
+     *
+     * @param specialtyId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -109,9 +109,9 @@ interface SpecialtiesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param specialtyId  
-     * @param mediaId  
+     *
+     * @param specialtyId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/specialties/{specialtyId}/medias/{mediaId}")

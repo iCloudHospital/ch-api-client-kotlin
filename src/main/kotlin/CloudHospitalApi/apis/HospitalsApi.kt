@@ -36,7 +36,7 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param hospitalId  (optional)
      * @param name  (optional)
      * @param countryId  (optional)
@@ -63,9 +63,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param accreditationId  
+     *
+     * @param hospitalId 
+     * @param accreditationId 
      * @return [HospitalAccreditationModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/accreditations/{accreditationId}")
@@ -76,8 +76,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param hospitalName  (optional)
      * @param accreditationId  (optional)
      * @param accreditationName  (optional)
@@ -94,9 +94,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param equipmentId  
+     *
+     * @param hospitalId 
+     * @param equipmentId 
      * @return [HospitalEquipmentModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/equipments/{equipmentId}")
@@ -107,9 +107,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param equipmentId  
+     *
+     * @param hospitalId 
+     * @param equipmentId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -125,10 +125,10 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param equipmentId  
-     * @param mediaId  
+     *
+     * @param hospitalId 
+     * @param equipmentId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/equipments/{equipmentId}/medias/{mediaId}")
@@ -139,8 +139,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param id  (optional)
      * @param name  (optional)
      * @param hospitalId2  (optional)
@@ -160,9 +160,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param evaluationId  
+     *
+     * @param hospitalId 
+     * @param evaluationId 
      * @return [HospitalEvaluationModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/evaluations/{evaluationId}")
@@ -173,8 +173,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param id  (optional)
      * @param name  (optional)
      * @param stars  (optional)
@@ -191,8 +191,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [HospitalModel]
@@ -205,8 +205,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param id  (optional)
      * @param snsType  (optional)
      * @param handle  (optional)
@@ -223,9 +223,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param handleId  
+     *
+     * @param hospitalId 
+     * @param handleId 
      * @return [SnsHandleModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/handles/{handleId}")
@@ -236,8 +236,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -253,9 +253,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param mediaId  
+     *
+     * @param hospitalId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/medias/{mediaId}")
@@ -266,8 +266,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param specialtyId  (optional)
      * @param specialtyName  (optional)
      * @param specialtyTypeId  (optional)
@@ -293,9 +293,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param hospitalSpecialtyId  
+     *
+     * @param hospitalId 
+     * @param hospitalSpecialtyId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -311,10 +311,10 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param hospitalSpecialtyId  
-     * @param mediaId  
+     *
+     * @param hospitalId 
+     * @param hospitalSpecialtyId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/specialties/{hospitalSpecialtyId}/medias/{mediaId}")
@@ -325,8 +325,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param specialtyId  (optional)
      * @param specialtyName  (optional)
      * @param specialtyTypeId  (optional)
@@ -352,9 +352,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param slug  
+     *
+     * @param hospitalId 
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @param includeServices  (optional)
@@ -368,25 +368,23 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
+     *
+     * @param hospitalId 
+     * @param specialtyId 
      * @param languageCode  (optional)
-     * @param returnDefaultValue  (optional)
-     * @param includeServices  (optional)
      * @return [HospitalSpecialtyModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/specialties/{specialtyId}")
-    suspend fun apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("includeServices") includeServices: kotlin.Boolean? = null): Response<HospitalSpecialtyModel>
+    suspend fun apiV2HospitalsHospitalIdSpecialtiesSpecialtyIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<HospitalSpecialtyModel>
 
     /**
      * Get all HospitalServices.
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
+     *
+     * @param hospitalId 
+     * @param specialtyId 
      * @param id  (optional)
      * @param name  (optional)
      * @param slug  (optional)
@@ -409,10 +407,10 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param serviceId  
+     *
+     * @param hospitalId 
+     * @param specialtyId 
+     * @param serviceId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [HospitalServiceModel]
@@ -425,10 +423,10 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param serviceId  
+     *
+     * @param hospitalId 
+     * @param specialtyId 
+     * @param serviceId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -444,11 +442,11 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param specialtyId  
-     * @param serviceId  
-     * @param mediaId  
+     *
+     * @param hospitalId 
+     * @param specialtyId 
+     * @param serviceId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/specialties/{specialtyId}/services/{serviceId}/medias/{mediaId}")
@@ -459,8 +457,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @param id  (optional)
      * @param dayOfWeek  (optional)
      * @param timeFrom  (optional)
@@ -479,9 +477,9 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param workingDayId  
+     *
+     * @param hospitalId 
+     * @param workingDayId 
      * @return [WorkingDayModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/workingdays/{workingDayId}")
@@ -492,7 +490,7 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param hospitalId  (optional)
      * @param name  (optional)
      * @param countryId  (optional)
@@ -519,8 +517,8 @@ interface HospitalsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [HospitalModel]

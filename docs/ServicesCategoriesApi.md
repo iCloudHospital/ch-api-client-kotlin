@@ -35,7 +35,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -77,7 +77,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceCategoryId** | [**java.util.UUID**](.md)|  |
+ **serviceCategoryId** | **java.util.UUID**|  |
 
 ### Return type
 

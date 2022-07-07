@@ -23,8 +23,8 @@ interface ConsultationsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param consultationId  
+     *
+     * @param consultationId 
      * @return [ConsultationModel]
      */
     @GET("api/v2/consultations/{consultationId}")
@@ -37,8 +37,8 @@ interface ConsultationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param consultationId  
+     *
+     * @param consultationId 
      * @return [kotlin.String]
      */
     @POST("api/v2/consultations/{consultationId}/pay")
@@ -52,8 +52,8 @@ interface ConsultationsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param consultationId  
+     *
+     * @param consultationId 
      * @param updateConsultationCommand  (optional)
      * @return [ConsultationModel]
      */
@@ -67,7 +67,7 @@ interface ConsultationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @param searchString  (optional)
      * @param isOpen  (optional)
      * @param isCompleted  (optional)
@@ -89,8 +89,8 @@ interface ConsultationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param requestId  
+     *
+     * @param requestId 
      * @param createConsultationCommand  (optional)
      * @return [ConsultationModel]
      */

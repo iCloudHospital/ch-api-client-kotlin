@@ -15,8 +15,8 @@ interface LanguagesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param code  
+     *
+     * @param code 
      * @return [LanguageModel]
      */
     @GET("api/v2/languages/{code}")
@@ -27,7 +27,7 @@ interface LanguagesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param code  (optional)
@@ -47,8 +47,8 @@ interface LanguagesApi {
      *  - 200: Success
      *  - 404: Not Found
      *  - 0: Error
-     * 
-     * @param id  
+     *
+     * @param id 
      * @return [LanguageModel]
      */
     @GET("api/v2/languages/{id}")

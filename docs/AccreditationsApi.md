@@ -31,7 +31,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accreditationId** | [**java.util.UUID**](.md)|  |
+ **accreditationId** | **java.util.UUID**|  |
 
 ### Return type
 

@@ -37,7 +37,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faqId** | [**java.util.UUID**](.md)|  |
+ **faqId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
 
 ### Return type
@@ -81,8 +81,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faqId** | [**java.util.UUID**](.md)|  |
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **faqId** | **java.util.UUID**|  |
+ **id** | **java.util.UUID**|  | [optional]
  **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -125,8 +125,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faqId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **faqId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -168,7 +168,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faqId** | [**java.util.UUID**](.md)|  |
+ **faqId** | **java.util.UUID**|  |
  **tagId** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -211,7 +211,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faqId** | [**java.util.UUID**](.md)|  |
+ **faqId** | **java.util.UUID**|  |
  **tagId** | **kotlin.String**|  |
 
 ### Return type
@@ -261,11 +261,11 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **slug** | **kotlin.String**|  | [optional]
- **categoryId** | [**java.util.UUID**](.md)|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **categoryId** | **java.util.UUID**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **showHidden** | **kotlin.Boolean**|  | [optional]

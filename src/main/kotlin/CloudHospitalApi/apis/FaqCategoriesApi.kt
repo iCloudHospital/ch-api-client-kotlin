@@ -15,8 +15,8 @@ interface FaqCategoriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param faqId  
+     *
+     * @param faqId 
      * @param languageCode  (optional)
      * @return [kotlin.collections.List<FaqCategoryBreadCrumbModel>]
      */
@@ -28,8 +28,8 @@ interface FaqCategoriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param faqCategoryId  
+     *
+     * @param faqCategoryId 
      * @param languageCode  (optional)
      * @return [FaqCategoryModel]
      */
@@ -41,7 +41,7 @@ interface FaqCategoriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param parentId  (optional)
      * @param name  (optional)
@@ -63,8 +63,8 @@ interface FaqCategoriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @return [FaqCategoryModel]
      */

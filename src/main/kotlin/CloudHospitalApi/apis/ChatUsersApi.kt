@@ -19,7 +19,7 @@ interface ChatUsersApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [ChatUserModel]
      */
     @GET("api/v2/chatusers/current")
@@ -32,7 +32,7 @@ interface ChatUsersApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @param limit  (optional)
      * @param token  (optional)
      * @param userIds  (optional)
@@ -52,7 +52,7 @@ interface ChatUsersApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
+     *
      * @param createChatUserCommand  (optional)
      * @return [ChatUserModel]
      */
@@ -69,8 +69,8 @@ interface ChatUsersApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param userId  
+     *
+     * @param userId 
      * @return [kotlin.Boolean]
      */
     @DELETE("api/v2/chatusers/{userId}")
@@ -85,8 +85,8 @@ interface ChatUsersApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param userId  
+     *
+     * @param userId 
      * @return [ChatUserModel]
      */
     @GET("api/v2/chatusers/{userId}")
@@ -100,8 +100,8 @@ interface ChatUsersApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param userId  
+     *
+     * @param userId 
      * @param updateChatUserCommand  (optional)
      * @return [ChatUserModel]
      */

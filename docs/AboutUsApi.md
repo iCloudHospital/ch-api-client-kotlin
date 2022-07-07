@@ -41,7 +41,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **hospitalSlug** | **kotlin.String**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
@@ -90,7 +90,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  |
+ **hospitalId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 

@@ -9,42 +9,42 @@ import CloudHospitalApi.models.CommunicationUserTokenModel
 
 interface CommunicationsApi {
     /**
-     * 
+     * Delete CommunicationUser.
      * 
      * Responses:
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [kotlin.Int]
      */
-    @DELETE("api/v1/communications")
-    suspend fun apiV1CommunicationsDelete(): Response<kotlin.Int>
+    @DELETE("api/v2/communications")
+    suspend fun apiV2CommunicationsDelete(): Response<kotlin.Int>
 
     /**
-     * 
+     * Get CommunicationUser.
      * 
      * Responses:
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [CommunicationUserTokenModel]
      */
-    @GET("api/v1/communications")
-    suspend fun apiV1CommunicationsGet(): Response<CommunicationUserTokenModel>
+    @GET("api/v2/communications")
+    suspend fun apiV2CommunicationsGet(): Response<CommunicationUserTokenModel>
 
     /**
-     * 
+     * Revoke CommunicationUser.
      * 
      * Responses:
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [CommunicationUserTokenModel]
      */
-    @PUT("api/v1/communications")
-    suspend fun apiV1CommunicationsPut(): Response<CommunicationUserTokenModel>
+    @PUT("api/v2/communications")
+    suspend fun apiV2CommunicationsPut(): Response<CommunicationUserTokenModel>
 
 }

@@ -26,9 +26,9 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
-     * @param contributorId  
+     *
+     * @param articleId 
+     * @param contributorId 
      * @return [ArticleContributorModel]
      */
     @GET("api/v2/articles/{articleId}/contributors/{contributorId}")
@@ -39,8 +39,8 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
+     *
+     * @param articleId 
      * @param articleName  (optional)
      * @param contributorId  (optional)
      * @param contributorName  (optional)
@@ -62,8 +62,8 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
+     *
+     * @param articleId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [ArticleModel]
@@ -76,8 +76,8 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
+     *
+     * @param articleId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -93,9 +93,9 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
-     * @param mediaId  
+     *
+     * @param articleId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/articles/{articleId}/medias/{mediaId}")
@@ -106,8 +106,8 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
+     *
+     * @param articleId 
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -121,9 +121,9 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
-     * @param sourceId  
+     *
+     * @param articleId 
+     * @param sourceId 
      * @return [SourceModel]
      */
     @GET("api/v2/articles/{articleId}/sources/{sourceId}")
@@ -134,8 +134,8 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
+     *
+     * @param articleId 
      * @param tagId  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -150,9 +150,9 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param articleId  
-     * @param tagId  
+     *
+     * @param articleId 
+     * @param tagId 
      * @return [ArticleTagModel]
      */
     @GET("api/v2/articles/{articleId}/tags/{tagId}")
@@ -163,7 +163,7 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param description  (optional)
@@ -194,8 +194,8 @@ interface ArticlesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [ArticleModel]

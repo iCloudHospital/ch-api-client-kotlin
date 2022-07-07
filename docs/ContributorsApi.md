@@ -36,7 +36,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contributorId** | [**java.util.UUID**](.md)|  |
+ **contributorId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
@@ -83,9 +83,9 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contributorId** | [**java.util.UUID**](.md)|  |
- **contributorId2** | [**java.util.UUID**](.md)|  | [optional]
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **contributorId** | **java.util.UUID**|  |
+ **contributorId2** | **java.util.UUID**|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **snsType** | [**SnsType**](.md)|  | [optional] [enum: Twitter, Facebook, Instagram, LinkedIn, Youtube, KakaoTalk]
  **handle** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
@@ -129,8 +129,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contributorId** | [**java.util.UUID**](.md)|  |
- **handleId** | [**java.util.UUID**](.md)|  |
+ **contributorId** | **java.util.UUID**|  |
+ **handleId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -179,11 +179,11 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]
  **website** | **kotlin.String**|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **interviewerOnly** | **kotlin.Boolean**|  | [optional]
  **showHidden** | **kotlin.Boolean**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]

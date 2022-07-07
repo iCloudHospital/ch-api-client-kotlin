@@ -16,8 +16,8 @@ interface GroupChannelsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param channelUrl  
+     *
+     * @param channelUrl 
      * @param inviteSendBirdGroupChannelCommand  (optional)
      * @return [SendBirdGroupChannelModel]
      */
@@ -31,8 +31,8 @@ interface GroupChannelsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param dealId  
+     *
+     * @param dealId 
      * @param hospitalId  (optional)
      * @return [SendBirdGroupChannelModel]
      */
@@ -46,8 +46,8 @@ interface GroupChannelsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param hospitalId  (optional)
      * @return [SendBirdGroupChannelModel]
      */
@@ -61,8 +61,8 @@ interface GroupChannelsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param hospitalId  
+     *
+     * @param hospitalId 
      * @return [SendBirdGroupChannelModel]
      */
     @GET("api/v2/groupchannels/hospital/{hospitalId}")

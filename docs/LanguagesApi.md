@@ -76,7 +76,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **code** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
@@ -120,7 +120,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  |
+ **id** | **java.util.UUID**|  |
 
 ### Return type
 

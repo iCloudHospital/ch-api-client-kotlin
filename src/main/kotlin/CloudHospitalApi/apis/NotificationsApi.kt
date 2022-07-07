@@ -17,7 +17,7 @@ interface NotificationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @param checkNotificationsCommand  (optional)
      * @return [kotlin.Boolean]
      */
@@ -31,7 +31,7 @@ interface NotificationsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @param notificationCode  (optional)
      * @param unreadCountOnly  (optional)
      * @param page  (optional)

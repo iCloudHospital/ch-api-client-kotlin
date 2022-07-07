@@ -40,10 +40,10 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
- **planId** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
+ **planId** | **java.util.UUID**|  | [optional]
  **planName** | **kotlin.String**|  | [optional]
- **ownerId** | [**java.util.UUID**](.md)|  | [optional]
+ **ownerId** | **java.util.UUID**|  | [optional]
  **ownerName** | **kotlin.String**|  | [optional]
  **isActive** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
@@ -86,7 +86,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **membershipId** | [**java.util.UUID**](.md)|  |
+ **membershipId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -127,7 +127,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **membershipId** | [**java.util.UUID**](.md)|  |
+ **membershipId** | **java.util.UUID**|  |
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
