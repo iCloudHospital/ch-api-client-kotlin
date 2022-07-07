@@ -38,12 +38,13 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorAffiliationsModel = webService.apiV2DoctorsDoctorIdAffiliationsGet(doctorId, hospitalName, page, limit, lastRetrieved)
+    val result : DoctorAffiliationsModel = webService.apiV2DoctorsDoctorIdAffiliationsGet(doctorId, hospitalName, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -51,8 +52,9 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
  **hospitalName** | **kotlin.String**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -94,8 +96,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **hospitalId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
+ **hospitalId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -134,8 +136,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **certificateId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
+ **certificateId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -181,9 +183,9 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
  **doctorName** | **kotlin.String**|  | [optional]
- **certificateId** | [**java.util.UUID**](.md)|  | [optional]
+ **certificateId** | **java.util.UUID**|  | [optional]
  **certificate** | **kotlin.String**|  | [optional]
  **activeFrom** | **java.time.LocalDateTime**|  | [optional]
  **activeTo** | **java.time.LocalDateTime**|  | [optional]
@@ -228,8 +230,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **educationId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
+ **educationId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -275,9 +277,9 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
  **doctorName** | **kotlin.String**|  | [optional]
- **educationId** | [**java.util.UUID**](.md)|  | [optional]
+ **educationId** | **java.util.UUID**|  | [optional]
  **institution** | **kotlin.String**|  | [optional]
  **qualification** | **kotlin.String**|  | [optional]
  **graduationDate** | **java.time.LocalDateTime**|  | [optional]
@@ -323,7 +325,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
@@ -367,7 +369,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
  **language** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -410,8 +412,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **languageId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
+ **languageId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -454,8 +456,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **doctorId** | **java.util.UUID**|  |
+ **id** | **java.util.UUID**|  | [optional]
  **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -498,8 +500,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -543,9 +545,9 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
  **doctorName** | **kotlin.String**|  | [optional]
- **portfolioId** | [**java.util.UUID**](.md)|  | [optional]
+ **portfolioId** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -588,8 +590,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **portfolioId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
+ **portfolioId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -620,12 +622,14 @@ val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.uti
 val doctorName : kotlin.String = doctorName_example // kotlin.String | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyName : kotlin.String = specialtyName_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorSpecialtiesModel = webService.apiV2DoctorsDoctorIdSpecialtiesGet(doctorId, doctorName, specialtyId, specialtyName, page, limit, lastRetrieved)
+    val result : DoctorSpecialtiesModel = webService.apiV2DoctorsDoctorIdSpecialtiesGet(doctorId, doctorName, specialtyId, specialtyName, languageCode, showHidden, page, limit, lastRetrieved)
 }
 ```
 
@@ -633,10 +637,12 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
  **doctorName** | **kotlin.String**|  | [optional]
- **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | **java.util.UUID**|  | [optional]
  **specialtyName** | **kotlin.String**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -668,9 +674,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorSpecialtyModel = webService.apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet(doctorId, specialtyId)
+    val result : DoctorSpecialtyModel = webService.apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet(doctorId, specialtyId, languageCode)
 }
 ```
 
@@ -678,8 +685,9 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **specialtyId** | [**java.util.UUID**](.md)|  |
+ **doctorId** | **java.util.UUID**|  |
+ **specialtyId** | **java.util.UUID**|  |
+ **languageCode** | **kotlin.String**|  | [optional]
 
 ### Return type
 
@@ -733,14 +741,14 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
- **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | **java.util.UUID**|  | [optional]
  **consultationEnabled** | **kotlin.Boolean**|  | [optional]
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **fullname** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]
  **gender** | [**Gender**](.md)|  | [optional] [enum: NotSpecified, Male, Female, NonBinary, PreferNotToSay]
@@ -803,14 +811,14 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
- **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | **java.util.UUID**|  | [optional]
  **consultationEnabled** | **kotlin.Boolean**|  | [optional]
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **fullname** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]
  **gender** | [**Gender**](.md)|  | [optional] [enum: NotSpecified, Male, Female, NonBinary, PreferNotToSay]

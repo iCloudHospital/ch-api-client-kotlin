@@ -218,7 +218,6 @@ docs/UserLanguageModel.md
 docs/UserLocationModel.md
 docs/UserLocationType.md
 docs/UserModel.md
-docs/UserTranslationModel.md
 docs/WorkingDay.md
 docs/WorkingDayItemModel.md
 docs/WorkingDayModel.md
@@ -270,6 +269,7 @@ src/main/kotlin/CloudHospitalApi/infrastructure/LocalDateTimeAdapter.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/OffsetDateTimeAdapter.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/ResponseExt.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/Serializer.kt
+src/main/kotlin/CloudHospitalApi/infrastructure/URIAdapter.kt
 src/main/kotlin/CloudHospitalApi/infrastructure/UUIDAdapter.kt
 src/main/kotlin/CloudHospitalApi/models/AboutUsPageItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/AboutUsPageModel.kt
@@ -461,7 +461,6 @@ src/main/kotlin/CloudHospitalApi/models/UserLanguageModel.kt
 src/main/kotlin/CloudHospitalApi/models/UserLocationModel.kt
 src/main/kotlin/CloudHospitalApi/models/UserLocationType.kt
 src/main/kotlin/CloudHospitalApi/models/UserModel.kt
-src/main/kotlin/CloudHospitalApi/models/UserTranslationModel.kt
 src/main/kotlin/CloudHospitalApi/models/WorkingDay.kt
 src/main/kotlin/CloudHospitalApi/models/WorkingDayItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/WorkingDayModel.kt

@@ -34,7 +34,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faqId** | [**java.util.UUID**](.md)|  |
+ **faqId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
 
 ### Return type
@@ -74,7 +74,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faqCategoryId** | [**java.util.UUID**](.md)|  |
+ **faqCategoryId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
 
 ### Return type
@@ -123,10 +123,10 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
- **parentId** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
+ **parentId** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **showHidden** | **kotlin.Boolean**|  | [optional]

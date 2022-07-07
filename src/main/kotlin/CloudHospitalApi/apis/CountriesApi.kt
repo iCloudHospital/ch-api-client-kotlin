@@ -17,8 +17,8 @@ interface CountriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param countryId  
+     *
+     * @param countryId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [CountryModel]
@@ -31,8 +31,8 @@ interface CountriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param countryId  
+     *
+     * @param countryId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -48,9 +48,9 @@ interface CountriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param countryId  
-     * @param mediaId  
+     *
+     * @param countryId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/countries/{countryId}/medias/{mediaId}")
@@ -61,7 +61,7 @@ interface CountriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param description  (optional)
@@ -82,8 +82,8 @@ interface CountriesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [CountryModel]

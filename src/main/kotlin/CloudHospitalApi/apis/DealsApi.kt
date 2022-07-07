@@ -20,8 +20,8 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param dealId  
+     *
+     * @param dealId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [DealModel]
@@ -34,8 +34,8 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param dealId  
+     *
+     * @param dealId 
      * @param relatedDealPackageId  (optional)
      * @param dealName  (optional)
      * @param name  (optional)
@@ -55,9 +55,9 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param dealId  
-     * @param packageId  
+     *
+     * @param dealId 
+     * @param packageId 
      * @return [DealPackageModel]
      */
     @GET("api/v2/deals/{dealId}/packages/{packageId}")
@@ -68,8 +68,8 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param dealId  
+     *
+     * @param dealId 
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
@@ -83,9 +83,9 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param dealId  
-     * @param serviceId  
+     *
+     * @param dealId 
+     * @param serviceId 
      * @return [DealServiceModel]
      */
     @GET("api/v2/deals/{dealId}/services/{serviceId}")
@@ -96,7 +96,7 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param marketingType  (optional)
@@ -129,7 +129,7 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param marketingType  (optional)
@@ -162,8 +162,8 @@ interface DealsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [DealModel]

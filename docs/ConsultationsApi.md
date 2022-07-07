@@ -34,7 +34,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consultationId** | [**java.util.UUID**](.md)|  |
+ **consultationId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -72,7 +72,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consultationId** | [**java.util.UUID**](.md)|  |
+ **consultationId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -111,7 +111,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consultationId** | [**java.util.UUID**](.md)|  |
+ **consultationId** | **java.util.UUID**|  |
  **updateConsultationCommand** | [**UpdateConsultationCommand**](UpdateConsultationCommand.md)|  | [optional]
 
 ### Return type
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
  **isCompleted** | **kotlin.Boolean**|  | [optional]
  **status** | [**ConsultationStatus**](.md)|  | [optional] [enum: New, Rejected, Approved, Paid, Canceled, RefundRequested, Refunded]
  **consultationType** | [**ConsultationType**](.md)|  | [optional] [enum: Hospital, Doctor, Deal]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -205,7 +205,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestId** | [**java.util.UUID**](.md)|  |
+ **requestId** | **java.util.UUID**|  |
  **createConsultationCommand** | [**CreateConsultationCommand**](CreateConsultationCommand.md)|  | [optional]
 
 ### Return type
@@ -218,6 +218,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 

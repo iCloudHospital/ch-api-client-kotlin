@@ -52,10 +52,10 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
- **serviceId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
+ **serviceId** | **java.util.UUID**|  | [optional]
  **serviceName** | **kotlin.String**|  | [optional]
- **patientId** | [**java.util.UUID**](.md)|  | [optional]
+ **patientId** | **java.util.UUID**|  | [optional]
  **patientName** | **kotlin.String**|  | [optional]
  **gender** | [**Gender**](.md)|  | [optional] [enum: NotSpecified, Male, Female, NonBinary, PreferNotToSay]
  **recommended** | **kotlin.Boolean**|  | [optional]
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 
 
@@ -141,7 +141,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
+ **serviceReviewId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -179,7 +179,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
+ **serviceReviewId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -222,8 +222,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **serviceReviewId** | **java.util.UUID**|  |
+ **id** | **java.util.UUID**|  | [optional]
  **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -266,8 +266,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **serviceReviewId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -306,8 +306,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **serviceReviewId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -347,8 +347,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **serviceReviewId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
  **updateMediaCommand** | [**UpdateMediaCommand**](UpdateMediaCommand.md)|  | [optional]
 
 ### Return type
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 
 
@@ -388,7 +388,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
+ **serviceReviewId** | **java.util.UUID**|  |
  **createMediaCommand** | [**CreateMediaCommand**](CreateMediaCommand.md)|  | [optional]
 
 ### Return type
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 
 
@@ -428,7 +428,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceReviewId** | [**java.util.UUID**](.md)|  |
+ **serviceReviewId** | **java.util.UUID**|  |
  **updateServiceReviewCommand** | [**UpdateServiceReviewCommand**](UpdateServiceReviewCommand.md)|  | [optional]
 
 ### Return type
@@ -441,6 +441,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: application/json
 

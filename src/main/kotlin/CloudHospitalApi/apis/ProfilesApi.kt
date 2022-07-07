@@ -19,7 +19,7 @@ interface ProfilesApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @param changeEmailCommand  (optional)
      * @return [kotlin.Boolean]
      */
@@ -33,7 +33,7 @@ interface ProfilesApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @param confirmEmailCommand  (optional)
      * @return [kotlin.Boolean]
      */
@@ -47,7 +47,7 @@ interface ProfilesApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [UserModel]
      */
     @GET("api/v2/profiles")
@@ -61,7 +61,7 @@ interface ProfilesApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
+     *
      * @param updateProfileCommand  (optional)
      * @return [UserModel]
      */

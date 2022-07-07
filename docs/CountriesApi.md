@@ -36,7 +36,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countryId** | [**java.util.UUID**](.md)|  |
+ **countryId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
@@ -81,8 +81,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countryId** | [**java.util.UUID**](.md)|  |
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **countryId** | **java.util.UUID**|  |
+ **id** | **java.util.UUID**|  | [optional]
  **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -125,8 +125,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countryId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **countryId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -173,7 +173,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
  **createdDate** | **java.time.LocalDateTime**|  | [optional]

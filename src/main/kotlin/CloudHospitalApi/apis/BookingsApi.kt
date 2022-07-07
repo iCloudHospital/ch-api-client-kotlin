@@ -22,8 +22,8 @@ interface BookingsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param bookingId  
+     *
+     * @param bookingId 
      * @return [BookingModel]
      */
     @GET("api/v2/bookings/{bookingId}")
@@ -36,8 +36,8 @@ interface BookingsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param bookingId  
+     *
+     * @param bookingId 
      * @return [kotlin.String]
      */
     @POST("api/v2/bookings/{bookingId}/pay")
@@ -51,8 +51,8 @@ interface BookingsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
-     * 
-     * @param bookingId  
+     *
+     * @param bookingId 
      * @param updateBookingCommand  (optional)
      * @return [BookingModel]
      */
@@ -66,7 +66,7 @@ interface BookingsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @param searchString  (optional)
      * @param isOpen  (optional)
      * @param isCompleted  (optional)
@@ -88,8 +88,8 @@ interface BookingsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
-     * @param requestId  
+     *
+     * @param requestId 
      * @param createBookingCommand  (optional)
      * @return [BookingModel]
      */

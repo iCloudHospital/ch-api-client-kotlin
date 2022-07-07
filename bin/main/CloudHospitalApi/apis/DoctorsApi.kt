@@ -5,112 +5,329 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.CreateDoctorCommand
-import CloudHospitalApi.models.DoctorViewModel
-import CloudHospitalApi.models.DoctorsViewModel
+import CloudHospitalApi.models.DoctorAffiliationModel
+import CloudHospitalApi.models.DoctorAffiliationsModel
+import CloudHospitalApi.models.DoctorCertificateModel
+import CloudHospitalApi.models.DoctorCertificatesModel
+import CloudHospitalApi.models.DoctorEducationModel
+import CloudHospitalApi.models.DoctorEducationsModel
+import CloudHospitalApi.models.DoctorLanguageModel
+import CloudHospitalApi.models.DoctorLanguagesModel
+import CloudHospitalApi.models.DoctorModel
+import CloudHospitalApi.models.DoctorPortfolioModel
+import CloudHospitalApi.models.DoctorPortfoliosModel
+import CloudHospitalApi.models.DoctorSpecialtiesModel
+import CloudHospitalApi.models.DoctorSpecialtyModel
+import CloudHospitalApi.models.DoctorsModel
+import CloudHospitalApi.models.DoctorsSimpleModel
 import CloudHospitalApi.models.Gender
-import CloudHospitalApi.models.MarketingType
-import CloudHospitalApi.models.UpdateDoctorCommand
+import CloudHospitalApi.models.MediaModel
+import CloudHospitalApi.models.MediaType
+import CloudHospitalApi.models.MediasModel
 
 interface DoctorsApi {
     /**
-     * Delete doctor.
-     * Sample request:        DELETE /api/v1/doctors/1
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param doctorId  
-     * @return [kotlin.Boolean]
-     */
-    @DELETE("api/v1/doctors/{doctorId}")
-    suspend fun apiV1DoctorsDoctorIdDelete(@Path("doctorId") doctorId: java.util.UUID): Response<kotlin.Boolean>
-
-    /**
-     * Get hospital doctor.
-     * Sample request:        GET /api/v1/doctors/1
-     * Responses:
-     *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param languageCode  (optional, default to "")
-     * @return [DoctorViewModel]
-     */
-    @GET("api/v1/doctors/{doctorId}")
-    suspend fun apiV1DoctorsDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorViewModel>
-
-    /**
-     * Update hospital doctor.
-     * Sample request:        PUT /api/v1/doctors/1      {          \&quot;firstName\&quot;: \&quot;string\&quot;,          \&quot;lastName\&quot;: \&quot;string\&quot;,          \&quot;photo\&quot;: \&quot;string\&quot;,          \&quot;locations\&quot;: [            {              \&quot;locationType\&quot;: \&quot;LivesIn\&quot;,              \&quot;latitude\&quot;: 0,              \&quot;longitude\&quot;: 0,              \&quot;country\&quot;: \&quot;string\&quot;,              \&quot;state\&quot;: \&quot;string\&quot;,              \&quot;county\&quot;: \&quot;string\&quot;,              \&quot;city\&quot;: \&quot;string\&quot;,              \&quot;zipCode\&quot;: \&quot;string\&quot;,              \&quot;address\&quot;: \&quot;string\&quot;            }          ]      }
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param doctorId  
-     * @param updateDoctorCommand  (optional)
-     * @return [kotlin.Boolean]
-     */
-    @PUT("api/v1/doctors/{doctorId}")
-    suspend fun apiV1DoctorsDoctorIdPut(@Path("doctorId") doctorId: java.util.UUID, @Body updateDoctorCommand: UpdateDoctorCommand? = null): Response<kotlin.Boolean>
-
-    /**
-     * Get all hospital doctors.
+     * Get all doctor affiliations.
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param countryId  (optional)
-     * @param hospitalId  (optional)
-     * @param marketingType  (optional)
-     * @param specialtyId  (optional)
-     * @param specialtyTypeId  (optional)
-     * @param consultationEnabled  (optional)
-     * @param exceptDoctorId  (optional)
-     * @param exceptDoctorIds  (optional)
+     *
+     * @param doctorId 
+     * @param hospitalName  (optional)
      * @param languageCode  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [DoctorAffiliationsModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/affiliations")
+    suspend fun apiV2DoctorsDoctorIdAffiliationsGet(@Path("doctorId") doctorId: java.util.UUID, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorAffiliationsModel>
+
+    /**
+     * Get doctor affiliation.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param hospitalId 
+     * @return [DoctorAffiliationModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/affiliations/{hospitalId}")
+    suspend fun apiV2DoctorsDoctorIdAffiliationsHospitalIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("hospitalId") hospitalId: java.util.UUID): Response<DoctorAffiliationModel>
+
+    /**
+     * Get DoctorCertificate.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param certificateId 
+     * @return [DoctorCertificateModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/certificates/{certificateId}")
+    suspend fun apiV2DoctorsDoctorIdCertificatesCertificateIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID): Response<DoctorCertificateModel>
+
+    /**
+     * Delete DoctorCertificate.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param doctorName  (optional)
+     * @param certificateId  (optional)
+     * @param certificate  (optional)
+     * @param activeFrom  (optional)
+     * @param activeTo  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [DoctorCertificatesModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/certificates")
+    suspend fun apiV2DoctorsDoctorIdCertificatesGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("CertificateId") certificateId: java.util.UUID? = null, @Query("Certificate") certificate: kotlin.String? = null, @Query("ActiveFrom") activeFrom: java.time.LocalDateTime? = null, @Query("ActiveTo") activeTo: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorCertificatesModel>
+
+    /**
+     * Get DoctorEducation.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param educationId 
+     * @return [DoctorEducationModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/educations/{educationId}")
+    suspend fun apiV2DoctorsDoctorIdEducationsEducationIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("educationId") educationId: java.util.UUID): Response<DoctorEducationModel>
+
+    /**
+     * Get all DoctorEducations.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param doctorName  (optional)
+     * @param educationId  (optional)
+     * @param institution  (optional)
+     * @param qualification  (optional)
+     * @param graduationDate  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [DoctorEducationsModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/educations")
+    suspend fun apiV2DoctorsDoctorIdEducationsGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("EducationId") educationId: java.util.UUID? = null, @Query("Institution") institution: kotlin.String? = null, @Query("Qualification") qualification: kotlin.String? = null, @Query("GraduationDate") graduationDate: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorEducationsModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [DoctorModel]
+     */
+    @GET("api/v2/doctors/{doctorId}")
+    suspend fun apiV2DoctorsDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<DoctorModel>
+
+    /**
+     * Get all DoctorLanguages.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param language  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [DoctorLanguagesModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/languages")
+    suspend fun apiV2DoctorsDoctorIdLanguagesGet(@Path("doctorId") doctorId: java.util.UUID, @Query("Language") language: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorLanguagesModel>
+
+    /**
+     * Get DoctorLanguage.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param languageId 
+     * @return [DoctorLanguageModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/languages/{languageId}")
+    suspend fun apiV2DoctorsDoctorIdLanguagesLanguageIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("languageId") languageId: java.util.UUID): Response<DoctorLanguageModel>
+
+    /**
+     * Get all DoctorMedias.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param id  (optional)
+     * @param mediaType  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [MediasModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/medias")
+    suspend fun apiV2DoctorsDoctorIdMediasGet(@Path("doctorId") doctorId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("MediaType") mediaType: MediaType? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<MediasModel>
+
+    /**
+     * Get DoctorMedia.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param mediaId 
+     * @return [MediaModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/medias/{mediaId}")
+    suspend fun apiV2DoctorsDoctorIdMediasMediaIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("mediaId") mediaId: java.util.UUID): Response<MediaModel>
+
+    /**
+     * Get All DoctorPortfolios
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param doctorName  (optional)
+     * @param portfolioId  (optional)
+     * @param name  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [DoctorPortfoliosModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/portfolios")
+    suspend fun apiV2DoctorsDoctorIdPortfoliosGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("PortfolioId") portfolioId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorPortfoliosModel>
+
+    /**
+     * Get DoctorPortfolio.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param portfolioId 
+     * @return [DoctorPortfolioModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/portfolios/{portfolioId}")
+    suspend fun apiV2DoctorsDoctorIdPortfoliosPortfolioIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("portfolioId") portfolioId: java.util.UUID): Response<DoctorPortfolioModel>
+
+    /**
+     * Get All DoctorSpecialties.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param doctorName  (optional)
+     * @param specialtyId  (optional)
+     * @param specialtyName  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [DoctorSpecialtiesModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/specialties")
+    suspend fun apiV2DoctorsDoctorIdSpecialtiesGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorSpecialtiesModel>
+
+    /**
+     * Get DoctorSpecialty
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorId 
+     * @param specialtyId 
+     * @param languageCode  (optional)
+     * @return [DoctorSpecialtyModel]
+     */
+    @GET("api/v2/doctors/{doctorId}/specialties/{specialtyId}")
+    suspend fun apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorSpecialtyModel>
+
+    /**
+     * Get all Doctors.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param hospitalId  (optional)
+     * @param hospitalName  (optional)
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
      * @param ids  (optional)
+     * @param specialtyId  (optional)
+     * @param consultationEnabled  (optional)
      * @param id  (optional)
      * @param fullname  (optional)
      * @param email  (optional)
      * @param gender  (optional)
      * @param dateOfBirth  (optional)
      * @param created  (optional)
+     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
-     * @return [DoctorsViewModel]
+     * @return [DoctorsModel]
      */
-    @GET("api/v1/doctors")
-    suspend fun apiV1DoctorsGet(@Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("ExceptDoctorId") exceptDoctorId: java.util.UUID? = null, @Query("ExceptDoctorIds") exceptDoctorIds: kotlin.collections.List<java.util.UUID>? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<DoctorsViewModel>
+    @GET("api/v2/doctors")
+    suspend fun apiV2DoctorsGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsModel>
 
     /**
-     * Create hospital doctor.
-     * Sample request:        POST /api/v1/doctors      {          \&quot;userName\&quot;: \&quot;cloudDoctor\&quot;,          \&quot;email\&quot;: \&quot;doctor@icloudhospital.com\&quot;,          \&quot;hospitalId\&quot;: 1,          \&quot;firstName\&quot;: \&quot;cloud\&quot;,          \&quot;lastName\&quot;: \&quot;doctor\&quot;,          \&quot;photo\&quot;: \&quot;string\&quot;,          \&quot;photoThumbnail\&quot;: \&quot;string\&quot;,          \&quot;gender\&quot;: \&quot;NotSpecified\&quot;,          \&quot;dateOfBirth\&quot;: \&quot;2020-02-22T17:57:32.048Z\&quot;,          \&quot;locations\&quot;: [            {              \&quot;locationType\&quot;: \&quot;LivesIn\&quot;,              \&quot;latitude\&quot;: 0,              \&quot;longitude\&quot;: 0,              \&quot;country\&quot;: \&quot;string\&quot;,              \&quot;state\&quot;: \&quot;string\&quot;,              \&quot;county\&quot;: \&quot;string\&quot;,              \&quot;city\&quot;: \&quot;string\&quot;,              \&quot;zipCode\&quot;: \&quot;string\&quot;,              \&quot;address\&quot;: \&quot;string\&quot;            }          ]      }
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param createDoctorCommand  (optional)
-     * @return [java.util.UUID]
-     */
-    @POST("api/v1/doctors")
-    suspend fun apiV1DoctorsPost(@Body createDoctorCommand: CreateDoctorCommand? = null): Response<java.util.UUID>
-
-    /**
-     * Get hospital doctor by slug.
+     * Get all Doctors.
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
-     * @param languageCode  (optional, default to "")
-     * @return [DoctorViewModel]
+     *
+     * @param hospitalId  (optional)
+     * @param hospitalName  (optional)
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @param ids  (optional)
+     * @param specialtyId  (optional)
+     * @param consultationEnabled  (optional)
+     * @param id  (optional)
+     * @param fullname  (optional)
+     * @param email  (optional)
+     * @param gender  (optional)
+     * @param dateOfBirth  (optional)
+     * @param created  (optional)
+     * @param showHidden  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [DoctorsSimpleModel]
      */
-    @GET("api/v1/doctors/slugs/{slug}")
-    suspend fun apiV1DoctorsSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorViewModel>
+    @GET("api/v2/doctors/simple")
+    suspend fun apiV2DoctorsSimpleGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsSimpleModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param slug 
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [DoctorModel]
+     */
+    @GET("api/v2/doctors/{slug}")
+    suspend fun apiV2DoctorsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<DoctorModel>
 
 }

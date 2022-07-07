@@ -50,17 +50,17 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **slug** | **kotlin.String**|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **hospitalSlug** | **kotlin.String**|  | [optional]
- **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | **java.util.UUID**|  | [optional]
  **specialtyName** | **kotlin.String**|  | [optional]
- **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeId** | **java.util.UUID**|  | [optional]
  **specialtyTypeName** | **kotlin.String**|  | [optional]
- **serviceCategoryId** | [**java.util.UUID**](.md)|  | [optional]
+ **serviceCategoryId** | **java.util.UUID**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **procedure** | [**Procedure**](.md)|  | [optional] [enum: Treatment, Diagnostic]
  **created** | **java.time.LocalDateTime**|  | [optional]
@@ -108,7 +108,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceId** | [**java.util.UUID**](.md)|  |
+ **serviceId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 

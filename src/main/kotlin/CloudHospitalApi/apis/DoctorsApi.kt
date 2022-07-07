@@ -31,25 +31,26 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param hospitalName  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [DoctorAffiliationsModel]
      */
     @GET("api/v2/doctors/{doctorId}/affiliations")
-    suspend fun apiV2DoctorsDoctorIdAffiliationsGet(@Path("doctorId") doctorId: java.util.UUID, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorAffiliationsModel>
+    suspend fun apiV2DoctorsDoctorIdAffiliationsGet(@Path("doctorId") doctorId: java.util.UUID, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorAffiliationsModel>
 
     /**
      * Get doctor affiliation.
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param hospitalId  
+     *
+     * @param doctorId 
+     * @param hospitalId 
      * @return [DoctorAffiliationModel]
      */
     @GET("api/v2/doctors/{doctorId}/affiliations/{hospitalId}")
@@ -60,9 +61,9 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param certificateId  
+     *
+     * @param doctorId 
+     * @param certificateId 
      * @return [DoctorCertificateModel]
      */
     @GET("api/v2/doctors/{doctorId}/certificates/{certificateId}")
@@ -73,8 +74,8 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param doctorName  (optional)
      * @param certificateId  (optional)
      * @param certificate  (optional)
@@ -93,9 +94,9 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param educationId  
+     *
+     * @param doctorId 
+     * @param educationId 
      * @return [DoctorEducationModel]
      */
     @GET("api/v2/doctors/{doctorId}/educations/{educationId}")
@@ -106,8 +107,8 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param doctorName  (optional)
      * @param educationId  (optional)
      * @param institution  (optional)
@@ -126,8 +127,8 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [DoctorModel]
@@ -140,8 +141,8 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param language  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -156,9 +157,9 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param languageId  
+     *
+     * @param doctorId 
+     * @param languageId 
      * @return [DoctorLanguageModel]
      */
     @GET("api/v2/doctors/{doctorId}/languages/{languageId}")
@@ -169,8 +170,8 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -186,9 +187,9 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param mediaId  
+     *
+     * @param doctorId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/doctors/{doctorId}/medias/{mediaId}")
@@ -199,8 +200,8 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param doctorName  (optional)
      * @param portfolioId  (optional)
      * @param name  (optional)
@@ -217,9 +218,9 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param portfolioId  
+     *
+     * @param doctorId 
+     * @param portfolioId 
      * @return [DoctorPortfolioModel]
      */
     @GET("api/v2/doctors/{doctorId}/portfolios/{portfolioId}")
@@ -230,38 +231,41 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
+     *
+     * @param doctorId 
      * @param doctorName  (optional)
      * @param specialtyId  (optional)
      * @param specialtyName  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [DoctorSpecialtiesModel]
      */
     @GET("api/v2/doctors/{doctorId}/specialties")
-    suspend fun apiV2DoctorsDoctorIdSpecialtiesGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorSpecialtiesModel>
+    suspend fun apiV2DoctorsDoctorIdSpecialtiesGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorSpecialtiesModel>
 
     /**
      * Get DoctorSpecialty
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param doctorId  
-     * @param specialtyId  
+     *
+     * @param doctorId 
+     * @param specialtyId 
+     * @param languageCode  (optional)
      * @return [DoctorSpecialtyModel]
      */
     @GET("api/v2/doctors/{doctorId}/specialties/{specialtyId}")
-    suspend fun apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID): Response<DoctorSpecialtyModel>
+    suspend fun apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("specialtyId") specialtyId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorSpecialtyModel>
 
     /**
      * Get all Doctors.
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param hospitalId  (optional)
      * @param hospitalName  (optional)
      * @param languageCode  (optional)
@@ -289,7 +293,7 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param hospitalId  (optional)
      * @param hospitalName  (optional)
      * @param languageCode  (optional)
@@ -317,8 +321,8 @@ interface DoctorsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [DoctorModel]

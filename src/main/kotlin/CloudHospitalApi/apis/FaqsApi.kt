@@ -19,8 +19,8 @@ interface FaqsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param faqId  
+     *
+     * @param faqId 
      * @param languageCode  (optional)
      * @return [FaqModel]
      */
@@ -32,8 +32,8 @@ interface FaqsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param faqId  
+     *
+     * @param faqId 
      * @param id  (optional)
      * @param mediaType  (optional)
      * @param page  (optional)
@@ -49,9 +49,9 @@ interface FaqsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param faqId  
-     * @param mediaId  
+     *
+     * @param faqId 
+     * @param mediaId 
      * @return [MediaModel]
      */
     @GET("api/v2/faqs/{faqId}/medias/{mediaId}")
@@ -62,8 +62,8 @@ interface FaqsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param faqId  
+     *
+     * @param faqId 
      * @param tagId  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -78,9 +78,9 @@ interface FaqsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param faqId  
-     * @param tagId  
+     *
+     * @param faqId 
+     * @param tagId 
      * @return [FaqTagModel]
      */
     @GET("api/v2/faqs/{faqId}/tags/{tagId}")
@@ -91,7 +91,7 @@ interface FaqsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param slug  (optional)
@@ -114,8 +114,8 @@ interface FaqsApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @return [FaqModel]
      */

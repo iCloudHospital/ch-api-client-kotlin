@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: text/plain, application/json, text/json
 
 
@@ -74,8 +74,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **dealId** | **java.util.UUID**|  |
+ **hospitalId** | **java.util.UUID**|  | [optional]
 
 ### Return type
 
@@ -114,8 +114,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **doctorId** | **java.util.UUID**|  |
+ **hospitalId** | **java.util.UUID**|  | [optional]
 
 ### Return type
 
@@ -153,7 +153,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  |
+ **hospitalId** | **java.util.UUID**|  |
 
 ### Return type
 

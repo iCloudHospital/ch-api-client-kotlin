@@ -5,22 +5,167 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
+import CloudHospitalApi.models.ArticleContributorModel
+import CloudHospitalApi.models.ArticleContributorsModel
+import CloudHospitalApi.models.ArticleModel
+import CloudHospitalApi.models.ArticleSourcesModel
 import CloudHospitalApi.models.ArticleStatus
-import CloudHospitalApi.models.ArticleViewModel
-import CloudHospitalApi.models.ArticlesViewModel
-import CloudHospitalApi.models.CreateArticleCommand
+import CloudHospitalApi.models.ArticleTagModel
+import CloudHospitalApi.models.ArticleTagsModel
+import CloudHospitalApi.models.ArticlesModel
+import CloudHospitalApi.models.ContributionType
 import CloudHospitalApi.models.MarketingType
-import CloudHospitalApi.models.UpdateArticleCommand
+import CloudHospitalApi.models.MediaModel
+import CloudHospitalApi.models.MediaType
+import CloudHospitalApi.models.MediasModel
+import CloudHospitalApi.models.SourceModel
 
 interface ArticlesApi {
     /**
-     * Get all articles.
-     * Sample request:        GET /api/v1/hospitals/1/articles
+     * Get ArticleContributor.
+     * 
      * Responses:
      *  - 200: Success
+     *
+     * @param articleId 
+     * @param contributorId 
+     * @return [ArticleContributorModel]
+     */
+    @GET("api/v2/articles/{articleId}/contributors/{contributorId}")
+    suspend fun apiV2ArticlesArticleIdContributorsContributorIdGet(@Path("articleId") articleId: java.util.UUID, @Path("contributorId") contributorId: java.util.UUID): Response<ArticleContributorModel>
+
+    /**
+     * GetAll ArticleContributors.
      * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
+     * @param articleName  (optional)
+     * @param contributorId  (optional)
+     * @param contributorName  (optional)
+     * @param email  (optional)
+     * @param website  (optional)
+     * @param contributionType  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [ArticleContributorsModel]
+     */
+    @GET("api/v2/articles/{articleId}/contributors")
+    suspend fun apiV2ArticlesArticleIdContributorsGet(@Path("articleId") articleId: java.util.UUID, @Query("ArticleName") articleName: kotlin.String? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("ContributorName") contributorName: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Website") website: kotlin.String? = null, @Query("ContributionType") contributionType: ContributionType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticleContributorsModel>
+
+    /**
+     * Get Article.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [ArticleModel]
+     */
+    @GET("api/v2/articles/{articleId}")
+    suspend fun apiV2ArticlesArticleIdGet(@Path("articleId") articleId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<ArticleModel>
+
+    /**
+     * Get all ArticleMedias.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
      * @param id  (optional)
-     * @param title  (optional)
+     * @param mediaType  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [MediasModel]
+     */
+    @GET("api/v2/articles/{articleId}/medias")
+    suspend fun apiV2ArticlesArticleIdMediasGet(@Path("articleId") articleId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("MediaType") mediaType: MediaType? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<MediasModel>
+
+    /**
+     * Get ArticleMedia.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
+     * @param mediaId 
+     * @return [MediaModel]
+     */
+    @GET("api/v2/articles/{articleId}/medias/{mediaId}")
+    suspend fun apiV2ArticlesArticleIdMediasMediaIdGet(@Path("articleId") articleId: java.util.UUID, @Path("mediaId") mediaId: java.util.UUID): Response<MediaModel>
+
+    /**
+     * Get all ArticleSource.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [ArticleSourcesModel]
+     */
+    @GET("api/v2/articles/{articleId}/sources")
+    suspend fun apiV2ArticlesArticleIdSourcesGet(@Path("articleId") articleId: java.util.UUID, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticleSourcesModel>
+
+    /**
+     * Get ArticleSource.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
+     * @param sourceId 
+     * @return [SourceModel]
+     */
+    @GET("api/v2/articles/{articleId}/sources/{sourceId}")
+    suspend fun apiV2ArticlesArticleIdSourcesSourceIdGet(@Path("articleId") articleId: java.util.UUID, @Path("sourceId") sourceId: java.util.UUID): Response<SourceModel>
+
+    /**
+     * GetAll ArticleTags.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
+     * @param tagId  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [ArticleTagsModel]
+     */
+    @GET("api/v2/articles/{articleId}/tags")
+    suspend fun apiV2ArticlesArticleIdTagsGet(@Path("articleId") articleId: java.util.UUID, @Query("TagId") tagId: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticleTagsModel>
+
+    /**
+     * Get ArticleTag.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param articleId 
+     * @param tagId 
+     * @return [ArticleTagModel]
+     */
+    @GET("api/v2/articles/{articleId}/tags/{tagId}")
+    suspend fun apiV2ArticlesArticleIdTagsTagIdGet(@Path("articleId") articleId: java.util.UUID, @Path("tagId") tagId: kotlin.String): Response<ArticleTagModel>
+
+    /**
+     * Get all Articles.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param id  (optional)
+     * @param name  (optional)
      * @param description  (optional)
      * @param status  (optional)
      * @param marketingType  (optional)
@@ -30,89 +175,32 @@ interface ArticlesApi {
      * @param hospitalName  (optional)
      * @param countryId  (optional)
      * @param tag  (optional)
+     * @param exceptArticleId  (optional)
      * @param exceptHospitalId  (optional)
      * @param contributorId  (optional)
      * @param languageCode  (optional)
+     * @param showHidden  (optional)
+     * @param returnDefaultValue  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
-     * @param current  (optional)
-     * @return [ArticlesViewModel]
+     * @return [ArticlesModel]
      */
-    @GET("api/v1/hospitals/articles")
-    suspend fun apiV1HospitalsArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Title") title: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null, @Query("Current") current: kotlin.Boolean? = null): Response<ArticlesViewModel>
+    @GET("api/v2/articles")
+    suspend fun apiV2ArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptArticleId") exceptArticleId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticlesModel>
 
     /**
-     * Get article by slug.
+     * 
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
-     * @param languageCode  (optional, default to "")
-     * @return [ArticleViewModel]
+     *
+     * @param slug 
+     * @param languageCode  (optional)
+     * @param returnDefaultValue  (optional)
+     * @return [ArticleModel]
      */
-    @GET("api/v1/hospitals/articles/slugs/{slug}")
-    suspend fun apiV1HospitalsArticlesSlugsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<ArticleViewModel>
-
-    /**
-     * Delete article.
-     * Sample request:        DELETE /api/v1/hospitals/1/articles/1
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param hospitalId  
-     * @param articleId  
-     * @return [kotlin.Boolean]
-     */
-    @DELETE("api/v1/hospitals/{hospitalId}/articles/{articleId}")
-    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdDelete(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID): Response<kotlin.Boolean>
-
-    /**
-     * Get article.
-     * Sample request:        GET /api/v1/hospitals/1/articles/1
-     * Responses:
-     *  - 200: Success
-     * 
-     * @param hospitalId  
-     * @param articleId  
-     * @param languageCode  (optional, default to "")
-     * @return [ArticleViewModel]
-     */
-    @GET("api/v1/hospitals/{hospitalId}/articles/{articleId}")
-    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<ArticleViewModel>
-
-    /**
-     * Update article.
-     * Sample request:        PUT /api/v1/hospitals/1/articles/1      {          \&quot;title\&quot;: \&quot;Samsung Hospital Article\&quot;,          \&quot;description\&quot;: \&quot;This is an article.\&quot;,          \&quot;body\&quot;: \&quot;updated article body here\&quot;,          \&quot;status\&quot;: \&quot;Draft\&quot;,          \&quot;hospitalId\&quot;: 1,          \&quot;tags\&quot;: [            {              \&quot;value\&quot;: \&quot;articletag1\&quot;,              \&quot;order\&quot;: 0            },            {              \&quot;value\&quot;: \&quot;articletag2\&quot;,              \&quot;order\&quot;: 0            }          ],          \&quot;medias\&quot;: [            {              \&quot;mediaType\&quot;: \&quot;Photo\&quot;,              \&quot;url\&quot;: \&quot;string\&quot;,              \&quot;thumbnailUrl\&quot;: \&quot;string\&quot;,              \&quot;description\&quot;: \&quot;string\&quot;,              \&quot;order\&quot;: 0            }          ]      }
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param hospitalId  
-     * @param articleId  
-     * @param updateArticleCommand  (optional)
-     * @return [kotlin.Boolean]
-     */
-    @PUT("api/v1/hospitals/{hospitalId}/articles/{articleId}")
-    suspend fun apiV1HospitalsHospitalIdArticlesArticleIdPut(@Path("hospitalId") hospitalId: java.util.UUID, @Path("articleId") articleId: java.util.UUID, @Body updateArticleCommand: UpdateArticleCommand? = null): Response<kotlin.Boolean>
-
-    /**
-     * Create an article.
-     * Sample request:        POST /api/v1/hospitals/1/articles      {          \&quot;title\&quot;: \&quot;Samsung Hospital Article\&quot;,          \&quot;description\&quot;: \&quot;This is an article.\&quot;,          \&quot;body\&quot;: \&quot;article body here\&quot;,          \&quot;status\&quot;: \&quot;Draft\&quot;,          \&quot;hospitalId\&quot;: 1,          \&quot;tags\&quot;: [            {              \&quot;value\&quot;: \&quot;string\&quot;,              \&quot;order\&quot;: 0              }          ],          \&quot;medias\&quot;: [            {              \&quot;mediaType\&quot;: \&quot;Photo\&quot;,              \&quot;url\&quot;: \&quot;string\&quot;,              \&quot;thumbnailUrl\&quot;: \&quot;string\&quot;,              \&quot;description\&quot;: \&quot;string\&quot;,              \&quot;order\&quot;: 0            }          ]      }
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     * 
-     * @param hospitalId  
-     * @param createArticleCommand  (optional)
-     * @return [java.util.UUID]
-     */
-    @POST("api/v1/hospitals/{hospitalId}/articles")
-    suspend fun apiV1HospitalsHospitalIdArticlesPost(@Path("hospitalId") hospitalId: java.util.UUID, @Body createArticleCommand: CreateArticleCommand? = null): Response<java.util.UUID>
+    @GET("api/v2/articles/{slug}")
+    suspend fun apiV2ArticlesSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<ArticleModel>
 
 }

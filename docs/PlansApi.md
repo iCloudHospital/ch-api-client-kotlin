@@ -37,7 +37,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -79,7 +79,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **planId** | [**java.util.UUID**](.md)|  |
+ **planId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -120,7 +120,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **planId** | [**java.util.UUID**](.md)|  |
+ **planId** | **java.util.UUID**|  |
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -162,8 +162,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **planId** | [**java.util.UUID**](.md)|  |
- **hospitalId** | [**java.util.UUID**](.md)|  |
+ **planId** | **java.util.UUID**|  |
+ **hospitalId** | **java.util.UUID**|  |
 
 ### Return type
 

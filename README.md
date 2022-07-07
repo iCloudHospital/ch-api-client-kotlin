@@ -394,7 +394,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.UserLocationModel](docs/UserLocationModel.md)
  - [CloudHospitalApi.models.UserLocationType](docs/UserLocationType.md)
  - [CloudHospitalApi.models.UserModel](docs/UserModel.md)
- - [CloudHospitalApi.models.UserTranslationModel](docs/UserTranslationModel.md)
  - [CloudHospitalApi.models.WorkingDay](docs/WorkingDay.md)
  - [CloudHospitalApi.models.WorkingDayItemModel](docs/WorkingDayItemModel.md)
  - [CloudHospitalApi.models.WorkingDayModel](docs/WorkingDayModel.md)

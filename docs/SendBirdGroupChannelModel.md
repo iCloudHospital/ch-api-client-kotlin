@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **coverUrl** | **kotlin.String** |  |  [optional]
 **customType** | **kotlin.String** |  |  [optional]
 **unreadMessageCount** | **kotlin.Int** |  |  [optional]
-**data** | **kotlin.String** |  |  [optional]
+**&#x60;data&#x60;** | **kotlin.String** |  |  [optional]
 **isDistinct** | **kotlin.Boolean** |  |  [optional]
 **isPublic** | **kotlin.Boolean** |  |  [optional]
 **isSuper** | **kotlin.Boolean** |  |  [optional]

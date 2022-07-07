@@ -16,7 +16,7 @@ interface ServicesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @param id  (optional)
      * @param name  (optional)
      * @param slug  (optional)
@@ -46,8 +46,8 @@ interface ServicesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param serviceId  
+     *
+     * @param serviceId 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [HospitalServiceModel]
@@ -60,8 +60,8 @@ interface ServicesApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param slug  
+     *
+     * @param slug 
      * @param languageCode  (optional)
      * @param returnDefaultValue  (optional)
      * @return [HospitalServiceModel]

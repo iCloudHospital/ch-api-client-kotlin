@@ -2,11 +2,11 @@ package CloudHospitalApi.infrastructure
 
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder
-import CloudHospitalApi.auth.ApiKeyAuth
 import CloudHospitalApi.auth.OAuth
 import CloudHospitalApi.auth.OAuth.AccessTokenListener
 import CloudHospitalApi.auth.OAuthFlow
 
+import okhttp3.Call
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -21,7 +21,7 @@ class ApiClient(
     private var baseUrl: String = defaultBasePath,
     private val okHttpClientBuilder: OkHttpClient.Builder? = null,
     private val serializerBuilder: Moshi.Builder = Serializer.moshiBuilder,
-    private val okHttpClient : OkHttpClient? = null,
+    private val callFactory : Call.Factory? = null,
     private val converterFactory: Converter.Factory? = null,
 ) {
     private val apiAuthorizations = mutableMapOf<String, Interceptor>()
@@ -46,13 +46,9 @@ class ApiClient(
     private val defaultClientBuilder: OkHttpClient.Builder by lazy {
         OkHttpClient()
             .newBuilder()
-            .addInterceptor(HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
-                override fun log(message: String) {
-                    logger?.invoke(message)
-                }
-            }).apply {
-                level = HttpLoggingInterceptor.Level.BODY
-            })
+            .addInterceptor(HttpLoggingInterceptor { message -> logger?.invoke(message) }
+                .apply { level = HttpLoggingInterceptor.Level.BODY }
+            )
     }
 
     init {
@@ -67,10 +63,10 @@ class ApiClient(
     ) : this(baseUrl, okHttpClientBuilder, serializerBuilder) {
         authNames.forEach { authName ->
             val auth = when (authName) {
-                "oauth2" -> OAuth(OAuthFlow.implicit, "https://identity-int.icloudhospital.com/connect/authorize", "", "CloudHospital_api, IdentityServerApi")
+                "oauth2" -> OAuth(OAuthFlow.implicit, "https://identity-int.icloudhospital.com/connect/authorize", "", "CloudHospital_api, IdentityServerApi, CloudHospital_SignalR")
                 else -> throw RuntimeException("auth name $authName not found in available auth names")
             }
-            addAuthorization(authName, auth);
+            addAuthorization(authName, auth)
         }
     }
 
@@ -144,7 +140,7 @@ class ApiClient(
                 ?.setClientId(clientId)
                 ?.setRedirectURI(redirectURI)
         }
-        return this;
+        return this
     }
 
     /**
@@ -156,7 +152,7 @@ class ApiClient(
         apiAuthorizations.values.runOnFirst<Interceptor, OAuth> {
             registerAccessTokenListener(accessTokenListener)
         }
-        return this;
+        return this
     }
 
     /**
@@ -180,8 +176,8 @@ class ApiClient(
     }
 
     fun <S> createService(serviceClass: Class<S>): S {
-        val usedClient = this.okHttpClient ?: clientBuilder.build()
-        return retrofitBuilder.client(usedClient).build().create(serviceClass)
+        val usedCallFactory = this.callFactory ?: clientBuilder.build()
+        return retrofitBuilder.callFactory(usedCallFactory).build().create(serviceClass)
     }
 
     private fun normalizeBaseUrl() {
@@ -201,8 +197,11 @@ class ApiClient(
 
     companion object {
         @JvmStatic
+        protected val baseUrlKey = "CloudHospitalApi.baseUrl"
+
+        @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("CloudHospitalApi.baseUrl", "http://localhost")
+            System.getProperties().getProperty(baseUrlKey, "http://localhost")
         }
     }
 }

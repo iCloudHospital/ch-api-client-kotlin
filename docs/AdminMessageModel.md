@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **mentionType** | **kotlin.String** |  |  [optional]
 **isRemoved** | **kotlin.Boolean** |  |  [optional]
 **message** | **kotlin.String** |  |  [optional]
-**data** | **kotlin.String** |  |  [optional]
+**&#x60;data&#x60;** | **kotlin.String** |  |  [optional]
 **createdAt** | **kotlin.Long** |  |  [optional]
 **updatedAt** | **kotlin.Long** |  |  [optional]
 

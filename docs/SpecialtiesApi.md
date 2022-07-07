@@ -46,11 +46,11 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
- **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeId** | **java.util.UUID**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **created** | **java.time.LocalDateTime**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
@@ -106,11 +106,11 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
- **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeId** | **java.util.UUID**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **created** | **java.time.LocalDateTime**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
@@ -199,7 +199,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **specialtyId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
@@ -244,8 +244,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **specialtyId** | [**java.util.UUID**](.md)|  |
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | **java.util.UUID**|  |
+ **id** | **java.util.UUID**|  | [optional]
  **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -288,8 +288,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **specialtyId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **specialtyId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
 
 ### Return type
 

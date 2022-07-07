@@ -15,7 +15,7 @@ interface ImagesApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     * 
+     *
      * @return [kotlin.collections.List<MediaModel>]
      */
     @POST("api/v2/images")

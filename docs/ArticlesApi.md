@@ -41,8 +41,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
- **contributorId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
+ **contributorId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -91,9 +91,9 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
  **articleName** | **kotlin.String**|  | [optional]
- **contributorId** | [**java.util.UUID**](.md)|  | [optional]
+ **contributorId** | **java.util.UUID**|  | [optional]
  **contributorName** | **kotlin.String**|  | [optional]
  **email** | **kotlin.String**|  | [optional]
  **website** | **kotlin.String**|  | [optional]
@@ -142,7 +142,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
@@ -187,8 +187,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **articleId** | **java.util.UUID**|  |
+ **id** | **java.util.UUID**|  | [optional]
  **mediaType** | [**MediaType**](.md)|  | [optional] [enum: Photo, Video, Youtube, Document, Frontal, Diagonal, Side]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -231,8 +231,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
- **mediaId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
+ **mediaId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -273,7 +273,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -315,8 +315,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
- **sourceId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
+ **sourceId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -358,7 +358,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
  **tagId** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -401,7 +401,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **articleId** | [**java.util.UUID**](.md)|  |
+ **articleId** | **java.util.UUID**|  |
  **tagId** | **kotlin.String**|  |
 
 ### Return type
@@ -459,20 +459,20 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
  **status** | [**ArticleStatus**](.md)|  | [optional] [enum: Draft, Active, Archived]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
- **userId** | [**java.util.UUID**](.md)|  | [optional]
+ **userId** | **java.util.UUID**|  | [optional]
  **userName** | **kotlin.String**|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
- **countryId** | [**java.util.UUID**](.md)|  | [optional]
+ **countryId** | **java.util.UUID**|  | [optional]
  **tag** | **kotlin.String**|  | [optional]
- **exceptArticleId** | [**java.util.UUID**](.md)|  | [optional]
- **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
- **contributorId** | [**java.util.UUID**](.md)|  | [optional]
+ **exceptArticleId** | **java.util.UUID**|  | [optional]
+ **exceptHospitalId** | **java.util.UUID**|  | [optional]
+ **contributorId** | **java.util.UUID**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
  **showHidden** | **kotlin.Boolean**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]

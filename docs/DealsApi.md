@@ -39,7 +39,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
+ **dealId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
  **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
@@ -88,12 +88,12 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
- **relatedDealPackageId** | [**java.util.UUID**](.md)|  | [optional]
+ **dealId** | **java.util.UUID**|  |
+ **relatedDealPackageId** | **java.util.UUID**|  | [optional]
  **dealName** | **kotlin.String**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
- **countryId** | [**java.util.UUID**](.md)|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **countryId** | **java.util.UUID**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
@@ -136,8 +136,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
- **packageId** | [**java.util.UUID**](.md)|  |
+ **dealId** | **java.util.UUID**|  |
+ **packageId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -178,7 +178,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
+ **dealId** | **java.util.UUID**|  |
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -220,8 +220,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
- **serviceId** | [**java.util.UUID**](.md)|  |
+ **dealId** | **java.util.UUID**|  |
+ **serviceId** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -280,20 +280,20 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
- **countryId** | [**java.util.UUID**](.md)|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **countryId** | **java.util.UUID**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
- **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | **java.util.UUID**|  | [optional]
  **specialtyName** | **kotlin.String**|  | [optional]
- **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeId** | **java.util.UUID**|  | [optional]
  **specialtyTypeName** | **kotlin.String**|  | [optional]
- **serviceId** | [**java.util.UUID**](.md)|  | [optional]
+ **serviceId** | **java.util.UUID**|  | [optional]
  **serviceName** | **kotlin.String**|  | [optional]
- **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
- **exceptDealId** | [**java.util.UUID**](.md)|  | [optional]
+ **exceptHospitalId** | **java.util.UUID**|  | [optional]
+ **exceptDealId** | **java.util.UUID**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
  **serviceDuration** | **kotlin.Int**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
@@ -360,20 +360,20 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
- **countryId** | [**java.util.UUID**](.md)|  | [optional]
- **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
+ **countryId** | **java.util.UUID**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
- **specialtyId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyId** | **java.util.UUID**|  | [optional]
  **specialtyName** | **kotlin.String**|  | [optional]
- **specialtyTypeId** | [**java.util.UUID**](.md)|  | [optional]
+ **specialtyTypeId** | **java.util.UUID**|  | [optional]
  **specialtyTypeName** | **kotlin.String**|  | [optional]
- **serviceId** | [**java.util.UUID**](.md)|  | [optional]
+ **serviceId** | **java.util.UUID**|  | [optional]
  **serviceName** | **kotlin.String**|  | [optional]
- **exceptHospitalId** | [**java.util.UUID**](.md)|  | [optional]
- **exceptDealId** | [**java.util.UUID**](.md)|  | [optional]
+ **exceptHospitalId** | **java.util.UUID**|  | [optional]
+ **exceptDealId** | **java.util.UUID**|  | [optional]
  **ids** | [**kotlin.collections.List&lt;java.util.UUID&gt;**](java.util.UUID.md)|  | [optional]
  **serviceDuration** | **kotlin.Int**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
