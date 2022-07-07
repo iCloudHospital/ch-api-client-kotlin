@@ -4,14 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1GroupchannelsChannelUrlInvitePost**](GroupChannelsApi.md#apiV1GroupchannelsChannelUrlInvitePost) | **POST** api/v1/groupchannels/{channelUrl}/invite | 
-[**apiV1GroupchannelsDealDealIdGet**](GroupChannelsApi.md#apiV1GroupchannelsDealDealIdGet) | **GET** api/v1/groupchannels/deal/{dealId} | 
-[**apiV1GroupchannelsDealDealIdPost**](GroupChannelsApi.md#apiV1GroupchannelsDealDealIdPost) | **POST** api/v1/groupchannels/deal/{dealId} | 
-[**apiV1GroupchannelsDoctorDoctorIdGet**](GroupChannelsApi.md#apiV1GroupchannelsDoctorDoctorIdGet) | **GET** api/v1/groupchannels/doctor/{doctorId} | 
-[**apiV1GroupchannelsDoctorDoctorIdPost**](GroupChannelsApi.md#apiV1GroupchannelsDoctorDoctorIdPost) | **POST** api/v1/groupchannels/doctor/{doctorId} | 
-[**apiV1GroupchannelsHospitalHospitalIdGet**](GroupChannelsApi.md#apiV1GroupchannelsHospitalHospitalIdGet) | **GET** api/v1/groupchannels/hospital/{hospitalId} | 
-[**apiV1GroupchannelsHospitalHospitalIdPost**](GroupChannelsApi.md#apiV1GroupchannelsHospitalHospitalIdPost) | **POST** api/v1/groupchannels/hospital/{hospitalId} | 
-[**apiV1GroupchannelsIdGet**](GroupChannelsApi.md#apiV1GroupchannelsIdGet) | **GET** api/v1/groupchannels/{id} | 
+[**apiV2GroupchannelsChannelUrlInvitePost**](GroupChannelsApi.md#apiV2GroupchannelsChannelUrlInvitePost) | **POST** api/v2/groupchannels/{channelUrl}/invite | 
+[**apiV2GroupchannelsDealDealIdGet**](GroupChannelsApi.md#apiV2GroupchannelsDealDealIdGet) | **GET** api/v2/groupchannels/deal/{dealId} | 
+[**apiV2GroupchannelsDoctorDoctorIdGet**](GroupChannelsApi.md#apiV2GroupchannelsDoctorDoctorIdGet) | **GET** api/v2/groupchannels/doctor/{doctorId} | 
+[**apiV2GroupchannelsHospitalHospitalIdGet**](GroupChannelsApi.md#apiV2GroupchannelsHospitalHospitalIdGet) | **GET** api/v2/groupchannels/hospital/{hospitalId} | 
 
 
 
@@ -30,7 +26,7 @@ val channelUrl : kotlin.String = channelUrl_example // kotlin.String |
 val inviteSendBirdGroupChannelCommand : InviteSendBirdGroupChannelCommand =  // InviteSendBirdGroupChannelCommand | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsChannelUrlInvitePost(channelUrl, inviteSendBirdGroupChannelCommand)
+    val result : SendBirdGroupChannelModel = webService.apiV2GroupchannelsChannelUrlInvitePost(channelUrl, inviteSendBirdGroupChannelCommand)
 }
 ```
 
@@ -43,7 +39,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SendBirdGroupChannelViewModel**](SendBirdGroupChannelViewModel.md)
+[**SendBirdGroupChannelModel**](SendBirdGroupChannelModel.md)
 
 ### Authorization
 
@@ -67,9 +63,10 @@ Name | Type | Description  | Notes
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDealDealIdGet(dealId)
+    val result : SendBirdGroupChannelModel = webService.apiV2GroupchannelsDealDealIdGet(dealId, hospitalId)
 }
 ```
 
@@ -78,48 +75,11 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **dealId** | [**java.util.UUID**](.md)|  |
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
 
 ### Return type
 
-[**SendBirdGroupChannelViewModel**](SendBirdGroupChannelViewModel.md)
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
-val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1GroupchannelsDealDealIdPost(dealId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dealId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
+[**SendBirdGroupChannelModel**](SendBirdGroupChannelModel.md)
 
 ### Authorization
 
@@ -143,9 +103,10 @@ Name | Type | Description  | Notes
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsDoctorDoctorIdGet(doctorId)
+    val result : SendBirdGroupChannelModel = webService.apiV2GroupchannelsDoctorDoctorIdGet(doctorId, hospitalId)
 }
 ```
 
@@ -154,48 +115,11 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **doctorId** | [**java.util.UUID**](.md)|  |
+ **hospitalId** | [**java.util.UUID**](.md)|  | [optional]
 
 ### Return type
 
-[**SendBirdGroupChannelViewModel**](SendBirdGroupChannelViewModel.md)
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
-val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1GroupchannelsDoctorDoctorIdPost(doctorId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **doctorId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
+[**SendBirdGroupChannelModel**](SendBirdGroupChannelModel.md)
 
 ### Authorization
 
@@ -221,7 +145,7 @@ val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelViewModel = webService.apiV1GroupchannelsHospitalHospitalIdGet(hospitalId)
+    val result : SendBirdGroupChannelModel = webService.apiV2GroupchannelsHospitalHospitalIdGet(hospitalId)
 }
 ```
 
@@ -233,83 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SendBirdGroupChannelViewModel**](SendBirdGroupChannelViewModel.md)
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
-val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1GroupchannelsHospitalHospitalIdPost(hospitalId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **hospitalId** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
-
-### Authorization
-
-
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
-val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1GroupchannelsIdGet(id)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  |
-
-### Return type
-
-**kotlin.Boolean**
+[**SendBirdGroupChannelModel**](SendBirdGroupChannelModel.md)
 
 ### Authorization
 
