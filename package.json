@@ -1,6 +1,6 @@
 {
   "name": "ch-api-client-kotlin",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "Openapi generated kotlin client for CloudHospital",
   "main": "index.js",
   "scripts": {
