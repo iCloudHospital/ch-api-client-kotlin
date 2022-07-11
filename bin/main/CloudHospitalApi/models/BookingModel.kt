@@ -32,9 +32,17 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param patientId 
  * @param patientName 
  * @param patientPhoto 
+ * @param firstName 
+ * @param lastName 
+ * @param email 
+ * @param phone 
+ * @param dateOfBirth 
+ * @param gender 
+ * @param comment 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
@@ -45,13 +53,6 @@ import com.squareup.moshi.Json
  * @param dealPackageId 
  * @param refundPolicy 
  * @param quantity 
- * @param firstName 
- * @param lastName 
- * @param email 
- * @param phone 
- * @param dateOfBirth 
- * @param gender 
- * @param comment 
  * @param approximateDateStart 
  * @param approximateDateEnd 
  * @param confirmedDateStart 
@@ -64,7 +65,6 @@ import com.squareup.moshi.Json
  * @param rejectReason 
  * @param rejectComment 
  * @param isOpen 
- * @param completionRate 
  * @param isExternal 
  * @param statusChangeLogs 
  */
@@ -74,6 +74,9 @@ data class BookingModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "patientId")
     val patientId: java.util.UUID? = null,
 
@@ -82,6 +85,27 @@ data class BookingModel (
 
     @Json(name = "patientPhoto")
     val patientPhoto: kotlin.String? = null,
+
+    @Json(name = "firstName")
+    val firstName: kotlin.String? = null,
+
+    @Json(name = "lastName")
+    val lastName: kotlin.String? = null,
+
+    @Json(name = "email")
+    val email: kotlin.String? = null,
+
+    @Json(name = "phone")
+    val phone: kotlin.String? = null,
+
+    @Json(name = "dateOfBirth")
+    val dateOfBirth: java.time.LocalDateTime? = null,
+
+    @Json(name = "gender")
+    val gender: Gender? = null,
+
+    @Json(name = "comment")
+    val comment: kotlin.String? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
@@ -112,27 +136,6 @@ data class BookingModel (
 
     @Json(name = "quantity")
     val quantity: kotlin.Int? = null,
-
-    @Json(name = "firstName")
-    val firstName: kotlin.String? = null,
-
-    @Json(name = "lastName")
-    val lastName: kotlin.String? = null,
-
-    @Json(name = "email")
-    val email: kotlin.String? = null,
-
-    @Json(name = "phone")
-    val phone: kotlin.String? = null,
-
-    @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
-
-    @Json(name = "gender")
-    val gender: Gender? = null,
-
-    @Json(name = "comment")
-    val comment: kotlin.String? = null,
 
     @Json(name = "approximateDateStart")
     val approximateDateStart: java.time.LocalDateTime? = null,
@@ -169,9 +172,6 @@ data class BookingModel (
 
     @Json(name = "isOpen")
     val isOpen: kotlin.Boolean? = null,
-
-    @Json(name = "completionRate")
-    val completionRate: kotlin.Int? = null,
 
     @Json(name = "isExternal")
     val isExternal: kotlin.Boolean? = null,

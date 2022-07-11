@@ -24,7 +24,6 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.ContributionType
 import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.SnsHandle
-import CloudHospitalApi.models.SnsHandleModel
 
 import com.squareup.moshi.Json
 
@@ -33,21 +32,21 @@ import com.squareup.moshi.Json
  *
  * @param articleId 
  * @param contributorId 
+ * @param languageCode 
  * @param contributorName 
  * @param contributorSlug 
+ * @param contributorConfirmed 
  * @param contributorEmail 
  * @param contributorPhoto 
  * @param contributorPhotoThumbnail 
- * @param contributorDescription 
  * @param type 
  * @param filter 
  * @param order 
- * @param confirmed 
  * @param auditableEntity 
+ * @param contributorDescription 
+ * @param contributorOverview 
+ * @param contributorContent 
  * @param contributorSnsHandles 
- * @param languageCode 
- * @param content 
- * @param snsHandles 
  * @param localizedUrls 
  */
 
@@ -59,11 +58,17 @@ data class ArticleContributorModel (
     @Json(name = "contributorId")
     val contributorId: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "contributorName")
     val contributorName: kotlin.String? = null,
 
     @Json(name = "contributorSlug")
     val contributorSlug: kotlin.String? = null,
+
+    @Json(name = "contributorConfirmed")
+    val contributorConfirmed: kotlin.Boolean? = null,
 
     @Json(name = "contributorEmail")
     val contributorEmail: kotlin.String? = null,
@@ -74,9 +79,6 @@ data class ArticleContributorModel (
     @Json(name = "contributorPhotoThumbnail")
     val contributorPhotoThumbnail: kotlin.String? = null,
 
-    @Json(name = "contributorDescription")
-    val contributorDescription: kotlin.String? = null,
-
     @Json(name = "type")
     val type: ContributionType? = null,
 
@@ -86,23 +88,20 @@ data class ArticleContributorModel (
     @Json(name = "order")
     val order: kotlin.Int? = null,
 
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
-
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
 
+    @Json(name = "contributorDescription")
+    val contributorDescription: kotlin.String? = null,
+
+    @Json(name = "contributorOverview")
+    val contributorOverview: kotlin.String? = null,
+
+    @Json(name = "contributorContent")
+    val contributorContent: kotlin.String? = null,
+
     @Json(name = "contributorSnsHandles")
-    val contributorSnsHandles: kotlin.collections.List<SnsHandleModel>? = null,
-
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
-
-    @Json(name = "content")
-    val content: kotlin.String? = null,
-
-    @Json(name = "snsHandles")
-    val snsHandles: kotlin.collections.List<SnsHandle>? = null,
+    val contributorSnsHandles: kotlin.collections.List<SnsHandle>? = null,
 
     @Json(name = "localizedUrls")
     val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null

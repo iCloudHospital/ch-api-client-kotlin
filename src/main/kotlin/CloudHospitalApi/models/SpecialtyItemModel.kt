@@ -34,7 +34,6 @@ import com.squareup.moshi.Json
  * @param slug 
  * @param confirmed 
  * @param specialtyTypeId 
- * @param description 
  * @param specialtyTypeName 
  * @param medias 
  * @param auditableEntity 
@@ -59,9 +58,6 @@ data class SpecialtyItemModel (
 
     @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
-
-    @Json(name = "description")
-    val description: kotlin.String? = null,
 
     @Json(name = "specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,

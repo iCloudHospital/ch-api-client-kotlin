@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **languageCode** | **kotlin.String** |  |  [optional]
 **name** | **kotlin.String** |  |  [optional] [readonly]
 **slug** | **kotlin.String** |  |  [optional] [readonly]
+**confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
 **order** | **kotlin.Int** |  |  [optional]
 
 

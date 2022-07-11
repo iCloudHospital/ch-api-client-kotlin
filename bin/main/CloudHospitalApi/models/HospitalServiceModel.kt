@@ -21,8 +21,6 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.LocalizedUrlModel
-import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaModel
 import CloudHospitalApi.models.Procedure
 
@@ -32,35 +30,31 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param name 
  * @param slug 
+ * @param confirmed 
+ * @param order 
+ * @param photo 
+ * @param photoThumbnail 
+ * @param auditableEntity 
  * @param description 
+ * @param overview 
+ * @param content 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
- * @param specialtyTypeId 
- * @param specialtyTypeName 
- * @param specialtyId 
  * @param specialtyName 
  * @param hospitalSpecialtyName 
  * @param hospitalSpecialtySlug 
  * @param serviceCategoryId 
  * @param serviceCategoryName 
- * @param marketingType 
  * @param procedure 
  * @param minPrice 
  * @param maxPrice 
  * @param priceReuqest 
- * @param order 
- * @param confirmed 
- * @param photo 
- * @param photoThumbnail 
- * @param medias 
- * @param auditableEntity 
- * @param languageCode 
- * @param content 
  * @param customStyle 
- * @param localizedUrls 
+ * @param medias 
  */
 
 data class HospitalServiceModel (
@@ -68,14 +62,38 @@ data class HospitalServiceModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "name")
     val name: kotlin.String? = null,
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
 
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
+
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
+
+    @Json(name = "auditableEntity")
+    val auditableEntity: AuditableEntity? = null,
+
     @Json(name = "description")
     val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
@@ -85,15 +103,6 @@ data class HospitalServiceModel (
 
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
-
-    @Json(name = "specialtyTypeId")
-    val specialtyTypeId: java.util.UUID? = null,
-
-    @Json(name = "specialtyTypeName")
-    val specialtyTypeName: kotlin.String? = null,
-
-    @Json(name = "specialtyId")
-    val specialtyId: java.util.UUID? = null,
 
     @Json(name = "specialtyName")
     val specialtyName: kotlin.String? = null,
@@ -110,9 +119,6 @@ data class HospitalServiceModel (
     @Json(name = "serviceCategoryName")
     val serviceCategoryName: kotlin.String? = null,
 
-    @Json(name = "marketingType")
-    val marketingType: MarketingType? = null,
-
     @Json(name = "procedure")
     val procedure: Procedure? = null,
 
@@ -125,35 +131,11 @@ data class HospitalServiceModel (
     @Json(name = "priceReuqest")
     val priceReuqest: kotlin.Boolean? = null,
 
-    @Json(name = "order")
-    val order: kotlin.Int? = null,
-
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
-
-    @Json(name = "photo")
-    val photo: kotlin.String? = null,
-
-    @Json(name = "photoThumbnail")
-    val photoThumbnail: kotlin.String? = null,
-
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaModel>? = null,
-
-    @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
-
-    @Json(name = "content")
-    val content: kotlin.String? = null,
-
     @Json(name = "customStyle")
     val customStyle: kotlin.String? = null,
 
-    @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    @Json(name = "medias")
+    val medias: kotlin.collections.List<MediaModel>? = null
 
 )
 

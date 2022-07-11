@@ -5,8 +5,6 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.DoctorAffiliationModel
-import CloudHospitalApi.models.DoctorAffiliationsModel
 import CloudHospitalApi.models.DoctorCertificateModel
 import CloudHospitalApi.models.DoctorCertificatesModel
 import CloudHospitalApi.models.DoctorEducationModel
@@ -26,36 +24,6 @@ import CloudHospitalApi.models.MediaType
 import CloudHospitalApi.models.MediasModel
 
 interface DoctorsApi {
-    /**
-     * Get all doctor affiliations.
-     * 
-     * Responses:
-     *  - 200: Success
-     *
-     * @param doctorId 
-     * @param hospitalName  (optional)
-     * @param languageCode  (optional)
-     * @param page  (optional)
-     * @param limit  (optional)
-     * @param lastRetrieved  (optional)
-     * @return [DoctorAffiliationsModel]
-     */
-    @GET("api/v2/doctors/{doctorId}/affiliations")
-    suspend fun apiV2DoctorsDoctorIdAffiliationsGet(@Path("doctorId") doctorId: java.util.UUID, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorAffiliationsModel>
-
-    /**
-     * Get doctor affiliation.
-     * 
-     * Responses:
-     *  - 200: Success
-     *
-     * @param doctorId 
-     * @param hospitalId 
-     * @return [DoctorAffiliationModel]
-     */
-    @GET("api/v2/doctors/{doctorId}/affiliations/{hospitalId}")
-    suspend fun apiV2DoctorsDoctorIdAffiliationsHospitalIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("hospitalId") hospitalId: java.util.UUID): Response<DoctorAffiliationModel>
-
     /**
      * Get DoctorCertificate.
      * 
@@ -237,14 +205,13 @@ interface DoctorsApi {
      * @param specialtyId  (optional)
      * @param specialtyName  (optional)
      * @param languageCode  (optional)
-     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [DoctorSpecialtiesModel]
      */
     @GET("api/v2/doctors/{doctorId}/specialties")
-    suspend fun apiV2DoctorsDoctorIdSpecialtiesGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorSpecialtiesModel>
+    suspend fun apiV2DoctorsDoctorIdSpecialtiesGet(@Path("doctorId") doctorId: java.util.UUID, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorSpecialtiesModel>
 
     /**
      * Get DoctorSpecialty

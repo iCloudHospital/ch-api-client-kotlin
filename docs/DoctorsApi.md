@@ -4,8 +4,6 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV2DoctorsDoctorIdAffiliationsGet**](DoctorsApi.md#apiV2DoctorsDoctorIdAffiliationsGet) | **GET** api/v2/doctors/{doctorId}/affiliations | Get all doctor affiliations.
-[**apiV2DoctorsDoctorIdAffiliationsHospitalIdGet**](DoctorsApi.md#apiV2DoctorsDoctorIdAffiliationsHospitalIdGet) | **GET** api/v2/doctors/{doctorId}/affiliations/{hospitalId} | Get doctor affiliation.
 [**apiV2DoctorsDoctorIdCertificatesCertificateIdGet**](DoctorsApi.md#apiV2DoctorsDoctorIdCertificatesCertificateIdGet) | **GET** api/v2/doctors/{doctorId}/certificates/{certificateId} | Get DoctorCertificate.
 [**apiV2DoctorsDoctorIdCertificatesGet**](DoctorsApi.md#apiV2DoctorsDoctorIdCertificatesGet) | **GET** api/v2/doctors/{doctorId}/certificates | Delete DoctorCertificate.
 [**apiV2DoctorsDoctorIdEducationsEducationIdGet**](DoctorsApi.md#apiV2DoctorsDoctorIdEducationsEducationIdGet) | **GET** api/v2/doctors/{doctorId}/educations/{educationId} | Get DoctorEducation.
@@ -23,94 +21,6 @@ Method | HTTP request | Description
 [**apiV2DoctorsSimpleGet**](DoctorsApi.md#apiV2DoctorsSimpleGet) | **GET** api/v2/doctors/simple | Get all Doctors.
 [**apiV2DoctorsSlugGet**](DoctorsApi.md#apiV2DoctorsSlugGet) | **GET** api/v2/doctors/{slug} | 
 
-
-
-Get all doctor affiliations.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(DoctorsApi::class.java)
-val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
-val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val page : kotlin.Int = 56 // kotlin.Int | 
-val limit : kotlin.Int = 56 // kotlin.Int | 
-val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
-
-launch(Dispatchers.IO) {
-    val result : DoctorAffiliationsModel = webService.apiV2DoctorsDoctorIdAffiliationsGet(doctorId, hospitalName, languageCode, page, limit, lastRetrieved)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **doctorId** | **java.util.UUID**|  |
- **hospitalName** | **kotlin.String**|  | [optional]
- **languageCode** | **kotlin.String**|  | [optional]
- **page** | **kotlin.Int**|  | [optional]
- **limit** | **kotlin.Int**|  | [optional]
- **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
-
-### Return type
-
-[**DoctorAffiliationsModel**](DoctorAffiliationsModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-Get doctor affiliation.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(DoctorsApi::class.java)
-val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : DoctorAffiliationModel = webService.apiV2DoctorsDoctorIdAffiliationsHospitalIdGet(doctorId, hospitalId)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **doctorId** | **java.util.UUID**|  |
- **hospitalId** | **java.util.UUID**|  |
-
-### Return type
-
-[**DoctorAffiliationModel**](DoctorAffiliationModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 
 Get DoctorCertificate.
@@ -623,13 +533,12 @@ val doctorName : kotlin.String = doctorName_example // kotlin.String |
 val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val specialtyName : kotlin.String = specialtyName_example // kotlin.String | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorSpecialtiesModel = webService.apiV2DoctorsDoctorIdSpecialtiesGet(doctorId, doctorName, specialtyId, specialtyName, languageCode, showHidden, page, limit, lastRetrieved)
+    val result : DoctorSpecialtiesModel = webService.apiV2DoctorsDoctorIdSpecialtiesGet(doctorId, doctorName, specialtyId, specialtyName, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -642,7 +551,6 @@ Name | Type | Description  | Notes
  **specialtyId** | **java.util.UUID**|  | [optional]
  **specialtyName** | **kotlin.String**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
- **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]

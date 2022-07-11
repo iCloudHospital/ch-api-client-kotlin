@@ -35,11 +35,8 @@ import com.squareup.moshi.Json
  * @param languageCode 
  * @param userName 
  * @param firstName 
- * @param middleName 
  * @param lastName 
  * @param fullName 
- * @param slug 
- * @param confirmed 
  * @param userType 
  * @param photo 
  * @param photoThumbnail 
@@ -69,20 +66,11 @@ data class PatientModel (
     @Json(name = "firstName")
     val firstName: kotlin.String? = null,
 
-    @Json(name = "middleName")
-    val middleName: kotlin.String? = null,
-
     @Json(name = "lastName")
     val lastName: kotlin.String? = null,
 
     @Json(name = "fullName")
     val fullName: kotlin.String? = null,
-
-    @Json(name = "slug")
-    val slug: kotlin.String? = null,
-
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
 
     @Json(name = "userType")
     val userType: kotlin.String? = null,

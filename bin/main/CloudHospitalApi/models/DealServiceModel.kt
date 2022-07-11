@@ -26,14 +26,20 @@ import com.squareup.moshi.Json
 /**
  * 
  *
+ * @param languageCode 
  * @param dealId 
  * @param dealName 
+ * @param dealSlug 
  * @param serviceId 
  * @param serviceName 
+ * @param serviceSlug 
  * @param order 
  */
 
 data class DealServiceModel (
+
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
 
     @Json(name = "dealId")
     val dealId: java.util.UUID? = null,
@@ -41,11 +47,17 @@ data class DealServiceModel (
     @Json(name = "dealName")
     val dealName: kotlin.String? = null,
 
+    @Json(name = "dealSlug")
+    val dealSlug: kotlin.String? = null,
+
     @Json(name = "serviceId")
     val serviceId: java.util.UUID? = null,
 
     @Json(name = "serviceName")
     val serviceName: kotlin.String? = null,
+
+    @Json(name = "serviceSlug")
+    val serviceSlug: kotlin.String? = null,
 
     @Json(name = "order")
     val order: kotlin.Int? = null

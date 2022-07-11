@@ -10,6 +10,7 @@ import CloudHospitalApi.models.BookingStatus
 import CloudHospitalApi.models.BookingsModel
 import CloudHospitalApi.models.CreateBookingCommand
 import CloudHospitalApi.models.ProblemDetails
+import CloudHospitalApi.models.SortingOrder
 import CloudHospitalApi.models.UpdateBookingCommand
 
 interface BookingsApi {
@@ -18,16 +19,15 @@ interface BookingsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param bookingId 
+     * @param languageCode  (optional)
      * @return [BookingModel]
      */
     @GET("api/v2/bookings/{bookingId}")
-    suspend fun apiV2BookingsBookingIdGet(@Path("bookingId") bookingId: java.util.UUID): Response<BookingModel>
+    suspend fun apiV2BookingsBookingIdGet(@Path("bookingId") bookingId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<BookingModel>
 
     /**
      * Pay booking.
@@ -67,19 +67,26 @@ interface BookingsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *
-     * @param searchString  (optional)
+     * @param hospitalId  (optional)
+     * @param hospitalName  (optional)
+     * @param dealId  (optional)
+     * @param dealName  (optional)
      * @param isOpen  (optional)
      * @param isCompleted  (optional)
      * @param status  (optional)
      * @param dealPackageId  (optional)
-     * @param hospitalId  (optional)
+     * @param sortRequestDate  (optional)
+     * @param sortConfirmedDateStart  (optional)
+     * @param isExternal  (optional)
+     * @param paymentEnabled  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [BookingsModel]
      */
     @GET("api/v2/bookings")
-    suspend fun apiV2BookingsGet(@Query("SearchString") searchString: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: BookingStatus? = null, @Query("DealPackageId") dealPackageId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<BookingsModel>
+    suspend fun apiV2BookingsGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("DealId") dealId: java.util.UUID? = null, @Query("DealName") dealName: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: BookingStatus? = null, @Query("DealPackageId") dealPackageId: java.util.UUID? = null, @Query("SortRequestDate") sortRequestDate: SortingOrder? = null, @Query("SortConfirmedDateStart") sortConfirmedDateStart: SortingOrder? = null, @Query("IsExternal") isExternal: kotlin.Boolean? = null, @Query("PaymentEnabled") paymentEnabled: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<BookingsModel>
 
     /**
      * Create booking.

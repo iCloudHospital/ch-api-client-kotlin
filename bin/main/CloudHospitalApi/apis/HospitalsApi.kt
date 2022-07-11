@@ -276,17 +276,14 @@ interface HospitalsApi {
      * @param name  (optional)
      * @param slug  (optional)
      * @param marketingType  (optional)
-     * @param returnDefaultValue  (optional)
-     * @param includeServices  (optional)
      * @param languageCode  (optional)
-     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [HospitalSpecialtiesModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/specialties")
-    suspend fun apiV2HospitalsHospitalIdSpecialtiesGet(@Path("hospitalId") hospitalId: java.util.UUID, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("HospitalSpecialtyId") hospitalSpecialtyId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Slug") slug: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("IncludeServices") includeServices: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalSpecialtiesModel>
+    suspend fun apiV2HospitalsHospitalIdSpecialtiesGet(@Path("hospitalId") hospitalId: java.util.UUID, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("HospitalSpecialtyId") hospitalSpecialtyId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Slug") slug: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalSpecialtiesModel>
 
     /**
      * Get all HospitalServiceMedias.
@@ -335,17 +332,14 @@ interface HospitalsApi {
      * @param name  (optional)
      * @param slug  (optional)
      * @param marketingType  (optional)
-     * @param returnDefaultValue  (optional)
-     * @param includeServices  (optional)
      * @param languageCode  (optional)
-     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [HospitalSpecialtiesSimpleModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/specialties/simple")
-    suspend fun apiV2HospitalsHospitalIdSpecialtiesSimpleGet(@Path("hospitalId") hospitalId: java.util.UUID, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("HospitalSpecialtyId") hospitalSpecialtyId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Slug") slug: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("IncludeServices") includeServices: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalSpecialtiesSimpleModel>
+    suspend fun apiV2HospitalsHospitalIdSpecialtiesSimpleGet(@Path("hospitalId") hospitalId: java.util.UUID, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("SpecialtyName") specialtyName: kotlin.String? = null, @Query("SpecialtyTypeId") specialtyTypeId: java.util.UUID? = null, @Query("SpecialtyTypeName") specialtyTypeName: kotlin.String? = null, @Query("HospitalSpecialtyId") hospitalSpecialtyId: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Slug") slug: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<HospitalSpecialtiesSimpleModel>
 
     /**
      * Get HospitalSpecialty by slug.
@@ -356,12 +350,10 @@ interface HospitalsApi {
      * @param hospitalId 
      * @param slug 
      * @param languageCode  (optional)
-     * @param returnDefaultValue  (optional)
-     * @param includeServices  (optional)
      * @return [HospitalSpecialtyModel]
      */
     @GET("api/v2/hospitals/{hospitalId}/specialties/{slug}")
-    suspend fun apiV2HospitalsHospitalIdSpecialtiesSlugGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("includeServices") includeServices: kotlin.Boolean? = null): Response<HospitalSpecialtyModel>
+    suspend fun apiV2HospitalsHospitalIdSpecialtiesSlugGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<HospitalSpecialtyModel>
 
     /**
      * Get HospitalSpecialty.

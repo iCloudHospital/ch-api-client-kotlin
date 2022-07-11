@@ -24,9 +24,10 @@ Get consultation.
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ConsultationsApi::class.java)
 val consultationId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : ConsultationModel = webService.apiV2ConsultationsConsultationIdGet(consultationId)
+    val result : ConsultationModel = webService.apiV2ConsultationsConsultationIdGet(consultationId, languageCode)
 }
 ```
 
@@ -35,6 +36,7 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **consultationId** | **java.util.UUID**|  |
+ **languageCode** | **kotlin.String**|  | [optional]
 
 ### Return type
 
@@ -139,18 +141,23 @@ Get all consultations.
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ConsultationsApi::class.java)
-val searchString : kotlin.String = searchString_example // kotlin.String | 
+val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
+val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val doctorName : kotlin.String = doctorName_example // kotlin.String | 
+val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val dealName : kotlin.String = dealName_example // kotlin.String | 
 val isOpen : kotlin.Boolean = true // kotlin.Boolean | 
 val isCompleted : kotlin.Boolean = true // kotlin.Boolean | 
 val status : ConsultationStatus =  // ConsultationStatus | 
 val consultationType : ConsultationType =  // ConsultationType | 
-val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : ConsultationsModel = webService.apiV2ConsultationsGet(searchString, isOpen, isCompleted, status, consultationType, hospitalId, page, limit, lastRetrieved)
+    val result : ConsultationsModel = webService.apiV2ConsultationsGet(hospitalId, hospitalName, doctorId, doctorName, dealId, dealName, isOpen, isCompleted, status, consultationType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -158,12 +165,17 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **searchString** | **kotlin.String**|  | [optional]
+ **hospitalId** | **java.util.UUID**|  | [optional]
+ **hospitalName** | **kotlin.String**|  | [optional]
+ **doctorId** | **java.util.UUID**|  | [optional]
+ **doctorName** | **kotlin.String**|  | [optional]
+ **dealId** | **java.util.UUID**|  | [optional]
+ **dealName** | **kotlin.String**|  | [optional]
  **isOpen** | **kotlin.Boolean**|  | [optional]
  **isCompleted** | **kotlin.Boolean**|  | [optional]
  **status** | [**ConsultationStatus**](.md)|  | [optional] [enum: New, Rejected, Approved, Paid, Canceled, RefundRequested, Refunded]
  **consultationType** | [**ConsultationType**](.md)|  | [optional] [enum: Hospital, Doctor, Deal]
- **hospitalId** | **java.util.UUID**|  | [optional]
+ **languageCode** | **kotlin.String**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
