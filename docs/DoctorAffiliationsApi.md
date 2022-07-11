@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV2DoctoraffiliationsGet**](DoctorAffiliationsApi.md#apiV2DoctoraffiliationsGet) | **GET** api/v2/doctoraffiliations | Get all doctor affiliations.
 [**apiV2DoctoraffiliationsIdGet**](DoctorAffiliationsApi.md#apiV2DoctoraffiliationsIdGet) | **GET** api/v2/doctoraffiliations/{id} | Get doctor affiliation.
+[**apiV2DoctoraffiliationsSlugGet**](DoctorAffiliationsApi.md#apiV2DoctoraffiliationsSlugGet) | **GET** api/v2/doctoraffiliations/{slug} | 
 
 
 
@@ -87,6 +88,46 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **java.util.UUID**|  |
+ **languageCode** | **kotlin.String**|  | [optional]
+
+### Return type
+
+[**DoctorAffiliationModel**](DoctorAffiliationModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import CloudHospitalApi.*
+//import CloudHospitalApi.infrastructure.*
+//import CloudHospitalApi.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(DoctorAffiliationsApi::class.java)
+val slug : kotlin.String = slug_example // kotlin.String | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+
+launch(Dispatchers.IO) {
+    val result : DoctorAffiliationModel = webService.apiV2DoctoraffiliationsSlugGet(slug, languageCode)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **slug** | **kotlin.String**|  |
  **languageCode** | **kotlin.String**|  | [optional]
 
 ### Return type

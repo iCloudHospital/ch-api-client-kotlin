@@ -90,6 +90,7 @@ Class | Method | HTTP request | Description
 *DealsApi* | [**apiV2DealsSlugGet**](docs/DealsApi.md#apiv2dealsslugget) | **GET** api/v2/deals/{slug} | Get deal by slug.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsget) | **GET** api/v2/doctoraffiliations | Get all doctor affiliations.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsIdGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsidget) | **GET** api/v2/doctoraffiliations/{id} | Get doctor affiliation.
+*DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsSlugGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsslugget) | **GET** api/v2/doctoraffiliations/{slug} | 
 *DoctorsApi* | [**apiV2DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridcertificatescertificateidget) | **GET** api/v2/doctors/{doctorId}/certificates/{certificateId} | Get DoctorCertificate.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdCertificatesGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridcertificatesget) | **GET** api/v2/doctors/{doctorId}/certificates | Delete DoctorCertificate.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdEducationsEducationIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctorideducationseducationidget) | **GET** api/v2/doctors/{doctorId}/educations/{educationId} | Get DoctorEducation.
@@ -105,7 +106,6 @@ Class | Method | HTTP request | Description
 *DoctorsApi* | [**apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridspecialtiesspecialtyidget) | **GET** api/v2/doctors/{doctorId}/specialties/{specialtyId} | Get DoctorSpecialty
 *DoctorsApi* | [**apiV2DoctorsGet**](docs/DoctorsApi.md#apiv2doctorsget) | **GET** api/v2/doctors | Get all Doctors.
 *DoctorsApi* | [**apiV2DoctorsSimpleGet**](docs/DoctorsApi.md#apiv2doctorssimpleget) | **GET** api/v2/doctors/simple | Get all Doctors.
-*DoctorsApi* | [**apiV2DoctorsSlugGet**](docs/DoctorsApi.md#apiv2doctorsslugget) | **GET** api/v2/doctors/{slug} | 
 *FaqCategoriesApi* | [**apiV2FaqcategoriesBreadcrumbsFaqIdGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesbreadcrumbsfaqidget) | **GET** api/v2/faqcategories/breadcrumbs/{faqId} | Get BreadCrumbs.
 *FaqCategoriesApi* | [**apiV2FaqcategoriesFaqCategoryIdGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesfaqcategoryidget) | **GET** api/v2/faqcategories/{faqCategoryId} | Get FaqCategory.
 *FaqCategoriesApi* | [**apiV2FaqcategoriesGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesget) | **GET** api/v2/faqcategories | Get all FaqCategories.

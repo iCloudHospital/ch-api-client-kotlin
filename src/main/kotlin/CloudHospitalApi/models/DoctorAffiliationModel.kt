@@ -29,11 +29,10 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
- * @param doctorId 
- * @param languageCode 
  * @param name 
  * @param slug 
  * @param confirmed 
@@ -57,6 +56,9 @@ data class DoctorAffiliationModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
 
@@ -65,12 +67,6 @@ data class DoctorAffiliationModel (
 
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
-
-    @Json(name = "doctorId")
-    val doctorId: java.util.UUID? = null,
-
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
 
     @Json(name = "name")
     val name: kotlin.String? = null,

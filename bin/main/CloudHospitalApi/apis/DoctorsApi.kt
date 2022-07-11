@@ -235,25 +235,23 @@ interface DoctorsApi {
      *
      * @param hospitalId  (optional)
      * @param hospitalName  (optional)
-     * @param languageCode  (optional)
-     * @param returnDefaultValue  (optional)
      * @param ids  (optional)
      * @param specialtyId  (optional)
      * @param consultationEnabled  (optional)
+     * @param languageCode  (optional)
      * @param id  (optional)
      * @param fullname  (optional)
      * @param email  (optional)
      * @param gender  (optional)
      * @param dateOfBirth  (optional)
      * @param created  (optional)
-     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [DoctorsModel]
      */
     @GET("api/v2/doctors")
-    suspend fun apiV2DoctorsGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsModel>
+    suspend fun apiV2DoctorsGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsModel>
 
     /**
      * Get all Doctors.
@@ -263,38 +261,22 @@ interface DoctorsApi {
      *
      * @param hospitalId  (optional)
      * @param hospitalName  (optional)
-     * @param languageCode  (optional)
-     * @param returnDefaultValue  (optional)
      * @param ids  (optional)
      * @param specialtyId  (optional)
      * @param consultationEnabled  (optional)
+     * @param languageCode  (optional)
      * @param id  (optional)
      * @param fullname  (optional)
      * @param email  (optional)
      * @param gender  (optional)
      * @param dateOfBirth  (optional)
      * @param created  (optional)
-     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [DoctorsSimpleModel]
      */
     @GET("api/v2/doctors/simple")
-    suspend fun apiV2DoctorsSimpleGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsSimpleModel>
-
-    /**
-     * 
-     * 
-     * Responses:
-     *  - 200: Success
-     *
-     * @param slug 
-     * @param languageCode  (optional)
-     * @param returnDefaultValue  (optional)
-     * @return [DoctorModel]
-     */
-    @GET("api/v2/doctors/{slug}")
-    suspend fun apiV2DoctorsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<DoctorModel>
+    suspend fun apiV2DoctorsSimpleGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("Ids") ids: kotlin.collections.List<java.util.UUID>? = null, @Query("SpecialtyId") specialtyId: java.util.UUID? = null, @Query("ConsultationEnabled") consultationEnabled: kotlin.Boolean? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("Id") id: java.util.UUID? = null, @Query("Fullname") fullname: kotlin.String? = null, @Query("Email") email: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("DateOfBirth") dateOfBirth: java.time.LocalDateTime? = null, @Query("Created") created: java.time.LocalDateTime? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DoctorsSimpleModel>
 
 }

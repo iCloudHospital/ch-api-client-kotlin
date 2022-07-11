@@ -32,7 +32,6 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
- * @param languageCode 
  * @param userName 
  * @param firstName 
  * @param lastName 
@@ -56,9 +55,6 @@ data class PatientModel (
 
     @Json(name = "id")
     val id: java.util.UUID? = null,
-
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
 
     @Json(name = "userName")
     val userName: kotlin.String? = null,

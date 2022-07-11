@@ -20,9 +20,6 @@
 
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.DoctorAffiliationItemModel
-import CloudHospitalApi.models.DoctorSpecialtyItemModel
 
 import com.squareup.moshi.Json
 
@@ -30,31 +27,19 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
- * @param languageCode 
- * @param userName 
  * @param firstName 
  * @param lastName 
  * @param fullName 
  * @param userType 
  * @param photo 
  * @param photoThumbnail 
- * @param auditableEntity 
- * @param consultationEnabled 
- * @param consultationFee 
- * @param doctorSpecialties 
- * @param doctorAffiliations 
+ * @param timeZone 
  */
 
 data class DoctorItemModel (
 
     @Json(name = "id")
     val id: java.util.UUID? = null,
-
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
-
-    @Json(name = "userName")
-    val userName: kotlin.String? = null,
 
     @Json(name = "firstName")
     val firstName: kotlin.String? = null,
@@ -74,20 +59,8 @@ data class DoctorItemModel (
     @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
 
-    @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "consultationEnabled")
-    val consultationEnabled: kotlin.Boolean? = null,
-
-    @Json(name = "consultationFee")
-    val consultationFee: kotlin.Double? = null,
-
-    @Json(name = "doctorSpecialties")
-    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemModel>? = null,
-
-    @Json(name = "doctorAffiliations")
-    val doctorAffiliations: kotlin.collections.List<DoctorAffiliationItemModel>? = null
+    @Json(name = "timeZone")
+    val timeZone: kotlin.String? = null
 
 )
 
