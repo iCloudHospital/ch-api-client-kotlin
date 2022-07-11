@@ -30,21 +30,16 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
- * @param name 
- * @param logo 
- * @param slug 
- * @param description 
- * @param hospitalsCount 
- * @param doctorsCount 
- * @param specialitiesCount 
- * @param packagesCount 
- * @param articlesCount 
- * @param confirmed 
- * @param medias 
- * @param auditableEntity 
  * @param languageCode 
+ * @param name 
+ * @param slug 
+ * @param confirmed 
+ * @param auditableEntity 
+ * @param description 
+ * @param overview 
  * @param content 
  * @param localizedUrls 
+ * @param medias 
  */
 
 data class CountryModel (
@@ -52,50 +47,35 @@ data class CountryModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "name")
     val name: kotlin.String? = null,
-
-    @Json(name = "logo")
-    val logo: kotlin.String? = null,
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
 
-    @Json(name = "description")
-    val description: kotlin.String? = null,
-
-    @Json(name = "hospitalsCount")
-    val hospitalsCount: kotlin.Int? = null,
-
-    @Json(name = "doctorsCount")
-    val doctorsCount: kotlin.Int? = null,
-
-    @Json(name = "specialitiesCount")
-    val specialitiesCount: kotlin.Int? = null,
-
-    @Json(name = "packagesCount")
-    val packagesCount: kotlin.Int? = null,
-
-    @Json(name = "articlesCount")
-    val articlesCount: kotlin.Int? = null,
-
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
-
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaModel>? = null,
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
 
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
 
     @Json(name = "content")
     val content: kotlin.String? = null,
 
     @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
+
+    @Json(name = "medias")
+    val medias: kotlin.collections.List<MediaModel>? = null
 
 )
 

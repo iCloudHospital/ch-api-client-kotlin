@@ -32,18 +32,22 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param consultationType 
  * @param patientId 
  * @param patientName 
  * @param patientPhoto 
- * @param communicationUserId 
+ * @param firstName 
+ * @param lastName 
+ * @param email 
+ * @param phone 
+ * @param dateOfBirth 
+ * @param gender 
+ * @param comment 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
  * @param hospitalTimeZone 
- * @param specialtyId 
- * @param specialtyName 
- * @param specialtySlug 
  * @param doctorId 
  * @param doctorName 
  * @param doctorSlug 
@@ -52,28 +56,21 @@ import com.squareup.moshi.Json
  * @param dealSlug 
  * @param language 
  * @param isAccountHolder 
- * @param firstName 
- * @param lastName 
- * @param email 
- * @param phone 
- * @param dateOfBirth 
- * @param gender 
- * @param comment 
  * @param timeRange 
  * @param approximateDateStart 
  * @param approximateDateEnd 
  * @param confirmedDateStart 
  * @param confirmedDateEnd 
- * @param callerName 
- * @param callerId 
  * @param fee 
  * @param applicationFee 
  * @param timeZone 
  * @param requestDate 
+ * @param domain 
  * @param status 
  * @param rejectReason 
  * @param isOpen 
  * @param paymentId 
+ * @param paymentEnabled 
  * @param completionRate 
  * @param isExternal 
  * @param statusChangeLogs 
@@ -83,6 +80,9 @@ data class ConsultationModel (
 
     @Json(name = "id")
     val id: java.util.UUID? = null,
+
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
 
     @Json(name = "consultationType")
     val consultationType: ConsultationType? = null,
@@ -96,8 +96,26 @@ data class ConsultationModel (
     @Json(name = "patientPhoto")
     val patientPhoto: kotlin.String? = null,
 
-    @Json(name = "communicationUserId")
-    val communicationUserId: kotlin.String? = null,
+    @Json(name = "firstName")
+    val firstName: kotlin.String? = null,
+
+    @Json(name = "lastName")
+    val lastName: kotlin.String? = null,
+
+    @Json(name = "email")
+    val email: kotlin.String? = null,
+
+    @Json(name = "phone")
+    val phone: kotlin.String? = null,
+
+    @Json(name = "dateOfBirth")
+    val dateOfBirth: java.time.LocalDateTime? = null,
+
+    @Json(name = "gender")
+    val gender: Gender? = null,
+
+    @Json(name = "comment")
+    val comment: kotlin.String? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
@@ -110,15 +128,6 @@ data class ConsultationModel (
 
     @Json(name = "hospitalTimeZone")
     val hospitalTimeZone: kotlin.String? = null,
-
-    @Json(name = "specialtyId")
-    val specialtyId: java.util.UUID? = null,
-
-    @Json(name = "specialtyName")
-    val specialtyName: kotlin.String? = null,
-
-    @Json(name = "specialtySlug")
-    val specialtySlug: kotlin.String? = null,
 
     @Json(name = "doctorId")
     val doctorId: java.util.UUID? = null,
@@ -144,27 +153,6 @@ data class ConsultationModel (
     @Json(name = "isAccountHolder")
     val isAccountHolder: kotlin.Boolean? = null,
 
-    @Json(name = "firstName")
-    val firstName: kotlin.String? = null,
-
-    @Json(name = "lastName")
-    val lastName: kotlin.String? = null,
-
-    @Json(name = "email")
-    val email: kotlin.String? = null,
-
-    @Json(name = "phone")
-    val phone: kotlin.String? = null,
-
-    @Json(name = "dateOfBirth")
-    val dateOfBirth: java.time.LocalDateTime? = null,
-
-    @Json(name = "gender")
-    val gender: Gender? = null,
-
-    @Json(name = "comment")
-    val comment: kotlin.String? = null,
-
     @Json(name = "timeRange")
     val timeRange: kotlin.String? = null,
 
@@ -180,12 +168,6 @@ data class ConsultationModel (
     @Json(name = "confirmedDateEnd")
     val confirmedDateEnd: java.time.LocalDateTime? = null,
 
-    @Json(name = "callerName")
-    val callerName: kotlin.String? = null,
-
-    @Json(name = "callerId")
-    val callerId: java.util.UUID? = null,
-
     @Json(name = "fee")
     val fee: kotlin.Double? = null,
 
@@ -198,6 +180,9 @@ data class ConsultationModel (
     @Json(name = "requestDate")
     val requestDate: java.time.LocalDateTime? = null,
 
+    @Json(name = "domain")
+    val domain: kotlin.String? = null,
+
     @Json(name = "status")
     val status: ConsultationStatus? = null,
 
@@ -209,6 +194,9 @@ data class ConsultationModel (
 
     @Json(name = "paymentId")
     val paymentId: java.util.UUID? = null,
+
+    @Json(name = "paymentEnabled")
+    val paymentEnabled: kotlin.Boolean? = null,
 
     @Json(name = "completionRate")
     val completionRate: kotlin.Int? = null,

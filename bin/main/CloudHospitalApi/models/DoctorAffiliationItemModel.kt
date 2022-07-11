@@ -26,17 +26,26 @@ import com.squareup.moshi.Json
 /**
  * 
  *
- * @param languageCode 
+ * @param id 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
+ * @param doctorId 
+ * @param languageCode 
+ * @param name 
+ * @param slug 
+ * @param confirmed 
+ * @param photo 
+ * @param photoThumbnail 
+ * @param consultationEnabled 
+ * @param consultationFee 
  * @param order 
  */
 
 data class DoctorAffiliationItemModel (
 
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
+    @Json(name = "id")
+    val id: java.util.UUID? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
@@ -46,6 +55,33 @@ data class DoctorAffiliationItemModel (
 
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
+
+    @Json(name = "doctorId")
+    val doctorId: java.util.UUID? = null,
+
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
+    @Json(name = "name")
+    val name: kotlin.String? = null,
+
+    @Json(name = "slug")
+    val slug: kotlin.String? = null,
+
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
+
+    @Json(name = "consultationEnabled")
+    val consultationEnabled: kotlin.Boolean? = null,
+
+    @Json(name = "consultationFee")
+    val consultationFee: kotlin.Double? = null,
 
     @Json(name = "order")
     val order: kotlin.Int? = null

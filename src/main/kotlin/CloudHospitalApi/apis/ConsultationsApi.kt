@@ -19,16 +19,15 @@ interface ConsultationsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param consultationId 
+     * @param languageCode  (optional)
      * @return [ConsultationModel]
      */
     @GET("api/v2/consultations/{consultationId}")
-    suspend fun apiV2ConsultationsConsultationIdGet(@Path("consultationId") consultationId: java.util.UUID): Response<ConsultationModel>
+    suspend fun apiV2ConsultationsConsultationIdGet(@Path("consultationId") consultationId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<ConsultationModel>
 
     /**
      * Pay consultation.
@@ -68,19 +67,24 @@ interface ConsultationsApi {
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *
-     * @param searchString  (optional)
+     * @param hospitalId  (optional)
+     * @param hospitalName  (optional)
+     * @param doctorId  (optional)
+     * @param doctorName  (optional)
+     * @param dealId  (optional)
+     * @param dealName  (optional)
      * @param isOpen  (optional)
      * @param isCompleted  (optional)
      * @param status  (optional)
      * @param consultationType  (optional)
-     * @param hospitalId  (optional)
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [ConsultationsModel]
      */
     @GET("api/v2/consultations")
-    suspend fun apiV2ConsultationsGet(@Query("SearchString") searchString: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: ConsultationStatus? = null, @Query("ConsultationType") consultationType: ConsultationType? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ConsultationsModel>
+    suspend fun apiV2ConsultationsGet(@Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("DoctorId") doctorId: java.util.UUID? = null, @Query("DoctorName") doctorName: kotlin.String? = null, @Query("DealId") dealId: java.util.UUID? = null, @Query("DealName") dealName: kotlin.String? = null, @Query("IsOpen") isOpen: kotlin.Boolean? = null, @Query("IsCompleted") isCompleted: kotlin.Boolean? = null, @Query("Status") status: ConsultationStatus? = null, @Query("ConsultationType") consultationType: ConsultationType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ConsultationsModel>
 
     /**
      * Create consultation.

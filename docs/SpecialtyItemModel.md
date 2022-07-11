@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **slug** | **kotlin.String** |  |  [optional] [readonly]
 **confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
 **specialtyTypeId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
-**description** | **kotlin.String** |  |  [optional] [readonly]
 **specialtyTypeName** | **kotlin.String** |  |  [optional] [readonly]
 **medias** | [**kotlin.collections.List&lt;MediaModel&gt;**](MediaModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]

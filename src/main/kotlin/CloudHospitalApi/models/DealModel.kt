@@ -21,8 +21,6 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.DealPackageItemModel
-import CloudHospitalApi.models.DealServiceItemModel
 import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.MarketingType
 
@@ -32,25 +30,22 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param name 
  * @param slug 
- * @param description 
+ * @param confirmed 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
- * @param hospitalLocationCountry 
- * @param hospitalLocationState 
- * @param hospitalConsultationEnabled 
- * @param serviceDuration 
  * @param marketingType 
  * @param photo 
  * @param photoThumbnail 
  * @param order 
- * @param confirmed 
- * @param dealPackages 
- * @param dealServices 
  * @param auditableEntity 
- * @param languageCode 
+ * @param description 
+ * @param overview 
+ * @param content 
+ * @param serviceDuration 
  * @param localizedUrls 
  */
 
@@ -59,14 +54,17 @@ data class DealModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "name")
     val name: kotlin.String? = null,
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
 
-    @Json(name = "description")
-    val description: kotlin.String? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
@@ -76,18 +74,6 @@ data class DealModel (
 
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
-
-    @Json(name = "hospitalLocationCountry")
-    val hospitalLocationCountry: kotlin.String? = null,
-
-    @Json(name = "hospitalLocationState")
-    val hospitalLocationState: kotlin.String? = null,
-
-    @Json(name = "hospitalConsultationEnabled")
-    val hospitalConsultationEnabled: kotlin.Boolean? = null,
-
-    @Json(name = "serviceDuration")
-    val serviceDuration: kotlin.Int? = null,
 
     @Json(name = "marketingType")
     val marketingType: MarketingType? = null,
@@ -101,20 +87,20 @@ data class DealModel (
     @Json(name = "order")
     val order: kotlin.Int? = null,
 
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
-
-    @Json(name = "dealPackages")
-    val dealPackages: kotlin.collections.List<DealPackageItemModel>? = null,
-
-    @Json(name = "dealServices")
-    val dealServices: kotlin.collections.List<DealServiceItemModel>? = null,
-
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
 
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null,
+
+    @Json(name = "serviceDuration")
+    val serviceDuration: kotlin.Int? = null,
 
     @Json(name = "localizedUrls")
     val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null

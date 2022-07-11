@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.ContributionType
-import CloudHospitalApi.models.SnsHandleModel
 
 import com.squareup.moshi.Json
 
@@ -31,18 +30,17 @@ import com.squareup.moshi.Json
  *
  * @param articleId 
  * @param contributorId 
+ * @param languageCode 
  * @param contributorName 
  * @param contributorSlug 
+ * @param contributorConfirmed 
  * @param contributorEmail 
  * @param contributorPhoto 
  * @param contributorPhotoThumbnail 
- * @param contributorDescription 
  * @param type 
  * @param filter 
  * @param order 
- * @param confirmed 
  * @param auditableEntity 
- * @param contributorSnsHandles 
  */
 
 data class ArticleContributorItemModel (
@@ -53,11 +51,17 @@ data class ArticleContributorItemModel (
     @Json(name = "contributorId")
     val contributorId: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "contributorName")
     val contributorName: kotlin.String? = null,
 
     @Json(name = "contributorSlug")
     val contributorSlug: kotlin.String? = null,
+
+    @Json(name = "contributorConfirmed")
+    val contributorConfirmed: kotlin.Boolean? = null,
 
     @Json(name = "contributorEmail")
     val contributorEmail: kotlin.String? = null,
@@ -68,9 +72,6 @@ data class ArticleContributorItemModel (
     @Json(name = "contributorPhotoThumbnail")
     val contributorPhotoThumbnail: kotlin.String? = null,
 
-    @Json(name = "contributorDescription")
-    val contributorDescription: kotlin.String? = null,
-
     @Json(name = "type")
     val type: ContributionType? = null,
 
@@ -80,14 +81,8 @@ data class ArticleContributorItemModel (
     @Json(name = "order")
     val order: kotlin.Int? = null,
 
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
-
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "contributorSnsHandles")
-    val contributorSnsHandles: kotlin.collections.List<SnsHandleModel>? = null
+    val auditableEntity: AuditableEntity? = null
 
 )
 

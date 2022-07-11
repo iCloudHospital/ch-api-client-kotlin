@@ -29,17 +29,20 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param dealId 
  * @param dealName 
+ * @param dealSlug 
  * @param hospitalId 
  * @param hospitalName 
+ * @param hospitalSlug 
  * @param refundPolicy 
- * @param additionalServices 
- * @param accomodation 
- * @param transfer 
  * @param bonus 
  * @param price 
  * @param auditableEntity 
+ * @param additionalServices 
+ * @param accomodation 
+ * @param transfer 
  */
 
 data class DealPackageModel (
@@ -47,11 +50,17 @@ data class DealPackageModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "dealId")
     val dealId: java.util.UUID? = null,
 
     @Json(name = "dealName")
     val dealName: kotlin.String? = null,
+
+    @Json(name = "dealSlug")
+    val dealSlug: kotlin.String? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
@@ -59,17 +68,11 @@ data class DealPackageModel (
     @Json(name = "hospitalName")
     val hospitalName: kotlin.String? = null,
 
+    @Json(name = "hospitalSlug")
+    val hospitalSlug: kotlin.String? = null,
+
     @Json(name = "refundPolicy")
     val refundPolicy: RefundPolicy? = null,
-
-    @Json(name = "additionalServices")
-    val additionalServices: kotlin.String? = null,
-
-    @Json(name = "accomodation")
-    val accomodation: kotlin.String? = null,
-
-    @Json(name = "transfer")
-    val transfer: kotlin.String? = null,
 
     @Json(name = "bonus")
     val bonus: kotlin.String? = null,
@@ -78,7 +81,16 @@ data class DealPackageModel (
     val price: kotlin.Double? = null,
 
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+
+    @Json(name = "additionalServices")
+    val additionalServices: kotlin.String? = null,
+
+    @Json(name = "accomodation")
+    val accomodation: kotlin.String? = null,
+
+    @Json(name = "transfer")
+    val transfer: kotlin.String? = null
 
 )
 

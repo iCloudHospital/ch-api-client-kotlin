@@ -88,8 +88,8 @@ Class | Method | HTTP request | Description
 *DealsApi* | [**apiV2DealsGet**](docs/DealsApi.md#apiv2dealsget) | **GET** api/v2/deals | Get all deals.
 *DealsApi* | [**apiV2DealsSimpleGet**](docs/DealsApi.md#apiv2dealssimpleget) | **GET** api/v2/deals/simple | Get all deals.
 *DealsApi* | [**apiV2DealsSlugGet**](docs/DealsApi.md#apiv2dealsslugget) | **GET** api/v2/deals/{slug} | Get deal by slug.
-*DoctorsApi* | [**apiV2DoctorsDoctorIdAffiliationsGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridaffiliationsget) | **GET** api/v2/doctors/{doctorId}/affiliations | Get all doctor affiliations.
-*DoctorsApi* | [**apiV2DoctorsDoctorIdAffiliationsHospitalIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridaffiliationshospitalidget) | **GET** api/v2/doctors/{doctorId}/affiliations/{hospitalId} | Get doctor affiliation.
+*DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsget) | **GET** api/v2/doctoraffiliations | Get all doctor affiliations.
+*DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsIdGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsidget) | **GET** api/v2/doctoraffiliations/{id} | Get doctor affiliation.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridcertificatescertificateidget) | **GET** api/v2/doctors/{doctorId}/certificates/{certificateId} | Get DoctorCertificate.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdCertificatesGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridcertificatesget) | **GET** api/v2/doctors/{doctorId}/certificates | Delete DoctorCertificate.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdEducationsEducationIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctorideducationseducationidget) | **GET** api/v2/doctors/{doctorId}/educations/{educationId} | Get DoctorEducation.
@@ -368,6 +368,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.SnsHandle](docs/SnsHandle.md)
  - [CloudHospitalApi.models.SnsHandleModel](docs/SnsHandleModel.md)
  - [CloudHospitalApi.models.SnsType](docs/SnsType.md)
+ - [CloudHospitalApi.models.SortingOrder](docs/SortingOrder.md)
  - [CloudHospitalApi.models.SourceModel](docs/SourceModel.md)
  - [CloudHospitalApi.models.SpecialtiesModel](docs/SpecialtiesModel.md)
  - [CloudHospitalApi.models.SpecialtiesSimpleModel](docs/SpecialtiesSimpleModel.md)

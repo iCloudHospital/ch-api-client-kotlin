@@ -30,6 +30,7 @@ import com.squareup.moshi.Json
  * @param languageCode 
  * @param name 
  * @param slug 
+ * @param confirmed 
  * @param order 
  */
 
@@ -46,6 +47,9 @@ data class HospitalSpecialtySimpleItemModel (
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
+
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
 
     @Json(name = "order")
     val order: kotlin.Int? = null

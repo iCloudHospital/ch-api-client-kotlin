@@ -131,10 +131,9 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ArticlesApi::class.java)
 val articleId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : ArticleModel = webService.apiV2ArticlesArticleIdGet(articleId, languageCode, returnDefaultValue)
+    val result : ArticleModel = webService.apiV2ArticlesArticleIdGet(articleId, languageCode)
 }
 ```
 
@@ -144,7 +143,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **articleId** | **java.util.UUID**|  |
  **languageCode** | **kotlin.String**|  | [optional]
- **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 

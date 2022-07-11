@@ -31,19 +31,23 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param name 
  * @param slug 
- * @param description 
+ * @param confirmed 
+ * @param parentId 
  * @param order 
  * @param hospitalId 
  * @param hospitalName 
+ * @param hospitalSlug 
+ * @param hospitalWebsiteUrl 
  * @param faqCategoryId 
  * @param faqCategoryName 
- * @param confirmed 
  * @param faqTags 
  * @param medias 
  * @param auditableEntity 
- * @param languageCode 
+ * @param description 
+ * @param overview 
  * @param content 
  * @param localizedUrls 
  */
@@ -53,14 +57,20 @@ data class FaqModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "name")
     val name: kotlin.String? = null,
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
 
-    @Json(name = "description")
-    val description: kotlin.String? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "parentId")
+    val parentId: java.util.UUID? = null,
 
     @Json(name = "order")
     val order: kotlin.Int? = null,
@@ -71,14 +81,17 @@ data class FaqModel (
     @Json(name = "hospitalName")
     val hospitalName: kotlin.String? = null,
 
+    @Json(name = "hospitalSlug")
+    val hospitalSlug: kotlin.String? = null,
+
+    @Json(name = "hospitalWebsiteUrl")
+    val hospitalWebsiteUrl: kotlin.String? = null,
+
     @Json(name = "faqCategoryId")
     val faqCategoryId: java.util.UUID? = null,
 
     @Json(name = "faqCategoryName")
     val faqCategoryName: kotlin.String? = null,
-
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
 
     @Json(name = "faqTags")
     val faqTags: kotlin.collections.List<FaqTagItemModel>? = null,
@@ -89,8 +102,11 @@ data class FaqModel (
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
 
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
 
     @Json(name = "content")
     val content: kotlin.String? = null,

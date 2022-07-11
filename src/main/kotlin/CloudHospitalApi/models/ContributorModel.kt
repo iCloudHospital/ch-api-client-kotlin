@@ -30,19 +30,21 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
  * @param name 
  * @param slug 
- * @param description 
+ * @param confirmed 
+ * @param hospitalId 
+ * @param hospitalName 
+ * @param hospitalSlug 
+ * @param hospitalWebsiteUrl 
  * @param email 
  * @param photo 
  * @param photoThumbnail 
- * @param website 
- * @param hospitalId 
- * @param hospitalName 
  * @param order 
- * @param confirmed 
  * @param auditableEntity 
- * @param languageCode 
+ * @param description 
+ * @param overview 
  * @param content 
  * @param snsHandles 
  * @param localizedUrls 
@@ -53,14 +55,29 @@ data class ContributorModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
     @Json(name = "name")
     val name: kotlin.String? = null,
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
 
-    @Json(name = "description")
-    val description: kotlin.String? = null,
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "hospitalId")
+    val hospitalId: java.util.UUID? = null,
+
+    @Json(name = "hospitalName")
+    val hospitalName: kotlin.String? = null,
+
+    @Json(name = "hospitalSlug")
+    val hospitalSlug: kotlin.String? = null,
+
+    @Json(name = "hospitalWebsiteUrl")
+    val hospitalWebsiteUrl: kotlin.String? = null,
 
     @Json(name = "email")
     val email: kotlin.String? = null,
@@ -71,26 +88,17 @@ data class ContributorModel (
     @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
 
-    @Json(name = "website")
-    val website: kotlin.String? = null,
-
-    @Json(name = "hospitalId")
-    val hospitalId: java.util.UUID? = null,
-
-    @Json(name = "hospitalName")
-    val hospitalName: kotlin.String? = null,
-
     @Json(name = "order")
     val order: kotlin.Int? = null,
-
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
 
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
 
     @Json(name = "content")
     val content: kotlin.String? = null,

@@ -711,16 +711,13 @@ val hospitalSpecialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d 
 val name : kotlin.String = name_example // kotlin.String | 
 val slug : kotlin.String = slug_example // kotlin.String | 
 val marketingType : MarketingType =  // MarketingType | 
-val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
-val includeServices : kotlin.Boolean = true // kotlin.Boolean | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalSpecialtiesModel = webService.apiV2HospitalsHospitalIdSpecialtiesGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, returnDefaultValue, includeServices, languageCode, showHidden, page, limit, lastRetrieved)
+    val result : HospitalSpecialtiesModel = webService.apiV2HospitalsHospitalIdSpecialtiesGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -737,10 +734,7 @@ Name | Type | Description  | Notes
  **name** | **kotlin.String**|  | [optional]
  **slug** | **kotlin.String**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
- **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
- **includeServices** | **kotlin.Boolean**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
- **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -871,16 +865,13 @@ val hospitalSpecialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d 
 val name : kotlin.String = name_example // kotlin.String | 
 val slug : kotlin.String = slug_example // kotlin.String | 
 val marketingType : MarketingType =  // MarketingType | 
-val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
-val includeServices : kotlin.Boolean = true // kotlin.Boolean | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalSpecialtiesSimpleModel = webService.apiV2HospitalsHospitalIdSpecialtiesSimpleGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, returnDefaultValue, includeServices, languageCode, showHidden, page, limit, lastRetrieved)
+    val result : HospitalSpecialtiesSimpleModel = webService.apiV2HospitalsHospitalIdSpecialtiesSimpleGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -897,10 +888,7 @@ Name | Type | Description  | Notes
  **name** | **kotlin.String**|  | [optional]
  **slug** | **kotlin.String**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
- **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
- **includeServices** | **kotlin.Boolean**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]
- **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -933,11 +921,9 @@ val webService = apiClient.createWebservice(HospitalsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val slug : kotlin.String = slug_example // kotlin.String | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
-val includeServices : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalSpecialtyModel = webService.apiV2HospitalsHospitalIdSpecialtiesSlugGet(hospitalId, slug, languageCode, returnDefaultValue, includeServices)
+    val result : HospitalSpecialtyModel = webService.apiV2HospitalsHospitalIdSpecialtiesSlugGet(hospitalId, slug, languageCode)
 }
 ```
 
@@ -948,8 +934,6 @@ Name | Type | Description  | Notes
  **hospitalId** | **java.util.UUID**|  |
  **slug** | **kotlin.String**|  |
  **languageCode** | **kotlin.String**|  | [optional]
- **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
- **includeServices** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 

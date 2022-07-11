@@ -27,12 +27,8 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
- * @param languageCode 
  * @param firstName 
- * @param middleName 
  * @param lastName 
- * @param fullName 
- * @param slug 
  */
 
 data class DoctorSimpleItemModel (
@@ -40,23 +36,11 @@ data class DoctorSimpleItemModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
-
     @Json(name = "firstName")
     val firstName: kotlin.String? = null,
 
-    @Json(name = "middleName")
-    val middleName: kotlin.String? = null,
-
     @Json(name = "lastName")
-    val lastName: kotlin.String? = null,
-
-    @Json(name = "fullName")
-    val fullName: kotlin.String? = null,
-
-    @Json(name = "slug")
-    val slug: kotlin.String? = null
+    val lastName: kotlin.String? = null
 
 )
 

@@ -65,11 +65,10 @@ interface ArticlesApi {
      *
      * @param articleId 
      * @param languageCode  (optional)
-     * @param returnDefaultValue  (optional)
      * @return [ArticleModel]
      */
     @GET("api/v2/articles/{articleId}")
-    suspend fun apiV2ArticlesArticleIdGet(@Path("articleId") articleId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null, @Query("returnDefaultValue") returnDefaultValue: kotlin.Boolean? = null): Response<ArticleModel>
+    suspend fun apiV2ArticlesArticleIdGet(@Path("articleId") articleId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<ArticleModel>
 
     /**
      * Get all ArticleMedias.
