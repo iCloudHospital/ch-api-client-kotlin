@@ -42,4 +42,17 @@ interface DoctorAffiliationsApi {
     @GET("api/v2/doctoraffiliations/{id}")
     suspend fun apiV2DoctoraffiliationsIdGet(@Path("id") id: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorAffiliationModel>
 
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param slug 
+     * @param languageCode  (optional)
+     * @return [DoctorAffiliationModel]
+     */
+    @GET("api/v2/doctoraffiliations/{slug}")
+    suspend fun apiV2DoctoraffiliationsSlugGet(@Path("slug") slug: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<DoctorAffiliationModel>
+
 }

@@ -21,10 +21,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.DoctorAffiliationItemModel
-import CloudHospitalApi.models.DoctorSpecialtyItemModel
 import CloudHospitalApi.models.Gender
-import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.UserLanguageModel
 import CloudHospitalApi.models.UserLocationModel
 
@@ -34,7 +31,6 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
- * @param languageCode 
  * @param userName 
  * @param firstName 
  * @param lastName 
@@ -51,24 +47,13 @@ import com.squareup.moshi.Json
  * @param communicationUserId 
  * @param languages 
  * @param locations 
- * @param overview 
- * @param description 
- * @param content 
  * @param startPracticeDate 
- * @param consultationEnabled 
- * @param consultationFee 
- * @param doctorSpecialties 
- * @param doctorAffiliations 
- * @param localizedUrls 
  */
 
 data class DoctorModel (
 
     @Json(name = "id")
     val id: java.util.UUID? = null,
-
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
 
     @Json(name = "userName")
     val userName: kotlin.String? = null,
@@ -118,32 +103,8 @@ data class DoctorModel (
     @Json(name = "locations")
     val locations: kotlin.collections.List<UserLocationModel>? = null,
 
-    @Json(name = "overview")
-    val overview: kotlin.String? = null,
-
-    @Json(name = "description")
-    val description: kotlin.String? = null,
-
-    @Json(name = "content")
-    val content: kotlin.String? = null,
-
     @Json(name = "startPracticeDate")
-    val startPracticeDate: java.time.LocalDateTime? = null,
-
-    @Json(name = "consultationEnabled")
-    val consultationEnabled: kotlin.Boolean? = null,
-
-    @Json(name = "consultationFee")
-    val consultationFee: kotlin.Double? = null,
-
-    @Json(name = "doctorSpecialties")
-    val doctorSpecialties: kotlin.collections.List<DoctorSpecialtyItemModel>? = null,
-
-    @Json(name = "doctorAffiliations")
-    val doctorAffiliations: kotlin.collections.List<DoctorAffiliationItemModel>? = null,
-
-    @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    val startPracticeDate: java.time.LocalDateTime? = null
 
 )
 
