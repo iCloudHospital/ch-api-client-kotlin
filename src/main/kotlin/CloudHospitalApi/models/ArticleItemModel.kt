@@ -20,8 +20,10 @@
 
 package CloudHospitalApi.models
 
+import CloudHospitalApi.models.ArticleTagItemModel
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.MarketingType
+import CloudHospitalApi.models.MediaModel
 
 import com.squareup.moshi.Json
 
@@ -39,6 +41,9 @@ import com.squareup.moshi.Json
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
+ * @param youtubeUrl 
+ * @param articleTags 
+ * @param medias 
  * @param auditableEntity 
  */
 
@@ -76,6 +81,15 @@ data class ArticleItemModel (
 
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
+
+    @Json(name = "youtubeUrl")
+    val youtubeUrl: kotlin.String? = null,
+
+    @Json(name = "articleTags")
+    val articleTags: kotlin.collections.List<ArticleTagItemModel>? = null,
+
+    @Json(name = "medias")
+    val medias: kotlin.collections.List<MediaModel>? = null,
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null
