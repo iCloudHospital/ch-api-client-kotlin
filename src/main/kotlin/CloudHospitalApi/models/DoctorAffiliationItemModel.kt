@@ -31,6 +31,7 @@ import com.squareup.moshi.Json
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
+ * @param doctorId 
  * @param name 
  * @param slug 
  * @param confirmed 
@@ -38,6 +39,7 @@ import com.squareup.moshi.Json
  * @param photoThumbnail 
  * @param consultationEnabled 
  * @param consultationFee 
+ * @param specialtiesSummerized 
  * @param order 
  */
 
@@ -57,6 +59,9 @@ data class DoctorAffiliationItemModel (
 
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
+
+    @Json(name = "doctorId")
+    val doctorId: java.util.UUID? = null,
 
     @Json(name = "name")
     val name: kotlin.String? = null,
@@ -78,6 +83,9 @@ data class DoctorAffiliationItemModel (
 
     @Json(name = "consultationFee")
     val consultationFee: kotlin.Double? = null,
+
+    @Json(name = "specialtiesSummerized")
+    val specialtiesSummerized: kotlin.String? = null,
 
     @Json(name = "order")
     val order: kotlin.Int? = null

@@ -92,7 +92,7 @@ Class | Method | HTTP request | Description
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsIdGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsidget) | **GET** api/v2/doctoraffiliations/{id} | Get doctor affiliation.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsSlugGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsslugget) | **GET** api/v2/doctoraffiliations/{slug} | 
 *DoctorsApi* | [**apiV2DoctorsDoctorIdCertificatesCertificateIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridcertificatescertificateidget) | **GET** api/v2/doctors/{doctorId}/certificates/{certificateId} | Get DoctorCertificate.
-*DoctorsApi* | [**apiV2DoctorsDoctorIdCertificatesGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridcertificatesget) | **GET** api/v2/doctors/{doctorId}/certificates | Delete DoctorCertificate.
+*DoctorsApi* | [**apiV2DoctorsDoctorIdCertificatesGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridcertificatesget) | **GET** api/v2/doctors/{doctorId}/certificates | Get All DoctorCertificate.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdEducationsEducationIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctorideducationseducationidget) | **GET** api/v2/doctors/{doctorId}/educations/{educationId} | Get DoctorEducation.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdEducationsGet**](docs/DoctorsApi.md#apiv2doctorsdoctorideducationsget) | **GET** api/v2/doctors/{doctorId}/educations | Get all DoctorEducations.
 *DoctorsApi* | [**apiV2DoctorsDoctorIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridget) | **GET** api/v2/doctors/{doctorId} | 
@@ -310,6 +310,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.HospitalEvaluationModel](docs/HospitalEvaluationModel.md)
  - [CloudHospitalApi.models.HospitalEvaluationsModel](docs/HospitalEvaluationsModel.md)
  - [CloudHospitalApi.models.HospitalItemModel](docs/HospitalItemModel.md)
+ - [CloudHospitalApi.models.HospitalLanguageItemModel](docs/HospitalLanguageItemModel.md)
  - [CloudHospitalApi.models.HospitalModel](docs/HospitalModel.md)
  - [CloudHospitalApi.models.HospitalServiceItemModel](docs/HospitalServiceItemModel.md)
  - [CloudHospitalApi.models.HospitalServiceModel](docs/HospitalServiceModel.md)

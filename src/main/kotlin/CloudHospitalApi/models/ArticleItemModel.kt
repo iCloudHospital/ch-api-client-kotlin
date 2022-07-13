@@ -34,6 +34,7 @@ import com.squareup.moshi.Json
  * @param languageCode 
  * @param name 
  * @param slug 
+ * @param description 
  * @param confirmed 
  * @param marketingType 
  * @param userId 
@@ -60,6 +61,9 @@ data class ArticleItemModel (
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,

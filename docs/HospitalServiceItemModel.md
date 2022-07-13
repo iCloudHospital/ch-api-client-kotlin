@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional] [readonly]
 **slug** | **kotlin.String** |  |  [optional] [readonly]
 **confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
+**hospitalSpecialtyName** | **kotlin.String** |  |  [optional] [readonly]
+**hospitalSpecialtySlug** | **kotlin.String** |  |  [optional] [readonly]
 **order** | **kotlin.Int** |  |  [optional]
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]

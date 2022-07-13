@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV2DoctorsDoctorIdCertificatesCertificateIdGet**](DoctorsApi.md#apiV2DoctorsDoctorIdCertificatesCertificateIdGet) | **GET** api/v2/doctors/{doctorId}/certificates/{certificateId} | Get DoctorCertificate.
-[**apiV2DoctorsDoctorIdCertificatesGet**](DoctorsApi.md#apiV2DoctorsDoctorIdCertificatesGet) | **GET** api/v2/doctors/{doctorId}/certificates | Delete DoctorCertificate.
+[**apiV2DoctorsDoctorIdCertificatesGet**](DoctorsApi.md#apiV2DoctorsDoctorIdCertificatesGet) | **GET** api/v2/doctors/{doctorId}/certificates | Get All DoctorCertificate.
 [**apiV2DoctorsDoctorIdEducationsEducationIdGet**](DoctorsApi.md#apiV2DoctorsDoctorIdEducationsEducationIdGet) | **GET** api/v2/doctors/{doctorId}/educations/{educationId} | Get DoctorEducation.
 [**apiV2DoctorsDoctorIdEducationsGet**](DoctorsApi.md#apiV2DoctorsDoctorIdEducationsGet) | **GET** api/v2/doctors/{doctorId}/educations | Get all DoctorEducations.
 [**apiV2DoctorsDoctorIdGet**](DoctorsApi.md#apiV2DoctorsDoctorIdGet) | **GET** api/v2/doctors/{doctorId} | 
@@ -62,7 +62,7 @@ No authorization required
  - **Accept**: application/json
 
 
-Delete DoctorCertificate.
+Get All DoctorCertificate.
 
 ### Example
 ```kotlin

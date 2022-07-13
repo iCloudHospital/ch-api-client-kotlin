@@ -26,26 +26,38 @@ import com.squareup.moshi.Json
 /**
  * 
  *
- * @param body 
+ * @param name 
+ * @param slug 
+ * @param description 
+ * @param content 
+ * @param languageCode 
  * @param recommended 
  * @param rate 
- * @param languageCode 
  * @param confirmed 
  */
 
 data class UpdateServiceReviewCommand (
 
-    @Json(name = "body")
-    val body: kotlin.String? = null,
+    @Json(name = "name")
+    val name: kotlin.String? = null,
+
+    @Json(name = "slug")
+    val slug: kotlin.String? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null,
+
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
 
     @Json(name = "recommended")
     val recommended: kotlin.Boolean? = null,
 
     @Json(name = "rate")
     val rate: kotlin.Int? = null,
-
-    @Json(name = "languageCode")
-    val languageCode: kotlin.String? = null,
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null

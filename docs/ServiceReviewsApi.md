@@ -28,6 +28,7 @@ Get all ServiceReviews.
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServiceReviewsApi::class.java)
+val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val serviceId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val serviceName : kotlin.String = serviceName_example // kotlin.String | 
@@ -38,13 +39,13 @@ val recommended : kotlin.Boolean = true // kotlin.Boolean |
 val rate : kotlin.Int = 56 // kotlin.Int | 
 val reviewType : ReviewType =  // ReviewType | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-val returnDefaultValue : kotlin.Boolean = true // kotlin.Boolean | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : ServiceReviewsModel = webService.apiV2ServicereviewsGet(hospitalId, serviceId, serviceName, patientId, patientName, gender, recommended, rate, reviewType, languageCode, returnDefaultValue, page, limit, lastRetrieved)
+    val result : ServiceReviewsModel = webService.apiV2ServicereviewsGet(id, hospitalId, serviceId, serviceName, patientId, patientName, gender, recommended, rate, reviewType, languageCode, showHidden, page, limit, lastRetrieved)
 }
 ```
 
@@ -52,6 +53,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **java.util.UUID**|  | [optional]
  **hospitalId** | **java.util.UUID**|  | [optional]
  **serviceId** | **java.util.UUID**|  | [optional]
  **serviceName** | **kotlin.String**|  | [optional]
@@ -62,7 +64,7 @@ Name | Type | Description  | Notes
  **rate** | **kotlin.Int**|  | [optional]
  **reviewType** | [**ReviewType**](.md)|  | [optional] [enum: Photo, SurgeryReview, RealStory]
  **languageCode** | **kotlin.String**|  | [optional]
- **returnDefaultValue** | **kotlin.Boolean**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -169,9 +171,10 @@ Name | Type | Description  | Notes
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ServiceReviewsApi::class.java)
 val serviceReviewId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val languageCode : kotlin.String = languageCode_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : ServiceReviewModel = webService.apiV2ServicereviewsServiceReviewIdGet(serviceReviewId)
+    val result : ServiceReviewModel = webService.apiV2ServicereviewsServiceReviewIdGet(serviceReviewId, languageCode)
 }
 ```
 
@@ -180,6 +183,7 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serviceReviewId** | **java.util.UUID**|  |
+ **languageCode** | **kotlin.String**|  | [optional]
 
 ### Return type
 
