@@ -33,6 +33,7 @@ import com.squareup.moshi.Json
  * @param languageCode 
  * @param name 
  * @param slug 
+ * @param description 
  * @param confirmed 
  * @param hospitalId 
  * @param hospitalName 
@@ -40,9 +41,10 @@ import com.squareup.moshi.Json
  * @param marketingType 
  * @param photo 
  * @param photoThumbnail 
+ * @param lowestPrice 
+ * @param dealServicesCount 
  * @param order 
  * @param auditableEntity 
- * @param description 
  * @param overview 
  * @param content 
  * @param serviceDuration 
@@ -62,6 +64,9 @@ data class DealModel (
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
@@ -84,14 +89,17 @@ data class DealModel (
     @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
 
+    @Json(name = "lowestPrice")
+    val lowestPrice: kotlin.Double? = null,
+
+    @Json(name = "dealServicesCount")
+    val dealServicesCount: kotlin.Int? = null,
+
     @Json(name = "order")
     val order: kotlin.Int? = null,
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "description")
-    val description: kotlin.String? = null,
 
     @Json(name = "overview")
     val overview: kotlin.String? = null,

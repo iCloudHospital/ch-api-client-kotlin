@@ -29,7 +29,9 @@ import com.squareup.moshi.Json
  *
  * @param serviceId 
  * @param patientId 
- * @param body 
+ * @param name 
+ * @param description 
+ * @param content 
  * @param recommended 
  * @param rate 
  * @param reviewType 
@@ -43,8 +45,14 @@ data class CreateServiceReviewCommand (
     @Json(name = "patientId")
     val patientId: java.util.UUID? = null,
 
-    @Json(name = "body")
-    val body: kotlin.String? = null,
+    @Json(name = "name")
+    val name: kotlin.String? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null,
 
     @Json(name = "recommended")
     val recommended: kotlin.Boolean? = null,

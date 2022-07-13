@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **evaluations** | [**kotlin.collections.List&lt;HospitalEvaluationItemModel&gt;**](HospitalEvaluationItemModel.md) |  |  [optional]
 **hospitalWorkingDays** | [**kotlin.collections.List&lt;WorkingDay&gt;**](WorkingDay.md) |  |  [optional]
 **hospitalSnsHandles** | [**kotlin.collections.List&lt;SnsHandle&gt;**](SnsHandle.md) |  |  [optional]
+**languages** | [**kotlin.collections.List&lt;HospitalLanguageItemModel&gt;**](HospitalLanguageItemModel.md) |  |  [optional]
 **awards** | [**kotlin.collections.List&lt;AwardModel&gt;**](AwardModel.md) |  |  [optional]
 
 

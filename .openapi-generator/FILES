@@ -121,6 +121,7 @@ docs/HospitalEvaluationItemModel.md
 docs/HospitalEvaluationModel.md
 docs/HospitalEvaluationsModel.md
 docs/HospitalItemModel.md
+docs/HospitalLanguageItemModel.md
 docs/HospitalModel.md
 docs/HospitalServiceItemModel.md
 docs/HospitalServiceModel.md
@@ -380,6 +381,7 @@ src/main/kotlin/CloudHospitalApi/models/HospitalEvaluationItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalEvaluationModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalEvaluationsModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalItemModel.kt
+src/main/kotlin/CloudHospitalApi/models/HospitalLanguageItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalServiceItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalServiceModel.kt

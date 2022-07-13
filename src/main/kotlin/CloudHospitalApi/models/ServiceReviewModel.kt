@@ -21,7 +21,6 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.Gender
 import CloudHospitalApi.models.MediaModel
 import CloudHospitalApi.models.ReviewType
 
@@ -31,21 +30,23 @@ import com.squareup.moshi.Json
  * 
  *
  * @param id 
+ * @param languageCode 
+ * @param name 
+ * @param slug 
+ * @param confirmed 
  * @param serviceId 
  * @param serviceName 
+ * @param serviceSlug 
  * @param patientId 
  * @param patientName 
- * @param patientGender 
- * @param patientPhoto 
- * @param patientPhotoThumbnail 
- * @param patientCreatedDate 
- * @param body 
  * @param recommended 
  * @param rate 
  * @param reviewType 
- * @param confirmed 
  * @param medias 
  * @param auditableEntity 
+ * @param description 
+ * @param overview 
+ * @param content 
  */
 
 data class ServiceReviewModel (
@@ -53,32 +54,32 @@ data class ServiceReviewModel (
     @Json(name = "id")
     val id: java.util.UUID? = null,
 
+    @Json(name = "languageCode")
+    val languageCode: kotlin.String? = null,
+
+    @Json(name = "name")
+    val name: kotlin.String? = null,
+
+    @Json(name = "slug")
+    val slug: kotlin.String? = null,
+
+    @Json(name = "confirmed")
+    val confirmed: kotlin.Boolean? = null,
+
     @Json(name = "serviceId")
     val serviceId: java.util.UUID? = null,
 
     @Json(name = "serviceName")
     val serviceName: kotlin.String? = null,
 
+    @Json(name = "serviceSlug")
+    val serviceSlug: kotlin.String? = null,
+
     @Json(name = "patientId")
     val patientId: java.util.UUID? = null,
 
     @Json(name = "patientName")
     val patientName: kotlin.String? = null,
-
-    @Json(name = "patientGender")
-    val patientGender: Gender? = null,
-
-    @Json(name = "patientPhoto")
-    val patientPhoto: kotlin.String? = null,
-
-    @Json(name = "patientPhotoThumbnail")
-    val patientPhotoThumbnail: kotlin.String? = null,
-
-    @Json(name = "patientCreatedDate")
-    val patientCreatedDate: java.time.LocalDateTime? = null,
-
-    @Json(name = "body")
-    val body: kotlin.String? = null,
 
     @Json(name = "recommended")
     val recommended: kotlin.Boolean? = null,
@@ -89,14 +90,20 @@ data class ServiceReviewModel (
     @Json(name = "reviewType")
     val reviewType: ReviewType? = null,
 
-    @Json(name = "confirmed")
-    val confirmed: kotlin.Boolean? = null,
-
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaModel>? = null,
 
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null
+    val auditableEntity: AuditableEntity? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null
 
 )
 

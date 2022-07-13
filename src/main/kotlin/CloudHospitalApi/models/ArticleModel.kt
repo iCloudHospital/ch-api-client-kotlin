@@ -35,6 +35,7 @@ import com.squareup.moshi.Json
  * @param languageCode 
  * @param name 
  * @param slug 
+ * @param description 
  * @param confirmed 
  * @param marketingType 
  * @param userId 
@@ -42,13 +43,12 @@ import com.squareup.moshi.Json
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
- * @param auditableEntity 
- * @param description 
- * @param overview 
- * @param content 
  * @param youtubeUrl 
  * @param articleTags 
  * @param medias 
+ * @param auditableEntity 
+ * @param overview 
+ * @param content 
  * @param localizedUrls 
  */
 
@@ -65,6 +65,9 @@ data class ArticleModel (
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
@@ -87,18 +90,6 @@ data class ArticleModel (
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
 
-    @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "description")
-    val description: kotlin.String? = null,
-
-    @Json(name = "overview")
-    val overview: kotlin.String? = null,
-
-    @Json(name = "content")
-    val content: kotlin.String? = null,
-
     @Json(name = "youtubeUrl")
     val youtubeUrl: kotlin.String? = null,
 
@@ -107,6 +98,15 @@ data class ArticleModel (
 
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaModel>? = null,
+
+    @Json(name = "auditableEntity")
+    val auditableEntity: AuditableEntity? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null,
 
     @Json(name = "localizedUrls")
     val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null

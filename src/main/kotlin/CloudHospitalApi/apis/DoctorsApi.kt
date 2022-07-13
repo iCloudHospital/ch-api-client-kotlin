@@ -38,7 +38,7 @@ interface DoctorsApi {
     suspend fun apiV2DoctorsDoctorIdCertificatesCertificateIdGet(@Path("doctorId") doctorId: java.util.UUID, @Path("certificateId") certificateId: java.util.UUID): Response<DoctorCertificateModel>
 
     /**
-     * Delete DoctorCertificate.
+     * Get All DoctorCertificate.
      * 
      * Responses:
      *  - 200: Success
