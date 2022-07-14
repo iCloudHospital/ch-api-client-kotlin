@@ -21,6 +21,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.MediaModel
 import CloudHospitalApi.models.Procedure
 
@@ -54,6 +55,7 @@ import com.squareup.moshi.Json
  * @param maxPrice 
  * @param priceReuqest 
  * @param customStyle 
+ * @param localizedUrls 
  * @param medias 
  */
 
@@ -133,6 +135,9 @@ data class HospitalServiceModel (
 
     @Json(name = "customStyle")
     val customStyle: kotlin.String? = null,
+
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
 
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaModel>? = null

@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **maxPrice** | **kotlin.Double** |  |  [optional]
 **priceReuqest** | **kotlin.Boolean** |  |  [optional]
 **customStyle** | **kotlin.String** |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlModel&gt;**](LocalizedUrlModel.md) |  |  [optional] [readonly]
 **medias** | [**kotlin.collections.List&lt;MediaModel&gt;**](MediaModel.md) |  |  [optional]
 
 

@@ -8,6 +8,9 @@ Name | Type | Description | Notes
 **languageCode** | **kotlin.String** |  |  [optional]
 **name** | **kotlin.String** |  |  [optional] [readonly]
 **slug** | **kotlin.String** |  |  [optional] [readonly]
+**description** | **kotlin.String** |  |  [optional] [readonly]
+**overview** | **kotlin.String** |  |  [optional] [readonly]
+**content** | **kotlin.String** |  |  [optional] [readonly]
 **confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
 **serviceId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **serviceName** | **kotlin.String** |  |  [optional] [readonly]
@@ -19,9 +22,6 @@ Name | Type | Description | Notes
 **reviewType** | [**ReviewType**](ReviewType.md) |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;MediaModel&gt;**](MediaModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
-**description** | **kotlin.String** |  |  [optional] [readonly]
-**overview** | **kotlin.String** |  |  [optional] [readonly]
-**content** | **kotlin.String** |  |  [optional] [readonly]
 
 
 
