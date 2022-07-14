@@ -33,6 +33,9 @@ import com.squareup.moshi.Json
  * @param languageCode 
  * @param name 
  * @param slug 
+ * @param description 
+ * @param overview 
+ * @param content 
  * @param confirmed 
  * @param serviceId 
  * @param serviceName 
@@ -59,6 +62,15 @@ data class ServiceReviewItemModel (
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null,
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,

@@ -23,10 +23,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DoctorAffiliationsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalName : kotlin.String = hospitalName_example // kotlin.String | 
-val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val doctorName : kotlin.String = doctorName_example // kotlin.String | 
 val doctorSlug : kotlin.String = doctorSlug_example // kotlin.String | 
+val specialtyId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val exceptDoctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val consultationEnabled : kotlin.Boolean = true // kotlin.Boolean | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
@@ -35,7 +35,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DoctorAffiliationsModel = webService.apiV2DoctoraffiliationsGet(hospitalId, hospitalName, specialtyId, doctorId, doctorName, doctorSlug, exceptDoctorId, consultationEnabled, languageCode, page, limit, lastRetrieved)
+    val result : DoctorAffiliationsModel = webService.apiV2DoctoraffiliationsGet(hospitalId, hospitalName, doctorId, doctorName, doctorSlug, specialtyId, exceptDoctorId, consultationEnabled, languageCode, page, limit, lastRetrieved)
 }
 ```
 
@@ -45,10 +45,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | **java.util.UUID**|  | [optional]
  **hospitalName** | **kotlin.String**|  | [optional]
- **specialtyId** | **java.util.UUID**|  | [optional]
  **doctorId** | **java.util.UUID**|  | [optional]
  **doctorName** | **kotlin.String**|  | [optional]
  **doctorSlug** | **kotlin.String**|  | [optional]
+ **specialtyId** | **java.util.UUID**|  | [optional]
  **exceptDoctorId** | **java.util.UUID**|  | [optional]
  **consultationEnabled** | **kotlin.Boolean**|  | [optional]
  **languageCode** | **kotlin.String**|  | [optional]

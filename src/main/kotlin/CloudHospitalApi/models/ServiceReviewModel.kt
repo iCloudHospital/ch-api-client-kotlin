@@ -33,6 +33,9 @@ import com.squareup.moshi.Json
  * @param languageCode 
  * @param name 
  * @param slug 
+ * @param description 
+ * @param overview 
+ * @param content 
  * @param confirmed 
  * @param serviceId 
  * @param serviceName 
@@ -44,9 +47,6 @@ import com.squareup.moshi.Json
  * @param reviewType 
  * @param medias 
  * @param auditableEntity 
- * @param description 
- * @param overview 
- * @param content 
  */
 
 data class ServiceReviewModel (
@@ -62,6 +62,15 @@ data class ServiceReviewModel (
 
     @Json(name = "slug")
     val slug: kotlin.String? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
+
+    @Json(name = "overview")
+    val overview: kotlin.String? = null,
+
+    @Json(name = "content")
+    val content: kotlin.String? = null,
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
@@ -94,16 +103,7 @@ data class ServiceReviewModel (
     val medias: kotlin.collections.List<MediaModel>? = null,
 
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "description")
-    val description: kotlin.String? = null,
-
-    @Json(name = "overview")
-    val overview: kotlin.String? = null,
-
-    @Json(name = "content")
-    val content: kotlin.String? = null
+    val auditableEntity: AuditableEntity? = null
 
 )
 
