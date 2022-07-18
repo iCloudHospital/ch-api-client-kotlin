@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **serviceSlug** | **kotlin.String** |  |  [optional] [readonly]
 **patientId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **patientName** | **kotlin.String** |  |  [optional]
+**patientPhoto** | **kotlin.String** |  |  [optional]
+**createdDate** | [**java.time.LocalDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **recommended** | **kotlin.Boolean** |  |  [optional]
 **rate** | **kotlin.Int** |  |  [optional]
 **reviewType** | [**ReviewType**](ReviewType.md) |  |  [optional]

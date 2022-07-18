@@ -34,6 +34,7 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
+ * @param logo 
  * @param auditableEntity 
  * @param description 
  * @param overview 
@@ -58,6 +59,9 @@ data class CountryModel (
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "logo")
+    val logo: kotlin.String? = null,
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,

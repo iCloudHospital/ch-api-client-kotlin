@@ -6,23 +6,9 @@ import retrofit2.Response
 import okhttp3.RequestBody
 
 import CloudHospitalApi.models.FaqCategoriesModel
-import CloudHospitalApi.models.FaqCategoryBreadCrumbModel
 import CloudHospitalApi.models.FaqCategoryModel
 
 interface FaqCategoriesApi {
-    /**
-     * Get BreadCrumbs.
-     * 
-     * Responses:
-     *  - 200: Success
-     *
-     * @param faqId 
-     * @param languageCode  (optional)
-     * @return [kotlin.collections.List<FaqCategoryBreadCrumbModel>]
-     */
-    @GET("api/v2/faqcategories/breadcrumbs/{faqId}")
-    suspend fun apiV2FaqcategoriesBreadcrumbsFaqIdGet(@Path("faqId") faqId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<kotlin.collections.List<FaqCategoryBreadCrumbModel>>
-
     /**
      * Get FaqCategory.
      * 

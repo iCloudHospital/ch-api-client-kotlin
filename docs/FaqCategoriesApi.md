@@ -4,51 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV2FaqcategoriesBreadcrumbsFaqIdGet**](FaqCategoriesApi.md#apiV2FaqcategoriesBreadcrumbsFaqIdGet) | **GET** api/v2/faqcategories/breadcrumbs/{faqId} | Get BreadCrumbs.
 [**apiV2FaqcategoriesFaqCategoryIdGet**](FaqCategoriesApi.md#apiV2FaqcategoriesFaqCategoryIdGet) | **GET** api/v2/faqcategories/{faqCategoryId} | Get FaqCategory.
 [**apiV2FaqcategoriesGet**](FaqCategoriesApi.md#apiV2FaqcategoriesGet) | **GET** api/v2/faqcategories | Get all FaqCategories.
 [**apiV2FaqcategoriesSlugGet**](FaqCategoriesApi.md#apiV2FaqcategoriesSlugGet) | **GET** api/v2/faqcategories/{slug} | Get FaqCategory by slug.
 
-
-
-Get BreadCrumbs.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(FaqCategoriesApi::class.java)
-val faqId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-val languageCode : kotlin.String = languageCode_example // kotlin.String | 
-
-launch(Dispatchers.IO) {
-    val result : kotlin.collections.List<FaqCategoryBreadCrumbModel> = webService.apiV2FaqcategoriesBreadcrumbsFaqIdGet(faqId, languageCode)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **faqId** | **java.util.UUID**|  |
- **languageCode** | **kotlin.String**|  | [optional]
-
-### Return type
-
-[**kotlin.collections.List&lt;FaqCategoryBreadCrumbModel&gt;**](FaqCategoryBreadCrumbModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 
 Get FaqCategory.

@@ -39,12 +39,12 @@ import com.squareup.moshi.Json
  * @param userType 
  * @param photo 
  * @param photoThumbnail 
+ * @param timeZone 
  * @param auditableEntity 
  * @param phone 
  * @param email 
  * @param gender 
  * @param dateOfBirth 
- * @param timeZone 
  * @param communicationUserId 
  * @param languages 
  * @param locations 
@@ -77,6 +77,9 @@ data class PatientModel (
     @Json(name = "photoThumbnail")
     val photoThumbnail: kotlin.String? = null,
 
+    @Json(name = "timeZone")
+    val timeZone: kotlin.String? = null,
+
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
 
@@ -91,9 +94,6 @@ data class PatientModel (
 
     @Json(name = "dateOfBirth")
     val dateOfBirth: java.time.LocalDateTime? = null,
-
-    @Json(name = "timeZone")
-    val timeZone: kotlin.String? = null,
 
     @Json(name = "communicationUserId")
     val communicationUserId: kotlin.String? = null,

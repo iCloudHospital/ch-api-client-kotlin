@@ -19,14 +19,18 @@ Method | HTTP request | Description
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ImagesApi::class.java)
+val files : kotlin.collections.List<java.io.File> = /path/to/file.txt // kotlin.collections.List<java.io.File> | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.collections.List<MediaModel> = webService.apiV2ImagesPost()
+    val result : kotlin.collections.List<MediaModel> = webService.apiV2ImagesPost(files)
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | **kotlin.collections.List&lt;java.io.File&gt;**|  | [optional]
 
 ### Return type
 
@@ -38,6 +42,6 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
