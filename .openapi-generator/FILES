@@ -99,7 +99,6 @@ docs/DoctorsModel.md
 docs/DoctorsSimpleModel.md
 docs/FaqCategoriesApi.md
 docs/FaqCategoriesModel.md
-docs/FaqCategoryBreadCrumbModel.md
 docs/FaqCategoryItemModel.md
 docs/FaqCategoryModel.md
 docs/FaqItemModel.md
@@ -361,7 +360,6 @@ src/main/kotlin/CloudHospitalApi/models/DoctorSpecialtyModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorsModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorsSimpleModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoriesModel.kt
-src/main/kotlin/CloudHospitalApi/models/FaqCategoryBreadCrumbModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqItemModel.kt

@@ -42,6 +42,8 @@ import com.squareup.moshi.Json
  * @param serviceSlug 
  * @param patientId 
  * @param patientName 
+ * @param patientPhoto 
+ * @param createdDate 
  * @param recommended 
  * @param rate 
  * @param reviewType 
@@ -89,6 +91,12 @@ data class ServiceReviewModel (
 
     @Json(name = "patientName")
     val patientName: kotlin.String? = null,
+
+    @Json(name = "patientPhoto")
+    val patientPhoto: kotlin.String? = null,
+
+    @Json(name = "createdDate")
+    val createdDate: java.time.LocalDateTime? = null,
 
     @Json(name = "recommended")
     val recommended: kotlin.Boolean? = null,

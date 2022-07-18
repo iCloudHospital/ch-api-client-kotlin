@@ -106,7 +106,6 @@ Class | Method | HTTP request | Description
 *DoctorsApi* | [**apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridspecialtiesspecialtyidget) | **GET** api/v2/doctors/{doctorId}/specialties/{specialtyId} | Get DoctorSpecialty
 *DoctorsApi* | [**apiV2DoctorsGet**](docs/DoctorsApi.md#apiv2doctorsget) | **GET** api/v2/doctors | Get all Doctors.
 *DoctorsApi* | [**apiV2DoctorsSimpleGet**](docs/DoctorsApi.md#apiv2doctorssimpleget) | **GET** api/v2/doctors/simple | Get all Doctors.
-*FaqCategoriesApi* | [**apiV2FaqcategoriesBreadcrumbsFaqIdGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesbreadcrumbsfaqidget) | **GET** api/v2/faqcategories/breadcrumbs/{faqId} | Get BreadCrumbs.
 *FaqCategoriesApi* | [**apiV2FaqcategoriesFaqCategoryIdGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesfaqcategoryidget) | **GET** api/v2/faqcategories/{faqCategoryId} | Get FaqCategory.
 *FaqCategoriesApi* | [**apiV2FaqcategoriesGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesget) | **GET** api/v2/faqcategories | Get all FaqCategories.
 *FaqCategoriesApi* | [**apiV2FaqcategoriesSlugGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesslugget) | **GET** api/v2/faqcategories/{slug} | Get FaqCategory by slug.
@@ -290,7 +289,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.DoctorsModel](docs/DoctorsModel.md)
  - [CloudHospitalApi.models.DoctorsSimpleModel](docs/DoctorsSimpleModel.md)
  - [CloudHospitalApi.models.FaqCategoriesModel](docs/FaqCategoriesModel.md)
- - [CloudHospitalApi.models.FaqCategoryBreadCrumbModel](docs/FaqCategoryBreadCrumbModel.md)
  - [CloudHospitalApi.models.FaqCategoryItemModel](docs/FaqCategoryItemModel.md)
  - [CloudHospitalApi.models.FaqCategoryModel](docs/FaqCategoryModel.md)
  - [CloudHospitalApi.models.FaqItemModel](docs/FaqItemModel.md)
