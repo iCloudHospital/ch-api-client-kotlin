@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**messageId** | **kotlin.Int** |  |  [optional]
+**messageId** | **kotlin.Long** |  |  [optional]
 **type** | **kotlin.String** |  |  [optional]
 **customType** | **kotlin.String** |  |  [optional]
 **channelUrl** | **kotlin.String** |  |  [optional]

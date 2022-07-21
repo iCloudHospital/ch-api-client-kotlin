@@ -41,7 +41,7 @@ import com.squareup.moshi.Json
 data class AdminMessageModel (
 
     @Json(name = "message_id")
-    val messageId: kotlin.Int? = null,
+    val messageId: kotlin.Long? = null,
 
     @Json(name = "type")
     val type: kotlin.String? = null,

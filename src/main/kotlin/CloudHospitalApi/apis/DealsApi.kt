@@ -70,13 +70,14 @@ interface DealsApi {
      *  - 200: Success
      *
      * @param dealId 
+     * @param languageCode  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [DealServicesModel]
      */
     @GET("api/v2/deals/{dealId}/services")
-    suspend fun apiV2DealsDealIdServicesGet(@Path("dealId") dealId: java.util.UUID, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DealServicesModel>
+    suspend fun apiV2DealsDealIdServicesGet(@Path("dealId") dealId: java.util.UUID, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DealServicesModel>
 
     /**
      * Get DealService.
@@ -86,10 +87,11 @@ interface DealsApi {
      *
      * @param dealId 
      * @param serviceId 
+     * @param languageCode  (optional)
      * @return [DealServiceModel]
      */
     @GET("api/v2/deals/{dealId}/services/{serviceId}")
-    suspend fun apiV2DealsDealIdServicesServiceIdGet(@Path("dealId") dealId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID): Response<DealServiceModel>
+    suspend fun apiV2DealsDealIdServicesServiceIdGet(@Path("dealId") dealId: java.util.UUID, @Path("serviceId") serviceId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<DealServiceModel>
 
     /**
      * Get all deals.
