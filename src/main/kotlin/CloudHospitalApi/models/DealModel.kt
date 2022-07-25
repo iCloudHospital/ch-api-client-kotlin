@@ -47,8 +47,8 @@ import com.squareup.moshi.Json
  * @param auditableEntity 
  * @param overview 
  * @param content 
- * @param serviceDuration 
  * @param localizedUrls 
+ * @param serviceDuration 
  */
 
 data class DealModel (
@@ -107,11 +107,11 @@ data class DealModel (
     @Json(name = "content")
     val content: kotlin.String? = null,
 
-    @Json(name = "serviceDuration")
-    val serviceDuration: kotlin.Int? = null,
-
     @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
+
+    @Json(name = "serviceDuration")
+    val serviceDuration: kotlin.Int? = null
 
 )
 

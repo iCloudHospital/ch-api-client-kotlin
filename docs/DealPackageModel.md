@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **dealId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **dealName** | **kotlin.String** |  |  [optional] [readonly]
 **dealSlug** | **kotlin.String** |  |  [optional] [readonly]
-**hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional] [readonly]
 **hospitalName** | **kotlin.String** |  |  [optional] [readonly]
 **hospitalSlug** | **kotlin.String** |  |  [optional] [readonly]
 **refundPolicy** | [**RefundPolicy**](RefundPolicy.md) |  |  [optional]

@@ -22,8 +22,8 @@ Name | Type | Description | Notes
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 **overview** | **kotlin.String** |  |  [optional] [readonly]
 **content** | **kotlin.String** |  |  [optional] [readonly]
-**serviceDuration** | **kotlin.Int** |  |  [optional]
 **localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlModel&gt;**](LocalizedUrlModel.md) |  |  [optional] [readonly]
+**serviceDuration** | **kotlin.Int** |  |  [optional]
 
 
 

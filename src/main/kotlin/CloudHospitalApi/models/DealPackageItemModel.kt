@@ -36,6 +36,7 @@ import com.squareup.moshi.Json
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
+ * @param additionalServices 
  * @param refundPolicy 
  * @param bonus 
  * @param price 
@@ -67,6 +68,9 @@ data class DealPackageItemModel (
 
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
+
+    @Json(name = "additionalServices")
+    val additionalServices: kotlin.String? = null,
 
     @Json(name = "refundPolicy")
     val refundPolicy: RefundPolicy? = null,
