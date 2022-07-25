@@ -57,11 +57,11 @@ Class | Method | HTTP request | Description
 *BookingsApi* | [**apiV2BookingsGet**](docs/BookingsApi.md#apiv2bookingsget) | **GET** api/v2/bookings | Get all bookings.
 *BookingsApi* | [**apiV2BookingsRequestIdPost**](docs/BookingsApi.md#apiv2bookingsrequestidpost) | **POST** api/v2/bookings/{requestId} | Create booking.
 *ChatUsersApi* | [**apiV2ChatusersCurrentGet**](docs/ChatUsersApi.md#apiv2chatuserscurrentget) | **GET** api/v2/chatusers/current | 
+*ChatUsersApi* | [**apiV2ChatusersDelete**](docs/ChatUsersApi.md#apiv2chatusersdelete) | **DELETE** api/v2/chatusers | Delete chatUser.
 *ChatUsersApi* | [**apiV2ChatusersGet**](docs/ChatUsersApi.md#apiv2chatusersget) | **GET** api/v2/chatusers | Get all chatUsers.
 *ChatUsersApi* | [**apiV2ChatusersPost**](docs/ChatUsersApi.md#apiv2chatuserspost) | **POST** api/v2/chatusers | Create a chatUser.
-*ChatUsersApi* | [**apiV2ChatusersUserIdDelete**](docs/ChatUsersApi.md#apiv2chatusersuseriddelete) | **DELETE** api/v2/chatusers/{userId} | Delete chatUser.
+*ChatUsersApi* | [**apiV2ChatusersPut**](docs/ChatUsersApi.md#apiv2chatusersput) | **PUT** api/v2/chatusers | Update chatUser.
 *ChatUsersApi* | [**apiV2ChatusersUserIdGet**](docs/ChatUsersApi.md#apiv2chatusersuseridget) | **GET** api/v2/chatusers/{userId} | Get chatUser.
-*ChatUsersApi* | [**apiV2ChatusersUserIdPut**](docs/ChatUsersApi.md#apiv2chatusersuseridput) | **PUT** api/v2/chatusers/{userId} | Update chatUser.
 *CommunicationsApi* | [**apiV2CommunicationsDelete**](docs/CommunicationsApi.md#apiv2communicationsdelete) | **DELETE** api/v2/communications | Delete CommunicationUser.
 *CommunicationsApi* | [**apiV2CommunicationsGet**](docs/CommunicationsApi.md#apiv2communicationsget) | **GET** api/v2/communications | Get CommunicationUser.
 *CommunicationsApi* | [**apiV2CommunicationsPut**](docs/CommunicationsApi.md#apiv2communicationsput) | **PUT** api/v2/communications | Revoke CommunicationUser.

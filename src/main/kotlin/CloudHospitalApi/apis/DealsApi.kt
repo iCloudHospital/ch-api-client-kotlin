@@ -42,13 +42,15 @@ interface DealsApi {
      * @param countryId  (optional)
      * @param hospitalId  (optional)
      * @param hospitalName  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param lastRetrieved  (optional)
      * @return [DealPackagesModel]
      */
     @GET("api/v2/deals/{dealId}/packages")
-    suspend fun apiV2DealsDealIdPackagesGet(@Path("dealId") dealId: java.util.UUID, @Query("RelatedDealPackageId") relatedDealPackageId: java.util.UUID? = null, @Query("DealName") dealName: kotlin.String? = null, @Query("Name") name: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DealPackagesModel>
+    suspend fun apiV2DealsDealIdPackagesGet(@Path("dealId") dealId: java.util.UUID, @Query("RelatedDealPackageId") relatedDealPackageId: java.util.UUID? = null, @Query("DealName") dealName: kotlin.String? = null, @Query("Name") name: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<DealPackagesModel>
 
     /**
      * Get DealPackage.
@@ -58,10 +60,11 @@ interface DealsApi {
      *
      * @param dealId 
      * @param packageId 
+     * @param languageCode  (optional)
      * @return [DealPackageModel]
      */
     @GET("api/v2/deals/{dealId}/packages/{packageId}")
-    suspend fun apiV2DealsDealIdPackagesPackageIdGet(@Path("dealId") dealId: java.util.UUID, @Path("packageId") packageId: java.util.UUID): Response<DealPackageModel>
+    suspend fun apiV2DealsDealIdPackagesPackageIdGet(@Path("dealId") dealId: java.util.UUID, @Path("packageId") packageId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<DealPackageModel>
 
     /**
      * Get all DealService.

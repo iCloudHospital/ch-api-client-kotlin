@@ -26,6 +26,19 @@ interface ChatUsersApi {
     suspend fun apiV2ChatusersCurrentGet(): Response<ChatUserModel>
 
     /**
+     * Delete chatUser.
+     * 
+     * Responses:
+     *  - 200: Success
+     *  - 401: Unauthorized
+     *  - 403: Forbidden
+     *
+     * @return [kotlin.Boolean]
+     */
+    @DELETE("api/v2/chatusers")
+    suspend fun apiV2ChatusersDelete(): Response<kotlin.Boolean>
+
+    /**
      * Get all chatUsers.
      * 
      * Responses:
@@ -60,21 +73,19 @@ interface ChatUsersApi {
     suspend fun apiV2ChatusersPost(@Body createChatUserCommand: CreateChatUserCommand? = null): Response<ChatUserModel>
 
     /**
-     * Delete chatUser.
+     * Update chatUser.
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
-     *  - 400: Bad Request
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *  - 0: Error
      *
-     * @param userId 
-     * @return [kotlin.Boolean]
+     * @param updateChatUserCommand  (optional)
+     * @return [ChatUserModel]
      */
-    @DELETE("api/v2/chatusers/{userId}")
-    suspend fun apiV2ChatusersUserIdDelete(@Path("userId") userId: java.util.UUID): Response<kotlin.Boolean>
+    @PUT("api/v2/chatusers")
+    suspend fun apiV2ChatusersPut(@Body updateChatUserCommand: UpdateChatUserCommand? = null): Response<ChatUserModel>
 
     /**
      * Get chatUser.
@@ -91,21 +102,5 @@ interface ChatUsersApi {
      */
     @GET("api/v2/chatusers/{userId}")
     suspend fun apiV2ChatusersUserIdGet(@Path("userId") userId: java.util.UUID): Response<ChatUserModel>
-
-    /**
-     * Update chatUser.
-     * 
-     * Responses:
-     *  - 200: Success
-     *  - 401: Unauthorized
-     *  - 403: Forbidden
-     *  - 0: Error
-     *
-     * @param userId 
-     * @param updateChatUserCommand  (optional)
-     * @return [ChatUserModel]
-     */
-    @PUT("api/v2/chatusers/{userId}")
-    suspend fun apiV2ChatusersUserIdPut(@Path("userId") userId: java.util.UUID, @Body updateChatUserCommand: UpdateChatUserCommand? = null): Response<ChatUserModel>
 
 }

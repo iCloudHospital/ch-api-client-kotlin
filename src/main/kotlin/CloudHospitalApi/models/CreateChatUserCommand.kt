@@ -26,17 +26,14 @@ import com.squareup.moshi.Json
 /**
  * 
  *
- * @param userId 
  * @param nickname 
  * @param profileUrl 
  * @param issueAccessToken 
  * @param discoveryKeys 
+ * @param hospitalId 
  */
 
 data class CreateChatUserCommand (
-
-    @Json(name = "userId")
-    val userId: java.util.UUID? = null,
 
     @Json(name = "nickname")
     val nickname: kotlin.String? = null,
@@ -48,7 +45,10 @@ data class CreateChatUserCommand (
     val issueAccessToken: kotlin.Boolean? = null,
 
     @Json(name = "discoveryKeys")
-    val discoveryKeys: kotlin.collections.List<kotlin.String>? = null
+    val discoveryKeys: kotlin.collections.List<kotlin.String>? = null,
+
+    @Json(name = "hospitalId")
+    val hospitalId: java.util.UUID? = null
 
 )
 
