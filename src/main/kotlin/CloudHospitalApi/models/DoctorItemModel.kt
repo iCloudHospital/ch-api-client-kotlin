@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -36,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param photoThumbnail 
  * @param timeZone 
  */
-@JsonClass(generateAdapter = true)
+
 data class DoctorItemModel (
 
     @Json(name = "id")

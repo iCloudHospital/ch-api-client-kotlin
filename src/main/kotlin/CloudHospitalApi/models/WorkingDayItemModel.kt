@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -33,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param timeTo 
  * @param checkHoliday 
  */
-@JsonClass(generateAdapter = true)
+
 data class WorkingDayItemModel (
 
     @Json(name = "id")

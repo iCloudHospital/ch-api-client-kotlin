@@ -23,7 +23,6 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.Gender
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -39,7 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param dateOfBirth 
  * @param timeZone 
  */
-@JsonClass(generateAdapter = true)
+
 data class CreatePatientCommand (
 
     @Json(name = "userName")

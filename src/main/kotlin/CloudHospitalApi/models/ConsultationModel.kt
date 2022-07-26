@@ -27,7 +27,6 @@ import CloudHospitalApi.models.Gender
 import CloudHospitalApi.models.RejectReason
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -76,7 +75,7 @@ import com.squareup.moshi.JsonClass
  * @param isExternal 
  * @param statusChangeLogs 
  */
-@JsonClass(generateAdapter = true)
+
 data class ConsultationModel (
 
     @Json(name = "id")

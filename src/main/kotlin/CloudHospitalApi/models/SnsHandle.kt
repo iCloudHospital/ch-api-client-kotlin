@@ -23,7 +23,6 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.SnsType
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param snsType 
  * @param handle 
  */
-@JsonClass(generateAdapter = true)
+
 data class SnsHandle (
 
     @Json(name = "id")

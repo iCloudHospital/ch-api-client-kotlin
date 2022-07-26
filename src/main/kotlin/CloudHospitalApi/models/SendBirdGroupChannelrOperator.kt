@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -31,7 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param nickname 
  * @param profileUrl 
  */
-@JsonClass(generateAdapter = true)
+
 data class SendBirdGroupChannelrOperator (
 
     @Json(name = "user_id")

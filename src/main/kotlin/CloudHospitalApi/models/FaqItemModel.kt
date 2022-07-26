@@ -25,7 +25,6 @@ import CloudHospitalApi.models.FaqTagItemModel
 import CloudHospitalApi.models.MediaModel
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -47,7 +46,7 @@ import com.squareup.moshi.JsonClass
  * @param medias 
  * @param auditableEntity 
  */
-@JsonClass(generateAdapter = true)
+
 data class FaqItemModel (
 
     @Json(name = "id")

@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -36,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param zipCode 
  * @param address 
  */
-@JsonClass(generateAdapter = true)
+
 data class LocationModel (
 
     @Json(name = "latitude")

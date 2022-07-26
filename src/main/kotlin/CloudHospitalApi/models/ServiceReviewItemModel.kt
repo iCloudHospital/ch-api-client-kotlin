@@ -25,7 +25,6 @@ import CloudHospitalApi.models.MediaModel
 import CloudHospitalApi.models.ReviewType
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -51,7 +50,7 @@ import com.squareup.moshi.JsonClass
  * @param medias 
  * @param auditableEntity 
  */
-@JsonClass(generateAdapter = true)
+
 data class ServiceReviewItemModel (
 
     @Json(name = "id")

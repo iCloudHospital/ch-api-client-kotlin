@@ -24,7 +24,6 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.MarketingType
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -46,7 +45,7 @@ import com.squareup.moshi.JsonClass
  * @param order 
  * @param auditableEntity 
  */
-@JsonClass(generateAdapter = true)
+
 data class DealItemModel (
 
     @Json(name = "id")

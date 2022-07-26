@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param image 
  * @param date 
  */
-@JsonClass(generateAdapter = true)
+
 data class AwardModel (
 
     @Json(name = "id")
