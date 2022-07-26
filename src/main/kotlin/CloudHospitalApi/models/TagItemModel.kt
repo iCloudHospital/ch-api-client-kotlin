@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -31,7 +32,7 @@ import com.squareup.moshi.Json
  * @param articleTagsCount 
  * @param youtubeTagsCount 
  */
-
+@JsonClass(generateAdapter = true)
 data class TagItemModel (
 
     @Json(name = "tagId")

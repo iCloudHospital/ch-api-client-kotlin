@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -34,7 +35,7 @@ import com.squareup.moshi.Json
  * @param photoBefore 
  * @param photoAfter 
  */
-
+@JsonClass(generateAdapter = true)
 data class DoctorPortfolioModel (
 
     @Json(name = "id")

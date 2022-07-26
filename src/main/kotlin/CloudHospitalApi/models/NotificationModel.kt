@@ -23,6 +23,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.NotificationCode
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -39,7 +40,7 @@ import com.squareup.moshi.Json
  * @param isChecked 
  * @param isDeleted 
  */
-
+@JsonClass(generateAdapter = true)
 data class NotificationModel (
 
     @Json(name = "id")

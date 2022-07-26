@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -30,7 +31,7 @@ import com.squareup.moshi.Json
  * @param language 
  * @param userId 
  */
-
+@JsonClass(generateAdapter = true)
 data class DoctorLanguageModel (
 
     @Json(name = "id")

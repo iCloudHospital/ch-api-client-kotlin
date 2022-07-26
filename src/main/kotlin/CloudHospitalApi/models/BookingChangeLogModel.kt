@@ -23,6 +23,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.BookingStatus
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +33,7 @@ import com.squareup.moshi.Json
  * @param createdDate 
  * @param actorName 
  */
-
+@JsonClass(generateAdapter = true)
 data class BookingChangeLogModel (
 
     @Json(name = "status")

@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -35,7 +36,7 @@ import com.squareup.moshi.Json
  * @param isHidden 
  * @param isDeleted 
  */
-
+@JsonClass(generateAdapter = true)
 data class AuditableEntity (
 
     @Json(name = "createdBy")

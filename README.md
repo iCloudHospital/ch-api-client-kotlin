@@ -88,6 +88,8 @@ Class | Method | HTTP request | Description
 *DealsApi* | [**apiV2DealsGet**](docs/DealsApi.md#apiv2dealsget) | **GET** api/v2/deals | Get all deals.
 *DealsApi* | [**apiV2DealsSimpleGet**](docs/DealsApi.md#apiv2dealssimpleget) | **GET** api/v2/deals/simple | Get all deals.
 *DealsApi* | [**apiV2DealsSlugGet**](docs/DealsApi.md#apiv2dealsslugget) | **GET** api/v2/deals/{slug} | Get deal by slug.
+*DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsDoctorAffiliationIdMediasGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsdoctoraffiliationidmediasget) | **GET** api/v2/doctoraffiliations/{doctorAffiliationId}/medias | Get all DoctorAffiliationMedias.
+*DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsDoctorAffiliationIdMediasMediaIdGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsdoctoraffiliationidmediasmediaidget) | **GET** api/v2/doctoraffiliations/{doctorAffiliationId}/medias/{mediaId} | Get DoctorAffiliationMedia.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsget) | **GET** api/v2/doctoraffiliations | Get all doctor affiliations.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsIdGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsidget) | **GET** api/v2/doctoraffiliations/{id} | Get doctor affiliation.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsSlugGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsslugget) | **GET** api/v2/doctoraffiliations/{slug} | 

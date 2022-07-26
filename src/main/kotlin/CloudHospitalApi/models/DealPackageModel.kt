@@ -24,6 +24,7 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.RefundPolicy
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -44,7 +45,7 @@ import com.squareup.moshi.Json
  * @param accomodation 
  * @param transfer 
  */
-
+@JsonClass(generateAdapter = true)
 data class DealPackageModel (
 
     @Json(name = "id")

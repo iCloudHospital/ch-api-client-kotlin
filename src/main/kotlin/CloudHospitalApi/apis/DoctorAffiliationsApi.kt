@@ -7,8 +7,41 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.DoctorAffiliationModel
 import CloudHospitalApi.models.DoctorAffiliationsModel
+import CloudHospitalApi.models.MediaModel
+import CloudHospitalApi.models.MediaType
+import CloudHospitalApi.models.MediasModel
 
 interface DoctorAffiliationsApi {
+    /**
+     * Get all DoctorAffiliationMedias.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorAffiliationId 
+     * @param id  (optional)
+     * @param mediaType  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [MediasModel]
+     */
+    @GET("api/v2/doctoraffiliations/{doctorAffiliationId}/medias")
+    suspend fun apiV2DoctoraffiliationsDoctorAffiliationIdMediasGet(@Path("doctorAffiliationId") doctorAffiliationId: java.util.UUID, @Query("Id") id: java.util.UUID? = null, @Query("MediaType") mediaType: MediaType? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<MediasModel>
+
+    /**
+     * Get DoctorAffiliationMedia.
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param doctorAffiliationId 
+     * @param mediaId 
+     * @return [MediaModel]
+     */
+    @GET("api/v2/doctoraffiliations/{doctorAffiliationId}/medias/{mediaId}")
+    suspend fun apiV2DoctoraffiliationsDoctorAffiliationIdMediasMediaIdGet(@Path("doctorAffiliationId") doctorAffiliationId: java.util.UUID, @Path("mediaId") mediaId: java.util.UUID): Response<MediaModel>
+
     /**
      * Get all doctor affiliations.
      * 

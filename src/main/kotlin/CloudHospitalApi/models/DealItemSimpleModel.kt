@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +33,7 @@ import com.squareup.moshi.Json
  * @param slug 
  * @param confirmed 
  */
-
+@JsonClass(generateAdapter = true)
 data class DealItemSimpleModel (
 
     @Json(name = "id")

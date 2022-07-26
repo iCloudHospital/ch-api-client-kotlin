@@ -24,6 +24,7 @@ import CloudHospitalApi.models.NotificationModel
 import CloudHospitalApi.models.PagedListMetaData
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +33,7 @@ import com.squareup.moshi.Json
  * @param metaData 
  * @param unreadCount 
  */
-
+@JsonClass(generateAdapter = true)
 data class NotificationsModel (
 
     @Json(name = "items")

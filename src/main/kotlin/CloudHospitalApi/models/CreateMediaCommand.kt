@@ -23,6 +23,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.MediaType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -33,7 +34,7 @@ import com.squareup.moshi.Json
  * @param description 
  * @param order 
  */
-
+@JsonClass(generateAdapter = true)
 data class CreateMediaCommand (
 
     @Json(name = "mediaType")

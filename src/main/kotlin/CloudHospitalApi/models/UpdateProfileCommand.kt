@@ -25,6 +25,7 @@ import CloudHospitalApi.models.UserLanguageModel
 import CloudHospitalApi.models.UserLocationModel
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -39,7 +40,7 @@ import com.squareup.moshi.Json
  * @param languages 
  * @param locations 
  */
-
+@JsonClass(generateAdapter = true)
 data class UpdateProfileCommand (
 
     @Json(name = "firstName")
