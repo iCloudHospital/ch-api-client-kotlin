@@ -23,7 +23,6 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.Metadata
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -39,7 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param role 
  * @param metadata 
  */
-@JsonClass(generateAdapter = true)
+
 data class SendBirdGroupChannelMember (
 
     @Json(name = "user_id")

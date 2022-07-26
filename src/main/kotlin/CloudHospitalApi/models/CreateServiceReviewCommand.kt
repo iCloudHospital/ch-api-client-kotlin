@@ -23,7 +23,6 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.ReviewType
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -37,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param rate 
  * @param reviewType 
  */
-@JsonClass(generateAdapter = true)
+
 data class CreateServiceReviewCommand (
 
     @Json(name = "serviceId")

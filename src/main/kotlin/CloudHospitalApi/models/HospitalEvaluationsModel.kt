@@ -24,7 +24,6 @@ import CloudHospitalApi.models.HospitalEvaluationItemModel
 import CloudHospitalApi.models.PagedListMetaData
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param items 
  * @param metaData 
  */
-@JsonClass(generateAdapter = true)
+
 data class HospitalEvaluationsModel (
 
     @Json(name = "items")

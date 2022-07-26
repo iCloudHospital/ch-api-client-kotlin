@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -30,7 +29,7 @@ import com.squareup.moshi.JsonClass
  * @param notificationId 
  * @param isDelete 
  */
-@JsonClass(generateAdapter = true)
+
 data class CheckNotificationsCommand (
 
     @Json(name = "notificationId")

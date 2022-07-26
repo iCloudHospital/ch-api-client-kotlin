@@ -24,7 +24,6 @@ import CloudHospitalApi.models.PagedListMetaData
 import CloudHospitalApi.models.WorkingDayItemModel
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param items 
  * @param metaData 
  */
-@JsonClass(generateAdapter = true)
+
 data class WorkingDaysModel (
 
     @Json(name = "items")

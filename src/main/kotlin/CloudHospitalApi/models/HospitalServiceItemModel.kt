@@ -23,7 +23,6 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.AuditableEntity
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -40,7 +39,7 @@ import com.squareup.moshi.JsonClass
  * @param photoThumbnail 
  * @param auditableEntity 
  */
-@JsonClass(generateAdapter = true)
+
 data class HospitalServiceItemModel (
 
     @Json(name = "id")

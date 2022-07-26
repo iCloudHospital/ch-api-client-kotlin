@@ -24,7 +24,6 @@ import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.ContributionType
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -43,7 +42,7 @@ import com.squareup.moshi.JsonClass
  * @param order 
  * @param auditableEntity 
  */
-@JsonClass(generateAdapter = true)
+
 data class ArticleContributorItemModel (
 
     @Json(name = "articleId")

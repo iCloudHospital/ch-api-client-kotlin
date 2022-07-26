@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param issueAccessToken 
  * @param discoveryKeys 
  */
-@JsonClass(generateAdapter = true)
+
 data class UpdateChatUserCommand (
 
     @Json(name = "nickname")

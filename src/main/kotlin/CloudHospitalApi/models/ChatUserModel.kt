@@ -37,6 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param createdAt 
  * @param lastSeenAt 
  */
+
 @JsonClass(generateAdapter = true)
 data class ChatUserModel (
 

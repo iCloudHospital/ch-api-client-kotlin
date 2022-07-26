@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -38,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param firstItemOnPage 
  * @param lastItemOnPage 
  */
-@JsonClass(generateAdapter = true)
+
 data class PagedListMetaData (
 
     @Json(name = "pageCount")

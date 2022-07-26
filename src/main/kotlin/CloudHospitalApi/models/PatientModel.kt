@@ -27,7 +27,6 @@ import CloudHospitalApi.models.UserLanguageModel
 import CloudHospitalApi.models.UserLocationModel
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -51,7 +50,7 @@ import com.squareup.moshi.JsonClass
  * @param locations 
  * @param membership 
  */
-@JsonClass(generateAdapter = true)
+
 data class PatientModel (
 
     @Json(name = "id")

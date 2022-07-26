@@ -23,7 +23,6 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.RecurringInterval
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -37,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param isActive 
  * @param order 
  */
-@JsonClass(generateAdapter = true)
+
 data class PlanItemModel (
 
     @Json(name = "id")

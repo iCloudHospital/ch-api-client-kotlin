@@ -23,7 +23,6 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.UserLocationType
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -38,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param address 
  * @param locationType 
  */
-@JsonClass(generateAdapter = true)
+
 data class UserLocationModel (
 
     @Json(name = "latitude")

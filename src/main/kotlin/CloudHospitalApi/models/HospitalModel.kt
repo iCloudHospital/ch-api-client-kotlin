@@ -32,7 +32,6 @@ import CloudHospitalApi.models.SnsHandle
 import CloudHospitalApi.models.WorkingDay
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -72,7 +71,7 @@ import com.squareup.moshi.JsonClass
  * @param languages 
  * @param awards 
  */
-@JsonClass(generateAdapter = true)
+
 data class HospitalModel (
 
     @Json(name = "id")

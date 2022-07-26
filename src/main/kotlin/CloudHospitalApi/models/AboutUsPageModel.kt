@@ -25,7 +25,6 @@ import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.MediaModel
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -45,7 +44,7 @@ import com.squareup.moshi.JsonClass
  * @param localizedUrls 
  * @param medias 
  */
-@JsonClass(generateAdapter = true)
+
 data class AboutUsPageModel (
 
     @Json(name = "id")
