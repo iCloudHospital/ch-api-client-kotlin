@@ -1,12 +1,12 @@
 {
   "name": "ch-api-client-kotlin",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "description": "Openapi generated kotlin client for CloudHospital",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v2/swagger.json -o . --additional-properties=useCoroutines=true --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalApi",
-    "build-identity": "openapi-generator-cli generate -g kotlin -i https://identity-int.icloudhospital.com/swagger/v1/swagger.json -o Identity --additional-properties=useCoroutines=true --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalIdentityApi"
+    "build": "openapi-generator-cli generate -g kotlin -i https://api-int.icloudhospital.com/swagger/v2/swagger.json -o . --additional-properties=useCoroutines=true --additional-properties=moshiCodeGen=true --library jvm-retrofit2 --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalApi",
+    "build-identity": "openapi-generator-cli generate -g kotlin -i https://identity-int.icloudhospital.com/swagger/v1/swagger.json -o Identity --additional-properties=useCoroutines=true --library jvm-retrofit --type-mappings=java.time.OffsetDateTime=java.time.LocalDateTime --package-name=CloudHospitalIdentityApi"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   ],
   "author": "hyounoosung@gmail.com",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.5.1"
   }
 }

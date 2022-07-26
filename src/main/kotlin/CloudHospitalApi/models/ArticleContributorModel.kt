@@ -26,6 +26,7 @@ import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.SnsHandle
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -49,7 +50,7 @@ import com.squareup.moshi.Json
  * @param contributorSnsHandles 
  * @param localizedUrls 
  */
-
+@JsonClass(generateAdapter = true)
 data class ArticleContributorModel (
 
     @Json(name = "articleId")

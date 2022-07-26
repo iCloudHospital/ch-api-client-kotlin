@@ -25,6 +25,7 @@ import CloudHospitalApi.models.SendBirdGroupChannelMember
 import CloudHospitalApi.models.SendBirdGroupChannelrOperator
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -50,7 +51,7 @@ import com.squareup.moshi.Json
  * @param createdAt 
  * @param freeze 
  */
-
+@JsonClass(generateAdapter = true)
 data class SendBirdGroupChannelModel (
 
     @Json(name = "name")

@@ -23,6 +23,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.ChatUserModel
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -30,7 +31,7 @@ import com.squareup.moshi.Json
  * @param users 
  * @param next 
  */
-
+@JsonClass(generateAdapter = true)
 data class ChatUsersModel (
 
     @Json(name = "users")

@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -37,7 +38,7 @@ import com.squareup.moshi.Json
  * @param createdAt 
  * @param updatedAt 
  */
-
+@JsonClass(generateAdapter = true)
 data class AdminMessageModel (
 
     @Json(name = "message_id")

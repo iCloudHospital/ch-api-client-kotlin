@@ -24,6 +24,7 @@ import CloudHospitalApi.models.DoctorAffiliationItemModel
 import CloudHospitalApi.models.PagedListMetaData
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -31,7 +32,7 @@ import com.squareup.moshi.Json
  * @param items 
  * @param metaData 
  */
-
+@JsonClass(generateAdapter = true)
 data class DoctorAffiliationsModel (
 
     @Json(name = "items")

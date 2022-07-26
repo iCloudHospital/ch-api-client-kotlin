@@ -25,6 +25,7 @@ import CloudHospitalApi.models.LocalizedUrlModel
 import CloudHospitalApi.models.MarketingType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -50,7 +51,7 @@ import com.squareup.moshi.Json
  * @param localizedUrls 
  * @param serviceDuration 
  */
-
+@JsonClass(generateAdapter = true)
 data class DealModel (
 
     @Json(name = "id")

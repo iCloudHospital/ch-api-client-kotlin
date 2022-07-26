@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -31,7 +32,7 @@ import com.squareup.moshi.Json
  * @param accreditationName 
  * @param accreditationLogo 
  */
-
+@JsonClass(generateAdapter = true)
 data class HospitalAccreditationItemModel (
 
     @Json(name = "hospitalId")

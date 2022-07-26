@@ -23,6 +23,7 @@ package CloudHospitalApi.models
 import CloudHospitalApi.models.AuditableEntity
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -34,7 +35,7 @@ import com.squareup.moshi.Json
  * @param confirmed 
  * @param auditableEntity 
  */
-
+@JsonClass(generateAdapter = true)
 data class AboutUsPageItemModel (
 
     @Json(name = "id")

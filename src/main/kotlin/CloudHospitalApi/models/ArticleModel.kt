@@ -27,6 +27,7 @@ import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaModel
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -51,7 +52,7 @@ import com.squareup.moshi.Json
  * @param content 
  * @param localizedUrls 
  */
-
+@JsonClass(generateAdapter = true)
 data class ArticleModel (
 
     @Json(name = "id")

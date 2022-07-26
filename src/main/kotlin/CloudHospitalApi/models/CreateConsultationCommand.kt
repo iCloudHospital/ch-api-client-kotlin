@@ -24,6 +24,7 @@ import CloudHospitalApi.models.ConsultationType
 import CloudHospitalApi.models.Gender
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -48,7 +49,7 @@ import com.squareup.moshi.Json
  * @param timeZone 
  * @param isExternal 
  */
-
+@JsonClass(generateAdapter = true)
 data class CreateConsultationCommand (
 
     @Json(name = "consultationType")

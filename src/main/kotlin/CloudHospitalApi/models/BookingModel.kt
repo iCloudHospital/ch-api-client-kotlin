@@ -27,6 +27,7 @@ import CloudHospitalApi.models.RefundPolicy
 import CloudHospitalApi.models.RejectReason
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -68,7 +69,7 @@ import com.squareup.moshi.Json
  * @param isExternal 
  * @param statusChangeLogs 
  */
-
+@JsonClass(generateAdapter = true)
 data class BookingModel (
 
     @Json(name = "id")
