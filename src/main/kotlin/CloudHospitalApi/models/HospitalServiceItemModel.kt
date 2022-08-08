@@ -21,6 +21,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.Procedure
 
 import com.squareup.moshi.Json
 
@@ -34,6 +35,11 @@ import com.squareup.moshi.Json
  * @param confirmed 
  * @param hospitalSpecialtyName 
  * @param hospitalSpecialtySlug 
+ * @param hospitalSpecialtyId 
+ * @param procedure 
+ * @param minPrice 
+ * @param maxPrice 
+ * @param priceReuqest 
  * @param order 
  * @param photo 
  * @param photoThumbnail 
@@ -62,6 +68,21 @@ data class HospitalServiceItemModel (
 
     @Json(name = "hospitalSpecialtySlug")
     val hospitalSpecialtySlug: kotlin.String? = null,
+
+    @Json(name = "hospitalSpecialtyId")
+    val hospitalSpecialtyId: java.util.UUID? = null,
+
+    @Json(name = "procedure")
+    val procedure: Procedure? = null,
+
+    @Json(name = "minPrice")
+    val minPrice: kotlin.Double? = null,
+
+    @Json(name = "maxPrice")
+    val maxPrice: kotlin.Double? = null,
+
+    @Json(name = "priceReuqest")
+    val priceReuqest: kotlin.Boolean? = null,
 
     @Json(name = "order")
     val order: kotlin.Int? = null,

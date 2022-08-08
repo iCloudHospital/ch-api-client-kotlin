@@ -64,9 +64,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val dealId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val isExternal : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelModel = webService.apiV2GroupchannelsDealDealIdGet(dealId, hospitalId)
+    val result : kotlin.String = webService.apiV2GroupchannelsDealDealIdGet(dealId, hospitalId, isExternal)
 }
 ```
 
@@ -76,10 +77,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **dealId** | **java.util.UUID**|  |
  **hospitalId** | **java.util.UUID**|  | [optional]
+ **isExternal** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**SendBirdGroupChannelModel**](SendBirdGroupChannelModel.md)
+**kotlin.String**
 
 ### Authorization
 
@@ -104,9 +106,10 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val doctorId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val isExternal : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelModel = webService.apiV2GroupchannelsDoctorDoctorIdGet(doctorId, hospitalId)
+    val result : kotlin.String = webService.apiV2GroupchannelsDoctorDoctorIdGet(doctorId, hospitalId, isExternal)
 }
 ```
 
@@ -116,10 +119,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **doctorId** | **java.util.UUID**|  |
  **hospitalId** | **java.util.UUID**|  | [optional]
+ **isExternal** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**SendBirdGroupChannelModel**](SendBirdGroupChannelModel.md)
+**kotlin.String**
 
 ### Authorization
 
@@ -143,9 +147,10 @@ Name | Type | Description  | Notes
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(GroupChannelsApi::class.java)
 val hospitalId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
+val isExternal : kotlin.Boolean = true // kotlin.Boolean | 
 
 launch(Dispatchers.IO) {
-    val result : SendBirdGroupChannelModel = webService.apiV2GroupchannelsHospitalHospitalIdGet(hospitalId)
+    val result : kotlin.String = webService.apiV2GroupchannelsHospitalHospitalIdGet(hospitalId, isExternal)
 }
 ```
 
@@ -154,10 +159,11 @@ launch(Dispatchers.IO) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hospitalId** | **java.util.UUID**|  |
+ **isExternal** | **kotlin.Boolean**|  | [optional]
 
 ### Return type
 
-[**SendBirdGroupChannelModel**](SendBirdGroupChannelModel.md)
+**kotlin.String**
 
 ### Authorization
 

@@ -40,6 +40,7 @@ Class | Method | HTTP request | Description
 *AboutUsApi* | [**apiV2AboutusSlugGet**](docs/AboutUsApi.md#apiv2aboutusslugget) | **GET** api/v2/aboutus/{slug} | 
 *AccreditationsApi* | [**apiV2AccreditationsAccreditationIdGet**](docs/AccreditationsApi.md#apiv2accreditationsaccreditationidget) | **GET** api/v2/accreditations/{accreditationId} | Get Accreditation.
 *AccreditationsApi* | [**apiV2AccreditationsGet**](docs/AccreditationsApi.md#apiv2accreditationsget) | **GET** api/v2/accreditations | Get all Accreditations.
+*AppVersionApi* | [**apiV2AppversionPlatformGet**](docs/AppVersionApi.md#apiv2appversionplatformget) | **GET** api/v2/appversion/{platform} | 
 *ArticlesApi* | [**apiV2ArticlesArticleIdContributorsContributorIdGet**](docs/ArticlesApi.md#apiv2articlesarticleidcontributorscontributoridget) | **GET** api/v2/articles/{articleId}/contributors/{contributorId} | Get ArticleContributor.
 *ArticlesApi* | [**apiV2ArticlesArticleIdContributorsGet**](docs/ArticlesApi.md#apiv2articlesarticleidcontributorsget) | **GET** api/v2/articles/{articleId}/contributors | GetAll ArticleContributors.
 *ArticlesApi* | [**apiV2ArticlesArticleIdGet**](docs/ArticlesApi.md#apiv2articlesarticleidget) | **GET** api/v2/articles/{articleId} | Get Article.
@@ -212,13 +213,13 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.AccreditationModel](docs/AccreditationModel.md)
  - [CloudHospitalApi.models.AccreditationsModel](docs/AccreditationsModel.md)
  - [CloudHospitalApi.models.AdminMessageModel](docs/AdminMessageModel.md)
+ - [CloudHospitalApi.models.AppVersionModel](docs/AppVersionModel.md)
  - [CloudHospitalApi.models.ArticleContributorItemModel](docs/ArticleContributorItemModel.md)
  - [CloudHospitalApi.models.ArticleContributorModel](docs/ArticleContributorModel.md)
  - [CloudHospitalApi.models.ArticleContributorsModel](docs/ArticleContributorsModel.md)
  - [CloudHospitalApi.models.ArticleItemModel](docs/ArticleItemModel.md)
  - [CloudHospitalApi.models.ArticleModel](docs/ArticleModel.md)
  - [CloudHospitalApi.models.ArticleSourcesModel](docs/ArticleSourcesModel.md)
- - [CloudHospitalApi.models.ArticleStatus](docs/ArticleStatus.md)
  - [CloudHospitalApi.models.ArticleTagItemModel](docs/ArticleTagItemModel.md)
  - [CloudHospitalApi.models.ArticleTagModel](docs/ArticleTagModel.md)
  - [CloudHospitalApi.models.ArticleTagsModel](docs/ArticleTagsModel.md)
@@ -351,6 +352,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.PlanItemModel](docs/PlanItemModel.md)
  - [CloudHospitalApi.models.PlanModel](docs/PlanModel.md)
  - [CloudHospitalApi.models.PlansModel](docs/PlansModel.md)
+ - [CloudHospitalApi.models.Platform](docs/Platform.md)
  - [CloudHospitalApi.models.ProblemDetails](docs/ProblemDetails.md)
  - [CloudHospitalApi.models.Procedure](docs/Procedure.md)
  - [CloudHospitalApi.models.RecurringInterval](docs/RecurringInterval.md)

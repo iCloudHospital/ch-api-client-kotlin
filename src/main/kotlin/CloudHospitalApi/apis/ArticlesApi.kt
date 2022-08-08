@@ -9,7 +9,6 @@ import CloudHospitalApi.models.ArticleContributorModel
 import CloudHospitalApi.models.ArticleContributorsModel
 import CloudHospitalApi.models.ArticleModel
 import CloudHospitalApi.models.ArticleSourcesModel
-import CloudHospitalApi.models.ArticleStatus
 import CloudHospitalApi.models.ArticleTagModel
 import CloudHospitalApi.models.ArticleTagsModel
 import CloudHospitalApi.models.ArticlesModel
@@ -166,7 +165,6 @@ interface ArticlesApi {
      * @param id  (optional)
      * @param name  (optional)
      * @param description  (optional)
-     * @param status  (optional)
      * @param marketingType  (optional)
      * @param userId  (optional)
      * @param userName  (optional)
@@ -186,7 +184,7 @@ interface ArticlesApi {
      * @return [ArticlesModel]
      */
     @GET("api/v2/articles")
-    suspend fun apiV2ArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("Status") status: ArticleStatus? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptArticleId") exceptArticleId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticlesModel>
+    suspend fun apiV2ArticlesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("MarketingType") marketingType: MarketingType? = null, @Query("UserId") userId: java.util.UUID? = null, @Query("UserName") userName: kotlin.String? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalName") hospitalName: kotlin.String? = null, @Query("CountryId") countryId: java.util.UUID? = null, @Query("Tag") tag: kotlin.String? = null, @Query("ExceptArticleId") exceptArticleId: java.util.UUID? = null, @Query("ExceptHospitalId") exceptHospitalId: java.util.UUID? = null, @Query("ContributorId") contributorId: java.util.UUID? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("ReturnDefaultValue") returnDefaultValue: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ArticlesModel>
 
     /**
      * 

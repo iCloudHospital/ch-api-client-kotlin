@@ -9,13 +9,14 @@ docs/AccreditationModel.md
 docs/AccreditationsApi.md
 docs/AccreditationsModel.md
 docs/AdminMessageModel.md
+docs/AppVersionApi.md
+docs/AppVersionModel.md
 docs/ArticleContributorItemModel.md
 docs/ArticleContributorModel.md
 docs/ArticleContributorsModel.md
 docs/ArticleItemModel.md
 docs/ArticleModel.md
 docs/ArticleSourcesModel.md
-docs/ArticleStatus.md
 docs/ArticleTagItemModel.md
 docs/ArticleTagModel.md
 docs/ArticleTagsModel.md
@@ -168,6 +169,7 @@ docs/PlanItemModel.md
 docs/PlanModel.md
 docs/PlansApi.md
 docs/PlansModel.md
+docs/Platform.md
 docs/ProblemDetails.md
 docs/Procedure.md
 docs/ProfilesApi.md
@@ -231,6 +233,7 @@ gradlew.bat
 settings.gradle
 src/main/kotlin/CloudHospitalApi/apis/AboutUsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/AccreditationsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/AppVersionApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ArticlesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/BookingsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ChatUsersApi.kt
@@ -281,13 +284,13 @@ src/main/kotlin/CloudHospitalApi/models/AccreditationItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/AccreditationModel.kt
 src/main/kotlin/CloudHospitalApi/models/AccreditationsModel.kt
 src/main/kotlin/CloudHospitalApi/models/AdminMessageModel.kt
+src/main/kotlin/CloudHospitalApi/models/AppVersionModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleContributorItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleContributorModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleContributorsModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleSourcesModel.kt
-src/main/kotlin/CloudHospitalApi/models/ArticleStatus.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleTagItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleTagModel.kt
 src/main/kotlin/CloudHospitalApi/models/ArticleTagsModel.kt
@@ -420,6 +423,7 @@ src/main/kotlin/CloudHospitalApi/models/PlanHospitalsModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlanItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlanModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlansModel.kt
+src/main/kotlin/CloudHospitalApi/models/Platform.kt
 src/main/kotlin/CloudHospitalApi/models/ProblemDetails.kt
 src/main/kotlin/CloudHospitalApi/models/Procedure.kt
 src/main/kotlin/CloudHospitalApi/models/RecurringInterval.kt

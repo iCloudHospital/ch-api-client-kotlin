@@ -34,10 +34,11 @@ interface GroupChannelsApi {
      *
      * @param dealId 
      * @param hospitalId  (optional)
-     * @return [SendBirdGroupChannelModel]
+     * @param isExternal  (optional)
+     * @return [kotlin.String]
      */
     @GET("api/v2/groupchannels/deal/{dealId}")
-    suspend fun apiV2GroupchannelsDealDealIdGet(@Path("dealId") dealId: java.util.UUID, @Query("hospitalId") hospitalId: java.util.UUID? = null): Response<SendBirdGroupChannelModel>
+    suspend fun apiV2GroupchannelsDealDealIdGet(@Path("dealId") dealId: java.util.UUID, @Query("hospitalId") hospitalId: java.util.UUID? = null, @Query("isExternal") isExternal: kotlin.Boolean? = null): Response<kotlin.String>
 
     /**
      * 
@@ -49,10 +50,11 @@ interface GroupChannelsApi {
      *
      * @param doctorId 
      * @param hospitalId  (optional)
-     * @return [SendBirdGroupChannelModel]
+     * @param isExternal  (optional)
+     * @return [kotlin.String]
      */
     @GET("api/v2/groupchannels/doctor/{doctorId}")
-    suspend fun apiV2GroupchannelsDoctorDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID, @Query("hospitalId") hospitalId: java.util.UUID? = null): Response<SendBirdGroupChannelModel>
+    suspend fun apiV2GroupchannelsDoctorDoctorIdGet(@Path("doctorId") doctorId: java.util.UUID, @Query("hospitalId") hospitalId: java.util.UUID? = null, @Query("isExternal") isExternal: kotlin.Boolean? = null): Response<kotlin.String>
 
     /**
      * 
@@ -63,9 +65,10 @@ interface GroupChannelsApi {
      *  - 403: Forbidden
      *
      * @param hospitalId 
-     * @return [SendBirdGroupChannelModel]
+     * @param isExternal  (optional)
+     * @return [kotlin.String]
      */
     @GET("api/v2/groupchannels/hospital/{hospitalId}")
-    suspend fun apiV2GroupchannelsHospitalHospitalIdGet(@Path("hospitalId") hospitalId: java.util.UUID): Response<SendBirdGroupChannelModel>
+    suspend fun apiV2GroupchannelsHospitalHospitalIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Query("isExternal") isExternal: kotlin.Boolean? = null): Response<kotlin.String>
 
 }

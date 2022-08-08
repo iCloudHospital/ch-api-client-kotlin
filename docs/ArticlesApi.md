@@ -430,7 +430,6 @@ val webService = apiClient.createWebservice(ArticlesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val name : kotlin.String = name_example // kotlin.String | 
 val description : kotlin.String = description_example // kotlin.String | 
-val status : ArticleStatus =  // ArticleStatus | 
 val marketingType : MarketingType =  // MarketingType | 
 val userId : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 val userName : kotlin.String = userName_example // kotlin.String | 
@@ -449,7 +448,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : ArticlesModel = webService.apiV2ArticlesGet(id, name, description, status, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptArticleId, exceptHospitalId, contributorId, languageCode, showHidden, returnDefaultValue, page, limit, lastRetrieved)
+    val result : ArticlesModel = webService.apiV2ArticlesGet(id, name, description, marketingType, userId, userName, hospitalId, hospitalName, countryId, tag, exceptArticleId, exceptHospitalId, contributorId, languageCode, showHidden, returnDefaultValue, page, limit, lastRetrieved)
 }
 ```
 
@@ -460,7 +459,6 @@ Name | Type | Description  | Notes
  **id** | **java.util.UUID**|  | [optional]
  **name** | **kotlin.String**|  | [optional]
  **description** | **kotlin.String**|  | [optional]
- **status** | [**ArticleStatus**](.md)|  | [optional] [enum: Draft, Active, Archived]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **userId** | **java.util.UUID**|  | [optional]
  **userName** | **kotlin.String**|  | [optional]

@@ -712,12 +712,13 @@ val name : kotlin.String = name_example // kotlin.String |
 val slug : kotlin.String = slug_example // kotlin.String | 
 val marketingType : MarketingType =  // MarketingType | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalSpecialtiesModel = webService.apiV2HospitalsHospitalIdSpecialtiesGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : HospitalSpecialtiesModel = webService.apiV2HospitalsHospitalIdSpecialtiesGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, languageCode, showHidden, page, limit, lastRetrieved)
 }
 ```
 
@@ -735,6 +736,7 @@ Name | Type | Description  | Notes
  **slug** | **kotlin.String**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]
@@ -866,12 +868,13 @@ val name : kotlin.String = name_example // kotlin.String |
 val slug : kotlin.String = slug_example // kotlin.String | 
 val marketingType : MarketingType =  // MarketingType | 
 val languageCode : kotlin.String = languageCode_example // kotlin.String | 
+val showHidden : kotlin.Boolean = true // kotlin.Boolean | 
 val page : kotlin.Int = 56 // kotlin.Int | 
 val limit : kotlin.Int = 56 // kotlin.Int | 
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : HospitalSpecialtiesSimpleModel = webService.apiV2HospitalsHospitalIdSpecialtiesSimpleGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, languageCode, page, limit, lastRetrieved)
+    val result : HospitalSpecialtiesSimpleModel = webService.apiV2HospitalsHospitalIdSpecialtiesSimpleGet(hospitalId, specialtyId, specialtyName, specialtyTypeId, specialtyTypeName, hospitalSpecialtyId, name, slug, marketingType, languageCode, showHidden, page, limit, lastRetrieved)
 }
 ```
 
@@ -889,6 +892,7 @@ Name | Type | Description  | Notes
  **slug** | **kotlin.String**|  | [optional]
  **marketingType** | [**MarketingType**](.md)|  | [optional] [enum: Both, GeneralHealth, Beauty]
  **languageCode** | **kotlin.String**|  | [optional]
+ **showHidden** | **kotlin.Boolean**|  | [optional]
  **page** | **kotlin.Int**|  | [optional]
  **limit** | **kotlin.Int**|  | [optional]
  **lastRetrieved** | **java.time.LocalDateTime**|  | [optional]

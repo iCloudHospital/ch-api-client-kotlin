@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1AppversionPlatformGet**](AppVersionApi.md#apiV1AppversionPlatformGet) | **GET** api/v1/appversion/{platform} | 
+[**apiV2AppversionPlatformGet**](AppVersionApi.md#apiV2AppversionPlatformGet) | **GET** api/v2/appversion/{platform} | 
 
 
 
@@ -22,7 +22,7 @@ val webService = apiClient.createWebservice(AppVersionApi::class.java)
 val platform : Platform =  // Platform | 
 
 launch(Dispatchers.IO) {
-    val result : AppVersionViewModel = webService.apiV1AppversionPlatformGet(platform)
+    val result : AppVersionModel = webService.apiV2AppversionPlatformGet(platform)
 }
 ```
 
@@ -34,7 +34,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AppVersionViewModel**](AppVersionViewModel.md)
+[**AppVersionModel**](AppVersionModel.md)
 
 ### Authorization
 
