@@ -37,6 +37,11 @@ import com.squareup.moshi.Json
  * @param confirmed 
  * @param hospitalSpecialtyName 
  * @param hospitalSpecialtySlug 
+ * @param hospitalSpecialtyId 
+ * @param procedure 
+ * @param minPrice 
+ * @param maxPrice 
+ * @param priceReuqest 
  * @param order 
  * @param photo 
  * @param photoThumbnail 
@@ -50,10 +55,6 @@ import com.squareup.moshi.Json
  * @param specialtyName 
  * @param serviceCategoryId 
  * @param serviceCategoryName 
- * @param procedure 
- * @param minPrice 
- * @param maxPrice 
- * @param priceReuqest 
  * @param customStyle 
  * @param localizedUrls 
  * @param medias 
@@ -81,6 +82,21 @@ data class HospitalServiceModel (
 
     @Json(name = "hospitalSpecialtySlug")
     val hospitalSpecialtySlug: kotlin.String? = null,
+
+    @Json(name = "hospitalSpecialtyId")
+    val hospitalSpecialtyId: java.util.UUID? = null,
+
+    @Json(name = "procedure")
+    val procedure: Procedure? = null,
+
+    @Json(name = "minPrice")
+    val minPrice: kotlin.Double? = null,
+
+    @Json(name = "maxPrice")
+    val maxPrice: kotlin.Double? = null,
+
+    @Json(name = "priceReuqest")
+    val priceReuqest: kotlin.Boolean? = null,
 
     @Json(name = "order")
     val order: kotlin.Int? = null,
@@ -120,18 +136,6 @@ data class HospitalServiceModel (
 
     @Json(name = "serviceCategoryName")
     val serviceCategoryName: kotlin.String? = null,
-
-    @Json(name = "procedure")
-    val procedure: Procedure? = null,
-
-    @Json(name = "minPrice")
-    val minPrice: kotlin.Double? = null,
-
-    @Json(name = "maxPrice")
-    val maxPrice: kotlin.Double? = null,
-
-    @Json(name = "priceReuqest")
-    val priceReuqest: kotlin.Boolean? = null,
 
     @Json(name = "customStyle")
     val customStyle: kotlin.String? = null,

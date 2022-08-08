@@ -16,6 +16,10 @@ Name | Type | Description | Notes
 **backgroundThumbnail** | **kotlin.String** |  |  [optional]
 **servicesCount** | **kotlin.Int** |  |  [optional]
 **specialtyId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**specialtyName** | **kotlin.String** |  |  [optional] [readonly]
+**specialtyTypeId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional] [readonly]
+**specialtyTypeName** | **kotlin.String** |  |  [optional] [readonly]
+**marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

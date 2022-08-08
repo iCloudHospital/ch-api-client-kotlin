@@ -22,7 +22,6 @@ package CloudHospitalApi.models
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -38,7 +37,6 @@ import com.squareup.moshi.JsonClass
  * @param lastSeenAt 
  */
 
-@JsonClass(generateAdapter = true)
 data class ChatUserModel (
 
     @Json(name = "id")

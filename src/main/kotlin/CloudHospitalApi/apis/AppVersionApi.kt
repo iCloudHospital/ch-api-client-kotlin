@@ -5,7 +5,7 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.AppVersionViewModel
+import CloudHospitalApi.models.AppVersionModel
 import CloudHospitalApi.models.Platform
 
 interface AppVersionApi {
@@ -14,11 +14,11 @@ interface AppVersionApi {
      * 
      * Responses:
      *  - 200: Success
-     * 
-     * @param platform  
-     * @return [AppVersionViewModel]
+     *
+     * @param platform 
+     * @return [AppVersionModel]
      */
-    @GET("api/v1/appversion/{platform}")
-    suspend fun apiV1AppversionPlatformGet(@Path("platform") platform: Platform): Response<AppVersionViewModel>
+    @GET("api/v2/appversion/{platform}")
+    suspend fun apiV2AppversionPlatformGet(@Path("platform") platform: Platform): Response<AppVersionModel>
 
 }

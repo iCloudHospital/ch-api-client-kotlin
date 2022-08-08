@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
-**lowestPrice** | **kotlin.Double** |  |  [optional]
+**lowestPrice** | **kotlin.Double** |  |  [optional] [readonly]
 **dealServicesCount** | **kotlin.Int** |  |  [optional]
 **order** | **kotlin.Int** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]

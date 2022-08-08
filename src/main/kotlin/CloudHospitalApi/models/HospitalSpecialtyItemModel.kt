@@ -21,6 +21,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
+import CloudHospitalApi.models.MarketingType
 
 import com.squareup.moshi.Json
 
@@ -39,6 +40,10 @@ import com.squareup.moshi.Json
  * @param backgroundThumbnail 
  * @param servicesCount 
  * @param specialtyId 
+ * @param specialtyName 
+ * @param specialtyTypeId 
+ * @param specialtyTypeName 
+ * @param marketingType 
  * @param auditableEntity 
  */
 
@@ -79,6 +84,18 @@ data class HospitalSpecialtyItemModel (
 
     @Json(name = "specialtyId")
     val specialtyId: java.util.UUID? = null,
+
+    @Json(name = "specialtyName")
+    val specialtyName: kotlin.String? = null,
+
+    @Json(name = "specialtyTypeId")
+    val specialtyTypeId: java.util.UUID? = null,
+
+    @Json(name = "specialtyTypeName")
+    val specialtyTypeName: kotlin.String? = null,
+
+    @Json(name = "marketingType")
+    val marketingType: MarketingType? = null,
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null

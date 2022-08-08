@@ -40,6 +40,7 @@ import com.squareup.moshi.Json
  * @param serviceId 
  * @param serviceName 
  * @param serviceSlug 
+ * @param hospitalId 
  * @param patientId 
  * @param patientName 
  * @param patientPhoto 
@@ -85,6 +86,9 @@ data class ServiceReviewModel (
 
     @Json(name = "serviceSlug")
     val serviceSlug: kotlin.String? = null,
+
+    @Json(name = "hospitalId")
+    val hospitalId: java.util.UUID? = null,
 
     @Json(name = "patientId")
     val patientId: java.util.UUID? = null,
