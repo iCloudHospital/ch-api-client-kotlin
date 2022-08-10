@@ -8,7 +8,6 @@ import okhttp3.RequestBody
 import CloudHospitalApi.models.MembersModel
 import CloudHospitalApi.models.MembershipModel
 import CloudHospitalApi.models.MembershipsModel
-import CloudHospitalApi.models.ProblemDetails
 
 interface MembershipsApi {
     /**
@@ -38,10 +37,8 @@ interface MembershipsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param membershipId 
      * @return [MembershipModel]

@@ -49,11 +49,9 @@ interface ServiceReviewsApi {
      * Create a ServiceReview.
      * 
      * Responses:
-     *  - 201: Success
-     *  - 400: Bad Request
+     *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param createServiceReviewCommand  (optional)
      * @return [ServiceReviewModel]
@@ -66,11 +64,8 @@ interface ServiceReviewsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
-     *  - 400: Bad Request
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param serviceReviewId 
      * @return [kotlin.Boolean]

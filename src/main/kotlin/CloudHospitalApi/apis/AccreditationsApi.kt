@@ -7,7 +7,6 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.AccreditationModel
 import CloudHospitalApi.models.AccreditationsModel
-import CloudHospitalApi.models.ProblemDetails
 
 interface AccreditationsApi {
     /**
@@ -15,8 +14,6 @@ interface AccreditationsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
-     *  - 0: Error
      *
      * @param accreditationId 
      * @return [AccreditationModel]

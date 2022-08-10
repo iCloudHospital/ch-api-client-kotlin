@@ -60,11 +60,9 @@ interface ChatUsersApi {
      * Create a chatUser.
      * 
      * Responses:
-     *  - 201: Success
-     *  - 400: Bad Request
+     *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param createChatUserCommand  (optional)
      * @return [ChatUserModel]
@@ -92,10 +90,8 @@ interface ChatUsersApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param userId 
      * @return [ChatUserModel]
