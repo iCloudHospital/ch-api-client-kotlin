@@ -7,7 +7,6 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.LanguageModel
 import CloudHospitalApi.models.LanguagesModel
-import CloudHospitalApi.models.ProblemDetails
 
 interface LanguagesApi {
     /**
@@ -45,8 +44,6 @@ interface LanguagesApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
-     *  - 0: Error
      *
      * @param id 
      * @return [LanguageModel]

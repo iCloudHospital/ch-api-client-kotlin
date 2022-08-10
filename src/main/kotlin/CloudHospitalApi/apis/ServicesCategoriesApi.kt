@@ -5,7 +5,6 @@ import retrofit2.http.*
 import retrofit2.Response
 import okhttp3.RequestBody
 
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.ServiceCategoriesModel
 import CloudHospitalApi.models.ServiceCategoryModel
 
@@ -31,8 +30,6 @@ interface ServicesCategoriesApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
-     *  - 0: Error
      *
      * @param serviceCategoryId 
      * @return [ServiceCategoryModel]

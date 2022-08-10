@@ -9,7 +9,6 @@ import CloudHospitalApi.models.PlanHospitalModel
 import CloudHospitalApi.models.PlanHospitalsModel
 import CloudHospitalApi.models.PlanModel
 import CloudHospitalApi.models.PlansModel
-import CloudHospitalApi.models.ProblemDetails
 
 interface PlansApi {
     /**
@@ -33,8 +32,6 @@ interface PlansApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
-     *  - 0: Error
      *
      * @param planId 
      * @return [PlanModel]

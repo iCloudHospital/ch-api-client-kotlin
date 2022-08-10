@@ -16,11 +16,8 @@ interface PatientsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
-     *  - 400: Bad Request
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param patientId 
      * @return [kotlin.Boolean]
@@ -33,10 +30,8 @@ interface PatientsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 404: Not Found
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param patientId 
      * @return [PatientModel]
@@ -65,11 +60,9 @@ interface PatientsApi {
      * Create a Patient.
      * 
      * Responses:
-     *  - 201: Success
-     *  - 400: Bad Request
+     *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param createPatientCommand  (optional)
      * @return [PatientModel]
