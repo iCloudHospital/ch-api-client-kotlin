@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
+ * @param description 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
@@ -59,6 +60,9 @@ data class ContributorItemModel (
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,

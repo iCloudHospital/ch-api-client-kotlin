@@ -9,7 +9,6 @@ import CloudHospitalApi.models.BookingModel
 import CloudHospitalApi.models.BookingStatus
 import CloudHospitalApi.models.BookingsModel
 import CloudHospitalApi.models.CreateBookingCommand
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.SortingOrder
 import CloudHospitalApi.models.UpdateBookingCommand
 
@@ -50,7 +49,6 @@ interface BookingsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param bookingId 
      * @param updateBookingCommand  (optional)

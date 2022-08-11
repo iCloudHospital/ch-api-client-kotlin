@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **version** | **kotlin.String** |  |  [optional]
-**location** | [**LocationViewModel**](LocationViewModel.md) |  |  [optional]
+**location** | [**LocationModel**](LocationModel.md) |  |  [optional]
 
 
 

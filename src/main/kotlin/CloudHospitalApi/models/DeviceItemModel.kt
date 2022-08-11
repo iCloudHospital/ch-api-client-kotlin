@@ -30,13 +30,12 @@ import com.squareup.moshi.Json
  * @param id 
  * @param token 
  * @param platform 
- * @param tags 
  * @param appAlert 
  * @param eventAlert 
  * @param noticeAlert 
  */
 
-data class CreateDeviceCommand (
+data class DeviceItemModel (
 
     @Json(name = "id")
     val id: java.util.UUID? = null,
@@ -46,9 +45,6 @@ data class CreateDeviceCommand (
 
     @Json(name = "platform")
     val platform: Platform? = null,
-
-    @Json(name = "tags")
-    val tags: kotlin.collections.List<kotlin.String>? = null,
 
     @Json(name = "appAlert")
     val appAlert: kotlin.Boolean? = null,

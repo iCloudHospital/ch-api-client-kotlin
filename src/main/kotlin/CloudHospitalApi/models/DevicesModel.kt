@@ -20,24 +20,25 @@
 
 package CloudHospitalApi.models
 
-import CloudHospitalApi.models.LocationModel
+import CloudHospitalApi.models.DeviceItemModel
+import CloudHospitalApi.models.PagedListMetaData
 
 import com.squareup.moshi.Json
 
 /**
  * 
  *
- * @param version 
- * @param location 
+ * @param items 
+ * @param metaData 
  */
 
-data class CreateDeviceLoginCommand (
+data class DevicesModel (
 
-    @Json(name = "version")
-    val version: kotlin.String? = null,
+    @Json(name = "items")
+    val items: kotlin.collections.List<DeviceItemModel>? = null,
 
-    @Json(name = "location")
-    val location: LocationModel? = null
+    @Json(name = "metaData")
+    val metaData: PagedListMetaData? = null
 
 )
 

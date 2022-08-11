@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1DevicesGet**](DevicesApi.md#apiV1DevicesGet) | **GET** api/v1/devices | Get all devices.
-[**apiV1DevicesIdDelete**](DevicesApi.md#apiV1DevicesIdDelete) | **DELETE** api/v1/devices/{id} | Delete device.
-[**apiV1DevicesIdGet**](DevicesApi.md#apiV1DevicesIdGet) | **GET** api/v1/devices/{id} | Get device.
-[**apiV1DevicesIdLoginsPost**](DevicesApi.md#apiV1DevicesIdLoginsPost) | **POST** api/v1/devices/{id}/logins | Create device login.
-[**apiV1DevicesIdPut**](DevicesApi.md#apiV1DevicesIdPut) | **PUT** api/v1/devices/{id} | Update device.
-[**apiV1DevicesPost**](DevicesApi.md#apiV1DevicesPost) | **POST** api/v1/devices | Create device.
+[**apiV2DevicesGet**](DevicesApi.md#apiV2DevicesGet) | **GET** api/v2/devices | Get all devices.
+[**apiV2DevicesIdDelete**](DevicesApi.md#apiV2DevicesIdDelete) | **DELETE** api/v2/devices/{id} | Delete device.
+[**apiV2DevicesIdGet**](DevicesApi.md#apiV2DevicesIdGet) | **GET** api/v2/devices/{id} | Get device.
+[**apiV2DevicesIdLoginsPost**](DevicesApi.md#apiV2DevicesIdLoginsPost) | **POST** api/v2/devices/{id}/logins | Create device login.
+[**apiV2DevicesIdPut**](DevicesApi.md#apiV2DevicesIdPut) | **PUT** api/v2/devices/{id} | Update device.
+[**apiV2DevicesPost**](DevicesApi.md#apiV2DevicesPost) | **POST** api/v2/devices | Create device.
 
 
 
@@ -35,7 +35,7 @@ val limit : kotlin.Int = 56 // kotlin.Int |
 val lastRetrieved : java.time.LocalDateTime = 2013-10-20T19:20:30+01:00 // java.time.LocalDateTime | 
 
 launch(Dispatchers.IO) {
-    val result : DevicesViewModel = webService.apiV1DevicesGet(id, token, platform, appAlert, eventAlert, noticeAlert, page, limit, lastRetrieved)
+    val result : DevicesModel = webService.apiV2DevicesGet(id, token, platform, appAlert, eventAlert, noticeAlert, page, limit, lastRetrieved)
 }
 ```
 
@@ -43,7 +43,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  | [optional]
+ **id** | **java.util.UUID**|  | [optional]
  **token** | **kotlin.String**|  | [optional]
  **platform** | [**Platform**](.md)|  | [optional] [enum: Web, iOS, Android]
  **appAlert** | **kotlin.Boolean**|  | [optional]
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DevicesViewModel**](DevicesViewModel.md)
+[**DevicesModel**](DevicesModel.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ val webService = apiClient.createWebservice(DevicesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1DevicesIdDelete(id)
+    val result : kotlin.Boolean = webService.apiV2DevicesIdDelete(id)
 }
 ```
 
@@ -89,7 +89,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  |
+ **id** | **java.util.UUID**|  |
 
 ### Return type
 
@@ -119,7 +119,7 @@ val webService = apiClient.createWebservice(DevicesApi::class.java)
 val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
 
 launch(Dispatchers.IO) {
-    val result : DeviceViewModel = webService.apiV1DevicesIdGet(id)
+    val result : DeviceModel = webService.apiV2DevicesIdGet(id)
 }
 ```
 
@@ -127,11 +127,11 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  |
+ **id** | **java.util.UUID**|  |
 
 ### Return type
 
-[**DeviceViewModel**](DeviceViewModel.md)
+[**DeviceModel**](DeviceModel.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID
 val createDeviceLoginCommand : CreateDeviceLoginCommand =  // CreateDeviceLoginCommand | 
 
 launch(Dispatchers.IO) {
-    val result : java.util.UUID = webService.apiV1DevicesIdLoginsPost(id, createDeviceLoginCommand)
+    val result : java.util.UUID = webService.apiV2DevicesIdLoginsPost(id, createDeviceLoginCommand)
 }
 ```
 
@@ -166,7 +166,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  |
+ **id** | **java.util.UUID**|  |
  **createDeviceLoginCommand** | [**CreateDeviceLoginCommand**](CreateDeviceLoginCommand.md)|  | [optional]
 
 ### Return type
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: text/plain, application/json, text/json
 
 
@@ -198,7 +198,7 @@ val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID
 val updateDeviceCommand : UpdateDeviceCommand =  // UpdateDeviceCommand | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.apiV1DevicesIdPut(id, updateDeviceCommand)
+    val result : kotlin.Boolean = webService.apiV2DevicesIdPut(id, updateDeviceCommand)
 }
 ```
 
@@ -206,7 +206,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**java.util.UUID**](.md)|  |
+ **id** | **java.util.UUID**|  |
  **updateDeviceCommand** | [**UpdateDeviceCommand**](UpdateDeviceCommand.md)|  | [optional]
 
 ### Return type
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: text/plain, application/json, text/json
 
 
@@ -237,7 +237,7 @@ val webService = apiClient.createWebservice(DevicesApi::class.java)
 val createDeviceCommand : CreateDeviceCommand =  // CreateDeviceCommand | 
 
 launch(Dispatchers.IO) {
-    val result : DeviceViewModel = webService.apiV1DevicesPost(createDeviceCommand)
+    val result : DeviceModel = webService.apiV2DevicesPost(createDeviceCommand)
 }
 ```
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceViewModel**](DeviceViewModel.md)
+[**DeviceModel**](DeviceModel.md)
 
 ### Authorization
 
@@ -257,6 +257,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json, text/json, application/*+json
  - **Accept**: text/plain, application/json, text/json
 

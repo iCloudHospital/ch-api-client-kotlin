@@ -7,7 +7,6 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.CreatePatientCommand
 import CloudHospitalApi.models.PatientModel
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdatePatientCommand
 
 interface PatientsApi {
@@ -47,7 +46,6 @@ interface PatientsApi {
      *  - 201: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param patientId 
      * @param updatePatientCommand  (optional)
