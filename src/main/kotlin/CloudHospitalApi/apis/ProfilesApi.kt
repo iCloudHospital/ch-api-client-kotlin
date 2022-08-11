@@ -7,7 +7,6 @@ import okhttp3.RequestBody
 
 import CloudHospitalApi.models.ChangeEmailCommand
 import CloudHospitalApi.models.ConfirmEmailCommand
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdateProfileCommand
 import CloudHospitalApi.models.UserModel
 
@@ -60,7 +59,6 @@ interface ProfilesApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param updateProfileCommand  (optional)
      * @return [UserModel]

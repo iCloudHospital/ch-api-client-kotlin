@@ -89,6 +89,12 @@ Class | Method | HTTP request | Description
 *DealsApi* | [**apiV2DealsGet**](docs/DealsApi.md#apiv2dealsget) | **GET** api/v2/deals | Get all deals.
 *DealsApi* | [**apiV2DealsSimpleGet**](docs/DealsApi.md#apiv2dealssimpleget) | **GET** api/v2/deals/simple | Get all deals.
 *DealsApi* | [**apiV2DealsSlugGet**](docs/DealsApi.md#apiv2dealsslugget) | **GET** api/v2/deals/{slug} | Get deal by slug.
+*DevicesApi* | [**apiV2DevicesGet**](docs/DevicesApi.md#apiv2devicesget) | **GET** api/v2/devices | Get all devices.
+*DevicesApi* | [**apiV2DevicesIdDelete**](docs/DevicesApi.md#apiv2devicesiddelete) | **DELETE** api/v2/devices/{id} | Delete device.
+*DevicesApi* | [**apiV2DevicesIdGet**](docs/DevicesApi.md#apiv2devicesidget) | **GET** api/v2/devices/{id} | Get device.
+*DevicesApi* | [**apiV2DevicesIdLoginsPost**](docs/DevicesApi.md#apiv2devicesidloginspost) | **POST** api/v2/devices/{id}/logins | Create device login.
+*DevicesApi* | [**apiV2DevicesIdPut**](docs/DevicesApi.md#apiv2devicesidput) | **PUT** api/v2/devices/{id} | Update device.
+*DevicesApi* | [**apiV2DevicesPost**](docs/DevicesApi.md#apiv2devicespost) | **POST** api/v2/devices | Create device.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsDoctorAffiliationIdMediasGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsdoctoraffiliationidmediasget) | **GET** api/v2/doctoraffiliations/{doctorAffiliationId}/medias | Get all DoctorAffiliationMedias.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsDoctorAffiliationIdMediasMediaIdGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsdoctoraffiliationidmediasmediaidget) | **GET** api/v2/doctoraffiliations/{doctorAffiliationId}/medias/{mediaId} | Get DoctorAffiliationMedia.
 *DoctorAffiliationsApi* | [**apiV2DoctoraffiliationsGet**](docs/DoctorAffiliationsApi.md#apiv2doctoraffiliationsget) | **GET** api/v2/doctoraffiliations | Get all doctor affiliations.
@@ -254,6 +260,8 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.CreateBookingCommand](docs/CreateBookingCommand.md)
  - [CloudHospitalApi.models.CreateChatUserCommand](docs/CreateChatUserCommand.md)
  - [CloudHospitalApi.models.CreateConsultationCommand](docs/CreateConsultationCommand.md)
+ - [CloudHospitalApi.models.CreateDeviceCommand](docs/CreateDeviceCommand.md)
+ - [CloudHospitalApi.models.CreateDeviceLoginCommand](docs/CreateDeviceLoginCommand.md)
  - [CloudHospitalApi.models.CreateMediaCommand](docs/CreateMediaCommand.md)
  - [CloudHospitalApi.models.CreatePatientCommand](docs/CreatePatientCommand.md)
  - [CloudHospitalApi.models.CreateServiceReviewCommand](docs/CreateServiceReviewCommand.md)
@@ -268,6 +276,9 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.DealServicesModel](docs/DealServicesModel.md)
  - [CloudHospitalApi.models.DealsModel](docs/DealsModel.md)
  - [CloudHospitalApi.models.DealsSimpleModel](docs/DealsSimpleModel.md)
+ - [CloudHospitalApi.models.DeviceItemModel](docs/DeviceItemModel.md)
+ - [CloudHospitalApi.models.DeviceModel](docs/DeviceModel.md)
+ - [CloudHospitalApi.models.DevicesModel](docs/DevicesModel.md)
  - [CloudHospitalApi.models.DoctorAffiliationItemModel](docs/DoctorAffiliationItemModel.md)
  - [CloudHospitalApi.models.DoctorAffiliationModel](docs/DoctorAffiliationModel.md)
  - [CloudHospitalApi.models.DoctorAffiliationsModel](docs/DoctorAffiliationsModel.md)
@@ -353,7 +364,6 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.PlanModel](docs/PlanModel.md)
  - [CloudHospitalApi.models.PlansModel](docs/PlansModel.md)
  - [CloudHospitalApi.models.Platform](docs/Platform.md)
- - [CloudHospitalApi.models.ProblemDetails](docs/ProblemDetails.md)
  - [CloudHospitalApi.models.Procedure](docs/Procedure.md)
  - [CloudHospitalApi.models.RecurringInterval](docs/RecurringInterval.md)
  - [CloudHospitalApi.models.RefundPolicy](docs/RefundPolicy.md)
@@ -390,6 +400,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.UpdateBookingCommand](docs/UpdateBookingCommand.md)
  - [CloudHospitalApi.models.UpdateChatUserCommand](docs/UpdateChatUserCommand.md)
  - [CloudHospitalApi.models.UpdateConsultationCommand](docs/UpdateConsultationCommand.md)
+ - [CloudHospitalApi.models.UpdateDeviceCommand](docs/UpdateDeviceCommand.md)
  - [CloudHospitalApi.models.UpdateMediaCommand](docs/UpdateMediaCommand.md)
  - [CloudHospitalApi.models.UpdatePatientCommand](docs/UpdatePatientCommand.md)
  - [CloudHospitalApi.models.UpdateProfileCommand](docs/UpdateProfileCommand.md)

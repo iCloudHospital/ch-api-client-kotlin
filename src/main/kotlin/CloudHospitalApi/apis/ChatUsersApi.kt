@@ -8,7 +8,6 @@ import okhttp3.RequestBody
 import CloudHospitalApi.models.ChatUserModel
 import CloudHospitalApi.models.ChatUsersModel
 import CloudHospitalApi.models.CreateChatUserCommand
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.UpdateChatUserCommand
 
 interface ChatUsersApi {
@@ -77,7 +76,6 @@ interface ChatUsersApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param updateChatUserCommand  (optional)
      * @return [ChatUserModel]

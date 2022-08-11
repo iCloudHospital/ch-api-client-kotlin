@@ -11,7 +11,6 @@ import CloudHospitalApi.models.Gender
 import CloudHospitalApi.models.MediaModel
 import CloudHospitalApi.models.MediaType
 import CloudHospitalApi.models.MediasModel
-import CloudHospitalApi.models.ProblemDetails
 import CloudHospitalApi.models.ReviewType
 import CloudHospitalApi.models.ServiceReviewModel
 import CloudHospitalApi.models.ServiceReviewsModel
@@ -154,7 +153,6 @@ interface ServiceReviewsApi {
      *  - 201: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param serviceReviewId 
      * @param createMediaCommand  (optional)
@@ -170,7 +168,6 @@ interface ServiceReviewsApi {
      *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
-     *  - 0: Error
      *
      * @param serviceReviewId 
      * @param updateServiceReviewCommand  (optional)

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional] [readonly]
 **slug** | **kotlin.String** |  |  [optional] [readonly]
 **confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
+**description** | **kotlin.String** |  |  [optional] [readonly]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **hospitalName** | **kotlin.String** |  |  [optional] [readonly]
 **hospitalSlug** | **kotlin.String** |  |  [optional] [readonly]

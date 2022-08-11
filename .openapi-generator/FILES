@@ -58,6 +58,8 @@ docs/CountryModel.md
 docs/CreateBookingCommand.md
 docs/CreateChatUserCommand.md
 docs/CreateConsultationCommand.md
+docs/CreateDeviceCommand.md
+docs/CreateDeviceLoginCommand.md
 docs/CreateMediaCommand.md
 docs/CreatePatientCommand.md
 docs/CreateServiceReviewCommand.md
@@ -73,6 +75,10 @@ docs/DealServicesModel.md
 docs/DealsApi.md
 docs/DealsModel.md
 docs/DealsSimpleModel.md
+docs/DeviceItemModel.md
+docs/DeviceModel.md
+docs/DevicesApi.md
+docs/DevicesModel.md
 docs/DoctorAffiliationItemModel.md
 docs/DoctorAffiliationModel.md
 docs/DoctorAffiliationsApi.md
@@ -170,7 +176,6 @@ docs/PlanModel.md
 docs/PlansApi.md
 docs/PlansModel.md
 docs/Platform.md
-docs/ProblemDetails.md
 docs/Procedure.md
 docs/ProfilesApi.md
 docs/RecurringInterval.md
@@ -214,6 +219,7 @@ docs/TagsModel.md
 docs/UpdateBookingCommand.md
 docs/UpdateChatUserCommand.md
 docs/UpdateConsultationCommand.md
+docs/UpdateDeviceCommand.md
 docs/UpdateMediaCommand.md
 docs/UpdatePatientCommand.md
 docs/UpdateProfileCommand.md
@@ -242,6 +248,7 @@ src/main/kotlin/CloudHospitalApi/apis/ConsultationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ContributorsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/CountriesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DealsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/DevicesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DoctorAffiliationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DoctorsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/FaqCategoriesApi.kt
@@ -325,6 +332,8 @@ src/main/kotlin/CloudHospitalApi/models/CountryModel.kt
 src/main/kotlin/CloudHospitalApi/models/CreateBookingCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreateChatUserCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreateConsultationCommand.kt
+src/main/kotlin/CloudHospitalApi/models/CreateDeviceCommand.kt
+src/main/kotlin/CloudHospitalApi/models/CreateDeviceLoginCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreateMediaCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreatePatientCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreateServiceReviewCommand.kt
@@ -339,6 +348,9 @@ src/main/kotlin/CloudHospitalApi/models/DealServiceModel.kt
 src/main/kotlin/CloudHospitalApi/models/DealServicesModel.kt
 src/main/kotlin/CloudHospitalApi/models/DealsModel.kt
 src/main/kotlin/CloudHospitalApi/models/DealsSimpleModel.kt
+src/main/kotlin/CloudHospitalApi/models/DeviceItemModel.kt
+src/main/kotlin/CloudHospitalApi/models/DeviceModel.kt
+src/main/kotlin/CloudHospitalApi/models/DevicesModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorAffiliationItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorAffiliationModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorAffiliationsModel.kt
@@ -424,7 +436,6 @@ src/main/kotlin/CloudHospitalApi/models/PlanItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlanModel.kt
 src/main/kotlin/CloudHospitalApi/models/PlansModel.kt
 src/main/kotlin/CloudHospitalApi/models/Platform.kt
-src/main/kotlin/CloudHospitalApi/models/ProblemDetails.kt
 src/main/kotlin/CloudHospitalApi/models/Procedure.kt
 src/main/kotlin/CloudHospitalApi/models/RecurringInterval.kt
 src/main/kotlin/CloudHospitalApi/models/RefundPolicy.kt
@@ -461,6 +472,7 @@ src/main/kotlin/CloudHospitalApi/models/TagsModel.kt
 src/main/kotlin/CloudHospitalApi/models/UpdateBookingCommand.kt
 src/main/kotlin/CloudHospitalApi/models/UpdateChatUserCommand.kt
 src/main/kotlin/CloudHospitalApi/models/UpdateConsultationCommand.kt
+src/main/kotlin/CloudHospitalApi/models/UpdateDeviceCommand.kt
 src/main/kotlin/CloudHospitalApi/models/UpdateMediaCommand.kt
 src/main/kotlin/CloudHospitalApi/models/UpdatePatientCommand.kt
 src/main/kotlin/CloudHospitalApi/models/UpdateProfileCommand.kt

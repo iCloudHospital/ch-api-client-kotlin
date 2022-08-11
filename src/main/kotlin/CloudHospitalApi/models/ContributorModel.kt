@@ -34,6 +34,7 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
+ * @param description 
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
@@ -43,7 +44,6 @@ import com.squareup.moshi.Json
  * @param photoThumbnail 
  * @param order 
  * @param auditableEntity 
- * @param description 
  * @param overview 
  * @param content 
  * @param snsHandles 
@@ -66,6 +66,9 @@ data class ContributorModel (
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "description")
+    val description: kotlin.String? = null,
 
     @Json(name = "hospitalId")
     val hospitalId: java.util.UUID? = null,
@@ -93,9 +96,6 @@ data class ContributorModel (
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "description")
-    val description: kotlin.String? = null,
 
     @Json(name = "overview")
     val overview: kotlin.String? = null,
