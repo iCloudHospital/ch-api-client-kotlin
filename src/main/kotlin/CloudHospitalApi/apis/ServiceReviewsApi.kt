@@ -26,6 +26,7 @@ interface ServiceReviewsApi {
      *
      * @param id  (optional)
      * @param hospitalId  (optional)
+     * @param hospitalSpecialtyId  (optional)
      * @param serviceId  (optional)
      * @param serviceName  (optional)
      * @param patientId  (optional)
@@ -42,7 +43,7 @@ interface ServiceReviewsApi {
      * @return [ServiceReviewsModel]
      */
     @GET("api/v2/servicereviews")
-    suspend fun apiV2ServicereviewsGet(@Query("Id") id: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ServiceName") serviceName: kotlin.String? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("PatientName") patientName: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("Recommended") recommended: kotlin.Boolean? = null, @Query("Rate") rate: kotlin.Int? = null, @Query("ReviewType") reviewType: ReviewType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ServiceReviewsModel>
+    suspend fun apiV2ServicereviewsGet(@Query("Id") id: java.util.UUID? = null, @Query("HospitalId") hospitalId: java.util.UUID? = null, @Query("HospitalSpecialtyId") hospitalSpecialtyId: java.util.UUID? = null, @Query("ServiceId") serviceId: java.util.UUID? = null, @Query("ServiceName") serviceName: kotlin.String? = null, @Query("PatientId") patientId: java.util.UUID? = null, @Query("PatientName") patientName: kotlin.String? = null, @Query("Gender") gender: Gender? = null, @Query("Recommended") recommended: kotlin.Boolean? = null, @Query("Rate") rate: kotlin.Int? = null, @Query("ReviewType") reviewType: ReviewType? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<ServiceReviewsModel>
 
     /**
      * Create a ServiceReview.
@@ -150,7 +151,7 @@ interface ServiceReviewsApi {
      * Create ServiceReviewMedia.
      * 
      * Responses:
-     *  - 201: Success
+     *  - 200: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *

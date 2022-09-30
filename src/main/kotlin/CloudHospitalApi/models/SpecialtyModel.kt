@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
 import CloudHospitalApi.models.LocalizedUrlModel
+import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaModel
 
 import com.squareup.moshi.Json
@@ -34,14 +35,20 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
+ * @param photo 
+ * @param photoThumbnail 
+ * @param background 
+ * @param backgroundThumbnail 
  * @param specialtyTypeId 
  * @param specialtyTypeName 
+ * @param marketingType 
  * @param medias 
  * @param auditableEntity 
  * @param description 
  * @param overview 
  * @param content 
  * @param localizedUrls 
+ * @param customStyle 
  */
 
 data class SpecialtyModel (
@@ -61,11 +68,26 @@ data class SpecialtyModel (
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
 
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
+
+    @Json(name = "background")
+    val background: kotlin.String? = null,
+
+    @Json(name = "backgroundThumbnail")
+    val backgroundThumbnail: kotlin.String? = null,
+
     @Json(name = "specialtyTypeId")
     val specialtyTypeId: java.util.UUID? = null,
 
     @Json(name = "specialtyTypeName")
     val specialtyTypeName: kotlin.String? = null,
+
+    @Json(name = "marketingType")
+    val marketingType: MarketingType? = null,
 
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaModel>? = null,
@@ -83,7 +105,10 @@ data class SpecialtyModel (
     val content: kotlin.String? = null,
 
     @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
+
+    @Json(name = "customStyle")
+    val customStyle: kotlin.String? = null
 
 )
 

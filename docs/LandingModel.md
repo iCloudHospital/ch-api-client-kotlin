@@ -1,5 +1,5 @@
 
-# CountryModel
+# LandingModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,13 +9,18 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional] [readonly]
 **slug** | **kotlin.String** |  |  [optional] [readonly]
 **confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
-**logo** | **kotlin.String** |  |  [optional]
+**order** | **kotlin.Int** |  |  [optional]
+**photo** | **kotlin.String** |  |  [optional]
+**photoThumbnail** | **kotlin.String** |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 **description** | **kotlin.String** |  |  [optional] [readonly]
 **overview** | **kotlin.String** |  |  [optional] [readonly]
 **content** | **kotlin.String** |  |  [optional] [readonly]
-**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlModel&gt;**](LocalizedUrlModel.md) |  |  [optional] [readonly]
+**hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**hospitalName** | **kotlin.String** |  |  [optional] [readonly]
+**hospitalSlug** | **kotlin.String** |  |  [optional] [readonly]
 **customStyle** | **kotlin.String** |  |  [optional]
+**localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlModel&gt;**](LocalizedUrlModel.md) |  |  [optional] [readonly]
 **medias** | [**kotlin.collections.List&lt;MediaModel&gt;**](MediaModel.md) |  |  [optional]
 
 

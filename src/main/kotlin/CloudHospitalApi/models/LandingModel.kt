@@ -34,17 +34,22 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
- * @param logo 
+ * @param order 
+ * @param photo 
+ * @param photoThumbnail 
  * @param auditableEntity 
  * @param description 
  * @param overview 
  * @param content 
- * @param localizedUrls 
+ * @param hospitalId 
+ * @param hospitalName 
+ * @param hospitalSlug 
  * @param customStyle 
+ * @param localizedUrls 
  * @param medias 
  */
 
-data class CountryModel (
+data class LandingModel (
 
     @Json(name = "id")
     val id: java.util.UUID? = null,
@@ -61,8 +66,14 @@ data class CountryModel (
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
 
-    @Json(name = "logo")
-    val logo: kotlin.String? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
+
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
 
     @Json(name = "auditableEntity")
     val auditableEntity: AuditableEntity? = null,
@@ -76,11 +87,20 @@ data class CountryModel (
     @Json(name = "content")
     val content: kotlin.String? = null,
 
-    @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
+    @Json(name = "hospitalId")
+    val hospitalId: java.util.UUID? = null,
+
+    @Json(name = "hospitalName")
+    val hospitalName: kotlin.String? = null,
+
+    @Json(name = "hospitalSlug")
+    val hospitalSlug: kotlin.String? = null,
 
     @Json(name = "customStyle")
     val customStyle: kotlin.String? = null,
+
+    @Json(name = "localizedUrls")
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
 
     @Json(name = "medias")
     val medias: kotlin.collections.List<MediaModel>? = null

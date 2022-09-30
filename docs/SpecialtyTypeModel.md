@@ -9,6 +9,10 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional] [readonly]
 **slug** | **kotlin.String** |  |  [optional] [readonly]
 **confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
+**photo** | **kotlin.String** |  |  [optional]
+**photoThumbnail** | **kotlin.String** |  |  [optional]
+**background** | **kotlin.String** |  |  [optional]
+**backgroundThumbnail** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional] [readonly]
 **marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
 **specialtiesCount** | **kotlin.Int** |  |  [optional]
@@ -16,6 +20,7 @@ Name | Type | Description | Notes
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 **content** | **kotlin.String** |  |  [optional] [readonly]
 **localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlModel&gt;**](LocalizedUrlModel.md) |  |  [optional] [readonly]
+**customStyle** | **kotlin.String** |  |  [optional]
 
 
 

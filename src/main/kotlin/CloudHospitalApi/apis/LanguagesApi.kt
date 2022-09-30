@@ -10,7 +10,7 @@ import CloudHospitalApi.models.LanguagesModel
 
 interface LanguagesApi {
     /**
-     * Get Language by code.
+     * Get Language.
      * 
      * Responses:
      *  - 200: Success
@@ -38,17 +38,5 @@ interface LanguagesApi {
      */
     @GET("api/v2/languages")
     suspend fun apiV2LanguagesGet(@Query("Id") id: java.util.UUID? = null, @Query("Name") name: kotlin.String? = null, @Query("Code") code: kotlin.String? = null, @Query("Description") description: kotlin.String? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<LanguagesModel>
-
-    /**
-     * Get Language.
-     * 
-     * Responses:
-     *  - 200: Success
-     *
-     * @param id 
-     * @return [LanguageModel]
-     */
-    @GET("api/v2/languages/{id}")
-    suspend fun apiV2LanguagesIdGet(@Path("id") id: java.util.UUID): Response<LanguageModel>
 
 }

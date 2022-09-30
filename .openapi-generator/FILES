@@ -144,6 +144,9 @@ docs/HospitalsModel.md
 docs/HospitalsSimpleModel.md
 docs/ImagesApi.md
 docs/InviteSendBirdGroupChannelCommand.md
+docs/LandingItemModel.md
+docs/LandingModel.md
+docs/LandingsModel.md
 docs/LanguageItemModel.md
 docs/LanguageModel.md
 docs/LanguagesApi.md
@@ -409,6 +412,9 @@ src/main/kotlin/CloudHospitalApi/models/HospitalSpecialtySimpleItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalsModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalsSimpleModel.kt
 src/main/kotlin/CloudHospitalApi/models/InviteSendBirdGroupChannelCommand.kt
+src/main/kotlin/CloudHospitalApi/models/LandingItemModel.kt
+src/main/kotlin/CloudHospitalApi/models/LandingModel.kt
+src/main/kotlin/CloudHospitalApi/models/LandingsModel.kt
 src/main/kotlin/CloudHospitalApi/models/LanguageItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/LanguageModel.kt
 src/main/kotlin/CloudHospitalApi/models/LanguagesModel.kt

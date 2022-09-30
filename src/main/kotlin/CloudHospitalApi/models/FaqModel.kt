@@ -50,6 +50,7 @@ import com.squareup.moshi.Json
  * @param overview 
  * @param content 
  * @param localizedUrls 
+ * @param customStyle 
  */
 
 data class FaqModel (
@@ -112,7 +113,10 @@ data class FaqModel (
     val content: kotlin.String? = null,
 
     @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
+
+    @Json(name = "customStyle")
+    val customStyle: kotlin.String? = null
 
 )
 

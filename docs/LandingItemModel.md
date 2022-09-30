@@ -1,5 +1,5 @@
 
-# SpecialtyItemModel
+# LandingItemModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,14 +9,9 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** |  |  [optional] [readonly]
 **slug** | **kotlin.String** |  |  [optional] [readonly]
 **confirmed** | **kotlin.Boolean** |  |  [optional] [readonly]
+**order** | **kotlin.Int** |  |  [optional]
 **photo** | **kotlin.String** |  |  [optional]
 **photoThumbnail** | **kotlin.String** |  |  [optional]
-**background** | **kotlin.String** |  |  [optional]
-**backgroundThumbnail** | **kotlin.String** |  |  [optional]
-**specialtyTypeId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
-**specialtyTypeName** | **kotlin.String** |  |  [optional] [readonly]
-**marketingType** | [**MarketingType**](MarketingType.md) |  |  [optional]
-**medias** | [**kotlin.collections.List&lt;MediaModel&gt;**](MediaModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
 
 

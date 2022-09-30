@@ -21,6 +21,7 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.LocalizedUrlModel
+import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaModel
 
 import com.squareup.moshi.Json
@@ -33,6 +34,8 @@ import com.squareup.moshi.Json
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
+ * @param countryId 
+ * @param marketingType 
  * @param doctorId 
  * @param name 
  * @param slug 
@@ -41,6 +44,8 @@ import com.squareup.moshi.Json
  * @param photoThumbnail 
  * @param consultationEnabled 
  * @param consultationFee 
+ * @param startPracticeDate 
+ * @param yearOfExperience 
  * @param specialtiesSummerized 
  * @param order 
  * @param description 
@@ -70,6 +75,12 @@ data class DoctorAffiliationModel (
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
 
+    @Json(name = "countryId")
+    val countryId: java.util.UUID? = null,
+
+    @Json(name = "marketingType")
+    val marketingType: MarketingType? = null,
+
     @Json(name = "doctorId")
     val doctorId: java.util.UUID? = null,
 
@@ -93,6 +104,12 @@ data class DoctorAffiliationModel (
 
     @Json(name = "consultationFee")
     val consultationFee: kotlin.Double? = null,
+
+    @Json(name = "startPracticeDate")
+    val startPracticeDate: java.time.LocalDateTime? = null,
+
+    @Json(name = "yearOfExperience")
+    val yearOfExperience: kotlin.Double? = null,
 
     @Json(name = "specialtiesSummerized")
     val specialtiesSummerized: kotlin.String? = null,

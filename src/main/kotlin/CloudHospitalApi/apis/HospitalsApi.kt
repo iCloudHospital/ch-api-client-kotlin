@@ -20,6 +20,8 @@ import CloudHospitalApi.models.HospitalSpecialtiesSimpleModel
 import CloudHospitalApi.models.HospitalSpecialtyModel
 import CloudHospitalApi.models.HospitalsModel
 import CloudHospitalApi.models.HospitalsSimpleModel
+import CloudHospitalApi.models.LandingModel
+import CloudHospitalApi.models.LandingsModel
 import CloudHospitalApi.models.MarketingType
 import CloudHospitalApi.models.MediaModel
 import CloudHospitalApi.models.MediaType
@@ -230,6 +232,53 @@ interface HospitalsApi {
      */
     @GET("api/v2/hospitals/{hospitalId}/handles/{handleId}")
     suspend fun apiV2HospitalsHospitalIdHandlesHandleIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("handleId") handleId: java.util.UUID): Response<SnsHandleModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param hospitalId 
+     * @param name  (optional)
+     * @param slug  (optional)
+     * @param languageCode  (optional)
+     * @param showHidden  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param lastRetrieved  (optional)
+     * @return [LandingsModel]
+     */
+    @GET("api/v2/hospitals/{hospitalId}/landings")
+    suspend fun apiV2HospitalsHospitalIdLandingsGet(@Path("hospitalId") hospitalId: java.util.UUID, @Query("Name") name: kotlin.String? = null, @Query("Slug") slug: kotlin.String? = null, @Query("LanguageCode") languageCode: kotlin.String? = null, @Query("ShowHidden") showHidden: kotlin.Boolean? = null, @Query("page") page: kotlin.Int? = null, @Query("limit") limit: kotlin.Int? = null, @Query("lastRetrieved") lastRetrieved: java.time.LocalDateTime? = null): Response<LandingsModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param hospitalId 
+     * @param landingId 
+     * @param languageCode  (optional)
+     * @return [LandingModel]
+     */
+    @GET("api/v2/hospitals/{hospitalId}/landings/{landingId}")
+    suspend fun apiV2HospitalsHospitalIdLandingsLandingIdGet(@Path("hospitalId") hospitalId: java.util.UUID, @Path("landingId") landingId: java.util.UUID, @Query("languageCode") languageCode: kotlin.String? = null): Response<LandingModel>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: Success
+     *
+     * @param slug 
+     * @param hospitalId 
+     * @param languageCode  (optional)
+     * @return [LandingModel]
+     */
+    @GET("api/v2/hospitals/{hospitalId}/landings/{slug}")
+    suspend fun apiV2HospitalsHospitalIdLandingsSlugGet(@Path("slug") slug: kotlin.String, @Path("hospitalId") hospitalId: kotlin.String, @Query("languageCode") languageCode: kotlin.String? = null): Response<LandingModel>
 
     /**
      * Get all HospitalMedias.

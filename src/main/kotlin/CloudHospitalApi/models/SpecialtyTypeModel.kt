@@ -35,6 +35,10 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
+ * @param photo 
+ * @param photoThumbnail 
+ * @param background 
+ * @param backgroundThumbnail 
  * @param description 
  * @param marketingType 
  * @param specialtiesCount 
@@ -42,6 +46,7 @@ import com.squareup.moshi.Json
  * @param auditableEntity 
  * @param content 
  * @param localizedUrls 
+ * @param customStyle 
  */
 
 data class SpecialtyTypeModel (
@@ -60,6 +65,18 @@ data class SpecialtyTypeModel (
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
+
+    @Json(name = "background")
+    val background: kotlin.String? = null,
+
+    @Json(name = "backgroundThumbnail")
+    val backgroundThumbnail: kotlin.String? = null,
 
     @Json(name = "description")
     val description: kotlin.String? = null,
@@ -80,7 +97,10 @@ data class SpecialtyTypeModel (
     val content: kotlin.String? = null,
 
     @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null
+    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
+
+    @Json(name = "customStyle")
+    val customStyle: kotlin.String? = null
 
 )
 

@@ -21,8 +21,6 @@
 package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AuditableEntity
-import CloudHospitalApi.models.LocalizedUrlModel
-import CloudHospitalApi.models.MediaModel
 
 import com.squareup.moshi.Json
 
@@ -34,17 +32,13 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
- * @param logo 
+ * @param order 
+ * @param photo 
+ * @param photoThumbnail 
  * @param auditableEntity 
- * @param description 
- * @param overview 
- * @param content 
- * @param localizedUrls 
- * @param customStyle 
- * @param medias 
  */
 
-data class CountryModel (
+data class LandingItemModel (
 
     @Json(name = "id")
     val id: java.util.UUID? = null,
@@ -61,29 +55,17 @@ data class CountryModel (
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
 
-    @Json(name = "logo")
-    val logo: kotlin.String? = null,
+    @Json(name = "order")
+    val order: kotlin.Int? = null,
+
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
 
     @Json(name = "auditableEntity")
-    val auditableEntity: AuditableEntity? = null,
-
-    @Json(name = "description")
-    val description: kotlin.String? = null,
-
-    @Json(name = "overview")
-    val overview: kotlin.String? = null,
-
-    @Json(name = "content")
-    val content: kotlin.String? = null,
-
-    @Json(name = "localizedUrls")
-    val localizedUrls: kotlin.collections.List<LocalizedUrlModel>? = null,
-
-    @Json(name = "customStyle")
-    val customStyle: kotlin.String? = null,
-
-    @Json(name = "medias")
-    val medias: kotlin.collections.List<MediaModel>? = null
+    val auditableEntity: AuditableEntity? = null
 
 )
 

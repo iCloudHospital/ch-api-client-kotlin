@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **hospitalName** | **kotlin.String** |  |  [optional] [readonly]
 **hospitalSlug** | **kotlin.String** |  |  [optional] [readonly]
 **hospitalWebsiteUrl** | **kotlin.String** |  |  [optional]
-**faqCategoryId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
-**faqCategoryName** | **kotlin.String** |  |  [optional]
+**faqCategoryId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional] [readonly]
+**faqCategoryName** | **kotlin.String** |  |  [optional] [readonly]
 **faqTags** | [**kotlin.collections.List&lt;FaqTagItemModel&gt;**](FaqTagItemModel.md) |  |  [optional]
 **medias** | [**kotlin.collections.List&lt;MediaModel&gt;**](MediaModel.md) |  |  [optional]
 **auditableEntity** | [**AuditableEntity**](AuditableEntity.md) |  |  [optional]
@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **overview** | **kotlin.String** |  |  [optional] [readonly]
 **content** | **kotlin.String** |  |  [optional] [readonly]
 **localizedUrls** | [**kotlin.collections.List&lt;LocalizedUrlModel&gt;**](LocalizedUrlModel.md) |  |  [optional] [readonly]
+**customStyle** | **kotlin.String** |  |  [optional]
 
 
 

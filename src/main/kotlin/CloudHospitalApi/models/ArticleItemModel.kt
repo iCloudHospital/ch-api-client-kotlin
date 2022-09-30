@@ -42,7 +42,12 @@ import com.squareup.moshi.Json
  * @param hospitalId 
  * @param hospitalName 
  * @param hospitalSlug 
+ * @param hospitalLogo 
  * @param youtubeUrl 
+ * @param photo 
+ * @param photoThumbnail 
+ * @param background 
+ * @param backgroundThumbnail 
  * @param articleTags 
  * @param medias 
  * @param auditableEntity 
@@ -86,8 +91,23 @@ data class ArticleItemModel (
     @Json(name = "hospitalSlug")
     val hospitalSlug: kotlin.String? = null,
 
+    @Json(name = "hospitalLogo")
+    val hospitalLogo: kotlin.String? = null,
+
     @Json(name = "youtubeUrl")
     val youtubeUrl: kotlin.String? = null,
+
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
+
+    @Json(name = "background")
+    val background: kotlin.String? = null,
+
+    @Json(name = "backgroundThumbnail")
+    val backgroundThumbnail: kotlin.String? = null,
 
     @Json(name = "articleTags")
     val articleTags: kotlin.collections.List<ArticleTagItemModel>? = null,

@@ -43,7 +43,6 @@ interface PatientsApi {
      * 
      * Responses:
      *  - 200: Success
-     *  - 201: Success
      *  - 401: Unauthorized
      *  - 403: Forbidden
      *

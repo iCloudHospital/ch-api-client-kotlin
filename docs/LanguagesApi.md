@@ -4,13 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV2LanguagesCodeGet**](LanguagesApi.md#apiV2LanguagesCodeGet) | **GET** api/v2/languages/{code} | Get Language by code.
+[**apiV2LanguagesCodeGet**](LanguagesApi.md#apiV2LanguagesCodeGet) | **GET** api/v2/languages/{code} | Get Language.
 [**apiV2LanguagesGet**](LanguagesApi.md#apiV2LanguagesGet) | **GET** api/v2/languages | Get all Languages.
-[**apiV2LanguagesIdGet**](LanguagesApi.md#apiV2LanguagesIdGet) | **GET** api/v2/languages/{id} | Get Language.
 
 
 
-Get Language by code.
+Get Language.
 
 ### Example
 ```kotlin
@@ -87,44 +86,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LanguagesModel**](LanguagesModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-Get Language.
-
-### Example
-```kotlin
-// Import classes:
-//import CloudHospitalApi.*
-//import CloudHospitalApi.infrastructure.*
-//import CloudHospitalApi.models.*
-
-val apiClient = ApiClient()
-val webService = apiClient.createWebservice(LanguagesApi::class.java)
-val id : java.util.UUID = 38400000-8cf0-11bd-b23e-10b96e4ef00d // java.util.UUID | 
-
-launch(Dispatchers.IO) {
-    val result : LanguageModel = webService.apiV2LanguagesIdGet(id)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **java.util.UUID**|  |
-
-### Return type
-
-[**LanguageModel**](LanguageModel.md)
 
 ### Authorization
 

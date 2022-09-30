@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **serviceName** | **kotlin.String** |  |  [optional] [readonly]
 **serviceSlug** | **kotlin.String** |  |  [optional] [readonly]
 **hospitalId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional] [readonly]
+**hospitalSpecialtyId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional] [readonly]
 **patientId** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
 **patientName** | **kotlin.String** |  |  [optional]
 **patientPhoto** | **kotlin.String** |  |  [optional]

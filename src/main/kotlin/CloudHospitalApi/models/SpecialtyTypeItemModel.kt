@@ -34,6 +34,10 @@ import com.squareup.moshi.Json
  * @param name 
  * @param slug 
  * @param confirmed 
+ * @param photo 
+ * @param photoThumbnail 
+ * @param background 
+ * @param backgroundThumbnail 
  * @param description 
  * @param marketingType 
  * @param specialtiesCount 
@@ -57,6 +61,18 @@ data class SpecialtyTypeItemModel (
 
     @Json(name = "confirmed")
     val confirmed: kotlin.Boolean? = null,
+
+    @Json(name = "photo")
+    val photo: kotlin.String? = null,
+
+    @Json(name = "photoThumbnail")
+    val photoThumbnail: kotlin.String? = null,
+
+    @Json(name = "background")
+    val background: kotlin.String? = null,
+
+    @Json(name = "backgroundThumbnail")
+    val backgroundThumbnail: kotlin.String? = null,
 
     @Json(name = "description")
     val description: kotlin.String? = null,
