@@ -42,6 +42,10 @@ docs/ConsultationChangeLogModel.md
 docs/ConsultationItemModel.md
 docs/ConsultationModel.md
 docs/ConsultationStatus.md
+docs/ConsultationTimetableDateModel.md
+docs/ConsultationTimetableModel.md
+docs/ConsultationTimetableStatus.md
+docs/ConsultationTimetableTimeSlotModel.md
 docs/ConsultationType.md
 docs/ConsultationsApi.md
 docs/ConsultationsModel.md
@@ -63,6 +67,7 @@ docs/CreateDeviceLoginCommand.md
 docs/CreateMediaCommand.md
 docs/CreatePatientCommand.md
 docs/CreateServiceReviewCommand.md
+docs/DayOfWeek.md
 docs/DealItemModel.md
 docs/DealItemSimpleModel.md
 docs/DealModel.md
@@ -104,6 +109,8 @@ docs/DoctorSpecialtyModel.md
 docs/DoctorsApi.md
 docs/DoctorsModel.md
 docs/DoctorsSimpleModel.md
+docs/ExternalApi.md
+docs/FacebookUserDataDeletionResponseModel.md
 docs/FaqCategoriesApi.md
 docs/FaqCategoriesModel.md
 docs/FaqCategoryItemModel.md
@@ -117,9 +124,12 @@ docs/FaqsApi.md
 docs/FaqsModel.md
 docs/Gender.md
 docs/GroupChannelsApi.md
+docs/HeaderNavigationItemModel.md
+docs/HeaderNavigationsApi.md
 docs/HospitalAccreditationItemModel.md
 docs/HospitalAccreditationModel.md
 docs/HospitalAccreditationsModel.md
+docs/HospitalConsultationOptionModel.md
 docs/HospitalEquipmentItemModel.md
 docs/HospitalEquipmentModel.md
 docs/HospitalEquipmentsModel.md
@@ -140,6 +150,7 @@ docs/HospitalSpecialtyItemModel.md
 docs/HospitalSpecialtyModel.md
 docs/HospitalSpecialtySimpleItemModel.md
 docs/HospitalsApi.md
+docs/HospitalsConsultationTimetablesApi.md
 docs/HospitalsModel.md
 docs/HospitalsSimpleModel.md
 docs/ImagesApi.md
@@ -254,10 +265,13 @@ src/main/kotlin/CloudHospitalApi/apis/DealsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DevicesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DoctorAffiliationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/DoctorsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/ExternalApi.kt
 src/main/kotlin/CloudHospitalApi/apis/FaqCategoriesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/FaqsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/GroupChannelsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/HeaderNavigationsApi.kt
 src/main/kotlin/CloudHospitalApi/apis/HospitalsApi.kt
+src/main/kotlin/CloudHospitalApi/apis/HospitalsConsultationTimetablesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/ImagesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/LanguagesApi.kt
 src/main/kotlin/CloudHospitalApi/apis/MembershipsApi.kt
@@ -322,6 +336,10 @@ src/main/kotlin/CloudHospitalApi/models/ConsultationChangeLogModel.kt
 src/main/kotlin/CloudHospitalApi/models/ConsultationItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/ConsultationModel.kt
 src/main/kotlin/CloudHospitalApi/models/ConsultationStatus.kt
+src/main/kotlin/CloudHospitalApi/models/ConsultationTimetableDateModel.kt
+src/main/kotlin/CloudHospitalApi/models/ConsultationTimetableModel.kt
+src/main/kotlin/CloudHospitalApi/models/ConsultationTimetableStatus.kt
+src/main/kotlin/CloudHospitalApi/models/ConsultationTimetableTimeSlotModel.kt
 src/main/kotlin/CloudHospitalApi/models/ConsultationType.kt
 src/main/kotlin/CloudHospitalApi/models/ConsultationsModel.kt
 src/main/kotlin/CloudHospitalApi/models/ContributionType.kt
@@ -340,6 +358,7 @@ src/main/kotlin/CloudHospitalApi/models/CreateDeviceLoginCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreateMediaCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreatePatientCommand.kt
 src/main/kotlin/CloudHospitalApi/models/CreateServiceReviewCommand.kt
+src/main/kotlin/CloudHospitalApi/models/DayOfWeek.kt
 src/main/kotlin/CloudHospitalApi/models/DealItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/DealItemSimpleModel.kt
 src/main/kotlin/CloudHospitalApi/models/DealModel.kt
@@ -377,6 +396,7 @@ src/main/kotlin/CloudHospitalApi/models/DoctorSpecialtyItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorSpecialtyModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorsModel.kt
 src/main/kotlin/CloudHospitalApi/models/DoctorsSimpleModel.kt
+src/main/kotlin/CloudHospitalApi/models/FacebookUserDataDeletionResponseModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoriesModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqCategoryModel.kt
@@ -387,9 +407,11 @@ src/main/kotlin/CloudHospitalApi/models/FaqTagModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqTagsModel.kt
 src/main/kotlin/CloudHospitalApi/models/FaqsModel.kt
 src/main/kotlin/CloudHospitalApi/models/Gender.kt
+src/main/kotlin/CloudHospitalApi/models/HeaderNavigationItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalAccreditationItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalAccreditationModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalAccreditationsModel.kt
+src/main/kotlin/CloudHospitalApi/models/HospitalConsultationOptionModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalEquipmentItemModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalEquipmentModel.kt
 src/main/kotlin/CloudHospitalApi/models/HospitalEquipmentsModel.kt

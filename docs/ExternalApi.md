@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV1ExternalFacebookDeleteuserdataPost**](ExternalApi.md#apiV1ExternalFacebookDeleteuserdataPost) | **POST** api/v1/external/facebook/deleteuserdata | Callback for Facebook user data deletion
+[**apiV2ExternalFacebookDeleteuserdataPost**](ExternalApi.md#apiV2ExternalFacebookDeleteuserdataPost) | **POST** api/v2/external/facebook/deleteuserdata | Callback for Facebook user data deletion
 
 
 
 Callback for Facebook user data deletion
 
-Sample request:        PUT /api/v1/external/facebook/deleteUserData      {          \&quot;signed_request\&quot;: \&quot;......\&quot;      }
+Sample request:        POST /api/v2/external/facebook/deleteUserData      {          \&quot;signed_request\&quot;: \&quot;......\&quot;      }
 
 ### Example
 ```kotlin
@@ -23,7 +23,7 @@ val apiClient = ApiClient()
 val webService = apiClient.createWebservice(ExternalApi::class.java)
 
 launch(Dispatchers.IO) {
-    val result : FacebookUserDataDeletionResponseModel = webService.apiV1ExternalFacebookDeleteuserdataPost()
+    val result : FacebookUserDataDeletionResponseModel = webService.apiV2ExternalFacebookDeleteuserdataPost()
 }
 ```
 
@@ -41,5 +41,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 

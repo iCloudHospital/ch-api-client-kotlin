@@ -22,6 +22,7 @@ package CloudHospitalApi.models
 
 import CloudHospitalApi.models.AwardModel
 import CloudHospitalApi.models.HospitalAccreditationItemModel
+import CloudHospitalApi.models.HospitalConsultationOptionModel
 import CloudHospitalApi.models.HospitalEvaluationItemModel
 import CloudHospitalApi.models.HospitalLanguageItemModel
 import CloudHospitalApi.models.LocalizedUrlModel
@@ -70,6 +71,7 @@ import com.squareup.moshi.Json
  * @param hospitalSnsHandles 
  * @param languages 
  * @param awards 
+ * @param consultationOption 
  */
 
 data class HospitalModel (
@@ -174,7 +176,10 @@ data class HospitalModel (
     val languages: kotlin.collections.List<HospitalLanguageItemModel>? = null,
 
     @Json(name = "awards")
-    val awards: kotlin.collections.List<AwardModel>? = null
+    val awards: kotlin.collections.List<AwardModel>? = null,
+
+    @Json(name = "consultationOption")
+    val consultationOption: HospitalConsultationOptionModel? = null
 
 )
 

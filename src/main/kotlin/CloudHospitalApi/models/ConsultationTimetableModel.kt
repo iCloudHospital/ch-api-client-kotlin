@@ -20,31 +20,28 @@
 
 package CloudHospitalApi.models
 
+import CloudHospitalApi.models.ConsultationTimetableDateModel
 
 import com.squareup.moshi.Json
 
 /**
  * 
  *
- * @param userId 
- * @param isLockout 
- * @param provider 
- * @param providerKey 
+ * @param hospitalTimeZone 
+ * @param today 
+ * @param days 
  */
 
-data class FacebookUserDataDeletionResponseModel (
+data class ConsultationTimetableModel (
 
-    @Json(name = "userId")
-    val userId: kotlin.String? = null,
+    @Json(name = "hospitalTimeZone")
+    val hospitalTimeZone: kotlin.String? = null,
 
-    @Json(name = "isLockout")
-    val isLockout: kotlin.Boolean? = null,
+    @Json(name = "today")
+    val today: java.time.LocalDateTime? = null,
 
-    @Json(name = "provider")
-    val provider: kotlin.String? = null,
-
-    @Json(name = "providerKey")
-    val providerKey: kotlin.String? = null
+    @Json(name = "days")
+    val days: kotlin.collections.List<ConsultationTimetableDateModel>? = null
 
 )
 

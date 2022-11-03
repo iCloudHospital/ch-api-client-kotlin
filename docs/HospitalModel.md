@@ -38,6 +38,7 @@ Name | Type | Description | Notes
 **hospitalSnsHandles** | [**kotlin.collections.List&lt;SnsHandle&gt;**](SnsHandle.md) |  |  [optional]
 **languages** | [**kotlin.collections.List&lt;HospitalLanguageItemModel&gt;**](HospitalLanguageItemModel.md) |  |  [optional]
 **awards** | [**kotlin.collections.List&lt;AwardModel&gt;**](AwardModel.md) |  |  [optional]
+**consultationOption** | [**HospitalConsultationOptionModel**](HospitalConsultationOptionModel.md) |  |  [optional]
 
 
 

@@ -26,25 +26,21 @@ import com.squareup.moshi.Json
 /**
  * 
  *
- * @param userId 
- * @param isLockout 
- * @param provider 
- * @param providerKey 
+ * @param useTimetable 
+ * @param beforeEventBufferMinutes 
+ * @param afterEventBufferMinutes 
  */
 
-data class FacebookUserDataDeletionResponseModel (
+data class HospitalConsultationOptionModel (
 
-    @Json(name = "userId")
-    val userId: kotlin.String? = null,
+    @Json(name = "useTimetable")
+    val useTimetable: kotlin.Boolean? = null,
 
-    @Json(name = "isLockout")
-    val isLockout: kotlin.Boolean? = null,
+    @Json(name = "beforeEventBufferMinutes")
+    val beforeEventBufferMinutes: kotlin.Int? = null,
 
-    @Json(name = "provider")
-    val provider: kotlin.String? = null,
-
-    @Json(name = "providerKey")
-    val providerKey: kotlin.String? = null
+    @Json(name = "afterEventBufferMinutes")
+    val afterEventBufferMinutes: kotlin.Int? = null
 
 )
 

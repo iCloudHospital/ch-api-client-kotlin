@@ -10,13 +10,13 @@ import CloudHospitalApi.models.FacebookUserDataDeletionResponseModel
 interface ExternalApi {
     /**
      * Callback for Facebook user data deletion
-     * Sample request:        PUT /api/v1/external/facebook/deleteUserData      {          \&quot;signed_request\&quot;: \&quot;......\&quot;      }
+     * Sample request:        POST /api/v2/external/facebook/deleteUserData      {          \&quot;signed_request\&quot;: \&quot;......\&quot;      }
      * Responses:
      *  - 200: Success
-     * 
+     *
      * @return [FacebookUserDataDeletionResponseModel]
      */
-    @POST("api/v1/external/facebook/deleteuserdata")
-    suspend fun apiV1ExternalFacebookDeleteuserdataPost(): Response<FacebookUserDataDeletionResponseModel>
+    @POST("api/v2/external/facebook/deleteuserdata")
+    suspend fun apiV2ExternalFacebookDeleteuserdataPost(): Response<FacebookUserDataDeletionResponseModel>
 
 }

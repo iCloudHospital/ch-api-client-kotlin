@@ -115,6 +115,7 @@ Class | Method | HTTP request | Description
 *DoctorsApi* | [**apiV2DoctorsDoctorIdSpecialtiesSpecialtyIdGet**](docs/DoctorsApi.md#apiv2doctorsdoctoridspecialtiesspecialtyidget) | **GET** api/v2/doctors/{doctorId}/specialties/{specialtyId} | Get DoctorSpecialty
 *DoctorsApi* | [**apiV2DoctorsGet**](docs/DoctorsApi.md#apiv2doctorsget) | **GET** api/v2/doctors | Get all Doctors.
 *DoctorsApi* | [**apiV2DoctorsSimpleGet**](docs/DoctorsApi.md#apiv2doctorssimpleget) | **GET** api/v2/doctors/simple | Get all Doctors.
+*ExternalApi* | [**apiV2ExternalFacebookDeleteuserdataPost**](docs/ExternalApi.md#apiv2externalfacebookdeleteuserdatapost) | **POST** api/v2/external/facebook/deleteuserdata | Callback for Facebook user data deletion
 *FaqCategoriesApi* | [**apiV2FaqcategoriesFaqCategoryIdGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesfaqcategoryidget) | **GET** api/v2/faqcategories/{faqCategoryId} | Get FaqCategory.
 *FaqCategoriesApi* | [**apiV2FaqcategoriesGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesget) | **GET** api/v2/faqcategories | Get all FaqCategories.
 *FaqCategoriesApi* | [**apiV2FaqcategoriesSlugGet**](docs/FaqCategoriesApi.md#apiv2faqcategoriesslugget) | **GET** api/v2/faqcategories/{slug} | Get FaqCategory by slug.
@@ -129,6 +130,7 @@ Class | Method | HTTP request | Description
 *GroupChannelsApi* | [**apiV2GroupchannelsDealDealIdGet**](docs/GroupChannelsApi.md#apiv2groupchannelsdealdealidget) | **GET** api/v2/groupchannels/deal/{dealId} | 
 *GroupChannelsApi* | [**apiV2GroupchannelsDoctorDoctorIdGet**](docs/GroupChannelsApi.md#apiv2groupchannelsdoctordoctoridget) | **GET** api/v2/groupchannels/doctor/{doctorId} | 
 *GroupChannelsApi* | [**apiV2GroupchannelsHospitalHospitalIdGet**](docs/GroupChannelsApi.md#apiv2groupchannelshospitalhospitalidget) | **GET** api/v2/groupchannels/hospital/{hospitalId} | 
+*HeaderNavigationsApi* | [**apiV2HeadernavigationsLanguageCodeGet**](docs/HeaderNavigationsApi.md#apiv2headernavigationslanguagecodeget) | **GET** api/v2/headernavigations/{languageCode} | Get all HeaderNavigationItems
 *HospitalsApi* | [**apiV2HospitalsGet**](docs/HospitalsApi.md#apiv2hospitalsget) | **GET** api/v2/hospitals | Get all Hospitals.
 *HospitalsApi* | [**apiV2HospitalsHospitalIdAccreditationsAccreditationIdGet**](docs/HospitalsApi.md#apiv2hospitalshospitalidaccreditationsaccreditationidget) | **GET** api/v2/hospitals/{hospitalId}/accreditations/{accreditationId} | Get HospitalAccreditation.
 *HospitalsApi* | [**apiV2HospitalsHospitalIdAccreditationsGet**](docs/HospitalsApi.md#apiv2hospitalshospitalidaccreditationsget) | **GET** api/v2/hospitals/{hospitalId}/accreditations | Get all HospitalAccreditations.
@@ -160,6 +162,7 @@ Class | Method | HTTP request | Description
 *HospitalsApi* | [**apiV2HospitalsHospitalIdWorkingdaysWorkingDayIdGet**](docs/HospitalsApi.md#apiv2hospitalshospitalidworkingdaysworkingdayidget) | **GET** api/v2/hospitals/{hospitalId}/workingdays/{workingDayId} | Get HospitalWorkingDay.
 *HospitalsApi* | [**apiV2HospitalsSimpleGet**](docs/HospitalsApi.md#apiv2hospitalssimpleget) | **GET** api/v2/hospitals/simple | Get all Hospitals.
 *HospitalsApi* | [**apiV2HospitalsSlugGet**](docs/HospitalsApi.md#apiv2hospitalsslugget) | **GET** api/v2/hospitals/{slug} | 
+*HospitalsConsultationTimetablesApi* | [**apiV2HospitalsHospitalIdConsultationtimetablesGet**](docs/HospitalsConsultationTimetablesApi.md#apiv2hospitalshospitalidconsultationtimetablesget) | **GET** api/v2/hospitals/{hospitalId}/consultationtimetables | Get hospital consultation timetables by hospitalId
 *ImagesApi* | [**apiV2ImagesPost**](docs/ImagesApi.md#apiv2imagespost) | **POST** api/v2/images | 
 *LanguagesApi* | [**apiV2LanguagesCodeGet**](docs/LanguagesApi.md#apiv2languagescodeget) | **GET** api/v2/languages/{code} | Get Language.
 *LanguagesApi* | [**apiV2LanguagesGet**](docs/LanguagesApi.md#apiv2languagesget) | **GET** api/v2/languages | Get all Languages.
@@ -249,6 +252,10 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.ConsultationItemModel](docs/ConsultationItemModel.md)
  - [CloudHospitalApi.models.ConsultationModel](docs/ConsultationModel.md)
  - [CloudHospitalApi.models.ConsultationStatus](docs/ConsultationStatus.md)
+ - [CloudHospitalApi.models.ConsultationTimetableDateModel](docs/ConsultationTimetableDateModel.md)
+ - [CloudHospitalApi.models.ConsultationTimetableModel](docs/ConsultationTimetableModel.md)
+ - [CloudHospitalApi.models.ConsultationTimetableStatus](docs/ConsultationTimetableStatus.md)
+ - [CloudHospitalApi.models.ConsultationTimetableTimeSlotModel](docs/ConsultationTimetableTimeSlotModel.md)
  - [CloudHospitalApi.models.ConsultationType](docs/ConsultationType.md)
  - [CloudHospitalApi.models.ConsultationsModel](docs/ConsultationsModel.md)
  - [CloudHospitalApi.models.ContributionType](docs/ContributionType.md)
@@ -267,6 +274,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.CreateMediaCommand](docs/CreateMediaCommand.md)
  - [CloudHospitalApi.models.CreatePatientCommand](docs/CreatePatientCommand.md)
  - [CloudHospitalApi.models.CreateServiceReviewCommand](docs/CreateServiceReviewCommand.md)
+ - [CloudHospitalApi.models.DayOfWeek](docs/DayOfWeek.md)
  - [CloudHospitalApi.models.DealItemModel](docs/DealItemModel.md)
  - [CloudHospitalApi.models.DealItemSimpleModel](docs/DealItemSimpleModel.md)
  - [CloudHospitalApi.models.DealModel](docs/DealModel.md)
@@ -304,6 +312,7 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.DoctorSpecialtyModel](docs/DoctorSpecialtyModel.md)
  - [CloudHospitalApi.models.DoctorsModel](docs/DoctorsModel.md)
  - [CloudHospitalApi.models.DoctorsSimpleModel](docs/DoctorsSimpleModel.md)
+ - [CloudHospitalApi.models.FacebookUserDataDeletionResponseModel](docs/FacebookUserDataDeletionResponseModel.md)
  - [CloudHospitalApi.models.FaqCategoriesModel](docs/FaqCategoriesModel.md)
  - [CloudHospitalApi.models.FaqCategoryItemModel](docs/FaqCategoryItemModel.md)
  - [CloudHospitalApi.models.FaqCategoryModel](docs/FaqCategoryModel.md)
@@ -314,9 +323,11 @@ Class | Method | HTTP request | Description
  - [CloudHospitalApi.models.FaqTagsModel](docs/FaqTagsModel.md)
  - [CloudHospitalApi.models.FaqsModel](docs/FaqsModel.md)
  - [CloudHospitalApi.models.Gender](docs/Gender.md)
+ - [CloudHospitalApi.models.HeaderNavigationItemModel](docs/HeaderNavigationItemModel.md)
  - [CloudHospitalApi.models.HospitalAccreditationItemModel](docs/HospitalAccreditationItemModel.md)
  - [CloudHospitalApi.models.HospitalAccreditationModel](docs/HospitalAccreditationModel.md)
  - [CloudHospitalApi.models.HospitalAccreditationsModel](docs/HospitalAccreditationsModel.md)
+ - [CloudHospitalApi.models.HospitalConsultationOptionModel](docs/HospitalConsultationOptionModel.md)
  - [CloudHospitalApi.models.HospitalEquipmentItemModel](docs/HospitalEquipmentItemModel.md)
  - [CloudHospitalApi.models.HospitalEquipmentModel](docs/HospitalEquipmentModel.md)
  - [CloudHospitalApi.models.HospitalEquipmentsModel](docs/HospitalEquipmentsModel.md)
